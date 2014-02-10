@@ -49,10 +49,12 @@
 	
 	<? for ( $i = 1; $i <= 10; $i++ ) { ?>
 	<? if ( $extra['menu_'.$i] != '' ) {
+	$option = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".$extra['menu_'.$i]."'");
+
 		if ( $extra['submenu_'.$i] ) $menu_id = "menu=$i";
 		else $menu_id = null;
 	?>
-		<li class="gnb_1dli" <?=$menu_id?>><a href='<?=g::url()?>/bbs/board.php?bo_table=<?=$extra['menu_'.$i]?>' class="gnb_1da" <?// if ($extra['menu'.$i.'_target'] == 'Y') echo "target='_blank'"?>><?=$extra['menu_'.$i.'_subject']?></a></li>
+		<li class="gnb_1dli" <?=$menu_id?>><a href='<?=g::url()?>/bbs/board.php?bo_table=<?=$extra['menu_'.$i]?>' class="gnb_1da" <?// if ($extra['menu'.$i.'_target'] == 'Y') echo "target='_blank'"?>><?=$option['bo_subject']?></a></li>
 	<?}}?>
 	
 	<li class="gnb_1dli">

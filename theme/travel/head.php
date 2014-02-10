@@ -19,9 +19,10 @@
 </div>
 <div id="wrapper">
     <div id="aside">
-        <?php echo outlogin('english'); // 외부 로그인  ?>
+        <?php echo outlogin('x-outlogin-withcenter'); // 외부 로그인  ?>
 		<?php include('left.php');?>
         <?php echo poll('basic'); // 설문조사  ?>
+
 	</div>
     <div id="container">
 		<?if ( (preg_match('/^config/', $action)) || (preg_match('/^config_/', $action)) ) include ms::site_menu();?>

@@ -2,6 +2,7 @@
 <div class='footer-text'><p><? if( $extra['footer_text'] == '' ) {?>
 COPYRIGHT @ 2014 &nbsp&nbsp ALL RIGHTS RESERVED &nbsp&nbsp WITHCENTER.COM
 <?} else echo $extra['footer_text'];?>
+<a href=''>DISCLOSURE POLICY</a><a href=''>PRIVACY POLICY</a>
 </p>
 </div>
 
