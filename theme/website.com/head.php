@@ -72,7 +72,7 @@
 
 <div id="wrapper">
     <div id="aside">
-	 <?php echo outlogin('website.com'); // 외부 로그인  ?>
+	 <?php echo outlogin('x-outlogin-website.com'); // 외부 로그인  ?>
         <?php echo poll('basic'); // 설문조사  ?>
     </div>
     <div id="container">

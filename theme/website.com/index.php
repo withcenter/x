@@ -2,7 +2,7 @@
 	<table cellspacing=0 cellpadding=0 width='100%'><tr valign='top'>
 		<td>
 			<div class='steps'>
-				<img class='step1-img' src='x/theme/website.com/img/step1.png'/>
+				<img class='step1-img' src='<?=x::url()?>/theme/website.com/img/step1.png'/>
 				<div class='description'>
 					<div class='title'>Step1</div>
 					<div class='instruction'>Brief instruction for step one. More text. More more text. More and more text. More and more and more </div>
@@ -11,7 +11,7 @@
 		</td>
 		<td>
 			<div class='steps'>
-				<img class='step2-img' src='x/theme/website.com/img/step2.png'/>
+				<img class='step2-img' src='<?=x::url()?>/theme/website.com/img/step2.png'/>
 				<div class='description'>
 					<div class='title'>Step2</div>
 					<div class='instruction'>Brief instruction for step two. More text. More more text. More and more text. More and more and more </div>
@@ -20,7 +20,7 @@
 		</td>
 		<td>
 			<div class='steps'>
-				<img class='step3-img' src='x/theme/website.com/img/step3.png'/>
+				<img class='step3-img' src='<?=x::url()?>/theme/website.com/img/step3.png'/>
 				<div class='description'>
 					<div class='title'>Step3</div>
 					<div class='instruction'>Brief instruction for step three. More text. More more text. More and more text. More and more and </div>
@@ -33,7 +33,7 @@
 <div id='create-your-site'>
 	<div class='border2'>
 		<div class='border3'>
-			CREATE YOUR SITE NOW
+			<a href='<?=x::url()?>/?module=multisite&action=create'>CREATE YOUR SITE NOW</a>
 		</div>
 	</div>
 </div>
@@ -42,11 +42,11 @@
 	<div class='title'>SAMPLE BANNER TEXT HERE</div>
 	
 	<ul>
-		<li><img src='x/theme/website.com/img/bullet.png'/>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-		<li><img src='x/theme/website.com/img/bullet.png'/>Etiam semper ipsum eu hendrerit pulvinar.</li>
-		<li><img src='x/theme/website.com/img/bullet.png'/>Sed vitae orci vel erat scelerisque gravida non pharetra metus.</li>
-		<li><img src='x/theme/website.com/img/bullet.png'/>Praesent tempus massa sed eros fermentum faucibus.</li>
-		<li><img src='x/theme/website.com/img/bullet.png'/>Aenean at urna at eros ultricies luctus ac ut magna.</li>
+		<li><img src='<?=x::url()?>/theme/website.com/img/bullet.png'/>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+		<li><img src='<?=x::url()?>/theme/website.com/img/bullet.png'/>Etiam semper ipsum eu hendrerit pulvinar.</li>
+		<li><img src='<?=x::url()?>/theme/website.com/img/bullet.png'/>Sed vitae orci vel erat scelerisque gravida non pharetra metus.</li>
+		<li><img src='<?=x::url()?>/theme/website.com/img/bullet.png'/>Praesent tempus massa sed eros fermentum faucibus.</li>
+		<li><img src='<?=x::url()?>/theme/website.com/img/bullet.png'/>Aenean at urna at eros ultricies luctus ac ut magna.</li>
 	</ul>
 </div>
 

@@ -204,15 +204,17 @@
 	background-image: -webkit-linear-gradient(bottom, #F48245 0%, #D9743D 100%);
 	background-image: -ms-linear-gradient(bottom, #F48245 0%, #D9743D 100%);
 	background-image: linear-gradient(to bottom, #F48245 0%, #D9743D 100%);
-
-	font-size:1.5em;
-
-	color:white;
-
 	padding:7px 0;
 
 	text-align:center;
-	}
+}
+
+
+#create-your-site .border3 a{
+	font-size:1.5em;
+	text-decoration:none;
+	color:white;
+}
 
 #banner-wrapper{
 	background-image:url('../img/banner.png');
