@@ -3,6 +3,7 @@
 
 x::hook_register('end_before_html', 'hook_rsd_patch');
 x::hook_register('end_before_html', 'hook_metaweblogapi');
+x::hook_register('end_before_html', 'hook_html_symbol');
 
 function hook_rsd_patch()
 {
@@ -32,3 +33,44 @@ function hook_metaweblogapi()
 		}
 	}
 }
+
+
+
+/**
+ *  @brief convert HTML Symbol CODE to actual symbol
+ *  
+ *  @return gobal $html
+ *  
+ *  @details GNUBoard does not properly convert all the symbols.
+ *  just use this function until GNUBoard do some thing for it.
+ */
+function hook_html_symbol()
+{
+	debug::log("hook_html_symbol() begin");
+	global $html;
+	
+	$source = array();
+	$target = array();
+	
+	$source[] = "&#038;hellip;";
+	$target[] = '...';
+	
+	$source[] = "&#038;ldquo;";
+	$target[] = '"';
+	
+	$source[] = "&#038;rdquo;";
+	$target[] = '"';
+	
+	$source[] = "&#038;amp;";
+	$target[] = '&';
+	$source[] = "&#038;ndash;";
+	$target[] = '-';
+	$source[] = "&#038;rsquo;";
+	$target[] = '"';
+	
+	
+	
+	
+	$html = str_replace( $source, $target, $html );
+}
+
