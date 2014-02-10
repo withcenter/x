@@ -13,7 +13,7 @@
 			<? if( $extra['header_logo'] ) { ?>
 				<img src="<?=ms::url_site(etc::domain()).$extra['img_url'].$extra['header_logo']?>">
 			<?} else {?>
-				<img src='<?=x::url_theme()?>/img/logo.png'>
+				<img src="<?php echo G5_IMG_URL ?>/logo.jpg" alt="<?php echo $config['cf_title']; ?>">
 			<?}?>
 			</a>
         </div>
@@ -77,7 +77,7 @@
     </div>
 
     <hr>
-    <?include G5_PATH . '/x/html/patch.head-main-menu.php'?>
+    <?include x::theme('menu')?>
 	
 	
 </div>
@@ -88,8 +88,12 @@
 <!-- 콘텐츠 시작 { -->
 <div id="wrapper">
     <div id="aside">
-        <?php echo outlogin('basic'); // 외부 로그인  ?>
-		<a href='<?=x::url_setting()?>'><?php echo _L('Member Setting');?></a>
+		<?php echo outlogin('basic'); // 외부 로그인  ?>
+		
+		<div><a href='<?=x::url_setting()?>'><?php echo _L('Member Setting');?></a></div>
+		<div><a href='<?=x::url_admin()?>'><?php echo _L('Admin Page');?></a></div>
+		
+		
         <?php echo poll('basic'); // 설문조사  ?>
     </div>
     <div id="container">
