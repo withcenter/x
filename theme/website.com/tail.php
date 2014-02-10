@@ -1,4 +1,5 @@
 </div>
+<div style='clear:both;'></div>
 	<div id='footer'>
 		<div id='bottom-menus'>
 		<a class='home' href='/' class="menu-list"><?=ln('HOME')?></a></li>
