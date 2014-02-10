@@ -1,0 +1,81 @@
+.admin-menu {
+	position: relative;
+	background-color: #f0f0f0;
+	margin-bottom: 1em;
+}
+.admin-menu a {
+
+}
+.admin-menu a:hover {
+
+}
+
+.admin-menu ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+
+}
+.admin-menu > ul > li {
+	float: left;
+	padding: 0.5em 0.75em 0.5em 0.75em;
+	font-size: 11pt;
+	cursor: pointer;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+.admin-menu > ul > li:hover {
+	background: #333333;
+	color: #ffffff;
+}
+
+
+
+.admin-menu > ul > li > ul {
+	display: none;
+	margin: 0;
+	font-size: 10pt;
+	position: absolute;	
+	top: 2.3em;
+	left: 0;
+	width: 100%;
+	padding: 0.75em 0 0.75em 0;
+	background: #333333;
+}
+
+.admin-menu > ul > li > ul > li {
+	text-transform: none;
+	width: 100%;
+	background: #333333;
+	padding: 0.75em;
+	display: inline;
+}
+
+
+.admin-menu > ul > li > ul > li a {
+	text-decoration: none;
+	color: #ffffff;
+	padding: 0.5em;
+}
+
+.admin-menu > ul > li > ul > li:hover {
+	background: #939393;
+
+}
+
+.admin-menu > ul > li > ul > li.active-page {
+	background: #939393;
+}
+.admin-menu > ul > li > ul > li:hover a{
+	color: #000000;
+}
+
+.admin-menu li.current{
+	background: #333333;
+	color: #ffffff;
+}
+

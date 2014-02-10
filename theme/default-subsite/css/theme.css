@@ -1,0 +1,24 @@
+#logo {
+	padding:0!important;
+}
+
+#logo img {
+	width: 240px;
+	height: 120px;
+}
+
+#hd_sch {
+	left:270px!important;
+}
+#hd_sch #sch_stx {
+	width: 240px!important;
+}
+
+#aside {
+	float:left;
+}
+
+#container {
+	border-right: 0;
+	border-left: 1px solid #dde4e9;
+}

@@ -1,0 +1,304 @@
+.create-site h1 {
+	font-size: 1.5em;
+	margin: 1em;
+}
+
+.create-site input[type='text'] {
+	border: solid 1px #e3e3e3;
+}
+
+.create-site div {
+	margin: 0.5em;
+}
+
+.create-site > div {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.create-site div input[name='title'] {
+	width: 19.5em;
+}
+
+.create-site input[type='submit'] {
+	border: none;
+	padding: 0.5em;
+	background: #333333;
+	color: #ffffff;
+}
+
+.create-site h2 {
+	font-size: 1.2em;
+	margin: 1em;
+}
+
+.create-site ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+}
+
+.create-site ul li { 
+	border-bottom: solid 1px #c2c2c2;
+	padding: 0.5em;
+	border-left: solid 0.5em #c3c3c3;
+}
+
+.create-site ul li:last-child {
+	border-bottom: 0;
+} 
+
+.create-site ul li:hover {
+	background: #333333;
+	border-left: solid 0.5em #811717;
+}
+
+.create-site ul li:hover a {
+	color: #ffffff;
+}
+
+.create-site ul li a {
+	text-decoration: none;
+}
+
+.config h1 {
+	font-size: 1.5em;
+	margin: 1em;
+}
+
+.config h2  {
+	font-size: 1.2em;
+	margin: 0.5em;
+}
+
+.config input[type='text']{
+	border: solid 1px #c3c3c3;
+}
+
+.config table {
+	border-collapse: collapse;
+
+}
+
+.config table tr td {
+	border-top: 1px solid #ececec;
+}
+
+.config table label {
+	font-weight: bold;
+}
+
+.config table input[type='text'], .config table select {
+	width: 20em;
+}
+
+.config .config-menu-table input[type='text'], .config table select {
+	width: 11.5em;
+}
+
+
+
+.multisite-menu {
+	margin: 0;
+	padding: 0;
+	background: #333333;
+}
+
+.multisite-menu a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.multisite-menu li:hover {
+	background: #444444;
+}
+
+.multisite-menu li {
+	list-style-type: none;
+	display: inline-block;
+}
+
+.multisite-menu li a {
+	display: inline-block;
+	padding: 1em;
+}
+
+fieldset {
+	border: 1px solid #d5d5d5;
+	border-radius: 3px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+fieldset legend {
+	color: #555555;
+	font-size: 10pt;
+	text-indent: 0;
+	position: relative;
+	line-height: 100%;
+	padding: 0 10px;
+	font-weight: bold;
+}
+
+.message {
+	border: 2px solid #555555;
+	color: blue;
+	font-weight: bold;
+	background-color: #d5d5d5;
+	text-align: center;
+	margin: 10px 0;
+	padding: 10px 20px;
+	border-radius: 3px;
+}
+input[type='submit'] {
+	border: 1px solid #blue;
+	background-color: #f9f9f9;
+	color: blue;
+	border-radius: 4px;
+	height: 30px;
+	padding: 0 15px;
+	cursor: pointer;
+}
+input[type='submit']:hover {
+	border: 1px solid orange;
+	background-color: orange;
+	color: #ffffff;
+}
+
+.item {
+	display: inline-block;
+	background-color: #333333;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 5px;
+	border-radius: 3px;
+	color: #ffffff;
+	margin: 0 20px 4px 0;
+}
+
+.no_of_board {
+	margin: 10px 0;
+	color: #555555;
+}
+input[type='text'] {
+	height: 25px;
+	line-height: 25px;
+	padding: 0 10px;
+	min-width: 200px;
+	color: #555555;
+}
+table {
+	margin: 10px 0;
+}
+
+table tr td {
+	padding: 3px 10px;
+	border-bottom: 1px solid #333333;
+	color: #555555;
+}
+
+table .header {
+	background-color: #333333;
+}
+
+table .header td {
+	border-left: 1px solid #ffffff;
+	color: #ffffff;
+	padding: 5px 10px;
+	font-size: 10pt;
+}
+table .header td:first-child {
+	border-left: 0;
+}
+
+.button {
+	background-color: #f9f9f9;
+	color: #333333;
+	border: 1px solid #333333;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 10px;
+	border-radius: 3px;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.button:hover {
+	background-color: #333333;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* theme config */
+.config-theme table {
+	margin: 0;
+}
+
+.config-theme td {
+	color: #ffffff;
+	padding: 0.75em;
+}
+
+.config-theme .theme-thumb {
+	display: inline-block;
+	position: relative;
+	margin-top: 1em;
+	overflow: hidden;
+}
+
+.config-theme .theme-thumb table {
+	position: absolute;
+	bottom: 0;
+	padding: 1em;
+	background: #333333;
+	width: 100%;
+}
+
+.config-theme .theme-thumb table, .config-theme .theme-thumb a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.config-theme button[name='theme'] {
+	border: none;
+	background: transparent;
+	color: #ffffff;
+}
+
+.config-theme button[name='theme']:focus {
+	outline: none;
+}
+
+.config-theme button[name='theme']:active {
+	outline: none;
+}
+
+.config-theme button[name='theme']:hover {
+	outline: none;
+}
+
+.site-global select {
+	padding: 0.25em 0 0.25em 0;
+}
+.site-global textarea {
+	width: 25em;
+	height: 10em;
+}
+
+.site-global > label {
+	width: 100px;
+	display: inline-block;
+	margin-bottom: 2em;
+	vertical-align: top;
+}
+
+.site-global .config-img {
+	display: inline-block;
+	margin: 0 2em 2em 0;
+	vertical-align: top;
+}
+
+.site-global .config-img img {
+	margin: 0.5em 0 0.5em 0
+}

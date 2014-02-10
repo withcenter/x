@@ -1,0 +1,22 @@
+.gnb_submenu {
+	border: 2px solid #333333;
+	width: 150px;
+	border-radius: 3px;
+	position: absolute;
+	background-color: #f9f9f9;
+	display: none;
+}
+
+.gnb_submenu div {
+	height: 25px;
+	line-height: 25px;
+	padding: 0 10px;
+}
+.gnb_submenu div:hover {
+	background-color: #333333;
+	color: #ffffff;
+}
+
+.gnb_submenu div:hover  a {
+	color: #ffffff;
+}

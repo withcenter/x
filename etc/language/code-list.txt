@@ -1,0 +1,212 @@
+password confirm
+password confirm input password again
+password confirm input password again desc
+password confirm input password again for leave
+user id
+go back to first page
+submit
+user login information
+use password lost menu if you lost id or password
+register first to use this page
+go back to first page
+connected user
+setting
+basic
+admin permission
+mail test
+delete all sesion files
+delete all cache files
+delete all captcha files
+delete all thubnail
+naver syndication ping
+member
+email members
+vistor stat
+search visitors
+points management
+polls management
+forum
+forum group
+popular keywords
+support setting
+allow javascript
+allow javascript desc
+your domain
+go to top
+only super admin can acess this page
+management permission
+acepted management permission
+user account
+required
+search
+list
+all
+nickname
+menu
+permission
+selected delete
+list
+no of members
+member account
+name
+nickname
+permission
+point
+mail
+public
+authorization
+admin main
+yes
+no
+view all members
+recent posts
+forum
+subject
+date
+more
+incident
+total
+view all history
+<!--탈퇴/회원수 -->
+<!--차단/회원수 -->
+resigned
+blocked
+unblock
+block
+mobile
+i-pin
+administrator
+normal
+"._l("no data")."
+to delete user
+member management
+list all
+no of member
+no of member after
+no of blocked
+no of blocked after
+no of resign
+no of resign after
+search member
+member id
+nickname
+name
+permission
+landline
+mobile
+point
+registered date
+referral
+search keyword
+required
+"<?php echo _l("search");?>"
+add member
+list
+all members
+id
+identity
+mobile
+status
+recent visit
+access
+group
+management
+email
+received
+adult
+authorization
+point
+registered date
+i-pin
+seleted modification
+seleted deletion
+please select at least two
+are you sure to delete this data you select?
+group
+information
+in public
+block
+"._l("no member data")."
+"._l("you cannot delete the admin who logged in currently")."
+"._l("super admin cannot be deleted.")."
+"._l("you cannot delete the member who have the same or higher level than yours.")."
+go to post
+admin info
+basic setting
+community
+logout
+<!--외부로//그인-->
+<!-- 현재 접//속//자수-->
+go to post
+search all in site
+search keyword
+required
+admin
+edit info
+logout
+register
+login
+1:1 support
+current users
+new post
+member login
+member id
+required
+password
+register
+find password
+remember me
+"<?php echo _l("login");?>"
+my profile
+admin mode
+unreaded
+message
+point
+scrap
+edit info
+logout
+<!-- 인//기검//색어 시작
+<!-- 인기검//색어 끝
+popular keyword
+접//속자//집계 시작
+접//속자//집계 끝
+visitor stat
+today
+yesterday
+maximun of visitors
+total of visitors
+more
+your domain
+go to top
+view mobile version
+개별 페//이지 접근 불가
+<!-- 페//이지 -->
+게시판 검//색 시작
+게시판 검//색 끝
+게시판 페//이지 정보 및 버튼 시작
+게시판 페//이지 정보 및 버튼 끝
+게시판 목//록 시작
+게시판 목//록 끝
+all posts in the currency page
+list
+category
+page
+admin
+write
+search post
+subject + content
+subject
+content
+member id(kr)
+member id
+writer(kr)
+writer
+search keyword
+required
+search
+no
+date
+search
+no good
+good
+comment
