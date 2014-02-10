@@ -16,7 +16,7 @@
 
 #wrapper #container{
 	border:0;
-	margin-top:15px;
+	margin-top:20px;
 	padding:0;
 	width:730px;	
 }
@@ -87,6 +87,32 @@
 	top:4px;
 	right:10px;
 }
+
+#search-wrapper #search-box #sch_stx{
+	padding:9px;
+	width:274px;
+	border:0;
+	background-color:#f7f7f7;
+}
+
+/*PLACEHOLDER CSS*/
+::-webkit-input-placeholder {
+   color: #cccccc; 
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #cccccc; 
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #cccccc;  
+}
+
+:-ms-input-placeholder {  
+   color: #cccccc;    
+}
+/**************/
+
 
 #search-wrapper #search-box #sch_stx{
 	padding:9px;
@@ -255,7 +281,7 @@
 #footer #bottom-menus a{
 	text-decoration:none;
 	display:inline-block;
-	padding:0 3px 14px 3px;
+	padding:0 4px 14px 4px;
 	color:#959595;
 }
 

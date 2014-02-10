@@ -69,7 +69,7 @@ for ($i=0; $row=sql_fetch_array($result); $i++) {
         <?php
         // 이 함수가 바로 최신글을 추출하는 역할을 합니다.
         // 사용방법 : latest(스킨, 게시판아이디, 출력라인, 글자수);
-        echo latest("community", $row['bo_table'], 6, 25);
+        echo latest("x-latest-community", $row['bo_table'], 6, 25);
         ?>	
     </div>
 <?php
