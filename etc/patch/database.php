@@ -1,5 +1,5 @@
 <?php
-	echo "all_lines:$all_lines\n";
+	
 	patch_begin(__FILE__);
 	$path = $dir_root . '/x/etc/database/schema.sql';
 	$all_lines = file($path, FILE_SKIP_EMPTY_LINES | FILE_IGNORE_NEW_LINES);
@@ -36,6 +36,6 @@
 	$idx		= 0;
 	if ( ! md::get( $domain ) ) md::config_update();
 	
-	message(' patched');
+	message('patched');
 
 	

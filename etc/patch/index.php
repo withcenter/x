@@ -1,7 +1,18 @@
 <?php
+	echo "index.php	:";
 
 	$path = $dir_root . '/index.php';
 	$data = file::read($path);
+	
+	
+	$p = "include x::theme_folder() . '/index.php';";
+	if ( strpos( $data, $p ) ) {
+		message("patched alredy");
+		return;
+	}
+	
+	
+	
 	
 	
 	$sp = "include_once('./_head.php');";
@@ -19,5 +30,5 @@
 	
 	file::write( $path,  $data );
 	
-	echo "index.php patched ... OK";
+	message("patched");
 	

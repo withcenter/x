@@ -17,5 +17,6 @@ x::hook( 'end_after_html' );
 debug::log("x end\t------------------------------");
 
 
+di( "theme: " . x::theme() );
 di( etc::included_files() );
 

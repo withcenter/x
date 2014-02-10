@@ -200,8 +200,9 @@ class x {
 		@endcode
 	 *
 	 */
-	static function theme( $file )
+	static function theme( $file=null )
 	{
+		if ( empty( $file ) ) return self::$config['site']['theme'];
 		$path = self::dir() . '/theme/' . self::$config['site']['theme'] . '/' . $file . '.php';
 		
 		return $path;
