@@ -26,7 +26,7 @@ EOP;
 
 	if ( ! pattern_exist($data, $src) ) {
 		if ( pattern_exist($data, $dst) ) {
-			message('already patched');
+			echo("	already patched\n");
 		}
 		else {
 			return -1;
@@ -41,28 +41,7 @@ EOP;
 	// patch common.js
 	// for adjustment of jQuery version difference
 	
-	/*
-	$path = $dir_root . '/js/common.js';
-	$data = file::read($path);
-	if ( $data == file::FILE_NOT_FOUND ) return $data;
-	$src = '$("textarea#wr_content[maxlength]").live("keyup change", function() {';
-	$dst = '$( document ).on( "keyup change", "textarea#wr_content[maxlength]", function() {';
 	
-	if ( ! pattern_exist($data, $src) ) {
-		if ( pattern_exist($data, $dst) ) {
-			message('common.js already patched');
-		}
-		else {
-			message('common.js did not patched');
-			patch_failed();
-		}
-	}
-	else {
-		$data = str_replace( $src, $dst, $data );
-		file::write( $path,  $data );
-		message('common.js patched');
-	}
-	*/
 	
 	patch_file ( $dir_root . '/js/common.js',
 		array(
