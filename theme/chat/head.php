@@ -4,7 +4,7 @@
     <div id="hd_wrapper">
         <div id="logo">
 			<a href="<?php echo G5_URL ?>">
-				<?if( $extra['header_logo'] ) {?><img src="<?=ms::url_site(etc::domain()).$extra['img_url'].$extra['header_logo']?>" width=50px height=50px><?} echo $extra['title'];?>
+				<?if( $extra['header_logo'] ) {?><img src="<?=ms::url_site(etc::domain())."/".$extra['img_url'].$extra['header_logo']?>" width=50px height=50px><?} echo $extra['title'];?>
 			</a>
         </div>
         <ul id="tnb">
