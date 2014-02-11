@@ -21,6 +21,7 @@
     <div id="aside">
 		<?php include('left.php');?>
         <?php echo poll('basic'); // 설문조사  ?>
+		<span class='back-to-top'><img src='<?=x::url_theme()?>/img/upicon.png'>BACK TO TOP</span>
 	</div>
     <div id="container">
 		<?if ( (preg_match('/^config/', $action)) || (preg_match('/^config_/', $action)) ) include ms::site_menu();?>

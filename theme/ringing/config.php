@@ -1,2 +1,2 @@
 <?php
-	$theme_config['name'] = "";
+	$theme_config['name'] = "ring";

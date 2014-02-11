@@ -126,3 +126,8 @@ body {
 	vertical-align: middle;
 }
 
+
+#aside .login-box {
+	margin-bottom: 1em;
+	padding-left: 1em;
+}

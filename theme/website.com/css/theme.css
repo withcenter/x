@@ -1,0 +1,306 @@
+#website-wrapper{
+	border-top:4px solid #64bbc5;
+	background-image:url('/x/theme/website.com/img/bg.png');
+	font-family:arial;	
+	width:100%;
+}
+
+#wrapper{
+	border:0;
+}
+
+#wrapper #aside{
+	border:0;
+	margin:15px 0 0 10px;	
+}
+
+#wrapper #container{
+	border:0;
+	margin-top:20px;
+	padding:0;
+	width:730px;	
+}
+
+#logo {
+	padding:0!important;
+}
+
+#logo img {
+	position:absolute;
+	top:15px;
+	left:10px;
+}
+
+#hd{
+	height:104px;
+	max-width:970px;
+	min-width:260px;
+	margin:auto;
+	
+}
+#hd-wrapper{
+	max-width:970px;
+	margin:auto;
+}
+#hd-wrapper #menu-top{
+	height:65px;
+	background-color:#678cc5;
+	position:relative;
+}
+
+#hd_sch {
+	left:270px!important;
+}
+#hd_sch #search_txtbox {
+	width: 240px!important;
+}
+#aside {
+	float:left;
+}
+
+#wrapper{
+	background-color:white;
+}
+
+#container {
+	border-right: 0;
+	border-left: 1px solid #dde4e9;
+}
+
+#search-wrapper{
+	background-color:#386b90;
+	height:19px;
+	padding:10px;
+	bottom:0;
+	left:0;
+	position:relative;
+}
+
+#search-wrapper .title{
+	float:left;
+	color:#e6ecf1;
+	font-style:italic;
+}
+
+#search-wrapper #search-box{
+	position:absolute;
+	top:4px;
+	right:10px;
+}
+
+#search-wrapper #search-box #search_txtbox{
+	padding:9px;
+	width:274px;
+	border:0;
+	background-color:#f7f7f7;
+}
+
+/*PLACEHOLDER CSS*/
+::-webkit-input-placeholder {
+   color: #cccccc; 
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #cccccc; 
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #cccccc;  
+}
+
+:-ms-input-placeholder {  
+   color: #cccccc;    
+}
+/**************/
+fieldset{
+	border:none!important;
+	padding:0!important;
+}
+
+#search-wrapper #search-box #search_txtbox{
+	padding:9px;
+	height:14px;
+	width:274px;
+	border:0;
+}
+
+#search-wrapper #search-box #search_submit{
+	padding:4px 10px;
+	background-color: #7299ae;
+	position:absolute;
+	right:5px;
+	top:5px;
+	border:0;
+}
+
+#howto-steps{
+	margin-bottom:10px;
+}
+
+#howto-steps td{
+	width:33.3%;
+}
+
+#howto-steps .steps{
+	position:relative;
+	border-right: 2px solid #ececec;	
+}
+
+#howto-steps td:last-child .steps{	
+	border:0;	
+}
+
+#howto-steps .steps img{
+	position:absolute;
+	top:37px;;
+}
+
+#howto-steps .steps .step1-img{	
+	right:107px;
+}
+
+#howto-steps .steps .step2-img{
+	right:91px;
+}
+
+#howto-steps .steps .step3-img{
+	right:90px;
+}
+
+#howto-steps .steps .description{
+	padding:105px 27px 10px 27px;
+	color:#565656;	
+	text-align:center;	
+}
+
+#howto-steps .steps .description .title{
+	font-size:1.5em;
+	margin-bottom:20px;
+}
+
+#howto-steps .steps .description .instruction{
+	font-size:1.3em;	
+}
+
+#create-your-site{
+	border:1px solid #a6603a;	
+	width:100%;
+	max-width:440px;
+	margin:auto;
+	margin-bottom:20px;
+}
+
+#create-your-site .border2{
+	border:1px solid #f6a76d;	 
+}
+
+#create-your-site .border3{
+	border:1px solid #ed8b50;
+	background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0, #F48245),
+	color-stop(1, #D9743D)
+	);
+	background-image: -o-linear-gradient(bottom, #F48245 0%, #D9743D 100%);
+	background-image: -moz-linear-gradient(bottom, #F48245 0%, #D9743D 100%);
+	background-image: -webkit-linear-gradient(bottom, #F48245 0%, #D9743D 100%);
+	background-image: -ms-linear-gradient(bottom, #F48245 0%, #D9743D 100%);
+	background-image: linear-gradient(to bottom, #F48245 0%, #D9743D 100%);
+	padding:7px 0;
+
+	text-align:center;
+}
+
+
+#create-your-site .border3 a{
+	font-size:1.5em;
+	text-decoration:none;
+	color:white;
+}
+
+#banner-wrapper{
+	background-image:url('../img/banner.png');
+	background-repeat:no-repeat;
+	width:100%;
+	max-width:738px;
+	min-height:176px;
+	border:1px solid #b6b6b6;
+	color:#565656;
+	margin-bottom:15px;
+}
+
+#banner-wrapper .title{
+	margin:10px 0 0 194px;
+	font-size: 2.5em;	
+}
+
+#banner-wrapper ul{
+	margin-left:194px;
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+
+#banner-wrapper ul{
+	margin-left:250px;
+}
+
+#banner-wrapper ul li{
+	margin:3px 0;
+	max-width:335px;
+	padding-left:15px;
+	position:relative;	
+}	
+
+#banner-wrapper ul li img{
+	position:absolute;
+	left:0;
+	top:5px;
+}
+
+	
+.post-content{
+	position:relative;	
+}
+
+.post-content .top-image{
+	position:absolute;
+	left:0;
+	top:0;
+}
+
+/*FOOTER*/
+ #footer{
+	margin-top:260px;
+	border-top:1px solid #dddddd;
+	padding:10px 17px;
+	color:#959595;
+	font-size:.9em;	
+}
+
+#footer #bottom-menus, #footer #copyright{
+	display:inline-block;
+}
+
+#footer #bottom-menus a{
+	text-decoration:none;
+	display:inline-block;
+	padding:0 4px 14px 4px;
+	color:#959595;
+}
+
+#footer #copyright{
+	float:right;
+}
+
+/*skin/latest/community*/
+
+.lt .lt_title .dots{
+	display:none;
+}
+
+.lt .lt_title{	
+	background-image:url('../img/directions-blue.png')!important;	
+}	

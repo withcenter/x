@@ -1,5 +1,5 @@
 <div class='profile-photo'>
-	<?if( $extra['profile_img'] ) {?><img src="<?=ms::url_site(etc::domain()).$extra['img_url'].$extra['profile_img']?>"><br><?}?>
+	<?if( $extra['profile_img'] ) {?><img src="<?=ms::url_site(etc::domain()).'/'.$extra['img_url'].$extra['profile_img']?>"><br><?}?>
 	<p><?=$extra['profile_text1']?></p>
 </div>
 <div class='profile-photo-bottom'><p>~</p></div>
@@ -25,11 +25,12 @@
 </div>
 
 <div class='latest-posts'>
-<?/**Sample Latest Post, this only fetches 5 latest post from $extra['menu_1'] */?>
+<?
+/**Sample Latest Post, this only fetches 5 latest post from $extra['menu_1'] */?>
 	<h2>Latest Posts</h2>
 	<ul>
 		<? 
-		$option = db::rows("SELECT * FROM $g5[write_prefix]".$extra['menu_1']);
+		$option = db::rows("SELECT * FROM $g5[write_prefix]".$extra['menu_1']." ORDER BY wr_num");
 		for ( $i = 0; $i <= 4; $i++) { 
 			if( !$option[$i]['wr_subject'] == '' ) {?>
 				<li>
@@ -83,4 +84,15 @@
 </div>
 
 <div class='navigator'>
+	<table width='100%'>
+		<tr>
+			<td><a href='#'><span class='prevnav'><img src='<?=x::url_theme()?>/img/previcon.png'>PREV</span></a></td>
+			<td align='right'><a href='#'><span class='nextnav'>NEXT<img src='<?=x::url_theme()?>/img/nexticon.png'></span></a></td>
+		</tr>
+	</table>
+</div>
+
+<div>
+<?php /** login for testing purposes*/ 
+	if (!login())	echo outlogin('basic');?>
 </div>

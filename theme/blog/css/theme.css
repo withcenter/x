@@ -190,6 +190,21 @@
 	height: 24px;
 }
 
+#aside .navigator a{
+	color: #56493f;
+	text-decoration: none;
+	font-family: Arial;
+}
+
+#aside .navigator .prevnav img {
+	padding: 1em 1em 1em 0;
+}
+
+#aside .navigator .nextnav img {
+	padding: 1em 0 1em 1em;
+}
+
+
 /*container*/
 body {
 	background: #f3f3f3;
@@ -200,6 +215,42 @@ body {
 	width: 699px;
 }
 
+#container .post-container {
+	margin-top: 1em;
+	border-bottom: solid 1px #959595;
+	padding-bottom: 1em;
+}
+
+#container .post-container a {
+	text-decoration: none;
+}
+
+#container .subject-container {
+	background: #bfb840;
+	max-width: 20em;
+	padding: 0.75em 0 0 0.5em;
+}
+
+#container .date-author-container {
+	background: #bfb840;
+	max-width: 12.50em;
+	padding: 0.25em 0.5em 0.25em 0.25em;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 11pt;
+	text-transform: uppercase;
+}
+
+#container .subject {
+	font-size: 20px;
+	font-family: Arial;
+}
+
+#container .post-container .post-content {
+	clear: both;
+	font-size: 12pt;
+}
+
 
 #wrapper {
 	border: 0 !important;
@@ -207,14 +258,32 @@ body {
 }
 
 .footer-text {
-	margin-top: 1em;
+	margin: 1em 0 0 220px;
 	clear:both;
-	float: right;
+	float: left;
 }
 
-.footer-text p {
+.footer-text p, .footer-text p a {
 	font-family: Gulim;
 	color: #acacac;
 	text-transform: uppercase;
 	padding: 1em;
+	text-decoration: none;
+}
+
+.back-to-top img {
+	padding: 1em 1em 1em 0;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 0.5em;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 1em;
+    display: none;
+}
+
+.back-to-top:hover {    
+
 }
