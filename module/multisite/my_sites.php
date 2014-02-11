@@ -9,7 +9,7 @@
 			<?php
 				foreach ( ms::my_site() as $site ) {
 				date_default_timezone_set("UTC");
-				$date_created = date("(T) Y-d-m, h:ia",($site['stamp_create']));				
+				$date_created = date("(T) m/d/Y, h:iA",($site['stamp_create']));				
 			 ?>
 				<li>
 					<a href="<?=ms::url_site($site['domain'])?>">
