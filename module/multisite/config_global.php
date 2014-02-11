@@ -1,5 +1,5 @@
 <?php
-	if ( ! ms::admin() ) {
+	if ( ! ms::admin() || $is_admin != 'super' ) {
 		echo "You are not admin";
 		return;
 	}
@@ -16,12 +16,26 @@
 		<input type='hidden' name='module' value='multisite'>
 		<input type='hidden' name='action' value='config_global_submit'>
 <div class='config site-global'>
-	<h2>Site Info</h2>
-		<label>Main Title</label><input type='text' name='title' value='<?=$extra['title']?>'>
-		<label>Secondary Title</label><input type='text' name='secondary_title' value='<?=$extra['secondary_title']?>'>
-		<label>Header Text</label><input type='text' name='header_text' value='<?=$extra['header_text']?>'>
-		<label>Footer Text</label><input type='text' name='footer_text' value='<?=$extra['footer_text']?>'>
-		<br>Forums on First Page, Forum 1, is the Main Forum<br>
+	<div class='title'><?=ln('Site Info')?></div>	
+		<table cellpadding=0 cellspacing=0 width='100%'>
+			<tr valign='top'>
+				<td>
+					<span>Main Title</span><input type='text' name='title' value='<?=$extra['title']?>'>
+				</td>
+				<td>
+					<span>Secondary Title</span><input type='text' name='secondary_title' value='<?=$extra['secondary_title']?>'>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span>Header Text</span><input type='text' name='header_text' value='<?=$extra['header_text']?>'>
+				</td>
+				<td>	
+					<span>Footer Text</span><input type='text' name='footer_text' value='<?=$extra['footer_text']?>'>
+				</td>
+			</tr>
+		</table>
+		<div class='middle-title'>Forums on First Page, Forum 1, is the Main Forum</div>
 			<? for ( $i = 1; $i <= 10; $i++ ) { ?>
 			<select name="forum_no_<?=$i?>">
 					<option value=''>Forum No. <?=$i?></option>

@@ -80,11 +80,11 @@
 	border-collapse: collapse;
 
 }
-
+/*
 .config table tr td {
 	border-top: 1px solid #ececec;
 }
-
+*/
 .config table label {
 	font-weight: bold;
 }
@@ -98,6 +98,7 @@
 }
 
 
+/*
 
 .multisite-menu {
 	margin: 0;
@@ -123,6 +124,7 @@
 	display: inline-block;
 	padding: 1em;
 }
+*/
 
 fieldset {
 	border: 1px solid #d5d5d5;
@@ -188,6 +190,7 @@ input[type='text'] {
 	min-width: 200px;
 	color: #555555;
 }
+/*
 table {
 	margin: 10px 0;
 }
@@ -197,7 +200,7 @@ table tr td {
 	border-bottom: 1px solid #333333;
 	color: #555555;
 }
-
+*/
 table .header {
 	background-color: #333333;
 }

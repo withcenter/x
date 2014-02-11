@@ -1,5 +1,5 @@
 <?
-	if ( ! ms::admin() ) {
+	if ( ! ms::admin() || $is_admin != 'super' ) {
 		echo "You are not admin";
 		return;
 	}
