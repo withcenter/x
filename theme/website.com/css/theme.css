@@ -212,7 +212,7 @@ fieldset{
 	background-image: -ms-linear-gradient(bottom, #F48245 0%, #D9743D 100%);
 	background-image: linear-gradient(to bottom, #F48245 0%, #D9743D 100%);
 	padding:7px 0;
-
+	height:22px;
 	text-align:center;
 }
 
@@ -273,7 +273,7 @@ fieldset{
 	border-top:1px solid #dddddd;
 	padding:10px 17px;
 	color:#959595;
-	font-size:.9em;	
+	font-size:.8em;	
 }
 
 #footer #bottom-menus, #footer #copyright{
@@ -299,4 +299,61 @@ fieldset{
 
 .lt .lt_title{	
 	background-image:url('../img/directions-blue.png')!important;	
-}	
+}
+
+/*new_sites*/
+.left-menu-wrapper {
+	width:190px;
+	overflow:hidden;
+	margin-bottom:24px;
+}
+
+.left-menu-wrapper .inner{
+	padding:0 10px 10px 10px;
+}
+
+.left-menu-wrapper .header{
+	color:#565656;
+	position:relative;
+	font-size:1.4em;
+	font-weight:bold;
+	border-bottom:1px solid #cecece; 
+	padding:0 0 6px 30px;
+}
+
+.left-menu-wrapper .header img{
+	position:absolute;
+	left:0;
+	top:0;
+}
+
+.left-menu-wrapper .info-wrapper{	
+	white-space:nowrap;
+	border-bottom:1px solid #cecece; 
+	padding:0 0 10px 0;	
+	overflow:hidden;
+}
+
+.left-menu-wrapper .info-wrapper .top-info{
+	margin:10px 0;
+	font-style:italic;
+}
+
+.left-menu-wrapper .info-wrapper .top-info a, .left-menu-wrapper .info-wrapper .other-info a{
+	text-decoration:none;
+	color:#a1a1a1;
+}
+
+.left-menu-wrapper .info-wrapper .other-info{
+	margin-left:15px;
+}
+
+.left-menu-wrapper .view-more{
+	margin-top: 10px;
+	float:right;	
+}
+
+.left-menu-wrapper .view-more a{
+	color:#616161;
+	text-decoration:none;
+}

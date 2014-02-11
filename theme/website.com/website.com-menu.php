@@ -7,7 +7,7 @@
 ?>	
 <ul id="website-com-menu">
 	<li class="menu-list"><a class='home' href='/' class="menu-list"><?=ln('Home')?></a></li>
-	
+
 <? /*
 	<li class="gnb_1dli">
 		<a href="<?=g::url_board(ms::board_id(etc::domain()))?>" class="menu-list"><?=ln('Forum')?></a>
@@ -34,7 +34,7 @@
 		
 	</li>
 	<?php } 
-		if ( $is_admin == 'super' ){
+		if ( ms::admin() || $is_admin == 'super' ){
 	?>
 	<li class="menu-list">
 		<a href="<?=x::url()?>/?module=admin&action=index" class="admin"><?=ln('Admin Page')?></a>
@@ -60,7 +60,10 @@
 	$(function(){			
 		if( ("<?php echo $in['bo_table'];?>")){
 			$(".menu-list .<?php echo $in['bo_table'];?>").addClass('selected');
-		}		
+		}
+		else if ( "<?php echo $in['module']?>" == "admin" || "<?php echo $in['module']?>" == "multisite" || "<?php echo $in['module']?>" == "multidomain" ){
+			$(".menu-list .admin").addClass('selected');
+		}
 		else{
 			$('.menu-list .home').addClass('selected');			
 		}

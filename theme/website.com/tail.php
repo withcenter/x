@@ -3,7 +3,7 @@
 	<div id='footer'>
 		<div id='bottom-menus'>
 		<a class='home' href='/' class="menu-list"><?=ln('HOME')?></a></li>
-		<?php if ( $is_admin == 'super' ) { ?>
+		<?php if ( $is_admin == 'super' || ms::admin()) { ?>
 			<a href="<?=x::url()?>/?module=admin&action=index" class="admin"><?=ln('ADMIN PAGE')?></a>		
 		<? } ?>
 		<? for ( $i = 1; $i <= 10; $i++ ) { ?>	
@@ -17,7 +17,7 @@
 		<?}}?>
 		<a href="<?=ms::url_main_site()?>" class="main-site"><?=ln('MAIN SITE')?></a>
 		</div>
-		<div id='copyright'>COPYRIGHT (c) 2014 ALL RIGHTS RESRERVED WEBSITE.COM</div>
+		<div id='copyright'>COPYRIGHT Ⓒ 2014 ALL RIGHTS RESRERVED WEBSITE.COM</div>
 	</div>
 </div>
 </div>
