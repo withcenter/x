@@ -194,7 +194,7 @@ class multisite {
 	
 	static function url_config( $domain = null )
 	{	
-		if ( $domain ) $host = "http://".$domain;
+		if ( $domain ) $host = "//".$domain.'/x';
 		else $host = x::url();
 		
 		return $host . '/?module=multisite&action=config';
