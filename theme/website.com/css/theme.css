@@ -51,7 +51,7 @@
 #hd_sch {
 	left:270px!important;
 }
-#hd_sch #sch_stx {
+#hd_sch #search_txtbox {
 	width: 240px!important;
 }
 #aside {
@@ -88,7 +88,7 @@
 	right:10px;
 }
 
-#search-wrapper #search-box #sch_stx{
+#search-wrapper #search-box #search_txtbox{
 	padding:9px;
 	width:274px;
 	border:0;
@@ -112,15 +112,19 @@
    color: #cccccc;    
 }
 /**************/
+fieldset{
+	border:none!important;
+	padding:0!important;
+}
 
-
-#search-wrapper #search-box #sch_stx{
+#search-wrapper #search-box #search_txtbox{
 	padding:9px;
+	height:14px;
 	width:274px;
 	border:0;
 }
 
-#search-wrapper #search-box #sch_submit{
+#search-wrapper #search-box #search_submit{
 	padding:4px 10px;
 	background-color: #7299ae;
 	position:absolute;
