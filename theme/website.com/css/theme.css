@@ -212,7 +212,7 @@ fieldset{
 	background-image: -ms-linear-gradient(bottom, #F48245 0%, #D9743D 100%);
 	background-image: linear-gradient(to bottom, #F48245 0%, #D9743D 100%);
 	padding:7px 0;
-
+	height:22px;
 	text-align:center;
 }
 
