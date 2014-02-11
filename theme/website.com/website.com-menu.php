@@ -33,13 +33,13 @@
 		</ul>
 		
 	</li>
-	<?php } ?>
-	
-	
+	<?php } 
+		if ( $is_admin == 'super' ){
+	?>
 	<li class="menu-list">
-		<a href="<?=ms::url_config()?>" class="admin"><?=ln('Admin Page')?></a>
+		<a href="<?=x::url()?>/?module=admin&action=index" class="admin"><?=ln('Admin Page')?></a>
 	</li>
-	
+	<?}?>
 	<? for ( $i = 1; $i <= 10; $i++ ) { ?>
 	
 	<? if ( $extra['menu_'.$i] != '' ) {

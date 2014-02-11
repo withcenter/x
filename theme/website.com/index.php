@@ -31,11 +31,7 @@
 </div>
 
 <div id='create-your-site'>
-	<div class='border2'>
-		<div class='border3'>
-			<a href='<?=x::url()?>/?module=multisite&action=create'>CREATE YOUR SITE NOW</a>
-		</div>
-	</div>
+	<a href='<?=x::url()?>/?module=multisite&action=create'>CREATE YOUR SITE NOW</a>
 </div>
 
 <div id='banner-wrapper'>
