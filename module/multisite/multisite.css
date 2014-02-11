@@ -285,48 +285,38 @@ table .header td:first-child {
 	margin: 0.5em 0 0.5em 0
 }
 
-/*view sites*/
-.view-site {
-	width:400px;
+
+/* admin_multisite.php */
+
+.add-new-site {
+	float: right;
+	display: inline-block;
+	width: 120px;
+	height: 20px;
+	background-color: #616161;
+	color: #ffffff;
+	line-height: 20px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.add-new-site:hover {
+	text-decoration: none;
 }
 
-.view-site h2{
-	font-size:2.5em;
-	color:#565656;	
-	padding-bottom:10px;
-	margin-left:10px;
+.admin-multisite-table .header {
+	background-color: #8f8f8f;
+	color: #ffffff;
 }
 
-.view-site ul{
-	list-style:none;
-	padding:0;
-	margin:0;
+.admin-multisite-table tr td {
+	height: 30px;
+	line-height: 30px;
+	padding: 0; 
+	border-left: 0;
+	font-size: 1em;
 }
 
-.view-site ul li{
-	font-size:1.3em;
-}
-
-.view-site ul li a{
-	display:inline-block;
-	color:#565656;
-	text-decoration:none;
-	border-bottom:1px solid #d5d5d5;
-	border-left:4px solid #d5d5d5;
-	width:100%;
-	padding: 4px;
-}
-
-.view-site ul li:last-child a{
-	border-bottom:none;
-}
-
-.view-site ul li a:hover{
-	color:#f7f7f7;
-	background-color:#000000;
-	border-left:4px solid orange;
-}
-
-.view-site .info{
-	padding:4px 0;
+.admin-multisite-table .background {
+	background-color: #efefef;
+	color: #7a7a7a;
 }

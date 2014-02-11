@@ -1,38 +1,45 @@
 <?php
 	echo "
-		<h2><a href='?module=multisite&action=create'>Add New Site</a></h2>
+		<a class='add-new-site' style='color: #ffffff;' href='?module=multisite&action=create'>Add New Site</a>
+		
+		<div style='clear:right;'></div>
 	";
 	
 	
 	$sites = ms::gets();
 	
-	echo '<table cellspacing=3px>';
+	echo "<table cellspacing=0 cellpadding=0 width='100%' class='admin-multisite-table'>";
 	echo "
-		<tr>
+		<tr valign='top' class='header'>
 			<td></td>
-			<td><h2>DOMAIN</h2></td>
-			<td><h2>USER ID</h2></td>
-			<td><h2>TITLE</h2></td>
-			<td><h2>HEADER</h2></td>
-			<td><h2>FOOTER</h2></td>
-			<td><h2>PRIORITY</h2></td>
+			<td>DOMAIN</td>
+			<td>USER ID</td>
+			<td>TITLE</td>
+			<td align='center'>HEADER</td>
+			<td align='center'>FOOTER</td>
+			<td align='center'>PRIORITY</td>
 		</tr>
 	";
+	$i = 0;
 	foreach ( $sites as $site ) {
-		echo '<tr>';
+		if ( $i % 2 == 1 ) $background="background";
+		else $background = null;
+		$i++;
+		
+		echo "<tr class='row $background'>";
 			echo "<td><a href='?module=multisite&action=admin_update&idx=$site[idx]'>Edit =></a></td>";
 			echo "<td><a href='http://$site[domain]'>$site[domain]</a></td>";
 			echo "<td>$site[mb_id]</td>";
 			echo "<td>$site[title]</td>";
 			if ( !empty($site['header']) ) $header = 'O';
 			else $header = 'X';
-			echo "<td>$header</td>";
+			echo "<td align='center'>$header</td>";
 			
 			if ( !empty($site['footer']) ) $footer = 'O';
 			else $footer = 'X';
-			echo "<td>$footer</td>";
+			echo "<td align='center'>$footer</td>";
 			
-			echo "<td>$site[priority]</td>";
+			echo "<td align='center'>$site[priority]</td>";
 			
 
 		echo '</tr>';
