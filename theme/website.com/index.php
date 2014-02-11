@@ -49,7 +49,7 @@
 <div id='latest-posts'>
 <?php
 //  최신글
-$sql = " select bo_table from `{$g5['board_table']}` a left join `{$g5['group_table']}` b on (a.gr_id=b.gr_id)  where a.bo_device <> 'mobile' order by b.gr_order, a.bo_order LIMIT 12";
+$sql = " select bo_table from `{$g5['board_table']}` a left join `{$g5['group_table']}` b on (a.gr_id=b.gr_id)  where a.bo_device <> 'mobile' order by b.gr_order, a.bo_order LIMIT 3";
 $result = sql_query($sql);
 for ($i=0; $row=sql_fetch_array($result); $i++) {
     if ( ($i+3)%3==1 || ($i+3)%3==2) {$lt_style = "with-margin";}
