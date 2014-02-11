@@ -3,7 +3,9 @@
 	<div id='footer'>
 		<div id='bottom-menus'>
 		<a class='home' href='/' class="menu-list"><?=ln('HOME')?></a></li>
-		<a href="<?=ms::url_config()?>" class="admin"><?=ln('ADMIN PAGE')?></a>		
+		<?php if ( $is_admin == 'super' ) { ?>
+			<a href="<?=x::url()?>/?module=admin&action=index" class="admin"><?=ln('ADMIN PAGE')?></a>		
+		<? } ?>
 		<? for ( $i = 1; $i <= 10; $i++ ) { ?>	
 		<? if ( $extra['menu_'.$i] != '' ) {
 			$option = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table = '".$extra['menu_'.$i]."'");
