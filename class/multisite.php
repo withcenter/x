@@ -192,9 +192,12 @@ class multisite {
 		return x::url() . '/?module=multisite&action=create';
 	}
 	
-	static function url_config()
-	{
-		return x::url() . '/?module=multisite&action=config';
+	static function url_config( $domain = null )
+	{	
+		if ( $domain ) $host = "http://".$domain;
+		else $host = x::url();
+		
+		return $host . '/?module=multisite&action=config';
 	}
 	
 	
