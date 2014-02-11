@@ -3,7 +3,7 @@
 	<div id='footer'>
 		<div id='bottom-menus'>
 		<a class='home' href='/' class="menu-list"><?=ln('HOME')?></a></li>
-		<?php if ( $is_admin == 'super' ) { ?>
+		<?php if ( $is_admin == 'super' || ms::admin()) { ?>
 			<a href="<?=x::url()?>/?module=admin&action=index" class="admin"><?=ln('ADMIN PAGE')?></a>		
 		<? } ?>
 		<? for ( $i = 1; $i <= 10; $i++ ) { ?>	
