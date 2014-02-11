@@ -1,7 +1,7 @@
 <link rel='stylesheet' type='text/css' href='<?=x::url()?>/module/multisite/subsite.css' />
 <?php
 
-		if ( ! ms::admin() || $is_admin != 'super' ) {
+		if ( ! ms::admin() ) {
 		echo "You are not admin";
 		return;
 	}
