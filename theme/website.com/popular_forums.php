@@ -26,7 +26,7 @@
 		?>
 			<div class='info-wrapper'>
 				<div class='top-info bo-table'><a href='<?=$post_url?>'><?=$allhits[$count]['bo_table']?></a></div>
-				<div class='other-info subject'><a href='<?=$post_url?>'><?=substr($allhits[$count]['wr_subject'],0,15)?>( <?=$allhits[$count]['wr_hit']?> )</a></div>
+				<div class='other-info subject'><a href='<?=$post_url?>'><?=substr($allhits[$count]['wr_subject'],0,10)?> (Views: <?=$allhits[$count]['wr_hit']?> )</a></div>
 				<div class='other-info content'><a href='<?=$post_url?>'><?=$allhits[$count]['wr_content']?></a></div>
 			</div>
 		<?}?>		
