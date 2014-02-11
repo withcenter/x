@@ -7,10 +7,6 @@
 ?>	
 <ul id="website-com-menu">
 	<li class="menu-list"><a class='home' href='/' class="menu-list"><?=ln('Home')?></a></li>
-	
-<? if ( ms::admin() || $is_admin == 'super' ) {?>
-	<li class="menu-list"><a class='site-config' href='<?=x::url()?>/?module=multisite&action=config' class="menu-list"><?=ln('Site Config')?></a></li>
-<?}?>	
 
 <? /*
 	<li class="gnb_1dli">
@@ -38,7 +34,7 @@
 		
 	</li>
 	<?php } 
-		if ( $is_admin == 'super' ){
+		if ( ms::admin() || $is_admin == 'super' ){
 	?>
 	<li class="menu-list">
 		<a href="<?=x::url()?>/?module=admin&action=index" class="admin"><?=ln('Admin Page')?></a>
@@ -65,11 +61,8 @@
 		if( ("<?php echo $in['bo_table'];?>")){
 			$(".menu-list .<?php echo $in['bo_table'];?>").addClass('selected');
 		}
-		else if ( "<?php echo $in['module']?>" == "admin" ){
+		else if ( "<?php echo $in['module']?>" == "admin" || "<?php echo $in['module']?>" == "multisite" || "<?php echo $in['module']?>" == "multidomain" ){
 			$(".menu-list .admin").addClass('selected');
-		}
-		else if ( "<?php echo $in['module']?>" == "multisite" ){
-			$(".menu-list .site-config").addClass('selected');
 		}
 		else{
 			$('.menu-list .home').addClass('selected');			
