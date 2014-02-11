@@ -7,7 +7,7 @@
 		$allhits = Array();
 		$i = 0;
 		foreach ( $queries as $query ){
-			$q2 = "SELECT wr_id, wr_subject, wr_content, wr_hit FROM ".$g5['write_prefix'].$query['bo_table']." ORDER BY wr_hit DESC, wr_datetime DESC";
+			$q2 = "SELECT wr_id, wr_subject, wr_content, wr_hit FROM ".$g5['write_prefix'].$query['bo_table'];
 			$queries2 = db::rows($q2);
 	
 			foreach( $queries2 as $qs2 ){
