@@ -8,6 +8,8 @@
 <ul id="website-com-menu">
 	<li class="menu-list"><a class='home' href='/' class="menu-list"><?=ln('Home')?></a></li>
 	
+	<li class="menu-list"><a class='site-config' href='<?=x::url()?>/?module=multisite&action=config' class="menu-list"><?=ln('Site Config')?></a></li>
+	
 <? /*
 	<li class="gnb_1dli">
 		<a href="<?=g::url_board(ms::board_id(etc::domain()))?>" class="menu-list"><?=ln('Forum')?></a>
@@ -60,7 +62,13 @@
 	$(function(){			
 		if( ("<?php echo $in['bo_table'];?>")){
 			$(".menu-list .<?php echo $in['bo_table'];?>").addClass('selected');
-		}		
+		}
+		else if ( "<?php echo $in['module']?>" == "admin" ){
+			$(".menu-list .admin").addClass('selected');
+		}
+		else if ( "<?php echo $in['module']?>" == "multisite" ){
+			$(".menu-list .site-config").addClass('selected');
+		}
 		else{
 			$('.menu-list .home').addClass('selected');			
 		}
