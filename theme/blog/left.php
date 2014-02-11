@@ -1,9 +1,12 @@
 <div class='profile-photo'>
-	<?if( $extra['profile_img'] ) {?><img src="<?=ms::url_site(etc::domain()).'/'.$extra['img_url'].$extra['profile_img']?>"><br><?}?>
+	<?if( $extra['profile_img'] ) {?>
+		<img src="<?=ms::url_site(etc::domain()).'/'.$extra['img_url'].$extra['profile_img']?>"><br>
+	<?}	else {?>
+		<img src='<?=x::url_theme()?>/img/blank_profile.png'?>
+	<?}?>
 	<p><?=$extra['profile_text1']?></p>
 </div>
 <div class='profile-photo-bottom'><p>~</p></div>
-
 <div class='social-icons'>
 	<a href='#'><img src='<?=x::url_theme()?>/img/fbicon.png'></a>
 	<a href='#'><img src='<?=x::url_theme()?>/img/twittericon.png'></a>
@@ -30,11 +33,12 @@
 	<h2>Latest Posts</h2>
 	<ul>
 		<? 
+		if( $extra['menu_1'] == '' ) $extra['menu_1'] = ms::board_id(etc::domain()).'_1';
 		$option = db::rows("SELECT * FROM $g5[write_prefix]".$extra['menu_1']." ORDER BY wr_num");
 		for ( $i = 0; $i <= 4; $i++) { 
 			if( !$option[$i]['wr_subject'] == '' ) {?>
 				<li>
-					<a href='<?=g::url()?>/bbs/board.php?bo_table=<?=$extra['menu_1']?>'>
+					<a href='<?=g::url()?>/bbs/board.php?bo_table=<?=$extra['menu_1']?>&wr_id=<?=$option[$i]['wr_id']?>'>
 						<span class='subject'><?=$option[$i]['wr_subject']?></span><br><?=mb_substr($option[$i]['wr_content'],0,50)?>
 					</a>
 				</li>
@@ -94,5 +98,5 @@
 
 <div>
 <?php /** login for testing purposes*/ 
-	if (!login())	echo outlogin('basic');?>
+	if (!login()) echo "<h2>Login FORM</h2>"; echo outlogin('basic');?>
 </div>

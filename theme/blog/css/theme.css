@@ -64,7 +64,7 @@
 /*aside*/
 #aside {
 	border: 0 !important;
-	padding: 0 0 0 0.75em;
+	padding: 0 0.75em 0 0.75em;
 }
 
 #aside .profile-photo {
@@ -216,6 +216,7 @@ body {
 }
 
 #container .post-container {
+	padding-top: 1em;
 	border-bottom: solid 1px #959595;
 	padding-bottom: 1em;
 }
@@ -294,4 +295,9 @@ body {
 
 .back-to-top:hover {    
 
+}
+
+/*Login tweaking*/
+section#ol_before h2, section#ol_after h2, section#ol_after #ol_after_private{
+	display: none;
 }

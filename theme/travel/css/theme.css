@@ -49,9 +49,7 @@ body {
 }
 
 
-#container .lt{
-	margin-left: 10px !important;
-}
+
 
 #aside {
 	border: 1px solid #e34663;
@@ -130,4 +128,8 @@ body {
 #aside .login-box {
 	margin-bottom: 1em;
 	padding-left: 1em;
+}
+
+.lt {
+	margin: 0.5em;
 }
