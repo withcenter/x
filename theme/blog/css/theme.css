@@ -216,6 +216,7 @@ body {
 }
 
 #container .post-container {
+	padding-top: 1em;
 	border-bottom: solid 1px #959595;
 	padding-bottom: 1em;
 }

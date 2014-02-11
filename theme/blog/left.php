@@ -3,7 +3,6 @@
 	<p><?=$extra['profile_text1']?></p>
 </div>
 <div class='profile-photo-bottom'><p>~</p></div>
-
 <div class='social-icons'>
 	<a href='#'><img src='<?=x::url_theme()?>/img/fbicon.png'></a>
 	<a href='#'><img src='<?=x::url_theme()?>/img/twittericon.png'></a>
@@ -34,7 +33,7 @@
 		for ( $i = 0; $i <= 4; $i++) { 
 			if( !$option[$i]['wr_subject'] == '' ) {?>
 				<li>
-					<a href='<?=g::url()?>/bbs/board.php?bo_table=<?=$extra['menu_1']?>'>
+					<a href='<?=g::url()?>/bbs/board.php?bo_table=<?=$extra['menu_1']?>&wr_id=<?=$option[$i]['wr_id']?>'>
 						<span class='subject'><?=$option[$i]['wr_subject']?></span><br><?=mb_substr($option[$i]['wr_content'],0,50)?>
 					</a>
 				</li>
