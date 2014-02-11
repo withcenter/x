@@ -49,10 +49,10 @@
 <div id='latest-posts'>
 <?php
 //  최신글
-$sql = " select bo_table from `{$g5['board_table']}` a left join `{$g5['group_table']}` b on (a.gr_id=b.gr_id)  where a.bo_device <> 'mobile' order by b.gr_order, a.bo_order LIMIT 3";
+$sql = " select bo_table from `{$g5['board_table']}` a left join `{$g5['group_table']}` b on (a.gr_id=b.gr_id)  where a.bo_device <> 'mobile' order by b.gr_order, a.bo_order LIMIT 12";
 $result = sql_query($sql);
 for ($i=0; $row=sql_fetch_array($result); $i++) {
-    if ( ($i+3)%3==1 || ($i+3)%3==2) {$lt_style = "margin-left:28px"; $num=$i;}
+    if ( ($i+3)%3==1 || ($i+3)%3==2) {$lt_style = "with-margin";}
     else $lt_style = "";
 	/*
 	if ( ($i+3)%3==1 ) $image = 'wrench-blue.png';
@@ -60,7 +60,7 @@ for ($i=0; $row=sql_fetch_array($result); $i++) {
 	else $image = 'directions-blue.png';
 	*/
 ?>
-    <div class='post-content <?php echo ($i+1);?> ' style="float:left;<?php echo $lt_style ?>; width:222px;">
+    <div class='post-content <?php echo $lt_style ?>'>
 	<?/*<img class='top-image' src='skin/latest/community/img/<?php echo $image; ?>'/>*/?>
         <?php
         // 이 함수가 바로 최신글을 추출하는 역할을 합니다.

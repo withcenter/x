@@ -258,7 +258,13 @@ fieldset{
 
 	
 .post-content{
-	position:relative;	
+	position:relative;
+	float:left;
+	width:222px;
+}
+
+.post-content.with-margin{
+	margin-left:28px;
 }
 
 .post-content .top-image{
