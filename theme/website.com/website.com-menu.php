@@ -1,5 +1,4 @@
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/menu.css' />
-<script src='<?=x::url_theme()?>/website.com-menu.js'></script>
 <?php
 
 	$main = array();
