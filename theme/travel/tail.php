@@ -4,6 +4,7 @@ COPYRIGHT @ 2014 &nbsp&nbsp ALL RIGHTS RESERVED &nbsp&nbsp WITHCENTER.COM
 <?} else echo $extra['footer_text'];?>
 </p>
 </div>
+</div>
 
 <!--  하단 끝 -->
 

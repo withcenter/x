@@ -216,9 +216,18 @@ body {
 }
 
 #container .post-container {
-	margin-top: 1em;
 	border-bottom: solid 1px #959595;
 	padding-bottom: 1em;
+}
+
+#container .post-container .post-content {
+	position: relative;
+}
+
+#container .post-container .post-content img {
+	width: 25%;
+	float: left;
+	margin: 0.5em;
 }
 
 #container .post-container a {
@@ -260,7 +269,6 @@ body {
 .footer-text {
 	margin: 1em 0 0 220px;
 	clear:both;
-	float: left;
 }
 
 .footer-text p, .footer-text p a {
