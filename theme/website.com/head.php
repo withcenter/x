@@ -73,8 +73,8 @@
     <div id="aside">
 		<?php echo outlogin('x-outlogin-website.com'); // 외부 로그인  ?>
         <?php echo poll('basic'); // 설문조사  ?>
-		<?php include "popular_forums.php"; ?>
-		<?php include "new_sites.php"; ?>
+		<?php// include "popular_forums.php"; ?>
+		<?php //include "new_sites.php"; ?>
     </div>
     <div id="container">
 		<?if ( (preg_match('/^config/', $action)) || (preg_match('/^config_/', $action)) ) include ms::site_menu();?>

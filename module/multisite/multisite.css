@@ -284,3 +284,39 @@ table .header td:first-child {
 .site-global .config-img img {
 	margin: 0.5em 0 0.5em 0
 }
+
+
+/* admin_multisite.php */
+
+.add-new-site {
+	float: right;
+	display: inline-block;
+	width: 120px;
+	height: 20px;
+	background-color: #616161;
+	color: #ffffff;
+	line-height: 20px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.add-new-site:hover {
+	text-decoration: none;
+}
+
+.admin-multisite-table .header {
+	background-color: #8f8f8f;
+	color: #ffffff;
+}
+
+.admin-multisite-table tr td {
+	height: 30px;
+	line-height: 30px;
+	padding: 0; 
+	border-left: 0;
+	font-size: 1em;
+}
+
+.admin-multisite-table .background {
+	background-color: #efefef;
+	color: #7a7a7a;
+}
