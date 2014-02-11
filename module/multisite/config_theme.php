@@ -20,6 +20,7 @@
 		}
 			$theme_ctr=0;
 			$theme_list = array();
+			echo "<div class='thumb-list'>";
 			foreach ( $dirs as $dir ) {
 				$path = X_DIR_THEME . "/$dir/config.php";
 				if ( ! file_exists($path) ) continue;				
@@ -28,17 +29,15 @@
 				if ( empty($theme_config['name']) ) continue;
 				
 				if ( $theme_config['type'] != 'subsite' ) continue;
-				
-				
-				
+
 				$folder_name = $theme_list['name'][$theme_ctr] = $dir;
 				$name = $theme_config['name'];
 				$url = $theme_list['url'][$theme_ctr] = 'theme/'.$dir.'/preview.jpg';
 				if($extra['theme']!=$name) {
 				?>
 				<button type='submit' name='theme' value='<?=$folder_name?>' onclick="return confirm('Do you really want to change Theme?');">
-					<div class='theme-thumb'>
-					<img src='<?=$url?>' width='360' height='240'>
+					<div class='theme-thumb inactive'>
+					<img src='<?=$url?>' >
 					<table cellpadding='10px'><tr><td><?=$name?></td></table>
 					</div>
 				</button>
@@ -47,6 +46,7 @@
 				$theme_ctr++;
 			}
 			?>
+			</div>
 	</div>
 
 </form>

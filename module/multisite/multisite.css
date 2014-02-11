@@ -218,12 +218,12 @@ table .header td:first-child {
 }
 
 .config-theme td {
+
 	color: #ffffff;
 	padding: 0.75em;
 }
 
 .config-theme .theme-thumb {
-	display: inline-block;
 	position: relative;
 	margin-top: 1em;
 	overflow: hidden;
@@ -234,6 +234,20 @@ table .header td:first-child {
 	bottom: 0;
 	padding: 1em;
 	background: #333333;
+	width: 100%;
+}
+.config-theme .inactive {
+
+	display: inline-block;
+	width: 220px;
+	height: 180px;
+}
+
+.config-theme .thumb-list {
+	text-align: center;
+}
+
+.config-theme .inactive img {
 	width: 100%;
 }
 
