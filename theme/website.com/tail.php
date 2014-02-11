@@ -17,7 +17,7 @@
 		<?}}?>
 		<a href="<?=ms::url_main_site()?>" class="main-site"><?=ln('MAIN SITE')?></a>
 		</div>
-		<div id='copyright'>COPYRIGHT (c) 2014 ALL RIGHTS RESRERVED WEBSITE.COM</div>
+		<div id='copyright'>COPYRIGHT Ⓒ 2014 ALL RIGHTS RESRERVED WEBSITE.COM</div>
 	</div>
 </div>
 </div>
