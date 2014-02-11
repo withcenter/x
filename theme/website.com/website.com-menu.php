@@ -6,32 +6,12 @@
 
 ?>	
 <ul id="website-com-menu">
-	<li class="menu-list"><a class='home' href='/'><?=ln('Home')?></a></li>		
-<?/*
-	<li class="gnb_1dli">
-		<a href="<?=g::url_board(ms::board_id(etc::domain()))?>" class="menu-list"><?=ln('Forum')?></a>
-	</li>
-*/?>	
+	<li class="menu-list"><a class='home' href='/'><?=ln('Home')?></a></li>			
 	<?php
 		$i = 0;
 		foreach ( $main as $row ) {
 			
 	 ?>
-	<li class="menu-list">
-		<a href="<?php echo G5_BBS_URL ?>/group.php?gr_id=<?php echo $row['gr_id'] ?>" class="menu-list"><?php echo $row['gr_subject'] ?></a>
-		<ul class="menu-list-wrapper">
-			<?php
-				$sub = $subs[$i++];
-				
-					foreach ( $sub as $row2 ) {
-			 ?>
-				<li class="menu-list"><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=<?php echo $row2['bo_table'] ?>" class="gnb_2da"><?php echo $row2['bo_subject'] ?></a></li>
-			<?php
-					}
-			?>
-		</ul>
-		
-	</li>
 	<?php } 
 		if ( ms::admin() || $is_admin == 'super' ){
 	?>
