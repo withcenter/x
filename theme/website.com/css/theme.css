@@ -336,6 +336,7 @@ fieldset{
 
 .left-menu-wrapper .info-wrapper .top-info{
 	margin:10px 0;
+	font-style:italic;
 }
 
 .left-menu-wrapper .info-wrapper .top-info a, .left-menu-wrapper .info-wrapper .other-info a{
