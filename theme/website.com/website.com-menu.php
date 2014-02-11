@@ -8,8 +8,10 @@
 <ul id="website-com-menu">
 	<li class="menu-list"><a class='home' href='/' class="menu-list"><?=ln('Home')?></a></li>
 	
+<? if ( ms::admin() || $is_admin == 'super' ) {?>
 	<li class="menu-list"><a class='site-config' href='<?=x::url()?>/?module=multisite&action=config' class="menu-list"><?=ln('Site Config')?></a></li>
-	
+<?}?>	
+
 <? /*
 	<li class="gnb_1dli">
 		<a href="<?=g::url_board(ms::board_id(etc::domain()))?>" class="menu-list"><?=ln('Forum')?></a>
