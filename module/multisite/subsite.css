@@ -1,0 +1,148 @@
+.multisite-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	background-color: #474747;
+}
+.multisite-menu li {
+	display: inline-block;
+}
+.multisite-menu li:first-child {
+	margin-left: 10px;
+}
+.multisite-menu li a {
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	color: #ffffff;
+	padding: 0 12px;
+}
+.multisite-menu li a:hover {
+	text-decoration: none;
+	background-color: #616161;
+}
+
+/* config_global.php */
+.config_general .site-global .title {
+	font-family: '맑은 고딕', AppleGothic;
+	border-bottom: 1px solid #616161;
+	color: #565656;
+	font-size: 1.125em;
+	padding-bottom: 4px;
+	margin: 20px 0 13px 0;
+}
+
+.config_general .site-global .middle-title {
+	color: #565656;
+	margin-bottom: 9px;
+}
+
+.config_general .site-global table tr td span {
+	width: 100px;
+	display: inline-block;
+	color: #6d6d6d;
+}
+.config_general .site-global table tr td {
+	border: 0;
+}
+
+.config_general .site-global table tr td input[type='text'] {
+	height: 22px;
+	line-height: 22px;
+	width: 238px;
+	padding: 0;
+}
+
+/* config_menu */
+.config_menu .config {
+	font-family: '맑은 고딕', AppleGothic;
+}
+.config_menu .config table .line-header td{
+	border-bottom: 1px solid #616161;
+	padding-top: 20px;
+	font-size: 1.125em;
+}
+.config_menu .config table tr .menu-no {
+	padding-left: 36px;
+	color: #1a1a1a;
+}
+
+.config_menu .config table tr .select-wrapper, .config_menu .config table tr .select-button {
+	border: 1px solid #d3d3d3;
+	background-color: #efefef;
+	display: inline-block;
+}
+.config_menu .config table tr .select-wrapper {
+	border-right: 0;
+}
+
+.config_menu .config table tr .select-wrapper .inner {
+	border-top: 1px solid #ffffff;
+	height: 17px;
+	width: 109px;
+	display: inline-block;
+	color: #565656;
+	font-size: 0.875em;
+	line-height: 17px;
+	padding-left: 10px;
+}
+
+.config_menu .config table tr .select-button {
+	position: relative;
+	top: 1px;
+	left: -4px;
+}
+
+.config_menu .config table tr .select-button .inner {
+	border-top: 1px solid #ffffff;
+	height: 17px;
+	display: inline-block;
+	line-height: 17px;
+	width: 27px;
+	position: relative;
+	text-align: center;
+}
+
+
+
+.select-wrapper, .select-button {
+	cursor: pointer;
+}
+
+.config-menu-table .drop-down-menu {
+	width: 148px;
+	min-height: 62px;
+	max-height: 150px;
+	overflow: auto;
+	border: 1px solid #d1d1d1;
+	border-top: 0;
+	background-color: #f6f6f6;
+	display: none;
+	
+}
+.config-menu-table .drop-down-menu .row {
+	padding: 3px 10px;
+}
+
+.config-menu-table .drop-down-menu .row:hover {
+	cursor: pointer; 
+	background-color: #666666;
+	color: #ffffff;
+}
+
+.config-menu-table input[type='submit'] {
+	background-color: #616161;
+	color: #ffffff;
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border: 0;
+	border-radius: 0;
+	font-size: 1.125em;
+}
+
+.config-menu-table input[type='submit']:hover {
+	background-color: #616161;
+	border: 0;
+}
