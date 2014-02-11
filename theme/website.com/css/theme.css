@@ -183,18 +183,21 @@ fieldset{
 }
 
 #create-your-site{
-	border:1px solid #a6603a;	
-	width:100%;
+	border:1px solid #a6603a;		
 	max-width:440px;
+	height:40px;
 	margin:auto;
 	margin-bottom:20px;
+	box-shadow: inset 0 0 0 1px #f6a76d;
 }
 
-#create-your-site .border2{
-	border:1px solid #f6a76d;	 
-}
-
-#create-your-site .border3{
+#create-your-site  a{
+	display:inline-block;
+	font-size:1.5em;
+	text-decoration:none;
+	color:white;
+	width:436px;	
+	margin:1px 0 0 1px;
 	border:1px solid #ed8b50;
 	background-image: -webkit-gradient(
 	linear,
@@ -211,13 +214,6 @@ fieldset{
 	padding:7px 0;
 
 	text-align:center;
-}
-
-
-#create-your-site .border3 a{
-	font-size:1.5em;
-	text-decoration:none;
-	color:white;
 }
 
 #banner-wrapper{
