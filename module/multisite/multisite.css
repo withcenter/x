@@ -85,17 +85,6 @@
 	border-top: 1px solid #ececec;
 }
 */
-.config table label {
-	font-weight: bold;
-}
-
-.config table input[type='text'], .config table select {
-	width: 20em;
-}
-
-.config .config-menu-table input[type='text'], .config table select {
-	width: 11.5em;
-}
 
 
 /*
@@ -152,6 +141,7 @@ fieldset legend {
 	padding: 10px 20px;
 	border-radius: 3px;
 }
+
 input[type='submit'] {
 	border: 1px solid #blue;
 	background-color: #f9f9f9;
@@ -179,17 +169,6 @@ input[type='submit']:hover {
 	margin: 0 20px 4px 0;
 }
 
-.no_of_board {
-	margin: 10px 0;
-	color: #555555;
-}
-input[type='text'] {
-	height: 25px;
-	line-height: 25px;
-	padding: 0 10px;
-	min-width: 200px;
-	color: #555555;
-}
 /*
 table {
 	margin: 10px 0;

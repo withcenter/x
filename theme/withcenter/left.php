@@ -1,1 +1,1 @@
-<?=outlogin('withcenter')?>
+<?=outlogin('x-outlogin-withcenter')?>

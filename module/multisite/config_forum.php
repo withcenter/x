@@ -1,5 +1,5 @@
 <?
-	if ( ! ms::admin() ) {
+	if ( ! ms::admin() || $is_admin != 'super' ) {
 		echo "You are not admin";
 		return;
 	}
@@ -14,32 +14,38 @@
 			
 			$no_of_board = count($rows);
 		?>
-		
-		<div class='no_of_board'>No of board : <b><?=count($rows)?></b></div>
+	<link rel='stylesheet' type='text/css' href='<?=x::url()?>/module/multisite/subsite.css' />
+	<div class='config_forum'>
 		<form class='config_menu' target='hidden_iframe' autocomplete='off'>
 			<input type='hidden' name='module' value='multisite' />
 			<input type='hidden' name='action' value='config_forum_submit' />
 			<input type='hidden' name='no_of_board' value=<?=$no_of_board?> />
-			<input type='text' name='subject' placeholder='Input Board name' />
+			<input class='create-forum-input' type='text' name='subject' placeholder='Input Board name' />
 			<input type='submit' value='Create'/>
 		</form>
-
-		<table class='board_list' cellpadding=0 cellspacing=0>
+		<div class='no_of_board'>No of board : <b><?=count($rows)?></b></div>
+		<div style='clear:right;'></div>
+		
+		<table class='board_list' cellpadding=0 cellspacing=0 width='100%'>
 			<tr class='header'>
-				<td>Board ID</td>
-				<td>Subject</td>
-				<td>No Of Post</td>
-				<td></td>
+				<td width=148>Board ID</td>
+				<td width=130>Subject</td>
+				<td width=80 align='center'>No Of Post</td>
+				<td class='padding-extra1'>Setting</td>
 			</tr>
 		<?php
+		$i = 0;
 		foreach ( $rows as $row ) {
+			if ( $i % 2 ) $background="background";
+			else $background = null;
+			$i++;
 			echo "
-				<tr>
-					<td>$row[bo_table]</td>
-					<td>$row[bo_subject]</td>
-					<td align='center'>".number_format($row['bo_count_write'])."</td>
-					<td>
-						<a  class='button' href='?module=multisite&action=config_forum&mode=forum_setting&bo_table=$row[bo_table]'>Setting</a>
+				<tr class='row $background' >
+					<td width=148>$row[bo_table]</td>
+					<td width=130>$row[bo_subject]</td>
+					<td width=80 align='center'>".number_format($row['bo_count_write'])."</td>
+					<td class='padding-extra2'>
+						<a href='?module=multisite&action=config_forum&mode=forum_setting&bo_table=$row[bo_table]'><img src='".x::url()."/module/multisite/img/setting.png' /></a>
 					</td>
 				</tr>
 			";
@@ -48,4 +54,5 @@
 		</table>
 
 		<iframe src='javascript:void(0);' name='hidden_iframe' style='width: 100%; height: 300px; display:none;'></iframe>
+	</div>
 <?}?>

@@ -13,4 +13,5 @@ $(function() {
 		
 		$(this).parent().hide();
 	});
+	
 });
