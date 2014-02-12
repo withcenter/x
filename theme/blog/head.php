@@ -11,11 +11,11 @@
 			</a>
         </div>
         <ul id="tnb">
-			<li><a href='<?=ms::url_site(etc::domain())?>'>Home</a></li>
-			<li><a href=''>About</a></li>
-			<li><a href=''>FAQs</a></li>
-			<li><a href=''>Contact</a></li>
-			<?if( ms::admin() ) { ?><li><a href='<?=ms::url_config()?>'>Admin</a></li><?}?>
+			<li class='menu-home'><a href='<?=ms::url_site(etc::domain())?>'>Home</a></li>
+			<li class='menu-about'><a href=''>About</a></li>
+			<li class='menu-faqs'><a href=''>FAQs</a></li>
+			<li class='menu-contact'><a href=''>Contact</a></li>
+			<?if( ms::admin() ) { ?><li class='menu-admin'><a href='<?=ms::url_config()?>'>Admin</a></li><?}?>
         </ul>	
     </div>
 	

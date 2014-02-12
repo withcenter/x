@@ -1,0 +1,39 @@
+/* admin_list.php */
+.admin-list .title{	
+	padding-top: 13px;
+	color: #565656;
+}
+.admin-list .add-new-site {
+	float: right;
+	display: inline-block;
+	position: relative;
+	width: 120px;
+	height: 20px;
+	background-color: #616161;
+	color: #ffffff;
+	line-height: 20px;
+	text-align: center;
+	top: -15px;
+}
+.admin-list .add-new-site:hover {
+	text-decoration: none;
+}
+
+.admin-list-table .header {
+	background-color: #8f8f8f;
+	color: #ffffff;
+}
+
+.admin-list-table tr td {
+	height: 30px;
+	line-height: 30px;
+	width: 16.6%;
+}
+.admin-list-table tr td:first-child {
+	width: 13%;
+	padding-left: 3.6%;
+}
+.admin-list-table .background {
+	background-color: #efefef;
+	color: #7a7a7a;
+}

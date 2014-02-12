@@ -10,14 +10,18 @@
 	<input type='hidden' name='action' value='config_theme_submit'>
 
 	<div class='config config-theme'>
-		<h1>Themes, click on the small thumbnails to change</h1>
-		<? if ( $extra['theme'] != '' ) { ?>
-		<div class='theme-thumb'>
-			<img src="theme/<?=$extra['theme']?>/preview.jpg" width='720' height='480'>
-			<table cellpadding='10px'><tr><td align='center'>Active Theme: <?=$extra['theme']?></td></table>
-		</div>
+		<div class='title'><div class='inner'>원하시는 테마를 선택하신 후 클릭하시면 반영이 됩니다.</div></div>
+		<div class='thumb-list'>
+			<?if ( $extra['theme'] != '' ) { ?>
+				<button type='submit' name='theme' disabled="disabled">
+					<div class='theme-thumb'>
+						<img src='theme/<?=$extra['theme']?>/preview.jpg' >
+						<p>이 반영 됨</p>
+						<table cellpadding='10px'><tr><td><?=$extra['theme']?></td></table>
+					</div>
+				</button>
+			<?}?>
 		<?php
-		}
 			$theme_ctr=0;
 			$theme_list = array();
 			foreach ( $dirs as $dir ) {
@@ -28,25 +32,25 @@
 				if ( empty($theme_config['name']) ) continue;
 				
 				if ( $theme_config['type'] != 'subsite' ) continue;
-				
-				
-				
+
 				$folder_name = $theme_list['name'][$theme_ctr] = $dir;
 				$name = $theme_config['name'];
 				$url = $theme_list['url'][$theme_ctr] = 'theme/'.$dir.'/preview.jpg';
-				if($extra['theme']!=$name) {
-				?>
-				<button type='submit' name='theme' value='<?=$folder_name?>' onclick="return confirm('Do you really want to change Theme?');">
-					<div class='theme-thumb'>
-					<img src='<?=$url?>' width='360' height='240'>
-					<table cellpadding='10px'><tr><td><?=$name?></td></table>
-					</div>
-				</button>
-				<?
+
+				if($extra['theme']!=preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower($name))) {
+					?>
+					<button type='submit' name='theme' value='<?=$folder_name?>' onclick="return confirm('Do you really want to change Theme?');">
+						<div class='theme-thumb inactive'>
+						<img src='<?=$url?>' >
+						<table cellpadding='10px'><tr><td><?=$name?></td></table>
+						</div>
+					</button>
+					<?
 				}
 				$theme_ctr++;
 			}
 			?>
+			</div>
 	</div>
 
 </form>

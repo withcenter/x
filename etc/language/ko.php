@@ -169,3 +169,5 @@ $language_code['writer'] = "글쓴이";
 $language_code['no good'] = "비추천";
 $language_code['good'] = "추천";
 $language_code['comment'] = "댓글";
+
+$language_code['Site Info'] = '사이트 정보';

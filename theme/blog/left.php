@@ -2,28 +2,29 @@
 	$extra = ms::get_extra();
 ?>
 <div class='profile-photo'>
-	<?if( $extra['profile_img'] ) {?><img src="<?=ms::url_site(etc::domain()).'/'.$extra['img_url'].$extra['profile_img']?>"><br><?}?>
+	<?if( $extra['profile_img'] ) {?>
+		<img src="<?=ms::url_site(etc::domain()).'/'.$extra['img_url'].$extra['profile_img']?>"><br>
+	<?}	else {?>
+		<img src='<?=x::url_theme()?>/img/blank_profile.png'?>
+	<?}?>
 	<p><?=$extra['profile_text1']?></p>
 </div>
 <div class='profile-photo-bottom'><p>~</p></div>
 
-<div class='social-icons'>
-	<a href='#'><img src='<?=x::url_theme()?>/img/fbicon.png'></a>
-	<a href='#'><img src='<?=x::url_theme()?>/img/twittericon.png'></a>
-	<a href='#'><img src='<?=x::url_theme()?>/img/instaicon.png'></a>
-	<a href='#'><img src='<?=x::url_theme()?>/img/pinticon.png'></a>
-	<a href='#'><img src='<?=x::url_theme()?>/img/yahooicon.png'></a>
-	<a href='#'><img src='<?=x::url_theme()?>/img/gplusicon.png'></a>
+<div class='login-form'>
+<?php /** login for testing purposes*/ 
+	if (!login()) echo "<h2>Login FORM</h2>"; echo outlogin('basic');?>
 </div>
 
 <div class='categories'>
 	<h2>Categories</h2>
 	<ul>
-	<? for ( $i = 1; $i <= 10; $i++ ) { 
+	<?  if ( $extra['menu_1'] == '' ) $extra['menu_1'] = ms::board_id(etc::domain()).'_1';
+		for ( $i = 1; $i <= 10; $i++ ) { 
 		$option = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".$extra['menu_'.$i]."'");
 		if ( $extra['menu_'.$i] != '' ) {
 			?><li><a href='<?=g::url()?>/bbs/board.php?bo_table=<?=$extra['menu_'.$i]?>'><?=$option['bo_subject']?></a></li>
-	<?}}?>
+		<?}}?>
 	</ul>	
 </div>
 
@@ -33,11 +34,12 @@
 	<h2>Latest Posts</h2>
 	<ul>
 		<? 
+		if( $extra['menu_1'] == '' ) $extra['menu_1'] = ms::board_id(etc::domain()).'_1';
 		$option = db::rows("SELECT * FROM $g5[write_prefix]".$extra['menu_1']." ORDER BY wr_num");
 		for ( $i = 0; $i <= 4; $i++) { 
 			if( !$option[$i]['wr_subject'] == '' ) {?>
 				<li>
-					<a href='<?=g::url()?>/bbs/board.php?bo_table=<?=$extra['menu_1']?>'>
+					<a href='<?=g::url()?>/bbs/board.php?bo_table=<?=$extra['menu_1']?>&wr_id=<?=$option[$i]['wr_id']?>'>
 						<span class='subject'><?=$option[$i]['wr_subject']?></span><br><?=mb_substr($option[$i]['wr_content'],0,50)?>
 					</a>
 				</li>
@@ -93,9 +95,4 @@
 			<td align='right'><a href='#'><span class='nextnav'>NEXT<img src='<?=x::url_theme()?>/img/nexticon.png'></span></a></td>
 		</tr>
 	</table>
-</div>
-
-<div>
-<?php /** login for testing purposes*/ 
-	if (!login())	echo outlogin('basic');?>
 </div>

@@ -30,23 +30,23 @@
 	font-family: Arial Narrow;
 }
 
-#tnb li:nth-child(1) {
+#tnb .menu-home {
 	background: #db5e31;
 }
 
-#tnb li:nth-child(2) {
+#tnb .menu-about {
 	background: #eda23e;
 }
 
-#tnb li:nth-child(3) {
+#tnb .menu-faqs {
 	background: #f2cb67;
 }
 
-#tnb li:nth-child(4) {
+#tnb .menu-contact {
 	background: #bfb840;
 }
 
-#tnb li:nth-child(5) {
+#tnb .menu-admin {
 	background: #e4dc4b;
 }
 
@@ -64,7 +64,7 @@
 /*aside*/
 #aside {
 	border: 0 !important;
-	padding: 0 0 0 0.75em;
+	padding: 0 0.75em 0 0.75em;
 }
 
 #aside .profile-photo {
@@ -204,6 +204,9 @@
 	padding: 1em 0 1em 1em;
 }
 
+#aside .login-form {
+	margin: 1em 0 0 0;
+}
 
 /*container*/
 body {
@@ -215,13 +218,6 @@ body {
 	width: 699px;
 }
 
-#container .post-container a {
-	text-decoration: none;
-}
-
-#container .post-container .post-content {
-	font-size: 12pt;
-}
 
 
 #wrapper {
@@ -232,7 +228,6 @@ body {
 .footer-text {
 	margin: 1em 0 0 220px;
 	clear:both;
-	float: left;
 }
 
 .footer-text p, .footer-text p a {
@@ -258,4 +253,9 @@ body {
 
 .back-to-top:hover {    
 
+}
+
+/*Login tweaking*/
+section#ol_before h2, section#ol_after h2, section#ol_after #ol_after_private{
+	display: none;
 }

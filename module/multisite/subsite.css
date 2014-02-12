@@ -1,0 +1,325 @@
+.multisite-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	background-color: #474747;
+}
+.multisite-menu li {
+	display: inline-block;
+}
+.multisite-menu li:first-child {
+	margin-left: 10px;
+}
+.multisite-menu li a {
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	color: #ffffff;
+	padding: 0 12px;
+}
+.multisite-menu li a:hover {
+	text-decoration: none;
+	background-color: #616161;
+}
+
+/* config_global.php */
+.config_general .site-global > .title {
+	font-family: '맑은 고딕', AppleGothic;
+	border-bottom: 1px solid #616161;
+	color: #565656;
+	font-size: 1.125em;
+	padding-bottom: 4px;
+	margin: 20px 0 13px 0;
+}
+
+.config_general .site-global .middle-title {
+	color: #565656;
+	margin-bottom: 9px;
+}
+
+.config_general .site-global table tr td span {
+	width: 100px;
+	display: inline-block;
+	color: #565656;
+}
+.config_general .site-global table tr td {
+	border: 0;
+}
+
+.config_general .site-global table tr td input[type='text'] {
+	height: 22px;
+	line-height: 22px;
+	width: 238px;
+	padding: 0;
+	margin-bottom: 6px;
+}
+
+.config_general .middle-title {
+	margin-top: 15px;
+}
+
+.config_general .select-box-left, .config_general .select-box-right {
+	float: left;
+	width: 50%;
+}
+
+.config_general .select-wrapper, .config_general .select-button {
+	border: 1px solid #d3d3d3;
+	background-color: #efefef;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+.config_general .select-wrapper {
+	border-right: 0;
+}
+.config_general .select-wrapper .inner {
+	border-top: 1px solid #ffffff;
+	height: 17px;
+	width: 289px;
+	display: inline-block;
+	color: #565656;
+	font-size: 0.875em;
+	line-height: 17px;
+	padding-left: 10px;
+}
+
+.config_general .select-button .inner {
+	border-top: 1px solid #ffffff;
+	height: 17px;
+	display: inline-block;
+	line-height: 17px;
+	width: 27px;
+	position: relative;
+	text-align: center;
+}
+.config_general .select-button {
+	position: relative;
+	top: 0;
+	left: -4px;
+}
+
+.config_general .drop-down-menu {
+	width: 326px;
+	min-height: 68px;
+	max-height: 150px;
+	overflow: auto;
+	margin-bottom: 3px;
+	background-color: #f4f4f4;
+	border: 1px solid #b0b0b0;
+	border-top: 0;
+	position: relative;
+	top: -10px;
+	display: none;
+}
+.config_general .drop-down-menu .row {
+	padding: 3px 10px;
+	color: #646464;
+}
+
+.config_general .drop-down-menu .row:hover {
+	cursor: pointer; 
+	background-color: #666666;
+	color: #ffffff;
+}
+.config_general .image-config {
+	margin-top: 10px;
+}
+.config_general .image-config  .title {
+	color: #565656;
+	font-family: '맑은 고딕', AppleGothic;
+	margin: 20px 0 9px 0;
+	font-size: 1em;
+}
+
+.config_general .image-config input[type='file'] {
+	color: #565656;
+}
+
+.config_general .title-bottom {
+	font-family: '맑은 고딕', AppleGothic;
+	color: #565656;
+	font-size: 1em;
+	margin: 27px 0 5px 0;
+}
+
+.config_general .title-small {
+	color: #767676;
+	margin-right: 14px;
+}
+.config_general input[type='radio'] {
+	margin-right: 5px;
+}
+.config_general .radio-left, .config_general .radio-right {
+	color: #565656;
+}
+.config_general .radio-left{
+	margin-right: 16px;
+}
+.config_general input[type='submit'] {
+	width: 80px;
+	height: 30px;
+	background-color: #616161;
+	color: #ffffff;
+	line-height: 30px;
+	text-align: center;
+	border: 0;
+	border-radius: 0;
+	float: right;
+	margin-right: 10px;
+}
+.config_general input[type='submit']:hover {
+	background-color: #616161;
+	border: 0;
+}
+/* config_menu */
+.config_menu .config {
+	font-family: '맑은 고딕', AppleGothic;
+}
+.config_menu .config table .line-header td{
+	border-bottom: 1px solid #616161;
+	padding-top: 20px;
+	font-size: 1.125em;
+}
+.config_menu .config table tr .menu-no {
+	padding-left: 36px;
+	color: #1a1a1a;
+}
+
+.config_menu .config table tr .select-wrapper, .config_menu .config table tr .select-button {
+	border: 1px solid #d3d3d3;
+	background-color: #efefef;
+	display: inline-block;
+}
+.config_menu .config table tr .select-wrapper {
+	border-right: 0;
+}
+
+.config_menu .config table tr .select-wrapper .inner {
+	border-top: 1px solid #ffffff;
+	height: 17px;
+	width: 109px;
+	display: inline-block;
+	color: #565656;
+	font-size: 0.875em;
+	line-height: 17px;
+	padding-left: 10px;
+}
+
+.config_menu .config table tr .select-button {
+	position: relative;
+	top: 1px;
+	left: -4px;
+}
+
+ .config table tr .select-button .inner {
+	border-top: 1px solid #ffffff;
+	height: 17px;
+	display: inline-block;
+	line-height: 17px;
+	width: 27px;
+	position: relative;
+	text-align: center;
+}
+
+
+
+.config_menu .select-wrapper, .config_menu .select-button {
+	cursor: pointer;
+}
+
+.config_menu .drop-down-menu {
+	width: 148px;
+	min-height: 62px;
+	max-height: 150px;
+	overflow: auto;
+	border: 1px solid #d1d1d1;
+	border-top: 0;
+	background-color: #f6f6f6;
+	display: none;
+	
+}
+.drop-down-menu .row {
+	padding: 3px 10px;
+}
+
+.drop-down-menu .row:hover {
+	cursor: pointer; 
+	background-color: #666666;
+	color: #ffffff;
+}
+
+.config-menu-table input[type='submit'] {
+	background-color: #616161;
+	color: #ffffff;
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border: 0;
+	border-radius: 0;
+	font-size: 1.125em;
+}
+
+.config-menu-table input[type='submit']:hover {
+	background-color: #616161;
+	border: 0;
+}
+
+/* config_forum.php */
+.config_forum .config_menu {
+	margin: 20px 0 6px 10px;
+}
+.config_forum .create-forum-input {
+	width: 158px;
+	height: 24px;
+	line-height: 24px;
+	padding: 0 10px;
+}
+.no_of_board {
+	float: right;
+	color: #535353;
+	position: relative;
+	top: -36px;
+	right: 10px;
+}
+
+.config_forum .config_menu input[type='submit'] {
+	width: 58px;
+	height: 28px;
+	cursor: pointer;
+	border: 1px solid #d4d4d4;
+	background-color: #efefef;
+	color: #565656;
+}
+
+.config_forum .board_list {
+	padding: 0 10px;
+	font-family: '맑은 고딕', AppleGothic;
+}
+
+.config_forum .board_list .header  {
+	background-color: #8f8f8f;
+}
+.config_forum .board_list .header td {
+	border-left: 0;
+}
+
+.config_forum .board_list .background{
+	background-color: #efefef;
+}
+
+.config_forum .board_list tr td {
+	height: 30px;
+	line-height: 30px;
+	padding: 0 10px;
+}
+.config_forum .board_list .row  td{
+	color: #696969;
+}
+
+.config_forum .board_list tr .padding-extra1 {
+	padding-left: 78px;
+}
+.config_forum .board_list tr .padding-extra2 {
+	padding-left: 93px;
+}
