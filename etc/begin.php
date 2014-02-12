@@ -17,7 +17,7 @@
 */
 
 //Multisite Config Options
-$extra = ms::get_extra( );
+// $extra = ms::get_extra( );
 
 /** @short load 'register_result.skin.php' in the 'x/theme/xxxx/' folder instead of 'skin/' folder.
  *  

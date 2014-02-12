@@ -14,7 +14,7 @@ if(!is_dir($folder)) mkdir($folder);
 
 $in['img_url'] = G5_DATA_DIR.'/upload/multisite/'.$site[0].'/';
 
-foreach($_FILES as $key => $value) { 
+foreach($_FILES as $key => $value) {
 	$file_info = pathinfo($value['name']);
 	if( $name = $file_info['filename'] ) {
 		while(file_exists($folder.$name)) $name = rand(000000,999999).'_'.$name;
@@ -25,4 +25,5 @@ foreach($_FILES as $key => $value) {
 }
 
 ms::update( $in );
+if ( file_exists( ms::theme('setting_submit') ) ) include ms::theme('setting_submit');
 jsGo("?module=$module&action=config_global");

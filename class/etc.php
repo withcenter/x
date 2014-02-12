@@ -440,6 +440,11 @@ class etc {
 		return self::is_windows() || self::is_workserver();
 	}
 	
+	static function browser_url()
+	{
+		return "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+	}
+	
 } // eo etc class
 
 

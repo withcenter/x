@@ -30,9 +30,6 @@
 			</tr>
 			<tr>
 				<td>
-					<span>상단 문구</span><input type='text' name='header_text' value='<?=$extra['header_text']?>'>
-				</td>
-				<td>	
 					<span>하단 문구</span><input type='text' name='footer_text' value='<?=$extra['footer_text']?>'>
 				</td>
 			</tr>
@@ -119,15 +116,7 @@
 					</td>
 				</tr>
 				<tr valign='top'>
-					<td>
-						<div class='title'>프로필 사진</div>
-						<?if( $extra['profile_img'] ) {?><img src="<?=ms::url_site(etc::domain()).$extra['img_url'].$extra['profile_img']?>" width=280px height=160px><br><?}?>
-						<input type='file' name='profile_img'><br>
-						<div class='title'>프로필1의 문구1</div>
-						<input type='text' name='profile_text1' value='<?=$extra['profile_text1']?>'>
-						<div class='title'>프로필1의 문구2</div>
-						<input type='text' name='profile_text2' value='<?=$extra['profile_text2']?>'>
-					</td>
+
 					<td>
 						<div class='title'>배너이미지2</div>
 						<?if( $extra['banner_1'] ) {?><img src="<?=ms::url_site(etc::domain()).$extra['img_url'].$extra['banner_2']?>" width=280px height=160px><br><?}?>
@@ -147,6 +136,17 @@
 			<input type="radio" name="theme_sidebar" value="left" <?if($extra['theme_sidebar'] =='left') echo "checked"?>><span class='radio-left'>왼쪽</span> 
 			<input type="radio" name="theme_sidebar" value="right" <?if(!$extra['theme_sidebar'] || $extra['theme_sidebar'] == 'right') echo "checked"?>><span class='radio-right'>오른쪽</span>
 		</div>
+		
+		
+		<? if ( ms::meta('theme') ) { ?>
+			<?php
+				if ( file_exists( ms::theme('setting') ) ) include ms::theme('setting');
+			?>
+		<? } else { ?>
+			<H1>테마를 선택하십시오.</h1>
+		<? } ?>
+		
+		
 		
 		<input type='submit' value='업데이트'>
 		<div style='clear:right;'></div>
