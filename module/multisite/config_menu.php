@@ -5,7 +5,7 @@
 	}
 	
 	if ( $in['done'] ) {
-		echo "<div class='message'>Updated</div>";
+		echo "<div class='message'>수정되었습니다.</div>";
 	}
 
 	
@@ -23,8 +23,8 @@
 <div class='config'>
 	<table width='100%' cellpadding='5px' class='config-menu-table'>
 		<tr class='line-header'>
-			<td width=170>Menu No</td>
-			<td>Select MENU</td>
+			<td width=170>번호</td>
+			<td>메뉴 선택</td>
 		</tr>
 		<? for ( $i = 1; $i <= 10; $i++ ) { ?>
 		<tr>
@@ -40,7 +40,7 @@
 						else $default_value = null;
 					}
 					
-					echo $default_value ? $default_value : 'Select Forum';
+					echo $default_value ? $default_value : '메뉴 선택';
 					?>
 				</span></span>
 				<span class='select-button'><span class='inner'>
@@ -58,7 +58,7 @@
 		</tr>
 		<?}?>
 		<tr>
-			<td colspan=2><input type='submit'></td>
+			<td colspan=2><input type='submit' value='업데이트'></td>
 		</tr>
 	</table>
 </div>

@@ -26,21 +26,21 @@
 <ul class='multisite-menu'>
 	
 	<li>
-		<a setting_menu_no=1 href='?module=multisite&action=config_global'>Global Settings</a>
+		<a setting_menu_no=1 href='?module=multisite&action=config_global'>일반 설정</a>
 	</li>
 	
 	<li>
-		<a setting_menu_no=2 href='?module=multisite&action=config_menu'>Menu</a>
-	</li>
-	
-	
-	<li>
-		<a setting_menu_no=3 href='?module=multisite&action=config_forum'>Forum</a>
+		<a setting_menu_no=2 href='?module=multisite&action=config_menu'>메뉴</a>
 	</li>
 	
 	
 	<li>
-		<a setting_menu_no=4 href='?module=multisite&action=config_theme'>Theme</a>
+		<a setting_menu_no=3 href='?module=multisite&action=config_forum'>게시판</a>
+	</li>
+	
+	
+	<li>
+		<a setting_menu_no=4 href='?module=multisite&action=config_theme'>테마</a>
 	</li>
 	
 </ul>

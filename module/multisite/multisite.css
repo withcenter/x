@@ -213,6 +213,9 @@ table .header td:first-child {
 }
 
 /* theme config */
+.config-theme {
+	font-family: '맑은 고딕', AppleGothic;
+}
 .config-theme table {
 	margin: 0;
 }
@@ -277,6 +280,17 @@ table .header td:first-child {
 
 .config-theme button[name='theme']:hover {
 	outline: none;
+}
+
+.config-theme > .title {
+	font-size: 1.250em;
+	color: #004475;
+	border: 1px solid #d5d5d5;
+	background-color: #f9f9f9;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 10px;
+	text-align: center;
 }
 
 .site-global select {

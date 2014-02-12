@@ -10,11 +10,11 @@
 	<input type='hidden' name='action' value='config_theme_submit'>
 
 	<div class='config config-theme'>
-		<h1>Themes, click on the small thumbnails to change</h1>
+		<div class='title'><div class='inner'>원하시는 테마를 선택하신 후 클릭하시면 반영이 됩니다.</div></div>
 		<? if ( $extra['theme'] != '' ) { ?>
 		<div class='theme-thumb'>
 			<img src="theme/<?=$extra['theme']?>/preview.jpg" width='720' height='480'>
-			<table cellpadding='10px'><tr><td align='center'>Active Theme: <?=$extra['theme']?></td></table>
+			<table cellpadding='10px'><tr><td align='center'><?=$extra['theme']?>이 반영 됨</td></table>
 		</div>
 		<?php
 		}

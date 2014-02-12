@@ -17,26 +17,26 @@
 		<input type='hidden' name='module' value='multisite'>
 		<input type='hidden' name='action' value='config_global_submit'>
 <div class='config site-global'>
-	<div class='title'><?=ln('Site Info')?></div>	
+	<div class='title'>사이트 정보</div>	
 		<table cellpadding=0 cellspacing=0 width='100%'>
 			<tr valign='top'>
 				<td>
-					<span>Main Title</span><input type='text' name='title' value='<?=$extra['title']?>'>
+					<span>메인 타이틀</span><input type='text' name='title' value='<?=$extra['title']?>'>
 				</td>
 				<td>
-					<span>Secondary Title</span><input type='text' name='secondary_title' value='<?=$extra['secondary_title']?>'>
+					<span>서브 타이틀</span><input type='text' name='secondary_title' value='<?=$extra['secondary_title']?>'>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<span>Header Text</span><input type='text' name='header_text' value='<?=$extra['header_text']?>'>
+					<span>상단 문구</span><input type='text' name='header_text' value='<?=$extra['header_text']?>'>
 				</td>
 				<td>	
-					<span>Footer Text</span><input type='text' name='footer_text' value='<?=$extra['footer_text']?>'>
+					<span>하단 문구</span><input type='text' name='footer_text' value='<?=$extra['footer_text']?>'>
 				</td>
 			</tr>
 		</table>
-		<div class='middle-title'>Forums on First Page, Forum 1, is the Main Forum</div>
+		<div class='middle-title'>첫 페이지에 나타날 글의 게시판을 선택하십시오.</div>
 			<div class="select-box-left">
 			<? for ( $i = 1; $i <= 5; $i++ ) { ?>
 				<div>
@@ -50,7 +50,7 @@
 							else $default_value = null;
 						}
 						
-						echo $default_value ? $default_value : 'Select Forum';
+						echo $default_value ? $default_value : '게시판 선택';
 						?>
 					</div></div>
 					<div class='select-button'><div class='inner'>
@@ -101,39 +101,39 @@
 			<table cellpadding=0 cellspacing=0 width='100%' class='image-config'>
 				<tr valign='top'>
 					<td>
-						<div class='title'>Header Logo</div>
+						<div class='title'>사이트 로고</div>
 						<?if( $extra['header_logo'] ) {?><img src="<?=ms::url_site(etc::domain()).$extra['img_url'].$extra['header_logo']?>" width=280px height=160px><br><?}?>
 						<input type='file' name='header_logo'>
-						<div class='title'>Logo Text</div>
+						<div class='title'>로고 문구</div>
 						<input type='text' name='logo_text' value='<?=$extra['logo_text']?>'>
 					</td>
 					<td>
-						<div class='title'>Banner 1</div>
+						<div class='title'>배너이미지1</div>
 						<?if( $extra['banner_1'] ) {?><img src="<?=ms::url_site(etc::domain()).$extra['img_url'].$extra['banner_1']?>" width=280px height=160px><br><?}?>
 						<input type='file' name='banner_1'>
-						<div class='title'>Banner 1 Text 1</div>
+						<div class='title'>배너1의 문구1</div>
 						<input type='text' name='banner1_text1' value='<?=$extra['banner1_text1']?>'><br>
-						<div class='title'>Banner 1 Text 2</div>
+						<div class='title'>배너1의 문구2</div>
 						<input type='text' name='banner1_text2' value='<?=$extra['banner1_text2']?>'>
 					</td>
 				</tr>
 				<tr valign='top'>
 					<td>
-						<div class='title'>Profile Photo</div>
+						<div class='title'>프로필 사진</div>
 						<?if( $extra['profile_img'] ) {?><img src="<?=ms::url_site(etc::domain()).$extra['img_url'].$extra['profile_img']?>" width=280px height=160px><br><?}?>
 						<input type='file' name='profile_img'><br>
-						<div class='title'>Profile 1 Text 1</div>
+						<div class='title'>프로필1의 문구1</div>
 						<input type='text' name='profile_text1' value='<?=$extra['profile_text1']?>'>
-						<div class='title'>Profile 1 Text 2</div>
+						<div class='title'>프로필1의 문구2</div>
 						<input type='text' name='profile_text2' value='<?=$extra['profile_text2']?>'>
 					</td>
 					<td>
-						<div class='title'>Banner 2</div>
+						<div class='title'>배너이미지2</div>
 						<?if( $extra['banner_1'] ) {?><img src="<?=ms::url_site(etc::domain()).$extra['img_url'].$extra['banner_2']?>" width=280px height=160px><br><?}?>
 						<input type='file' name='banner_2'>
-						<div class='title'>Banner 2 Text 1</div>
+						<div class='title'>배너2의 문구1</div>
 						<input type='text' name='banner2_text1' value='<?=$extra['banner2_text1']?>'>
-						<div class='title'>Banner 2 Text 2</div>
+						<div class='title'>배너2의 문구2</div>
 						<input type='text' name='banner2_text2' value='<?=$extra['banner2_text2']?>'>
 					</td>
 				</tr>
@@ -141,13 +141,13 @@
 		
 
 		
-		<div class='title-bottom'>Additional Settings</div>
-		<div><span class='title-small'>Display Sidebar on:</span>
-			<input type="radio" name="theme_sidebar" value="left" <?if($extra['theme_sidebar'] =='left') echo "checked"?>><span class='radio-left'>Left</span> 
-			<input type="radio" name="theme_sidebar" value="right" <?if(!$extra['theme_sidebar'] || $extra['theme_sidebar'] == 'right') echo "checked"?>><span class='radio-right'>Right</span>
+		<div class='title-bottom'>추가 설정</div>
+		<div><span class='title-small'>사이드 바 위치:</span>
+			<input type="radio" name="theme_sidebar" value="left" <?if($extra['theme_sidebar'] =='left') echo "checked"?>><span class='radio-left'>왼쪽</span> 
+			<input type="radio" name="theme_sidebar" value="right" <?if(!$extra['theme_sidebar'] || $extra['theme_sidebar'] == 'right') echo "checked"?>><span class='radio-right'>오른쪽</span>
 		</div>
 		
-		<input type='submit'>
+		<input type='submit' value='업데이트'>
 		<div style='clear:right;'></div>
 
 </div>
