@@ -4,8 +4,10 @@
 		<?
 		$q = "SELECT bo_table FROM ".$g5['board_table'];
 		$queries = db::rows($q);
+	if ( $queries ) {
 		$allhits = Array();
 		$i = 0;
+
 		foreach ( $queries as $query ){
 			$q2 = "SELECT wr_id, wr_subject, wr_content, wr_hit FROM ".$g5['write_prefix'].$query['bo_table'];
 			$queries2 = db::rows($q2);
@@ -32,7 +34,8 @@
 				<div class='other-info subject'><a href='<?=$post_url?>'><?=$subject?></a></div>
 				<div class='other-info content'><a href='<?=$post_url?>'><?=$content?></a></div>
 			</div>
-		<?}?>		
+		<?}?>
+	<? }?>	
 	</div>
 	<div class='view-more'><a href="#">VIEW MORE</a></div>
 </div>
