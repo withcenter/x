@@ -4,7 +4,6 @@
 <div id="hd">
     <h1 id="hd_h1"><?php echo $g5['title'] ?></h1>
 
-    <div id="skip_to_container"><a href="#container">본문 바로가기</a></div>
 
     <div id="hd-wrapper">
 		<div id='menu-top'>
@@ -20,13 +19,14 @@
 			<?include x::theme('website.com-menu')?>
 		</div>
 		<div id='search-wrapper'>
-			<div class='title'>Company tagline here!</div>
+			<div class='sub-menu'>
+				<?include x::theme('website.com-submenu')?>
+			</div>
 			<div id='search-box'>
 				<fieldset id="search-fieldset">
 					<form name="fsearchbox" method="get" action="<?php echo G5_BBS_URL ?>/search.php" onsubmit="return fsearchbox_submit(this);">
 					<input type="hidden" name="sfl" value="wr_subject||wr_content">
 					<input type="hidden" name="sop" value="and">
-					<label for="sch_stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
 					<input type="text" name="stx" id="search_txtbox" maxlength="20" placeholder='Search'>
 					<input type="image" id="search_submit" src="/x/theme/website.com/img/search.png">
 					</form>

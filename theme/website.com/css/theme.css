@@ -70,16 +70,24 @@
 #search-wrapper{
 	background-color:#386b90;
 	height:19px;
-	padding:10px;
 	bottom:0;
 	left:0;
 	position:relative;
+	height: 40px;
 }
 
-#search-wrapper .title{
-	float:left;
-	color:#e6ecf1;
-	font-style:italic;
+#search-wrapper .sub-menu a {
+	font-family: '맑은 고딕', AppleGothic;
+	color:#ffffff;
+	height: 40px;
+	line-height: 40px;
+	display: inline-block;
+	padding: 0 10px;
+	font-size: 1.250em;
+}
+
+#search-wrapper .sub-menu a:hover {
+	text-decoration: none;
 }
 
 #search-wrapper #search-box{
@@ -173,14 +181,6 @@ fieldset{
 	text-align:center;	
 }
 
-#howto-steps .steps .description .title{
-	font-size:1.5em;
-	margin-bottom:20px;
-}
-
-#howto-steps .steps .description .instruction{
-	font-size:1.3em;	
-}
 
 #create-your-site{
 	border:1px solid #a6603a;		
@@ -311,7 +311,7 @@ fieldset{
 .left-menu-wrapper {
 	width:190px;
 	overflow:hidden;
-	margin-bottom:24px;
+	margin: 10px 0 24px 0;
 }
 
 .left-menu-wrapper .inner{
@@ -362,4 +362,18 @@ fieldset{
 .left-menu-wrapper .view-more a{
 	color:#616161;
 	text-decoration:none;
+}
+
+#container #howto-steps {
+	font-family: '맑은 고딕', AppleGothic;
+}
+#container #howto-steps .steps .title {
+	font-size: 1.3em;
+	color: #004475;
+	margin-bottom: 11px;
+	position: relative;
+}
+#container #howto-steps .steps .instruction {
+	font-size: 1em;
+	color: #3e3e3e;
 }

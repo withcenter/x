@@ -4,8 +4,8 @@
 			<div class='steps'>
 				<img class='step1-img' src='<?=x::url()?>/theme/website.com/img/step1.png'/>
 				<div class='description'>
-					<div class='title'>Step1</div>
-					<div class='instruction'>Brief instruction for step one. More text. More more text. More and more text. More and more and more </div>
+					<div class='title'>필고 홈페이지</div>
+					<div class='instruction'>(모바일) 홈페이지, 스마트폰 앱,<br />바이럴 마케팅 프로그램<br />무료 제공</div>
 				</div>
 			</div>
 		</td>
@@ -13,8 +13,8 @@
 			<div class='steps'>
 				<img class='step2-img' src='<?=x::url()?>/theme/website.com/img/step2.png'/>
 				<div class='description'>
-					<div class='title'>Step2</div>
-					<div class='instruction'>Brief instruction for step two. More text. More more text. More and more text. More and more and more </div>
+					<div class='title'>사이트 만들기 예제</div>
+					<div class='instruction'>여행사 만들기<br />커뮤니티 사이트 만들기<br />블로그 만들기</div>
 				</div>
 			</div>
 		</td>
@@ -22,8 +22,8 @@
 			<div class='steps'>
 				<img class='step3-img' src='<?=x::url()?>/theme/website.com/img/step3.png'/>
 				<div class='description'>
-					<div class='title'>Step3</div>
-					<div class='instruction'>Brief instruction for step three. More text. More more text. More and more text. More and more and </div>
+					<div class='title'>도와주세요</div>
+					<div class='instruction'>사이트 만들기가 어려우면<br />여기를 클릭!</div>
 				</div>
 			</div>
 		</td>
@@ -31,7 +31,7 @@
 </div>
 
 <div id='create-your-site'>
-	<a href='<?=x::url()?>/?module=multisite&action=create'>CREATE YOUR SITE NOW</a>
+	<a href='<?=x::url()?>/?module=multisite&action=create'>사이트 만들기 클릭!</a>
 </div>
 
 <div id='banner-wrapper'>
