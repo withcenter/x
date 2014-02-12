@@ -22,15 +22,15 @@
 		<table cellpadding=0 cellspacing=0 width='100%'>
 			<tr valign='top'>
 				<td>
-					<span>메인 타이틀</span><input type='text' name='title' value='<?=$extra['title']?>'>
+					<span>메인 타이틀</span><input type='text' name='title' value='<?=ms::meta('title')?>'>
 				</td>
 				<td>
-					<span>서브 타이틀</span><input type='text' name='secondary_title' value='<?=$extra['secondary_title']?>'>
+					<span>서브 타이틀</span><input type='text' name='secondary_title' value='<?=ms::meta('secondary_title')?>'>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<span>하단 문구</span><input type='text' name='footer_text' value='<?=$extra['footer_text']?>'>
+					<span>하단 문구</span><input type='text' name='footer_text' value='<?=ms::meta('footer_text')?>'>
 				</td>
 			</tr>
 		</table>
@@ -41,7 +41,7 @@
 					<div class='select-wrapper'><div class='inner'>
 						<?php
 						foreach ( $rows as $row ) {
-							if ( $extra['forum_no_'.$i] && $extra['forum_no_'.$i] == $row['bo_table'] ) {
+							if ( ms::meta('forum_no_'.$i) && ms::meta('forum_no_'.$i) == $row['bo_table'] ) {
 								$default_value =  $row['bo_subject'];
 								break;
 							}
@@ -61,7 +61,7 @@
 							}
 						?>
 					</div>
-					<input class='hidden-value' type='hidden' name='forum_no_<?=$i?>' value='<?=$extra['forum_no_'.$i]?>' />
+					<input class='hidden-value' type='hidden' name='forum_no_<?=$i?>' value='<?=ms::meta('forum_no_'.$i)?>' />
 				</div>
 			<? } ?>
 			</div>
@@ -71,7 +71,7 @@
 					<span class='select-wrapper'><span class='inner'>
 						<?php
 						foreach ( $rows as $row ) {
-							if ( $extra['forum_no_'.$i] && $extra['forum_no_'.$i] == $row['bo_table'] ) {
+							if ( ms::meta('forum_no_'.$i) && ms::meta('forum_no_'.$i) == $row['bo_table'] ) {
 								$default_value =  $row['bo_subject'];
 								break;
 							}
@@ -100,31 +100,31 @@
 				<tr valign='top'>
 					<td>
 						<div class='title'>사이트 로고</div>
-						<?if( $extra['header_logo'] ) {?><img src="<?=ms::url_site(etc::domain()).$extra['img_url'].$extra['header_logo']?>" width=280px height=160px><br><?}?>
+						<?if( ms::meta('header_logo') ) {?><img src="<?=ms::url_site(etc::domain()).ms::meta('img_url').ms::meta('header_logo')?>" width=280px height=160px><br><?}?>
 						<input type='file' name='header_logo'>
 						<div class='title'>로고 문구</div>
-						<input type='text' name='logo_text' value='<?=$extra['logo_text']?>'>
+						<input type='text' name='logo_text' value='<?=ms::meta('logo_text')?>'>
 					</td>
 					<td>
 						<div class='title'>배너이미지1</div>
-						<?if( $extra['banner_1'] ) {?><img src="<?=ms::url_site(etc::domain()).$extra['img_url'].$extra['banner_1']?>" width=280px height=160px><br><?}?>
+						<?if( ms::meta('banner_1') ) {?><img src="<?=ms::url_site(etc::domain()).ms::meta('img_url').ms::meta('banner_1')?>" width=280px height=160px><br><?}?>
 						<input type='file' name='banner_1'>
 						<div class='title'>배너1의 문구1</div>
-						<input type='text' name='banner1_text1' value='<?=$extra['banner1_text1']?>'><br>
+						<input type='text' name='banner1_text1' value='<?=ms::meta('banner1_text1')?>'><br>
 						<div class='title'>배너1의 문구2</div>
-						<input type='text' name='banner1_text2' value='<?=$extra['banner1_text2']?>'>
+						<input type='text' name='banner1_text2' value='<?=ms::meta('banner1_text2')?>'>
 					</td>
 				</tr>
 				<tr valign='top'>
 
 					<td>
 						<div class='title'>배너이미지2</div>
-						<?if( $extra['banner_1'] ) {?><img src="<?=ms::url_site(etc::domain()).$extra['img_url'].$extra['banner_2']?>" width=280px height=160px><br><?}?>
+						<?if( ms::meta('banner_1') ) {?><img src="<?=ms::url_site(etc::domain()).ms::meta('img_url').ms::meta('banner_2')?>" width=280px height=160px><br><?}?>
 						<input type='file' name='banner_2'>
 						<div class='title'>배너2의 문구1</div>
-						<input type='text' name='banner2_text1' value='<?=$extra['banner2_text1']?>'>
+						<input type='text' name='banner2_text1' value='<?=ms::meta('banner2_text1')?>'>
 						<div class='title'>배너2의 문구2</div>
-						<input type='text' name='banner2_text2' value='<?=$extra['banner2_text2']?>'>
+						<input type='text' name='banner2_text2' value='<?=ms::meta('banner2_text2')?>'>
 					</td>
 				</tr>
 			</table>

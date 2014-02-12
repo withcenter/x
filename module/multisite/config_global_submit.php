@@ -1,6 +1,14 @@
 <?php
-/* upload Global Settings Files ex. header_logo, banner_1, banner_2 to g5/data/upload/multisite/site_name/file_name.ext */
+/** new config meta update method */
+ms::meta('title',$title);
+ms::meta('secondary_title',$secondary_title);
+ms::meta('footer_text',$footer_text);
 
+
+
+
+
+/* upload Global Settings Files ex. header_logo, banner_1, banner_2 to g5/data/upload/multisite/site_name/file_name.ext */
 $root = G5_PATH.'/'.G5_DATA_DIR.'/upload/';
 $path = $root.'multisite/';
 $site = explode( '.' , etc::domain());
@@ -24,6 +32,9 @@ foreach($_FILES as $key => $value) {
 	}
 }
 
+/** old config method 
 ms::update( $in );
+
+*/
 if ( file_exists( ms::theme('setting_submit') ) ) include ms::theme('setting_submit');
 jsGo("?module=$module&action=config_global");
