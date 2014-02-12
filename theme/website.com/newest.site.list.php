@@ -1,5 +1,5 @@
 <?php
-$query = "SELECT domain, title FROM x_multisite_config LIMIT 0, 30";
+$query = "SELECT domain, title FROM x_multisite_config WHERE title <> '' LIMIT 0, 30";
 $rows = db::rows( $query );
 $image_url = x::url_theme().'/img';
 $title_icon1 = "<img src='$image_url/directions-blue.png' />";
