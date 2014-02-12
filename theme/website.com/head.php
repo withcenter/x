@@ -3,8 +3,6 @@
 <div id='website-wrapper'>
 <div id="hd">
     <h1 id="hd_h1"><?php echo $g5['title'] ?></h1>
-
- 
     <div id="hd-wrapper">
 		<div id='menu-top'>
 			<div id="logo">
