@@ -16,11 +16,12 @@
 <div class='categories'>
 	<h2>Categories</h2>
 	<ul>
-	<? for ( $i = 1; $i <= 10; $i++ ) { 
+	<?  if ( $extra['menu_1'] == '' ) $extra['menu_1'] = ms::board_id(etc::domain()).'_1';
+		for ( $i = 1; $i <= 10; $i++ ) { 
 		$option = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".$extra['menu_'.$i]."'");
 		if ( $extra['menu_'.$i] != '' ) {
 			?><li><a href='<?=g::url()?>/bbs/board.php?bo_table=<?=$extra['menu_'.$i]?>'><?=$option['bo_subject']?></a></li>
-	<?}}?>
+		<?}}?>
 	</ul>	
 </div>
 
