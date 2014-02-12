@@ -7,11 +7,13 @@
 		<h2> Site List </h2>
 		<ul>
 			<?php
+				$i = 0;
 				foreach ( ms::my_site() as $site ) {
-				date_default_timezone_set("UTC");
-				$date_created = date("(T) m/d/Y, h:iA",($site['stamp_create']));				
+				$i++;				
+				$date_created = date("(T) m/d/Y, h:iA",($site['stamp_create']));
+				if ( count( ms::my_site() ) == $i ) $is_last_count = "last-count";
 			 ?>
-				<li>
+				<li class='<?=$is_last_count?>'>
 					<a href="<?=ms::url_site($site['domain'])?>">
 						<div class='info'>Domain Name: <?=$site['domain']?></div>
 						<div class='info'>Site Title: <?=$site['title']?></div>
