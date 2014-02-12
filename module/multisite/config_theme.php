@@ -12,13 +12,13 @@
 	<div class='config config-theme'>
 		<div class='title'><div class='inner'>원하시는 테마를 선택하신 후 클릭하시면 반영이 됩니다.</div></div>
 		<div class='thumb-list'>
-		<button type='submit' name='theme' disabled>
-			<div class='theme-thumb'>
-				<img src='theme/<?=$extra['theme']?>/preview.jpg' >
-				<p>이 반영 됨</p>
-				<table cellpadding='10px'><tr><td><?=$extra['theme']?></td></table>
-			</div>
-		</button>
+			<button type='submit' name='theme' disabled>
+				<div class='theme-thumb'>
+					<img src='theme/<?=$extra['theme']?>/preview.jpg' >
+					<p>이 반영 됨</p>
+					<table cellpadding='10px'><tr><td><?=$extra['theme']?></td></table>
+				</div>
+			</button>
 		<?php
 			$theme_ctr=0;
 			$theme_list = array();
@@ -34,15 +34,16 @@
 				$folder_name = $theme_list['name'][$theme_ctr] = $dir;
 				$name = $theme_config['name'];
 				$url = $theme_list['url'][$theme_ctr] = 'theme/'.$dir.'/preview.jpg';
-				if($extra['theme']!=mb_strtolower($name)) {
-				?>
-				<button type='submit' name='theme' value='<?=$folder_name?>' onclick="return confirm('Do you really want to change Theme?');">
-					<div class='theme-thumb inactive'>
-					<img src='<?=$url?>' >
-					<table cellpadding='10px'><tr><td><?=$name?></td></table>
-					</div>
-				</button>
-				<?
+
+				if($extra['theme']!=preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower($name))) {
+					?>
+					<button type='submit' name='theme' value='<?=$folder_name?>' onclick="return confirm('Do you really want to change Theme?');">
+						<div class='theme-thumb inactive'>
+						<img src='<?=$url?>' >
+						<table cellpadding='10px'><tr><td><?=$name?></td></table>
+						</div>
+					</button>
+					<?
 				}
 				$theme_ctr++;
 			}
