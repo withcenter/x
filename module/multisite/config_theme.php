@@ -11,16 +11,17 @@
 
 	<div class='config config-theme'>
 		<div class='title'><div class='inner'>원하시는 테마를 선택하신 후 클릭하시면 반영이 됩니다.</div></div>
-		<? if ( $extra['theme'] != '' ) { ?>
-		<div class='theme-thumb'>
-			<img src="theme/<?=$extra['theme']?>/preview.jpg" width='720' height='480'>
-			<table cellpadding='10px'><tr><td align='center'><?=$extra['theme']?>이 반영 됨</td></table>
-		</div>
+		<div class='thumb-list'>
+		<button type='submit' name='theme' disabled>
+			<div class='theme-thumb'>
+				<img src='theme/<?=$extra['theme']?>/preview.jpg' >
+				<p>이 반영 됨</p>
+				<table cellpadding='10px'><tr><td><?=$extra['theme']?></td></table>
+			</div>
+		</button>
 		<?php
-		}
 			$theme_ctr=0;
 			$theme_list = array();
-			echo "<div class='thumb-list'>";
 			foreach ( $dirs as $dir ) {
 				$path = X_DIR_THEME . "/$dir/config.php";
 				if ( ! file_exists($path) ) continue;				
@@ -33,7 +34,7 @@
 				$folder_name = $theme_list['name'][$theme_ctr] = $dir;
 				$name = $theme_config['name'];
 				$url = $theme_list['url'][$theme_ctr] = 'theme/'.$dir.'/preview.jpg';
-				if($extra['theme']!=$name) {
+				if($extra['theme']!=mb_strtolower($name)) {
 				?>
 				<button type='submit' name='theme' value='<?=$folder_name?>' onclick="return confirm('Do you really want to change Theme?');">
 					<div class='theme-thumb inactive'>
