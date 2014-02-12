@@ -192,6 +192,7 @@ fieldset{
 }
 
 #create-your-site  a{
+	font-family: '맑은 고딕', AppleGothic;
 	display:inline-block;
 	font-size:1.5em;
 	text-decoration:none;
@@ -211,8 +212,8 @@ fieldset{
 	background-image: -webkit-linear-gradient(bottom, #F48245 0%, #D9743D 100%);
 	background-image: -ms-linear-gradient(bottom, #F48245 0%, #D9743D 100%);
 	background-image: linear-gradient(to bottom, #F48245 0%, #D9743D 100%);
-	padding:7px 0;
-	height:22px;
+	height:36px;
+	line-height: 32px;
 	text-align:center;
 }
 
@@ -274,12 +275,24 @@ fieldset{
 }
 
 /*FOOTER*/
+#footer {
+	width: 100%;
+	margin-top:260px;
+	border-top:1px solid #dddddd;
+	text-align: center;
+	padding: 10px 0;
+	line-height: 170%;
+	color: #797979;
+	font-size: 1em;
+}
+
+/*
  #footer{
 	margin-top:260px;
 	border-top:1px solid #dddddd;
 	padding:10px 17px;
 	color:#959595;
-	font-size:.8em;	
+	font-size: 1em;
 }
 
 #footer #bottom-menus, #footer #copyright{
@@ -296,7 +309,7 @@ fieldset{
 #footer #copyright{
 	float:right;
 }
-
+*/
 /*skin/latest/community*/
 
 .lt .lt_title .dots{
@@ -325,12 +338,15 @@ fieldset{
 	font-weight:bold;
 	border-bottom:1px solid #cecece; 
 	padding:0 0 6px 30px;
+	font-family: '맑은 고딕', AppleGothic;
+	position: relative;
+	top: -2px;
 }
 
 .left-menu-wrapper .header img{
 	position:absolute;
 	left:0;
-	top:0;
+	top:2px;
 }
 
 .left-menu-wrapper .info-wrapper{	
