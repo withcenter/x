@@ -3,6 +3,7 @@
 		echo "You are not admin";
 		return;
 	}
+	$extra = ms::get_extra();
 	/* 생성된 게시판 정보를 가저온다 */
 	$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";
 	

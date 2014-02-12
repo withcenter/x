@@ -375,6 +375,71 @@ class etc {
 	}
 
 	
+	
+	
+	/**
+	 *  @brief determins whether the system is windows or not.
+	 *  
+	 *  @return true if the system wherein the PHP script is running is window.
+	 *  
+	 *  @details use if for test.
+	 */
+	static function localhost()
+	{
+		global $localhost;
+		$localhost = false;
+		if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') $localhost = true;
+		/*
+		else {
+			$ip = $_SERVER['SERVER_ADDR'];
+			if ( $ip[0] == '1' && $ip[1] == '9' && $ip[2] == '2' ) $localhost = true;
+		}
+		*/
+		return $localhost;
+	}
+	
+	
+	/**
+	 *  @brief checks if the code is run on work server.
+	 *  
+	 *  @return true if the script is run on work server.
+	 *  
+	 *  @details use it when test is needed.
+	 */
+	static function is_workserver()
+	{
+		$ip = $_SERVER['SERVER_ADDR'];
+		if ( $ip[0] == '1' && $ip[1] == '9' && $ip[2] == '2' ) return true;
+	}
+	
+	
+	/** @short this is an alias of localhost()
+	@code
+	if ( etc::is_windows() ) echo "Yes, this system is windows.";
+	else echo "No, this system is not windows.";
+	@endcode
+	
+	 */
+	static function is_windows()
+	{
+		return self::localhost();
+	}
+	
+	/**
+	 *  @brief checks if the code is run on test server.
+	 *  
+	 *  @return true if the script is run on test server.
+	 *  
+	 *  @details use this to run some code only on test.
+	 *  @code
+	 *  if ( etc::test_server() ) debug::mode(1);
+	 *  @endcode
+	 */
+	static function test_server()
+	{
+		return self::is_windows() || self::is_workserver();
+	}
+	
 } // eo etc class
 
 

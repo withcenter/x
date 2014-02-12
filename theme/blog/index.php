@@ -1,4 +1,5 @@
-<? 
+<?php
+$extra = ms::get_extra();
 $option = db::rows("SELECT * FROM $g5[write_prefix]".$extra['menu_1']." ORDER BY wr_num");
 for ( $i = 0; $i <= 2; $i++) { 
 	if( !$option[$i]['wr_subject'] == '' ) {?>

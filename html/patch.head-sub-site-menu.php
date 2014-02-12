@@ -3,6 +3,7 @@
 <?php
 
 	$main = array();
+	$extra = ms::get_extra();
 
 ?>
 

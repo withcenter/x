@@ -4,6 +4,9 @@
 		return;
 	}
 	
+	$extra = ms::get_extra();
+	
+	
 	if ( $in['done'] ) {
 		echo "<div class='message'>Updated</div>";
 	}

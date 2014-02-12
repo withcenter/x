@@ -1,3 +1,6 @@
+<?php
+	$extra = ms::get_extra();
+?>
 <div class='profile-photo'>
 	<?if( $extra['profile_img'] ) {?><img src="<?=ms::url_site(etc::domain()).'/'.$extra['img_url'].$extra['profile_img']?>"><br><?}?>
 	<p><?=$extra['profile_text1']?></p>
