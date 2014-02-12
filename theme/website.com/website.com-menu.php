@@ -5,8 +5,12 @@
 	$main = array();
 
 ?>	
-<ul id="website-com-menu">
-	<li class="menu-list"><a class='home' href='<?=g::url()?>'>홈</a></li>			
+<style>
+	#website-com-menu  {
+		font-family: '맑은 고딕', AppleGothic;
+	}
+</style>
+<ul id="website-com-menu">		
 	<?php
 		$i = 0;
 		foreach ( $main as $row ) {
@@ -51,9 +55,6 @@
 		else if ( "<?php echo $in['module']?>" == "admin" || "<?php echo $in['module']?>" == "multisite" || "<?php echo $in['module']?>" == "multidomain" ){
 			$(".menu-list .admin").addClass('selected');
 		}		
-		else{
-			$('.menu-list .home').addClass('selected');			
-		}
 	});
 
 </script>
