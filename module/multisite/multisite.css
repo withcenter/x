@@ -232,11 +232,6 @@ table .header td:first-child {
 	overflow: hidden;
 }
 
-.config-theme .theme-thumb .current-thumb {
-	width: 100%;
-	height: 400px;
-}
-
 .config-theme .theme-thumb table {
 	position: absolute;
 	bottom: 0;
@@ -244,18 +239,27 @@ table .header td:first-child {
 	background: #333333;
 	width: 100%;
 }
-.config-theme .inactive {
+
+.config-theme .theme-thumb p {
+	position: absolute;
+	top: 0;
+	padding: 0.5em;
+	background: #333333;
+	width: 100%;
+}
+
+.config-theme .theme-thumb {
 
 	display: inline-block;
-	width: 220px;
-	height: 180px;
+	width: 320px;
+	height: 240px;
 }
 
 .config-theme .thumb-list {
 	text-align: center;
 }
 
-.config-theme .inactive img {
+.config-theme .theme-thumb img {
 	width: 100%;
 }
 
