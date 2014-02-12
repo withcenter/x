@@ -284,6 +284,7 @@ fieldset{
 	line-height: 170%;
 	color: #797979;
 	font-size: 1em;
+	font-family: '맑은 고딕', AppleGothic;
 }
 
 /*
@@ -392,4 +393,48 @@ fieldset{
 #container #howto-steps .steps .instruction {
 	font-size: 1em;
 	color: #3e3e3e;
+}
+
+/* newest.site.list.php */
+.bottom-content .newest-site-list, .bottom-content .latest-posts {
+	font-family: '맑은 고딕', AppleGothic;
+	max-width: 222px;
+}
+
+.bottom-content  .title {
+	height: 29px;
+	border-bottom: 1px solid #d5d5d5;
+	line-height: 29px;
+	font-size: 1.125em;
+	margin-bottom: 11px;
+	font-weight: bold;
+	padding-bottom: 4px;
+}
+.bottom-content  a:hover {
+	text-decoration: none;
+}
+
+.bottom-content  .title a {
+	color: #565656
+}
+.bottom-content  .title img {
+	position: relative;
+	top: -2px;
+	margin-right: 6px;
+}
+
+.bottom-content .row {
+	height: 20px;
+	line-height: 20px;	
+	padding: 0 10px;
+}
+
+.bottom-content .row .dot {
+	position: relative;
+	top: -2px;
+}
+
+.bottom-content .row  a {
+	color: #565656;
+	font-size: 1.063em;
 }

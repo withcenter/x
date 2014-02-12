@@ -24,6 +24,10 @@
 	</li>
 	<?}?>
 	
+	<? if ( ms::admin() ) {?>
+		<li class='menu-list'><a class='my-site-setting' href='<?=ms::url_config()?>'>사이트 설정</a></li>
+	<? }?>
+	
 	<li class="menu-list"><a class='my-sites' href='<?=x::url()?>/?module=multisite&action=my_sites'>내 사이트</a></li>
 	
 	<? /*
