@@ -12,13 +12,15 @@
 	<div class='config config-theme'>
 		<div class='title'><div class='inner'>원하시는 테마를 선택하신 후 클릭하시면 반영이 됩니다.</div></div>
 		<div class='thumb-list'>
-			<button type='submit' name='theme' disabled>
-				<div class='theme-thumb'>
-					<img src='theme/<?=$extra['theme']?>/preview.jpg' >
-					<p>이 반영 됨</p>
-					<table cellpadding='10px'><tr><td><?=$extra['theme']?></td></table>
-				</div>
-			</button>
+			<?if ( $extra['theme'] != '' ) { ?>
+				<button type='submit' name='theme' disabled="disabled">
+					<div class='theme-thumb'>
+						<img src='theme/<?=$extra['theme']?>/preview.jpg' >
+						<p>이 반영 됨</p>
+						<table cellpadding='10px'><tr><td><?=$extra['theme']?></td></table>
+					</div>
+				</button>
+			<?}?>
 		<?php
 			$theme_ctr=0;
 			$theme_list = array();
