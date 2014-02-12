@@ -8,7 +8,7 @@
 </div>
 <div class='profile-photo-bottom'><p>~</p></div>
 
-<div>
+<div class='login-form'>
 <?php /** login for testing purposes*/ 
 	if (!login()) echo "<h2>Login FORM</h2>"; echo outlogin('basic');?>
 </div>
