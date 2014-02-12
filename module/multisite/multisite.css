@@ -372,7 +372,7 @@ table .header td:first-child {
 	padding: 4px;
 }
 
-.view-site ul li:last-child a{
+.view-site ul li.last-count a{
 	border-bottom:none;
 }
 

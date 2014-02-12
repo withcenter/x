@@ -1,7 +1,7 @@
 <div id='howto-steps'>
 	<table cellspacing=0 cellpadding=0 width='100%'><tr valign='top'>
 		<td>
-			<div class='steps'>
+			<div class='steps first'>
 				<img class='step1-img' src='<?=x::url()?>/theme/website.com/img/step1.png'/>
 				<div class='description'>
 					<div class='title'>필고 홈페이지</div>
@@ -10,7 +10,7 @@
 			</div>
 		</td>
 		<td>
-			<div class='steps'>
+			<div class='steps second'>
 				<img class='step2-img' src='<?=x::url()?>/theme/website.com/img/step2.png'/>
 				<div class='description'>
 					<div class='title'>사이트 만들기 예제</div>
@@ -19,7 +19,7 @@
 			</div>
 		</td>
 		<td>
-			<div class='steps'>
+			<div class='steps third'>
 				<img class='step3-img' src='<?=x::url()?>/theme/website.com/img/step3.png'/>
 				<div class='description'>
 					<div class='title'>도와주세요</div>

@@ -154,7 +154,7 @@ fieldset{
 	border-right: 2px solid #ececec;	
 }
 
-#howto-steps td:last-child .steps{	
+#howto-steps .steps.third{	
 	border:0;	
 }
 
