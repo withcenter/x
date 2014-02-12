@@ -7,13 +7,10 @@
 	<p><?=$extra['profile_text1']?></p>
 </div>
 <div class='profile-photo-bottom'><p>~</p></div>
-<div class='social-icons'>
-	<a href='#'><img src='<?=x::url_theme()?>/img/fbicon.png'></a>
-	<a href='#'><img src='<?=x::url_theme()?>/img/twittericon.png'></a>
-	<a href='#'><img src='<?=x::url_theme()?>/img/instaicon.png'></a>
-	<a href='#'><img src='<?=x::url_theme()?>/img/pinticon.png'></a>
-	<a href='#'><img src='<?=x::url_theme()?>/img/yahooicon.png'></a>
-	<a href='#'><img src='<?=x::url_theme()?>/img/gplusicon.png'></a>
+
+<div>
+<?php /** login for testing purposes*/ 
+	if (!login()) echo "<h2>Login FORM</h2>"; echo outlogin('basic');?>
 </div>
 
 <div class='categories'>
@@ -94,9 +91,4 @@
 			<td align='right'><a href='#'><span class='nextnav'>NEXT<img src='<?=x::url_theme()?>/img/nexticon.png'></span></a></td>
 		</tr>
 	</table>
-</div>
-
-<div>
-<?php /** login for testing purposes*/ 
-	if (!login()) echo "<h2>Login FORM</h2>"; echo outlogin('basic');?>
 </div>
