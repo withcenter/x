@@ -7,6 +7,7 @@ x::hook_register('tail_begin', 'hook_multisite_tail_begin');
 
 function hook_multisite_tail_begin() {
 	global $extra;
+	if( $extra['theme_sidebar'] == '' || !array_key_exists('theme_sidebar',$extra)) $extra['theme_sidebar'] = 'left';
 	if($extra['theme_sidebar'] == 'left') {
 	?><style>
 		#aside {float:left;}
