@@ -30,23 +30,23 @@
 	font-family: Arial Narrow;
 }
 
-#tnb li:nth-child(1) {
+#tnb .menu-home {
 	background: #db5e31;
 }
 
-#tnb li:nth-child(2) {
+#tnb .menu-about {
 	background: #eda23e;
 }
 
-#tnb li:nth-child(3) {
+#tnb .menu-faqs {
 	background: #f2cb67;
 }
 
-#tnb li:nth-child(4) {
+#tnb .menu-contact {
 	background: #bfb840;
 }
 
-#tnb li:nth-child(5) {
+#tnb .menu-admin {
 	background: #e4dc4b;
 }
 
