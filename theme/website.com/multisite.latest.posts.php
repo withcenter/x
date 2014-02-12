@@ -1,5 +1,5 @@
 <?php
-$query = "SELECT wr_id, bo_table FROM g5_board_new ORDER BY bn_datetime DESC  LIMIT 0, 30";
+$query = "SELECT wr_id, bo_table, wr_parent FROM g5_board_new WHERE wr_id = wr_parent ORDER BY bn_datetime DESC  LIMIT 0, 30";
 $rows = db::rows( $query );
 
 $tmp_q = array();
@@ -11,10 +11,8 @@ foreach ( $rows as $row ) {
 	}
 }
 
-$lp = array();
-//$list['href'] = G5_BBS_URL.'/board.php?bo_table='.$board['bo_table'].'&amp;wr_id='.$list['wr_id']
 $image_url = x::url_theme().'/img';
-$title_icon1 = "<img src='$image_url/directions-blue.png' />";
+$title_icon1 = "<img src='$image_url/wrench-blue.png' />";
 echo "<div class='latest-posts'>
 		<div class='title'>$title_icon1 <a href='#'>최신 등록글</a></div>
 	";
