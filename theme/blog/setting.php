@@ -7,7 +7,7 @@
 			<input type='file' name='blog_profile_photo'>
 			<?if( ms::meta('blog_profile_photo') != '' ) { ?>
 				<input type='hidden' name='blog_profile_photo_remove' value='n'>
-				<input type='checkbox' name='blog_profile_photo_remove' value='y'>Remove Image
+				<input type='checkbox' name='blog_profile_photo_remove' value='y'><span class='title-small'>Remove Image</span>
 			<?}?>
 		</td>
 		<td  valign='top'>

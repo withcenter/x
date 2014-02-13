@@ -37,7 +37,7 @@
 				$name = $theme_config['name'];
 				$url = $theme_list['url'][$theme_ctr] = 'theme/'.$dir.'/preview.jpg';
 
-				if($extra['theme']!=preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower($name))) {
+				if( ms::meta('theme') != preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower($name)) ) {
 					?>
 					<button type='submit' name='theme' value='<?=$folder_name?>' onclick="return confirm('Do you really want to change Theme?');">
 						<div class='theme-thumb inactive'>
