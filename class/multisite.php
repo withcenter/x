@@ -29,8 +29,8 @@ class multisite {
 		
 		$time = time();
 		$q = "
-			INSERT INTO x_multisite_config ( domain, mb_id, stamp_create, title, extra )
-			VALUES ( '$o[domain]', '$member[mb_id]', $time, '$o[title]', '' )
+			INSERT INTO x_multisite_config ( domain, mb_id, stamp_create, title )
+			VALUES ( '$o[domain]', '$member[mb_id]', $time, '$o[title]')
 		";
 		db::query($q);
 		return  0;
