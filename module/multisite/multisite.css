@@ -361,15 +361,10 @@ table .header td:first-child {
 
 /*view sites*/
 .view-site {
-
+	font-family: '맑은 고딕', AppleGothic;
 }
 
-.view-site h2{
-	font-size:2.5em;
-	color:#565656;	
-	padding-bottom:10px;
-	margin-left:10px;
-}
+
 
 .view-site ul{
 	list-style:none;
@@ -403,8 +398,14 @@ table .header td:first-child {
 
 .view-site .info{
 	padding:4px 0;
+	font-size: 9pt;
 }	
-
+.view-site .info .item2 {
+	width: 90px;
+	display: inline-block;
+	font-weight: bold;
+	padding-left: 10px;
+}
 /* create.php */
 .create-site {
 	width: 100%;
@@ -414,7 +415,7 @@ table .header td:first-child {
 	position: relative;
 }
 
-.create-site  .main-title, .create-site  .title {
+.create-site  .main-title, .create-site  .title, .view-site .title {
 	background-color: #f9f9f9;
 	color: #555555;
 	border: 1px solid #d5d5d5;
@@ -422,9 +423,11 @@ table .header td:first-child {
 	text-align: center;
 	margin: 0;
 	margin-left: 10px;
+	font-weight: bold;
+	font-size: 10pt;
 }
 
-.create-site  .title  {
+.create-site  .title, .view-site  .title  {
 	line-height: 30px;
 	margin-bottom: 10px;
 }
@@ -457,3 +460,4 @@ table .header td:first-child {
 .success-fail-message .inner {
 	border: 1px solid #ffffff;
 }
+

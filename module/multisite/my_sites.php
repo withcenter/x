@@ -15,9 +15,9 @@
 			 ?>
 				<li class='<?=$is_last_count?>'>
 					<a href="<?=ms::url_site($site['domain'])?>">
-						<div class='info'><span>사이트 주소</span><?=$site['domain']?></div>
-						<div class='info'><span>사이트 제목</span><?=$site['title']?></div>
-						<div class='info'><span>생성일</span><?=$date_created?></div>				
+						<div class='info'><span class='item2'>사이트 주소</span><?=$site['domain']?></div>
+						<div class='info'><span class='item2'>사이트 제목</span><?=$site['title']?></div>
+						<div class='info'><span class='item2'>생성일</span><?=$date_created?></div>				
 					</a>
 				</li>
 			<? }?>
