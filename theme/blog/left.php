@@ -14,7 +14,8 @@
 		if( !login() ) echo "<p>You must login first to be able to post to this blog</p>";
 		else {
 		if( isset( $in['write_post']) ) { 
-			header("Location: " . g::url()  ."/bbs/write.php?bo_table=" . $in['write_post']);
+			if ( $in['write_post'] == '' ) jsAlert('Please select a forum');
+			else header("Location: " . g::url()  ."/bbs/write.php?bo_table=" . $in['write_post']);
 		}
 	?>
 	<form method="POST" name='post_write'>

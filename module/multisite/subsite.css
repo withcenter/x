@@ -171,6 +171,15 @@
 	background-color: #616161;
 	border: 0;
 }
+
+.config_general input[type='file'] {
+	width: 13em;
+}
+
+.config_general input[name='blog_profile_photo_remove'] {
+	margin-left: 0.5em;
+}
+
 /* config_menu */
 .config_menu .config {
 	font-family: '맑은 고딕', AppleGothic;

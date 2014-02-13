@@ -31,17 +31,20 @@ if(!is_dir($path)) {
 }
 if(!is_dir($folder)) mkdir($folder);
 
-$in['img_url'] = G5_DATA_DIR.'/upload/multisite/'.$site[0].'/';
-ms::meta('img_url', $in['img_url'] );
-di(ms::meta('img_url'));
+$img_url = G5_DATA_DIR.'/upload/multisite/'.$site[0].'/';
+ms::meta('img_url', $img_url );
+
 foreach($_FILES as $key => $value) {
+	if( $in[$key.'_remove'] == 'y' ) ms::meta( $key , '' );						 // if checkbox( file-upload-name_remove ) == 'y' 
+																				 // then set meta ( file-upload-name = '' ) to remove photo												 
 	$file_info = pathinfo($value['name']);
 	if( $name = $file_info['filename'] ) {
-		while(file_exists($folder.$name)) $name = rand(000000,999999).'_'.$name;
-		$target = $folder.$name;
+		while(file_exists($folder.$name)) $name = rand(000000,999999).'_'.$name; // if file exists, add random 6 digit numbers before name
+		$target = $folder.$name;												 // ex: 123456_filename
 		move_uploaded_file( $_FILES[$key]['tmp_name'], $target);
 		ms::meta ( $key, $name );
 	}
+	
 }
 
 if ( file_exists( ms::theme('setting_submit') ) ) include ms::theme('setting_submit');
