@@ -446,3 +446,18 @@ table .header td:first-child {
 	margin-left: 5px;
 	padding-left: 10px;
 }
+
+/* create_success.php */
+.success-fail-message {
+	border: 1px solid #d5d5d5;
+	color: #555555;
+	background-color: #f9f9f9;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom : 10px;
+}
+.success-fail-message .inner {
+	border: 1px solid #ffffff;
+}
