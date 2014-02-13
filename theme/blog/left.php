@@ -41,7 +41,7 @@
 </div>
 
 <div class='login-form'>
-<?php /** login for testing purposes*/ 
+<?php 
 	if (!login()) echo "<h2>Login FORM</h2>"; echo outlogin('basic');?>
 </div>
 
@@ -50,7 +50,7 @@
 	<ul>
 	<? 
 		$menu_1 = ms::meta('menu_1');
-		if ( empty($menu_1) ) $menu_1 = ms::board_id(etc::domain()).'_1';
+		if ( empty($menu_1) ) $menu_1 = ms::meta('menu_1', ms::board_id(etc::domain()).'_1');
 		for ( $i = 1; $i <= 10; $i++ ) { 
 		$option = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('menu_'.$i)."'");
 		${'menu_'.$i} = ms::meta('menu_'.$i);
@@ -65,17 +65,17 @@
 /**Sample Latest Post, this only fetches 5 latest post from $extra['menu_1'] */?>
 	<h2>Latest Posts</h2>
 	<ul>
-		<? /**
-		if( empty( $menu_1 ) ) $menu_1 = ms::board_id(etc::domain()).'_1';
-		$option = db::rows("SELECT * FROM $g5[write_prefix] ".$menu_1." ORDER BY wr_num");
+		<?
+		if( empty( $menu_1 ) ) $menu_1 = ms::meta('menu_1', ms::board_id(etc::domain()).'_1');
+		$option = db::rows("SELECT * FROM $g5[write_prefix]".$menu_1." ORDER BY wr_num");
 		for ( $i = 0; $i <= 4; $i++) { 
 			if( $option[$i]['wr_subject'] ) {?>
 				<li>
-					<a href='<?=g::url()?>/bbs/board.php?bo_table=<?=ms::meta('menu_1')?>&wr_id=<?=$option[$i]['wr_id']?>'>
+					<a href='<?=g::url()?>/bbs/board.php?bo_table=<?=$menu_1?>&wr_id=<?=$option[$i]['wr_id']?>'>
 						<span class='subject'><?=$option[$i]['wr_subject']?></span><br><?=mb_substr($option[$i]['wr_content'],0,50)?>
 					</a>
 				</li>
-		<?}}*/?>
+		<?}}?>
 	</ul>		
 </div>
 
@@ -120,6 +120,7 @@
 </fieldset>
 </div>
 
+<!-- Temporarily hide this one until this one has real function
 <div class='navigator'>
 	<table width='100%'>
 		<tr>
@@ -128,3 +129,4 @@
 		</tr>
 	</table>
 </div>
+-->
