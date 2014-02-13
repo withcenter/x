@@ -461,3 +461,64 @@ table .header td:first-child {
 	border: 1px solid #ffffff;
 }
 
+/* site.list.php */
+.site-list {
+	border: 1px solid #d5d5d5;
+	background-color: #f9f9f9;
+	border-radius: 3px;
+	font-family: '맑은 고딕', AppleGothic;
+	font-size: 10pt;
+}
+.site-list .inner {
+	margin: 1px solid #ffffff;
+	border-radius: 3px;
+	padding: 10px 20px;
+}
+.site-list .inner > .title {
+	background-color: #386b90;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 20px;
+	border-radius: 3px;
+	font-size: 1.125em;
+	font-weight: bold;
+	color: #fbfbfb;
+}
+.site-list .inner .item2, .site-list .inner .item3  {
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	padding: 0 10px;
+	font-weight: bold;
+	color: #594e2b;
+	width: 70px;
+	border: 1px solid #666666;
+	border-radius: 3px;
+	margin-right: 10px;
+}
+.site-list .inner .item3  {
+	width: 40px;
+	margin-left: 100px;
+}
+.site-list .inner  .sites {
+	border-bottom: 1px solid #b4b7b8;
+	padding: 10px;
+	position: relative;
+}
+
+.site-list .inner  a:hover {
+	text-decoration: none;
+}
+.site-list .inner  .sites:last-child {
+	border-bottom: 0;
+}
+.site-list .inner .sites div {
+	height: 25px;
+	overflow: hidde;
+}
+
+.site-list .inner .sites  .move-to-site {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}

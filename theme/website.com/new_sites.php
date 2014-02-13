@@ -20,5 +20,5 @@
 		</div>
 		<?}?>		
 	</div>
-	<div class='view-more'><a href="#">자세히</a></div>
+	<div class='view-more'><a href="<?=x::url()?>/?module=multisite&action=site.list">자세히</a></div>
 </div>
