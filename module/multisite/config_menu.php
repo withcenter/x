@@ -17,7 +17,7 @@
 	
 	$rows = db::rows( $q );
 ?>
-<link rel='stylesheet' type='text/css' href='<?=x::url()?>/module/multisite/subsite.css' />
+<link rel='stylesheet' type='text/css' href='<?=x::dir()?>/module/multisite/subsite.css' />
 <script src='<?=x::url()?>/module/multisite/subsite.js'></script>
 <form action='?' class='config_menu'>
 		<input type='hidden' name='module' value='multisite' />
@@ -49,6 +49,8 @@
 					<img src='<?=x::url()?>/module/multisite/img/select_arrow.gif' />
 				</span></span>
 				<div class='drop-down-menu'>
+					<div class='row' bo_table='' bo_subject='메뉴 선택'><b>메뉴 선택</b></div>
+					<div style='height: 15px;' class='row' bo_table='' bo_subject='메뉴 선택'></div>
 					<?php
 						foreach ( $rows as $row ) {
 							echo "<div class='row' bo_table='$row[bo_table]' bo_subject='$row[bo_subject]'>$row[bo_subject]</div>";
