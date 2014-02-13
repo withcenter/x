@@ -436,10 +436,6 @@ table .header td:first-child {
 }
 .create-site input[type='submit'] {
 	float: right;
-	width: 70px;
-	position: absolute;
-	right: -100px;
-	bottom: 10px
 }
 
 .create-site .item {
