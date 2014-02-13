@@ -51,8 +51,8 @@
 		<td width='33.3%'><? include x::theme('newest.site.list')?></td>
 		<td width='33.4%'><? include x::theme('multisite.latest.posts')?></td>
 		<td width='33.3%'>
-			<div><?=latest('out-latest-withcenter-blue','qna', 15, 21)?></div>
-			<div><?=latest('out-latest-withcenter-blue','help', 15, 21)?></div>
+			<div><?=latest('x-latest-withcenter-blue','qna', 15, 21, $cache_time=1, x::url_theme().'/img/bag-blue.png')?></div>
+			<div><?=latest('x-latest-withcenter-blue','help', 15, 21, $cache_time=1, x::url_theme().'/img/bag-blue.png')?></div>
 		</td>
 	</tr>
 </table>
