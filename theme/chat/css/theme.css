@@ -49,10 +49,10 @@ body {
 }
 
 #aside {
+	float:left;
 	border: 0 !important;
 	padding: 15px 16px 15px 15px
 }
-
 
 
 #wrapper {
@@ -63,7 +63,7 @@ body {
 .footer-text {
 	margin-top: 1em;
 	clear:both;
-	float: right;
+	margin-left: 220px;
 }
 
 .footer-text p {

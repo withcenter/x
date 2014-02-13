@@ -96,60 +96,13 @@
 			<? } ?>
 			</div>	
 			<div style='clear:left;'></div>
-			
-			<table cellpadding=0 cellspacing=0 width='100%' class='image-config'>
-				<tr valign='top'>
-					<td>
-						<div class='title'>사이트 로고</div>
-						<?if( ms::meta('header_logo') ) {?><img src="<?=ms::url_site(etc::domain()).'/'.ms::meta('img_url').ms::meta('header_logo')?>" width=280px height=160px><br><?}?>
-						<input type='file' name='header_logo'>
-						<?if( ms::meta('header_logo') != '' ) { ?>
-							<input type='hidden' name='header_logo_remove' value='n'>
-							<input type='checkbox' name='header_logo_remove' value='y'>Remove Image
-						<?}?>
-					</td>
-					<td>
-						<div class='title'>로고 문구</div>
-						<textarea name='logo_text'><?=stripslashes(ms::meta('logo_text'))?></textarea>
-					</td>
-				</tr>
-				<tr valign='top'>
-					<td>
-						<div class='title'>배너이미지1</div>
-						<?if( ms::meta('banner_1') ) {?><img src="<?=ms::url_site(etc::domain()).'/'.ms::meta('img_url').ms::meta('banner_1')?>" width=280px height=160px><br><?}?>
-						<input type='file' name='banner_1'>
-						<?if( ms::meta('banner_1') != '' ) { ?>
-							<input type='hidden' name='banner_1_remove' value='n'>
-							<input type='checkbox' name='banner_1_remove' value='y'>Remove Image
-						<?}?>
-						<div class='title'>배너1의 문구1</div>
-						<textarea name='banner1_text1'><?=stripslashes(ms::meta('banner1_text1'))?></textarea>
-						<div class='title'>배너1의 문구2</div>
-						<textarea name='banner1_text2'><?=stripslashes(ms::meta('banner1_text2'))?>'</textarea>
-					</td>
-
-					<td>
-						<div class='title'>배너이미지2</div>
-						<?if( ms::meta('banner_2') ) {?><img src="<?=ms::url_site(etc::domain()).'/'.ms::meta('img_url').ms::meta('banner_2')?>" width=280px height=160px><br><?}?>
-						<input type='file' name='banner_2'>
-						<?if( ms::meta('banner_2') != '' ) { ?>
-							<input type='hidden' name='banner_2_remove' value='n'>
-							<input type='checkbox' name='banner_2_remove' value='y'>Remove Image
-						<?}?>
-						<div class='title'>배너2의 문구1</div>
-						<textarea name='banner2_text1'><?=stripslashes(ms::meta('banner2_text1'))?></textarea>
-						<div class='title'>배너2의 문구2</div>
-						<textarea name='banner2_text2'><?=stripslashes(ms::meta('banner2_text2'))?>'</textarea>
-					</td>
-				</tr>
-			</table>
 		
 
 		
 		<div class='title-bottom'>추가 설정</div>
 		<div><span class='title-small'>사이드 바 위치:</span>
-			<input type="radio" name="theme_sidebar" value="left" <?if(ms::meta('theme_sidebar') =='left') echo "checked"?>><span class='radio-left'>왼쪽</span> 
-			<input type="radio" name="theme_sidebar" value="right" <?if(!ms::meta('theme_sidebar') || ms::meta('theme_sidebar') == 'right') echo "checked"?>><span class='radio-right'>오른쪽</span>
+			<input type="radio" name="theme_sidebar" value="left"  <?if(!ms::meta('theme_sidebar') || ms::meta('theme_sidebar') == 'left') echo "checked"?>><span class='radio-left'>왼쪽</span> 
+			<input type="radio" name="theme_sidebar" value="right" <?if(ms::meta('theme_sidebar') =='right') echo "checked"?>><span class='radio-right'>오른쪽</span>
 		</div>
 		
 		
