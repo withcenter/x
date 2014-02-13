@@ -3,23 +3,24 @@
 ?>
 
 <div class='create-site'>
-	<div>
-	<h1>Create Your Site</h1>
-		<form action='?'>
-			<input type='hidden' name='module' value='multisite'>
-			<input type='hidden' name='action' value='create_submit'>
-				<div>Domain: http://<input type='text' name='sub_domain'>.<?=etc::base_domain()?></div>
-				<div>Site Title: <input type='text' name='title'></div>
-				<input type='submit' value='Create Site'>
-		</form>
+	<div class='wrapper'>
+		<div class='main-title'><div class='inner'>원하시는 사이트 주소를 입력하세요.</div></div>
+			<form action='?'>
+				<input type='hidden' name='module' value='multisite'>
+				<input type='hidden' name='action' value='create_submit'>
+					<div><span class='item'>사이트 주소</span> http://<input type='text' name='sub_domain'>.<?=etc::base_domain()?></div>
+					<div><span class='item'>사이트 제목</span> <input type='text' name='title'></div>
+					<input type='submit' value='생성'>
+			</form>
 	</div>
 	<div>
-		<h2> Site List </h2>
+		<div class='title'>내 사이트 목록</div>
 		<ul>
 			<?php
 				foreach ( ms::my_site() as $site ) {
 			 ?>
-				<li><a href="<?=ms::url_site($site['domain'])?>">Domain Name: <?=$site['domain']?><br>Site Title: <?=$site['title']?></a></li>
+				<li><a href="<?=ms::url_site($site['domain'])?>">사이트 주소: <?=$site['domain']?><br>
+				사이트 제목: <?=$site['title']?></a></li>
 			<? }?>
 		</ul>
 	</div>

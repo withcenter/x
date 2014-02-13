@@ -361,7 +361,7 @@ table .header td:first-child {
 
 /*view sites*/
 .view-site {
-	width:400px;
+
 }
 
 .view-site h2{
@@ -403,3 +403,46 @@ table .header td:first-child {
 
 .view-site .info{
 	padding:4px 0;
+}	
+
+/* create.php */
+.create-site {
+	width: 100%;
+	font-family: '맑은 고딕', AppleGothic;
+}
+.create-site .wrapper{
+	position: relative;
+}
+
+.create-site  .main-title, .create-site  .title {
+	background-color: #f9f9f9;
+	color: #555555;
+	border: 1px solid #d5d5d5;
+	height: 30px;
+	text-align: center;
+	margin: 0;
+	margin-left: 10px;
+}
+
+.create-site  .title  {
+	line-height: 30px;
+	margin-bottom: 10px;
+}
+.create-site  input[type='text'] {
+	height: 25px;
+	line-height: 25px;
+	width: 150px;
+	padding: 0 10px;
+}
+.create-site input[type='submit'] {
+	float: right;
+	width: 70px;
+	position: absolute;
+	right: -100px;
+	bottom: 10px
+}
+
+.create-site .item {
+	margin-left: 5px;
+	padding-left: 10px;
+}
