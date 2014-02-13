@@ -1,8 +1,8 @@
 <?php
 define('MS_EXIST', -9200);
+define('MS_MAX_FORUM', 20);
 class ms extends multisite { }
 class multisite {
-
 
 
 	/**
@@ -373,6 +373,21 @@ class multisite {
 		$path = x::dir() . '/theme/' . self::meta('theme') . "/$file.php";
 		return $path;
 	}
+	
+	/**
+	 *  @brief returns the number of forum of the site.
+	 *  
+	 *  @return Return_Description
+	 *  
+	 *  @details Details
+	 */
+	static function count_forum()
+	{
+		$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";
+		$q = "SELECT COUNT(*) FROM $g5[board_table] WHERE $qb";
+		return db::result();
+	}
+	
 	
 
 }

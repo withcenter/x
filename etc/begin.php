@@ -48,9 +48,9 @@ if ( strpos($_SERVER['PHP_SELF'], 'register_result.php') !== false ) {
 
 
 
-x::hook_register( 'write_update_end', 'hook_write_update_end' );
-function hook_write_update_end()
+x::hook_register( 'write_update_end', 'hook_blog_push' );
+function hook_blog_push()
 {
-	dlog("hook_write_update_end() begins");
+	include x::dir() . '/etc/service/push_to_blog.php';
 }
 

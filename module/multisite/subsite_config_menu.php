@@ -38,6 +38,10 @@
 		<a setting_menu_no=3 href='?module=multisite&action=config_forum'>게시판</a>
 	</li>
 	
+	<li>
+		<a setting_menu_no=3 href='?module=multisite&action=config_write'>글쓰기</a>
+	</li>
+	
 	
 	<li>
 		<a setting_menu_no=4 href='?module=multisite&action=config_theme'>테마</a>
