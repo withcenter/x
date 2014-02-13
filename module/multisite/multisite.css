@@ -462,23 +462,23 @@ table .header td:first-child {
 }
 
 /* site.list.php */
-.site-list {
+.site-list, .forum-list {
 	border: 1px solid #d5d5d5;
 	background-color: #f9f9f9;
 	border-radius: 3px;
 	font-family: '맑은 고딕', AppleGothic;
 	font-size: 10pt;
 }
-.site-list .inner {
+.site-list .inner, .forum-list .inner {
 	margin: 1px solid #ffffff;
 	border-radius: 3px;
 	padding: 10px 20px;
 }
-.site-list .inner > .title {
+.site-list .inner > .title, .forum-list .inner > .title {
 	background-color: #386b90;
 	height: 40px;
 	line-height: 40px;
-	padding: 0 20px;
+	padding: 0 10px;
 	border-radius: 3px;
 	font-size: 1.125em;
 	font-weight: bold;
@@ -521,4 +521,17 @@ table .header td:first-child {
 	position: absolute;
 	bottom: 10px;
 	right: 10px;
+}
+
+/* forum.list.php */
+.forum-list .inner .site-title {
+	margin: 10px 0 5px 0;
+	font-weight: bold;
+	color: #535353;
+	font-size: 1.125em;
+	padding: 5px 10px;
+	border: 1px solid #535353;
+	display: inline-block;
+	border-radius: 3px;
+	
 }
