@@ -172,6 +172,9 @@
 	border: 0;
 }
 
+.config_general textarea {
+	border: solid 1px #c3c3c3;
+}
 
 
 /* config_menu */

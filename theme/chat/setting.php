@@ -8,7 +8,7 @@
 				<input type='file' name='header_logo'>
 				<?if( ms::meta('header_logo') != '' ) { ?>
 					<input type='hidden' name='header_logo_remove' value='n'>
-					<input type='checkbox' name='header_logo_remove' value='y'>Remove Image
+					<input type='checkbox' name='header_logo_remove' value='y'><span class='title-small'>Remove Image</span>
 				<?}?>
 			</td>
 			<td>
