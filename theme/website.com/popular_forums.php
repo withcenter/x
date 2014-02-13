@@ -27,13 +27,13 @@
 		for( $count = 0; $count < 3; $count++ ) {
 		$post_url = g::url()."/bbs/board.php?bo_table=".$allhits[$count]['bo_table']."&wr_id=".$allhits[$count]['wr_id'];
 		
-		$subject = cut_str($allhits[$count]['wr_subject'], 20, "...");
-		$content = cut_str($allhits[$count]['wr_content'], 20, "...");
+		$popular_subject = cut_str($allhits[$count]['wr_subject'], 20, "...");
+		$popular_subject = cut_str($allhits[$count]['wr_content'], 20, "...");
 		?>
 			<div class='info-wrapper'>
 				<div class='top-info bo-table'><a href='<?=$post_url?>' target='_blank'><?=$count+1?>) <?=$allhits[$count]['bo_subject']?> (조회수: <?=$allhits[$count]['wr_hit']?> )</a></div>
-				<div class='other-info subject'><a href='<?=$post_url?>' target='_blank'><?=$subject?></a></div>
-				<div class='other-info content'><a href='<?=$post_url?>' target='_blank'><?=$content?></a></div>
+				<div class='other-info subject'><a href='<?=$post_url?>' target='_blank'><?=$popular_subject?></a></div>
+				<div class='other-info content'><a href='<?=$post_url?>' target='_blank'><?=$popular_subject?></a></div>
 			</div>
 		<?}?>
 	<? }?>	
