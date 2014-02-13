@@ -3,7 +3,6 @@
 		echo "You are not admin";
 		return;
 	}
-	$extra = ms::get_extra();
 	/* 생성된 게시판 정보를 가저온다 */
 	$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";
 	
@@ -90,7 +89,7 @@
 							}
 						?>
 					</span>
-					<input class='hidden-value' type='hidden' name='forum_no_<?=$i?>' value='<?=$extra['forum_no_'.$i]?>' />
+					<input class='hidden-value' type='hidden' name='forum_no_<?=$i?>' value='<?=ms::meta('forum_no_'.$i)?>' />
 				</div>
 			<? } ?>
 			</div>	
@@ -133,8 +132,8 @@
 		
 		<div class='title-bottom'>추가 설정</div>
 		<div><span class='title-small'>사이드 바 위치:</span>
-			<input type="radio" name="theme_sidebar" value="left" <?if($extra['theme_sidebar'] =='left') echo "checked"?>><span class='radio-left'>왼쪽</span> 
-			<input type="radio" name="theme_sidebar" value="right" <?if(!$extra['theme_sidebar'] || $extra['theme_sidebar'] == 'right') echo "checked"?>><span class='radio-right'>오른쪽</span>
+			<input type="radio" name="theme_sidebar" value="left" <?if(ms::meta('theme_sidebar') =='left') echo "checked"?>><span class='radio-left'>왼쪽</span> 
+			<input type="radio" name="theme_sidebar" value="right" <?if(!ms::meta('theme_sidebar') || ms::meta('theme_sidebar') == 'right') echo "checked"?>><span class='radio-right'>오른쪽</span>
 		</div>
 		
 		

@@ -4,7 +4,6 @@
 		return;
 	}
 	
-	$extra = ms::get_extra();
 	
 	
 	if ( $in['done'] ) {
@@ -36,7 +35,7 @@
 				<span class='select-wrapper'><span class='inner'>
 					<?php
 					foreach ( $rows as $row ) {
-						if ( $extra['menu_'.$i] && $extra['menu_'.$i] == $row['bo_table'] ) {
+						if ( ms::meta('menu_'.$i) && ms::meta('menu_'.$i) == $row['bo_table'] ) {
 							$default_value =  $row['bo_subject'];
 							break;
 						}
@@ -56,7 +55,7 @@
 						}
 					?>
 				</div>
-				<input class='hidden-value' type='hidden' name='menu_<?=$i?>' value='<?=$extra['menu_'.$i]?>' />
+				<input class='hidden-value' type='hidden' name='menu_<?=$i?>' value='<?=ms::meta('menu_'.$i)?>' />
 			</td>
 		</tr>
 		<?}?>

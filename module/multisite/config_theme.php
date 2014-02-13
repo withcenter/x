@@ -12,12 +12,12 @@
 	<div class='config config-theme'>
 		<div class='title'><div class='inner'>원하시는 테마를 선택하신 후 클릭하시면 반영이 됩니다.</div></div>
 		<div class='thumb-list'>
-			<?if ( $extra['theme'] != '' ) { ?>
+			<?if ( ms::meta('theme') ) { ?>
 				<button type='submit' name='theme' disabled="disabled">
 					<div class='theme-thumb'>
-						<img src='theme/<?=$extra['theme']?>/preview.jpg' >
+						<img src='theme/<?=ms::meta('theme')?>/preview.jpg' >
 						<p>이 반영 됨</p>
-						<table cellpadding='10px'><tr><td><?=$extra['theme']?></td></table>
+						<table cellpadding='10px'><tr><td><?=ms::meta('theme')?></td></table>
 					</div>
 				</button>
 			<?}?>

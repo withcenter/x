@@ -1,13 +1,10 @@
-<?php
-	$extra = ms::get_extra();
-?>
 <div class='profile-photo'>
-	<?if( $extra['profile_img'] ) {?>
-		<img src="<?=ms::url_site(etc::domain()).'/'.$extra['img_url'].$extra['profile_img']?>"><br>
+	<?if( ms::meta('profile_img') ) {?>
+		<img src="<?=ms::url_site(etc::domain()).'/'.ms::meta('img_url').ms::meta('profile_img')?>"><br>
 	<?}	else {?>
 		<img src='<?=x::url_theme()?>/img/blank_profile.png'?>
 	<?}?>
-	<p><?=$extra['profile_text1']?></p>
+	<p><?=ms::meta('profile_text1')?></p>
 </div>
 <div class='profile-photo-bottom'><p>~</p></div>
 
@@ -19,11 +16,14 @@
 <div class='categories'>
 	<h2>Categories</h2>
 	<ul>
-	<?  if ( $extra['menu_1'] == '' ) $extra['menu_1'] = ms::board_id(etc::domain()).'_1';
+	<? 
+		$menu_1 = ms::meta('menu_1');
+		if ( empty($menu_1) ) $menu_1 = ms::board_id(etc::domain()).'_1';
 		for ( $i = 1; $i <= 10; $i++ ) { 
-		$option = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".$extra['menu_'.$i]."'");
-		if ( $extra['menu_'.$i] != '' ) {
-			?><li><a href='<?=g::url()?>/bbs/board.php?bo_table=<?=$extra['menu_'.$i]?>'><?=$option['bo_subject']?></a></li>
+		$option = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('menu_'.$i)."'");
+		$menu."_".$i = ms::meta('menu_'.$i);
+		if ( $menu."_".$i ) {
+			?><li><a href='<?=g::url()?>/bbs/board.php?bo_table=<?=ms::meta('menu_'.$i)?>'><?=$option['bo_subject']?></a></li>
 		<?}}?>
 	</ul>	
 </div>
@@ -34,16 +34,18 @@
 	<h2>Latest Posts</h2>
 	<ul>
 		<? 
-		if( $extra['menu_1'] == '' ) $extra['menu_1'] = ms::board_id(etc::domain()).'_1';
-		$option = db::rows("SELECT * FROM $g5[write_prefix]".$extra['menu_1']." ORDER BY wr_num");
+		/*
+		if( empty( ms::meta('menu_1') ) ) ms::meta('menu_1') = ms::board_id(etc::domain()).'_1';
+		$option = db::rows("SELECT * FROM $g5[write_prefix]".ms::meta('menu_1')." ORDER BY wr_num");
 		for ( $i = 0; $i <= 4; $i++) { 
-			if( !$option[$i]['wr_subject'] == '' ) {?>
+			if( $option[$i]['wr_subject'] ) {?>
 				<li>
-					<a href='<?=g::url()?>/bbs/board.php?bo_table=<?=$extra['menu_1']?>&wr_id=<?=$option[$i]['wr_id']?>'>
+					<a href='<?=g::url()?>/bbs/board.php?bo_table=<?=ms::meta('menu_1')?>&wr_id=<?=$option[$i]['wr_id']?>'>
 						<span class='subject'><?=$option[$i]['wr_subject']?></span><br><?=mb_substr($option[$i]['wr_content'],0,50)?>
 					</a>
 				</li>
 		<?}}?>
+		*/?>
 	</ul>		
 </div>
 

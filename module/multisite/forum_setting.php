@@ -25,7 +25,7 @@
 
 			if ( $in['bo_category_list'] ) {
 				for ( $i=1; $i <= 10; $i++ ) {
-					if ( $extra['menu_'.$i] == $in['bo_table'] ) {
+					if ( ms::meta('menu_'.$i) == $in['bo_table'] ) {
 						$op['submenu_'.$i] = $in['bo_category_list'];
 						ms::update($op);
 					}
