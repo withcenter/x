@@ -91,9 +91,7 @@ class multisite {
 		}
 		else {
 			$q = "SELECT code FROM x_multisite_meta WHERE domain='$d' AND code='$code'";
-			di($q);
 			$val = db::result($q);
-			di($val);
 			if ( $val ) {
 				db::update('x_multisite_meta', array('value'=>$value), array('domain'=>$d, 'code'=>$code) );
 			}

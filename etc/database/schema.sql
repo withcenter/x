@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `x_multisite_config` (
   `domain` varchar(32) NOT NULL DEFAULT '',
   `mb_id` varchar(20) NOT NULL DEFAULT '',
   `stamp_create` int(10) unsigned NOT NULL DEFAULT '0',
-  `title` varchar(255) NOT NULL DEFAULT ''
+  `title` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`idx`),
   UNIQUE KEY `domain` (`domain`),
   KEY `mb_id` (`mb_id`)

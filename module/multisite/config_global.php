@@ -27,9 +27,9 @@
 					<span>서브 타이틀</span><input type='text' name='secondary_title' value='<?=ms::meta('secondary_title')?>'>
 				</td>
 			</tr>
-			<tr>
-				<td>
-					<span>하단 문구</span><input type='text' name='footer_text' value='<?=ms::meta('footer_text')?>'>
+			<tr valign='top'>
+				<td colspan=2>
+					<span>하단 문구</span><textarea name='footer_text'><?=stripslashes(ms::meta('footer_text'))?></textarea>
 				</td>
 			</tr>
 		</table>
@@ -54,6 +54,7 @@
 						<img src='<?=x::url()?>/module/multisite/img/select_arrow.gif' />
 					</div></div>
 					<div class='drop-down-menu'>
+						<div class='row' bo_table='' bo_subject='게시판 선택'>게시판 선택</div>
 						<?php
 							foreach ( $rows as $row ) {
 								echo "<div class='row' bo_table='$row[bo_table]' bo_subject='$row[bo_subject]'>$row[bo_subject]</div>";
@@ -83,6 +84,7 @@
 						<img src='<?=x::url()?>/module/multisite/img/select_arrow.gif' />
 					</span></span>
 					<span class='drop-down-menu'>
+						<div class='row' bo_table='' bo_subject='게시판 선택'>게시판 선택</div>
 						<?php
 							foreach ( $rows as $row ) {
 								echo "<div class='row' bo_table='$row[bo_table]' bo_subject='$row[bo_subject]'>$row[bo_subject]</div>";
@@ -102,28 +104,27 @@
 						<?if( ms::meta('header_logo') ) {?><img src="<?=ms::url_site(etc::domain()).ms::meta('img_url').ms::meta('header_logo')?>" width=280px height=160px><br><?}?>
 						<input type='file' name='header_logo'>
 						<div class='title'>로고 문구</div>
-						<input type='text' name='logo_text' value='<?=ms::meta('logo_text')?>'>
+						<textarea name='logo_text'><?=stripslashes(ms::meta('logo_text'))?></textarea>
 					</td>
+				<tr valign='top'>
 					<td>
 						<div class='title'>배너이미지1</div>
 						<?if( ms::meta('banner_1') ) {?><img src="<?=ms::url_site(etc::domain()).ms::meta('img_url').ms::meta('banner_1')?>" width=280px height=160px><br><?}?>
 						<input type='file' name='banner_1'>
 						<div class='title'>배너1의 문구1</div>
-						<input type='text' name='banner1_text1' value='<?=ms::meta('banner1_text1')?>'><br>
+						<textarea name='banner1_text1'><?=stripslashes(ms::meta('banner1_text1'))?></textarea>
 						<div class='title'>배너1의 문구2</div>
-						<input type='text' name='banner1_text2' value='<?=ms::meta('banner1_text2')?>'>
+						<textarea name='banner1_text2'><?=stripslashes(ms::meta('banner1_text2'))?>'</textarea>
 					</td>
-				</tr>
-				<tr valign='top'>
 
 					<td>
 						<div class='title'>배너이미지2</div>
 						<?if( ms::meta('banner_1') ) {?><img src="<?=ms::url_site(etc::domain()).ms::meta('img_url').ms::meta('banner_2')?>" width=280px height=160px><br><?}?>
 						<input type='file' name='banner_2'>
 						<div class='title'>배너2의 문구1</div>
-						<input type='text' name='banner2_text1' value='<?=ms::meta('banner2_text1')?>'>
+						<textarea name='banner2_text1'><?=stripslashes(ms::meta('banner2_text1'))?></textarea>
 						<div class='title'>배너2의 문구2</div>
-						<input type='text' name='banner2_text2' value='<?=ms::meta('banner2_text2')?>'>
+						<textarea name='banner2_text2'><?=stripslashes(ms::meta('banner2_text2'))?>'</textarea>
 					</td>
 				</tr>
 			</table>

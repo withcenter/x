@@ -1,10 +1,21 @@
 <?php
+
 /** new config meta update method */
-ms::meta('title',$title);
-ms::meta('secondary_title',$secondary_title);
-ms::meta('footer_text',$footer_text);
+ms::meta('title', $in['title']);
+ms::meta('secondary_title', $in['secondary_title']);
+ms::meta('footer_text', strip_tags($in['footer_text']));
 
+for( $i = 1; $i <= 10; $i++ ) {
+	ms::meta('forum_no_'.$i, $in['forum_no_'.$i]);
+}
 
+ms::meta('logo_text',strip_tags($in['logo_text']));
+ms::meta('banner1_text1',strip_tags($in['banner1_text1']));
+ms::meta('banner1_text2',strip_tags($in['banner2_text1']));
+ms::meta('banner2_text1',strip_tags($in['banner2_text1']));
+
+ms::meta('banner2_text2',strip_tags($in['banner2_text2']));
+ms::meta('theme_sidebar',$in['theme_sidebar']);
 
 
 
@@ -21,6 +32,7 @@ if(!is_dir($path)) {
 if(!is_dir($folder)) mkdir($folder);
 
 $in['img_url'] = G5_DATA_DIR.'/upload/multisite/'.$site[0].'/';
+ms::meta('img_url', $in['img_url'] );
 
 foreach($_FILES as $key => $value) {
 	$file_info = pathinfo($value['name']);
@@ -29,9 +41,10 @@ foreach($_FILES as $key => $value) {
 		$in[$key] = $name;
 		$target = $folder.$name;
 		move_uploaded_file( $_FILES[$key]['tmp_name'], $target);
+		
+		ms::meta ( $in[$key], $target );
 	}
 }
-
 /** old config method 
 ms::update( $in );
 
