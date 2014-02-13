@@ -9,12 +9,6 @@ for( $i = 1; $i <= 10; $i++ ) {
 	ms::meta('forum_no_'.$i, $in['forum_no_'.$i]);
 }
 
-ms::meta('logo_text',strip_tags($in['logo_text']));
-ms::meta('banner1_text1',strip_tags($in['banner1_text1']));
-ms::meta('banner1_text2',strip_tags($in['banner2_text1']));
-ms::meta('banner2_text1',strip_tags($in['banner2_text1']));
-
-ms::meta('banner2_text2',strip_tags($in['banner2_text2']));
 ms::meta('theme_sidebar',$in['theme_sidebar']);
 
 
