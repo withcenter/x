@@ -8,6 +8,38 @@
 </div>
 <div class='profile-photo-bottom'><p>~</p></div>
 
+<div class='post-forum'>
+	<h2>Write</h2>
+	<? 
+		if( !login() ) echo "<p>You must login first to be able to post to this blog</p>";
+		else {
+		if( isset( $in['write_post']) ) { 
+			header("Location: " . g::url()  ."/bbs/write.php?bo_table=" . $in['write_post']);
+		}
+	?>
+	<form method="POST" name='post_write'>
+	<?
+		$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";	
+		$rows = db::rows( "SELECT bo_table, bo_subject FROM $g5[board_table] WHERE $qb");
+	?>
+		<select name='write_post'>
+		<?
+			echo "<option value=''>Click here to see forum list</option>";
+			foreach ( $rows as $row ) {
+				echo "<option value='$row[bo_table]'>$row[bo_subject]</option>";
+			}
+		?>
+		</select>
+	</form>
+	
+	<script>
+		$("select[name='write_post']").change(function(){
+			$("form[name='post_write']").submit();
+		});
+	</script>
+	<?}?>
+</div>
+
 <div class='login-form'>
 <?php /** login for testing purposes*/ 
 	if (!login()) echo "<h2>Login FORM</h2>"; echo outlogin('basic');?>

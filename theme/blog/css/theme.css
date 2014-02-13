@@ -61,8 +61,9 @@
 	height: 70px;
 	overflow: hidden;
 }
-/*aside*/
+
 #aside {
+	float:left;
 	border: 0 !important;
 	padding: 0 0.75em 0 0.75em;
 }
@@ -94,6 +95,28 @@
 	left: -0.25em;
 }
 
+#aside .post-forum {
+	margin-top: 1em;
+}
+#aside .post-forum p {
+	font-family: Arial;
+	padding: 1em;
+}
+
+#aside .post-forum select {
+	margin-top: 1em;
+	border: 0;
+	background: #333333;
+	color: #ffffff;
+	font-family: Arial;
+	padding: 0.5em;
+	width: 100%;
+}
+
+#aside .post-forum select option {
+	padding: 0.25em !important;
+}
+
 #aside .profile-photo img {
 	margin: 2em 0 0.75em 0;
 	width: 100%;
@@ -119,7 +142,7 @@
 	font-weight: normal !important;
 }
 
-#aside .categories h2, #aside .latest-posts h2 {
+#aside .categories h2, #aside .latest-posts h2, #aside .post-forum h2 {
 	border-bottom: solid 1px #cacaca;
 	padding-bottom: 0.25em;
 }
