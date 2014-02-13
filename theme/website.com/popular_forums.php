@@ -2,7 +2,7 @@
 	<div class='header'><img src='<?=x::url_theme()?>/img/star.png'/>죄회수가 많은 글</div>
 		<div class='inner'>
 		<?
-		$q = "SELECT bo_table FROM ".$g5['board_table'];
+		$q = "SELECT bo_table, bo_subject FROM ".$g5['board_table'];
 		$queries = db::rows($q);
 	if ( $queries ) {
 		$allhits = Array();
@@ -14,7 +14,8 @@
 	
 			foreach( $queries2 as $qs2 ){
 				$qs2['bo_table'] = $query['bo_table'];
-				$allhits[$i] = $qs2;				
+				$qs2['bo_subject'] = $query['bo_subject'];
+				$allhits[$i] = $qs2;
 				$i++;
 			}					
 		}
@@ -30,12 +31,12 @@
 		$content = cut_str($allhits[$count]['wr_content'], 20, "...");
 		?>
 			<div class='info-wrapper'>
-				<div class='top-info bo-table'><a href='<?=$post_url?>' target='_blank'><?=$count+1?>) <?=$allhits[$count]['bo_table']?> (조회수: <?=$allhits[$count]['wr_hit']?> )</a></div>
+				<div class='top-info bo-table'><a href='<?=$post_url?>' target='_blank'><?=$count+1?>) <?=$allhits[$count]['bo_subject']?> (조회수: <?=$allhits[$count]['wr_hit']?> )</a></div>
 				<div class='other-info subject'><a href='<?=$post_url?>' target='_blank'><?=$subject?></a></div>
 				<div class='other-info content'><a href='<?=$post_url?>' target='_blank'><?=$content?></a></div>
 			</div>
 		<?}?>
 	<? }?>	
 	</div>
-	<div class='view-more'><a href="#">자세히</a></div>
+	<div class='view-more'><a href="<?=x::url()?>/?module=multisite&action=forum.list">자세히</a></div>
 </div>
