@@ -7,11 +7,7 @@
 		<div id='menu-top'>
 			<div id="logo">
 				<a href="<?php echo G5_URL ?>">
-				<? if( $extra['header_logo'] ) { ?>
-					<img src="<?=ms::url_site(etc::domain()).$extra['img_url'].$extra['header_logo']?>" width=240 height=119>
-				<?} else {?>
 					<img src='<?=x::url_theme()?>/img/logo.png'>
-				<?}?>
 				</a>
 			</div>
 			<?include x::theme('website.com-menu')?>

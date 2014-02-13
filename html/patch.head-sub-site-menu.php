@@ -1,4 +1,4 @@
- <link rel='stylesheet' type='text/css' href='<?=x::url()?>/html/head-sub-site-menu.css' />
+ <link rel='stylesheet' type='text/css' href='<?=x::dir()?>/html/head-sub-site-menu.css' />
 <script src='<?=x::url()?>/html/head-sub-site-menu.js'></script>
 <?php
 

@@ -14,9 +14,9 @@
 		$site_url = $is_ssl.$query['domain'];
 		?>
 		<div class='info-wrapper'>
-			<div class='top-info site-domain'><a href='<?=$site_url?>'><?=$query['domain']?></a></div>
-			<div class='other-info site-owner'><a href='<?=$site_url?>'>만든이: <?=$query['mb_id']?></a></div>
-			<div class='other-info site-title'><a href='<?=$site_url?>'><?=$query['title']?></a></div>
+			<div class='top-info site-domain'><a href='<?=$site_url?>' target='_blank'><?=$query['domain']?></a></div>
+			<div class='other-info site-owner'><a href='<?=$site_url?>' target='_blank'>만든이: <?=$query['mb_id']?></a></div>
+			<div class='other-info site-title'><a href='<?=$site_url?>' target='_blank'><?=$query['title']?></a></div>
 		</div>
 		<?}?>		
 	</div>

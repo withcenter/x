@@ -17,7 +17,7 @@
 	
 	$rows = db::rows( $q );
 ?>
-<link rel='stylesheet' type='text/css' href='<?=x::dir()?>/module/multisite/subsite.css' />
+<link rel='stylesheet' type='text/css' href='<?=x::url()?>/module/multisite/subsite.css' />
 <script src='<?=x::url()?>/module/multisite/subsite.js'></script>
 <form action='?' class='config_menu'>
 		<input type='hidden' name='module' value='multisite' />

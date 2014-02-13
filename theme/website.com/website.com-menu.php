@@ -44,7 +44,7 @@
 	*/?>
 	
 	<li class="menu-list">
-		<a href="http://philgo.com" class="main-site">필고</a>
+		<a href="http://philgo.com" target='_blank' class="main-site">필고</a>
 	</li>
 </ul>
 <script>

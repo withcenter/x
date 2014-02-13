@@ -30,9 +30,9 @@
 		$content = cut_str($allhits[$count]['wr_content'], 20, "...");
 		?>
 			<div class='info-wrapper'>
-				<div class='top-info bo-table'><a href='<?=$post_url?>'><?=$count+1?>) <?=$allhits[$count]['bo_table']?> (조회수: <?=$allhits[$count]['wr_hit']?> )</a></div>
-				<div class='other-info subject'><a href='<?=$post_url?>'><?=$subject?></a></div>
-				<div class='other-info content'><a href='<?=$post_url?>'><?=$content?></a></div>
+				<div class='top-info bo-table'><a href='<?=$post_url?>' target='_blank'><?=$count+1?>) <?=$allhits[$count]['bo_table']?> (조회수: <?=$allhits[$count]['wr_hit']?> )</a></div>
+				<div class='other-info subject'><a href='<?=$post_url?>' target='_blank'><?=$subject?></a></div>
+				<div class='other-info content'><a href='<?=$post_url?>' target='_blank'><?=$content?></a></div>
 			</div>
 		<?}?>
 	<? }?>	
