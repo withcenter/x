@@ -1,4 +1,4 @@
-<link rel='stylesheet' type='text/css' href='<?=x::dir()?>/module/multidomain/multidomain.css' />
+<link rel='stylesheet' type='text/css' href='<?=x::url()?>/module/multidomain/multidomain.css' />
 <script src='<?=x::url()?>/module/multidomain/multidomain.js'></script>
 <?php
 	$domains = md::config();
