@@ -1,3 +1,7 @@
+a:hover {
+	text-decoration: none;
+}
+
 #website-wrapper{
 	border-top:4px solid #64bbc5;
 	background-image:url('/x/theme/website.com/img/bg.png');
@@ -393,7 +397,7 @@ fieldset{
 	margin-bottom: 11px;
 	position: relative;
 }
-#container #howto-steps .steps .instruction {
+#container #howto-steps .steps .instruction, #container #howto-steps .steps .instruction a {
 	font-size: 1em;
 	color: #3e3e3e;
 }
