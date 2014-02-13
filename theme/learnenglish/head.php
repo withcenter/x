@@ -2,7 +2,7 @@
 <div id="hd">
     <div id="hd_wrapper">
         <div id="logo">
-			<a href="<?php echo G5_URL ?>"><?=$extra['title']?></a>
+			<a href="<?php echo G5_URL ?>"><?=ms::meta('title')?></a>
         </div>
         <ul id="tnb">
 			<li><a href='<?=ms::url_site(etc::domain())?>'>Home</a></li>

@@ -1,7 +1,7 @@
 </div>
-<div class='footer-text'><p><? if( $extra['footer_text'] == '' ) {?>
+<div class='footer-text'><p><? if( ms::meta('footer_text') == '' ) {?>
 COPYRIGHT @ 2014 &nbsp&nbsp ALL RIGHTS RESERVED &nbsp&nbsp WITHCENTER.COM
-<?} else echo $extra['footer_text'];?>
+<?} else echo ms::meta('footer_text');?>
 </p>
 </div>
 

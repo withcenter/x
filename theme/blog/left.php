@@ -21,8 +21,8 @@
 		if ( empty($menu_1) ) $menu_1 = ms::board_id(etc::domain()).'_1';
 		for ( $i = 1; $i <= 10; $i++ ) { 
 		$option = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('menu_'.$i)."'");
-		$menu."_".$i = ms::meta('menu_'.$i);
-		if ( $menu."_".$i ) {
+		${'menu_'.$i} = ms::meta('menu_'.$i);
+		if ( ${'menu_'.$i} ) {
 			?><li><a href='<?=g::url()?>/bbs/board.php?bo_table=<?=ms::meta('menu_'.$i)?>'><?=$option['bo_subject']?></a></li>
 		<?}}?>
 	</ul>	
@@ -33,10 +33,9 @@
 /**Sample Latest Post, this only fetches 5 latest post from $extra['menu_1'] */?>
 	<h2>Latest Posts</h2>
 	<ul>
-		<? 
-		/*
-		if( empty( ms::meta('menu_1') ) ) ms::meta('menu_1') = ms::board_id(etc::domain()).'_1';
-		$option = db::rows("SELECT * FROM $g5[write_prefix]".ms::meta('menu_1')." ORDER BY wr_num");
+		<? /**
+		if( empty( $menu_1 ) ) $menu_1 = ms::board_id(etc::domain()).'_1';
+		$option = db::rows("SELECT * FROM $g5[write_prefix] ".$menu_1." ORDER BY wr_num");
 		for ( $i = 0; $i <= 4; $i++) { 
 			if( $option[$i]['wr_subject'] ) {?>
 				<li>
@@ -44,8 +43,7 @@
 						<span class='subject'><?=$option[$i]['wr_subject']?></span><br><?=mb_substr($option[$i]['wr_content'],0,50)?>
 					</a>
 				</li>
-		<?}}?>
-		*/?>
+		<?}}*/?>
 	</ul>		
 </div>
 
