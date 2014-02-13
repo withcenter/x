@@ -1,10 +1,10 @@
 <div class='profile-photo'>
-	<?if( ms::meta('profile_img') ) {?>
-		<img src="<?=ms::url_site(etc::domain()).'/'.ms::meta('img_url').ms::meta('profile_img')?>"><br>
+	<?if( ms::meta('blog_profile_photo') ) {?>
+		<img src="<?=ms::url_site(etc::domain()).'/'.ms::meta('img_url').ms::meta('blog_profile_photo')?>"><br>
 	<?}	else {?>
 		<img src='<?=x::url_theme()?>/img/blank_profile.png'?>
 	<?}?>
-	<p><?=ms::meta('profile_text1')?></p>
+	<p><?=ms::meta('blog_profile_message')?></p>
 </div>
 <div class='profile-photo-bottom'><p>~</p></div>
 
