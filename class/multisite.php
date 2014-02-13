@@ -320,12 +320,15 @@ class multisite {
 	 */
 	static function set_title( ) {
 		global $g5, $config;
-		$opt = ms::get( etc::domain() );
-		if ( $opt['extra']['title'] == '' ) $title = 'Welcome';
-		else $title = $opt['extra']['title'];
-		if(!$second_title = $opt['extra']['secondary_title']);
+		
+		$title = ms::meta('title');
+		$secondary_title = ms::meta('secondary_title');
+		
+		if ( !$title ) $title = 'Welcome';
+		if ( !$secondary_title ) $secondary_title = etc::domain();
+		
 		$g5['title'] = $title;
-		$config['cf_title'] = $second_title;
+		$config['cf_title'] = $secondary_title;
 	}
 	
 	
