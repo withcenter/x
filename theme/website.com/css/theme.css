@@ -226,11 +226,14 @@ fieldset{
 	border:1px solid #b6b6b6;
 	color:#565656;
 	margin-bottom:15px;
+	font-family: '맑은 고딕', AppleGothic;
 }
 
 #banner-wrapper .title{
 	margin:10px 0 0 194px;
-	font-size: 2.5em;	
+	font-size: 1.8em;	
+	position: relative;
+	top: -5px;
 }
 
 #banner-wrapper ul{
