@@ -84,3 +84,5 @@ function hook_blog_push()
 	}
 	
 	include x::dir() . '/etc/service/push_to_blog.php';
+}
+
