@@ -79,10 +79,9 @@ function hook_blog_push()
 				}
 				else continue;				
 			}			
-		}				
+		}
+		$wr_subject .= $files.$images;		
 	}
-	
-	$wr_subject .= $files.$images;
 	
 	include x::dir() . '/etc/service/push_to_blog.php';
 }
