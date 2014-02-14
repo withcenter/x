@@ -3,7 +3,6 @@
 		echo "You are not admin";
 		return;
 	}
-	$dirs = file::getDirs(X_DIR_THEME);
 ?>
 <form action='?' class='config_theme' method='post'>
 	<input type='hidden' name='module' value='multisite'>
@@ -22,35 +21,28 @@
 				</button>
 			<?}?>
 		<?php
-			$theme_ctr=0;
-			$theme_list = array();
+			$dirs = file::getDirs(X_DIR_THEME);
 			foreach ( $dirs as $dir ) {
 				$path = X_DIR_THEME . "/$dir/config.php";
 				if ( ! file_exists($path) ) continue;				
+				
 				$theme_config = array();
 				include $path;
-				if ( empty($theme_config['name']) ) continue;
-				
-				if ( $theme_config['type'] != 'subsite' ) continue;
-
-				$folder_name = $theme_list['name'][$theme_ctr] = $dir;
 				$name = $theme_config['name'];
-				$url = $theme_list['url'][$theme_ctr] = 'theme/'.$dir.'/preview.jpg';
-
-				if( ms::meta('theme') != preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower($name)) ) {
-					?>
-					<button type='submit' name='theme' value='<?=$folder_name?>' onclick="return confirm('Do you really want to change Theme?');">
+				if ( empty($name) ) continue;
+				if ( $theme_config['type'] != 'subsite' ) continue;
+				
+				$url = x::url().'/theme/'.$dir.'/preview.jpg';
+				if( preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower(ms::meta('theme'))) != preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower($name)) ) { ?>
+					<button type='submit' name='theme' value='<?=$dir?>' onclick="return confirm('Do you really want to change Theme?');">
 						<div class='theme-thumb inactive'>
 						<img src='<?=$url?>' >
 						<table cellpadding='10px'><tr><td><?=$name?></td></table>
 						</div>
 					</button>
-					<?
-				}
+					<? }
 				$theme_ctr++;
-			}
-			?>
-			</div>
-	</div>
-
+			} ?>
+		</div> <!--thumb-list-->
+	</div> <!--config--theme-->
 </form>
