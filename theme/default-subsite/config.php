@@ -1,3 +1,3 @@
 <?php
-	$theme_config['name'] = "subsite default";
-	$theme_config['type'] = "subsite";
+	$theme_config['name'] = "Default-Subsite";
+	$theme_config['type'] = 'subsite';
