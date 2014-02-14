@@ -54,6 +54,7 @@
 	background: #56493f;
 	height: 70px;
 	padding: 0 !important;
+	box-shadow: 0 0.5px 10px #797979;
 }
 
 #hd_wrapper {
@@ -107,13 +108,14 @@
 	border-radius: 1px;
 	margin-top: 1em;
 	border: 0;
-	background: #333333;
+	background: #56493f;
 	color: #ffffff;
 	font-family: Arial;
 	font-size: 11pt;
 	padding: 0.5em;
 	width: 100%;
 }
+
 
 #aside .post-forum select option {
 	padding: 0.25em !important;

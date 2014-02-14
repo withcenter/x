@@ -51,9 +51,19 @@ if ( strpos($_SERVER['PHP_SELF'], 'register_result.php') !== false ) {
 x::hook_register( 'write_update_end', 'hook_blog_push' );
 function hook_blog_push()
 {
+	global $wr_id, $bo_table, $in;
+
+	if ( $in['w'] == 'u' ) $mode = 'edit';
+	else $mode = 'write';
+	
 	$api_end_point = ms::meta('api-end-point');
 	$api_username = ms::meta('api-username');
 	$api_password = ms::meta('api-password');
+	
+	
+	$info = get_file ( $bo_table, $wr_id );
+	
+	//str_replace('http:', ''
 	
 	include x::dir() . '/etc/service/push_to_blog.php';
 }
