@@ -4,8 +4,6 @@
 <div id="hd">
     <h1 id="hd_h1"><?php echo $g5['title'] ?></h1>
 
-    <div id="skip_to_container"><a href="#container">본문 바로가기</a></div>
-
     <div id="hd-wrapper">
 		<div id='menu-top'>
 			<div id="logo">
@@ -23,7 +21,6 @@
 			<div class='title'>Company tagline here!</div>
 			<div id='search-box'>
 				<fieldset id="search-fieldset">
-					<legend>사이트 내 전체검색</legend>
 					<form name="fsearchbox" method="get" action="<?php echo G5_BBS_URL ?>/search.php" onsubmit="return fsearchbox_submit(this);">
 					<input type="hidden" name="sfl" value="wr_subject||wr_content">
 					<input type="hidden" name="sop" value="and">
