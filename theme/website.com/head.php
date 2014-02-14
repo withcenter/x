@@ -3,6 +3,10 @@
 <div id='website-wrapper'>
 <div id="hd">
     <h1 id="hd_h1"><?php echo $g5['title'] ?></h1>
+<<<<<<< HEAD
+
+=======
+>>>>>>> fc4a0c4913b5b8f3dbd48928d99c43ff444c264a
     <div id="hd-wrapper">
 		<div id='menu-top'>
 			<div id="logo">
