@@ -1,29 +1,42 @@
 <?php
-	if ( php_sapi_name() == 'cli' ) {
+	
+	if ( php_sapi_name() == 'cli' ) { /// debugging
 		error_reporting( E_ALL ^ E_NOTICE );
 		include 'etc/x-standalone.php';
 		while (@ob_end_flush());
-	}
-	include_once x::dir() . '/etc/xmlrpc/xmlrpc-3.0b/lib/xmlrpc.inc';
-	
-	
-	if ( $api_end_point && $api_username && $api_password ) {
-		$blogs['naver'] = array(
-			'endpoint'	=> $api_end_point,
-			'id'		=> $api_username,
-			'password'	=> $api_password
-		);
-	}
-	else {
 		$blogs['naver'] = array(
 			'endpoint'	=> "https://api.blog.naver.com/xmlrpc",
 			'id'		=> "drrr2222",
 			'password'	=> "286fb66fe6b911dfcbb8bd8a32a40a61"
 		);
 	}
+	else {
+		if ( $api_end_point && $api_username && $api_password ) {
+			$blogs['naver'] = array(
+				'endpoint'	=> $api_end_point,
+				'id'		=> $api_username,
+				'password'	=> $api_password
+			);
+		}
+		else return;
+	
+	}
+	dlog("push_to_blog.php begins");
+	
+	
+	
+	include_once x::dir() . '/etc/xmlrpc/xmlrpc-3.0b/lib/xmlrpc.inc';
+	
+	
 	
 	global $wr_subject, $wr_content;
-
+	
+	if ( empty($wr_subject) ) $wr_subject = "No subject";
+	if ( empty($wr_content) ) $wr_content = "No content";
+	
+	
+	
+	
 	$subject = $wr_subject;
 	$content = $files.$images.$wr_content;
 	$url = g::url();
@@ -34,45 +47,74 @@
 		<p>$content</p>
 		$copyright
 	";
+	if ( $in['w'] == 'u' ) {
+		dlog("Blog push updating begins");
+		$mode = 'edit';
+		$blog_no = x::config( "$bo_table.$wr_id");
+	}
+	else $mode = 'write';
+	
 
+
+	
+	
 	echo "STEP 0..\n";
-	$response = push_to_blog( $blogs['naver']['endpoint'], $blogs['naver']['id'], $blogs['naver']['password'], $subject, $content, $mode, $blog_no );
+	$response = push_to_blog(
+		array(
+			'endpoint'	=> $blogs['naver']['endpoint'],
+			'id'		=> $blogs['naver']['id'],
+			'password'	=> $blogs['naver']['password'],
+			'subject'	=> $subject,
+			'description'	=> $content,
+			'mode'		=> $mode,
+			'blog_no'	=> $blog_no
+		)
+	);
+	
 	
 	if ( $response->faultCode() ) {
-		echo $response->faultString();
-		dlog ( $response->faultString() );		
+		$str = $response->faultString();
+		$str = str_replace("&lt;", "<", $str);
+		$str = str_replace("&gt;", ">", $str);
+		
+		echo $str;
+		dlog ( $str );
+		
 	}
 	else {
-		echo "SUCCESS\n"; 
-		dlog('SUCCESS-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
-		$v = $response->value()->scalarval();
+		$blog_no = $response->value()->scalarval();
 		
-		if( is_bool($v) ) {
-			//do nothing;
+		if ( $blog_no == '1' ) return;			/// result from editPost();
+		
+		dlog("blog_no: $blog_no");
+		if ( etc::cli() ) {
 		}
-		else{ 
-			//update database;
-			/*$q = "UPDATE ".$bo_table." wr_1 VALUES '".$v."' WHERE wr_id = '".$wr_id."'";
-			echo $q;
-			db::update(
-				$g5['write_prefix'].$bo_table, 
-				array('wr_1' => $v),
-				array('wr_id' => $wr_id)*/
-			);
-			
-			//echo $bo_table;
+		else {
+			x::config( "$bo_table.$wr_id", $blog_no );
 		}
-		//$q = db::row('SELECT * FROM '.$g5['write_prefix'].$bo_table.' WHERE wr_id = '.$wr_id);
-		//di($q);
-		//exit;
+		
 	}
 	
-function push_to_blog( $endpoint, $id, $password, $subject, $description, $mode, $blog_no )
+function push_to_blog( $o )
 {
+
+	dlog("push_to_blog( $o ):");
+	dlog($o);
+	
+	
+	$endpoint	= $o['endpoint'];
+	$id			= $o['id'];
+	$password	= $o['password'];
+	$subject	= $o['subject'];
+	$description	=  $o['description'];
+	$mode		= $o['mode'];
+	$blog_no	= $o['blog_no'];
+	
+	
 	$publish = true;
 	echo "STEP 1..: $endpoint\n";
 	$client = new xmlrpc_client($endpoint);
-	$client->setDebug(1);
+	//$client->setDebug(1);
 	echo "STEP 2..\n";
 	$client->setSSLVerifyPeer(false);
 	$GLOBALS['xmlrpc_internalencoding']='UTF-8';
@@ -84,7 +126,7 @@ function push_to_blog( $endpoint, $id, $password, $subject, $description, $mode,
 	$blog_id = $id;
 	echo "STEP 3..\n";
 
-	if( $mode == 'write' ){
+	if( $mode == 'write' ) {
 		$f = new xmlrpcmsg("metaWeblog.newPost",
 			array(						
 				new xmlrpcval($blog_id, "string"),
@@ -95,7 +137,7 @@ function push_to_blog( $endpoint, $id, $password, $subject, $description, $mode,
 			)
 		);
 	}
-	else if( $mode == 'edit' ){
+	else if( $mode == 'edit' ) {
 		$f = new xmlrpcmsg("metaWeblog.editPost",
 			array(			
 				new xmlrpcval($blog_no, "string"),

@@ -133,7 +133,7 @@ class x {
 			dlog("HOOK: $name");
 			if ( self::$hook_list[ $name ] ) {
 				foreach ( self::$hook_list[ $name ] as $hook ) {
-					$hook();
+					$hook($name);
 				}
 				return HOOK_EXIST;
 			}
@@ -225,6 +225,19 @@ class x {
 		return self::dir() . '/etc/null.php';
 	}
 	
+	static function config($code,$value=null)
+	{
+		if ( $value === null ) {
+			return db::result("SELECT `value` FROM x_config WHERE code='$code'");
+		}
+		else {
+			$e = db::result("SELECT `value` FROM x_config WHERE code='$code'");
+			if ( $e ) {
+				db::update( 'x_config', array('value'=>$value), array('code'=>$code) );
+			}
+			else db::insert( 'x_config', array('code'=>$code, 'value'=>$value) );
+		}
+	}
 	
 	
 }

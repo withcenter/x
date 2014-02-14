@@ -30,6 +30,7 @@ class debug {
 			print_r($msg);
 			$msg = ob_get_clean();
 		}
+		$msg =  etc::utf8($msg);
 		self::$count ++;
 		$included_files = debug_backtrace();
 		$pi = pathinfo( $included_files[ count($included_files) - 2 ]['file'] );

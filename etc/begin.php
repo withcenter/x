@@ -47,22 +47,29 @@ if ( strpos($_SERVER['PHP_SELF'], 'register_result.php') !== false ) {
 */
 
 x::hook_register( 'write_update_end', 'hook_blog_push' );
-function hook_blog_push()
+x::hook_register( 'delete_end', 'hook_blog_push' );
+
+function hook_blog_push( $hook )
 {
 	global $wr_id, $g5, $bo_table, $in, $wr_content;
-	//$query = db::row('SELECT * FROM '.$g5['write_prefix'].$bo_table.' WHERE wr_id = '.$wr_id);
-	//di($query);
-	//exit;
-	if ( $query['wr_1'] ){
-		$blog_no = $query['wr_1'];
+	
+	
+	if ( $in['w'] == 'u' ) {
+		dlog("Blog push updating begins");
+		$mode = 'edit';
 	}
-	//exit;
-	if ( $in['w'] == 'u' ) $mode = 'edit';
 	else $mode = 'write';
 	
-	$api_end_point = ms::meta('api-end-point');
-	$api_username = ms::meta('api-username');
-	$api_password = ms::meta('api-password');
+
+
+	
+	if ( $hook == 'delete_end' ) {
+		$wr_subject = "deleted...";
+		$wr_content = "deleted...";
+		$mode = 'edit';
+	}
+	
+
 	
 	
 	$info = get_file ( $bo_table, $wr_id );
@@ -87,5 +94,16 @@ function hook_blog_push()
 		$wr_content = $files.$images.$wr_content;		
 	}
 	
-	include x::dir() . '/etc/service/push_to_blog.php';
+	
+	
+	//for ( $cb = 0; $cb < MAX_BLOG_WRITER; $cb ++ ) {
+		$api_end_point = ms::meta('api-end-point');
+		$api_username = ms::meta('api-username');
+		$api_password = ms::meta('api-password');
+		dlog("including push_to_blog.php ...");
+		include x::dir() . '/etc/service/push_to_blog.php';
+	//}
 }
+
+
+

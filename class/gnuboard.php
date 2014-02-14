@@ -541,17 +541,44 @@ class gnuboard {
 	}
 	
 	
+	
+	/**
+	 *  @brief updates fields of post.
+	 *  
+	 *  @param [in] $o Parameter_Description
+	 *  @return Return_Description
+	 *  
+	 *  @details use this function to update some fields of the post.
+	 *  @code
+	 *  g::update(
+			array(
+				'bo_table'	=> $bo_table,
+				'wr_id'		=> $wr_id,
+				'wr_10'		=> $blog_no
+			)
+		);
+		
+		@endcode
+	 */
 	static function update( $o )
 	{
 		$write_table = self::board_table($o['bo_table']);
 		$sql = " update $write_table
-					set 
-					wr_subject = '$o[wr_subject]',
-                     wr_content = '$o[wr_content]',
-                     wr_last = '".G5_TIME_YMDHIS."',
-                     wr_ip = '{$_SERVER['REMOTE_ADDR']}'
-				where wr_id=$o[wr_id]
-		";
+					set ";
+		if ( isset($o['wr_subject']) ) $sql .= "wr_subject = '$o[wr_subject]',";
+		if ( isset($o['wr_content']) ) $sql .= "wr_content = '$o[wr_content]',";
+		if ( isset($o['wr_last']) ) $sql .= "wr_last = '".G5_TIME_YMDHIS."',";
+		if ( isset($o['wr_ip']) ) $sql .= "wr_ip = '{$_SERVER['REMOTE_ADDR']}'";
+		
+		for ( $i=1; $i<=10; $i++ ) {
+			if ( isset($o["wr_$i"]) ) {
+				$v = $o["wr_$i"];
+				$sql .= "wr_$i = '$v'";
+			}
+		}
+		
+		
+		$sql .= "where wr_id=$o[wr_id]";
 		db::query($sql);
 	}
 	
@@ -642,13 +669,23 @@ class gnuboard {
 	}
 	
 	
-	/** @short returns a post
-	 *
+	/**
+	 *  @brief returns a row of bo_table ( forum )
+	 *  
+	 *  @param [in] $bo_table table name
+	 *  @param [in] $wr_id post no
+	 *  @return an assoc row of the field.
+	 *  
+	 *  @details use this function to get the fields of the post.
 	 */
 	static function post( $bo_table, $wr_id )
 	{
 		$bo_table = self::board_table( $bo_table );
 		return db::row("SELECT * FROM $bo_table WHERE wr_id=$wr_id");
+	}
+	static function get( $bo_table, $wr_id )
+	{
+		return self::post($bo_table, $wr_id);
 	}
 	
 	static function post_url( $bo_table, $wr_id )

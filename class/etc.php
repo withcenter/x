@@ -445,6 +445,30 @@ class etc {
 		return "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 	}
 	
+	
+	
+/** utf8 문자열을 euckr 로 변환하여 리턴한다. */
+static function euckr($string)
+{
+  $ret = iconv("UTF-8", "EUC-KR", $string);
+  if (empty($ret)) return $string;
+  else return $ret;
+}
+
+
+/**
+ *  @brief converts EUC-KR to UTF-8
+ *  
+ *  @param [in] $string euc-kr string
+ *  @return string of utf-8
+ *  
+ *  @details UTF-8 string
+ */
+static function utf8($string)
+{
+  return iconv("EUC-KR", "UTF-8", $string);
+}
+
 } // eo etc class
 
 
