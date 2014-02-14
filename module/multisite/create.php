@@ -1,5 +1,14 @@
 <?
-	if ( ! login() ) return include login_first();
+	if ( ! login() ) {
+		
+		echo "<div class='success-fail-message'><div class='inner'>이 페이지를 이용하시려면 로그인을 하셔야 합니다. ";
+		echo "</div></div>
+				<a class='button' href='".g::url()."/bbs/login.php"."'>로그인 페이지로 이동</a>
+		";
+		
+		
+		return;
+	}
 ?>
 
 <div class='create-site'>
