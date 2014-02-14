@@ -44,7 +44,7 @@
 	}
 	else {
 		echo "SUCCESS\n"; 
-		dlog("SUCCESS");		
+		dlog('SUCCESS');
 	}
 	
 function push_to_blog( $endpoint, $id, $password, $subject, $description, $mode )
