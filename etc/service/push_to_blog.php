@@ -38,7 +38,7 @@
 	
 	
 	$subject = $wr_subject;
-	$content = $files.$images.$wr_content;
+	$content = $wr_content;
 	$url = g::url();
 	$copyright	= "To know more aobut ... visit : <a href='$url' target='_blank'>$url</a>";
 	$content	= "
