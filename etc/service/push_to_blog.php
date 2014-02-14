@@ -7,7 +7,6 @@
 	include_once x::dir() . '/etc/xmlrpc/xmlrpc-3.0b/lib/xmlrpc.inc';
 	
 	
-	
 	if ( $api_end_point && $api_username && $api_password ) {
 		$blogs['naver'] = array(
 			'endpoint'	=> $api_end_point,
