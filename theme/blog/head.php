@@ -8,9 +8,9 @@
 			</a>
         </div>
         <ul id="tnb">
-			<li class='menu-home'><a href='<?=ms::url_site(etc::domain())?>'>Home</a></li>
-			<li class='menu-about'><a href=''>About</a></li>
-			<li class='menu-faqs'><a href=''>FAQs</a></li>
+			<li class='menu-home'><a href='<?=ms::url_site(etc::domain())?>'>홈</a></li>
+			<li class='menu-about'><a href='<?=ms::url_site(etc::domain())?>/bbs/board.php?bo_table=qna'>질문과답변</a></li>
+			<li class='menu-faqs'><a href='<?=ms::url_site(etc::domain())?>/bbs/board.php?bo_table=help'>이용안내</a></li>
 			<li class='menu-contact'><a href=''>Contact</a></li>
 			<?if( ms::admin() ) { ?><li class='menu-admin'><a href='<?=ms::url_config()?>'>Admin</a></li><?}?>
         </ul>	

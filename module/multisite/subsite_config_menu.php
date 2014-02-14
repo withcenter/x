@@ -9,7 +9,8 @@
 	if ( $in['action'] == 'config_global' ) $selected = 1;
 	else if ( $in['action'] == 'config_menu' ) $selected = 2;
 	else if ( $in['action'] == 'config_forum' ) $selected = 3;
-	else if ( $in['action'] == 'config_theme' ) $selected = 4;
+	else if ( $in['action'] == 'config_write' ) $selected = 4;
+	else if ( $in['action'] == 'config_theme' ) $selected = 5;
 	else $selected = null;
 	
 	if ( $selected ) {
@@ -39,12 +40,12 @@
 	</li>
 	
 	<li>
-		<a setting_menu_no=3 href='?module=multisite&action=config_write'>글쓰기</a>
+		<a setting_menu_no=4 href='?module=multisite&action=config_write'>글쓰기</a>
 	</li>
 	
 	
 	<li>
-		<a setting_menu_no=4 href='?module=multisite&action=config_theme'>테마</a>
+		<a setting_menu_no=5 href='?module=multisite&action=config_theme'>테마</a>
 	</li>
 	
 </ul>

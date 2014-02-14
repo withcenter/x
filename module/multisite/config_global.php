@@ -77,7 +77,7 @@
 							}
 						}
 						
-						echo $default_value ? $default_value : 'Select Forum';
+						echo $default_value ? $default_value : '게시판 선택';
 						?>
 					</span></span>
 					<span class='select-button'><span class='inner'>
