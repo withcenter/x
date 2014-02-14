@@ -37,6 +37,7 @@
 
 	echo "STEP 0..\n";
 	$response = push_to_blog( $blogs['naver']['endpoint'], $blogs['naver']['id'], $blogs['naver']['password'], $subject, $content );
+	
 	if ( $response->faultCode() ) {
 		echo $response->faultString();
 		dlog ( $response->faultString() );
@@ -51,6 +52,7 @@ function push_to_blog( $endpoint, $id, $password, $subject, $description )
 	$publish = true;
 	echo "STEP 1..: $endpoint\n";
 	$client = new xmlrpc_client($endpoint);
+	$client->setDebug(1);
 	echo "STEP 2..\n";
 	$client->setSSLVerifyPeer(false);
 	$GLOBALS['xmlrpc_internalencoding']='UTF-8';
@@ -63,7 +65,7 @@ function push_to_blog( $endpoint, $id, $password, $subject, $description )
 	echo "STEP 3..\n";
 	$f = new xmlrpcmsg("metaWeblog.newPost",
 		array(
-			new xmlrpcval($blogid, "string"),
+			new xmlrpcval($blog_id, "string"),
 			new xmlrpcval($id, "string"),
 			new xmlrpcval($password, "string"),
 			new xmlrpcval($struct , "struct"), 
@@ -75,4 +77,5 @@ function push_to_blog( $endpoint, $id, $password, $subject, $description )
 	$response = $client->send($f);
 	return $response;
 }
+
 
