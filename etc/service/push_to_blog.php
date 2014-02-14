@@ -26,10 +26,8 @@
 	}
 	global $wr_subject, $wr_content;
 	
-	//$subject = $wr_subject;
-	//$content = $wr_content;
-	$subject = "zzzzzzzzzzzzzz";
-	$content = "aaaaaaaaaaaaaa";
+	$subject = $wr_subject;
+	$content = $wr_content;
 	$url = g::url();
 	$copyright	= "To know more aobut ... visit : <a href='$url' target='_blank'>$url</a>";
 	$content	= "
