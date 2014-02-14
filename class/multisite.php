@@ -383,9 +383,11 @@ class multisite {
 	 */
 	static function count_forum()
 	{
+		global $g5;
+		
 		$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";
 		$q = "SELECT COUNT(*) FROM $g5[board_table] WHERE $qb";
-		return db::result();
+		return db::result($q);
 	}
 	
 	
