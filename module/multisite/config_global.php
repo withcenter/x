@@ -111,7 +111,7 @@
 				if ( file_exists( ms::theme('setting') ) ) include ms::theme('setting');
 			?>
 		<? } else { ?>
-			<H1>테마를 선택하십시오.</h1>
+			<h1>테마를 선택하십시오.</h1>
 		<? } ?>
 		
 		
