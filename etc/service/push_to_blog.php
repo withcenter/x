@@ -6,13 +6,24 @@
 	}
 	include_once x::dir() . '/etc/xmlrpc/xmlrpc-3.0b/lib/xmlrpc.inc';
 	
-	$blogs['naver'] = array(
-		'endpoint'	=> "https://api.blog.naver.com/xmlrpc",
-		'id'		=> "drrr2222",
-		'password'	=> "286fb66fe6b911dfcbb8bd8a32a40a61"
-	);
 	
 	
+	if ( $api_end_point && $api_username && $api_password ) {
+		$blogs['naver'] = array(
+			'endpoint'	=> $api_end_point,
+			'id'		=> $api_username,
+			'password'	=> $api_password
+		);
+		dlog( "----------blog_api -------------" );
+	}
+	else {
+		$blogs['naver'] = array(
+			'endpoint'	=> "https://api.blog.naver.com/xmlrpc",
+			'id'		=> "drrr2222",
+			'password'	=> "286fb66fe6b911dfcbb8bd8a32a40a61"
+		);
+		dlog( "----------blog_api -------------" );
+	}
 	global $wr_subject, $wr_content;
 	
 	$subject = $wr_subject;
@@ -25,14 +36,18 @@
 		<p>$content</p>
 		$copyright
 	";
-	
+
 	echo "STEP 0..\n";
 	$response = push_to_blog( $blogs['naver']['endpoint'], $blogs['naver']['id'], $blogs['naver']['password'], $subject, $content );
 	if ( $response->faultCode() ) {
 		echo $response->faultString();
+		dlog ( $response->faultString() );
 	}
-	else echo "SUCCESS\n";
-
+	else {
+		echo "SUCCESS\n"; 
+		dlog("SUCCESS");
+	}
+	
 function push_to_blog( $endpoint, $id, $password, $subject, $description )
 {
 	$publish = true;
