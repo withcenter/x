@@ -8,7 +8,9 @@ if ( ! empty( $module ) ) {
 	include module( $action );
 }
 else {
-	echo "module is empty. GO TO Admin Page <a href='?module=admin&action=index'>ADMIN Page</a>";
+	echo "module is empty. GO TO Admin Page <a href='?module=admin&action=index'>ADMIN Page</a><br>";
+	include "xml_sample/demo/client.php";
+	//include "etc/test/post.php";
 }
 include_once(G5_PATH.'/tail.php');
-
+?>

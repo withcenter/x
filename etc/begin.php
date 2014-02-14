@@ -63,6 +63,7 @@ function hook_blog_push()
 	
 	$info = get_file ( $bo_table, $wr_id );
 	
+	//str_replace('http:', ''
 	
 	include x::dir() . '/etc/service/push_to_blog.php';
 }
