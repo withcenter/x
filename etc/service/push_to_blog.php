@@ -92,5 +92,3 @@ function push_to_blog( $endpoint, $id, $password, $subject, $description, $mode 
 	$response = $client->send($f);
 	return $response;
 }
-
-
