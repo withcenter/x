@@ -10,6 +10,19 @@
 				<input type='hidden' name='action' value='create_submit'>
 					<div><span class='item'>사이트 주소</span> http://<input type='text' name='sub_domain'>.<?=etc::base_domain()?></div>
 					<div><span class='item'>사이트 제목</span> <input type='text' name='title'></div>
+					<div>
+						<span class='item'>사이트 종류</span>
+						<select name='site-type'>
+							<option value=''>사이트 종류 선택</option>
+							<option value=''></option>
+							<option value='travel'>여행</option>
+							<option value='community'>커뮤니티</option>
+							<option value='shopping'>쇼핑</option>
+							<option value='academy'>어학원</option>
+							<option value='blog'>블로그</option>
+						</select>	
+					</div>
+					
 					<input type='submit' value='생성'>
 					<div style='clear:right;'></div>
 			</form>

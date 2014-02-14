@@ -1,6 +1,5 @@
-.create-site h1 {
-	font-size: 1.5em;
-	margin: 1em;
+.create-site .wrapper {
+	position: relative;
 }
 
 .create-site input[type='text'] {
@@ -22,9 +21,15 @@
 
 .create-site input[type='submit'] {
 	border: none;
-	padding: 0.5em;
+	width: 70px;
+	height: 27px;
+	line-height: 27px;
+	text-align: center;
 	background: #333333;
 	color: #ffffff;
+	position: absolute;
+	bottom: 11px;
+	right: 5px;
 }
 
 .create-site h2 {
@@ -60,6 +65,13 @@
 
 .create-site ul li a {
 	text-decoration: none;
+}
+.create-site select[name='site-type'] {
+	height: 27px;
+	width: 160px;
+	padding: 0 10px;
+	color: #555555;
+	font-family: '맑은 고딕', AppleGothic;
 }
 
 .config h1 {
