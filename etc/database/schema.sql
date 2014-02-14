@@ -36,3 +36,9 @@ CREATE TABLE IF NOT EXISTS `x_multisite_meta` (
   `value` text,
   UNIQUE KEY `domain` (`domain`,`code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `x_config` (
+  `code` varchar(64) NOT NULL DEFAULT '',
+  `value` text,
+  PRIMARY KEY (`code`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
