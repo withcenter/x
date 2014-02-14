@@ -15,7 +15,6 @@
 			<?if( ms::admin() ) { ?><li class='menu-admin'><a href='<?=ms::url_config()?>'>Admin</a></li><?}?>
         </ul>	
     </div>
-	
 </div>
 <div id="wrapper">
     <div id="aside">

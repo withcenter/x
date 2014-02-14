@@ -48,7 +48,7 @@ function push_to_blog( $endpoint, $id, $password, $subject, $description )
 	);
 	$blog_id = $id;
 	echo "STEP 3..\n";
-	$f = new xmlrpcmsg("metaWeblog.eidtPost",
+	$f = new xmlrpcmsg("metaWeblog.newPost",
 		array(
 			new xmlrpcval($blogid, "string"),
 			new xmlrpcval($id, "string"),
