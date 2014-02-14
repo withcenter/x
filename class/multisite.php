@@ -1,8 +1,8 @@
 <?php
 define('MS_EXIST', -9200);
+define('MS_MAX_FORUM', 20);
 class ms extends multisite { }
 class multisite {
-
 
 
 	/**
@@ -29,8 +29,8 @@ class multisite {
 		
 		$time = time();
 		$q = "
-			INSERT INTO x_multisite_config ( domain, mb_id, stamp_create, title, extra )
-			VALUES ( '$o[domain]', '$member[mb_id]', $time, '$o[title]', '' )
+			INSERT INTO x_multisite_config ( domain, mb_id, stamp_create, title )
+			VALUES ( '$o[domain]', '$member[mb_id]', $time, '$o[title]')
 		";
 		db::query($q);
 		return  0;
@@ -82,6 +82,26 @@ class multisite {
 		}
 		return $multisite_get[ $domain ];
 	}
+	
+	static function meta($code, $value=null)
+	{
+		$d = etc::domain();
+		if ( $value === null ) {
+			return db::result("SELECT `value` FROM x_multisite_meta WHERE domain='$d' AND code='$code'");
+		}
+		else {
+			$q = "SELECT code FROM x_multisite_meta WHERE domain='$d' AND code='$code'";
+			$val = db::result($q);
+			if ( $val ) {
+				db::update('x_multisite_meta', array('value'=>$value), array('domain'=>$d, 'code'=>$code) );
+			}
+			else {
+				db::insert('x_multisite_meta', array('domain'=>$d, 'code'=>$code, 'value'=>$value) );
+			}
+		}
+	}
+	
+	
 	
 	
 	
@@ -192,9 +212,21 @@ class multisite {
 		return x::url() . '/?module=multisite&action=create';
 	}
 	
-	static function url_config()
-	{
-		return x::url() . '/?module=multisite&action=config';
+	
+	/**
+	 *  @brief 
+	 *  
+	 *  @param [in] $domain Parameter_Description
+	 *  @return Return_Description
+	 *  
+	 *  @details Details
+	 */
+	static function url_config( $domain = null )
+	{	
+		if ( $domain ) $host = self::url_site($domain) . '/x';
+		else $host = x::url();
+		
+		return $host . '/?module=multisite&action=config';
 	}
 	
 	
@@ -217,8 +249,10 @@ class multisite {
 		$pi = pathinfo($_SERVER['PHP_SELF']);
 		$path = $pi['dirname'];
 		$path = str_replace('/bbs', '', $path);
-		$path = preg_replace('/\/x?$/', '/', $path);
-		return 'http://' . $domain . $path;
+		$path = preg_replace('/\/x?$/', '', $path);
+		$url_site = 'http://' . $domain . $path;
+		//dlog("url_site() : $url_site");
+		return $url_site;
 	}
 	
 	
@@ -286,12 +320,15 @@ class multisite {
 	 */
 	static function set_title( ) {
 		global $g5, $config;
-		$opt = ms::get( etc::domain() );
-		if ( $opt['extra']['title'] == '' ) $title = 'Welcome';
-		else $title = $opt['extra']['title'];
-		if(!$second_title = $opt['extra']['secondary_title']);
+		
+		$title = ms::meta('title');
+		$secondary_title = ms::meta('secondary_title');
+		
+		if ( !$title ) $title = 'Welcome';
+		if ( !$secondary_title ) $secondary_title = etc::domain();
+		
 		$g5['title'] = $title;
-		$config['cf_title'] = $second_title;
+		$config['cf_title'] = $secondary_title;
 	}
 	
 	
@@ -320,12 +357,37 @@ class multisite {
 	 *  @param [in] $option Parameter_Description
 	 *  @return Return_Description
 	 *  
-	 *  @details Details
+	 *  @details updates multisite configuration
+	 *  @important no more 'extra' field.
 	 */
 	static function update( $option ) {
-		$extra = ms::get_extra();
-		if ($extra) $option = array_merge( $extra, $option );
-		db::update( 'x_multisite_config', array( 'title' => $option['title'], 'extra' => string::scalar( $option ) ) , array( 'domain' => etc::domain() ) );
+		db::update( 'x_multisite_config', array( 'title' => $option['title']), array( 'domain' => etc::domain() ) );
 	}
+	
+	
+	
+	
+	
+	static function theme( $file=null )
+	{
+		$path = x::dir() . '/theme/' . self::meta('theme') . "/$file.php";
+		return $path;
+	}
+	
+	/**
+	 *  @brief returns the number of forum of the site.
+	 *  
+	 *  @return Return_Description
+	 *  
+	 *  @details Details
+	 */
+	static function count_forum()
+	{
+		$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";
+		$q = "SELECT COUNT(*) FROM $g5[board_table] WHERE $qb";
+		return db::result();
+	}
+	
+	
 
 }

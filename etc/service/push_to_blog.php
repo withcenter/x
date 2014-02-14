@@ -8,14 +8,23 @@
 	
 	$blogs['naver'] = array(
 		'endpoint'	=> "https://api.blog.naver.com/xmlrpc",
-		'id'		=> "thruthesky",
-		'password'	=> "224ff2eb4930d4498b36ca25cbdc8f56"
+		'id'		=> "drrr2222",
+		'password'	=> "286fb66fe6b911dfcbb8bd8a32a40a61"
 	);
 	
-	$content = "This is test writing";
-	$subject = "SUBJECT: This is test writing";
-	$copyright	= "To know more aobut ... visit : " . g::url();
-	$content	= "$copyright<p>$content</p>$copyright";
+	
+	global $wr_subject, $wr_content;
+	
+	$subject = $wr_subject;
+	$content = $wr_content;
+	$url = g::url();
+	$copyright	= "To know more aobut ... visit : <a href='$url' target='_blank'>$url</a>";
+	$content	= "
+		$copyright
+		<img src='....'>
+		<p>$content</p>
+		$copyright
+	";
 	
 	echo "STEP 0..\n";
 	$response = push_to_blog( $blogs['naver']['endpoint'], $blogs['naver']['id'], $blogs['naver']['password'], $subject, $content );
@@ -39,7 +48,7 @@ function push_to_blog( $endpoint, $id, $password, $subject, $description )
 	);
 	$blog_id = $id;
 	echo "STEP 3..\n";
-	$f = new xmlrpcmsg("metaWeblog.newPost",
+	$f = new xmlrpcmsg("metaWeblog.eidtPost",
 		array(
 			new xmlrpcval($blogid, "string"),
 			new xmlrpcval($id, "string"),

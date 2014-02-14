@@ -42,7 +42,16 @@
 	$path = $dir_root . '/tail.php';
 	$data = file::read($path);
 	$find = "/G5_IS_MOBILE[^>]*>/s";
-	$patch = "<?x::hook( 'tail_begin' ); if ( file_exists( x::hook(__FILE__) ) ) { include x::hook(__FILE__); return; } ?>";
+	$patch = "
+		<?php
+			x::hook( 'tail_begin' );
+			if ( file_exists( x::hook(__FILE__) ) ) {
+				include x::hook(__FILE__);
+				include_once(G5_PATH.'/tail.sub.php');
+				return;
+			}
+		?>
+	";
 	if ( pattern_exist( $data, $patch ) ) {
 		echo " already patched : OK\n";
 	}

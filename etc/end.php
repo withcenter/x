@@ -8,7 +8,7 @@ x::hook_register('end_before_html', 'hook_html_symbol');
 function hook_rsd_patch()
 {
 	global $html, $bo_table;
-	debug::log("hook_rsd_patch() begin");
+	//debug::log("hook_rsd_patch() begin");
 	$domain = etc::domain();
 	$url = "http://$domain/$_SERVER[PHP_SELF]?rsd=1&blog_id=$bo_table";
 	$patch = '<link rel="EditURI" type="application/rsd+xml" title="RSD" href="'.$url.'" />';
@@ -24,7 +24,7 @@ function hook_metaweblogapi()
 {
 	global $html;
 	preg_match_all("/<img[^>]+>/", $html, $ms);
-	dlog($ms);
+	//dlog($ms);
 	if ( $ms[0] ) {
 		foreach ( $ms[0] as $img ) {
 			if ( strpos( $img, 'metaweblogapi' ) ) {
@@ -67,10 +67,7 @@ function hook_html_symbol()
 	$target[] = '-';
 	$source[] = "&#038;rsquo;";
 	$target[] = '"';
-	
-	
-	
-	
+
 	$html = str_replace( $source, $target, $html );
 }
 

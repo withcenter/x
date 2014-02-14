@@ -4,8 +4,10 @@
 		return;
 	}
 	
+	
+	
 	if ( $in['done'] ) {
-		echo "<div class='message'>Updated</div>";
+		echo "<div class='message'>수정되었습니다.</div>";
 	}
 
 	
@@ -15,40 +17,52 @@
 	
 	$rows = db::rows( $q );
 ?>
+<link rel='stylesheet' type='text/css' href='<?=x::url()?>/module/multisite/subsite.css' />
+<script src='<?=x::url()?>/module/multisite/subsite.js'></script>
 <form action='?' class='config_menu'>
 		<input type='hidden' name='module' value='multisite' />
 		<input type='hidden' name='action' value='config_menu_submit' />
 <div class='config'>
 	<table width='100%' cellpadding='5px' class='config-menu-table'>
-		<tr>
-			<td colspan=4><h2>Menu</h2></td>
-		</tr>
-			<tr>
-			<td width='1em' align='center'><label>Menu<br>No.</label></td>
-			<td width='20em'><label>Select MENU</label></td>
+		<tr class='line-header'>
+			<td width=170>번호</td>
+			<td>메뉴 선택</td>
 		</tr>
 		<? for ( $i = 1; $i <= 10; $i++ ) { ?>
 		<tr>
-			<td align='center'>
-				<label><?=$i?></label>
-			</td>
+			<td class='menu-no'><?=$i?></td>
 			<td>
-				
-				<select name="menu_<?=$i?>">
-					<option value=''>Select Forum</option>
-					<option value=''></option>
-					<? foreach ( $rows as $row ) { 
-						if ( $extra['menu_'.$i] == $row['bo_table'] ) $selected = 'selected';
-						else $selected = null;
+				<span class='select-wrapper'><span class='inner'>
+					<?php
+					foreach ( $rows as $row ) {
+						if ( ms::meta('menu_'.$i) && ms::meta('menu_'.$i) == $row['bo_table'] ) {
+							$default_value =  $row['bo_subject'];
+							break;
+						}
+						else $default_value = null;
+					}
+					
+					echo $default_value ? $default_value : '메뉴 선택';
 					?>
-						<option value="<?=$row['bo_table']?>" <?=$selected?>><?=$row['bo_subject']?></option>
-					<? } ?>
-				</select>
+				</span></span>
+				<span class='select-button'><span class='inner'>
+					<img src='<?=x::url()?>/module/multisite/img/select_arrow.gif' />
+				</span></span>
+				<div class='drop-down-menu'>
+					<div class='row' bo_table='' bo_subject='메뉴 선택'><b>메뉴 선택</b></div>
+					<div style='height: 15px;' class='row' bo_table='' bo_subject='메뉴 선택'></div>
+					<?php
+						foreach ( $rows as $row ) {
+							echo "<div class='row' bo_table='$row[bo_table]' bo_subject='$row[bo_subject]'>$row[bo_subject]</div>";
+						}
+					?>
+				</div>
+				<input class='hidden-value' type='hidden' name='menu_<?=$i?>' value='<?=ms::meta('menu_'.$i)?>' />
 			</td>
 		</tr>
 		<?}?>
 		<tr>
-			<td colspan=2><input type='submit' value='submit'></td>
+			<td colspan=2><input type='submit' value='업데이트'></td>
 		</tr>
 	</table>
 </div>

@@ -1,26 +1,63 @@
 <div class='profile-photo'>
-	<?if( $extra['profile_img'] ) {?><img src="<?=ms::url_site(etc::domain()).'/'.$extra['img_url'].$extra['profile_img']?>"><br><?}?>
-	<p><?=$extra['profile_text1']?></p>
+	<?if( ms::meta('blog_profile_photo') ) {?>
+		<img src="<?=ms::url_site(etc::domain()).'/'.ms::meta('img_url').ms::meta('blog_profile_photo')?>"><br>
+	<?}	else {?>
+		<img src='<?=x::url_theme()?>/img/blank_profile.png'?>
+	<?}?>
+	<p><?=ms::meta('blog_profile_message')?></p>
 </div>
 <div class='profile-photo-bottom'><p>~</p></div>
 
-<div class='social-icons'>
-	<a href='#'><img src='<?=x::url_theme()?>/img/fbicon.png'></a>
-	<a href='#'><img src='<?=x::url_theme()?>/img/twittericon.png'></a>
-	<a href='#'><img src='<?=x::url_theme()?>/img/instaicon.png'></a>
-	<a href='#'><img src='<?=x::url_theme()?>/img/pinticon.png'></a>
-	<a href='#'><img src='<?=x::url_theme()?>/img/yahooicon.png'></a>
-	<a href='#'><img src='<?=x::url_theme()?>/img/gplusicon.png'></a>
+<div class='post-forum'>
+	<h2>Write</h2>
+	<? 
+		if( !login() ) echo "<p>You must login first to be able to post to this blog</p>";
+		else {
+		if( isset( $in['write_post']) ) { 
+			if ( $in['write_post'] == '' ) jsAlert('Please select a forum');
+			else header("Location: " . g::url()  ."/bbs/write.php?bo_table=" . $in['write_post']);
+		}
+	?>
+	<form method="POST" name='post_write'>
+	<?
+		$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";	
+		$rows = db::rows( "SELECT bo_table, bo_subject FROM $g5[board_table] WHERE $qb");
+	?>
+		<select name='write_post'>
+		<?
+			echo "<option value=''>Click here to see forum list</option>";
+			foreach ( $rows as $row ) {
+				echo "<option value='$row[bo_table]'>$row[bo_subject]</option>";
+			}
+		?>
+		</select>
+	</form>
+	
+	<script>
+		$("select[name='write_post']").change(function(){
+			$("form[name='post_write']").submit();
+		});
+	</script>
+	<?}?>
+</div>
+
+<div class='login-form'>
+<?php 
+	if (!login()) echo "<h2>Login FORM</h2>"; echo outlogin('basic');?>
 </div>
 
 <div class='categories'>
 	<h2>Categories</h2>
 	<ul>
-	<? for ( $i = 1; $i <= 10; $i++ ) { 
-		$option = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".$extra['menu_'.$i]."'");
-		if ( $extra['menu_'.$i] != '' ) {
-			?><li><a href='<?=g::url()?>/bbs/board.php?bo_table=<?=$extra['menu_'.$i]?>'><?=$option['bo_subject']?></a></li>
-	<?}}?>
+	<? 
+		$menu_1 = ms::meta('menu_1');
+		if ( empty($menu_1) ) $menu_1 = ms::meta('menu_1', ms::board_id(etc::domain()).'_1');
+		for ( $i = 1; $i <= 10; $i++ ) { 
+		$option = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('menu_'.$i)."'");
+		${'menu_'.$i} = ms::meta('menu_'.$i);
+		if ( ${'menu_'.$i} ) {
+			?><li><a href='<?=g::url()?>/bbs/board.php?bo_table=<?=ms::meta('menu_'.$i)?>'><?=$option['bo_subject']?></a></li>
+		<?}}?>
 	</ul>	
 </div>
 
@@ -29,12 +66,13 @@
 /**Sample Latest Post, this only fetches 5 latest post from $extra['menu_1'] */?>
 	<h2>Latest Posts</h2>
 	<ul>
-		<? 
-		$option = db::rows("SELECT * FROM $g5[write_prefix]".$extra['menu_1']." ORDER BY wr_num");
+		<?
+		if( empty( $menu_1 ) ) $menu_1 = ms::meta('menu_1', ms::board_id(etc::domain()).'_1');
+		$option = db::rows("SELECT * FROM $g5[write_prefix]".$menu_1." ORDER BY wr_num");
 		for ( $i = 0; $i <= 4; $i++) { 
-			if( !$option[$i]['wr_subject'] == '' ) {?>
+			if( $option[$i]['wr_subject'] ) {?>
 				<li>
-					<a href='<?=g::url()?>/bbs/board.php?bo_table=<?=$extra['menu_1']?>'>
+					<a href='<?=g::url()?>/bbs/board.php?bo_table=<?=$menu_1?>&wr_id=<?=$option[$i]['wr_id']?>'>
 						<span class='subject'><?=$option[$i]['wr_subject']?></span><br><?=mb_substr($option[$i]['wr_content'],0,50)?>
 					</a>
 				</li>
@@ -83,6 +121,7 @@
 </fieldset>
 </div>
 
+<!-- Temporarily hide this one until this one has real function
 <div class='navigator'>
 	<table width='100%'>
 		<tr>
@@ -91,8 +130,4 @@
 		</tr>
 	</table>
 </div>
-
-<div>
-<?php /** login for testing purposes*/ 
-	if (!login())	echo outlogin('basic');?>
-</div>
+-->

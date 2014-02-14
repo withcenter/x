@@ -13,8 +13,6 @@ class x {
 	static $config;
 	static $hook_list;
 	
-
-	
 	
 	/**
 	 *  @brief return true if 'x' is already installed.

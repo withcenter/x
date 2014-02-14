@@ -2,9 +2,29 @@
 
 class debug {
 
+
 	static $count = 0;
+	static $b = false;
+
+	
+	/**
+	 *  @brief on/off debug mode
+	 *  
+	 *  @param [in] $b Parameter_Description
+	 *  @return Return_Description
+	 *  
+	 *  @details to turn on the debug, call "debug::mode(1);"
+	 */
+	static function mode( $b = null)
+	{
+		if ( $b === null ) return self::$b;
+		else self::$b = $b;
+	}
+	
+	
 	static function log($msg = null)
 	{
+		if ( ! self::mode() ) return;
 		if ( is_array($msg) ) {
 			ob_start();
 			print_r($msg);

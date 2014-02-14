@@ -30,23 +30,23 @@
 	font-family: Arial Narrow;
 }
 
-#tnb li:nth-child(1) {
+#tnb .menu-home {
 	background: #db5e31;
 }
 
-#tnb li:nth-child(2) {
+#tnb .menu-about {
 	background: #eda23e;
 }
 
-#tnb li:nth-child(3) {
+#tnb .menu-faqs {
 	background: #f2cb67;
 }
 
-#tnb li:nth-child(4) {
+#tnb .menu-contact {
 	background: #bfb840;
 }
 
-#tnb li:nth-child(5) {
+#tnb .menu-admin {
 	background: #e4dc4b;
 }
 
@@ -61,10 +61,11 @@
 	height: 70px;
 	overflow: hidden;
 }
-/*aside*/
+
 #aside {
+	float:left;
 	border: 0 !important;
-	padding: 0 0 0 0.75em;
+	padding: 0 0.75em 0 0.75em;
 }
 
 #aside .profile-photo {
@@ -94,6 +95,30 @@
 	left: -0.25em;
 }
 
+#aside .post-forum {
+	margin-top: 1em;
+}
+#aside .post-forum p {
+	font-family: Arial;
+	padding: 1em;
+}
+
+#aside .post-forum select {
+	border-radius: 1px;
+	margin-top: 1em;
+	border: 0;
+	background: #333333;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 11pt;
+	padding: 0.5em;
+	width: 100%;
+}
+
+#aside .post-forum select option {
+	padding: 0.25em !important;
+}
+
 #aside .profile-photo img {
 	margin: 2em 0 0.75em 0;
 	width: 100%;
@@ -119,7 +144,7 @@
 	font-weight: normal !important;
 }
 
-#aside .categories h2, #aside .latest-posts h2 {
+#aside .categories h2, #aside .latest-posts h2, #aside .post-forum h2 {
 	border-bottom: solid 1px #cacaca;
 	padding-bottom: 0.25em;
 }
@@ -204,6 +229,9 @@
 	padding: 1em 0 1em 1em;
 }
 
+#aside .login-form {
+	margin: 1em 0 0 0;
+}
 
 /*container*/
 body {
@@ -215,41 +243,6 @@ body {
 	width: 699px;
 }
 
-#container .post-container {
-	margin-top: 1em;
-	border-bottom: solid 1px #959595;
-	padding-bottom: 1em;
-}
-
-#container .post-container a {
-	text-decoration: none;
-}
-
-#container .subject-container {
-	background: #bfb840;
-	max-width: 20em;
-	padding: 0.75em 0 0 0.5em;
-}
-
-#container .date-author-container {
-	background: #bfb840;
-	max-width: 12.50em;
-	padding: 0.25em 0.5em 0.25em 0.25em;
-	color: #ffffff;
-	font-family: Arial;
-	font-size: 11pt;
-	text-transform: uppercase;
-}
-
-#container .subject {
-	font-size: 20px;
-	font-family: Arial;
-}
-
-#container .post-container .post-content {
-	clear: both;
-	font-size: 12pt;
-}
 
 
 #wrapper {
@@ -260,7 +253,6 @@ body {
 .footer-text {
 	margin: 1em 0 0 220px;
 	clear:both;
-	float: left;
 }
 
 .footer-text p, .footer-text p a {
@@ -286,4 +278,9 @@ body {
 
 .back-to-top:hover {    
 
+}
+
+/*Login tweaking*/
+section#ol_before h2, section#ol_after h2, section#ol_after #ol_after_private{
+	display: none;
 }

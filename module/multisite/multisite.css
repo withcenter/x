@@ -1,6 +1,5 @@
-.create-site h1 {
-	font-size: 1.5em;
-	margin: 1em;
+.create-site .wrapper {
+	position: relative;
 }
 
 .create-site input[type='text'] {
@@ -22,9 +21,15 @@
 
 .create-site input[type='submit'] {
 	border: none;
-	padding: 0.5em;
+	width: 70px;
+	height: 27px;
+	line-height: 27px;
+	text-align: center;
 	background: #333333;
 	color: #ffffff;
+	position: absolute;
+	bottom: 11px;
+	right: 5px;
 }
 
 .create-site h2 {
@@ -61,6 +66,13 @@
 .create-site ul li a {
 	text-decoration: none;
 }
+.create-site select[name='site-type'] {
+	height: 27px;
+	width: 160px;
+	padding: 0 10px;
+	color: #555555;
+	font-family: '맑은 고딕', AppleGothic;
+}
 
 .config h1 {
 	font-size: 1.5em;
@@ -80,24 +92,14 @@
 	border-collapse: collapse;
 
 }
-
+/*
 .config table tr td {
 	border-top: 1px solid #ececec;
 }
-
-.config table label {
-	font-weight: bold;
-}
-
-.config table input[type='text'], .config table select {
-	width: 20em;
-}
-
-.config .config-menu-table input[type='text'], .config table select {
-	width: 11.5em;
-}
+*/
 
 
+/*
 
 .multisite-menu {
 	margin: 0;
@@ -123,6 +125,7 @@
 	display: inline-block;
 	padding: 1em;
 }
+*/
 
 fieldset {
 	border: 1px solid #d5d5d5;
@@ -150,6 +153,7 @@ fieldset legend {
 	padding: 10px 20px;
 	border-radius: 3px;
 }
+
 input[type='submit'] {
 	border: 1px solid #blue;
 	background-color: #f9f9f9;
@@ -177,17 +181,7 @@ input[type='submit']:hover {
 	margin: 0 20px 4px 0;
 }
 
-.no_of_board {
-	margin: 10px 0;
-	color: #555555;
-}
-input[type='text'] {
-	height: 25px;
-	line-height: 25px;
-	padding: 0 10px;
-	min-width: 200px;
-	color: #555555;
-}
+/*
 table {
 	margin: 10px 0;
 }
@@ -197,7 +191,7 @@ table tr td {
 	border-bottom: 1px solid #333333;
 	color: #555555;
 }
-
+*/
 table .header {
 	background-color: #333333;
 }
@@ -231,17 +225,20 @@ table .header td:first-child {
 }
 
 /* theme config */
+.config-theme {
+	font-family: '맑은 고딕', AppleGothic;
+}
 .config-theme table {
 	margin: 0;
 }
 
 .config-theme td {
+
 	color: #ffffff;
 	padding: 0.75em;
 }
 
 .config-theme .theme-thumb {
-	display: inline-block;
 	position: relative;
 	margin-top: 1em;
 	overflow: hidden;
@@ -252,6 +249,30 @@ table .header td:first-child {
 	bottom: 0;
 	padding: 1em;
 	background: #333333;
+	width: 100%;
+}
+
+.config-theme .theme-thumb p {
+	position: absolute;
+	top: 0;
+	padding: 0.5em;
+	background: #333333;
+	width: 100%;
+}
+
+.config-theme .theme-thumb {
+	margin: 0.5em;
+	display: inline-block;
+	width: 320px;
+	height: 240px;
+}
+
+.config-theme .thumb-list {	
+	margin-top: 0.5em;
+	text-align: center;
+}
+
+.config-theme .theme-thumb img {
 	width: 100%;
 }
 
@@ -278,6 +299,17 @@ table .header td:first-child {
 	outline: none;
 }
 
+.config-theme > .title {
+	font-size: 1.250em;
+	color: #004475;
+	border: 1px solid #d5d5d5;
+	background-color: #f9f9f9;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 10px;
+	text-align: center;
+}
+
 .site-global select {
 	padding: 0.25em 0 0.25em 0;
 }
@@ -301,4 +333,217 @@ table .header td:first-child {
 
 .site-global .config-img img {
 	margin: 0.5em 0 0.5em 0
+}
+
+
+/* admin_multisite.php */
+
+.add-new-site {
+	float: right;
+	display: inline-block;
+	width: 120px;
+	height: 20px;
+	background-color: #616161;
+	color: #ffffff;
+	line-height: 20px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.add-new-site:hover {
+	text-decoration: none;
+}
+
+.admin-multisite-table .header {
+	background-color: #8f8f8f;
+	color: #ffffff;
+}
+
+.admin-multisite-table tr td {
+	height: 30px;
+	line-height: 30px;
+	padding: 0; 
+	border-left: 0;
+	font-size: 1em;
+}
+
+.admin-multisite-table .background {
+	background-color: #efefef;
+	color: #7a7a7a;
+}
+
+/*view sites*/
+.view-site {
+	font-family: '맑은 고딕', AppleGothic;
+}
+
+
+
+.view-site ul{
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+
+.view-site ul li{
+	font-size:1.3em;
+}
+
+.view-site ul li a{
+	display:inline-block;
+	color:#565656;
+	text-decoration:none;
+	border-bottom:1px solid #d5d5d5;
+	border-left:4px solid #d5d5d5;
+	width:100%;
+	padding: 4px;
+}
+
+.view-site ul li.last-count a{
+	border-bottom:none;
+}
+
+.view-site ul li a:hover{
+	color:#f7f7f7;
+	background-color:#000000;
+	border-left:4px solid orange;
+}
+
+.view-site .info{
+	padding:4px 0;
+	font-size: 9pt;
+}	
+.view-site .info .item2 {
+	width: 90px;
+	display: inline-block;
+	font-weight: bold;
+	padding-left: 10px;
+}
+/* create.php */
+.create-site {
+	width: 100%;
+	font-family: '맑은 고딕', AppleGothic;
+}
+.create-site .wrapper{
+	position: relative;
+}
+
+.create-site  .main-title, .create-site  .title, .view-site .title {
+	background-color: #f9f9f9;
+	color: #555555;
+	border: 1px solid #d5d5d5;
+	height: 30px;
+	text-align: center;
+	margin: 0;
+	margin-left: 10px;
+	font-weight: bold;
+	font-size: 10pt;
+}
+
+.create-site  .title, .view-site  .title  {
+	line-height: 30px;
+	margin-bottom: 10px;
+}
+.create-site  input[type='text'] {
+	height: 25px;
+	line-height: 25px;
+	width: 150px;
+	padding: 0 10px;
+}
+.create-site input[type='submit'] {
+	float: right;
+}
+
+.create-site .item {
+	margin-left: 5px;
+	padding-left: 10px;
+}
+
+/* create_success.php */
+.success-fail-message {
+	border: 1px solid #d5d5d5;
+	color: #555555;
+	background-color: #f9f9f9;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom : 10px;
+}
+.success-fail-message .inner {
+	border: 1px solid #ffffff;
+}
+
+/* site.list.php */
+.site-list, .forum-list {
+	border: 1px solid #d5d5d5;
+	background-color: #f9f9f9;
+	border-radius: 3px;
+	font-family: '맑은 고딕', AppleGothic;
+	font-size: 10pt;
+}
+.site-list .inner, .forum-list .inner {
+	margin: 1px solid #ffffff;
+	border-radius: 3px;
+	padding: 10px 20px;
+}
+.site-list .inner > .title, .forum-list .inner > .title {
+	background-color: #386b90;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 10px;
+	border-radius: 3px;
+	font-size: 1.125em;
+	font-weight: bold;
+	color: #fbfbfb;
+}
+.site-list .inner .item2, .site-list .inner .item3  {
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	padding: 0 10px;
+	font-weight: bold;
+	color: #594e2b;
+	width: 70px;
+	border: 1px solid #666666;
+	border-radius: 3px;
+	margin-right: 10px;
+}
+.site-list .inner .item3  {
+	width: 40px;
+	margin-left: 100px;
+}
+.site-list .inner  .sites {
+	border-bottom: 1px solid #b4b7b8;
+	padding: 10px;
+	position: relative;
+}
+
+.site-list .inner  a:hover {
+	text-decoration: none;
+}
+.site-list .inner  .sites:last-child {
+	border-bottom: 0;
+}
+.site-list .inner .sites div {
+	height: 25px;
+	overflow: hidde;
+}
+
+.site-list .inner .sites  .move-to-site {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
+/* forum.list.php */
+.forum-list .inner .site-title {
+	margin: 10px 0 5px 0;
+	font-weight: bold;
+	color: #535353;
+	font-size: 1.125em;
+	padding: 5px 10px;
+	border: 1px solid #535353;
+	display: inline-block;
+	border-radius: 3px;
+	
 }

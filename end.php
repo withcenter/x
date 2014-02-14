@@ -14,9 +14,12 @@ x::hook( 'end_after_html' );
 
 
 
-debug::log("x end\t------------------------------");
+debug::log("x end\t}}");
 
 
-di( "theme: " . x::theme() );
-di( etc::included_files() );
+if ( debug::mode() ) {
+	di( "theme: " . x::theme() );
+	di( etc::included_files() );
+}
+
 

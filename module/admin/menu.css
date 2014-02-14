@@ -1,10 +1,22 @@
 .admin-menu {
 	position: relative;
-	background-color: #f0f0f0;
+	background-color: #474747;
 	margin-bottom: 1em;
+	width: 100%;
 }
-.admin-menu a {
+.admin-menu .menu-name {
+	height: 40px;
+	line-height: 40px;
+	color: #ffffff;
+	padding: 0 20px;
+}
 
+.admin-menu .menu-name:hover {
+	background-color: #616161;
+}
+
+.admin-menu a {
+	display: inline-block;
 }
 .admin-menu a:hover {
 
@@ -14,11 +26,13 @@
 	margin:0;
 	padding:0;
 	list-style:none;
+	width: 100%;
 
 }
+
+
 .admin-menu > ul > li {
 	float: left;
-	padding: 0.5em 0.75em 0.5em 0.75em;
 	font-size: 11pt;
 	cursor: pointer;
 	-webkit-transition: all 0.2s;
@@ -40,42 +54,42 @@
 	margin: 0;
 	font-size: 10pt;
 	position: absolute;	
-	top: 2.3em;
+	top: 40px;
 	left: 0;
 	width: 100%;
-	padding: 0.75em 0 0.75em 0;
-	background: #333333;
+	background-color: #c7c7c7;
 }
 
 .admin-menu > ul > li > ul > li {
 	text-transform: none;
 	width: 100%;
-	background: #333333;
-	padding: 0.75em;
 	display: inline;
 }
 
 
 .admin-menu > ul > li > ul > li a {
 	text-decoration: none;
-	color: #ffffff;
-	padding: 0.5em;
+	color: #535353;
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	text-decoration: underline;
+	padding: 0 20px;
 }
 
 .admin-menu > ul > li > ul > li:hover {
-	background: #939393;
+	background: #c7c7c7;
 
 }
 
 .admin-menu > ul > li > ul > li.active-page {
-	background: #939393;
+	background: #c7c7c7;
 }
 .admin-menu > ul > li > ul > li:hover a{
-	color: #000000;
+	
 }
 
 .admin-menu li.current{
-	background: #333333;
+	background: #c7c7c7;
 	color: #ffffff;
 }
-

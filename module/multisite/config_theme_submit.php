@@ -1,5 +1,5 @@
 <?php
-ms::update( $in );
+ms::meta('theme', $theme);
 $domain = etc::domain();
 $theme = $in['theme'];
 $priority = 10;

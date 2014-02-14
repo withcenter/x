@@ -1,79 +1,66 @@
 <div id='howto-steps'>
 	<table cellspacing=0 cellpadding=0 width='100%'><tr valign='top'>
 		<td>
-			<div class='steps'>
-				<img class='step1-img' src='<?=x::url()?>/theme/website.com/img/step1.png'/>
-				<div class='description'>
-					<div class='title'>Step1</div>
-					<div class='instruction'>Brief instruction for step one. More text. More more text. More and more text. More and more and more </div>
+			<a href='<?=g::url()?>/bbs/board.php?bo_table=help&wr_id=1'>
+				<div class='steps first'>
+					<img class='step1-img' src='<?=x::url()?>/theme/website.com/img/step1.png'/>
+					<div class='description'>
+						<div class='title'>필고 홈페이지</div>
+						<div class='instruction'>(모바일) 홈페이지, 스마트폰 앱,<br />바이럴 마케팅 프로그램<br />무료 제공</div>
+					</div>
 				</div>
-			</div>
+			</a>
 		</td>
 		<td>
-			<div class='steps'>
+			<div class='steps second'>
 				<img class='step2-img' src='<?=x::url()?>/theme/website.com/img/step2.png'/>
 				<div class='description'>
-					<div class='title'>Step2</div>
-					<div class='instruction'>Brief instruction for step two. More text. More more text. More and more text. More and more and more </div>
+					<div class='title'>사이트 만들기 예제</div>
+					<div class='instruction'>
+						<a href='<?=g::url()?>/bbs/board.php?bo_table=help&wr_id=2'>여행사 만들기</a><br />
+						<a href='<?=g::url()?>/bbs/board.php?bo_table=help&wr_id=3'>커뮤니티 사이트 만들기</a><br />
+						<a href='<?=g::url()?>/bbs/board.php?bo_table=help&wr_id=4'>블로그 만들기</a></div>
 				</div>
 			</div>
 		</td>
 		<td>
-			<div class='steps'>
-				<img class='step3-img' src='<?=x::url()?>/theme/website.com/img/step3.png'/>
-				<div class='description'>
-					<div class='title'>Step3</div>
-					<div class='instruction'>Brief instruction for step three. More text. More more text. More and more text. More and more and </div>
+			<a href='<?=g::url()?>/bbs/board.php?bo_table=help&wr_id=5'>
+				<div class='steps third'>
+					<img class='step3-img' src='<?=x::url()?>/theme/website.com/img/step3.png'/>
+					<div class='description'>
+						<div class='title'>도와주세요</div>
+						<div class='instruction'>사이트 만들기가 어려우면<br />여기를 클릭!</div>
+			
+					</div>
 				</div>
-			</div>
+			</a>
 		</td>
 	</tr></table>
 </div>
 
 <div id='create-your-site'>
-	<div class='border2'>
-		<div class='border3'>
-			<a href='<?=x::url()?>/?module=multisite&action=create'>CREATE YOUR SITE NOW</a>
-		</div>
-	</div>
+	<a href='<?=x::url()?>/?module=multisite&action=create'>사이트 만들기 클릭!</a>
 </div>
 
 <div id='banner-wrapper'>
-	<div class='title'>SAMPLE BANNER TEXT HERE</div>
+	<div class='title'>나만의 무료 홈페이지!</div>
 	
 	<ul>
-		<li><img src='<?=x::url()?>/theme/website.com/img/bullet.png'/>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-		<li><img src='<?=x::url()?>/theme/website.com/img/bullet.png'/>Etiam semper ipsum eu hendrerit pulvinar.</li>
-		<li><img src='<?=x::url()?>/theme/website.com/img/bullet.png'/>Sed vitae orci vel erat scelerisque gravida non pharetra metus.</li>
-		<li><img src='<?=x::url()?>/theme/website.com/img/bullet.png'/>Praesent tempus massa sed eros fermentum faucibus.</li>
-		<li><img src='<?=x::url()?>/theme/website.com/img/bullet.png'/>Aenean at urna at eros ultricies luctus ac ut magna.</li>
+		<li><img src='<?=x::url()?>/theme/website.com/img/bullet.png'/>아주 손 쉬운 나만의 홈페이지 제작</li>
+		<li><img src='<?=x::url()?>/theme/website.com/img/bullet.png'/>모바일에 최적화된 홈페이지</li>
+		<li><img src='<?=x::url()?>/theme/website.com/img/bullet.png'/>인터넷 홍보 기능 제공</li>
+		<li><img src='<?=x::url()?>/theme/website.com/img/bullet.png'/>홈페이지 디자인, 안드로이드 스마트폰 앱 제작( 필리핀 관련 좋은 자료 올리는 홈페이지 총 30 개 선정 )</li>
+		<li><img src='<?=x::url()?>/theme/website.com/img/bullet.png'/>유료 옵션: 필고 배너 광고, 방문자 수가 급증하는 경우 유료 웹 호스팅, 독립도메인(서버에 독립 도메인 등록)</li>
 	</ul>
 </div>
 
-<div id='latest-posts'>
-<?php
-//  최신글
-$sql = " select bo_table from `{$g5['board_table']}` a left join `{$g5['group_table']}` b on (a.gr_id=b.gr_id)  where a.bo_device <> 'mobile' order by b.gr_order, a.bo_order LIMIT 3";
-$result = sql_query($sql);
-for ($i=0; $row=sql_fetch_array($result); $i++) {
-    if ( ($i+3)%3==1 || ($i+3)%3==2) {$lt_style = "margin-left:28px"; $num=$i;}
-    else $lt_style = "";
-	/*
-	if ( ($i+3)%3==1 ) $image = 'wrench-blue.png';
-	else if ( ($i+3)%3==2 ) $image = 'bag-blue.png';
-	else $image = 'directions-blue.png';
-	*/
-?>
-    <div class='post-content <?php echo ($i+1);?> ' style="float:left;<?php echo $lt_style ?>; width:222px;">
-	<?/*<img class='top-image' src='skin/latest/community/img/<?php echo $image; ?>'/>*/?>
-        <?php
-        // 이 함수가 바로 최신글을 추출하는 역할을 합니다.
-        // 사용방법 : latest(스킨, 게시판아이디, 출력라인, 글자수);
-        echo latest("x-latest-community", $row['bo_table'], 6, 25);
-        ?>	
-    </div>
-<?php
-}
-?>
-
-</div>
+<table class='bottom-content' cellpadding=0 cellspacing=0 width='100%' border=0>
+	<tr valign='top'>
+		<td width='33.3%'><? include x::theme('newest.site.list')?></td>
+		<td width='33.4%'><? include x::theme('multisite.latest.posts')?></td>
+		<td width='33.3%'>
+			<div><?=latest('x-latest-withcenter-blue','qna', 15, 21, $cache_time=1, x::url_theme().'/img/bag-blue.png')?></div>
+			<div><?=latest('x-latest-withcenter-blue','help', 15, 21, $cache_time=1, x::url_theme().'/img/bag-blue.png')?></div>
+		</td>
+	</tr>
+</table>

@@ -580,6 +580,18 @@ class gnuboard {
 		global $g5;
 		return $g5['write_prefix'] . $bo_table;
 	}
+	
+	/**
+	 *  @brief Brief
+	 *  
+	 *  @param [in] $bo_table Parameter_Description
+	 *  @return Return_Description
+	 *  
+	 *  @details Details
+	 *  @code
+	 *  	g::board_table( $extra['menu_1'] );
+	 *  @endcode
+	 */
 	static function board_table($bo_table)
 	{
 		return self::write_table($bo_table);
