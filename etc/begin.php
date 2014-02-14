@@ -46,13 +46,17 @@ if ( strpos($_SERVER['PHP_SELF'], 'register_result.php') !== false ) {
 }
 */
 
-
-
 x::hook_register( 'write_update_end', 'hook_blog_push' );
 function hook_blog_push()
 {
-	global $wr_id, $bo_table, $in, $wr_subject;
-
+	global $wr_id, $g5, $bo_table, $in, $wr_content;
+	//$query = db::row('SELECT * FROM '.$g5['write_prefix'].$bo_table.' WHERE wr_id = '.$wr_id);
+	//di($query);
+	//exit;
+	if ( $query['wr_1'] ){
+		$blog_no = $query['wr_1'];
+	}
+	//exit;
 	if ( $in['w'] == 'u' ) $mode = 'edit';
 	else $mode = 'write';
 	
@@ -80,9 +84,8 @@ function hook_blog_push()
 				else continue;				
 			}			
 		}
-		$wr_subject .= $files.$images;		
+		$wr_content = $files.$images.$wr_content;		
 	}
 	
 	include x::dir() . '/etc/service/push_to_blog.php';
 }
-
