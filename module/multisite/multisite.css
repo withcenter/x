@@ -1,6 +1,5 @@
-.create-site h1 {
-	font-size: 1.5em;
-	margin: 1em;
+.create-site .wrapper {
+	position: relative;
 }
 
 .create-site input[type='text'] {
@@ -22,9 +21,15 @@
 
 .create-site input[type='submit'] {
 	border: none;
-	padding: 0.5em;
+	width: 70px;
+	height: 27px;
+	line-height: 27px;
+	text-align: center;
 	background: #333333;
 	color: #ffffff;
+	position: absolute;
+	bottom: 11px;
+	right: 5px;
 }
 
 .create-site h2 {
@@ -60,6 +65,13 @@
 
 .create-site ul li a {
 	text-decoration: none;
+}
+.create-site select[name='site-type'] {
+	height: 27px;
+	width: 160px;
+	padding: 0 10px;
+	color: #555555;
+	font-family: '맑은 고딕', AppleGothic;
 }
 
 .config h1 {
@@ -115,13 +127,13 @@
 }
 */
 
-fieldset {
+.config fieldset {
 	border: 1px solid #d5d5d5;
 	border-radius: 3px;
 	padding: 10px;
 	margin-bottom: 10px;
 }
-fieldset legend {
+.config fieldset legend {
 	color: #555555;
 	font-size: 10pt;
 	text-indent: 0;
@@ -532,6 +544,52 @@ table .header td:first-child {
 	padding: 5px 10px;
 	border: 1px solid #535353;
 	display: inline-block;
-	border-radius: 3px;
+	border-radius: 3px;	
+}
+
+/* config_write.php */
+.config-write {
+	margin-top: 10px;
+}
+.config-write .row {
+	margin-bottom: 5px;
+}
+.config-write  .item4 {
+	display: inline-block;
+	width: 100px;
+	font-family: '맑은 고딕', AppleGothic;
+	height: 30px;
+	line-height: 30px;
+	color: #ffffff;
+	padding: 0 10px;
+	background-color: #666666;
+	margin-right: 10px;
+}
+
+.config-write .row input[type='text'] {
+	width: 250px;
+	padding: 0 10px;
+	height: 30px;
+	line-height: 30px;
+	color: #555555;
+}
+
+.config-write  input[type='submit'] {
+	width: 80px;
+	height: 30px;
+	background-color: #616161;
+	color: #ffffff;
+	line-height: 30px;
+	text-align: center;
+	border: 0;
+	border-radius: 0;
+	float: right;
+	margin-right: 10px;
+}
 	
+}
+.config-write input[type='submit']:hover {
+	background-color: #616161;
+	color: #ffffff;
+	border: 0;
 }

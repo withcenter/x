@@ -77,7 +77,7 @@
 							}
 						}
 						
-						echo $default_value ? $default_value : 'Select Forum';
+						echo $default_value ? $default_value : '게시판 선택';
 						?>
 					</span></span>
 					<span class='select-button'><span class='inner'>
@@ -111,7 +111,7 @@
 				if ( file_exists( ms::theme('setting') ) ) include ms::theme('setting');
 			?>
 		<? } else { ?>
-			<H1>테마를 선택하십시오.</h1>
+			<h1>테마를 선택하십시오.</h1>
 		<? } ?>
 		
 		

@@ -225,6 +225,7 @@
 	width: 27px;
 	position: relative;
 	text-align: center;
+	cursor: pointer;
 }
 
 
@@ -263,7 +264,7 @@
 	text-align: center;
 	border: 0;
 	border-radius: 0;
-	font-size: 1.125em;
+	font-size: 1em;
 }
 
 .config-menu-table input[type='submit']:hover {

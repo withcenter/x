@@ -3,7 +3,7 @@
 		echo "You are not admin";
 		return;
 	}
-	
+
 
 	if ( ms::count_forum() > MS_MAX_FORUM ) {
 		jsBack("게시판 생성을 " . MAX_MAX_FORUM . " 개 이상 할 수 없습니다.");

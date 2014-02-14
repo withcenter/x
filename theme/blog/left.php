@@ -43,7 +43,7 @@
 
 <div class='login-form'>
 <?php 
-	if (!login()) echo "<h2>Login FORM</h2>"; echo outlogin('basic');?>
+	echo outlogin('x-outlogin-blog');?>
 </div>
 
 <div class='categories'>

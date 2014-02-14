@@ -1,4 +1,3 @@
-<div class='title'>Extra Options</div>
 <table cellpadding=5px class='image-config'>
 	<tr>
 		<td valign='top'>
