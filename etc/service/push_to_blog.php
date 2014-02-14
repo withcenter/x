@@ -25,7 +25,7 @@
 	
 	global $wr_subject, $wr_content;
 	$subject = $wr_subject;	
-	$content = $files.$images.$wr_content;
+	$content = $wr_content;
 	$url = g::url();
 	$copyright	= "To know more aobut ... visit : <a href='$url' target='_blank'>$url</a>";
 	$content	= "
@@ -36,7 +36,7 @@
 	";
 
 	echo "STEP 0..\n";
-	$response = push_to_blog( $blogs['naver']['endpoint'], $blogs['naver']['id'], $blogs['naver']['password'], $subject, $content, $mode );
+	$response = push_to_blog( $blogs['naver']['endpoint'], $blogs['naver']['id'], $blogs['naver']['password'], $subject, $content, $mode, $blog_no );
 	
 	if ( $response->faultCode() ) {
 		echo $response->faultString();
@@ -44,10 +44,30 @@
 	}
 	else {
 		echo "SUCCESS\n"; 
-		dlog('SUCCESS');
+		dlog('SUCCESS-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
+		$v = $response->value()->scalarval();
+		
+		if( is_bool($v) ) {
+			//do nothing;
+		}
+		else{ 
+			//update database;
+			/*$q = "UPDATE ".$bo_table." wr_1 VALUES '".$v."' WHERE wr_id = '".$wr_id."'";
+			echo $q;
+			db::update(
+				$g5['write_prefix'].$bo_table, 
+				array('wr_1' => $v),
+				array('wr_id' => $wr_id)*/
+			);
+			
+			//echo $bo_table;
+		}
+		//$q = db::row('SELECT * FROM '.$g5['write_prefix'].$bo_table.' WHERE wr_id = '.$wr_id);
+		//di($q);
+		//exit;
 	}
 	
-function push_to_blog( $endpoint, $id, $password, $subject, $description, $mode )
+function push_to_blog( $endpoint, $id, $password, $subject, $description, $mode, $blog_no )
 {
 	$publish = true;
 	echo "STEP 1..: $endpoint\n";
@@ -77,7 +97,7 @@ function push_to_blog( $endpoint, $id, $password, $subject, $description, $mode 
 	else if( $mode == 'edit' ){
 		$f = new xmlrpcmsg("metaWeblog.editPost",
 			array(			
-				new xmlrpcval("140206746582", "string"),
+				new xmlrpcval($blog_no, "string"),
 				new xmlrpcval($id, "string"),
 				new xmlrpcval($password, "string"),
 				new xmlrpcval($struct , "struct"), 
