@@ -14,7 +14,6 @@
 			'id'		=> $api_username,
 			'password'	=> $api_password
 		);
-		dlog( "----------blog_api -------------" );
 	}
 	else {
 		$blogs['naver'] = array(
@@ -22,7 +21,6 @@
 			'id'		=> "drrr2222",
 			'password'	=> "286fb66fe6b911dfcbb8bd8a32a40a61"
 		);
-		dlog( "----------blog_api -------------" );
 	}
 	global $wr_subject, $wr_content;
 	
@@ -63,7 +61,7 @@ function push_to_blog( $endpoint, $id, $password, $subject, $description )
 	);
 	$blog_id = $id;
 	echo "STEP 3..\n";
-	$f = new xmlrpcmsg("metaWeblog.eidtPost",
+	$f = new xmlrpcmsg("metaWeblog.newPost",
 		array(
 			new xmlrpcval($blogid, "string"),
 			new xmlrpcval($id, "string"),
