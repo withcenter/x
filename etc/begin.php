@@ -129,5 +129,18 @@ function hook_outlogin_path()
 	*/
 }
 
-
+x::hook_register( 'latest', 'hook_latest_path' );
+function hook_latest_path()
+{
+	global $skin_folder, $latest_skin_path, $latest_skin_url;
+	$path = x::dir() . "/widget/latest/" . $skin_folder;
+	if ( file_exists( $path ) ) {
+		$latest_skin_path = $path;
+		$latest_skin_url = x::url() . "/widget/latest/" . $skin_folder;
+	}
+	
+	dlog("skin_folder: $skin_folder");
+	dlog("latest_skin_path: $latest_skin_path");
+	dlog("latest_skin_url: $latest_skin_url");
+}
 
