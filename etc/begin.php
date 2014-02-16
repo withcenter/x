@@ -1,11 +1,14 @@
 <?php
-/** @short variables to replace those in outlogin.lib.php
+/** @short variables to replace those in skin files. ( like outlogin.lib.php )
  * https://docs.google.com/a/withcenter.com/document/d/1Q3cunvTGTmGTathp_Jx4LTVn8tdsNzqsZmmpE8kLsvg/edit#heading=h.1zkefc3j0po6
  */
-	$skin_folder = null;
+	$skin_folder = null;				// this is used in all the skin(widget)
 	$outlogin_skin_path=null;
 	$outlogin_skin_url=null;
-
+	$latest_skin_path = null;
+	$latest_skin_url  = null;
+	
+	
 // -----------------------------------------------------------------------------
 //
 // @TODO ordered by JaeHo
