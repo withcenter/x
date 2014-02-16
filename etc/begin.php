@@ -1,5 +1,10 @@
 <?php
-
+/** @short variables to replace those in outlogin.lib.php
+ * https://docs.google.com/a/withcenter.com/document/d/1Q3cunvTGTmGTathp_Jx4LTVn8tdsNzqsZmmpE8kLsvg/edit#heading=h.1zkefc3j0po6
+ */
+	$skin_folder = null;
+	$outlogin_skin_path=null;
+	$outlogin_skin_url=null;
 
 // -----------------------------------------------------------------------------
 //
@@ -103,6 +108,22 @@ function hook_blog_push( $hook )
 		dlog("including push_to_blog.php ...");
 		include x::dir() . '/etc/service/push_to_blog.php';
 	//}
+}
+// https://docs.google.com/a/withcenter.com/document/d/1Q3cunvTGTmGTathp_Jx4LTVn8tdsNzqsZmmpE8kLsvg/edit#heading=h.1zkefc3j0po6
+x::hook_register( 'outlogin', 'hook_outlogin_path' );
+function hook_outlogin_path()
+{
+	global $skin_folder, $outlogin_skin_path, $outlogin_skin_url;
+	$path = x::dir() . "/widget/outlogin/" . $skin_folder;
+	if ( file_exists( $path ) ) {
+		$outlogin_skin_path = $path;
+		$outlogin_skin_url = x::url() . "/widget/outlogin/" . $skin_folder;
+	}
+	/*
+	dlog("skin_folder: $skin_folder");
+	dlog("outlogin_skin_path: $outlogin_skin_path");
+	dlog("outlogin_skin_url: $outlogin_skin_url");
+	*/
 }
 
 

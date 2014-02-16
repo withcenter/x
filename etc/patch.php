@@ -38,6 +38,8 @@ if ( $argv[1] == 'language' ) {
 	include x::dir() . "/etc/patch/begin_end.php";
 	include x::dir() . "/etc/patch/write_update.php";
 	include x::dir() . "/etc/patch/delete.php";
+	include x::dir() . "/etc/patch/outlogin.lib.php";
+	
 	
 	//include x::dir() . "/etc/patch/menu.php";
 	//include x::dir() . "/etc/patch/menu.php";
