@@ -64,7 +64,7 @@
 			'endpoint'	=> $blogs['naver']['endpoint'],
 			'id'		=> $blogs['naver']['id'],
 			'password'	=> $blogs['naver']['password'],
-			'title'	=> $subject,
+			'subject'	=> $subject,
 			'description'	=> $content,
 			'mode'		=> $mode,
 			'blog_no'	=> $blog_no
@@ -120,8 +120,8 @@ function push_to_blog( $o )
 	$GLOBALS['xmlrpc_internalencoding']='UTF-8';
 	
 	$struct = array(
-		'title' => new xmlrpcval($title, "string"), 
-		'description' => new xmlrpcval($description, "string"),		
+		'title' => new xmlrpcval($subject, "string"), 
+		'description' => new xmlrpcval(stripslashes($description), "string"),		
 	);
 	$blog_id = $id;
 	echo "STEP 3..\n";
