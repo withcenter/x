@@ -22,7 +22,7 @@ if( !is_dir( $path ) ) {
 }
 if( !is_dir( $folder ) ) mkdir( $folder );
 
-ms::meta( 'img_url' , G5_DATA_DIR.'/upload/multisite/'.$site[0].'/' );
+ms::meta( 'img_url' , stripslashes(ms::url_site(etc::domain())).'/'.G5_DATA_DIR.'/upload/multisite/'.$site[0].'/' );
 
 foreach( $_FILES as $key => $value ) {
 	if( $in[$key.'_remove'] == 'y' ) ms::meta( $key , '' );							// if checkbox( file-upload-name_remove ) == 'y' 

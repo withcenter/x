@@ -2,10 +2,10 @@
 <table width='100%' class='index-banner'>
 	<tr>
 		<td align='left'>
-			<?if( $extra['banner_1'] ) {?><img src="<?=ms::url_site(etc::domain())."/".$extra['img_url'].$extra['banner_1']?>"><br><?}?>
+			<?if( ms::meta('banner_1') ) {?><img src="<?=ms::meta('img_url').ms::meta('banner_1')?>"><br><?}?>
 		</td>
 		<td align='right'>
-			<?if( $extra['banner_1'] ) {?><img src="<?=ms::url_site(etc::domain())."/".$extra['img_url'].$extra['banner_2']?>"><br><?}?>
+			<?if( ms::meta('banner_1') ) {?><img src="<?=ms::meta('img_url').ms::meta('banner_2')?>"><br><?}?>
 		</td>
 	</tr>
 </table>

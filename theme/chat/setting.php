@@ -3,7 +3,7 @@
 	<tr valign='top'>
 		<td>
 			<div class='title'>사이트 로고</div>
-			<?if( ms::meta('header_logo') ) {?><img src="<?=ms::url_site(etc::domain()).'/'.ms::meta('img_url').ms::meta('header_logo')?>" width=280px height=160px><br><?}?>
+			<?if( ms::meta('header_logo') ) {?><img src="<?=ms::meta('img_url').ms::meta('header_logo')?>" width=280px height=160px><br><?}?>
 			<input type='file' name='header_logo'>
 			<?if( ms::meta('header_logo') != '' ) { ?>
 				<input type='hidden' name='header_logo_remove' value='n'>
