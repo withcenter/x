@@ -5,7 +5,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
 <?
 
-	if ( $list == '' ) return;
+if ( $list ) {
 	foreach ( $list as $li ) {
 
 		if( !$li['wr_subject'] == '' ) {
@@ -27,22 +27,24 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 					<td align='right'>
 						<div  class='date-author-container'>
 							<span class='date-author'>
-								<?=$newDate = date("M d Y", strtotime($li['wr_datetime']))?>
-								by <?=$li['wr_name']?>
+								<b>글쓴이</b> <span><?=$li['wr_name']?></span>
+								<b>작성일</b><?=$newDate = date("Y-m-d", strtotime($li['wr_datetime']))?>
 							</span>
 						</div>
 					</td>
 				</tr>
 				<tr><td colspan=2><span class='post-content'>
 				<span class='post-images'>
-				<? for ( $img = 0; $img <= 2; $img++ ) { 
+				<? for ( $img = 0; $img < 1; $img++ ) { 
 					if ($li['file']['meta'][$img]['bf_file'] != '') {?>
 						<img src="<?=$li['file']['path'].$li['file']['meta'][$img]['bf_file']?>">
 				<?}}?>
 				</span>
-					<?=cut_str($li['wr_content'],1000,'...')?></span></td></tr>
+					<?=cut_str(strip_tags($li['wr_content']),1000,'...')?></span></td></tr>
 			</table>
 			</a>
 		</div>
-<?}?>
+<? }
+}
+?>
 

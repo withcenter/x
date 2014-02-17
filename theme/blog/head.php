@@ -1,3 +1,15 @@
+<?php
+/* 메뉴 정보  - 메뉴는 총 3개만 가져온다. */
+	$menu_info = array();
+	for ( $i = 1; $i <= 3; $i++ ) {
+		if ( $menu_item = ms::meta('menu_'.$i) ) { 
+			
+			$menu_info[$i]['url'] = stripslashes(ms::url_site(etc::domain()))."/bbs/board.php?bo_table=$menu_item";
+			$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table ='$menu_item'");
+			$menu_info[$i]['bo_subject'] = $row['bo_subject'];
+		}
+	}
+?>
 <link rel="stylesheet" href="<?=x::url_theme()?>/css/theme.css">
 <script type='text/javascript' src='<?=x::url_theme()?>/js/theme.js'></script>
 <div id="hd">
@@ -9,9 +21,16 @@
         </div>
         <ul id="tnb">
 			<li class='menu-home'><a href='<?=ms::url_site(etc::domain())?>'>홈</a></li>
-			<li class='menu-about'><a href='<?=stripslashes(ms::url_site(etc::domain()))?>/bbs/board.php?bo_table=qna'>질문과답변</a></li>
-			<li class='menu-faqs'><a href='<?=stripslashes(ms::url_site(etc::domain()))?>/bbs/board.php?bo_table=help'>이용안내</a></li>
-			<li class='menu-contact'><a href='http://www.philgo.net' target='_blank'>메인사이트</a></li>
+			<? if ( $menu_info[1]['url'] ) {?>
+				<li class='menu-about'><a href='<?=$menu_info[1]['url']?>'><?=$menu_info[1]['bo_subject']?></a></li>
+			<? }?>
+			<? if ( $menu_info[2]['url'] ) {?>
+				<li class='menu-faqs'><a href='<?=$menu_info[2]['url']?>'><?=$menu_info[2]['bo_subject']?></a></li>
+			<? }?> 
+			<? if ( $menu_info[3]['url'] ) {?>
+				<li class='menu-contact'><a href='<?=$menu_info[3]['url']?>'><?=$menu_info[3]['bo_subject']?></a></li>
+			<? }?>
+			
 			<?if( ms::admin() ) { ?><li class='menu-admin'><a href='<?=ms::url_config()?>'>사이트관리</a></li><?}?>
         </ul>	
     </div>

@@ -3,11 +3,12 @@
 	border-bottom: solid 1px #959595;
 	padding-bottom: 1em;
 	word-break: break-word;
+	font-family: '맑은 고딕', AppleGothic;
+	min-height: 80px;
 }
 
 #container .post-container .post-content {
 	position: relative;
-	font-size: 11pt;
 }
 
 #container .post-container .post-content .post-images {
@@ -25,25 +26,37 @@
 
 #container .post-container a {
 	text-decoration: none;
+	color: #555555;
 }
 
 #container .subject-container {
-	background: #bfb840;
-	max-width: 20em;
-	padding: 0.75em 0 0 0.5em;
+	height: 25px;
+	line-height: 25px;
+	max-width: 500px;
+	margin-bottom: 5px;
+	overflow: hidden;
 }
 
 #container .date-author-container {
 	background: #bfb840;
-	max-width: 12.50em;
-	padding: 0.25em 0.5em 0.25em 0.25em;
+	font-size: 9pt;
+	display: inline-block;
+	padding: 0 10px;
+	height: 23px;
+	line-height: 23px;
 	color: #ffffff;
-	font-family: Arial;
-	font-size: 11pt;
-	text-transform: uppercase;
+	border-radius: 3px;
+}
+#container .date-author-container b {
+	color: #194a63;
+	margin-right: 5px;
+}
+#container .date-author-container span {
+	margin-right: 10px;
 }
 
 #container .subject {
-	font-size: 20px;
-	font-family: Arial;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #645c1d;
 }
