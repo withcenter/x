@@ -138,7 +138,7 @@ function push_to_blog( $o, $cb )
 	
 	$struct = array(
 		'title' => new xmlrpcval($subject, "string"), 
-		'description' => new xmlrpcval(stripslashes($description), "string"),		
+		'description' => new xmlrpcval(stripslashes($description), "string"),
 	);
 	$blog_id = $id;
 	echo "STEP 3..\n";
