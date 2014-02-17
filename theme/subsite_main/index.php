@@ -3,7 +3,7 @@
 		<td>
 			<a href='<?=g::url()?>/bbs/board.php?bo_table=help&wr_id=1'>
 				<div class='steps first'>
-					<img class='step1-img' src='<?=x::url()?>/theme/website.com/img/step1.png'/>
+					<img class='step1-img' src='<?=x::url_theme()?>/img/step1.png'/>
 					<div class='description'>
 						<div class='title'>필고 홈페이지</div>
 						<div class='instruction'>(모바일) 홈페이지, 스마트폰 앱,<br />바이럴 마케팅 프로그램<br />무료 제공</div>
@@ -13,7 +13,7 @@
 		</td>
 		<td>
 			<div class='steps second'>
-				<img class='step2-img' src='<?=x::url()?>/theme/website.com/img/step2.png'/>
+				<img class='step2-img' src='<?=x::url_theme()?>/img/step2.png'/>
 				<div class='description'>
 					<div class='title'>사이트 만들기 예제</div>
 					<div class='instruction'>
@@ -26,7 +26,7 @@
 		<td>
 			<a href='<?=g::url()?>/bbs/board.php?bo_table=help&wr_id=5'>
 				<div class='steps third'>
-					<img class='step3-img' src='<?=x::url()?>/theme/website.com/img/step3.png'/>
+					<img class='step3-img' src='<?=x::url_theme()?>/img/step3.png'/>
 					<div class='description'>
 						<div class='title'>도와주세요</div>
 						<div class='instruction'>사이트 만들기가 어려우면<br />여기를 클릭!</div>
