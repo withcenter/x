@@ -2,7 +2,7 @@
 	<tr>
 		<td valign='top'>
 			<div class='title'>Blog Profile Photo</div>
-			<?if( ms::meta('blog_profile_photo') ) {?><img src="<?=ms::url_site(etc::domain()).'/'.ms::meta('img_url').ms::meta('blog_profile_photo')?>" width=280px height=160px><br><br><?}?>
+			<?if( ms::meta('blog_profile_photo') ) {?><img src="<?=ms::meta('img_url').ms::meta('blog_profile_photo')?>" width=280px height=160px><br><br><?}?>
 			<input type='file' name='blog_profile_photo'>
 			<?if( ms::meta('blog_profile_photo') != '' ) { ?>
 				<input type='hidden' name='blog_profile_photo_remove' value='n'>
