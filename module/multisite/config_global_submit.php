@@ -25,13 +25,10 @@ if( !is_dir( $folder ) ) mkdir( $folder );
 ms::meta( 'img_url' , stripslashes(ms::url_site(etc::domain())).'/'.G5_DATA_DIR.'/upload/multisite/'.$site[0].'/' );
 
 foreach( $_FILES as $key => $value ) {
-	$invalid_file = 0;
 	if( $in[$key.'_remove'] == 'y' ) ms::meta( $key , '' );							// if checkbox( file-upload-name_remove ) == 'y' 
 	$pi = pathinfo( $value['name'] );													// then set meta ( file-upload-name = '' ) to remove photo
-
-	$allowed_files = array( 'jpg', 'jpeg', 'gif', 'png', 'bmp' );
-	
-	if ( !empty($pi['basename']) && !in_array($pi['extension'], $allowed_files ) ) jsGo("?module=$module&action=config_global","Invalid File(s), Please upload Image Files Only");
+	$allowed_files = array( 'jpg', 'jpeg', 'gif', 'png', 'bmp' );	
+	if ( !empty( $pi['basename'] ) && !in_array( $pi['extension'], $allowed_files ) ) jsGo("?module=$module&action=config_global","Invalid File(s), Please upload Image Files Only");
 	else {	
 		if( $name = $pi['filename'] ) {
 			while( file_exists( $folder.$name ) ) $name = rand( 000000 , 999999 ) . '_' . $name; // if file exists, add random 6 digit numbers before name																				
