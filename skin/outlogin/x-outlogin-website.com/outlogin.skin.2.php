@@ -7,8 +7,8 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 
 <div class='login-box'>
 	<ul class='login-box-top'>
-		<li class='top-button'><div class='selected'>내 프로필</div></li>
-		<li class='top-button'><div class='unselected'> <a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=register_form.php" id="ol_after_info">정보수정</a></div></li>
+		<li class='top-button'><div class='selected'>MY PROFILE</div></li>
+		<li class='top-button'><div class='unselected'> <a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=register_form.php" id="ol_after_info">EDIT INFO</a></div></li>
 	</ul>
 	<div style='clear:left;'></div>
 	<div class='login-box-middle'>
@@ -20,20 +20,20 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
         
 		<div class='message-num'>
 			<a href="<?php echo G5_BBS_URL ?>/memo.php" target="_blank" id="ol_after_memo" class="win_memo">
-				쪽지<span class='no_of_unreaded_message'><?php echo $memo_not_read ?></span>
+               <?php echo _l('Message');?><span class='no_of_unreaded_message'><?php echo $memo_not_read ?></span>
             </a>
 		</div>
 		<div class='point-scrap'>
             <a href="<?php echo G5_BBS_URL ?>/point.php" target="_blank" id="ol_after_pt" class="win_point">
-                포인트
+                <?php echo _l('Point');?>
                <?php echo $point ?>
             </a>
       
-            <a class='scrap-button' href="<?php echo G5_BBS_URL ?>/scrap.php" target="_blank" id="ol_after_scrap" class="win_scrap">스크랩</a>
+            <a class='scrap-button' href="<?php echo G5_BBS_URL ?>/scrap.php" target="_blank" id="ol_after_scrap" class="win_scrap"><?php echo _l('Scrap');?></a>
 			<div style='clear:right;'></div>
 		</div>
 		
-        <a href="<?php echo G5_BBS_URL ?>/logout.php" id="ol_after_logout" class='logout-button'>로그아웃</a>
+        <a href="<?php echo G5_BBS_URL ?>/logout.php" id="ol_after_logout" class='logout-button'>LOGOUT</a>
 	</div>
 </div> 
 

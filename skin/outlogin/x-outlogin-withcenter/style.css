@@ -109,13 +109,13 @@
 	font-weight: bold;
 }
 
-.login-box .login-box-middle .user-info, .login-box .login-box-middle .msg, .login-box .login-box-middle .point-scrap {
+.login-box .login-box-middle .user-info, .login-box .login-box-middle .message, .login-box .login-box-middle .point-scrap {
 	color: #585858;
 	height: 20px;
 	padding: 0 0 0 10px;
 }
 
-.login-box .login-box-middle .msg  a{
+.login-box .login-box-middle .message  a{
 	color: #585858;
 }
 
@@ -157,7 +157,7 @@
 	font-weight: bold;
 }
 
-.login-box .login-box-middle  .msg .no_of_unreaded_message {
+.login-box .login-box-middle  .message .no_of_unreaded_message {
 	display: inline-block;
 	height: 15px;
 	width: 15px;
