@@ -31,7 +31,7 @@ foreach( $_FILES as $key => $value ) {
 
 	$allowed_files = array( 'jpg', 'jpeg', 'gif', 'png', 'bmp' );
 	
-	if ( !in_array($pi['extension'], $allowed_files ) ) jsGo("?module=$module&action=config_global","Invalid File(s), Please upload Image Files Only");
+	if ( !empty($pi['basename']) && !in_array($pi['extension'], $allowed_files ) ) jsGo("?module=$module&action=config_global","Invalid File(s), Please upload Image Files Only");
 	else {	
 		if( $name = $pi['filename'] ) {
 			while( file_exists( $folder.$name ) ) $name = rand( 000000 , 999999 ) . '_' . $name; // if file exists, add random 6 digit numbers before name																				
