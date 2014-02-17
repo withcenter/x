@@ -324,6 +324,9 @@ body {
     font-size: 12px;
     padding: 1em;
     display: none;
+	cursor: pointer;
+	color: #224265;
+	font-weight: bold;
 }
 
 .back-to-top:hover {    
