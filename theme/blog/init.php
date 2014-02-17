@@ -2,8 +2,7 @@
 
 x::hook_register('head_begin', 'hook_multisite_head_begin');
 function hook_multisite_head_begin() {
-	//set_session('ss_mb_id','user02');
-	//di($_SESSION);
+
 }
 
 
