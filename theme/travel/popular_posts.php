@@ -21,7 +21,7 @@
 		usort($allhits, function($a, $b) {
 			return $b['wr_hit'] - $a['wr_hit'];
 		});
-		echo "<table>";
+		echo "<table cellpadding='10px' style='text-align: left'>";
 		for( $count = 0; $count < 3; $count++ ) {
 		$post_url = g::url()."/bbs/board.php?bo_table=".$allhits[$count]['bo_table']."&wr_id=".$allhits[$count]['wr_id'];
 		
