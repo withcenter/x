@@ -1,10 +1,10 @@
 <table width='100%' class='index-banner'>
 	<tr>
-		<td align='left'>
-			<?if( ms::meta('banner_1') ) {?><img src="<?=ms::meta('img_url').ms::meta('banner_1')?>"><br><?}?>
+		<td align='left' valign='top'>
+			<?if( ms::meta('banner_1') ) {?><img src="<?=ms::meta('img_url').ms::meta('banner_1')?>"><?}?>
 		</td>
-		<td align='right'>
-			<?if( ms::meta('banner_1') ) {?><img src="<?=ms::meta('img_url').ms::meta('banner_2')?>"><br><?}?>
+		<td align='right' valign='top'>
+			<?if( ms::meta('banner_2') ) {?><img src="<?=ms::meta('img_url').ms::meta('banner_2')?>"><?}?>
 		</td>
 	</tr>
 </table>
