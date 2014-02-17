@@ -75,6 +75,7 @@ function hook_blog_push( $hook )
 		$wr_subject = "deleted...";
 		$wr_content = "deleted...";
 		$mode = 'edit';
+		$in['w'] = 'u';
 	}
 	
 

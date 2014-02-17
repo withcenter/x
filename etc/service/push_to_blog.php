@@ -64,7 +64,6 @@ for ( $cb = 1; $cb <= 3; $cb++ ) {
 		
 	}
 	else $mode = 'write';
-	
 
 
 	
@@ -96,7 +95,7 @@ for ( $cb = 1; $cb <= 3; $cb++ ) {
 	else {
 		$return_no = $response->value()->scalarval();
 		
-		if ( $return_no == '1' ) return;			/// result from editPost();
+		if ( $return_no == '1' ) continue;			/// result from editPost();
 		
 		dlog("blog_no: ".$return_no);
 		if ( etc::cli() ) {
