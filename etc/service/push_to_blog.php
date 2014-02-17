@@ -39,6 +39,7 @@ for ( $cb = 1; $cb <= 3; $cb++ ) {
 	
 	
 	global $wr_subject, $wr_content;
+	dlog ( $wr_subject );
 	
 	if ( empty($wr_subject) ) $wr_subject = "No subject";
 	if ( empty($wr_content) ) $wr_content = "No content";

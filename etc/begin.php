@@ -59,7 +59,7 @@ x::hook_register( 'delete_end', 'hook_blog_push' );
 
 function hook_blog_push( $hook )
 {
-	global $wr_id, $g5, $bo_table, $in, $wr_content;
+	global $wr_id, $g5, $bo_table, $in, $wr_subject, $wr_content;
 	
 	
 	if ( $in['w'] == 'u' ) {
