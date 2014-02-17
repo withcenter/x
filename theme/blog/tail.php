@@ -2,7 +2,6 @@
 <div class='footer-text'><p><? if( ms::meta('footer_text') == '' ) {?>
 COPYRIGHT @ 2014 &nbsp&nbsp ALL RIGHTS RESERVED &nbsp&nbsp WITHCENTER.COM
 <?} else echo ms::meta('footer_text');?>
-<a href=''>DISCLOSURE POLICY</a><a href=''>PRIVACY POLICY</a>
 </p>
 
 </div>

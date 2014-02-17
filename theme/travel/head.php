@@ -19,7 +19,7 @@
 </div>
 <div id="wrapper">
     <div id="aside">
-        <?php echo outlogin('x-outlogin-withcenter'); // 외부 로그인  ?>
+        <?php echo outlogin('x-outlogin-travel'); // 외부 로그인  ?>
 		<?php include('left.php');?>
         <?php echo poll('basic'); // 설문조사  ?>
 
