@@ -4,12 +4,12 @@
 	<?}	else {?>
 		<img src='<?=x::url_theme()?>/img/blank_profile.png'?>
 	<?}?>
-	<p><?=ms::meta('blog_profile_message')?></p>
+	<div class='profile-message'><?=ms::meta('blog_profile_message')?></div>
 </div>
 <div class='profile-photo-bottom'><p>~</p></div>
 
 <div class='post-forum'>
-	<h2>글쓰기</h2>
+	<div class='small-title'>글쓰기</div>
 	<? 
 		if( !login() ) echo "<p>글 작성을 하실려면 로그인을 하셔야 합니다.</p>";
 		else {
@@ -41,7 +41,7 @@
 </div>
 
 <div class='categories'>
-	<h2>메뉴</h2>
+	<div class='small-title'>메뉴</div>
 	<ul>
 	<? 
 		$menu_1 = ms::meta('menu_1');
@@ -50,7 +50,7 @@
 		$option = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('menu_'.$i)."'");
 		${'menu_'.$i} = ms::meta('menu_'.$i);
 		if ( ${'menu_'.$i} ) {
-			?><li><a href='<?=g::url()?>/bbs/board.php?bo_table=<?=ms::meta('menu_'.$i)?>'><?=$option['bo_subject']?></a></li>
+			?><li class='menu-name'><a style='font-size: 9pt;' href='<?=g::url()?>/bbs/board.php?bo_table=<?=ms::meta('menu_'.$i)?>'><?=$option['bo_subject']?></a></li>
 		<?}}?>
 	</ul>	
 </div>
@@ -58,7 +58,7 @@
 <div class='latest-posts'>
 <?
 /**Sample Latest Post, this only fetches 5 latest post from $extra['menu_1'] */?>
-	<h2>최신 등록글</h2>
+	<div class='small-title3'>최신 등록글</div>
 	<ul>
 		<?
 		if( empty( $menu_1 ) ) $menu_1 = ms::meta('menu_1', ms::board_id(etc::domain()).'_1');
@@ -67,7 +67,7 @@
 			if( $option[$i]['wr_subject'] ) {?>
 				<li>
 					<a href='<?=g::url()?>/bbs/board.php?bo_table=<?=$menu_1?>&wr_id=<?=$option[$i]['wr_id']?>'>
-						<span class='subject'><?=$option[$i]['wr_subject']?></span><br><?=mb_substr($option[$i]['wr_content'],0,50)?>
+						<span class='subject'><?=$option[$i]['wr_subject']?></span><br><?=cut_str(strip_tags($option[$i]['wr_content']), 50)?>
 					</a>
 				</li>
 		<?}}?>
