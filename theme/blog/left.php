@@ -9,12 +9,12 @@
 <div class='profile-photo-bottom'><p>~</p></div>
 
 <div class='post-forum'>
-	<h2>Write</h2>
+	<h2>글쓰기</h2>
 	<? 
-		if( !login() ) echo "<p>You must login first to be able to post to this blog</p>";
+		if( !login() ) echo "<p>글 작성을 하실려면 로그인을 하셔야 합니다.</p>";
 		else {
 		if( isset( $in['write_post']) ) { 
-			if ( $in['write_post'] == '' ) jsAlert('Please select a forum');
+			if ( $in['write_post'] == '' ) jsAlert('게시판을 선택해 주세요.');
 			else header("Location: " . g::url()  ."/bbs/write.php?bo_table=" . $in['write_post']);
 		}
 	?>
@@ -25,7 +25,7 @@
 	?>
 		<select name='write_post'>
 		<?
-			echo "<option value=''>Click here to see forum list</option>";
+			echo "<option value=''>글쓰기 게시판 선택</option>";
 			foreach ( $rows as $row ) {
 				echo "<option value='$row[bo_table]'>$row[bo_subject]</option>";
 			}
@@ -41,7 +41,7 @@
 </div>
 
 <div class='categories'>
-	<h2>Categories</h2>
+	<h2>메뉴</h2>
 	<ul>
 	<? 
 		$menu_1 = ms::meta('menu_1');
@@ -58,7 +58,7 @@
 <div class='latest-posts'>
 <?
 /**Sample Latest Post, this only fetches 5 latest post from $extra['menu_1'] */?>
-	<h2>Latest Posts</h2>
+	<h2>최신 등록글</h2>
 	<ul>
 		<?
 		if( empty( $menu_1 ) ) $menu_1 = ms::meta('menu_1', ms::board_id(etc::domain()).'_1');
