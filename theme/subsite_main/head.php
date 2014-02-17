@@ -22,7 +22,7 @@
 					<input type="hidden" name="sfl" value="wr_subject||wr_content">
 					<input type="hidden" name="sop" value="and">
 					<input type="text" name="stx" id="search_txtbox" maxlength="20" placeholder='Search'>
-					<input type="image" id="search_submit" src="/x/theme/website.com/img/search.png">
+					<input type="image" id="search_submit" src="<?=x::url_theme()?>/img/search.png">
 					</form>
 
 					<script>
