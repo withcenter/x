@@ -67,7 +67,8 @@
 			if( $option[$i]['wr_subject'] ) {?>
 				<li>
 					<a href='<?=g::url()?>/bbs/board.php?bo_table=<?=$menu_1?>&wr_id=<?=$option[$i]['wr_id']?>'>
-						<span class='subject'><?=$option[$i]['wr_subject']?></span><br><?=cut_str(strip_tags($option[$i]['wr_content']), 50)?>
+						<div class='subject'><?=$option[$i]['wr_subject']?></div>
+						<div><?=cut_str(strip_tags($option[$i]['wr_content']), 50)?></div>
 					</a>
 				</li>
 		<?}}?>
