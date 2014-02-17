@@ -1,5 +1,14 @@
 <?php
-	
+for ( $cb = 1; $cb <= 3; $cb++ ) {
+		$api_end_point = ms::meta('api-end-point'.$cb);
+		$api_username = ms::meta('api-username'.$cb);
+		$api_password = ms::meta('api-password'.$cb);
+		
+		if ( empty($api_end_point) || empty($api_username) || empty($api_password) ) continue;
+		
+		dlog("including push_to_blog.php ...");
+
+
 	if ( php_sapi_name() == 'cli' ) { /// debugging
 		error_reporting( E_ALL ^ E_NOTICE );
 		include 'etc/x-standalone.php';
@@ -50,7 +59,8 @@
 	if ( $in['w'] == 'u' ) {
 		dlog("Blog push updating begins");
 		$mode = 'edit';
-		$blog_no = x::config( "$bo_table.$wr_id");
+		//$blog_no[$cb] = x::config( "$bo_table.$wr_id.$cb");
+		
 	}
 	else $mode = 'write';
 	
@@ -67,8 +77,9 @@
 			'subject'	=> $subject,
 			'description'	=> $content,
 			'mode'		=> $mode,
-			'blog_no'	=> $blog_no
+			'blog_no'	=> x::config( "$bo_table.$wr_id.$cb")
 		)
+		, $cb
 	);
 	
 	
@@ -82,21 +93,26 @@
 		
 	}
 	else {
-		$blog_no = $response->value()->scalarval();
+		$return_no = $response->value()->scalarval();
 		
-		if ( $blog_no == '1' ) return;			/// result from editPost();
+		if ( $return_no == '1' ) return;			/// result from editPost();
 		
-		dlog("blog_no: $blog_no");
+		dlog("blog_no: ".$return_no);
 		if ( etc::cli() ) {
 		}
 		else {
-			x::config( "$bo_table.$wr_id", $blog_no );
+			x::config( "$bo_table.$wr_id.$cb", $return_no );
 		}
 		
 	}
 	
-function push_to_blog( $o )
+}
+
+function push_to_blog( $o, $cb )
 {
+	
+	$client = "client_".$cb;
+	$f = "f_".$cb;
 
 	dlog("push_to_blog( $o ):");
 	dlog($o);
@@ -108,15 +124,15 @@ function push_to_blog( $o )
 	$subject	= $o['subject'];
 	$description	=  $o['description'];
 	$mode		= $o['mode'];
-	$blog_no	= $o['blog_no'];
+	$blog_no[$cb]	= $o['blog_no'];
 	
-	
+	dlog ( $blog_no[$cb] );
 	$publish = true;
 	echo "STEP 1..: $endpoint\n";
-	$client = new xmlrpc_client($endpoint);
+	$$client = new xmlrpc_client($endpoint);
 	//$client->setDebug(1);
 	echo "STEP 2..\n";
-	$client->setSSLVerifyPeer(false);
+	$$client->setSSLVerifyPeer(false);
 	$GLOBALS['xmlrpc_internalencoding']='UTF-8';
 	
 	$struct = array(
@@ -127,7 +143,7 @@ function push_to_blog( $o )
 	echo "STEP 3..\n";
 
 	if( $mode == 'write' ) {
-		$f = new xmlrpcmsg("metaWeblog.newPost",
+		$$f = new xmlrpcmsg("metaWeblog.newPost",
 			array(						
 				new xmlrpcval($blog_id, "string"),
 				new xmlrpcval($id, "string"),
@@ -138,9 +154,9 @@ function push_to_blog( $o )
 		);
 	}
 	else if( $mode == 'edit' ) {
-		$f = new xmlrpcmsg("metaWeblog.editPost",
+		$$f = new xmlrpcmsg("metaWeblog.editPost",
 			array(			
-				new xmlrpcval($blog_no, "string"),
+				new xmlrpcval($blog_no[$cb], "string"),
 				new xmlrpcval($id, "string"),
 				new xmlrpcval($password, "string"),
 				new xmlrpcval($struct , "struct"), 
@@ -149,9 +165,9 @@ function push_to_blog( $o )
 		);
 	}
 	
-	$f->request_charset_encoding = 'UTF-8';
+	$$f->request_charset_encoding = 'UTF-8';
 	
 	echo "Sending..\n";
-	$response = $client->send($f);
+	$response = $$client->send($$f);
 	return $response;
 }

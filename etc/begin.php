@@ -105,12 +105,9 @@ function hook_blog_push( $hook )
 	
 	
 	//for ( $cb = 0; $cb < MAX_BLOG_WRITER; $cb ++ ) {
-		$api_end_point = ms::meta('api-end-point');
-		$api_username = ms::meta('api-username');
-		$api_password = ms::meta('api-password');
-		dlog("including push_to_blog.php ...");
+	
 		include x::dir() . '/etc/service/push_to_blog.php';
-	//}
+	
 }
 // https://docs.google.com/a/withcenter.com/document/d/1Q3cunvTGTmGTathp_Jx4LTVn8tdsNzqsZmmpE8kLsvg/edit#heading=h.1zkefc3j0po6
 x::hook_register( 'outlogin', 'hook_outlogin_path' );
