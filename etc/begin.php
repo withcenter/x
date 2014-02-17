@@ -117,17 +117,19 @@ x::hook_register( 'outlogin', 'hook_outlogin_path' );
 function hook_outlogin_path()
 {
 	global $skin_folder, $outlogin_skin_path, $outlogin_skin_url;
-	$path = x::dir() . "/widget/outlogin/" . $skin_folder;
+	
+	if ( G5_IS_MOBILE ) $mobile_path = "/mobile";
+	
+	$path = x::dir() . "/skin$mobile_path/outlogin/" . $skin_folder;
 	if ( file_exists( $path ) ) {
 		$outlogin_skin_path = $path;
-		$outlogin_skin_url = x::url() . "/widget/outlogin/" . $skin_folder;
+		$outlogin_skin_url = x::url() . "/skin$mobile_path/outlogin/" . $skin_folder;
 	}
 	
-	/*
 	dlog("skin_folder: $skin_folder");
 	dlog("outlogin_skin_path: $outlogin_skin_path");
 	dlog("outlogin_skin_url: $outlogin_skin_url");
-	*/
+	
 	
 }
 
@@ -135,10 +137,14 @@ x::hook_register( 'latest', 'hook_latest_path' );
 function hook_latest_path()
 {
 	global $skin_folder, $latest_skin_path, $latest_skin_url;
-	$path = x::dir() . "/widget/latest/" . $skin_folder;
+	
+	
+	if ( G5_IS_MOBILE ) $mobile_path = "/mobile";
+	
+	$path = x::dir() . "/skin$mobile_path/latest/" . $skin_folder;
 	if ( file_exists( $path ) ) {
 		$latest_skin_path = $path;
-		$latest_skin_url = x::url() . "/widget/latest/" . $skin_folder;
+		$latest_skin_url = x::url() . "/skin$mobile_path/latest/" . $skin_folder;
 	}
 	
 	dlog("skin_folder: $skin_folder");
