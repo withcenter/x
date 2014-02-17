@@ -119,11 +119,11 @@ function hook_outlogin_path()
 		$outlogin_skin_path = $path;
 		$outlogin_skin_url = x::url() . "/widget/outlogin/" . $skin_folder;
 	}
-	/*
+	
 	dlog("skin_folder: $skin_folder");
 	dlog("outlogin_skin_path: $outlogin_skin_path");
 	dlog("outlogin_skin_url: $outlogin_skin_url");
-	*/
+	
 }
 
 x::hook_register( 'latest', 'hook_latest_path' );

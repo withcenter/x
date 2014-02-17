@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+.new-posts img {
+	margin: 0.5em;
+}
+
+.new-posts {
+	word-break: break-all;
+}
+
+.new-posts, .new-posts a {
+	color: #777777;
+	font-family: Arial;
+	text-decoration: none;
+}
+
+.new-posts > span {
+	margin-left: 1em;
+}
+.new-posts > table {
+	border-top: solid 2px #c4c4c4;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.new-posts > p {
+	text-align: center;
+	padding: 1em;
+	border-bottom: solid 2px #25828f;
+	margin-bottom: 1em;
+}
+
+.new-posts > table td{
+	border-bottom: solid 1px #c4c4c4;
+}
+
+.new-posts > table td:last-child{
+	border-bottom: solid 1px #c4c4c4;
+}
+
+.new-posts .label {
+	font-size: 11pt;
+	font-weight: bold;
+	text-transform: uppercase;
+	vertical-align: middle;
+}
