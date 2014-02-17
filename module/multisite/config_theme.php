@@ -15,7 +15,7 @@
 				<button type='submit' name='theme' disabled="disabled">
 					<div class='theme-thumb'>
 						<img src='theme/<?=ms::meta('theme')?>/preview.jpg' >
-						<p>이 반영 됨</p>
+						<p><b>선택 되었습니다.</b></p>
 						<table cellpadding='10px'><tr><td><?=ms::meta('theme')?></td></table>
 					</div>
 				</button>
