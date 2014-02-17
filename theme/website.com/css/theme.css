@@ -13,6 +13,13 @@ a:hover {
 	border:0;
 }
 
+#banner-wrapper {
+	margin-bottom: 20px;
+}
+#banner-wrapper  img {
+	border: 0;
+}
+
 #wrapper #aside{
 	border:0;
 	margin:15px 0 0 10px;	
@@ -164,11 +171,12 @@ fieldset{
 
 #howto-steps .steps img{
 	position:absolute;
-	top:37px;;
+	top:27px;;
 }
 
 #howto-steps .steps .step1-img{	
 	right:107px;
+	top: 17px;
 }
 
 #howto-steps .steps .step2-img{
@@ -190,8 +198,7 @@ fieldset{
 	border:1px solid #a6603a;		
 	max-width:440px;
 	height:40px;
-	margin:auto;
-	margin-bottom:20px;
+	margin: 20px auto;
 	box-shadow: inset 0 0 0 1px #f6a76d;
 }
 
@@ -221,48 +228,6 @@ fieldset{
 	text-align:center;
 }
 
-#banner-wrapper{
-	background-image:url('../img/banner.png');
-	background-repeat:no-repeat;
-	width:100%;
-	max-width:738px;
-	min-height:176px;
-	border:1px solid #b6b6b6;
-	color:#565656;
-	margin-bottom:15px;
-	font-family: '맑은 고딕', AppleGothic;
-}
-
-#banner-wrapper .title{
-	margin:10px 0 0 194px;
-	font-size: 1.8em;	
-	position: relative;
-	top: -5px;
-}
-
-#banner-wrapper ul{
-	margin-left:194px;
-	list-style:none;
-	padding:0;
-	margin:0;
-}
-
-#banner-wrapper ul{
-	margin-left:250px;
-}
-
-#banner-wrapper ul li{
-	margin:3px 0;
-	max-width:335px;
-	padding-left:15px;
-	position:relative;	
-}	
-
-#banner-wrapper ul li img{
-	position:absolute;
-	left:0;
-	top:5px;
-}
 
 	
 .post-content{
