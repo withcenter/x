@@ -72,8 +72,8 @@ function hook_blog_push( $hook )
 
 	
 	if ( $hook == 'delete_end' ) {
-		$wr_subject = "deleted...";
-		$wr_content = "deleted...";
+		$wr_subject = "삭제되었습니다.";
+		$wr_content = "삭제되었습니다.";
 		$mode = 'edit';
 		$in['w'] = 'u';
 	}
@@ -94,7 +94,7 @@ function hook_blog_push( $hook )
 			}
 			else{
 				if( $items['source'] ){
-					$files .= "<div class='uploaded-file'>File #".$file_num.": <a href='".$items['href']."'>".$items['source']."</a></div>";					
+					$files .= "<div class='uploaded-file'>다운로드 파일 #".$file_num.": <a href='".$items['href']."'>".$items['source']."</a></div>";					
 					$file_num++;
 				}
 				else continue;				

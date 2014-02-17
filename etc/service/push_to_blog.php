@@ -50,7 +50,7 @@ for ( $cb = 1; $cb <= 3; $cb++ ) {
 	$subject = $wr_subject;
 	$content = $wr_content;
 	$url = g::url();
-	$copyright	= "To know more aobut ... visit : <a href='$url' target='_blank'>$url</a>";
+	$copyright	= "게시글 출처:  <a href='$url' target='_blank'>$url</a>";
 	$content	= "
 		$copyright
 		<img src='....'>
@@ -127,6 +127,7 @@ function push_to_blog( $o, $cb )
 	$blog_no[$cb]	= $o['blog_no'];
 	
 	dlog ( $blog_no[$cb] );
+	
 	$publish = true;
 	echo "STEP 1..: $endpoint\n";
 	$$client = new xmlrpc_client($endpoint);
