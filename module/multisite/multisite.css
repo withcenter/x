@@ -192,17 +192,17 @@ table tr td {
 	color: #555555;
 }
 */
-table .header {
+table > .header {
 	background-color: #333333;
 }
 
-table .header td {
+table > .header td {
 	border-left: 1px solid #ffffff;
 	color: #ffffff;
 	padding: 5px 10px;
 	font-size: 10pt;
 }
-table .header td:first-child {
+table > .header td:first-child {
 	border-left: 0;
 }
 
