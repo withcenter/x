@@ -192,17 +192,17 @@ table tr td {
 	color: #555555;
 }
 */
-table .header {
+table > .header {
 	background-color: #333333;
 }
 
-table .header td {
+table > .header td {
 	border-left: 1px solid #ffffff;
 	color: #ffffff;
 	padding: 5px 10px;
 	font-size: 10pt;
 }
-table .header td:first-child {
+table > .header td:first-child {
 	border-left: 0;
 }
 
@@ -551,6 +551,21 @@ table .header td:first-child {
 .config-write {
 	margin-top: 10px;
 }
+
+.config-write .api-info {
+	margin-bottom: 10px;
+	border: 1px solid #d5d5d5;
+	padding: 10px;
+	border-radius: 4px;
+}
+.config-write .api-info  > .title {
+	font-size: 9pt;
+	font-weight: bold;
+	color: #666666;
+	margin-bottom: 10px;
+	font-family: '맑은 고딕', AppleGothic;
+}
+
 .config-write .row {
 	margin-bottom: 5px;
 }

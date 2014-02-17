@@ -15,4 +15,8 @@ $(function(){
         $('html, body').animate({scrollTop: 0}, 500);
         return false;
     })
+	
+	$("select[name='write_post']").change(function(){
+		$("form[name='post_write']").submit();
+	});
 });

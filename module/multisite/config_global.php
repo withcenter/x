@@ -75,6 +75,7 @@
 								$default_value =  $row['bo_subject'];
 								break;
 							}
+							else $default_value = null;
 						}
 						
 						echo $default_value ? $default_value : '게시판 선택';

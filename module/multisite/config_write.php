@@ -13,20 +13,26 @@ if ( $in['done'] ) {
 		<input type='hidden' name='module' value='multisite' />
 		<input type='hidden' name='action' value='config_write' />
 		<input type='hidden' name='done' value=1 />
-		<div class='row'>
-			<span class='item4'>API연결 URL</span>
-			<input type='text' name='api-end-point' value='<?=ms::meta('api-end-point')?>' />
-		</div>
-		
-		<div class='row'>
-			<span class='item4'>아이디</span>
-			<input type='text' name='api-username' value='<?=ms::meta('api-username')?>' />
-		</div>
-		
-		<div class='row'>
-			<span class='item4'>API연결 암호</span>
-			<input type='text' name='api-password' value='<?=ms::meta('api-password')?>' />
-		</div>
+<?php 
+	for ( $i = 1; $i <=3; $i++ ) {?>
+		<fieldset class='api-info'>
+			<div class='title'>API 정보 <?=$i?></div>
+			<div class='row'>
+				<span class='item4'>API연결 URL</span>
+				<input type='text' name='api-end-point<?=$i?>' value='<?=ms::meta('api-end-point'.$i)?>' />
+			</div>
+			
+			<div class='row'>
+				<span class='item4'>아이디</span>
+				<input type='text' name='api-username<?=$i?>' value='<?=ms::meta('api-username'.$i)?>' />
+			</div>
+			
+			<div class='row'>
+				<span class='item4'>API연결 암호</span>
+				<input type='text' name='api-password<?=$i?>' value='<?=ms::meta('api-password'.$i)?>' />
+			</div>
+		</fieldset>
+	<? }?>
 		<input type='submit' value='업데이트' />
 		<div style='clear:right;'></div>
 	</form>

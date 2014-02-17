@@ -1,6 +1,14 @@
 <?php
-
-
+/** @short variables to replace those in skin files. ( like outlogin.lib.php )
+ * https://docs.google.com/a/withcenter.com/document/d/1Q3cunvTGTmGTathp_Jx4LTVn8tdsNzqsZmmpE8kLsvg/edit#heading=h.1zkefc3j0po6
+ */
+	$skin_folder = null;				// this is used in all the skin(widget)
+	$outlogin_skin_path=null;
+	$outlogin_skin_url=null;
+	$latest_skin_path = null;
+	$latest_skin_url  = null;
+	
+	
 // -----------------------------------------------------------------------------
 //
 // @TODO ordered by JaeHo
@@ -51,7 +59,7 @@ x::hook_register( 'delete_end', 'hook_blog_push' );
 
 function hook_blog_push( $hook )
 {
-	global $wr_id, $g5, $bo_table, $in, $wr_content;
+	global $wr_id, $g5, $bo_table, $in, $wr_subject, $wr_content;
 	
 	
 	if ( $in['w'] == 'u' ) {
@@ -64,12 +72,12 @@ function hook_blog_push( $hook )
 
 	
 	if ( $hook == 'delete_end' ) {
-		$wr_subject = "deleted...";
-		$wr_content = "deleted...";
+		$wr_subject = "삭제되었습니다.";
+		$wr_content = "삭제되었습니다.";
 		$mode = 'edit';
+		$in['w'] = 'u';
 	}
 	
-
 	
 	
 	$info = get_file ( $bo_table, $wr_id );
@@ -85,7 +93,7 @@ function hook_blog_push( $hook )
 			}
 			else{
 				if( $items['source'] ){
-					$files .= "<div class='uploaded-file'>File #".$file_num.": <a href='".$items['href']."'>".$items['source']."</a></div>";					
+					$files .= "<div class='uploaded-file'>다운로드 파일 #".$file_num.": <a href='".$items['href']."'>".$items['source']."</a></div>";					
 					$file_num++;
 				}
 				else continue;				
@@ -97,13 +105,39 @@ function hook_blog_push( $hook )
 	
 	
 	//for ( $cb = 0; $cb < MAX_BLOG_WRITER; $cb ++ ) {
-		$api_end_point = ms::meta('api-end-point');
-		$api_username = ms::meta('api-username');
-		$api_password = ms::meta('api-password');
-		dlog("including push_to_blog.php ...");
+	
 		include x::dir() . '/etc/service/push_to_blog.php';
-	//}
+	
+}
+// https://docs.google.com/a/withcenter.com/document/d/1Q3cunvTGTmGTathp_Jx4LTVn8tdsNzqsZmmpE8kLsvg/edit#heading=h.1zkefc3j0po6
+x::hook_register( 'outlogin', 'hook_outlogin_path' );
+function hook_outlogin_path()
+{
+	global $skin_folder, $outlogin_skin_path, $outlogin_skin_url;
+	$path = x::dir() . "/widget/outlogin/" . $skin_folder;
+	if ( file_exists( $path ) ) {
+		$outlogin_skin_path = $path;
+		$outlogin_skin_url = x::url() . "/widget/outlogin/" . $skin_folder;
+	}
+	/*
+	dlog("skin_folder: $skin_folder");
+	dlog("outlogin_skin_path: $outlogin_skin_path");
+	dlog("outlogin_skin_url: $outlogin_skin_url");
+	*/
 }
 
-
+x::hook_register( 'latest', 'hook_latest_path' );
+function hook_latest_path()
+{
+	global $skin_folder, $latest_skin_path, $latest_skin_url;
+	$path = x::dir() . "/widget/latest/" . $skin_folder;
+	if ( file_exists( $path ) ) {
+		$latest_skin_path = $path;
+		$latest_skin_url = x::url() . "/widget/latest/" . $skin_folder;
+	}
+	
+	dlog("skin_folder: $skin_folder");
+	dlog("latest_skin_path: $latest_skin_path");
+	dlog("latest_skin_url: $latest_skin_url");
+}
 

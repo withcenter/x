@@ -8,20 +8,19 @@
 			</a>
         </div>
         <ul id="tnb">
-			<li><a href='<?=ms::url_site(etc::domain())?>'>Home</a></li>
-			<li><a href=''>About</a></li>
-			<li><a href=''>Support</a></li>
-			<li><a href=''>Contact</a></li>
-			<?if( ms::admin() ) { ?><li><a href='<?=ms::url_config()?>'>Admin</a></li><?}?>
+			<li><a href='<?=ms::url_site(etc::domain())?>'>홈</a></li>
+			<li><a href='<?=ms::url_site(etc::domain())?>/bbs/board.php?bo_table=qna'>질문과답변</a></li>
+			<li><a href='<?=ms::url_site(etc::domain())?>/bbs/board.php?bo_table=help'>이용안내</a></li>
+			<li><a href='http://www.philgo.net' target='_blank'>메인사이트</a></li>
+			<?if( ms::admin() ) { ?><li><a href='<?=ms::url_config()?>'>사이트관리</a></li><?}?>
         </ul>	
     </div>
 	
 </div>
 <div id="wrapper">
     <div id="aside">
-        <?php echo outlogin('x-outlogin-withcenter'); // 외부 로그인  ?>
+        <?php echo outlogin('x-outlogin-travel'); // 외부 로그인  ?>
 		<?php include('left.php');?>
-        <?php echo poll('basic'); // 설문조사  ?>
 
 	</div>
     <div id="container">

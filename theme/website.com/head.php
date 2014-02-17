@@ -64,12 +64,17 @@
 <!-- 콘텐츠 시작 { -->
 
 <div id="wrapper">
-    <div id="aside">
-		<?php echo outlogin('x-outlogin-website.com'); // 외부 로그인  ?>
-        <?php echo poll('basic'); // 설문조사  ?>
-		<?php include "popular_forums.php"; ?>
-		<?php include "new_sites.php"; ?>
-    </div>
-    <div id="container">
-		<?if ( (preg_match('/^config/', $action)) || (preg_match('/^config_/', $action)) ) include ms::site_menu();?>
-        <?php if ((!$bo_table || $w == 's' ) && !defined("_INDEX_")) { ?><div id="container_title"><?php echo $g5['title'] ?></div><?php } ?>
+	<table cellpadding=0 cellspacing=0 width='100%'>
+		<tr valign='top'>
+			<td>
+				<div id="aside">
+					<?php echo outlogin('x-outlogin-website.com'); // 외부 로그인  ?>
+					<?php echo poll('basic'); // 설문조사  ?>
+					<?php include "popular_forums.php"; ?>
+					<?php include "new_sites.php"; ?>
+				</div>
+			</td>
+			<td>
+				<div id="container">
+					<?if ( (preg_match('/^config/', $action)) || (preg_match('/^config_/', $action)) ) include ms::site_menu();?>
+					<?php if ((!$bo_table || $w == 's' ) && !defined("_INDEX_")) { ?><div id="container_title"><?php echo $g5['title'] ?></div><?php } ?>

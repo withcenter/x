@@ -38,6 +38,9 @@ if ( $argv[1] == 'language' ) {
 	include x::dir() . "/etc/patch/begin_end.php";
 	include x::dir() . "/etc/patch/write_update.php";
 	include x::dir() . "/etc/patch/delete.php";
+	include x::dir() . "/etc/patch/outlogin.lib.php";
+	include x::dir() . "/etc/patch/latest.lib.php";
+	
 	
 	//include x::dir() . "/etc/patch/menu.php";
 	//include x::dir() . "/etc/patch/menu.php";
@@ -129,4 +132,26 @@ function patch_file( $file, $kvs )
 	}
 	file::write( $file, $data );
 	echo "$file patched\n";
+}
+
+
+
+function patch_string( $string, $src, $dst )
+{
+	if ( empty($string) ) {
+		echo " [ERROR] No php source data";
+	}
+	if ( pattern_exist($string, $dst) ) {
+		echo("	Already patched\n");
+	}
+	else {
+		if ( ! pattern_exist($string, $src) ) {
+			echo " Srouce pattern does not exist. FAILED\n[ source patttern ] : $src";
+		}
+		else {
+			$string = str_replace( $src, $dst, $string );
+			echo " Patched";
+		}
+	}
+	return $string;
 }

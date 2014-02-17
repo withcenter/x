@@ -10,7 +10,9 @@
 	font-size: 30px;
 	color: #ffffff;
 	text-decoration: none;
-	font-family: Lucida Sans Unicode;
+	font-family: '맑은 고딕', AppleGothic;
+	position: relative;
+	top: -2px;
 }
 
 #tnb li {
@@ -27,7 +29,10 @@
 	padding: 1.5em;
 	font-size: 12pt;
 	color: #ffffff;
-	font-family: Arial Narrow;
+	font-family: '맑은 고딕', AppleGothic;
+	font-weight: bold;
+	position: relative;
+	top: -2px;
 }
 
 #tnb .menu-home {
@@ -88,6 +93,7 @@
 	border-left: 105px solid transparent;
 	border-right: 105px solid transparent;
 	border-top: 25px solid #d1b882;
+	margin-bottom: 20px;
 }
 
 #aside .profile-photo-bottom p {
@@ -96,27 +102,60 @@
 	left: -0.25em;
 }
 
-#aside .post-forum {
-	margin-top: 1em;
-}
-#aside .post-forum p {
-	font-family: Arial;
-	padding: 1em;
-}
 
 #aside .post-forum select {
 	border-radius: 1px;
-	margin-top: 1em;
 	border: 0;
 	background: #56493f;
 	color: #ffffff;
-	font-family: Arial;
-	font-size: 11pt;
+	font-family: '맑은 고딕', AppleGothic;
+	font-size: 9pt;
 	padding: 0.5em;
 	width: 100%;
 }
+#aside .categories ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#aside .categories ul li {
+	border-top: 1px solid #d5d5d5;
+}
 
+#aside .menu-name a{
+	display: inline-block;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 10px;
+	width: 220px;
+}
 
+#aside .menu-name a:hover {
+	background-color: #d9e3e8;
+}
+
+#aside  .small-title {
+	font-size: 10pt;
+	font-weight: bold;
+	font-family: '맑은 고딕', AppleGothic;
+	background-color: #555555;
+	color: #ffffff;
+	width: 70px;
+	text-align: center;
+	height: 25px;
+	line-height: 23px;
+	margin-bottom: 10px;
+}
+
+#aside .small-title3 {
+	font-family: '맑은 고딕', AppleGothic;
+	font-weight: bold;
+	color: #544b25;
+	font-size: 11pt;
+	border-bottom: 1px solid #135d84;
+	margin-bottom: 5px;
+	padding: 0 10px 5px 10px
+}
 #aside .post-forum select option {
 	padding: 0.25em !important;
 }
@@ -126,7 +165,11 @@
 	width: 100%;
 	border: solid 1px #979693; 
 }
-
+#aside .profile-photo .profile-message {
+	font-size: 9pt;
+	font-family: '맑은 고딕', AppleGothic;
+	
+}
 #aside .social-icons {
 	margin-top: 1em;
 	text-align: center;
@@ -168,23 +211,28 @@
 
 #aside .latest-posts {
 	margin-top: 1em;
+	word-break: break-word;
 }
 
 #aside .latest-posts ul li a {
-	font-family: Helvetica;
-	font-size: 11pt;
+	font-family: '맑은 고딕', AppleGothic;
+	font-size: 9pt;
 	text-decoration: none;
 	color: #565656;
 }
 
-#aside .latest-posts ul li a span.subject {
-	font-style: italic;
+#aside .latest-posts ul li a div.subject {
+	font-size: 9pt;
+	font-weight: bold;
+	margin-bottom: 5px;
+	color: #62590d;
 }
 
 
 #aside .latest-posts ul li {
 	padding: 0.5em 0 0.5em 0;
 	border-bottom: solid 1px #dfdfdf;
+	font-size: 9pt;
 }
 
 #aside .latest-posts ul li:first-child {
@@ -253,7 +301,7 @@ body {
 }
 
 .footer-text {
-	margin: 1em 0 0 220px;
+	text-align: center;
 	clear:both;
 }
 
@@ -276,6 +324,9 @@ body {
     font-size: 12px;
     padding: 1em;
     display: none;
+	cursor: pointer;
+	color: #224265;
+	font-weight: bold;
 }
 
 .back-to-top:hover {    
