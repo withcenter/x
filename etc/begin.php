@@ -78,7 +78,6 @@ function hook_blog_push( $hook )
 		$in['w'] = 'u';
 	}
 	
-
 	
 	
 	$info = get_file ( $bo_table, $wr_id );
