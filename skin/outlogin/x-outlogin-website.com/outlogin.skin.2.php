@@ -7,8 +7,8 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 
 <div class='login-box'>
 	<ul class='login-box-top'>
-		<li class='top-button'><div class='selected'>MY PROFILE</div></li>
-		<li class='top-button'><div class='unselected'> <a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=register_form.php" id="ol_after_info">EDIT INFO</a></div></li>
+		<li class='top-button'><div class='selected'>내 프로필</div></li>
+		<li class='top-button'><div class='unselected'> <a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=register_form.php" id="ol_after_info">정보 수정</a></div></li>
 	</ul>
 	<div style='clear:left;'></div>
 	<div class='login-box-middle'>
