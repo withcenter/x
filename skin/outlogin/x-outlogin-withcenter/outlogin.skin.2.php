@@ -18,7 +18,7 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
      
 		<div class='user-info'><b><?php echo $nick ?></b>님 로그인</div>
         
-		<div class='msg'>
+		<div class='message'>
 			<a href="<?php echo G5_BBS_URL ?>/memo.php" target="_blank" id="ol_after_memo" class="win_memo">
                <?php echo _l('Message');?><span class='no_of_unreaded_message'><?php echo $memo_not_read ?></span>
             </a>

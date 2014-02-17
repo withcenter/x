@@ -7,8 +7,8 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 
 <div class='login-box'>
 	<ul class='login-box-top'>
-		<li class='top-button'><div class='selected'>로그인</div></li>
-		<li class='top-button'><div class='unselected'><a href="<?php echo G5_BBS_URL ?>/register.php">회원가입</a></div></li>
+		<li class='top-button'><div class='selected'>SIGN IN</div></li>
+		<li class='top-button'><div class='unselected'><a href="<?php echo G5_BBS_URL ?>/register.php">REGISTER</a></div></li>
 	</ul>
 	<div style='clear:left;'></div>
 	
@@ -18,19 +18,19 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 
 			<div class='input-wrapper'>
 				<img class='user-icon' src='<?=$outlogin_skin_url?>/username.gif' />
-				<input type="text" id="ol_id" name="mb_id" required  maxlength="20" placeholder='아이디'>
+				<input type="text" id="ol_id" name="mb_id" required  maxlength="20" placeholder='Username'>
 			</div>
 			
 			<div class='input-wrapper border-bottom'>
 				<img class='password-icon' src='<?=$outlogin_skin_url?>/key.gif' />
-				<input type="password" name="mb_password" id="ol_pw" required maxlength="20" placeholder='비밀번호' style='width: 200px;'>
+				<input type="password" name="mb_password" id="ol_pw" required maxlength="20" placeholder='Password' style='width: 200px;'>
 			</div>
 			
 			<div class='remember_me'>
 				<img class='remember-me-check' src='<?=$outlogin_skin_url?>/unchecked.png' />
-				<input type="checkbox" style='display: none;' name="auto_login" value="1" id="auto_login">자동 로그인
+				<input type="checkbox" style='display: none;' name="auto_login" value="1" id="auto_login"><?php echo _l('Remember Password');?>
 			</div>
-			<input type="submit" id="ol_submit" value='로그인'/>
+			<input type="submit" id="ol_submit" value='SIGN IN'/>
 			<? /*<a href="<?php echo G5_BBS_URL ?>/password_lost.php" id="ol_password_lost"><?php echo _l('Find Password');?></a> */?>
 		</form>
 	</div>
