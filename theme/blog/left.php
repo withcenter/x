@@ -32,12 +32,6 @@
 		?>
 		</select>
 	</form>
-	
-	<script>
-		$("select[name='write_post']").change(function(){
-			$("form[name='post_write']").submit();
-		});
-	</script>
 	<?}?>
 </div>
 
