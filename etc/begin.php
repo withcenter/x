@@ -75,9 +75,9 @@ function hook_blog_push( $hook )
 		$wr_subject = "삭제되었습니다.";
 		$wr_content = "삭제되었습니다.";
 		$mode = 'edit';
+		$in['w'] = 'u';
 	}
 	
-
 	
 	
 	$info = get_file ( $bo_table, $wr_id );
