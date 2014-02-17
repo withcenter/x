@@ -8,10 +8,6 @@
 				<input type='hidden' name='banner_1_remove' value='n'>
 				<input type='checkbox' name='banner_1_remove' value='y'><span class='title-small'>Remove Image</span>
 			<?}?>
-			<div class='title'>배너1의 문구1</div>
-			<textarea name='banner1_text1'><?=stripslashes(ms::meta('banner1_text1'))?></textarea>
-			<div class='title'>배너1의 문구2</div>
-			<textarea name='banner1_text2'><?=stripslashes(ms::meta('banner1_text2'))?>'</textarea>
 		</td>
 
 		<td>
@@ -22,10 +18,6 @@
 				<input type='hidden' name='banner_2_remove' value='n'>
 				<input type='checkbox' name='banner_2_remove' value='y'><span class='title-small'>Remove Image</span>
 			<?}?>
-			<div class='title'>배너2의 문구1</div>
-			<textarea name='banner2_text1'><?=stripslashes(ms::meta('banner2_text1'))?></textarea>
-			<div class='title'>배너2의 문구2</div>
-			<textarea name='banner2_text2'><?=stripslashes(ms::meta('banner2_text2'))?>'</textarea>
 		</td>
 	</tr>
 </table>

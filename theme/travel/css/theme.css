@@ -54,7 +54,7 @@ body {
 #aside {
 	float:left;
 	border: 1px solid #e34663;
-	padding: 10px 9px 10px 8px;
+	padding: 1em 0.5em; 1em 0.5em;
 	margin: 1em 0 0 1em;
 	background: #f4f4f4;
 }
@@ -73,7 +73,7 @@ body {
 .footer-text {
 	margin-top: 1em;
 	clear:both;
-	float: right;
+	text-align: right;
 }
 
 .footer-text p {
