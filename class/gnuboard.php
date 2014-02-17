@@ -718,6 +718,11 @@ class gnuboard {
 	}
 	
 	
+	static function forum_exist($bo_table)
+	{
+		return db::table_exist( self::board_table($bo_table) );
+	}
+	
 	
 } // eo class
 

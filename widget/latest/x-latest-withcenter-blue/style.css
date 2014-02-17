@@ -1,0 +1,49 @@
+.withcenter_latest ul {
+	list-style:none;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 10px;
+	font-family: '맑은 고딕', AppleGothic;
+}
+.withcenter_latest img {
+	border: 0;
+}
+
+.withcenter_latest a, .withcenter_latest a:hover {
+	text-decoration: none;
+}
+.withcenter_latest .title {
+	height: 29px;
+	border-bottom: 1px solid #d5d5d5;
+	line-height: 29px;
+	margin-bottom: 11px;
+	padding-bottom: 4px;
+}
+.withcenter_latest .title  .top-title{
+	color: #565656;
+	font-family: '맑은 고딕', AppleGothic;
+}
+
+.withcenter_latest .title .more_btn {
+	float: right;
+	position: relative;
+	top: 3px;
+}
+.withcenter_latest ul  li  {
+	line-height: 20px;
+	height: 20px;
+	width: 223px;
+	overflow: hidden;
+	
+}
+.withcenter_latest ul  li a {
+	text-decoration: none;
+	color: #858585;
+	font-size: 1.124em;
+}
+
+.withcenter_latest ul  li .dot {
+	position: relative;
+	top: -2px;
+	margin: 0 6px 0 10px;
+}

@@ -51,8 +51,22 @@
 		<td width='33.3%'><? include x::theme('newest.site.list')?></td>
 		<td width='33.4%'><? include x::theme('multisite.latest.posts')?></td>
 		<td width='33.3%'>
-			<div><?=latest('x-latest-withcenter-blue','qna', 15, 21, $cache_time=1, x::url_theme().'/img/bag-blue.png')?></div>
-			<div><?=latest('x-latest-withcenter-blue','help', 15, 21, $cache_time=1, x::url_theme().'/img/bag-blue.png')?></div>
+			<div><?
+					if ( g::forum_exist('qna') ) {
+						echo latest('x-latest-withcenter-blue','qna', 15, 21, $cache_time=1, x::url_theme().'/img/bag-blue.png');
+					}
+					else {
+						echo "NO Post";
+					}
+				?></div>
+			<div><?
+				if ( g::forum_exist('qna') ) {
+					echo latest('x-latest-withcenter-blue','help', 15, 21, $cache_time=1, x::url_theme().'/img/bag-blue.png');
+				}
+				else {
+					echo "No Post";
+				}
+			?></div>
 		</td>
 	</tr>
 </table>

@@ -149,5 +149,8 @@ class database {
 		return addslashes($data);
 	}
 	
-	
+	static function table_exist($table)
+	{
+		return db::result("SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE table_schema = '".G5_MYSQL_DB."' AND table_name ='$table'");
+	}
 }
