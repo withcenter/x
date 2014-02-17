@@ -47,12 +47,11 @@
 		<p>$content</p>
 		$copyright
 	";
-	if ( $in['w'] == 'u' ) {
+	if ( $mode == 'edit' ) {
 		dlog("Blog push updating begins");
-		$mode = 'edit';
 		$blog_no = x::config( "$bo_table.$wr_id");
 	}
-	else $mode = 'write';
+	
 	
 
 
