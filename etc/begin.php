@@ -93,7 +93,7 @@ function hook_blog_push( $hook )
 			}
 			else{
 				if( $items['source'] ){
-					$files .= "<div class='uploaded-file'>파일명 #".$file_num.": <a href='".$items['href']."'>".$items['source']."</a></div>";					
+					$files .= "<div class='uploaded-file'>다운로드 파일 #".$file_num.": <a href='".$items['href']."'>".$items['source']."</a></div>";					
 					$file_num++;
 				}
 				else continue;				
