@@ -17,3 +17,11 @@ function hook_head_begin()
 }
 
 
+/**
+ *  @short redirecting to login page if the user has not logged.
+ */
+if ( ( $module == 'multisite' && $action == 'create' ) && !login() ) {
+	jsGo( G5_BBS_URL . '/login.php' );
+	exit;
+}
+

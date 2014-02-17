@@ -11,6 +11,7 @@ x::hook( 'end_before_html' );
 echo $html;
 x::hook( 'end_after_html' );
 
+x::hook('end');
 
 
 

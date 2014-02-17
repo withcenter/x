@@ -30,7 +30,10 @@
 /** @short load 'register_result.skin.php' in the 'x/theme/xxxx/' folder instead of 'skin/' folder.
  *  
  */
-if ( strpos($_SERVER['PHP_SELF'], 'register_result.php') !== false && file_exists(x::theme('register_result.skin')) ) $member_skin_path = x::theme_folder();
+if ( strpos($_SERVER['PHP_SELF'], 'register_result.php') !== false && file_exists(x::theme('register_result.skin')) ) {
+	$member_skin_path	= x::theme_folder();
+	$member_skin_url	= x::theme_url( '/' );
+}
 /** @short the code below are the same as above.
  * 
 if ( strpos($_SERVER['PHP_SELF'], 'register_result.php') !== false ) {
@@ -120,9 +123,11 @@ function hook_outlogin_path()
 		$outlogin_skin_url = x::url() . "/widget/outlogin/" . $skin_folder;
 	}
 	
+	/*
 	dlog("skin_folder: $skin_folder");
 	dlog("outlogin_skin_path: $outlogin_skin_path");
 	dlog("outlogin_skin_url: $outlogin_skin_url");
+	*/
 	
 }
 
@@ -140,4 +145,20 @@ function hook_latest_path()
 	dlog("latest_skin_path: $latest_skin_path");
 	dlog("latest_skin_url: $latest_skin_url");
 }
+
+
+
+/**
+ *  @short login.php
+ */
+if ( strpos($_SERVER['PHP_SELF'], 'login.php') !== false ) {
+	include_once G5_PATH . '/_head.php';
+	x::hook_register('end', 'hook_show_tail');
+	function hook_show_tail()
+	{
+		global $config;
+		include_once G5_PATH . '/_tail.php';
+	}
+}
+
 
