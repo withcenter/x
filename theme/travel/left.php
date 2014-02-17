@@ -1,5 +1,5 @@
 <div class='popular-posts'>
-<span><img src="<?=x::url_theme()?>/img/popular_icon.jpg"><span class='label'>Popular Posts</span></span>
+<span><img src="<?=x::url_theme()?>/img/popular_icon.jpg"><span class='label'>조회수가 많은 글</span></span>
 <?include x::theme('popular_posts');?>
 
 </div>

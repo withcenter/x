@@ -31,7 +31,7 @@
 			<tr>
 				<td>
 					<a href='<?=$post_url?>' target='_blank'>
-						<?=$popular_subject?> (<?=$allhits[$count]['wr_hit']?> 조회수)<br>
+						<?=$popular_subject?> (조회수 <?=$allhits[$count]['wr_hit']?>)<br>
 						<?=$popular_content?>
 					</a>
 				</td>
