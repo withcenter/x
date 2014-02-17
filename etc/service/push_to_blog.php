@@ -64,7 +64,7 @@
 			'endpoint'	=> $blogs['naver']['endpoint'],
 			'id'		=> $blogs['naver']['id'],
 			'password'	=> $blogs['naver']['password'],
-			'subject'	=> $subject,
+			'title'	=> $subject,
 			'description'	=> $content,
 			'mode'		=> $mode,
 			'blog_no'	=> $blog_no
