@@ -53,12 +53,14 @@
 <div style='clear:left'></div>
 <!--[if IE 7]>
 	<style>
+		.multisite-menu ul {
+			height 30px;
+		}
 		.multisite-menu ul li {
 			border: 1px solid red;
 			display: block;
 			float: left;
 			width: 70px;
-			height: 30px;
 		}
 	</style>
 <![endif]-->
