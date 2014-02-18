@@ -45,12 +45,13 @@
 	width: 760px;
 	border: 0 !important;
 	padding: 0;
+	word-break: break-all;
 }
 
 #container .banner {
 	width: 655px;
 	height: 350px;
-	overflow: hidden;
+	overflow: hidden;	
 	position: relative;
 }
 
@@ -63,7 +64,9 @@
 }
 
 #container .banner-image {
-	position: relative;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 #container .banner img {
@@ -128,7 +131,7 @@
 	vertical-align: top;
 }
 
-#container .middle-panel h2 {
+#container .middle-panel h2, #container .bottom-panel h2 {
 	color: #5d5d5d;
 	font-size: 12pt;
 	font-family: Arial;
@@ -162,7 +165,26 @@
 	height: 60px;
 }
 
+#container .bottom-panel .travel-packages {
+	margin: 1em 0 0 0;
+	width: 100%;
+}
 
+#container .bottom-panel .travel-packages .travel-package {
+	text-align: center;
+	display: inline-block;
+	margin: 1em 0.25em 0.25em 0.25em;
+}
+
+#container .bottom-panel .travel-packages .travel-package p {
+	margin: 0.5em 0 0 0;
+}
+
+#container .bottom-panel .travel-packages .travel-package p .travel-title {
+	font-size: 11pt;
+	font-weight: bold;
+	font-family: Malgun Gothic, Gotum, Arial;
+}
 /******************/
 #top-menu{
 	background: #e8e8e8; /* Old browsers */

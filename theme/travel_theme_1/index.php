@@ -72,3 +72,16 @@
 		</div>
 	</div>
 </div>
+
+<div class='bottom-panel'>
+	<div class='travel-packages'>
+		<h2> Best Travel Packages </h2>
+		<?
+			$subject = "This is subject";
+			$content = "this is the content";
+			for ( $i = 1; $i <= 5; $i++ ) {
+				echo "<div class='travel-package'><img src='#' width=190px height=103px><p><span class='travel-title'>$subject</span><br>$content</p></div>";
+			}
+		?>
+	</div>
+</div>
