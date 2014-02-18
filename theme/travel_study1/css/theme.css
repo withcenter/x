@@ -2,6 +2,8 @@
 	font-family:arial;
 }
 
+/** header */
+
 #logo {
 	padding:0!important;
 }
@@ -16,13 +18,34 @@
 	margin-top:15px;
 }
 
-#aside {
-	float:left;
+
+/**wrapper*/
+#wrapper {
+	border: 0 !important;
+	width: 980px;
 }
+
+
+/** aside */
+#aside {
+	width: 220px;
+	float:right;
+	border: 0 !important;
+	padding: 0;
+}
+
+#aside #ol_after {
+	border: 0 !important;
+}
+
+/* container */
 
 #container {
 	border-right: 0;
 	border-left: 1px solid #dde4e9;
+	width: 760px;
+	border: 0 !important;
+	padding: 0;
 }
 
 /******************/

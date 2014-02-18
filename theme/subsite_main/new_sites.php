@@ -8,10 +8,7 @@
 		foreach ( $queries as $query ) {
 		if( $query['title'] == '' ) $query['title'] = 'No Title';				
 		
-		if( $_SERVER['https'] ) $is_ssl = "https://";
-		else $is_ssl = "http://";
-		
-		$site_url = $is_ssl.$query['domain'];
+		$site_url = ms::url_site(['domain']);
 		?>
 		<div class='info-wrapper'>
 			<div class='top-info site-domain'><a href='<?=$site_url?>' target='_blank'><?=$query['domain']?></a></div>

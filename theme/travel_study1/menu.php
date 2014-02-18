@@ -51,11 +51,11 @@
 	
 	
 	<? for ( $i = 1; $i <= 10; $i++ ) { ?>
-	<? if ( $extra['menu_'.$i] ) { 
-		$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".$extra['menu_'.$i]."'");
+	<? if ( ms::meta('menu_'.$i) ) { 
+		$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('menu_'.$i)."'");
 		if ( !$subject = $row['bo_subject'] ) $subject = null;
 	?>
-		<li class="gnb_1dli"><a href='<?=g::url()?>/bbs/board.php?bo_table=<?=$extra['menu_'.$i]?>' class="gnb_1da" <?// if ($extra['menu'.$i.'_target'] == 'Y') echo "target='_blank'"?>><?=$subject?></a></li>
+		<li class="gnb_1dli"><a href='<?=g::url()?>/bbs/board.php?bo_table=<?=ms::meta('menu_'.$i)?>' class="gnb_1da" <?// if ($extra['menu'.$i.'_target'] == 'Y') echo "target='_blank'"?>><?=$subject?></a></li>
 	<?}}?>
 	
 	
