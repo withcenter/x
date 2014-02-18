@@ -46,7 +46,7 @@ $(function(){
 		$('.banner-image').removeClass('selected');	
 		$("[image_meta_num='"+page_num+"'").removeClass('selected');
 		
-		if( page_num == total_page )page_num = 0;
+		if( page_num == 5 )page_num = 0;
 		page_num++;
 		var banner_page = ".image_num_"+page_num;
 		
