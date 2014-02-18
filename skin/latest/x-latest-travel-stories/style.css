@@ -1,0 +1,50 @@
+.stories-container .travel-story {
+	display: inline-block;
+	vertical-align: top;
+	width: 32.5%;
+	font-family: Gotum, Arial;
+	margin-top: 0.5em;
+}
+
+.stories-container .travel-story table img {
+	width: 84px;
+	height: 84px;
+	padding: 1px;
+	border: solid 1px #d5d5d5;
+}
+
+.stories-container .travel-story table .travel-title {
+	font-weight: bold;
+	font-size: 11pt;
+	color: #5d5d5d;
+}
+.stories-container .travel-story table .travel-meta {
+	color: #a9a9a9;
+	font-style: italic;
+}
+
+.stories-container .travel-story table .more-button {
+	background: #6a6a6a;
+	width: 65px;
+	height: 15px;
+	color: #ffffff;
+	text-align: center;
+}
+.stories-container .travel-story table .travel-content {
+	font-family: Malgun Gothic;
+	font-size: 9pt;
+	color: #5d5d5d;
+}
+.stories-container .travel-story table .more-button > div {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 0 0 0.5em;
+}
+
+.stories-container .travel-story table  .arrow-right {
+	width: 0; 
+	height: 0; 
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-left: 5px solid #ffffff;
+}
