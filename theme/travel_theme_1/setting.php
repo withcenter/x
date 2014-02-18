@@ -13,7 +13,7 @@
 			<div class='title'>로고 문구</div>
 			<textarea name='logo_text'><?=stripslashes(ms::meta('logo_text'))?></textarea>
 		</td>
-	</tr>
+	</tr>	
 	<tr valign='top'>
 		<td>
 			<div class='title'>배너이미지1</div>
