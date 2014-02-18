@@ -6,6 +6,14 @@ $theme_sidebar = ms::meta('theme_sidebar');
 function hook_multisite_tail_begin() {
 	global $theme_sidebar;
 
+	if($_SERVER['SCRIPT_NAME'] == '/index.php') {
+	?>
+		<style>
+			#aside { display: none; }
+			#container { width: 980px; }
+		</style>
+	<?}
+	
 	if($theme_sidebar == 'left') {
 	?><style>
 		#aside {float:left;}
