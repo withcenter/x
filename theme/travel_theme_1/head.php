@@ -83,9 +83,7 @@
 <!-- 콘텐츠 시작 { -->
 <div id="wrapper">
     <div id="aside">
-        <?php echo outlogin('x-outlogin-travel-theme-1'); // 외부 로그인  ?>
-		<a href='<?=x::url_setting()?>'><?php echo _L('Member Setting');?></a>
-        <?php echo poll('basic'); // 설문조사  ?>
+        <?php echo outlogin('x-outlogin-travel-theme-1'); // 외부 로그인  ?>		        
     </div>
     <div id="container">
 		<?if ( preg_match('/^config/', $action) ) include ms::site_menu();?>
