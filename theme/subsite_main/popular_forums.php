@@ -32,8 +32,8 @@
 		?>
 			<div class='info-wrapper'>
 				<div class='top-info bo-table'><a href='<?=$post_url?>' target='_blank'><?=$count+1?>) <?=$allhits[$count]['bo_subject']?> (조회수: <?=$allhits[$count]['wr_hit']?> )</a></div>
-				<div class='other-info subject'><a href='<?=$post_url?>' target='_blank'><?=$popular_subject?></a></div>
-				<div class='other-info content'><a href='<?=$post_url?>' target='_blank'><?=$popular_content?></a></div>
+				<div class='other-info subject'><a href='<?=$post_url?>' target='_blank'><?=strip_tags($popular_subject)?></a></div>
+				<div class='other-info content'><a href='<?=$post_url?>' target='_blank'><?=strip_tags($popular_content)?></a></div>
 			</div>
 		<?}?>
 	<? }?>	
