@@ -79,18 +79,7 @@
 <!-- } 상단 끝 -->
 
 <hr>
-<?
-//echo ms::board_id( etc::domain() );
-//exit;
-?>
 <!-- 콘텐츠 시작 { -->
-<?
-//echo get_text("<script>alert('a');</script>");
-//echo cut_str("12345678910111213","5","...");
-//echo get_sideview('takane123','takane123','takane123@takane123.com','takane123.gnuboard.org');
-//echo date_select('2011-01-01',"date_name");
-//exit;
-?>
 <div id="wrapper">
     <div id="aside">
         <?php echo outlogin('x-outlogin-travel-theme-1'); // 외부 로그인  ?>		        
