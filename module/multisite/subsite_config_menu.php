@@ -50,3 +50,14 @@
 	
 </ul>
 <link rel="stylesheet" href="module/multisite/multisite.css">
+<div style='clear:left'></div>
+<!--[if IE 7]>
+	<style>
+		.multisite-menu ul li {
+			display: block;
+			float: left;
+			width: 70px;
+			height: 30px;
+		}
+	</style>
+<![endif]-->
