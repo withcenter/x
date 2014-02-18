@@ -63,10 +63,33 @@
 	color: #ffffff;
 }
 
+#container .banner-pagination .pages{
+	display:inline-block;
+	background-color:#41453f;
+	padding:4px 7px;
+	border-radius:3px;
+	opacity:.8;
+}
+
+#container .banner-pagination .pages.selected{
+	padding:4px 15px;
+	background-color: #ffffff;
+	color:#565656;
+}
+
+#container .banner-pagination .pages:hover{
+	cursor:pointer;
+}
+
 #container .banner-image {
 	position: absolute;
 	top: 0;
 	left: 0;
+	display:none;
+}
+
+#container .banner-image.selected {
+	display:block
 }
 
 #container .banner img {

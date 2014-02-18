@@ -83,8 +83,8 @@
 <div id="wrapper">
     <div id="aside">
         <?php echo outlogin('x-outlogin-travel-theme-1'); // 외부 로그인  ?>		        
-		<?echo latest("x-latest-post-travel", 'ms_travel_2', 3, 20);?>
-		<?echo latest("x-latest-post-travel-2", 'ms_travel_4', 3, 20);?>
+		<?echo latest("x-latest-post-travel", ms::board_id(etc::domain()).'_2', 3, 20);?>
+		<?echo latest("x-latest-post-travel-2", ms::board_id(etc::domain()).'_4', 3, 20);?>
     </div>
     <div id="container">
 		<?if ( preg_match('/^config/', $action) ) include ms::site_menu();?>
