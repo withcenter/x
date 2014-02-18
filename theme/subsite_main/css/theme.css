@@ -388,8 +388,17 @@ fieldset{
 }
 
 
-
-
+#reg_result #result_logo {
+	margin-bottom: 20px;
+}
+#reg_result #result_logo .logo-text {
+	font-family: '맑은 고딕', AppleGothic;
+	font-size: 20pt;
+	font-weight: bold;
+	color: #344870;
+	position: relative;
+	top: 5px;
+}
 .result_skin_wrapper {
 	border: 1px solid #d5d5d5;
 	background-color: #f9f9f9;
