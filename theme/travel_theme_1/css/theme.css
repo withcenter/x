@@ -82,15 +82,15 @@
 	color:#444444;
 	position:relative;
 	float:right;
+	margin:10px 8px 0 0;
+	padding-left:13px;
 }
 
-#top-menu .inner .customer-support{
-	color:#444444;
-	position:relative;
-	float:right;
+#top-menu .inner .customer-support img{
+	position:absolute;
+	top:2px;
+	left:0;
 }
-
-
 
 #logo-and-search .inner{
 	max-width:970px;
@@ -145,4 +145,13 @@
 #gnb{
 	background-color:#6a6a6a;
 	border:0;
+}
+
+#gnb .gnb_1dli a{
+	color:#ffffff;
+	padding: 0 10px;	
+}
+
+#gnb .gnb_1dli a:hover{
+	background-color:#525252;
 }
