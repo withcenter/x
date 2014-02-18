@@ -49,4 +49,5 @@
 	</li>
 	
 </ul>
+<div style='clear:left;'></div>
 <link rel="stylesheet" href="module/multisite/multisite.css">

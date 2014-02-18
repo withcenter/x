@@ -22,9 +22,9 @@
 			
 			
 			if ( $in['site-type'] ) {
-				if ( $in['site-type'] == 'community' ) $site_type = 'learnenglish';
-				else if ( $in['site-type'] == 'travel' ) 	$site_type = 'travel';
-				else if ( $in['site-type'] == 'shopping' ) $site_type = 'travel';
+				if ( $in['site-type'] == 'community' ) $site_type = 'blog';
+				else if ( $in['site-type'] == 'travel' ) 	$site_type = 'blog';
+				else if ( $in['site-type'] == 'shopping' ) $site_type = 'blog';
 				else if ( $in['site-type'] == 'academy' ) $site_type = 'blog';
 				else if ( $in['site-type'] == 'blog' ) $site_type = 'blog';
 				else $site_type = 'blog';

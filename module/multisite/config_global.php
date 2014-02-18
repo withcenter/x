@@ -20,10 +20,10 @@
 	<div class='title'>사이트 정보</div>	
 		<table cellpadding=0 cellspacing=0 width='100%'>
 			<tr valign='top'>
-				<td>
+				<td width='50%'>
 					<span>메인 타이틀</span><input type='text' name='title' value='<?=ms::meta('title')?>'>
 				</td>
-				<td>
+				<td width='50%'>
 					<span>서브 타이틀</span><input type='text' name='secondary_title' value='<?=ms::meta('secondary_title')?>'>
 				</td>
 			</tr>
@@ -37,7 +37,7 @@
 			<div class="select-box-left">
 			<? for ( $i = 1; $i <= 5; $i++ ) { ?>
 				<div>
-					<div class='select-wrapper'><div class='inner'>
+					<span class='select-wrapper'><span class='inner'>
 						<?php
 						foreach ( $rows as $row ) {
 							if ( ms::meta('forum_no_'.$i) && ms::meta('forum_no_'.$i) == $row['bo_table'] ) {
@@ -49,10 +49,10 @@
 						
 						echo $default_value ? $default_value : '게시판 선택';
 						?>
-					</div></div>
-					<div class='select-button'><div class='inner'>
+					</span></span>
+					<span class='select-button'><span class='inner'>
 						<img src='<?=x::url()?>/module/multisite/img/select_arrow.gif' />
-					</div></div>
+					</span></span>
 					<div class='drop-down-menu'>
 						<div class='row' bo_table='' bo_subject='게시판 선택'>게시판 선택</div>
 						<?php

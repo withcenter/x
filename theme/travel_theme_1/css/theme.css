@@ -44,13 +44,14 @@
 #container {
 	width: 750px;
 	border: 0 !important;
-	padding: 0;	
+	padding: 0;
+	word-break: break-all;
 }
 
 #container .banner {
 	width: 655px;
 	height: 350px;
-	overflow: hidden;
+	overflow: hidden;	
 	position: relative;
 }
 
@@ -63,7 +64,9 @@
 }
 
 #container .banner-image {
-	position: relative;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 #container .banner img {
@@ -88,6 +91,9 @@
 	width: 306px;
 	height: 350px;
 	background: #f8f8f8;
+	margin-left: 0.25em;
+	border: solid 1px #d9d9d9;
+	border-radius: 2px;
 }
 
 #container .top-panel .forum-list, #container .top-panel .forum-list a {
@@ -116,7 +122,69 @@
 	padding: 0 0 0.5em 0;
 }
 
+#container .middle-panel {
+	margin-top: 1em;
+}
 
+#container .middle-panel > div {
+	display: inline-block;
+	vertical-align: top;
+}
+
+#container .middle-panel h2, #container .bottom-panel h2 {
+	color: #5d5d5d;
+	font-size: 12pt;
+	font-family: Arial;
+	font-weight: normal !important;
+	padding: 0 0 0.5em 0;
+	border-bottom: solid 2px #5d5d5d;
+}
+
+#container .middle-panel .travel-stories {
+	width: 656px;
+	height: 240px;
+}
+
+#container .middle-panel .photo-gallery {
+	width: 304px;
+	height: 240px;
+	margin-left: 0.25em;
+}
+#container .middle-panel .photo-gallery .thumb-container {
+	text-align: center;
+	margin: 0.5em 0 0 0;
+}
+#container .middle-panel .photo-gallery .thumb {
+	margin: 0.25em;
+	display: inline-block;
+	padding: 1px;
+	border: solid 1px #d5d5d5;
+}
+#container .middle-panel .photo-gallery a img {
+	width: 90px;
+	height: 60px;
+}
+
+#container .bottom-panel .travel-packages {
+	margin: 1em 0 0 0;
+	width: 100%;
+}
+
+#container .bottom-panel .travel-packages .travel-package {
+	text-align: center;
+	display: inline-block;
+	margin: 1em 0.25em 0.25em 0.25em;
+}
+
+#container .bottom-panel .travel-packages .travel-package p {
+	margin: 0.5em 0 0 0;
+}
+
+#container .bottom-panel .travel-packages .travel-package p .travel-title {
+	font-size: 11pt;
+	font-weight: bold;
+	font-family: Malgun Gothic, Gotum, Arial;
+}
 /******************/
 #top-menu{
 	background: #e8e8e8; /* Old browsers */

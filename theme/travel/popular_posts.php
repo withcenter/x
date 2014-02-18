@@ -31,8 +31,8 @@
 			<tr>
 				<td>
 					<a href='<?=$post_url?>' target='_blank'>
-						<?=$popular_subject?> (조회수 <?=$allhits[$count]['wr_hit']?>)<br>
-						<?=$popular_content?>
+						<?=strip_tags($popular_subject)?> (조회수 <?=$allhits[$count]['wr_hit']?>)<br>
+						<?=strip_tags($popular_content)?>
 					</a>
 				</td>
 			</tr>
