@@ -99,7 +99,18 @@
 	top: 0;
 	left: -4px;
 }
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+	.config_general .select-button {
+		top: 1px;
+	}
+}
 
+@-moz-document url-prefix() { 
+	.config_general .select-button {
+		top: 0.5px;
+	}
+ }
+ 
 .config_general .drop-down-menu {
 	width: 326px;
 	min-height: 68px;
@@ -311,6 +322,7 @@
 }
 .config_forum .board_list .header td {
 	border-left: 0;
+	color: #ffffff;
 }
 
 .config_forum .board_list .background{
