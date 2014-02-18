@@ -33,7 +33,7 @@
 						<input type="hidden" name="sfl" value="wr_subject||wr_content">
 						<input type="hidden" name="sop" value="and">
 						<label for="sch_stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
-						<input type="text" name="stx" id="sch_stx" maxlength="20">
+						<input type="text" name="stx" id="sch_stx" maxlength="20" placeholder='Quick Search'>
 						<input type="submit" id="sch_submit" value="Go!">
 						</form>
 
@@ -83,7 +83,7 @@
 <!-- 콘텐츠 시작 { -->
 <div id="wrapper">
     <div id="aside">
-        <?php echo outlogin('basic'); // 외부 로그인  ?>
+        <?php echo outlogin('x-outlogin-travel-theme-1'); // 외부 로그인  ?>
 		<a href='<?=x::url_setting()?>'><?php echo _L('Member Setting');?></a>
         <?php echo poll('basic'); // 설문조사  ?>
     </div>

@@ -1,5 +1,6 @@
 #hd{
 	font-family:arial;
+	margin-bottom:10px;
 }
 
 /** header */
@@ -131,6 +132,7 @@
 	padding:7px;
 	width: 240px;
 	float:left;
+	background-color:#f5f5f5;
 }
 
 #hd_sch #sch_submit{
@@ -149,9 +151,35 @@
 
 #gnb .gnb_1dli a{
 	color:#ffffff;
-	padding: 0 10px;	
+	padding: 5px 10px;	
+	font-weight:normal;	
 }
 
 #gnb .gnb_1dli a:hover{
 	background-color:#525252;
+}
+
+/**PLACE HOLDER*****/
+::-webkit-input-placeholder {
+	font-style:italic;
+	font-family:arial;
+	color:#b0b0b0;	
+}
+
+:-moz-placeholder { /* Firefox 18- */
+	font-style:italic;
+	font-family:arial;
+	color:#b0b0b0; 	
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+	font-style:italic;
+	font-family:arial;
+	color:#b0b0b0; 
+}
+
+:-ms-input-placeholder {  
+	font-style:italic;
+	font-family:arial;
+	color:#b0b0b0; 
 }

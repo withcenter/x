@@ -1,0 +1,181 @@
+.login-box {
+	border: 1px solid #afafaf;
+	border-radius: 4px;
+	background-color: #f9f9f9;
+	margin-bottom: 10px;
+	font-family: "Arial";
+
+}
+.login-box .inner {
+	margin: 1px;
+	border-radius: 3px;
+	border: 1px solid #ffffff;
+	padding: 7px 9px;
+	color: #7e7e7e;
+	min-height: 60px;
+	position: relative;
+}
+.login-box .inner a {
+	text-decoration: none;
+	font-family: '맑은 고딕', AppleGothic;
+	color: #7e7e7e;
+}
+
+.login-box .inner .login-box-middle {
+	margin-bottom: 10px;
+}
+.login-box .inner .login-box-middle div {
+	border: 1px solid #afafaf;
+	border-radius: 3px;
+	background-color: #ffffff;
+}
+.login-box .inner .login-box-middle div  input {
+	line-height: 18px;
+	width: 90%;
+	border: 0;
+	padding: 5px 9px;
+	background-color: transparent;
+	font-size: 10pt;	
+	position: relative;
+	top: 0;
+	font-family: Arial;
+}
+.login-box .inner .login-box-middle .username {
+	margin-bottom: 5px;
+}
+.login-box .inner  .login-box-bottom {
+	position: relative;
+	font-size: 12px;
+}
+.login-box .inner  .login-box-bottom .remember {
+	position: relative;
+	top: -2px;
+	left: 0;
+	font-size:.9em;	
+	padding-bottom:3px;
+}
+
+.login-box .inner  .login-box-bottom .remember #auto_login{
+	position: relative;
+	top: -1px;
+}
+
+.login-box .inner  .login-box-bottom .remember .remember-text {
+	position: relative;
+	top: 0;
+	margin-left: 7px;
+}
+
+.login-box .inner  .login-box-bottom  .setting {
+	position: relative;
+	top: -3px;
+	padding-bottom:4px;
+}
+
+.login-box .inner  .login-box-bottom  .setting .find-password {	
+	font-size:.9em;
+	font-style:italic;	
+}
+.login-box .inner  .submit-button {
+	position: absolute;
+	right: 9px;
+	bottom: 30px;
+	border: 1px solid #afafaf;
+	border-radius: 3px;			
+}
+.login-box .inner  .submit-button input[type='submit']{
+	border: 1px solid #ffffff;
+	color: #ffffff;	
+	cursor: pointer;
+	padding:7px 12px;
+	
+	
+	background: #b5b5b5; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2I1YjViNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNhMGEwYTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #b5b5b5 0%, #a0a0a0 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b5b5b5), color-stop(100%,#a0a0a0)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #b5b5b5 0%,#a0a0a0 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #b5b5b5 0%,#a0a0a0 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #b5b5b5 0%,#a0a0a0 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #b5b5b5 0%,#a0a0a0 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5b5b5', endColorstr='#a0a0a0',GradientType=0 ); /* IE6-8 */
+
+}
+
+.login-box .inner .login-box-info {
+	padding-top: 4px;
+	font-size: 9pt;
+}
+.login-box .inner .login-box-info .admin-pannel {
+	margin-bottom: 3px;
+}
+.login-box .inner .login-box-info .username {
+	margin-bottom: 6px;
+}
+
+.login-box .inner .login-box-info .logout-button {
+	border: 1px solid #afafaf;
+	display: inline-block;
+	border-radius: 3px;
+	position: absolute;
+	bottom: 13px;
+	right: 17px;
+}
+.login-box .inner .login-box-info .logout-button a {
+	display: inline-block;
+	border: 1px solid #ffffff;
+	background-color: #afafaf;
+	border-radius: 3px;
+	color: #ffffff;
+	padding: 0 6px;
+	height: 26px;
+	line-height: 26px;
+}
+
+.login-box .inner .login-box-info .profile a, .login-box .inner .login-box-info .setting a  {
+	margin-left: 3px;
+	position: relative;
+	top: -2px;
+}
+
+.login-box .inner .login-box-info .setting .message img{
+	margin-right: 3px;
+	position: relative;
+	top: 2px;
+}
+
+
+/**PLACE HOLDER*****/
+::-webkit-input-placeholder {
+	font-style:italic;
+	font-family:arial;
+	color:#8e9295;
+	font-size:.9em;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+	font-style:italic;
+	font-family:arial;
+	color:#8e9295; 	
+	font-size:.9em;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+	font-style:italic;
+	font-family:arial;
+	color:#8e9295; 
+	font-size:.9em;
+}
+
+:-ms-input-placeholder {  
+	font-style:italic;
+	font-family:arial;
+	color:#8e9295; 
+	font-size:.9em;
+}
+
+.login-box .no-account{
+	font-size:1em;
+	color:#5d5d5d;
+}
