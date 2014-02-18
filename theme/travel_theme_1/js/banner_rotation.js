@@ -20,7 +20,7 @@ $(function(){
 		var banner_page = ".image_num_"+page_num;	
 		
 		$('.banner-image').removeClass('selected');
-		$("[image_meta_num='"+page_num+"'").removeClass('selected');
+		$(".pages").removeClass('selected');
 				
 		$(banner_page).addClass('selected');
 		$("[image_meta_num='"+page_num+"'").addClass('selected');
@@ -44,7 +44,7 @@ $(function(){
 	
 	function rotate_the_banner(){			
 		$('.banner-image').removeClass('selected');	
-		$("[image_meta_num='"+page_num+"'").removeClass('selected');
+		$(".pages").removeClass('selected');
 		
 		if( page_num == 5 )page_num = 0;
 		page_num++;
