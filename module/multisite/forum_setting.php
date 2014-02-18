@@ -134,7 +134,7 @@
 	<fieldset>
 		<legend>기타</legend>
 		<div><span class='item'>비밀글사용</span><?=checkbox('bo_use_secret')?></div>
-		<div><span class='item'>동적HTML편집기사용</span><?=checkbox('bo_use_dhtml_editor')?></div>
+		<div><span class='item'>동적HTML편집기</span><?=checkbox('bo_use_dhtml_editor')?></div>
 		<div><span class='item'>RSS 사용</span><?=checkbox('bo_use_rss_view')?></div>
 		<div><span class='item'>추천사용</span><?=checkbox('bo_use_good')?></div>
 		<div><span class='item'>비추천사용</span><?=checkbox('bo_use_nogood')?></div>
