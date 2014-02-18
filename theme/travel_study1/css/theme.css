@@ -1,0 +1,28 @@
+#logo {
+	padding:0!important;
+}
+
+#logo{
+	height:67px;
+}
+
+#logo img {
+	width: 350px;
+	height: 40px;
+}
+
+#hd_sch {
+	left:270px!important;
+}
+#hd_sch #sch_stx {
+	width: 240px!important;
+}
+
+#aside {
+	float:left;
+}
+
+#container {
+	border-right: 0;
+	border-left: 1px solid #dde4e9;
+}
