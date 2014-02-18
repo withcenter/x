@@ -127,10 +127,10 @@
 		echo "
 			<style>
 				.select-wrapper {
-					width: 280px;
+					width: 250px;
 				}
 				.select-wrapper .inner {
-					width: 276px;
+					width: 246px;
 				}
 				.select-button {
 					width: 22px;
