@@ -30,6 +30,10 @@
 .user-site-list > .row {
 	border-bottom: 1px solid #b6b6b6;
 }
+.user-site-list > .row:last-child {
+	border-bottom: 0;
+}
+
 .user-site-list > .row a {
 	display: inline-block;
 	height: 20px;
