@@ -122,3 +122,24 @@
 
 </div>
 </form>
+<?php 
+	if (preg_match('/(?i)msie 7/',$_SERVER['HTTP_USER_AGENT'] )) {
+		echo "
+			<style>
+				.select-wrapper {
+					width: 280px;
+				}
+				.select-wrapper .inner {
+					width: 276px;
+				}
+				.select-button {
+					width: 22px;
+				}
+				
+				.select-button .inner {
+					width: 18px;
+				}
+			</style>
+		";
+	}
+?>
