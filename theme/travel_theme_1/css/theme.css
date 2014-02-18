@@ -78,10 +78,41 @@
 	color: #ffffff;
 	font-size: 33pt;
 }
-
 #container .top-panel > div {
 	display: inline-block;
 	vertical-align: top;
+}
+
+#container .top-panel .forum-list {
+	width: 306px;
+	height: 350px;
+	background: #f8f8f8;
+}
+
+#container .top-panel .forum-list, #container .top-panel .forum-list a {
+	font-family: Arial;
+	text-decoration: none;
+}
+
+#container .top-panel .forum-list a p {
+	padding: 0 0 0 1em;
+}
+
+#container .top-panel .forum-list ul {
+	margin: 0.5em 0 1em 0;
+	padding: 0 0 0 1.5em;
+}
+
+#container .top-panel .forum-list ul li {
+	padding: 0 0 0.4em 0;
+}
+
+#container .top-panel .forum-list h2 {
+	text-transform: uppercase;
+	font-size: 13px;
+	font-family: Arial;
+	border-bottom: solid 2px #a9a9a9;
+	padding: 0 0 0.5em 0;
 }
 
 
