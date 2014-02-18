@@ -44,8 +44,7 @@ a:hover {
 
 #hd{
 	height:104px;
-	max-width:970px;
-	min-width:260px;
+	width:970px;
 	margin:auto;
 	
 }

@@ -69,6 +69,7 @@
 			<td>
 				<div id="aside">
 					<?php echo outlogin('x-outlogin-website.com'); // 외부 로그인  ?>
+					<?php include 'user_site_list.php'; ?>
 					<?php echo poll('basic'); // 설문조사  ?>
 					<?php include "popular_forums.php"; ?>
 					<?php include "new_sites.php"; ?>
