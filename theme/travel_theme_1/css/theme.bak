@@ -1,6 +1,5 @@
 #hd{
 	font-family:arial;
-	margin-bottom:10px;
 }
 
 /** header */
@@ -79,43 +78,11 @@
 	color: #ffffff;
 	font-size: 33pt;
 }
+
 #container .top-panel > div {
 	display: inline-block;
 	vertical-align: top;
 }
-
-#container .top-panel .forum-list {
-	width: 306px;
-	height: 350px;
-	background: #f8f8f8;
-}
-
-#container .top-panel .forum-list, #container .top-panel .forum-list a {
-	font-family: Arial;
-	text-decoration: none;
-}
-
-#container .top-panel .forum-list a p {
-	padding: 0 0 0 1em;
-}
-
-#container .top-panel .forum-list ul {
-	margin: 0.5em 0 1em 0;
-	padding: 0 0 0 1.5em;
-}
-
-#container .top-panel .forum-list ul li {
-	padding: 0 0 0.4em 0;
-}
-
-#container .top-panel .forum-list h2 {
-	text-transform: uppercase;
-	font-size: 13px;
-	font-family: Arial;
-	border-bottom: solid 2px #a9a9a9;
-	padding: 0 0 0.5em 0;
-}
-
 
 /******************/
 #logo-and-search{
@@ -151,15 +118,15 @@
 	color:#444444;
 	position:relative;
 	float:right;
-	margin:10px 8px 0 0;
-	padding-left:13px;
 }
 
-#top-menu .inner .customer-support img{
-	position:absolute;
-	top:2px;
-	left:0;
+#top-menu .inner .customer-support{
+	color:#444444;
+	position:relative;
+	float:right;
 }
+
+
 
 #logo-and-search .inner{
 	max-width:970px;
@@ -200,7 +167,6 @@
 	padding:7px;
 	width: 240px;
 	float:left;
-	background-color:#f5f5f5;
 }
 
 #hd_sch #sch_submit{
@@ -215,39 +181,4 @@
 #gnb{
 	background-color:#6a6a6a;
 	border:0;
-}
-
-#gnb .gnb_1dli a{
-	color:#ffffff;
-	padding: 5px 10px;	
-	font-weight:normal;	
-}
-
-#gnb .gnb_1dli a:hover{
-	background-color:#525252;
-}
-
-/**PLACE HOLDER*****/
-::-webkit-input-placeholder {
-	font-style:italic;
-	font-family:arial;
-	color:#b0b0b0;	
-}
-
-:-moz-placeholder { /* Firefox 18- */
-	font-style:italic;
-	font-family:arial;
-	color:#b0b0b0; 	
-}
-
-::-moz-placeholder {  /* Firefox 19+ */
-	font-style:italic;
-	font-family:arial;
-	color:#b0b0b0; 
-}
-
-:-ms-input-placeholder {  
-	font-style:italic;
-	font-family:arial;
-	color:#b0b0b0; 
 }
