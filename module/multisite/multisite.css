@@ -386,6 +386,7 @@ table > .header td:first-child {
 
 .view-site ul li{
 	font-size:1.3em;
+	display: inline-block;
 }
 
 .view-site ul li a{
