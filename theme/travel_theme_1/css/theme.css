@@ -122,6 +122,10 @@
 	padding: 0 0 0.5em 0;
 }
 
+#container .top-panel h2 img {
+	margin: 0 0.5em 0 0;
+}
+
 #container .middle-panel {
 	margin-top: 1em;
 }

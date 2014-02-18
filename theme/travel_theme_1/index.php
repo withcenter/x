@@ -19,7 +19,7 @@
 	<div class='forum-list'>
 		<div style='padding: 1em'>
 		<div class='discussion-forum'>
-			<h2><img src='<?=x::url_theme()?>/img/discussion-icon.png'> Discussion Forum </h2>
+			<h2><img src='<?=x::url_theme()?>/img/discussion.png'> Discussion Forum </h2>
 			<ul>
 				<li><a href='#'>POST TITLE 1 HERE<br><p>Brief Detail about the post here.</p></a></li>
 				<li><a href='#'>POST TITLE 2 HERE<br><p>Brief Detail about the post here.</p></a></li>
