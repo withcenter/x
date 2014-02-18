@@ -20,10 +20,10 @@
 	<div class='title'>사이트 정보</div>	
 		<table cellpadding=0 cellspacing=0 width='100%'>
 			<tr valign='top'>
-				<td>
+				<td width='50%'>
 					<span>메인 타이틀</span><input type='text' name='title' value='<?=ms::meta('title')?>'>
 				</td>
-				<td>
+				<td width='50%'>
 					<span>서브 타이틀</span><input type='text' name='secondary_title' value='<?=ms::meta('secondary_title')?>'>
 				</td>
 			</tr>
