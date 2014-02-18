@@ -132,13 +132,13 @@
 	
 	height:30px;
 	
-	font-size:.9em;
+	font-size:.9em;	
 }
 
 #top-menu .inner a{
 	display:inline-block;
 	float:left;
-	padding:8px;
+	margin:8px 13px 8px 3px;
 	text-decoration:none;
 	color:#717171;
 }
