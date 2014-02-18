@@ -24,7 +24,7 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 		</div>
 		<div class='submit-button'><input type="submit"  value="<?=lang('SIGN IN', '로그인')?>"></div>
     </form>
-	<div class='no-account'>Dont't have account? SIGN UP!</div>
+	<div class='no-account'>Don't have account? SIGN UP!</div>
 </div></div>
 <script>
 
