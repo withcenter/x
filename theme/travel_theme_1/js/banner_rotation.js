@@ -1,9 +1,19 @@
 $(function(){
-
+	var page_num = 1;
+	var total_page = 0;
+	
 	$('.image_num_1').addClass('selected');
 	$("[image_meta_num='1'").addClass('selected');
 	
-	var page_num = 1;
+	for (var ctr = 1; ctr<=5 ; ctr++){
+		if($("[image_meta_num='"+ctr+"'").length){
+			total_page++;
+		}
+	}
+	
+	if( total_page <= 1 ){
+		return;
+	}
 	
 	$('.pages').click(function(){
 		page_num = $(this).attr('image_meta_num');
