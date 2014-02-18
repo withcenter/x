@@ -27,7 +27,7 @@
 		for( $count = 0; $count < 3; $count++ ) {
 		$post_url = g::url()."/bbs/board.php?bo_table=".$allhits[$count]['bo_table']."&wr_id=".$allhits[$count]['wr_id'];
 		
-		$popular_subject = cut_str($allhits[$count]['wr_subject'], 20, "...");
+		$popular_subject = cut_str($allhits[$count]['wr_subject'], 15, "...");
 		$popular_content = cut_str($allhits[$count]['wr_content'], 20, "...");
 		?>
 			<div class='info-wrapper'>
