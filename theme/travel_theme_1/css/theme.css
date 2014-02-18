@@ -48,6 +48,13 @@
 	word-break: break-all;
 }
 
+#container .no-banner {
+	font-size:100px;	
+	margin:100px 0 0 35px;	
+}
+
+
+
 #container .banner {
 	width: 655px;
 	height: 350px;

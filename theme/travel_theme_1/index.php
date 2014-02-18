@@ -25,6 +25,10 @@
 					<div class='pages' image_meta_num='<?=$i?>'><?=$count?></div>
 				<?}?>
 			</div>
+			<?
+				if( $count == 0 ){?>
+				<div class='no-banner'>NOBANNER!</div>
+			<?}?>
 		</div>
 	</div>
 	
