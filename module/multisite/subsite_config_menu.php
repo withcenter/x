@@ -54,6 +54,7 @@
 <!--[if IE 7]>
 	<style>
 		.multisite-menu ul li {
+			border: 1px solid red;
 			display: block;
 			float: left;
 			width: 70px;
