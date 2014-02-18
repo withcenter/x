@@ -37,7 +37,7 @@
 			<div class="select-box-left">
 			<? for ( $i = 1; $i <= 5; $i++ ) { ?>
 				<div>
-					<div class='select-wrapper'><div class='inner'>
+					<span class='select-wrapper'><span class='inner'>
 						<?php
 						foreach ( $rows as $row ) {
 							if ( ms::meta('forum_no_'.$i) && ms::meta('forum_no_'.$i) == $row['bo_table'] ) {
@@ -49,10 +49,10 @@
 						
 						echo $default_value ? $default_value : '게시판 선택';
 						?>
-					</div></div>
-					<div class='select-button'><div class='inner'>
+					</span></span>
+					<span class='select-button'><span class='inner'>
 						<img src='<?=x::url()?>/module/multisite/img/select_arrow.gif' />
-					</div></div>
+					</span></span>
 					<div class='drop-down-menu'>
 						<div class='row' bo_table='' bo_subject='게시판 선택'>게시판 선택</div>
 						<?php
@@ -122,24 +122,3 @@
 
 </div>
 </form>
-<?php 
-	if (preg_match('/(?i)msie 7/',$_SERVER['HTTP_USER_AGENT'] )) {
-		echo "
-			<style>
-				.select-wrapper {
-					width: 200px;
-				}
-				.select-wrapper .inner {
-					width: 196px;
-				}
-				.select-button {
-					width: 22px;
-				}
-				
-				.select-button .inner {
-					width: 18px;
-				}
-			</style>
-		";
-	}
-?>
