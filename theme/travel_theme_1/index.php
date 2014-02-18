@@ -32,7 +32,7 @@
 	<div class='forum-list'>
 		<div style='padding: 1em'>
 		<div class='discussion-forum'>
-			<h2><img src='<?=x::url_theme()?>/img/discussion-icon.png'> Discussion Forum </h2>
+			<h2><img src='<?=x::url_theme()?>/img/discussion.png'> Discussion Forum </h2>
 			<ul>
 				<li><a href='#'>POST TITLE 1 HERE<br><p>Brief Detail about the post here.</p></a></li>
 				<li><a href='#'>POST TITLE 2 HERE<br><p>Brief Detail about the post here.</p></a></li>
@@ -65,11 +65,10 @@
 		<h2>Photo Gallery</h2>
 		<div class='thumb-container'>
 			<?php 
-				$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";				
-				//$current_date = date('Y-m-d');
-				//$previous_date = strtotime("-7 day", strtotime($date));
-				$rows = db::rows( "SELECT bo_table, wr_id FROM $g5[board_new_table] WHERE $qb AND bn_datetime ORDER BY bn_datetime DESC" );								
-				
+				$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";
+				$current_date = date('Y-m-d').' 23:59:59';
+				$previous_date = date('Y-m-d', strtotime("-7 day", strtotime($current_date))).' 00:00:00';
+				$rows = db::rows( "SELECT bo_table, wr_id FROM $g5[board_new_table] WHERE $qb AND bn_datetime BETWEEN '$previous_date' AND '$current_date' ORDER BY bn_datetime DESC" );	
 				foreach ( $rows as $row ) {	
 					$board['bo_table'] = $row['bo_table'];
 					$images[] = get_file($board['bo_table'],$row['wr_id']);
