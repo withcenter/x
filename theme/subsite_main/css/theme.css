@@ -418,3 +418,60 @@ fieldset{
 .result_skin_wrapper .inner p {
 	line-height: 20px;
 }
+
+/* bbs/login.php */
+#container_title {
+	display: none;
+}
+#container > #mb_login {
+	border: 1px solid #d5d5d5;
+	padding: 10px 20px;
+	border-radius: 3px;
+	background-color: #f6f6f6;
+}
+#container > #mb_login #login_fs {
+	height: 100px;
+	border: 1px solid red;
+}
+#container > #mb_login input[type='text'], #container > #mb_login input[type='password'] {
+	position: relative;
+	display: block;
+	left: 80px;
+	top: 20px;	
+}
+#container > #mb_login #login_auto_login {
+	position: relative;
+	left: 95px;
+	top: 20px;
+}
+#container > #mb_login label[for=login_auto_login] {
+	display: inline-block;
+	position: relative;
+	left: 95px;
+	top: 20px;
+}
+#container > #mb_login #login_info {
+	margin-top: 20px;
+	font-family: '맑은 고딕', AppleGothic;
+}
+#container > #mb_login  h1 {
+	font-family: '맑은 고딕', AppleGothic;
+	font-weight: normal;
+	display: inline-block;
+	background-color: #555555;
+	color: #ffffff;
+	padding: 0 20px;
+	height: 30px;
+	line-height: 28px;
+	font-size: 11pt;
+}
+#container > #mb_login  .btn_confirm a {
+	display: inline-block;
+	height: 25px;
+	line-height: 23px;
+	padding: 0 20px;
+	font-family: '맑은 고딕', AppleGothic;
+	background-color: #555555;
+	color: #ffffff;
+	
+}	
