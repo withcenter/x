@@ -118,10 +118,6 @@
 
 
 /******************/
-#logo-and-search{
-	
-}
-
 #top-menu{
 	background: #e8e8e8; /* Old browsers */
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -200,7 +196,8 @@
 	padding:7px;
 	width: 240px;
 	float:left;
-	background-color:#f5f5f5;
+	background-color:#f5f5f5;	
+	color:#71767a;
 }
 
 #hd_sch #sch_submit{
@@ -212,41 +209,50 @@
 	height:38px;
 }
 
+/*******MENUS*******/
+
 #gnb{
 	background-color:#6a6a6a;
-	border:0;
+	border:0;	
+}
+
+#gnb ul{	
+	max-width:740px;
 }
 
 #gnb .gnb_1dli a{
 	color:#ffffff;
-	padding: 5px 10px;	
+	padding: 0 10px 8px 10px;	
 	font-weight:normal;	
+	font-size:1.2em;
 }
 
 #gnb .gnb_1dli a:hover{
 	background-color:#525252;
 }
 
+/******************/
+
 /**PLACE HOLDER*****/
-::-webkit-input-placeholder {
+#hd_sch ::-webkit-input-placeholder {
 	font-style:italic;
 	font-family:arial;
-	color:#b0b0b0;	
+	color:#b0b0b0;		
 }
 
-:-moz-placeholder { /* Firefox 18- */
+#hd_sch :-moz-placeholder { /* Firefox 18- */
 	font-style:italic;
 	font-family:arial;
 	color:#b0b0b0; 	
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
+#hd_sch ::-moz-placeholder {  /* Firefox 19+ */
 	font-style:italic;
 	font-family:arial;
 	color:#b0b0b0; 
 }
 
-:-ms-input-placeholder {  
+#hd_sch :-ms-input-placeholder {  
 	font-style:italic;
 	font-family:arial;
 	color:#b0b0b0; 

@@ -29,16 +29,12 @@
 	border-radius: 3px;
 	background-color: #ffffff;
 }
-.login-box .inner .login-box-middle div  input {
-	line-height: 18px;
+.login-box .inner .login-box-middle div  input {	
 	width: 90%;
 	border: 0;
-	padding: 5px 9px;
-	background-color: transparent;
-	font-size: 10pt;	
-	position: relative;
-	top: 0;
+	padding: 5px 9px 6px 9px;	
 	font-family: Arial;
+	color:#686d71;
 }
 .login-box .inner .login-box-middle .username {
 	margin-bottom: 5px;
@@ -147,35 +143,35 @@
 
 
 /**PLACE HOLDER*****/
-::-webkit-input-placeholder {
+.login-box  ::-webkit-input-placeholder {
 	font-style:italic;
 	font-family:arial;
 	color:#8e9295;
-	font-size:.9em;
+	font-size:1em;
 }
 
-:-moz-placeholder { /* Firefox 18- */
+.login-box  :-moz-placeholder { /* Firefox 18- */
 	font-style:italic;
 	font-family:arial;
 	color:#8e9295; 	
-	font-size:.9em;
-}
-
-::-moz-placeholder {  /* Firefox 19+ */
-	font-style:italic;
-	font-family:arial;
-	color:#8e9295; 
-	font-size:.9em;
-}
-
-:-ms-input-placeholder {  
-	font-style:italic;
-	font-family:arial;
-	color:#8e9295; 
-	font-size:.9em;
-}
-
-.login-box .no-account{
 	font-size:1em;
+}
+
+.login-box  ::-moz-placeholder {  /* Firefox 19+ */
+	font-style:italic;
+	font-family:arial;
+	color:#8e9295; 
+	font-size:1em;
+}
+
+.login-box  :-ms-input-placeholder {  
+	font-style:italic;
+	font-family:arial;
+	color:#8e9295; 
+	font-size:1em;
+}
+
+.login-box .no-account a{
+	font-size:.9em;
 	color:#5d5d5d;
 }

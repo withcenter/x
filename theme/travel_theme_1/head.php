@@ -10,7 +10,7 @@
 		<div id="top-menu">
 			<div class='inner'>
 				<a href='#'>LOG IN</a>
-				<a href='/<?=G5_BBS_DIR?>/register.php'>SIGN UP</a>
+				<a href='<?=G5_URL?>/<?=G5_BBS_DIR?>/register.php'>SIGN UP</a>
 				<a href='#'>CUSTOMER SERVICE</a>
 				<div class='customer-support'><img src='<?=x::url_theme()?>/img/phone.png'/>CUSTOMER SUPPORT: 123-45-67</div>
 			</div>
