@@ -3,19 +3,21 @@
 	padding: 0;
 	margin: 0;
 	background-color: #474747;
+	height: 40px;
 }
 .multisite-menu li {
-	display: inline-block;
+	display: block;
+	float: left;
 }
 .multisite-menu li:first-child {
 	margin-left: 10px;
 }
 .multisite-menu li a {
-	display: inline-block;
 	height: 40px;
 	line-height: 40px;
 	color: #ffffff;
 	padding: 0 12px;
+    display: inline-block;
 }
 .multisite-menu li a:hover {
 	text-decoration: none;
