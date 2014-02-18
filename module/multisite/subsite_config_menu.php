@@ -50,3 +50,14 @@
 	
 </ul>
 <link rel="stylesheet" href="module/multisite/multisite.css">
+<!--[if lte IE 8]>
+	<style>
+		.multisite-menu ul li {
+			border: 1px solid red;
+			display: block;
+			float: left;
+			width: 70px;
+		}
+	</style>
+<![endif]-->
+
