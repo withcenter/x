@@ -9,6 +9,9 @@ a:hover {
 	width:100%;
 }
 
+#website-wrapper .left-main {
+	padding: 15px 0 0 10px;
+}
 #wrapper{
 	border:0;
 }
@@ -20,10 +23,6 @@ a:hover {
 	border: 0;
 }
 
-#wrapper #aside{
-	border:0;
-	margin:15px 0 0 10px;	
-}
 
 #wrapper #container{
 	border:0;
@@ -63,9 +62,6 @@ a:hover {
 }
 #hd_sch #search_txtbox {
 	width: 240px!important;
-}
-#aside {
-	float:left;
 }
 
 #wrapper{
@@ -283,7 +279,7 @@ fieldset{
 	padding:0 10px 10px 10px;
 }
 
-.left-menu-wrapper .header{
+.left-menu-wrapper > .header{
 	color:#565656;
 	position:relative;
 	font-size:1.4em;
@@ -295,7 +291,7 @@ fieldset{
 	top: -2px;
 }
 
-.left-menu-wrapper .header img{
+.left-menu-wrapper > .header img{
 	position:absolute;
 	left:0;
 	top:2px;

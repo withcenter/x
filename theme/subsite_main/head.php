@@ -66,14 +66,11 @@
 <div id="wrapper">
 	<table cellpadding=0 cellspacing=0 width='100%'>
 		<tr valign='top'>
-			<td width='210'>
-				<div id="aside">
-					<?php echo outlogin('x-outlogin-website.com'); // 외부 로그인  ?>
-					<?php include 'user_site_list.php'; ?>
-					<?php echo poll('basic'); // 설문조사  ?>
-					<?php include "popular_forums.php"; ?>
-					<?php include "new_sites.php"; ?>
-				</div>
+			<td width='210' class='left-main'>
+				<?php echo outlogin('x-outlogin-website.com'); // 외부 로그인  ?>
+				<?php include 'user_site_list.php'; ?>
+				<?php include "popular_forums.php"; ?>
+				<?php include "new_sites.php"; ?>
 			</td>
 			<td>
 				<div id="container">
