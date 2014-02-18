@@ -94,7 +94,7 @@
 }
 .config_general .select-button {
 	position: relative;
-	top: 1px;
+	top: 0;
 	left: -4px;
 }
 
