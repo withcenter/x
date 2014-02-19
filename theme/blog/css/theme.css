@@ -66,6 +66,7 @@
 	background: #56493f;
 	height: 70px;
 	overflow: hidden;
+	padding:0!important;
 }
 
 #aside {

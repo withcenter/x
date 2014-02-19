@@ -525,6 +525,13 @@ function admin_page()
 	return preg_match("/\/adm\//", $self);
 }
 
+function write_page()
+{
+	$self = $_SERVER['PHP_SELF'];
+	return preg_match("/\/write.php/", $self);
+}
+
+
 
 /**
  *  @brief 패치 파일의 경로를 리턴한다.

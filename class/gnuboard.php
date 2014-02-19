@@ -34,6 +34,16 @@ class gnuboard {
 	{
 		return self::url() . "/bbs/board.php?bo_table=$id";
 	}
+	static function url_forum($id)
+	{
+		return self::url_board($id);
+	}
+	static function url_write( $id )
+	{
+		return g::url() . "/bbs/write.php?bo_table=" . $id;
+	}
+	
+	
 	
 	
 	/**

@@ -404,6 +404,28 @@ class multisite {
 		return db::result($q);
 	}
 	
+	/**
+	 *  @brief returns all the forum id(s).
+	 *  
+	 *  @return array of forum id(bo_table)
+	 *  
+	 *  @details use this function to get all the forum id.
+	 */
+	static function forum()
+	{
+		global $g5;
+		$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";	
+		$rows = db::rows( "SELECT bo_table FROM $g5[board_table] WHERE $qb");
+		$ret = array();
+		if ( $rows ) {
+			foreach ( $rows as $row ) {
+				$ret[] = $row['bo_table'];
+			}
+		}
+		return $ret;
+	}
+	
+	
 	
 
 }
