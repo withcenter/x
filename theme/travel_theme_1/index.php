@@ -81,7 +81,7 @@
 							if ( $count <= 9 ) {					
 								if( $value['view'] ) {
 									$img = get_view_thumbnail($value['view'], 94);
-									$img_thumbnail = "<div class='gallery-img-wrapper'>".$value['view']."</div>";																		
+									$img_thumbnail = "<div class='gallery-img-wrapper'>".$img."</div>";																		
 									echo $img_thumbnail;
 									$count++;
 								}
