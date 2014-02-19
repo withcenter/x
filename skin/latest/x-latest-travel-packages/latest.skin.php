@@ -17,12 +17,15 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			<td width='20%'>
 				<a href='<?=$li['href']?>'>
 					<div class='travel-package'>
+						<div class='travel-image'>
 						<?
-							if ( $li['file']['meta'][$i]['bf_file'] != '' ) {?>
-								<img src="<?=$li['file']['path'].$li['file']['meta'][$i]['bf_file']?>" width=180px height=100px>
-						<?}?>
-						<div class='travel-title'><?=conv_subject( $li['wr_subject'], 25, '...' )?></div>
-						<div class='travel-content'><?=cut_str( $li['wr_content'], 50, '...' )?></div>
+							if ( $li['file']['meta'][$i]['bf_file'] != '' ) $imgsrc = $li['file']['path'].$li['file']['meta'][$i]['bf_file']; 
+							else $imgsrc = $latest_skin_url.'/img/no-image.png';
+						?>
+							<img src='<?=$imgsrc?>' width='180px' height='100px'>
+						</div>
+						<div class='travel-title'><?=conv_subject( $li['wr_subject'], 40, '...' )?></div>
+						<div class='travel-content'><?=cut_str(strip_tags( $li['wr_content']), 50, '...' )?></div>
 						<div class='travel-price'>
 						<?
 							if ( !empty($li['wr_1']) ) echo $li['wr_1'];

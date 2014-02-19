@@ -18,10 +18,11 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 				<table>
 					<tr valign='top'>
 						<td width='50px'>
-						<?php
-							if ( $li['file']['meta'][$i]['bf_file'] != '' ) {?>
-							<img src="<?=$li['file']['path'].$li['file']['meta'][$i]['bf_file']?>">
-						<?}?>
+						<?
+							if ( $li['file']['meta'][$i]['bf_file'] != '' ) $imgsrc = $li['file']['path'].$li['file']['meta'][$i]['bf_file']; 
+							else $imgsrc = $latest_skin_url.'/img/no-image.png';
+						?>
+							<img src='<?=$imgsrc?>'>
 						</td>
 						<td>
 						<?php
@@ -34,16 +35,14 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 					<tr valign='top'>
 						<td colspan=2 width='100px'>
 						<?php
-							echo "<span class='travel-content'>".cut_str($li['wr_content'],100,'...')."</span>";
+							echo "<span class='travel-content'>".cut_str( strip_tags( $li['wr_content'] ) ,100,'...')."</span>";
 						?>
 						</td>
 					</tr>
-					<tr>
-						<td colspan=2 align='right'>
-							<div class='more-button'><div>MORE</div><div class="arrow-right"></div></div>
-						</td>
-					</tr>
+		
+
 				</table>
+									<div class='more-button'><img src="<?=$latest_skin_url.'/img/more-btn.png'?>"></div>
 			</div>
 		</a>
 		<?
