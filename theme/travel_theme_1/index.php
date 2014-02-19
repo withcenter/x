@@ -53,7 +53,9 @@
 <div class='middle-panel'>
 	<div class='travel-stories'>
 		<h2>Travel Stories</h2>
-		<?=latest("x-latest-travel-stories",  ms::board_id( etc::domain() ).'_1', 3, 20);?>
+		<? if ( g::forum_exist(ms::board_id(etc::domain()).'_1') ) {
+			echo latest("x-latest-travel-stories",  ms::board_id( etc::domain() ).'_1', 3, 20);
+		} else echo "No post" ?>
 	</div>
 	<div class='photo-gallery'>
 		<h2>Photo Gallery</h2>
@@ -86,6 +88,8 @@
 <div class='bottom-panel'>
 	<div class='travel-packages'>
 		<h2> Best Travel Packages </h2>
-		<?=latest("x-latest-travel-packages",  ms::board_id( etc::domain() ).'_1', 5, 20);?>
+		<? if ( g::forum_exist(ms::board_id(etc::domain()).'_1') ) {
+			echo latest("x-latest-travel-packages",  ms::board_id( etc::domain() ).'_1', 5, 20);
+		} else echo "no post"; ?>
 	</div>
 </div>
