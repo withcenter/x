@@ -45,7 +45,7 @@
 <div class='middle-panel'>
 	<div class='travel-stories'>
 		<h2>Travel Stories</h2>
-
+		<?=latest("x-latest-travel-stories",  ms::board_id( etc::domain() ).'_1', 3, 20);?>
 	</div>
 	<div class='photo-gallery'>
 		<h2>Photo Gallery</h2>
@@ -60,9 +60,13 @@
 					$images[] = get_file($board['bo_table'],$row['wr_id']);
 				}
 				
+				$count = 1;				
 				foreach ( $images as $image ) {
 					foreach ( $image as $key => $value ) {
+						if ( $count <= 9 ) {					
 						if( $value['view'] ) echo "<div class='thumb'>$value[view]</div>";
+						if( $value['view'] ) $count++;
+						}
 					}
 				}
 				
@@ -74,12 +78,6 @@
 <div class='bottom-panel'>
 	<div class='travel-packages'>
 		<h2> Best Travel Packages </h2>
-		<?
-			$subject = "This is subject";
-			$content = "this is the content";
-			for ( $i = 1; $i <= 5; $i++ ) {
-				echo "<div class='travel-package'><img src='#' width=190px height=103px><p><span class='travel-title'>$subject</span><br>$content</p></div>";
-			}
-		?>
+		<?=latest("x-latest-travel-packages",  ms::board_id( etc::domain() ).'_1', 5, 20);?>
 	</div>
 </div>
