@@ -82,9 +82,17 @@
 <!-- 콘텐츠 시작 { -->
 <div id="wrapper">
     <div id="aside">
-        <?php echo outlogin('x-outlogin-travel-theme-1'); // 외부 로그인  ?>		        
-		<?echo latest("x-latest-post-travel", ms::board_id(etc::domain()).'_2', 3, 20);?>
-		<?echo latest("x-latest-post-travel-2", ms::board_id(etc::domain()).'_4', 3, 20);?>
+        <?php echo outlogin('x-outlogin-travel-theme-1'); // 외부 로그인  ?>	
+        
+		<?
+			if ( g::forum_exist(ms::board_id(etc::domain()).'_1') ) echo latest("x-latest-post-travel", ms::board_id(etc::domain()).'_2', 3, 20);
+			else echo  g::forum_exist(ms::board_id(etc::domain()))."_1 has no posts!";
+			
+			if ( g::forum_exist(ms::board_id(etc::domain()).'_2') ) echo latest("x-latest-post-travel-2", ms::board_id(etc::domain()).'_1', 3, 20);
+			else echo  g::forum_exist(ms::board_id(etc::domain()))."_2 has no posts!";
+			
+			
+		?>
     </div>
     <div id="container">
 		<?if ( preg_match('/^config/', $action) ) include ms::site_menu();?>

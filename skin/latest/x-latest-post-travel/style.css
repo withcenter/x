@@ -41,6 +41,11 @@
 
 .latest-posts .inner .items a{
 	color:#4d4d4d;
+	word-break:break-all;
+}
+
+.latest-posts .inner .items .subject{
+	
 }
 
 .latest-posts .inner .more-posts{

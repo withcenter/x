@@ -21,8 +21,10 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 						$subject .= ":";
 						$url = $li['href'];
 						echo "
-							<span class='subject'><a href='$url'>$subject</a></span>
-							<span class='content'><a href='$url'>$content</a></span>
+							<a href='$url'>
+								<span class='subject'>$subject</span>
+								<span class='content'>".strip_tags($content)."</span>
+							</a>
 						";
 						$num ++;
 					?>
