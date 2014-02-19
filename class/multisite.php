@@ -77,17 +77,31 @@ class multisite {
 			$sql = "SELECT * FROM x_multisite_config WHERE $qf='$domain'";
 			$opt =  db::row( $sql );
 			if ( empty($opt) ) return array();
-			$opt['extra'] = string::unscalar( $opt['extra'] );
 			$multisite_get[ $domain ] = $opt;
 		}
 		return $multisite_get[ $domain ];
 	}
-	
+
+	/**
+	 *  @brief get or set meata data.
+	 *  
+	 *  @param [in] $code Parameter_Description
+	 *  @param [in] $value Parameter_Description
+	 *  @return Return_Description
+	 *  
+	 *  @details This function does memory cache. So how many times you call this function, it will only access to data base one time in the first.
+	 */	
 	static function meta($code, $value=null)
 	{
+		global $_meta;
+		
 		$d = etc::domain();
 		if ( $value === null ) {
-			return db::result("SELECT `value` FROM x_multisite_meta WHERE domain='$d' AND code='$code'");
+			$k = "$d.$code";
+			if ( ! isset($_meta[$k]) ) {
+				$_meta[$k] = db::result("SELECT `value` FROM x_multisite_meta WHERE domain='$d' AND code='$code'");
+			}
+			return $_meta[$k];
 		}
 		else {
 			$q = "SELECT code FROM x_multisite_meta WHERE domain='$d' AND code='$code'";
