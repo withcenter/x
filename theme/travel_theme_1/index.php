@@ -35,9 +35,17 @@
 	
 	<div class='forum-list'>
 		<div class='inner'>
-			<?echo latest('x-latest-travel-right', ms::board_id(etc::domain()).'_1', 2, 21, $cache_time=1, x::url_theme().'/img/discussion.png');?>
-			<?echo latest('x-latest-travel-right', ms::board_id(etc::domain()).'_2', 2, 21, $cache_time=1, x::url_theme().'/img/qna.png');?>
-			<?echo latest('x-latest-travel-right',ms::board_id(etc::domain()).'_3', 2, 21, $cache_time=1, x::url_theme().'/img/travel.png');?>
+			<? if ( g::forum_exist(ms::board_id(etc::domain()).'_1') ) {
+					echo latest('x-latest-travel-right', ms::board_id(etc::domain()).'_1', 2, 21, $cache_time=1, x::url_theme().'/img/discussion.png');
+			}
+			 if ( g::forum_exist(ms::board_id(etc::domain()).'_2') ) {
+				echo latest('x-latest-travel-right', ms::board_id(etc::domain()).'_2', 2, 21, $cache_time=1, x::url_theme().'/img/qna.png');
+			}
+			
+			if ( g::forum_exist(ms::board_id(etc::domain()).'_3') ) {
+					echo latest('x-latest-travel-right',ms::board_id(etc::domain()).'_3', 2, 21, $cache_time=1, x::url_theme().'/img/travel.png');
+			}
+			?>
 		</div>
 	</div>
 </div>
