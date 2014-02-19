@@ -512,7 +512,8 @@ function admin()
 }
 
 /**
- *  @brief 관리자 페이지이면 참을 리턴한다.
+ *  @brief return true if the user is accessing admin page.
+ *  관리자 페이지이면 참을 리턴한다.
  *  
  *  @return boolean
  *  
