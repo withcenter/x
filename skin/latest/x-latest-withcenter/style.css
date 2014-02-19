@@ -1,0 +1,52 @@
+.withcenter_latest ul {
+	list-style:none;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 10px;
+	font-family: '맑은 고딕', AppleGothic;
+}
+.withcenter_latest img {
+	border: 0;
+}
+
+.withcenter_latest a, .withcenter_latest a:hover {
+	text-decoration: none;
+}
+.withcenter_latest .title {
+	border-bottom: 1px solid #d5d5d5;
+	padding-bottom: 8px;
+	margin: 0 0 11px 8px; 
+}
+.withcenter_latest .title .x-latest-withcenter-icon {
+	position: relative;
+	top: -2px;
+	margin-right: 5px;
+}
+.withcenter_latest .title  a{
+	color: #4d4d4d;
+	font-size: 1.250em;
+	font-weight: bold;	
+}
+
+.withcenter_latest .title .more_btn {
+	float: right;
+	position: relative;
+	top: 3px;
+}
+.withcenter_latest ul  li  {
+	line-height: 20px;
+	height: 20px;
+	overflow: hidden;
+	
+}
+.withcenter_latest ul  li a {
+	text-decoration: none;
+	color: #858585;
+	font-size: 1.124em;
+}
+
+.withcenter_latest ul  li .dot {
+	position: relative;
+	top: -2px;
+	margin: 0 6px 0 10px;
+}
