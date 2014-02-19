@@ -264,14 +264,14 @@
 }
 
 #gnb ul{	
-	max-width:750px;	
+	max-width:750px;
 }
 
 #gnb .gnb_1dli a{	
 	color:#ffffff;
-	padding: 0 15px 8px 15px;	
+	padding: 1px 15px 5px 15px;	
 	font-weight:normal;	
-	font-size:1em;	
+	font-size:1.1em;	
 	width:auto;
 }
 
