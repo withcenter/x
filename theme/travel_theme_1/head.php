@@ -1,6 +1,12 @@
 <link rel="stylesheet" href="<?=x::url_theme()?>/css/theme.css">
 <!-- 상단 시작 { -->
-
+<?
+//echo get_text("<script>alert('a');</script>");
+//echo cut_str("12345678910111213","5","...");
+//echo get_sideview('takane123','takane123','takane123@takane123.com','takane123.gnuboard.org');
+//echo date_select('2011-01-01',"date_name");
+//exit;
+?>
 <div id="hd">
     <h1 id="hd_h1"><?php echo $g5['title'] ?></h1>
 
@@ -85,11 +91,13 @@
         <?php echo outlogin('x-outlogin-travel-theme-1'); // 외부 로그인  ?>	
         
 		<?
-			if ( g::forum_exist(ms::board_id(etc::domain()).'_1') ) echo latest("x-latest-post-travel", ms::board_id(etc::domain()).'_2', 3, 20);
-			else echo  g::forum_exist(ms::board_id(etc::domain()))."_1 has no posts!";
+			$latest_bo_table = ms::board_id(etc::domain()).'_1';
+			if ( g::forum_exist($latest_bo_table) ) echo latest("x-latest-post-travel", $latest_bo_table, 3, 20);
+			else echo "<div class='notice'>NO POST AVAILABLE FOR WRITE TABLE ".$latest_bo_table."</div>";
 			
-			if ( g::forum_exist(ms::board_id(etc::domain()).'_2') ) echo latest("x-latest-post-travel-2", ms::board_id(etc::domain()).'_1', 3, 20);
-			else echo  g::forum_exist(ms::board_id(etc::domain()))."_2 has no posts!";
+			$latest_bo_table = ms::board_id(etc::domain()).'_2';
+			if ( g::forum_exist($latest_bo_table) ) echo latest("x-latest-post-travel-2", $latest_bo_table, 3, 20);
+			else echo "<div class='notice'>NO POST AVAILABLE FOR WRITE TABLE ".$latest_bo_table."</div>";
 			
 			
 		?>
@@ -98,7 +106,5 @@
 		<?if ( preg_match('/^config/', $action) ) include ms::site_menu();?>
 		<?php if ((!$bo_table || $w == 's' ) && !defined("_INDEX_")) { ?><div id="container_title"><?php echo $g5['title'] ?></div><?php } ?>
 
-		
-		
 		
 		

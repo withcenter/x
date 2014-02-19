@@ -21,8 +21,12 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 						<?
 							if ( $li['file']['meta'][$i]['bf_file'] != '' ) $imgsrc = $li['file']['path'].$li['file']['meta'][$i]['bf_file']; 
 							else $imgsrc = $latest_skin_url.'/img/no-image.png';
-						?>
-							<img src='<?=$imgsrc?>'>
+						
+							$img = "<img src='".$imgsrc."'/>";
+							
+							$img = get_view_thumbnail($img, 120);
+							echo "<div class='img-wrapper'>".$img."<div>";
+						?>	
 						</td>
 						<td>
 						<?php

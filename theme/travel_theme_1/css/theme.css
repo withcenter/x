@@ -56,7 +56,7 @@
 
 
 #container .banner {
-	width: 655px;
+	width: 653px;
 	height: 350px;
 	overflow: hidden;	
 	position: relative;
@@ -100,7 +100,7 @@
 }
 
 #container .banner img {
-	width: 655px;
+	width: 653px;
 	height: 350px;
 }
 
@@ -119,7 +119,7 @@
 
 #container .top-panel .forum-list {
 	width: 306px;
-	margin-left: 0.25em;
+	margin-left: 6px;
 	border: solid 1px #d9d9d9;
 	border-radius: 2px;
 	padding: 1px;
@@ -159,8 +159,9 @@
 }
 
 #container .middle-panel .photo-gallery {
-	width: 304px;
+	width: 310px;
 	height: 240px;
+	margin: 0 0 0 6px;
 }
 #container .middle-panel .photo-gallery .thumb-container {
 	margin: 0.5em 0 0 0;
@@ -172,7 +173,7 @@
 	border: solid 1px #d5d5d5;
 }
 #container .middle-panel .photo-gallery a img {
-	width: 92px;
+	width: 94px;
 	height: 60px;
 }
 
@@ -322,4 +323,17 @@
 	font-style:italic;
 	font-family:arial;
 	color:#b0b0b0; 
+}
+
+/**notice***/
+
+.notice{
+	border:1px solid #d5d5d5;
+	background-color:#f8f8f8;
+	color:blue;
+	font-weight:bold;
+	padding:10px;
+	margin:auto;
+	margin-top:10px;
+	text-align:center;
 }

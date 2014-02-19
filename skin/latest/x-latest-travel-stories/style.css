@@ -9,9 +9,13 @@
 }
 
 .stories-container .travel-story table img {
-	width: 84px;
-	height: 84px;
-	padding: 1px;
+	height:100%;
+}
+
+.stories-container .travel-story table .img-wrapper {
+	width:84px;
+	height:84px;
+	overflow:hidden;
 	border: solid 1px #d5d5d5;
 }
 

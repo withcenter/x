@@ -1,16 +1,24 @@
-.travel-table {
-	margin: 0.5em 0 0 0;
-	width: 100%;
+.travel-package-container {
+	margin: 1em 0 0 0.5em;
+	width: 186px;
+	display: inline-block;
+	vertical-align: top;
 }
 
-.travel-table a {
+.travel-package {
+	width: 180px !important;
+}
+
+.travel-package a {
 	text-decoration: none;
 }
-.travel-table .travel-package .travel-title, .travel-table .travel-package .travel-content, .travel-table .travel-package .travel-price {
+
+.travel-package .travel-title, .travel-package .travel-content, .travel-package .travel-price {
 	font-family: Malgun Gothic, Gotum, Arial;
 }
 
-.travel-table .travel-package .travel-title {
+
+.travel-package .travel-title {
 	margin: 0.25em 0 0 0;
 	text-align: center;
 	font-size: 11pt;
@@ -20,20 +28,31 @@
 	overflow: hidden;
 }
 
-.travel-table .travel-package .travel-image {
+.travel-package .travel-image {
 	height: 100px;
 }
 
-.travel-table .travel-package .travel-content {
+.travel-package .travel-image .img-wrapper{
+	width:187px;
+	height:104px;
+	overflow:hidden;	
+}
+
+.travel-package .travel-image .img-wrapper img{
+	width:100%;
+}
+
+.travel-package .travel-content {
 	margin: 0.25em 0 0 0;
 	color: #979797;
 	height: 2.5em;
 	overflow: hidden;
 }
 
-.travel-table .travel-package .travel-price {
+.travel-package .travel-price {
 	text-align: center;
 	margin: 0.25em 0 0 0;
 	color: #979797;
 	font-size: 10.5pt;
 }
+
