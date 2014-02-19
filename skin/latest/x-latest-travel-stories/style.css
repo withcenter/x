@@ -15,6 +15,7 @@
 .stories-container .travel-story table .img-container {
 	padding: 1px;
 	border: solid 1px #d5d5d5;
+	border-radius:3px;
 }
 
 .stories-container .travel-story table .img-wrapper {
