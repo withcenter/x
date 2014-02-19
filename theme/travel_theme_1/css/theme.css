@@ -118,7 +118,7 @@
 }
 
 #container .top-panel .forum-list {
-	width: 306px;
+	width: 301px;
 	margin-left: 6px;
 	border: solid 1px #d9d9d9;
 	border-radius: 2px;
@@ -154,7 +154,7 @@
 }
 
 #container .middle-panel .travel-stories {
-	width: 656px;
+	width: 657px;
 	height: 240px;
 }
 
@@ -321,7 +321,7 @@
 
 /**image gallery***/
 #container .middle-panel .photo-gallery {
-	width: 310px;
+	width: 304px;
 	height: 240px;
 	margin: 0 0 0 6px;
 }
@@ -329,10 +329,14 @@
 	margin: 0.5em 0 0 0;
 }
 #container .middle-panel .photo-gallery .gallery-img-wrapper {
-	margin: 0.2em;
+	margin: 0 0.4em .2em 0;
 	display: inline-block;
 	padding: 1px;
 	border: solid 1px #d5d5d5;
+}
+
+#container .middle-panel .photo-gallery .gallery-img-wrapper.no-margin {
+	margin-right:0;
 }
 
 .gallery-img-wrapper{

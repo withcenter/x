@@ -78,10 +78,12 @@
 					$count = 1;				
 					foreach ( $images as $image ) {
 						foreach ( $image as $key => $value ) {
-							if ( $count <= 9 ) {					
+							if ( $count <= 9 ) {
+								if( $count % 3 == 0 ) $nomargin = 'no-margin';
+								else $nomargin = '';
 								if( $value['view'] ) {
 									$img = get_view_thumbnail($value['view'], 94);
-									$img_thumbnail = "<div class='gallery-img-wrapper'>".$img."</div>";																		
+									$img_thumbnail = "<div class='gallery-img-wrapper $nomargin'>".$img."</div>";																		
 									echo $img_thumbnail;
 									$count++;
 								}
