@@ -35,9 +35,19 @@
 	
 	<div class='forum-list'>
 		<div class='inner'>
-			<?echo latest('x-latest-travel-right', ms::board_id(etc::domain()).'_1', 2, 21, $cache_time=1, x::url_theme().'/img/discussion.png');?>
-			<?echo latest('x-latest-travel-right', ms::board_id(etc::domain()).'_2', 2, 21, $cache_time=1, x::url_theme().'/img/qna.png');?>
-			<?echo latest('x-latest-travel-right',ms::board_id(etc::domain()).'_3', 2, 21, $cache_time=1, x::url_theme().'/img/travel.png');?>
+			<?
+				$latest_bo_table = ms::board_id(etc::domain()).'_1';
+				if ( g::forum_exist($latest_bo_table) ) echo latest('x-latest-travel-right', $latest_bo_table, 2, 21, $cache_time=1, x::url_theme().'/img/discussion.png');
+				else echo "<div class='notice'>NO POST AVAILABLE FOR WRITE TABLE ".$latest_bo_table."</div>";
+				
+				$latest_bo_table = ms::board_id(etc::domain()).'_2';				
+				if ( g::forum_exist($latest_bo_table) ) echo latest('x-latest-travel-right', $latest_bo_table, 2, 21, $cache_time=1, x::url_theme().'/img/qna.png');
+				else echo "<div class='notice'>NO POST AVAILABLE FOR WRITE TABLE ".$latest_bo_table."</div>";
+								
+				$latest_bo_table = ms::board_id(etc::domain()).'_3';
+				if ( g::forum_exist($latest_bo_table) ) echo latest('x-latest-travel-right', $latest_bo_table, 2, 21, $cache_time=1, x::url_theme().'/img/travel.png');
+				else echo "<div class='notice'>NO POST AVAILABLE FOR WRITE TABLE ".$latest_bo_table."</div>";
+			?>		
 		</div>
 	</div>
 </div>
@@ -45,7 +55,11 @@
 <div class='middle-panel'>
 	<div class='travel-stories'>
 		<h2>Travel Stories</h2>
-		<?=latest("x-latest-travel-stories",  ms::board_id( etc::domain() ).'_1', 3, 20);?>
+		<?	
+			$latest_bo_table = ms::board_id(etc::domain()).'_1';
+			if ( g::forum_exist($latest_bo_table) ) echo latest("x-latest-travel-stories",  $latest_bo_table, 3, 20);
+			else echo "<div class='notice'>NO POST AVAILABLE FOR WRITE TABLE ".$latest_bo_table."</div>";
+		?>
 	</div>
 	<div class='photo-gallery'>
 		<h2>Photo Gallery</h2>
@@ -78,6 +92,10 @@
 <div class='bottom-panel'>
 	<div class='travel-packages'>
 		<h2> Best Travel Packages </h2>
-		<?=latest("x-latest-travel-packages",  ms::board_id( etc::domain() ).'_1', 5, 20);?>
+		<?
+			$latest_bo_table = ms::board_id( etc::domain() ).'_1';
+			if ( g::forum_exist($latest_bo_table)) echo latest("x-latest-travel-packages",  $latest_bo_table, 5, 20);
+			else echo "<div class='notice'>NO POST AVAILABLE FOR WRITE TABLE ".$latest_bo_table."</div>";
+		?>
 	</div>
 </div>

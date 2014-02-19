@@ -85,11 +85,13 @@
         <?php echo outlogin('x-outlogin-travel-theme-1'); // 외부 로그인  ?>	
         
 		<?
-			if ( g::forum_exist(ms::board_id(etc::domain()).'_1') ) echo latest("x-latest-post-travel", ms::board_id(etc::domain()).'_2', 3, 20);
-			else echo  g::forum_exist(ms::board_id(etc::domain()))."_1 has no posts!";
+			$latest_bo_table = ms::board_id(etc::domain()).'_1';
+			if ( g::forum_exist($latest_bo_table) ) echo latest("x-latest-post-travel", $latest_bo_table, 3, 20);
+			else echo "<div class='notice'>NO POST AVAILABLE FOR WRITE TABLE ".$latest_bo_table."</div>";
 			
-			if ( g::forum_exist(ms::board_id(etc::domain()).'_2') ) echo latest("x-latest-post-travel-2", ms::board_id(etc::domain()).'_1', 3, 20);
-			else echo  g::forum_exist(ms::board_id(etc::domain()))."_2 has no posts!";
+			$latest_bo_table = ms::board_id(etc::domain()).'_2';
+			if ( g::forum_exist($latest_bo_table) ) echo latest("x-latest-post-travel-2", $latest_bo_table, 3, 20);
+			else echo "<div class='notice'>NO POST AVAILABLE FOR WRITE TABLE ".$latest_bo_table."</div>";
 			
 			
 		?>

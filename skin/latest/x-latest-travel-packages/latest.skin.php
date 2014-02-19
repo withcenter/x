@@ -3,7 +3,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 ?>
 
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
-<table width='100%' class='travel-table' cellpadding='5px'>
+<table style="table-layout:fixed;" class='travel-table' cellpadding='5px'>
 	<tr valign='top'>
 	<?php
 		foreach( $list as $li ) {

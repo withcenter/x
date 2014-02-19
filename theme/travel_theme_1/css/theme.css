@@ -323,3 +323,16 @@
 	font-family:arial;
 	color:#b0b0b0; 
 }
+
+/**notice***/
+
+.notice{
+	border:1px solid #d5d5d5;
+	background-color:#f8f8f8;
+	color:blue;
+	font-weight:bold;
+	padding:10px;
+	margin:auto;
+	margin-top:10px;
+	text-align:center;
+}
