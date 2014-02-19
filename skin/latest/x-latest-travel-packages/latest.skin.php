@@ -14,7 +14,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 				$li['file']['path'] = G5_URL.'/'.G5_DATA_DIR.'/file/'.$bo_table.'/';	
 			}}
 			?>
-			<td width='190px'>
+			<td width='20%'>
 				<a href='<?=$li['href']?>'>
 					<div class='travel-package'>
 						<?
