@@ -23,13 +23,13 @@
 /**wrapper*/
 #wrapper {
 	border: 0 !important;
-	width: 980px;
+	width: 970px;
 }
 
 
 /** aside */
 #aside {
-	width: 220px;
+	width: 210px;
 	float:right;
 	border: 0 !important;
 	padding: 0;
@@ -56,7 +56,7 @@
 
 
 #container .banner {
-	width: 653px;
+	width: 651px;
 	height: 350px;
 	overflow: hidden;	
 	position: relative;
@@ -118,7 +118,7 @@
 }
 
 #container .top-panel .forum-list {
-	width: 306px;
+	width: 301px;
 	margin-left: 6px;
 	border: solid 1px #d9d9d9;
 	border-radius: 2px;
@@ -154,7 +154,7 @@
 }
 
 #container .middle-panel .travel-stories {
-	width: 656px;
+	width: 655px;
 	height: 240px;
 }
 
@@ -264,14 +264,14 @@
 }
 
 #gnb ul{	
-	max-width:740px;
+	max-width:750px;
 }
 
 #gnb .gnb_1dli a{	
 	color:#ffffff;
-	padding: 0 15px 8px 15px;	
+	padding: 1px 15px 5px 15px;	
 	font-weight:normal;	
-	font-size:1.2em;	
+	font-size:1.1em;	
 	width:auto;
 }
 
@@ -321,7 +321,7 @@
 
 /**image gallery***/
 #container .middle-panel .photo-gallery {
-	width: 310px;
+	width: 305px;
 	height: 240px;
 	margin: 0 0 0 6px;
 }
@@ -329,10 +329,15 @@
 	margin: 0.5em 0 0 0;
 }
 #container .middle-panel .photo-gallery .gallery-img-wrapper {
-	margin: 0.2em;
+	margin: 0 5px .2em 0;
 	display: inline-block;
 	padding: 1px;
 	border: solid 1px #d5d5d5;
+	border-radius:3px;
+}
+
+#container .middle-panel .photo-gallery .gallery-img-wrapper.no-margin {
+	margin-right:0;
 }
 
 .gallery-img-wrapper{
@@ -342,5 +347,46 @@
 }
 
 .gallery-img-wrapper img{
+	width:100%;
+}
+
+/**sidebar gallery*/
+
+#aside .sidebar-thumb {
+	margin: 0.5em 0 0 0;
+	padding: 9px;
+	background: #f5f5f5;
+	border: solid 1px #a9a9a9;
+	border-radius: 3px;
+}
+
+#aside .thumb-container {
+	margin: 0 auto;
+}
+
+#aside .sidebar-img-wrapper {
+	margin: 0 5px 5px 0;
+	display: inline-block;
+	padding: 1px;
+	border: solid 1px #d5d5d5;
+	border-radius:3px;
+	background: #ffffff;
+}
+
+#aside .sidebar-img-wrapper.no-margin {
+	margin-right:0;
+}
+
+#aside .sidebar-img-wrapper.no-margin-bottom {
+	margin-bottom: 0;
+}
+
+.sidebar-img-wrapper{
+	width:56px;
+	height:56px;
+	overflow:hidden;
+}
+
+.sidebar-img-wrapper img{
 	width:100%;
 }

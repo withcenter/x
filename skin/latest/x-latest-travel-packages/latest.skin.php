@@ -4,7 +4,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
 <?php
+	$count = 1;
 	foreach( $list as $li ) {
+	
 		if( !$li['wr_subject'] == '' ) {
 		if( !$li['file']['count'] == 0 ) { /**checks if there is a file on the post */
 			$i = 0;
@@ -12,7 +14,10 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			$li['file']['path'] = G5_URL.'/'.G5_DATA_DIR.'/file/'.$bo_table.'/';	
 		}}?>
 		<a href='<?=$li['href']?>'>
-			<div class='travel-package-container'>
+		<?
+			if( $count == 5 ) $nomargin = 'no-margin';
+		?>
+			<div class='travel-package-container <?=$nomargin?>'>
 				<div class='travel-package'>
 					<div class='travel-image'>
 					<?
@@ -35,6 +40,8 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 				</div>
 			</div>	
 		</a>	
-	<?}
+<?
+	$count++;
+	}
 ?>
 

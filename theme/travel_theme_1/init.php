@@ -10,7 +10,7 @@ function hook_multisite_tail_begin() {
 	?>
 		<style>
 			#aside { display: none; }
-			#container { padding-top: 0.75em; width: 980px; }
+			#container { padding-top: 0.75em; width: 970px; }
 		</style>
 	<?}
 	

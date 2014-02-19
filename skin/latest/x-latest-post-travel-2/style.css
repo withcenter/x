@@ -18,9 +18,11 @@
 }
 
 .posts .inner .title .label{
-	padding:3px 3px 7px 18px;
+	padding:3px 3px 7px 5px;
+	margin-left:18px;
 	font-weight:bold;
 	color:#5d5d5d;
+	border-bottom: 1px solid #a9a9a9
 }
 
 .posts .inner .title img{
@@ -51,6 +53,6 @@
 	font-size:.7em;
 }
 
-.posts .inner .subject a{
+.posts .inner .subject{
 	font-weight:bold;
 }
