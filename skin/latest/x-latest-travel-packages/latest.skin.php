@@ -20,8 +20,8 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 						else $imgsrc = $latest_skin_url.'/img/no-image.png';
 						
 						$img = "<img src='$imgsrc'/>";
-						$img = get_view_thumbnail($img, 187);
-						echo "<div class='img-wrapper'>".$img."</div>";
+						$img_thumbnail = get_view_thumbnail($img, 187);
+						echo "<div class='img-wrapper'>".$img_thumbnail."</div>";
 					?>
 					</div>
 					<div class='travel-title'><?=conv_subject( $li['wr_subject'], 40, '...' )?></div>

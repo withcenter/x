@@ -25,8 +25,8 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 							
 								$img = "<img src='".$imgsrc."'/>";
 								
-								$img = get_view_thumbnail($img, 120);
-								echo "<div class='img-wrapper'>".$img."<div>";
+								$img_thumbnail = get_view_thumbnail($img, 120);
+								echo "<div class='img-wrapper'>".$img_thumbnail."<div>";
 							?>	
 						</div>
 						</td>
