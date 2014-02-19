@@ -38,7 +38,6 @@
 <div id="wrapper">
     <div id="aside">
 		<?php include('left.php');?>
-        <?php echo poll('basic'); // 설문조사  ?>
 		<span class='back-to-top'><img src='<?=x::url_theme()?>/img/upicon.png'>상단으로</span>
 	</div>
     <div id="container">
