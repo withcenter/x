@@ -15,7 +15,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 				?>	
 					<div class='items <?=$style?>'>
 					<?
-						$subject = conv_subject($li['wr_subject'], 80, "...");
+						$subject = conv_subject($li['wr_subject'], 70, "...");
 						$url = $li['href'];
 						echo "
 							<a href='$url'>$subject</a>
