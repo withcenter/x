@@ -11,7 +11,7 @@ body{
 }
 .site_top .inner {
 	margin: 0 auto;
-	max-width: 960px;
+	width: 970px;
 }
 .site_top .inner  a {
 	text-decoration: none;
@@ -27,7 +27,7 @@ body{
 }
 .logo_search .inner {
 	margin: 0 auto;
-	max-width: 960px;
+	width: 970px;
 	height: 70px;
 	background-color: #95cfb7;
 	position: relative;
@@ -104,7 +104,7 @@ body{
 }
 .main-menu .inner {
 	background-color: #329996;
-	max-width: 960px;
+	width: 970px;
 	margin: 0 auto;
 }
 .main-menu .inner a {
@@ -123,7 +123,7 @@ body{
 }
 
 .layout {
-	max-width: 960px;
+	width: 970px;
 	margin: 20px auto 0 auto;
 }
 
@@ -131,6 +131,12 @@ body{
 	margin-bottom: 27px;
 }
 
+.layout table tr .latest_1, .layout table tr .latest_2 {
+	padding-right: 10px;
+}
+.layout table tr .latest_2, .layout table tr .latest_3 {
+	padding-left: 10px;
+}
 .layout .main-content .withcenter_latest {
 	margin-bottom: 29px;
 }
@@ -155,7 +161,7 @@ body{
 }
 
 .footer .inner {
-	max-width: 960px;
+	width: 970px;
 	color: #959595;
 	font-size: 0.875em;
 }
