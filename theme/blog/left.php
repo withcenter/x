@@ -9,7 +9,12 @@
 <div class='profile-photo-bottom'><p>~</p></div>
 
 <div class='post-forum'>
-	<div class='small-title'>글쓰기</div>
+	<?php
+		$ids = ms::forum();
+		
+	?>
+	<div class='small-title'><a href='<?=g::url_write( $ids[0] )?>'>글쓰기</a></div>
+	<?/*
 	<? 
 		if( !login() ) echo "<p>글 작성을 하실려면 로그인을 하셔야 합니다.</p>";
 		else {
@@ -33,6 +38,7 @@
 		</select>
 	</form>
 	<?}?>
+	*/?>
 </div>
 
 <div class='login-form'>

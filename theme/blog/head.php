@@ -43,3 +43,36 @@
     <div id="container">
 		<?if ( (preg_match('/^config/', $action)) ) include ms::site_menu();?>
         <?php if ((!$bo_table || $w == 's' ) && !defined("_INDEX_")) { ?><div id="container_title"><?php echo $g5['title'] ?></div><?php } ?>
+
+		
+		<?php
+			if ( write_page() ) {
+				$ids = ms::forum();
+				foreach ( $ids as $id ) {
+					$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table = '$id'");
+					$str .=  " <span class='forum-select' bo_table='$id' bo_subject='$row[bo_subject]'>$row[bo_subject]</span> ";
+				}
+		?>
+			<style>
+				.forum-select {
+					cursor: pointer;
+				}
+			</style>
+			<script>
+				$(function(){
+					$('#container_title').after( "<?=$str?>" );
+					$(".forum-select").click(function(){
+						var bo_table = $(this).attr('bo_table');
+						var bo_subject = $(this).attr('bo_subject');
+						$("form[name='fwrite'] [name='bo_table']").val( bo_table );
+						alert("게시판이 " + bo_subject + "로 변경되었습니다.");
+						
+					});
+				});
+			</script>
+		<?
+			}
+		?>
+		
+		
+		

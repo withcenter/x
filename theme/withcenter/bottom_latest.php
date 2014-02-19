@@ -21,7 +21,7 @@ for ($i=0; $row = sql_fetch_array($result); $i++) {
 
 echo "<div class='bottom_latest'>";
 foreach ( $list as $li ) {
-	$thumb = get_list_thumbnail($bo_table, $li['wr_id'], 94, 94);
+	$thumb = get_list_thumbnail($bo_table, $li['wr_id'], 95, 95);
 	$url = $li['href'];
 	$subject = conv_subject($li['wr_subject'], 20, "..." );
 	if ( $thumb['src'] ) {

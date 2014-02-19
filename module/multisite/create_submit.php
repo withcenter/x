@@ -17,6 +17,7 @@
 				'id'	=> ms::board_id( $domain ) . '_1',
 				'subject'	=> $title,
 				'group_id'	=> 'multisite',
+				'bo_admin' => $member['mb_id']
 			);
 			g::board_create($o);
 			
