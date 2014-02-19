@@ -36,14 +36,22 @@
 
 .right_travel_latest ul li{
 	margin:6px 7px;
+	overflow:hidden;
 }
 
 .right_travel_latest ul li .subject{
 	color:#5d5d5d;
-	font-size:1.2em;
-	margin-left:5px;
+	font-size:1.2em;	
+	padding-left:12px;
 	white-space:nowrap;
 	overflow:hidden;
+	position:relative;
+}
+
+.right_travel_latest ul li .subject .dot{
+	position:absolute;
+	left:0;
+	top:4px;
 }
 
 .right_travel_latest ul li .content{

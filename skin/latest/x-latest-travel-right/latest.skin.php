@@ -13,13 +13,12 @@ else $icon_image = null;
     <ul>
     <?php for ($i=0; $i<count($list); $i++) {  ?>
         <li>
-			<img class='dot' src='<?=$latest_skin_url?>/img/dot.gif' />
             <?php
-			$subject = "<span class='subject'>".conv_subject($list[$i]['wr_subject'],35,'...')."</span>";
-			$content = "<span class='content'>".cut_str(strip_tags($list[$i]['wr_content']),40,'...')."</span>";			
+			$subject = "<div class='subject'><img class='dot' src='$latest_skin_url/img/dot.gif' />".conv_subject($list[$i]['wr_subject'],35,'...')."</div>";
+			$content = "<div class='content'>".cut_str(strip_tags($list[$i]['wr_content']),40,'...')."</div>";			
 			
             echo "<a href=\"".$list[$i]['href']."\">";
-            echo $subject."<br>".$content;
+            echo $subject.$content;
 
             echo "</a>";
 			
