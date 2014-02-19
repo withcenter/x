@@ -12,11 +12,15 @@
 	height:100%;
 }
 
+.stories-container .travel-story table .img-container {
+	padding: 1px;
+	border: solid 1px #d5d5d5;
+}
+
 .stories-container .travel-story table .img-wrapper {
 	width:84px;
 	height:84px;
 	overflow:hidden;
-	border: solid 1px #d5d5d5;
 }
 
 .stories-container .travel-story table .travel-title {
