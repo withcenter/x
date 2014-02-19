@@ -1,6 +1,12 @@
 <link rel="stylesheet" href="<?=x::url_theme()?>/css/theme.css">
 <!-- 상단 시작 { -->
-
+<?
+//echo get_text("<script>alert('a');</script>");
+//echo cut_str("12345678910111213","5","...");
+//echo get_sideview('takane123','takane123','takane123@takane123.com','takane123.gnuboard.org');
+//echo date_select('2011-01-01',"date_name");
+//exit;
+?>
 <div id="hd">
     <h1 id="hd_h1"><?php echo $g5['title'] ?></h1>
 

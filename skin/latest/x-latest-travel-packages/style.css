@@ -32,6 +32,16 @@
 	height: 100px;
 }
 
+.travel-package .travel-image .img-wrapper{
+	width:187px;
+	height:104px;
+	overflow:hidden;	
+}
+
+.travel-package .travel-image .img-wrapper img{
+	width:100%;
+}
+
 .travel-package .travel-content {
 	margin: 0.25em 0 0 0;
 	color: #979797;
@@ -45,3 +55,4 @@
 	color: #979797;
 	font-size: 10.5pt;
 }
+
