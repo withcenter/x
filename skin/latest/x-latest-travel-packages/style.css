@@ -1,8 +1,12 @@
 .travel-package-container {
-	margin: 1em 0 0 0.5em;
+	margin: 1em 5px 0 0;
 	width: 186px;
 	display: inline-block;
 	vertical-align: top;
+}
+
+.travel-package-container.no-margin {
+	margin-right:0;
 }
 
 .travel-package {
