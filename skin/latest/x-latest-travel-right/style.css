@@ -42,10 +42,14 @@
 	color:#5d5d5d;
 	font-size:1.2em;
 	margin-left:5px;
+	white-space:nowrap;
+	overflow:hidden;
 }
 
 .right_travel_latest ul li .content{
 	color:#d8d8d8;
 	font-size:1em;
 	margin-left:20px;
+	white-space:nowrap;
+	overflow:hidden;
 }

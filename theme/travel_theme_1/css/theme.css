@@ -268,8 +268,8 @@
 	border:0;
 	left:auto;
 	right:8px;
-	top:15px;	
-	border:1px solid #a9a9a9;
+	top:11px;	
+	border:4px solid #183e5d;
 	border-radius:3px;
 }
 
@@ -285,7 +285,7 @@
 	float:left;
 	border-radius:0;
 	color:#f4f4f4;
-	background-color:#a9a9a9;
+	background-color:#183e5d;
 	width:50px;
 	height:38px;
 }
