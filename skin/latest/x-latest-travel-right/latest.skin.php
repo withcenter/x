@@ -16,7 +16,7 @@ else $icon_image = null;
 			<img class='dot' src='<?=$latest_skin_url?>/img/dot.gif' />
             <?php
 			$subject = "<span class='subject'>".conv_subject($list[$i]['wr_subject'],35,'...')."</span>";
-			$content = "<soan class='content'>".cut_str($list[$i]['wr_content'],40,'...')."</span>";			
+			$content = "<span class='content'>".cut_str($list[$i]['wr_content'],40,'...')."</span>";			
 			
             echo "<a href=\"".$list[$i]['href']."\">";
             echo $subject."<br>".$content;
