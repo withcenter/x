@@ -34,28 +34,10 @@
 	
 	
 	<div class='forum-list'>
-		<div style='padding: 1em'>
-		<div class='discussion-forum'>
-			<h2><img src='<?=x::url_theme()?>/img/discussion.png'> Discussion Forum </h2>
-			<ul>
-				<li><a href='#'>POST TITLE 1 HERE<br><p>Brief Detail about the post here.</p></a></li>
-				<li><a href='#'>POST TITLE 2 HERE<br><p>Brief Detail about the post here.</p></a></li>
-			</ul>
-		</div>
-		<div class='qna'>
-			<h2><img src='<?=x::url_theme()?>/img/qna.png'> Q&As </h2>
-			<ul>
-				<li><a href='#'>QUESTION 1 HERE<br><p>Brief Detail about the answer here.</p></a></li>
-				<li><a href='#'>QIESTION 2 HERE<br><p>Brief Detail about the answer here.</p></a></li>
-			</ul>
-		</div>
-		<div class='travel-forum'>
-			<h2><img src='<?=x::url_theme()?>/img/travel.png'> Travel Stories </h2>
-			<ul>
-				<li><a href='#'>TRAVEL STORY 1 HERE<br><p>Brief Detail about the post here.</p></a></li>
-				<li><a href='#'>TRAVEL STORY 2 HERE<br><p>Brief Detail about the post here.</p></a></li>
-			</ul>
-		</div>
+		<div class='inner'>
+			<?echo latest('x-latest-travel-right', ms::board_id(etc::domain()).'_1', 2, 21, $cache_time=1, x::url_theme().'/img/discussion.png');?>
+			<?echo latest('x-latest-travel-right', ms::board_id(etc::domain()).'_2', 2, 21, $cache_time=1, x::url_theme().'/img/qna.png');?>
+			<?echo latest('x-latest-travel-right',ms::board_id(etc::domain()).'_3', 2, 21, $cache_time=1, x::url_theme().'/img/travel.png');?>
 		</div>
 	</div>
 </div>
@@ -63,7 +45,7 @@
 <div class='middle-panel'>
 	<div class='travel-stories'>
 		<h2>Travel Stories</h2>
-
+		<?=latest("x-latest-travel-stories",  ms::board_id( etc::domain() ).'_1', 3, 20);?>
 	</div>
 	<div class='photo-gallery'>
 		<h2>Photo Gallery</h2>
@@ -78,9 +60,13 @@
 					$images[] = get_file($board['bo_table'],$row['wr_id']);
 				}
 				
+				$count = 1;				
 				foreach ( $images as $image ) {
 					foreach ( $image as $key => $value ) {
+						if ( $count <= 9 ) {					
 						if( $value['view'] ) echo "<div class='thumb'>$value[view]</div>";
+						if( $value['view'] ) $count++;
+						}
 					}
 				}
 				
@@ -92,12 +78,6 @@
 <div class='bottom-panel'>
 	<div class='travel-packages'>
 		<h2> Best Travel Packages </h2>
-		<?
-			$subject = "This is subject";
-			$content = "this is the content";
-			for ( $i = 1; $i <= 5; $i++ ) {
-				echo "<div class='travel-package'><img src='#' width=190px height=103px><p><span class='travel-title'>$subject</span><br>$content</p></div>";
-			}
-		?>
+		<?=latest("x-latest-travel-packages",  ms::board_id( etc::domain() ).'_1', 5, 20);?>
 	</div>
 </div>
