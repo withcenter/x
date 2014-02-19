@@ -8,8 +8,7 @@ else $icon_image = null;
 <div class='right_travel_latest'>
 	<div class='title'>
 		<?=$icon_image?>
-		<a class='top-title' style='font-size: 1em;' href="<?php echo G5_BBS_URL ?>/board.php?bo_table=<?php echo $bo_table ?>"><?php echo $bo_subject; ?></a>		
-		<div style='clear:right;'></div>
+		<a class='top-title' style='font-size: 1em;' href="<?php echo G5_BBS_URL ?>/board.php?bo_table=<?php echo $bo_table ?>"><?php echo $bo_subject; ?></a>				
 	</div>
     <ul>
     <?php for ($i=0; $i<count($list); $i++) {  ?>
