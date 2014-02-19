@@ -3,7 +3,7 @@
 	width: 100%;
 }
 
-.travel-table .travel-package a {
+.travel-table a {
 	text-decoration: none;
 }
 .travel-table .travel-package .travel-title, .travel-table .travel-package .travel-content, .travel-table .travel-package .travel-price {
