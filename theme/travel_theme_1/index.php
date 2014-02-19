@@ -80,9 +80,8 @@
 						foreach ( $image as $key => $value ) {
 							if ( $count <= 9 ) {					
 								if( $value['view'] ) {
-									$img = get_view_thumbnail($img, 94);
-									$img_thumbnail = "<div class='gallery-img-wrapper'>".$value['view']."</div>";									
-									//echo "<div class='thumb'>$value[view]</div>";
+									$img = get_view_thumbnail($value['view'], 94);
+									$img_thumbnail = "<div class='gallery-img-wrapper'>".$value['view']."</div>";																		
 									echo $img_thumbnail;
 									$count++;
 								}
