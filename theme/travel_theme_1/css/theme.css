@@ -176,26 +176,11 @@
 	height: 60px;
 }
 
-#container .bottom-panel .travel-packages {
+#container .bottom-panel {
 	margin: 1em 0 0 0;
 	width: 100%;
 }
 
-#container .bottom-panel .travel-packages .travel-package {
-	text-align: center;
-	display: inline-block;
-	margin: 1em 0.25em 0.25em 0.25em;
-}
-
-#container .bottom-panel .travel-packages .travel-package p {
-	margin: 0.5em 0 0 0;
-}
-
-#container .bottom-panel .travel-packages .travel-package p .travel-title {
-	font-size: 11pt;
-	font-weight: bold;
-	font-family: Malgun Gothic, Gotum, Arial;
-}
 /******************/
 #top-menu{
 	background: #e8e8e8; /* Old browsers */
