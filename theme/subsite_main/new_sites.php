@@ -8,7 +8,7 @@
 		foreach ( $queries as $query ) {
 		if( $query['title'] == '' ) $query['title'] = 'No Title';				
 		
-		$site_url = ms::url_site(['domain']);
+		$site_url = ms::url_site($query['domain']);
 		?>
 		<div class='info-wrapper'>
 			<div class='top-info site-domain'><a href='<?=$site_url?>' target='_blank'><?=$query['domain']?></a></div>
