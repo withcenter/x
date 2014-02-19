@@ -114,9 +114,10 @@
 							if ( $count <= 9 ) {
 								if( $count % 3 == 0 ) $nomargin = 'no-margin';
 								else $nomargin = '';
+								if( $count >= 7 ) $nomargin_bottom = 'no-margin-bottom';								
 								if( $value['view'] ) {
 									$img = get_view_thumbnail($value['view'], 94);
-									$img_thumbnail = "<div class='sidebar-img-wrapper $nomargin'>".$img."</div>";																		
+									$img_thumbnail = "<div class='sidebar-img-wrapper $nomargin $nomargin_bottom'>".$img."</div>";																		
 									echo $img_thumbnail;
 									$count++;
 								}
