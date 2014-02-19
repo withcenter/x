@@ -34,28 +34,10 @@
 	
 	
 	<div class='forum-list'>
-		<div style='padding: 1em'>
-		<div class='discussion-forum'>
-			<h2><img src='<?=x::url_theme()?>/img/discussion.png'> Discussion Forum </h2>
-			<ul>
-				<li><a href='#'>POST TITLE 1 HERE<br><p>Brief Detail about the post here.</p></a></li>
-				<li><a href='#'>POST TITLE 2 HERE<br><p>Brief Detail about the post here.</p></a></li>
-			</ul>
-		</div>
-		<div class='qna'>
-			<h2><img src='<?=x::url_theme()?>/img/qna.png'> Q&As </h2>
-			<ul>
-				<li><a href='#'>QUESTION 1 HERE<br><p>Brief Detail about the answer here.</p></a></li>
-				<li><a href='#'>QIESTION 2 HERE<br><p>Brief Detail about the answer here.</p></a></li>
-			</ul>
-		</div>
-		<div class='travel-forum'>
-			<h2><img src='<?=x::url_theme()?>/img/travel.png'> Travel Stories </h2>
-			<ul>
-				<li><a href='#'>TRAVEL STORY 1 HERE<br><p>Brief Detail about the post here.</p></a></li>
-				<li><a href='#'>TRAVEL STORY 2 HERE<br><p>Brief Detail about the post here.</p></a></li>
-			</ul>
-		</div>
+		<div class='inner'>
+			<?echo latest('x-latest-travel-right', ms::board_id(etc::domain()).'_1', 2, 21, $cache_time=1, x::url_theme().'/img/discussion.png');?>
+			<?echo latest('x-latest-travel-right', ms::board_id(etc::domain()).'_2', 2, 21, $cache_time=1, x::url_theme().'/img/qna.png');?>
+			<?echo latest('x-latest-travel-right',ms::board_id(etc::domain()).'_3', 2, 21, $cache_time=1, x::url_theme().'/img/travel.png');?>
 		</div>
 	</div>
 </div>
