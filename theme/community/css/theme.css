@@ -1,0 +1,295 @@
+#header-container{
+	font-family:arial;
+	margin-bottom:10px;
+}
+
+/** header */
+
+#header-logo {
+	padding:0!important;
+}
+
+#header-logo{
+	height:67px;
+}
+
+#header-logo img {
+	width: 350px;
+	height: 65px;
+	margin-top: 10px;
+}
+
+
+/**wrapper*/
+#wrapper {
+	border: 0 !important;
+	width: 970px;
+}
+
+
+/** aside */
+#aside {
+	width: 210px;
+	float: left;
+	border: 0 !important;
+	margin: 0 10px 0 0;
+}
+
+#aside .company-banner {
+	background: #fafafa;
+	border: solid 1px #0d98ba;
+	border-radius: 3px;
+}
+#aside .company-banner img {
+	border-radius: 3px;
+	width: 100%;
+	height: 90px;
+}
+/* container */
+
+#container {
+	width: 750px;
+	border: 0 !important;
+	padding: 0;
+	word-break: break-all;
+}
+
+#container .no-banner {
+	font-size:100px;	
+	margin:100px 0 0 35px;	
+}
+
+
+
+#container .banner {
+	width: 651px;
+	height: 350px;
+	overflow: hidden;	
+	position: relative;
+}
+
+#container .banner-pagination {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 2em;
+	color: #ffffff;
+}
+
+#container .banner-pagination .pages{
+	display:inline-block;
+	background-color:#41453f;
+	padding:4px 7px;
+	border-radius:3px;
+	opacity:.8;
+}
+
+#container .banner-pagination .pages.selected{
+	padding:4px 15px;
+	background-color: #ffffff;
+	color:#565656;
+}
+
+#container .banner-pagination .pages:hover{
+	cursor:pointer;
+}
+
+#container .banner-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display:none;
+}
+
+#container .banner-image.selected {
+	display:block
+}
+
+#container .banner img {
+	width: 653px;
+	height: 350px;
+}
+
+#container .banner p {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 0 0 0.25em 0.5em;
+	color: #ffffff;
+	font-size: 33pt;
+}
+#container .top-panel > div {
+	display: inline-block;
+	vertical-align: top;
+}
+
+#container .top-panel .forum-list {
+	width: 301px;
+	margin-left: 6px;
+	border: solid 1px #d9d9d9;
+	border-radius: 2px;
+	padding: 1px;
+}
+
+#container .top-panel .forum-list .inner{
+	background: #f8f8f8;
+	height: 332px;
+	padding:9px;
+}
+
+#container .top-panel h2 img {
+	margin: 0 0.5em 0 0;
+}
+
+#container .middle-panel {
+	margin-top: 1em;
+}
+
+#container .middle-panel > div {
+	display: inline-block;
+	vertical-align: top;
+}
+
+#container .middle-panel h2, #container .bottom-panel h2 {
+	color: #5d5d5d;
+	font-size: 12pt;
+	font-family: Arial;
+	font-weight: normal !important;
+	padding: 0 0 0.5em 0;
+	border-bottom: solid 2px #5d5d5d;
+}
+
+#container .middle-panel .travel-stories {
+	width: 655px;
+	height: 240px;
+}
+
+#container .bottom-panel {
+	margin: 1em 0 0 0;
+	width: 100%;
+}
+
+/******************/
+#top-menu{
+	background: #efefef;
+	height: 30px;
+	font-size: .9em;	
+}
+
+#top-menu .inner a {
+	display:inline-block;
+	float:left;
+	margin: 8px 4px 8px 4px;
+	text-decoration:none;
+	color:#717171;
+}
+
+#top-menu .inner .customer-support{
+	color:#444444;
+	position:relative;
+	float:right;
+	padding-left:15px;
+}
+
+#top-menu .inner .customer-support img{
+	position:absolute;
+	top:2px;
+	left:0;
+}
+
+#logo-and-search .inner{
+	max-width:970px;
+	margin:auto;
+	position:relative;		
+}
+
+#top-menu .inner{
+	max-width:970px;
+	margin:auto;
+}
+
+#logo-and-search{
+	background: #ffffff;
+	height: 80px;
+	border-top: 1px solid #12586d;
+	border-bottom: 1px solid #12586d;
+	position: relative;
+}
+
+
+#header-search{
+	border:0;
+	right: 0;
+	top: 18px;	
+	border: 3px solid #0a657d;
+	border-radius: 8px;
+	position: absolute;
+	background: #fdfdfd;
+	padding: 0 0 0 5px;
+}
+
+#header-search #search-input {	
+	padding: 0 0 0 10px;
+	width: 240px;
+	height: 40px;
+	float:left;
+	background: #fdfdfd;
+	color:#acacac;
+	border: 0;
+	font-style: italic;
+	font-family: Arial;
+}
+
+#header-search #search-submit{
+	float:left;
+	border: 0;
+	margin: 5px 5px 0 0;
+	color:#f4f4f4;
+	background: #086a83;
+	width:44px;
+	height:29px;
+}
+
+
+/** Menu */
+#menu-container {
+	height: 42px;
+}
+
+#menu-container #menu-top {
+	width: 970px;
+	margin: 0 auto;
+	padding: 2px 0 0 45px;
+}
+
+#menu-top ul li {
+	display: inline-block;
+	margin: 0.8em;
+	border-left: 1px inset #000000;
+}
+
+
+#menu-top ul li.first-menu {
+	border-left: 0;
+}
+
+#menu-top ul li a {
+	text-decoration: none;
+	font-family: Gulim, Arial;
+	font-size: 10pt;
+	margin: 0 10px 0 30px;
+	color: #ffffff;
+	padding: 5px 18px 5px 18px;
+	border: solid 1px transparent;
+}
+
+#menu-top ul li a:hover {
+	background: #569cae;
+	border: solid 1px #005875;
+	border-radius: 5px;	
+	box-shadow: 1px 1px 3px #065165;
+}
+
+#menu-top ul li.first-menu  a{
+	margin-left: 0;
+}

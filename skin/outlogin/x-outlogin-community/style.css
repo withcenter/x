@@ -1,0 +1,173 @@
+.login-box {
+	border: 1px solid #0d98ba;
+	border-radius: 4px;
+	background-color: #fafafa;
+	margin-bottom: 10px;
+	font-family: "Arial";
+
+}
+.login-box .inner {
+	margin: 1px;
+	border-radius: 3px;
+	border: 1px solid #ffffff;
+	padding: 7px 9px;
+	color: #7e7e7e;
+	min-height: 60px;
+	position: relative;
+}
+.login-box .inner a {
+	text-decoration: none;
+	font-family: '맑은 고딕', AppleGothic;
+	color: #7e7e7e;
+}
+
+.login-box .inner .login-box-middle {
+	margin-bottom: 10px;
+}
+.login-box .inner .login-box-middle div {
+	border: 1px solid #0d98ba;
+	height: 30px;
+	border-radius: 3px;
+	background-color: #ffffff;
+}
+.login-box .inner .login-box-middle div  input {	
+	width: 90%;
+	border: 0;
+	height: 18px;
+	padding: 7px 7px 5px 11px;	
+	font-family: Arial;
+	color:#686d71;
+}
+.login-box .inner .login-box-middle .username {
+	margin-bottom: 5px;
+}
+.login-box .inner  .login-box-bottom {
+	position: relative;
+	font-size: 12px;
+}
+.login-box .inner  .login-box-bottom .remember {
+	position: relative;
+	top: -2px;
+	left: 0;
+	font-size:.9em;	
+	padding-bottom:3px;
+}
+
+.login-box .inner  .login-box-bottom .remember #auto_login{
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	-o-appearance:none;
+	background: #ffffff;
+	border: 1px solid #0d98ba;
+	width: 11px;
+	height: 11px;
+	border-radius: 3px;
+}
+
+.login-box .inner  .login-box-bottom .remember #auto_login:checked {
+	background: #20a0bf;
+}
+
+.login-box .inner  .login-box-bottom .remember .remember-text {
+	position: relative;
+	top: 0;
+	margin-left: 3px;
+}
+
+.login-box .inner  .login-box-bottom  .setting {
+	position: relative;
+	top: -3px;
+	padding-bottom:4px;
+}
+
+.login-box .inner  .login-box-bottom  .setting .find-password {	
+	font-size:.9em;
+
+}
+.login-box .inner  .submit-button {
+	position: absolute;
+	right: 9px;
+	bottom: 30px;
+}
+.login-box .inner  .submit-button input[type='submit']{
+	width: 53px;
+	height: 32px;
+	border: 0;
+}
+
+.login-box .inner .login-box-info {
+	padding-top: 4px;
+	font-size: 9pt;
+}
+.login-box .inner .login-box-info .admin-pannel {
+	margin-bottom: 3px;
+}
+.login-box .inner .login-box-info .username {
+	margin-bottom: 6px;
+}
+
+.login-box .inner .login-box-info .logout-button {
+	border: 1px solid #afafaf;
+	display: inline-block;
+	border-radius: 3px;
+	position: absolute;
+	bottom: 13px;
+	right: 17px;
+}
+.login-box .inner .login-box-info .logout-button a {
+	display: inline-block;
+	border: 1px solid #ffffff;
+	background-color: #afafaf;
+	border-radius: 3px;
+	color: #ffffff;
+	padding: 0 6px;
+	height: 26px;
+	line-height: 26px;
+}
+
+.login-box .inner .login-box-info .profile a, .login-box .inner .login-box-info .setting a  {
+	margin-left: 3px;
+	position: relative;
+	top: -2px;
+}
+
+.login-box .inner .login-box-info .setting .message img{
+	margin-right: 3px;
+	position: relative;
+	top: 2px;
+}
+
+
+/**PLACE HOLDER*****/
+.login-box  ::-webkit-input-placeholder {
+	font-style:italic;
+	font-family:arial;
+	color:#8e9295;
+	font-size:1em;
+}
+
+.login-box  :-moz-placeholder { /* Firefox 18- */
+	font-style:italic;
+	font-family:arial;
+	color:#8e9295; 	
+	font-size:1em;
+}
+
+.login-box  ::-moz-placeholder {  /* Firefox 19+ */
+	font-style:italic;
+	font-family:arial;
+	color:#8e9295; 
+	font-size:1em;
+}
+
+.login-box  :-ms-input-placeholder {  
+	font-style:italic;
+	font-family:arial;
+	color:#8e9295; 
+	font-size:1em;
+}
+
+.login-box .no-account a{
+	font-size:.9em;
+	color:#5d5d5d;
+}

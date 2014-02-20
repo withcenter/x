@@ -1,10 +1,11 @@
+<?include_once(G5_LIB_PATH.'/thumbnail.lib.php');?>
 <link rel="stylesheet" href="<?=x::url_theme()?>/css/theme.css">
 <?
 //di(get_list_thumbnail("ms_travel_1", 11, 85, 81));
 //exit;
 ?>
 <!-- 상단 시작 { -->
-<div id="hd">
+<div id="travel-theme-1-hd">
     <h1 id="hd_h1"><?php echo $g5['title'] ?></h1>
 
     <div id="skip_to_container"><a href="#container">본문 바로가기</a></div>
@@ -97,7 +98,7 @@
 			else echo "<div class='notice'>NO POST AVAILABLE FOR WRITE TABLE ".$latest_bo_table."</div>";
 			
 			
-		?>
+		/*?>
 
 	<div class='sidebar-thumb'>
 		<div class='thumb-container'>
@@ -132,6 +133,7 @@
 			?>
 		</div>
 		</div>	
+		<?*/?>
     </div>
     <div id="container">
 		<?if ( preg_match('/^config/', $action) ) include ms::site_menu();?>
