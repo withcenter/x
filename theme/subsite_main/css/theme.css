@@ -41,20 +41,25 @@ a:hover {
 	left:10px;
 }
 
-#hd{
-	height:104px;
-	width:970px;
-	margin:auto;
-	
-}
 #hd-wrapper{
-	max-width:970px;
+	width: 100%;
 	margin:auto;
 }
 #hd-wrapper #menu-top{
 	height:65px;
-	background-color:#678cc5;
+	background-color:#f5f8f9;
 	position:relative;
+}
+#hd-wrapper #menu-top  .inner {
+	width: 970px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#hd-wrapper #menu-top ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 #hd_sch {
@@ -99,11 +104,11 @@ a:hover {
 #search-wrapper #search-box{
 	position:absolute;
 	top:4px;
-	right:10px;
+	right:0;
 }
 
 #search-wrapper #search-box #search_txtbox{
-	padding:9px;
+	padding:9px 9px 9px 0;
 	width:274px;
 	border:0;
 	background-color:#f7f7f7;
@@ -145,6 +150,12 @@ fieldset{
 	right:5px;
 	top:4px;
 	border:0;
+}
+
+#search-wrapper  .inner {
+	margin: 0 auto;
+	width: 970px;
+	position: relative;
 }
 
 #howto-steps{
