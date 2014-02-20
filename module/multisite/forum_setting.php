@@ -32,8 +32,8 @@
 				}
 			}
 		
-		if ( db::update( $g5['board_table'], $up, array('bo_table' => $in['bo_table']) ) ) $message = 'Successfully updated';
-		else $message = 'Update failed';
+		if ( db::update( $g5['board_table'], $up, array('bo_table' => $in['bo_table']) ) ) $message = '수정 되었습니다.';
+		else $message = '수정에 실패 하였습니다.';
 		
 		echo "<div class='message'>$message</div>";
 	}
