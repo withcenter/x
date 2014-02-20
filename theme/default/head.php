@@ -93,8 +93,6 @@
 		<div><a href='<?=x::url_setting()?>'><?php echo _L('Member Setting');?></a></div>
 		<div><a href='<?=x::url_admin()?>'><?php echo _L('Admin Page');?></a></div>
 		
-		
-        <?php echo poll('basic'); // 설문조사  ?>
     </div>
     <div id="container">
 		<?if ( preg_match('/^config/', $action) ) include ms::site_menu();?>
