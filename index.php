@@ -13,4 +13,4 @@ else {
 	//include "etc/test/post.php";
 }
 include_once(G5_PATH.'/tail.php');
-?>
+
