@@ -190,6 +190,8 @@
 }
 
 
+
+
 /* config_menu */
 .config_menu .config {
 	font-family: '맑은 고딕', AppleGothic;
@@ -343,4 +345,14 @@
 }
 .config_forum .board_list tr .padding-extra2 {
 	padding-left: 93px;
+}
+
+.config_general .image-config .image-upload {
+	border: solid 1px #c3c3c3;
+	padding: 1em;
+	border-radius: 5px;
+}
+
+.config_general .image-config .image-upload .title {
+	margin: 0;
 }

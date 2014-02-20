@@ -1,6 +1,11 @@
 ﻿<?php
-	ms::meta('travelbanner_1_text1',$travelbanner_1_text1);
-	ms::meta('travelbanner_2_text1',$travelbanner_2_text1);
-	ms::meta('travelbanner_3_text1',$travelbanner_3_text1);
-	ms::meta('travelbanner_4_text1',$travelbanner_4_text1);
-	ms::meta('travelbanner_5_text1',$travelbanner_5_text1);
+	ms::meta('combanner_1_text1',$combanner_1_text1);
+	ms::meta('combanner_2_text1',$combanner_2_text1);
+	ms::meta('combanner_3_text1',$combanner_3_text1);
+	ms::meta('combanner_4_text1',$combanner_4_text1);
+	ms::meta('combanner_5_text1',$combanner_5_text1);
+	ms::meta('combanner_1_text2',$combanner_1_text2);
+	ms::meta('combanner_2_text2',$combanner_2_text2);
+	ms::meta('combanner_3_text2',$combanner_3_text2);
+	ms::meta('combanner_4_text2',$combanner_4_text2);
+	ms::meta('combanner_5_text2',$combanner_5_text2);
