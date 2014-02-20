@@ -11,7 +11,7 @@
 	else if ( $in['action'] == 'config_forum' ) $selected = 3;
 	else if ( $in['action'] == 'config_write' ) $selected = 4;
 	else if ( $in['action'] == 'config_theme' ) $selected = 5;
-	else $selected = null;
+	else if ( $in['action'] == 'config' || empty( $in['action'])) $selected = 6;
 	
 	if ( $selected ) {
 		echo "
@@ -47,6 +47,9 @@
 	<li>
 		<a setting_menu_no=5 href='?module=multisite&action=config_theme'>테마</a>
 	</li>
+	<li>
+		<a setting_menu_no=6 href='?module=multisite&action=config'>도움말</a>
+	</li>	
 	
 </ul>
 <div style='clear:left;'></div>

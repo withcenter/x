@@ -99,12 +99,13 @@
 	top: 0;
 	left: -4px;
 }
+/*
 @media screen and (-webkit-min-device-pixel-ratio:0) { 
 	.config_general .select-button {
-		top: 1px;
+		top: 0;
 	}
 }
-
+*/
 @-moz-document url-prefix() { 
 	.config_general .select-button {
 		top: 0.5px;

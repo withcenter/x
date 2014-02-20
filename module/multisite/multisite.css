@@ -609,3 +609,123 @@ table > .header td:first-child {
 	color: #ffffff;
 	border: 0;
 }
+
+/* config.php */
+.subsite-support {
+	font-family: '맑은 고딕', AppleGothic;
+}
+
+.subsite-support .title {
+	border: 1px solid #d5d5d5;
+	background-color: #f9f9f9;
+	border-radius: 3px;
+	margin: 10px 0;
+}
+
+.subsite-support .title .inner {
+	border: 1px solid #ffffff;
+	border-radius: 3px;
+	padding: 0 10px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #2c5991;
+}
+
+.subsite-support .title .inner  img {
+	height: 20px;
+	margin-right: 5px;
+}
+.subsite-support  .support .tab-menu {
+	margin-bottom: 10px;
+}
+.subsite-support  .support .tab-menu .tab-button {
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 10px;
+	background-color: #53749c;
+	color: #ffffff;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.subsite-support  .support .tab-menu .tab-button:hover  {
+	background-color: #314258;
+}
+
+.tab-button-selected {
+	background-color: #314258
+}
+.subsite-support  .support-content {
+	border: 1px solid #d5d5d5;
+	border-radius: 3px;
+	background-color: #f9f9f9;
+}
+
+.subsite-support  .support-content .inner{
+	border: 1px solid #ffffff;
+	border-radius: 3px;
+	padding: 10px;
+	display: none;
+	min-height: 300px;
+}
+
+.subsite-support  .support-content .general-setting {
+	display: block;
+}
+
+.subsite-support .support-content .inner .support-image img {
+	max-width: 670px;
+}
+.subsite-support .support-content .inner  .sub-title:first-child {
+	margin-top: 0;
+}
+.subsite-support .support-content .inner  .sub-title {
+	font-weight: bold;
+	margin: 30px 0 7px 0;
+	color: #434d5a;
+}
+
+
+/* forum_setting.php */
+.forum_setting .wrapper{
+	border: 1px solid #d5d5d5;
+	padding: 10px;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.forum_setting .wrapper .title {
+	border: 1px solid #d5d5d5;
+	background-color: #f9f9f9;
+	color: #36567d;
+	font-family: '맑은 고딕', AppleGothic;
+	font-weight: bold;
+	height: 25px;
+	line-height: 23px;
+	padding: 0 10px;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	font-size: 10pt;
+}
+
+.forum_setting .wrapper input[type='text'] {
+	height: 25px;
+	line-height: 25px;
+}
+
+.forum_setting .wrapper input[type='submit'], .forum_setting .wrapper input[type='submit']:hover {
+	border: 0;
+	background-color: #555555;
+	color: #ffffff;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
+.forum_setting .wrapper .tip {
+	color: #666666;
+}

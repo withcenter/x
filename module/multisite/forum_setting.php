@@ -77,74 +77,76 @@
 	}
 	
 ?>
-<form class='forum_settig' method='get'>
-	<input type='hidden' name='module' value='multisite' />
-	<input type='hidden' name='action' value='config_forum' />
-	<input type='hidden' name='mode' value='forum_setting' />
-	<input type='hidden' name='bo_table' value='<?=$in['bo_table']?>' />
-	<input type='hidden' name='done' value=1 />
-	
-	<fieldset style='margin-top: 10px;'>
-		<legend>일반 설정</legend>
-		<div><span class='item'>게시판 아이디</span><?=$row['bo_table']?></div>
-		<div><span class='item'>제목</span><?=text('bo_subject')?></div>
-		<div><span class='item'>스킨</span><?=load_skin()?></div>
-		<input type='submit' value='업데이트' />
-	</fieldset>
-	
-	<fieldset>
-		<legend>Category</legend>
-		<div><span class='item'>분류 사용</span><?=checkbox('bo_use_category')?></div>
-		<div><span class='item' title='분류는 |로 구분됩니다. 예) 분류1|분류2|분류3'>분류</span><?=text('bo_category_list')?></div>
-		<input type='submit' value='업데이트' />
-	</fieldset>
-	
-	<fieldset>
-		<legend>접근 레벨</legend>
-		<div><span class='item'>리스트</span><?=text('bo_list_level')?></div>
-		<div><span class='item'>읽기</span><?=text('bo_read_level')?></div>
-		<div><span class='item'>쓰기</span><?=text('bo_write_level')?></div>
-		<div><span class='item'>답변</span><?=text('bo_reply_level')?></div>
-		<div><span class='item'>코멘트</span><?=text('bo_comment_level')?></div>
-		<div><span class='item'>업로드</span><?=text('bo_upload_level')?></div>
-		<div><span class='item'>다운로드</span><?=text('bo_download_level')?></div>
-		<div><span class='item'>HTML</span><?=text('bo_html_level')?></div>
-		<div><span class='item'>링크</span><?=text('bo_link_level')?></div>
-		<input type='submit' value='업데이트' />
-	</fieldset>
-	
-	<fieldset>
-		<legend>포인트</legend>
-		<div><span class='item'>읽기</span><?=text('bo_read_point')?></div>
-		<div><span class='item'>쓰기</span><?=text('bo_write_point')?></div>
-		<div><span class='item'>코멘트</span><?=text('bo_comment_point')?></div>
-		<div><span class='item'>다운로드</span><?=text('bo_download_point')?></div>
-		<input type='submit' value='업데이트' />
-	</fieldset>
+<div class='forum_setting'>
+	<form method='get'>
+		<input type='hidden' name='module' value='multisite' />
+		<input type='hidden' name='action' value='config_forum' />
+		<input type='hidden' name='mode' value='forum_setting' />
+		<input type='hidden' name='bo_table' value='<?=$in['bo_table']?>' />
+		<input type='hidden' name='done' value=1 />
+		
+		<div class='wrapper' style='margin-top: 10px;'>
+			<div class='title'>일반 설정</div>
+			<div><span class='item'>게시판 아이디</span><?=$row['bo_table']?></div>
+			<div><span class='item'>제목</span><?=text('bo_subject')?></div>
+			<div><span class='item'>스킨</span><?=load_skin()?></div>
+			<input type='submit' value='업데이트' />
+		</div>
+		
+		<div class='wrapper'>
+			<div class='title'>분류</div>
+			<div><span class='item'>분류 사용</span><?=checkbox('bo_use_category')?></div>
+			<div><span class='item' title='분류는 |로 구분됩니다. 예) 분류1|분류2|분류3'>분류</span><?=text('bo_category_list')?> <span class='tip'>분류는|로 구분하여 등록. 예)분류1|분류2|분류3</span></div>
+			<input type='submit' value='업데이트' />
+		</div>
+		
+		<div class='wrapper'>
+			<div class='title'>접근 레벨</div>
+			<div><span class='item'>리스트</span><?=text('bo_list_level')?></div>
+			<div><span class='item'>읽기</span><?=text('bo_read_level')?></div>
+			<div><span class='item'>쓰기</span><?=text('bo_write_level')?></div>
+			<div><span class='item'>답변</span><?=text('bo_reply_level')?></div>
+			<div><span class='item'>코멘트</span><?=text('bo_comment_level')?></div>
+			<div><span class='item'>업로드</span><?=text('bo_upload_level')?></div>
+			<div><span class='item'>다운로드</span><?=text('bo_download_level')?></div>
+			<div><span class='item'>HTML</span><?=text('bo_html_level')?></div>
+			<div><span class='item'>링크</span><?=text('bo_link_level')?></div>
+			<input type='submit' value='업데이트' />
+		</div>
+		
+		<div class='wrapper'>
+			<div class='title'>포인트</div>
+			<div><span class='item'>읽기</span><?=text('bo_read_point')?></div>
+			<div><span class='item'>쓰기</span><?=text('bo_write_point')?></div>
+			<div><span class='item'>코멘트</span><?=text('bo_comment_point')?></div>
+			<div><span class='item'>다운로드</span><?=text('bo_download_point')?></div>
+			<input type='submit' value='업데이트' />
+		</div>
 
-	<fieldset>
-		<legend>목록 설정</legend>
-		<div><span class='item'>목록 보임</span><?=checkbox('bo_use_list_view')?></div>
-		<div><span class='item'>파일 목록 보임</span><?=checkbox('bo_use_list_file')?></div>
-		<div><span class='item'>제목 길이</span><?=text('bo_subject_len')?></div>
-		<div><span class='item'>페이지 갯수</span><?=text('bo_page_rows')?></div>
-		<input type='submit' value='업데이트' />
-	</fieldset>
-	
-	<fieldset>
-		<legend>기타</legend>
-		<div><span class='item'>비밀글사용</span><?=checkbox('bo_use_secret')?></div>
-		<div><span class='item'>동적HTML편집기</span><?=checkbox('bo_use_dhtml_editor')?></div>
-		<div><span class='item'>RSS 사용</span><?=checkbox('bo_use_rss_view')?></div>
-		<div><span class='item'>추천사용</span><?=checkbox('bo_use_good')?></div>
-		<div><span class='item'>비추천사용</span><?=checkbox('bo_use_nogood')?></div>
-		<div><span class='item'>글쓴이사용</span><?=checkbox('bo_use_name')?></div>
-		<div><span class='item'>서명사용</span><?=checkbox('bo_use_signature')?></div>
-		<div><span class='item'>IP보이기</span><?=checkbox('bo_use_ip_view')?></div>
-		<div><span class='item'>업로드사이즈</span><?=text('bo_upload_size')?></div>
-		<div><span class='item'>이미지가로</span><?=text('bo_image_width')?></div>
-		<div><span class='item'>Thumbnail가로</span><?=text('bo_gallery_width')?></div>
-		<div><span class='item'>Thumbnail세로</span><?=text('bo_gallery_height')?></div>		
-		<input type='submit' value='업데이트'/>
-	</fieldset>
-</form>
+		<div class='wrapper'>
+			<div class='title'>목록 설정</div>
+			<div><span class='item'>목록 보임</span><?=checkbox('bo_use_list_view')?></div>
+			<div><span class='item'>파일 목록 보임</span><?=checkbox('bo_use_list_file')?></div>
+			<div><span class='item'>제목 길이</span><?=text('bo_subject_len')?></div>
+			<div><span class='item'>페이지 갯수</span><?=text('bo_page_rows')?></div>
+			<input type='submit' value='업데이트' />
+		</div>
+		
+		<div class='wrapper'>
+			<div class='title'>기타</div>
+			<div><span class='item'>비밀글사용</span><?=checkbox('bo_use_secret')?></div>
+			<div><span class='item'>동적HTML편집기</span><?=checkbox('bo_use_dhtml_editor')?></div>
+			<div><span class='item'>RSS 사용</span><?=checkbox('bo_use_rss_view')?></div>
+			<div><span class='item'>추천사용</span><?=checkbox('bo_use_good')?></div>
+			<div><span class='item'>비추천사용</span><?=checkbox('bo_use_nogood')?></div>
+			<div><span class='item'>글쓴이사용</span><?=checkbox('bo_use_name')?></div>
+			<div><span class='item'>서명사용</span><?=checkbox('bo_use_signature')?></div>
+			<div><span class='item'>IP보이기</span><?=checkbox('bo_use_ip_view')?></div>
+			<div><span class='item'>업로드사이즈</span><?=text('bo_upload_size')?></div>
+			<div><span class='item'>이미지가로</span><?=text('bo_image_width')?></div>
+			<div><span class='item'>Thumbnail가로</span><?=text('bo_gallery_width')?></div>
+			<div><span class='item'>Thumbnail세로</span><?=text('bo_gallery_height')?></div>		
+			<input type='submit' value='업데이트'/>
+		</div>
+	</form>
+</div>

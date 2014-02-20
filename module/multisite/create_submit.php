@@ -3,6 +3,10 @@
 		jsBack("사이트 주소를 입력해 주세요");
 		exit;
 	}
+	if ( strpos($sub_domain, ".")) {
+		jsBack('사이트 주소에는 .이 들어갈 수 없습니다.');
+		exit;
+	}
 	
 	if ( strlen($sub_domain) > 14 ) {
 		echo "
