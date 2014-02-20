@@ -42,23 +42,23 @@
 <?
 if( empty( $menu_1 ) ) $menu_1 = ms::meta('menu_1', ms::board_id(etc::domain()).'_1');
 /**Sample Latest Post, this only fetches 5 latest post from $extra['menu_1'] */?>
-	<div class='small-title3'>최신 등록글</div>
 <? 	if ( g::forum_exist( $g5['write_prefix'].$menu_1) ) {  ?>
-	<ul>
-		<?
-		$option = db::rows("SELECT * FROM $g5[write_prefix]".$menu_1." ORDER BY wr_num");
-		for ( $i = 0; $i <= 4; $i++) { 
-			if( $option[$i]['wr_subject'] ) {?>
-				<li>
-					<a href='<?=g::url()?>/bbs/board.php?bo_table=<?=$menu_1?>&wr_id=<?=$option[$i]['wr_id']?>'>
-						<div class='subject'><?=$option[$i]['wr_subject']?></div>
-						<div><?=cut_str(strip_tags($option[$i]['wr_content']), 50)?></div>
-					</a>
-				</li>
-		<?}}?>
-	</ul>
-<? }?>	
-</div>
+	<div class='small-title3'>최신 등록글</div>
+		<ul>
+			<?
+			$option = db::rows("SELECT * FROM $g5[write_prefix]".$menu_1." ORDER BY wr_num");
+			for ( $i = 0; $i <= 4; $i++) { 
+				if( $option[$i]['wr_subject'] ) {?>
+					<li>
+						<a href='<?=g::url()?>/bbs/board.php?bo_table=<?=$menu_1?>&wr_id=<?=$option[$i]['wr_id']?>'>
+							<div class='subject'><?=$option[$i]['wr_subject']?></div>
+							<div><?=cut_str(strip_tags($option[$i]['wr_content']), 50)?></div>
+						</a>
+					</li>
+			<?}}?>
+		</ul>
+	</div>
+<? }?>
 
 <div class='search'>
 	<fieldset>
