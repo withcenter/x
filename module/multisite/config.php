@@ -53,10 +53,20 @@
 			
 		</div>
 		<div class='inner write-setting'>
-			글쓰기 설정
+		<?php
+			for( $i=1; $i <=7; $i++ ) {
+				if ( $i == 1 ) echo "<div class='sub-title'>1. 글쓰기를 클릭 합니다.</div>"; 
+				else if ( $i == 2 ) echo "<div class='sub-title'>2.포털의 블로그에서 글쓰기 API 정보를 확인 하는 방법은 다음과 같습니다(네이버 기준).</div>";
+				else if ( $i == 4 ) echo "<div class='sub-title'>3. 메뉴, 글 관리에서 글쓰기 API설정을 클릭 합니다.</div>";
+				else if ( $i == 5 ) echo "<div class='sub-title'>4. 글쓰기 API 계정을 확인 한 후, 설정하려는 사이트의 API연결 URL, 아이디, API연결 암호를 입력합니다.  </div>";
+				else if ( $i == 6 ) echo "<div class='sub-title'>5. 다음과 같이 네이버 블로그에도 글이 정상적으로 등록이 된다면 설정이 완료 된 것 입니다. </div>";
+				echo "<div class='support-image'><img src='".x::url()."/module/multisite/support_img/w{$i}.png' /></div>";
+			}?>
+			<div class='sub-title'>6. 글쓰기 서비스에서는 총 3개의 글쓰기 API계정을 입력 할 수 있으며, 3개의 블로그에 동시에 글 등록이 가능합니다.</div>
 		</div>
 		<div class='inner theme-setting'>
-			테마 선택
+			<div class='sub-title'></div>
+			<div class='support-image'><img src='<?=x::url()?>/module/multisite/support_img/t1.png' /></div>
 		</div>
 	</div>
 	

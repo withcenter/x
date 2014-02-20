@@ -651,7 +651,7 @@ table > .header td:first-child {
 	cursor: pointer;
 }
 
-.subsite-support  .support .tab-menu .tab-button:hover  {
+.subsite-support  .support .tab-menu .tab-button:hover, .subsite-support  .support .tab-menu .tab-button:first-child {
 	background-color: #314258;
 }
 
