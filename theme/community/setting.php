@@ -23,10 +23,13 @@
 			</div>
 		</td>
 	</tr>	
+		<tr>
+		<td colspan=2 align='center'><div class='title'>ROTATING BANNERS<div></th>
+	</tr>
 	<tr valign='top' align='center'>
 		<td>
 			<div class='image-upload'>
-				<div class='title'>배너이미지1</div>
+				<div class='title'>ROTATING BANNER 1</div>
 				<?if( ms::meta('combanner_1') ) {?><img src="<?=ms::meta('img_url').ms::meta('combanner_1')?>" width=280px height=160px><br><?}?>
 				<input type='file' name='combanner_1'>
 				<?if( ms::meta('combanner_1') != '' ) { ?>
@@ -44,7 +47,7 @@
  
 		<td>
 			<div class='image-upload'>
-				<div class='title'>배너이미지2</div>
+				<div class='title'>ROTATING BANNER 2</div>
 				<?if( ms::meta('combanner_2') ) {?><img src="<?=ms::meta('img_url').ms::meta('combanner_2')?>" width=280px height=160px><br><?}?>
 				<input type='file' name='combanner_2'>
 				<?if( ms::meta('combanner_2') != '' ) { ?>
@@ -63,7 +66,7 @@
 	<tr valign='top' align='center'>
 		<td>
 			<div class='image-upload'>
-				<div class='title'>배너이미지3</div>
+				<div class='title'>ROTATING BANNER 3</div>
 				<?if( ms::meta('combanner_3') ) {?><img src="<?=ms::meta('img_url').ms::meta('combanner_3')?>" width=280px height=160px><br><?}?>
 				<input type='file' name='combanner_3'>
 				<?if( ms::meta('combanner_3') != '' ) { ?>
@@ -81,7 +84,7 @@
 
 		<td>
 			<div class='image-upload'>
-				<div class='title'>배너이미지4</div>
+				<div class='title'>ROTATING BANNER 4</div>
 				<?if( ms::meta('combanner_4') ) {?><img src="<?=ms::meta('img_url').ms::meta('combanner_4')?>" width=280px height=160px><br><?}?>
 				<input type='file' name='combanner_4'>
 				<?if( ms::meta('combanner_4') != '' ) { ?>
@@ -100,7 +103,7 @@
 		<tr valign='top' align='center'>
 		<td>
 			<div class='image-upload'>
-				<div class='title'>배너이미지1</div>
+				<div class='title'>ROTATING BANNER 1</div>
 				<?if( ms::meta('combanner_5') ) {?><img src="<?=ms::meta('img_url').ms::meta('combanner_5')?>" width=280px height=160px><br><?}?>
 				<input type='file' name='combanner_5'>
 				<?if( ms::meta('combanner_5') != '' ) { ?>
@@ -115,9 +118,34 @@
 				<input type='text' name='combanner_5_text3' value='<?=ms::meta('combanner_5_text3')?>'>
 			</div>
 		</td>
+	</tr>
+	</tr>	
+		<tr>
+		<td colspan=2 align='center'><div class='title'>STATIC BANNER<div></th>
+	</tr>
+	<tr valign='top' align='center'>
+		<td>
+			<div class='image-upload'>
+				<div class='title'>BANNER (Middle)</div>
+				<?if( ms::meta('combanner_middle') ) {?><img src="<?=ms::meta('img_url').ms::meta('combanner_middle')?>" width=280px height=160px><br><?}?>
+				<input type='file' name='combanner_middle'>
+				<?if( ms::meta('combanner_middle') != '' ) { ?>
+					<input type='hidden' name='combanner_middle_remove' value='n'>
+					<input type='checkbox' name='combanner_middle_remove' value='y'><span class='title-small'>Remove Image</span>
+				<?}?>
+			</div>
+		</td>
 
 		<td>
-	
+			<div class='image-upload'>
+				<div class='title'>BANNER (Bottom)</div>
+				<?if( ms::meta('combanner_bottom') ) {?><img src="<?=ms::meta('img_url').ms::meta('combanner_bottom')?>" width=280px height=160px><br><?}?>
+				<input type='file' name='combanner_bottom'>
+				<?if( ms::meta('combanner_bottom') != '' ) { ?>
+					<input type='hidden' name='combanner_bottom_remove' value='n'>
+					<input type='checkbox' name='combanner_bottom_remove' value='y'><span class='title-small'>Remove Image</span>
+				<?}?>
+			</div>
 		</td>
 	</tr>
 </table>
