@@ -13,32 +13,9 @@
 		$ids = ms::forum();
 		
 	?>
-	<div class='small-title'><a href='<?=g::url_write( $ids[0] )?>'>글쓰기</a></div>
-	<?/*
-	<? 
-		if( !login() ) echo "<p>글 작성을 하실려면 로그인을 하셔야 합니다.</p>";
-		else {
-		if( isset( $in['write_post']) ) { 
-			if ( $in['write_post'] == '' ) jsAlert('게시판을 선택해 주세요.');
-			else header("Location: " . g::url()  ."/bbs/write.php?bo_table=" . $in['write_post']);
-		}
-	?>
-	<form method="POST" name='post_write'>
-	<?
-		$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";	
-		$rows = db::rows( "SELECT bo_table, bo_subject FROM $g5[board_table] WHERE $qb");
-	?>
-		<select name='write_post'>
-		<?
-			echo "<option value=''>글쓰기 게시판 선택</option>";
-			foreach ( $rows as $row ) {
-				echo "<option value='$row[bo_table]'>$row[bo_subject]</option>";
-			}
-		?>
-		</select>
-	</form>
-	<?}?>
-	*/?>
+	<? if ( ms::admin() ) {?>
+		<div class='small-title'><a href='<?=g::url_write( $ids[0] )?>'>글쓰기</a></div>
+	<? }?>
 </div>
 
 <div class='login-form'>
