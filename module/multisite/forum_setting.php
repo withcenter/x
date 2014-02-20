@@ -61,6 +61,8 @@
 	function load_skin () {
 		global $row;
 		$dirs = file::getDirs(G5_SKIN_PATH.'/board');
+		$x_dirs = file::getDirs(x::dir().'/skin/board');
+		
 		$select = "<select name='bo_skin'>
 					  <option value=''>Select Skin</option>
 					  <option value=''></option>
@@ -71,6 +73,13 @@
 			else $selected = null;
 			
 			$select .= "<option value='$d' $selected>$d</option>";
+		}
+		
+		foreach( $x_dirs  as $xd ) {
+			$skin_dir = 'x/skin/board/'.$xd;
+			if ( $skin_dir == $row['bo_skin'] ) $selected = 'selected';
+			else $selected = null;
+			$select .= "<option value='$skin_dir' $selected>$xd</option>";
 		}
 		$select .= "</select>";
 		
