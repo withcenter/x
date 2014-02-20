@@ -6,7 +6,7 @@
 
 ?>
 
-   <nav id="menu-container" style="background: url('<?=x::url_theme()?>/img/main-menu-bg.png')">
+   <nav id="menu-container">
 	<div  id="menu-top">
 <ul>
 	<?php
