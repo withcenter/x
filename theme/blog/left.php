@@ -6,7 +6,7 @@
 	<?}?>
 	<div class='profile-message'><?=ms::meta('blog_profile_message')?></div>
 </div>
-<div class='profile-photo-bottom'><p>~</p></div>
+<div class='profile-photo-bottom'></div>
 
 <div class='post-forum'>
 	<?php

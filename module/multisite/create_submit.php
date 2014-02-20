@@ -3,7 +3,7 @@
 		jsBack("사이트 주소를 입력해 주세요");
 		exit;
 	}
-	if ( strpos($sub_domain, ".")) {
+	if ( strpos($sub_domain, ".") || !str_replace('.', '', $sub_domain) ) {
 		jsBack('사이트 주소에는 .이 들어갈 수 없습니다.');
 		exit;
 	}
@@ -17,11 +17,26 @@
 		";
 		exit;
 	}
-	else {
-		$domain = $sub_domain . '.' . etc::base_domain();
+	
+	if( preg_match("/[\xA1-\xFE\xA1-\xFE]/", $sub_domain) ) {
+		jsBack ( "사이트 주소에는 한글을 입력 할 수 없습니다." );
+		exit;
+	}
+	
+	if( preg_match("/[!#$%^&*()?+=\/]/", $sub_domain) ) {
+		jsBack ( "사이트 주소에는 특수문자를 입력 할 수 없습니다." );
+		exit;
+	}
+	
+	if ( empty ( $title ) ) {
+		jsBack ( "사이트 제목을 입력해 주세요" );
+		exit;
+	}
+
+	$domain = $sub_domain . '.' . etc::base_domain();
 		
-		if ( $error_code = ms::create( array('domain'=>$domain, 'title'=>$title) ) ) include module( 'create_fail' );
-		else {
+	if ( $error_code = ms::create( array('domain'=>$domain, 'title'=>$title) ) ) include module( 'create_fail' );
+	else {
 			$o = array(
 				'id'	=> ms::board_id( $domain ) . '_1',
 				'subject'	=> $title,
@@ -57,5 +72,4 @@
 			md::config_update();
 			
 			include module( 'create_success' );
-		}
 	}

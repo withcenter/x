@@ -1,18 +1,21 @@
 <link rel="stylesheet" href="<?=x::url_theme()?>/css/theme.css">
 <!-- 상단 시작 { -->
 <div id='website-wrapper'>
-<div id="hd">
-    <h1 id="hd_h1"><?php echo $g5['title'] ?></h1>
-    <div id="hd-wrapper">
-		<div id='menu-top'>
+
+  <div id="hd-wrapper">
+	<div id='menu-top'>
+		<div class='inner'>
 			<div id="logo">
 				<a href="<?php echo G5_URL ?>">
-					<img src='<?=x::url_theme()?>/img/logo.png'>
+					<img src='<?=x::url_theme()?>/img/logo1.png'>
 				</a>
 			</div>
 			<?include x::theme('website.com-menu')?>
 		</div>
-		<div id='search-wrapper'>
+	</div>
+	
+	<div id='search-wrapper'>
+		<div class='inner'>
 			<div class='sub-menu'>
 				<?include x::theme('website.com-submenu')?>
 			</div>
@@ -55,11 +58,9 @@
 				</fieldset>	
 			</div>
 		</div>
-    </div>
+	</div>
 </div>
-<!-- } 상단 끝 -->
 
-<hr>
 
 <!-- 콘텐츠 시작 { -->
 
