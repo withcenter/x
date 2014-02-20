@@ -255,60 +255,69 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 #bo_vc_sns input {margin:0 0 0 5px}
 
 /***NEW BOARD***/
-#travel_theme_table .travel_posts{
-	height:280px;
-	overflow:hidden;	
-	width:243px;
-	margin-right:9px;
+#travel_theme_board_2 .travel_posts{
 	font-family:arial;
 }
 
-#travel_theme_table a{
+#travel_theme_board_2 td.no-padding{
+	padding-top:0;
+}
+
+#travel_theme_board_2 td{
+	border-bottom:1px solid #a9a9a9;
+	padding:15px 0;
+}
+
+#travel_theme_board_2 .travel_posts a{
 	text-decoration:none;
 }
 
-#travel_theme_table .travel_posts.no-margin{
-	margin:0;	
+#travel_theme_board_2 .travel_posts .post-image{
+	width:146px;
+	height:106px;
 }
 
-#travel_theme_table .travel_posts .post-image{
-	margin-bottom:7px;
-}
-
-#travel_theme_table .travel_posts .post-subject{
-	font-size:1.3em;
-	font-weight:bold;
-	color:#5d5d5d;
-	padding: 0 10px;
-	margin-bottom:4px;
-}
-
-#travel_theme_table .travel_posts .user-review{
-	font-size:.9em;
-	color:#d7d7d7;
-	padding: 0 10px;
-	margin-bottom:6px;
+#travel_theme_board_2 .travel_posts .text-info{
 	position:relative;
+	margin:1px 0 0 10px;	
+	height:105px;
 }
 
-#travel_theme_table .travel_posts .stars{
+#travel_theme_board_2 .travel_posts .text-info img{
 	position:absolute;
-	top:-3px;
-	right:45px;
-}
-	
-#travel_theme_table .travel_posts .post-subject .view-guide{
-	font-size:.7em;	
-	font-weight:normal;
-	color:#d7d7d7;
-	float:right;
-	margin-top:4px;
+	right:39px;
+	top:30px;
 }
 
-#travel_theme_table .travel_posts .post-content{
-	font-size:1em;
+#travel_theme_board_2 .travel_posts .post-subject{
+	font-size:1.5em;
 	color:#5d5d5d;
-	padding: 0 10px;
-	height:78px;
+}
+
+#travel_theme_board_2 .travel_posts .post-sub-title{
+	font-size:1.2em;
+	color:#aeaeae;
+	margin-bottom:15px;
+}
+
+#travel_theme_board_2 .travel_posts .post-content{
+	font-size:1em;
+	color:#868686;
+	margin-right:113px;
+	margin-bottom:15px;
+	height: 30px;
 	overflow:hidden;
+}
+
+#travel_theme_board_2 .travel_posts .post-availability{
+	font-size:.9em;
+	font-style:italic;
+	color:#868686;
+	margin-right:113px;
+}
+
+#travel_theme_board_2 .travel_posts .post-image{
+	border:1px solid #a9a9a9;
+	border-radius:3px;
+	padding:1px;
 }
