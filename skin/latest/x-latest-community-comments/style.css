@@ -39,12 +39,12 @@
 	display: inline-block;
 	vertical-align: top;
 }
-a .subject {
+.posts a .subject {
 	overflow: hidden;
 	width: 120px;
 }
 
-a .no-of-comments {
+.posts a .no-of-comments {
 	color: #ff0000;
 }
 

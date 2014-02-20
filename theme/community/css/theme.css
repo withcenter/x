@@ -343,3 +343,56 @@
 .footer-text {
 	
 }
+
+/**recent posts sidebar */
+.posts {
+	border: solid 1px #0d98ba;
+	border-top: 0;
+	margin-top: 10px;
+	border-radius: 3px;
+	font-family: Gotum, Arial;
+}
+
+.posts .title {
+	background: #1f9ebd;
+	height: 14px;
+	border-top: solid 2px #51b6ce;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	padding: 4px 4px 10px 4px;
+	font-size: 0.9em;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.recent-posts-items .title .title-left > div {
+	display: inline-block;
+}
+
+.recent-posts-items {
+	word-break: break-all;
+	padding-right: 10px;
+}
+
+.recent-posts-items ul {
+	padding-left: 30px;
+	list-style: square;
+}
+
+.recent-posts-items ul li a {
+	text-decoration: none;
+}
+
+.recent-posts-items ul li a > div {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.recent-post-items a .subject {
+
+}
+
+.recent-posts-items a .no-of-recent-comments {
+	color: #ff7538;
+}
+
