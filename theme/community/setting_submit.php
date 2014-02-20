@@ -14,3 +14,5 @@
 	ms::meta('combanner_3_text3',$combanner_3_text3);
 	ms::meta('combanner_4_text3',$combanner_4_text3);
 	ms::meta('combanner_5_text3',$combanner_5_text3);
+	
+	ms::meta('combanner_sidebar_text1',$combanner_sidebar_text1);
