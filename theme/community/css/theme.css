@@ -345,7 +345,7 @@
 }
 
 /**recent posts sidebar */
-.posts {
+.recent-posts {
 	border: solid 1px #0d98ba;
 	border-top: 0;
 	margin-top: 10px;
@@ -353,7 +353,7 @@
 	font-family: Gotum, Arial;
 }
 
-.posts .title {
+.recent-posts .title {
 	background: #1f9ebd;
 	height: 14px;
 	border-top: solid 2px #51b6ce;
@@ -365,7 +365,7 @@
 	font-weight: bold;
 }
 
-.recent-posts-items .title .title-left > div {
+.recent-posts .title .title-left > div {
 	display: inline-block;
 }
 

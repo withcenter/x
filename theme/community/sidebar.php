@@ -15,11 +15,14 @@
 		$previous_date = date('Y-m-d', strtotime("-7 day", strtotime($current_date))).' 00:00:00';
 		$rows = db::rows( "SELECT bo_table, wr_id FROM $g5[board_new_table] WHERE $qb AND bn_datetime BETWEEN '$previous_date' AND '$current_date' AND wr_id=wr_parent ORDER BY bn_datetime DESC" );	
 		
+		$i = 0;
 		foreach ( $rows as $row ) {
-			$list[] = db::row( " SELECT * FROM $g5[write_prefix]".$row['bo_table']." WHERE wr_id='".$row['wr_id']."'" );
+			$list[$i] = db::row( " SELECT * FROM $g5[write_prefix]".$row['bo_table']." WHERE wr_id='".$row['wr_id']."'" );
+			$list[$i]['bo_table'] =$row['bo_table'];
+			$i++;
 		}
 	?>
-<div class="posts" >
+<div class="recent-posts" >
 		<div class='title'>
 			<table width='100%'>
 				<tr valign='top'>
@@ -41,7 +44,7 @@
 				$subject = $li['wr_subject'];
 				$subject .= ":";
 				$content = cut_str($li['wr_content'],50,'...');
-				$url = $li['href'];
+				$url = g::url().'/bbs/board.php?bo_table='.$li['bo_table'].'&wr_id='.$li['wr_id'];
 				$comment_count = $li['wr_comment'];
 		?>	
 			<li>
