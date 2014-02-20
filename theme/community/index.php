@@ -7,10 +7,11 @@
 					if( !ms::meta( 'combanner_'.$i ) ){
 						continue;
 					}
-					echo "<div class='banner-image image_num_$i'>";
+					echo "<a href='".ms::meta('combanner_'.$i.'_text3')."'><div class='banner-image image_num_$i'>";
 					echo "<img src='".ms::meta('img_url').ms::meta('combanner_'.$i)."'>";
-					echo "<p class='banner-text'>".ms::meta('combanner_'.$i.'_text1').ms::meta('combanner_'.$i.'_text2')."</p>";
-					echo "</div>";
+					echo "<p class='banner-text'><span class='banner-title'>".ms::meta('combanner_'.$i.'_text1')." |</span> <span class='banner-content'>".cut_str(strip_tags(ms::meta('combanner_'.$i.'_text2')),60,'...')."</span></p>";
+					echo "<div class='banner-more'>MORE ></div>";
+					echo "</div></a>";
 				}
 			?>
 

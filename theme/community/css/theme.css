@@ -85,12 +85,31 @@
 
 #container .banner p {
 	position: absolute;
-	top: 170px;
+	top: 183px;
 	left: 0;
-	padding: 0 0 0.25em 0.5em;
+	padding: 15px;
 	color: #ffffff;
-	font-size: 33pt;
+	font-size: 12pt;
+	background: #8a8a8a;
+	width: 100%;
 }
+
+#container .banner .banner-more {
+	position: absolute;
+	top: 195px;
+	right: 0;
+	padding: 0.5em;
+	color: #ffffff;
+}
+
+#container .banner p span.banner-title {
+	font-weight: bold;
+}
+
+#container .banner p span.banner-content {
+	font-style: italic;
+}
+
 #container .top-panel > div {
 	display: inline-block;
 	vertical-align: top;
