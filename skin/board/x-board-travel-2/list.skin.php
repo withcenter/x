@@ -23,7 +23,7 @@ foreach( $list as $l ){
 		else $no_padding = null;
         ?>
 			<tr class = 'travel_posts' valign='top'>					
-				<td class = '<?=$no_padding?>'>
+				<td width ='148px' class = '<?=$no_padding?>'>
 					<a href ='<?=$list[$i]['href']?>'>
 						<div class='post-image'><img src = '<?=$images[$i]['src']?>' /></div>
 					</a>
