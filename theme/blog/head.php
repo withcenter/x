@@ -21,9 +21,7 @@
         </div>
         <ul id="tnb">
 			<li class='menu-home'><a href='<?=ms::url_site(etc::domain())?>'>홈</a></li>
-			<? if ( $menu_info[1]['url'] ) {?>
-				<li class='menu-about'><a href='<?=$menu_info[1]['url']?>'><?=$menu_info[1]['bo_subject']?></a></li>
-			<? }?>
+			<li class='menu-about'><a href='<?=$menu_info[1]['url']?>'><?=$menu_info[1]['bo_subject']?></a></li>
 			<? if ( $menu_info[2]['url'] ) {?>
 				<li class='menu-faqs'><a href='<?=$menu_info[2]['url']?>'><?=$menu_info[2]['bo_subject']?></a></li>
 			<? }?> 

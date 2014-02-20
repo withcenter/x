@@ -26,6 +26,9 @@
 			);
 			g::board_create($o);
 			
+			// 사이트 생성시 처음 메뉴 저장
+			db::insert('x_multisite_meta', array('domain'=>$domain, 'code'=>'menu_1', 'value'=>ms::board_id ( $domain ).'_1' ) );
+			
 			
 			if ( $in['site-type'] ) {
 				if ( $in['site-type'] == 'community' ) $site_type = 'blog';
