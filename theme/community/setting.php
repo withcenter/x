@@ -33,6 +33,8 @@
 					<input type='hidden' name='combanner_1_remove' value='n'>
 					<input type='checkbox' name='combanner_1_remove' value='y'><span class='title-small'>Remove Image</span>
 				<?}?>
+				<div class='title'>Banner 1 Title</div>
+				<input type='text' name='combanner_1_text1' value='<?=ms::meta('combanner_1_text1')?>'>
 				<div class='title'>배너1의 문구1</div>
 				<textarea name='combanner_1_text2'><?=stripslashes(ms::meta('combanner_1_text2'))?></textarea>
 			</div>
@@ -47,6 +49,8 @@
 					<input type='hidden' name='combanner_2_remove' value='n'>
 					<input type='checkbox' name='combanner_2_remove' value='y'><span class='title-small'>Remove Image</span>
 				<?}?>
+				<div class='title'>Banner 2 Title</div>
+				<input type='text' name='combanner_2_text1' value='<?=ms::meta('combanner_2_text1')?>'>
 				<div class='title'>배너2의 문구1</div>
 				<textarea name='combanner_2_text2'><?=stripslashes(ms::meta('combanner_2_text2'))?></textarea>
 			</div>
@@ -62,6 +66,8 @@
 					<input type='hidden' name='combanner_3_remove' value='n'>
 					<input type='checkbox' name='combanner_3_remove' value='y'><span class='title-small'>Remove Image</span>
 				<?}?>
+				<div class='title'>Banner 3 Title</div>
+				<input type='text' name='combanner_3_text1' value='<?=ms::meta('combanner_3_text1')?>'>
 				<div class='title'>배너1의 문구1</div>
 				<textarea name='combanner_3_text2'><?=stripslashes(ms::meta('combanner_3_text2'))?></textarea>
 			</div>
@@ -76,6 +82,8 @@
 					<input type='hidden' name='combanner_4_remove' value='n'>
 					<input type='checkbox' name='combanner_4_remove' value='y'><span class='title-small'>Remove Image</span>
 				<?}?>
+				<div class='title'>Banner 4 Title</div>
+				<input type='text' name='combanner_4_text1' value='<?=ms::meta('combanner_4_text1')?>'>
 				<div class='title'>배너2의 문구1</div>
 				<textarea name='combanner_4_text2'><?=stripslashes(ms::meta('combanner_4_text2'))?></textarea>
 			</div>
@@ -91,6 +99,8 @@
 					<input type='hidden' name='combanner_5_remove' value='n'>
 					<input type='checkbox' name='combanner_5_remove' value='y'><span class='title-small'>Remove Image</span>
 				<?}?>
+				<div class='title'>Banner 5 Title</div>
+				<input type='text' name='combanner_5_text1' value='<?=ms::meta('combanner_5_text1')?>'>
 				<div class='title'>배너1의 문구1</div>
 				<textarea name='combanner_5_text2'><?=stripslashes(ms::meta('combanner_5_text2'))?></textarea>
 			</div>
