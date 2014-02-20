@@ -97,7 +97,7 @@
 			else echo "<div class='notice'>NO POST AVAILABLE FOR WRITE TABLE ".$latest_bo_table."</div>";
 			
 			
-		?>
+		/*?>
 
 	<div class='sidebar-thumb'>
 		<div class='thumb-container'>
@@ -132,6 +132,7 @@
 			?>
 		</div>
 		</div>	
+		<?*/?>
     </div>
     <div id="container">
 		<?if ( preg_match('/^config/', $action) ) include ms::site_menu();?>
