@@ -33,20 +33,21 @@
 				</tr>
 			</table>
 		</div>
-	<div class='posts-items'>
+	<div class='recent-posts-items'>
 		<ul>
 		<?php
 			
 			foreach ( $list as $li ) {
-				$subject = conv_subject($li['wr_subject'], 18, "...");				
+				$subject = $li['wr_subject'];
 				$subject .= ":";
+				$content = cut_str($li['wr_content'],50,'...');
 				$url = $li['href'];
 				$comment_count = $li['wr_comment'];
 		?>	
 			<li>
 				<a href='<?=$url?>'>					
 				<?
-					echo "<div class='subject'>$subject</div> <div class='no-of-comments'>($comment_count)</div>";
+					echo "<div class='subject'>$subject</div> <div class='post-content'>$content</div> <div class='no-of-recent-comments'>($comment_count)</div>";
 				?>
 				</a>
 			</li>		
