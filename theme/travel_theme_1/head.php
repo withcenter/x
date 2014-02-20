@@ -1,3 +1,4 @@
+<?include_once(G5_LIB_PATH.'/thumbnail.lib.php');?>
 <link rel="stylesheet" href="<?=x::url_theme()?>/css/theme.css">
 <?
 //di(get_list_thumbnail("ms_travel_1", 11, 85, 81));
