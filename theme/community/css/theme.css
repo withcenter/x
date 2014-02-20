@@ -343,3 +343,55 @@
 .footer-text {
 	
 }
+
+/**recent posts sidebar */
+.posts {
+	border: solid 1px #0d98ba;
+	border-top: 0;
+	margin-top: 10px;
+	border-radius: 3px;
+	font-family: Gotum, Arial;
+}
+
+.posts .title {
+	background: #1f9ebd;
+	height: 14px;
+	border-top: solid 2px #51b6ce;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	padding: 4px 4px 10px 4px;
+	font-size: 0.9em;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.posts .title .title-left > div {
+	display: inline-block;
+}
+
+.posts .posts-items {
+
+}
+
+.posts .posts-items ul {
+	padding-left: 30px;
+	list-style: square;
+}
+
+.posts .posts-items ul li a {
+	text-decoration: none;
+}
+
+.posts .posts-items ul li a > div {
+	display: inline-block;
+	vertical-align: top;
+}
+a .subject {
+	overflow: hidden;
+	width: 120px;
+}
+
+a .no-of-comments {
+	color: #ff0000;
+}
+
