@@ -31,12 +31,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 								if ( $has_image ){
 									$imgsrc = get_list_thumbnail($bo_table, $li['wr_id'], 84, 84);
 								}
-								else $imgsrc['src'] = $latest_skin_url.'/img/no-image.png';
-							
-								$img = "<img src='".$imgsrc['src']."'/>";
-								
-								$img_thumbnail = get_view_thumbnail($img, 120);
-								echo "<div class='img-wrapper'>".$img_thumbnail."<div>";
+								else $imgsrc['src'] = $latest_skin_url.'/img/no-image.png';							
+								$img = "<img src='".$imgsrc['src']."'/>";																
+								echo "<div class='img-wrapper'>".$img."<div>";
 							?>	
 						</div>
 						</td>
