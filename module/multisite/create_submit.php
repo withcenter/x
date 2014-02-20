@@ -1,4 +1,9 @@
 <?php
+	if ( empty($sub_domain) ) {
+		jsBack("사이트 주소를 입력해 주세요");
+		exit;
+	}
+	
 	if ( strlen($sub_domain) > 14 ) {
 		echo "
 			<script>
