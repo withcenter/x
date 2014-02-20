@@ -3,7 +3,7 @@
 <!-- 상단 시작 { -->
 <div id="header-container">
     <div id="travel-hd-wrapper">
-		<div id="top-menu"  style="background: url('<?=x::url_theme()?>/img/top-menu-bg.png')">
+		<div id="top-menu">
 			<div class='inner'>
 				<a href='#'>
 					<a href='#'>CALL: 123-4567</a><a>&#8226;</a>
