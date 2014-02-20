@@ -46,9 +46,12 @@
 		<?php
 			if ( write_page() ) {
 				$ids = ms::forum();
+				$str = "<div class='forum-write-title'>글을 쓰려는 게시판을 선택해 주세요.</div>";
 				foreach ( $ids as $id ) {
+					
 					$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table = '$id'");
 					$str .=  " <span class='forum-select' bo_table='$id' bo_subject='$row[bo_subject]'>$row[bo_subject]</span> ";
+					
 				}
 		?>
 			<style>
@@ -60,11 +63,12 @@
 				$(function(){
 					$('#container_title').after( "<?=$str?>" );
 					$(".forum-select").click(function(){
+						$(".forum-select").css("background-color", "#555555");
+						$(this).css("background-color", "#5d81ae");
 						var bo_table = $(this).attr('bo_table');
 						var bo_subject = $(this).attr('bo_subject');
 						$("form[name='fwrite'] [name='bo_table']").val( bo_table );
-						alert("게시판이 " + bo_subject + "로 변경되었습니다.");
-						
+						$("#container_title").text( bo_subject + " 글쓰기");
 					});
 				});
 			</script>

@@ -342,7 +342,17 @@ body {
 .back-to-top:hover {    
 
 }
-
+#container .forum-write-title {
+	border: 1px solid #d5d5d5;
+	background-color: #f9f9f9;
+	color: #496383;
+	font-family: '맑은 고딕', AppleGothic;
+	height: 25px;
+	line-height: 23px;
+	padding: 0 10px;
+	margin-bottom: 8px;
+	border-radius: 3px;
+}
 #container .forum-select {
 	background-color: #555555;
 	line-height: 23px;
@@ -353,9 +363,9 @@ body {
 	padding: 0 10px;
 	display: inline-block;
 	margin: 0 5px 10px 0;
-	border-radius: 3px;
-	
+	border-radius: 3px;	
 }
+
 
 /*Login tweaking*/
 section#ol_before h2, section#ol_after h2, section#ol_after #ol_after_private{

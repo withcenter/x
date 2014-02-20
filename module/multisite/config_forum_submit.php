@@ -17,10 +17,11 @@
 					'id'	=> $board_id,
 					'subject'	=> db::addquotes($in['subject']),
 					'bo_admin' =>$_SESSION['ss_mb_id'],
-					'group_id'	=> 'multisite'
+					'group_id'	=> 'multisite',
+					'bo_use_dhtml_editor' => 1
 	);
 	g::board_create($option);
-	jsAlert( $board_id . "(".$in['subject'].")has been created." );
+	jsAlert( "게시판 ".$board_id . "(".$in['subject'].")이 생성 되었습니다." );
 
 	echo "
 		<script>

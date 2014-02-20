@@ -11,6 +11,7 @@
 			unset($up['mode']);
 			unset($up['done']);
 			unset($up['bo_table']);
+			$up['bo_admin'] = $in['bo_admin']?$in['bo_admin'] : $member['mb_id'];
 			$up['bo_use_category'] = $in['bo_use_category']?$in['bo_use_category'] : 0;
 			$up['bo_use_list_view'] = $in['bo_use_list_view']?$in['bo_use_list_view'] : 0;
 			$up['bo_use_list_file'] = $in['bo_use_list_file']?$in['bo_use_list_file'] : 0;
@@ -90,6 +91,7 @@
 			<div><span class='item'>게시판 아이디</span><?=$row['bo_table']?></div>
 			<div><span class='item'>제목</span><?=text('bo_subject')?></div>
 			<div><span class='item'>스킨</span><?=load_skin()?></div>
+			<div><span class='item'>관리자</span><?=text('bo_admin')?></div>
 			<input type='submit' value='업데이트' />
 		</div>
 		

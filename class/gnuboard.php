@@ -187,7 +187,7 @@ class gnuboard {
 				bo_use_sideview = '',
 				bo_use_file_content = '',
 				bo_use_secret = '0',
-				bo_use_dhtml_editor = '',
+				bo_use_dhtml_editor = '$o[bo_use_dhtml_editor]',
 				bo_use_rss_view = '',
 				bo_use_good = '',
 				bo_use_nogood = '',
