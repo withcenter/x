@@ -148,4 +148,20 @@
 			</div>
 		</td>
 	</tr>
+		</tr>
+		<tr valign='top' align='center'>
+		<td>
+			<div class='image-upload'>
+				<div class='title'>SIDEBAR Banner</div>
+				<?if( ms::meta('combanner_sidebar') ) {?><img src="<?=ms::meta('img_url').ms::meta('combanner_sidebar')?>" width=280px height=160px><br><?}?>
+				<input type='file' name='combanner_sidebar'>
+				<?if( ms::meta('combanner_sidebar') != '' ) { ?>
+					<input type='hidden' name='combanner_sidebar_remove' value='n'>
+					<input type='checkbox' name='combanner_sidebar_remove' value='y'><span class='title-small'>Remove Image</span>
+				<?}?>
+				<div class='title'>SIDEBAR Banner Title</div>
+				<input type='text' name='combanner_sidebar_text1' value='<?=ms::meta('combanner_sidebar_text1')?>'>
+			</div>
+		</td>
+	</tr>
 </table>
