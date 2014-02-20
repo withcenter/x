@@ -4,7 +4,7 @@
 //exit;
 ?>
 <!-- 상단 시작 { -->
-<div id="hd">
+<div id="travel-theme-1-hd">
     <h1 id="hd_h1"><?php echo $g5['title'] ?></h1>
 
     <div id="skip_to_container"><a href="#container">본문 바로가기</a></div>
