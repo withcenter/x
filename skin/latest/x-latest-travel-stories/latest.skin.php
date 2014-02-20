@@ -20,13 +20,12 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 						<td width='50px'>
 						<div class='img-container'>
 							<?
-								if ( $li['file']['meta'][$i]['bf_file'] != '' ) $imgsrc = $li['file']['path'].$li['file']['meta'][$i]['bf_file']; 
-								else $imgsrc = $latest_skin_url.'/img/no-image.png';
-							
-								$img = "<img src='".$imgsrc."'/>";
-								
-								$img_thumbnail = get_view_thumbnail($img, 120);
-								echo "<div class='img-wrapper'>".$img_thumbnail."<div>";
+								if ( $li['file']['meta'][$i]['bf_file'] != '' ) {
+									$imgsrc = get_list_thumbnail($bo_table, $li['wr_id'], 84, 84);
+									$img = "<img src='$imgsrc[src]'/>";
+								}
+								else $imgsrc = $latest_skin_url.'/img/no-image.png';																				
+								echo "<div class='img-wrapper'>".$img."</div>";
 							?>	
 						</div>
 						</td>
