@@ -20,7 +20,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 						<td width='50px'>
 						<div class='img-container'>
 							<?
-								if ( $li['file']['meta'][$i]['bf_file'] != '' ){
+								if ( $li['file']['meta'][0]['bf_file'] != '' || $li['file']['meta'][1]['bf_file'] != '' ){
 									$imgsrc = get_list_thumbnail($bo_table, $li['wr_id'], 84, 84);
 								}
 								else $imgsrc['src'] = $latest_skin_url.'/img/no-image.png';
