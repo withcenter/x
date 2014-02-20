@@ -37,7 +37,7 @@
 		$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('menu_'.$i)."'");
 		if ( !$menu = $row['bo_subject'] ) $menu = null;
 	?>
-		<li><a href='<?=g::url()?>/bbs/board.php?bo_table=<?=ms::meta('menu_'.$i)?>' <?if($i==1) echo "class='first-menu'"?>><?=$menu?></a></li>
+		<li  <?if($i==1) echo "class='first-menu'"?>><a href='<?=g::url()?>/bbs/board.php?bo_table=<?=ms::meta('menu_'.$i)?>'><?=$menu?></a></li>
 	<?}}?>
 	
 	

@@ -10,4 +10,8 @@ function hook_multisite_tail_begin() {
 	?><style>
 		#aside {float:right;}
 	</style><?}
+	
+	?>
+
+	<?
 }
