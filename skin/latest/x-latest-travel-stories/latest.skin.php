@@ -1,5 +1,7 @@
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
+
+//di($list);exit;
 ?>
 
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
@@ -11,6 +13,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			$i = 0;
 			$li['file']['meta'] = db::rows("SELECT * FROM $g5[board_file_table] WHERE bo_table='$bo_table' AND wr_id='".$li['wr_id']."'");
 			$li['file']['path'] = G5_URL.'/'.G5_DATA_DIR.'/file/'.$bo_table.'/';	
+			
+			//di($li);
+			//exit;
 		}}
 		?>
 		<a href='<?=$li['href']?>'>
@@ -20,12 +25,16 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 						<td width='50px'>
 						<div class='img-container'>
 							<?
+								//di($li['file']['meta'][$i]['bf_file']);
 								if ( $li['file']['meta'][$i]['bf_file'] != '' ) {
-									$imgsrc = get_list_thumbnail($bo_table, $li['wr_id'], 84, 84);
-									$img = "<img src='$imgsrc[src]'/>";
-								}
-								else $imgsrc = $latest_skin_url.'/img/no-image.png';																				
-								echo "<div class='img-wrapper'>".$img."</div>";
+									//$imgsrc = get_list_thumbnail($bo_table, $li['wr_id'], 84, 84);
+									//$img = "<img src='$imgsrc[src]'/>";
+									echo $bo_table;									
+									$board['bo_table'] = $bo_table;
+									$images[] = get_file($board['bo_table'],$li['wr_id']);
+								}								
+								//else $imgsrc = $latest_skin_url.'/img/no-image.png';																				
+								//echo "<div class='img-wrapper'>".$img."</div>";
 							?>	
 						</div>
 						</td>
@@ -52,6 +61,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		</a>
 		<?
 	}
+	di($images);exit;
 ?>
 </div>
 
