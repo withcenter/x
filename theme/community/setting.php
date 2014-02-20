@@ -1,5 +1,5 @@
-<table cellpadding=5px width='100%' class='image-config'>
-	<tr valign='top'>
+<table cellpadding=10px width='100%' class='image-config'>
+	<tr valign='top' align='center'>
 		<td>
 			<div class='image-upload'>
 				<div class='title'>사이트 로고</div>
@@ -14,7 +14,7 @@
 		<td>
 			<div class='image-upload'>
 				<div class='title'>Company Banner</div>
-				<?if( ms::meta('companybanner_1') ) {?><img src="<?=ms::meta('img_url').ms::meta('combanner_1')?>" width=280px height=160px><br><?}?>
+				<?if( ms::meta('companybanner_1') ) {?><img src="<?=ms::meta('img_url').ms::meta('companybanner_1')?>" width=280px height=160px><br><?}?>
 				<input type='file' name='companybanner_1'>
 				<?if( ms::meta('companybanner_1') != '' ) { ?>
 					<input type='hidden' name='companybanner_1_remove' value='n'>
@@ -23,7 +23,7 @@
 			</div>
 		</td>
 	</tr>	
-	<tr valign='top'>
+	<tr valign='top' align='center'>
 		<td>
 			<div class='image-upload'>
 				<div class='title'>배너이미지1</div>
@@ -52,7 +52,7 @@
 			</div>
 		</td>
 	</tr>
-	<tr valign='top'>
+	<tr valign='top' align='center'>
 		<td>
 			<div class='image-upload'>
 				<div class='title'>배너이미지3</div>
@@ -81,7 +81,7 @@
 			</div>
 		</td>
 	</tr>
-		<tr valign='top'>
+		<tr valign='top' align='center'>
 		<td>
 			<div class='image-upload'>
 				<div class='title'>배너이미지1</div>

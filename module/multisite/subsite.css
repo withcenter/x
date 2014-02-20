@@ -348,9 +348,16 @@
 }
 
 .config_general .image-config .image-upload {
-	border: solid 1px #c3c3c3;
+
+	border-bottom: solid 1px #c3c3c3;
 	padding: 1em;
-	border-radius: 5px;
+
+}
+
+.config_general .image-config .image-upload img{
+	margin: 0.5em;
+	padding: 1px;
+	border: solid 1px #d5d5d5;
 }
 
 .config_general .image-config .image-upload .title {
