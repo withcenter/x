@@ -350,7 +350,7 @@
 
 .config_general .image-config .image-upload {
 	border-bottom: solid 1px #c3c3c3;
-	padding: 1em;
+	padding: 0 0 1em 1em;
 }
 
 .config_general .image-config .image-upload img{

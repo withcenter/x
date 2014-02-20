@@ -37,6 +37,8 @@
 				<input type='text' name='combanner_1_text1' value='<?=ms::meta('combanner_1_text1')?>'>
 				<div class='title'>배너1의 문구1</div>
 				<textarea name='combanner_1_text2'><?=stripslashes(ms::meta('combanner_1_text2'))?></textarea>
+				<div class='title'>Banner 1 Link</div>
+				<input type='text' name='combanner_1_text3' value='<?=ms::meta('combanner_1_text3')?>'>
 			</div>
 		</td>
  
@@ -53,6 +55,8 @@
 				<input type='text' name='combanner_2_text1' value='<?=ms::meta('combanner_2_text1')?>'>
 				<div class='title'>배너2의 문구1</div>
 				<textarea name='combanner_2_text2'><?=stripslashes(ms::meta('combanner_2_text2'))?></textarea>
+				<div class='title'>Banner 2 Link</div>
+				<input type='text' name='combanner_2_text3' value='<?=ms::meta('combanner_2_text3')?>'>
 			</div>
 		</td>
 	</tr>
@@ -70,6 +74,8 @@
 				<input type='text' name='combanner_3_text1' value='<?=ms::meta('combanner_3_text1')?>'>
 				<div class='title'>배너1의 문구1</div>
 				<textarea name='combanner_3_text2'><?=stripslashes(ms::meta('combanner_3_text2'))?></textarea>
+				<div class='title'>Banner 3 Link</div>
+				<input type='text' name='combanner_3_text3' value='<?=ms::meta('combanner_3_text3')?>'>
 			</div>
 		</td>
 
@@ -86,6 +92,8 @@
 				<input type='text' name='combanner_4_text1' value='<?=ms::meta('combanner_4_text1')?>'>
 				<div class='title'>배너2의 문구1</div>
 				<textarea name='combanner_4_text2'><?=stripslashes(ms::meta('combanner_4_text2'))?></textarea>
+				<div class='title'>Banner 4 Link</div>
+				<input type='text' name='combanner_4_text3' value='<?=ms::meta('combanner_4_text3')?>'>
 			</div>
 		</td>
 	</tr>
@@ -103,6 +111,8 @@
 				<input type='text' name='combanner_5_text1' value='<?=ms::meta('combanner_5_text1')?>'>
 				<div class='title'>배너1의 문구1</div>
 				<textarea name='combanner_5_text2'><?=stripslashes(ms::meta('combanner_5_text2'))?></textarea>
+				<div class='title'>Banner 5 Link</div>
+				<input type='text' name='combanner_5_text3' value='<?=ms::meta('combanner_5_text3')?>'>
 			</div>
 		</td>
 
