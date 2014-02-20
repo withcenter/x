@@ -533,6 +533,14 @@ function write_page()
 
 
 
+function board_form_page()
+{
+	$self = $_SERVER['PHP_SELF'];
+	return preg_match("/\/board_form.php/", $self);
+}
+
+
+
 /**
  *  @brief 패치 파일의 경로를 리턴한다.
  *  

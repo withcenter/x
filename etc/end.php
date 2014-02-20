@@ -71,3 +71,20 @@ function hook_html_symbol()
 	$html = str_replace( $source, $target, $html );
 }
 
+/** @short reset forum skin select in admin page to support the skin path of x
+ *  
+ */
+if ( board_form_page() ) {
+	$dirs = file::getDirs( x::dir() . '/skin/board' );
+	foreach ( $dirs as $dir ) {
+		$opts .= "<option value='x/skin/board/$dir'>x/skin/board/$dir</option>";
+	}
+	echo<<<EOH
+		<script>
+			$(function(){
+				$("#bo_skin").append("$opts");
+				$("#bo_skin").val('$board[bo_skin]');
+			});
+		</script>
+EOH;
+}
