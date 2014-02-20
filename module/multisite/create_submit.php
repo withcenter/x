@@ -3,7 +3,7 @@
 		jsBack("사이트 주소를 입력해 주세요");
 		exit;
 	}
-	if ( strpos($sub_domain, ".")) {
+	if ( strpos($sub_domain, ".") || !str_replace('.', '', $sub_domain) ) {
 		jsBack('사이트 주소에는 .이 들어갈 수 없습니다.');
 		exit;
 	}
