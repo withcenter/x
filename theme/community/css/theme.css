@@ -62,36 +62,10 @@
 
 
 #container .banner {
-	width: 651px;
-	height: 350px;
+	width: 750px;
+	height: 230px;
 	overflow: hidden;	
 	position: relative;
-}
-
-#container .banner-pagination {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	padding: 2em;
-	color: #ffffff;
-}
-
-#container .banner-pagination .pages{
-	display:inline-block;
-	background-color:#41453f;
-	padding:4px 7px;
-	border-radius:3px;
-	opacity:.8;
-}
-
-#container .banner-pagination .pages.selected{
-	padding:4px 15px;
-	background-color: #ffffff;
-	color:#565656;
-}
-
-#container .banner-pagination .pages:hover{
-	cursor:pointer;
 }
 
 #container .banner-image {
@@ -102,22 +76,40 @@
 }
 
 #container .banner-image.selected {
-	display:block
+	display:block;
 }
 
 #container .banner img {
-	width: 653px;
-	height: 350px;
+	width: 100%;
 }
 
 #container .banner p {
 	position: absolute;
-	bottom: 0;
+	top: 183px;
 	left: 0;
-	padding: 0 0 0.25em 0.5em;
+	padding: 15px;
 	color: #ffffff;
-	font-size: 33pt;
+	font-size: 12pt;
+	background: #8a8a8a;
+	width: 100%;
 }
+
+#container .banner .banner-more {
+	position: absolute;
+	top: 195px;
+	right: 0;
+	padding: 0.5em;
+	color: #ffffff;
+}
+
+#container .banner p span.banner-title {
+	font-weight: bold;
+}
+
+#container .banner p span.banner-content {
+	font-style: italic;
+}
+
 #container .top-panel > div {
 	display: inline-block;
 	vertical-align: top;
