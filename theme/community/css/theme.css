@@ -365,33 +365,34 @@
 	font-weight: bold;
 }
 
-.posts .title .title-left > div {
+.recent-posts-items .title .title-left > div {
 	display: inline-block;
 }
 
-.posts .posts-items {
-
+.recent-posts-items {
+	word-break: break-all;
+	padding-right: 10px;
 }
 
-.posts .posts-items ul {
+.recent-posts-items ul {
 	padding-left: 30px;
 	list-style: square;
 }
 
-.posts .posts-items ul li a {
+.recent-posts-items ul li a {
 	text-decoration: none;
 }
 
-.posts .posts-items ul li a > div {
+.recent-posts-items ul li a > div {
 	display: inline-block;
 	vertical-align: top;
 }
-a .subject {
-	overflow: hidden;
-	width: 120px;
+
+.recent-post-items a .subject {
+
 }
 
-a .no-of-comments {
-	color: #ff0000;
+.recent-posts-items a .no-of-recent-comments {
+	color: #ff7538;
 }
 
