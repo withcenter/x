@@ -65,7 +65,7 @@
 			<div class='sub-title'>6. 글쓰기 서비스에서는 총 3개의 글쓰기 API계정을 입력 할 수 있으며, 3개의 블로그에 동시에 글 등록이 가능합니다.</div>
 		</div>
 		<div class='inner theme-setting'>
-			<div class='sub-title'></div>
+			<div class='sub-title'>사용하려는 사이트의 성격에 맞는 테마를 클릭 한번으로 변경하실 수 있습니다.</div>
 			<div class='support-image'><img src='<?=x::url()?>/module/multisite/support_img/t1.png' /></div>
 		</div>
 	</div>
