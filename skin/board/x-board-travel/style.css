@@ -255,7 +255,7 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 #bo_vc_sns input {margin:0 0 0 5px}
 
 /***NEW BOARD***/
-#travel_theme_table .travel_posts{
+#travel_theme_board .travel_posts{
 	height:280px;
 	overflow:hidden;	
 	width:243px;
@@ -263,19 +263,19 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 	font-family:arial;
 }
 
-#travel_theme_table a{
+#travel_theme_board a{
 	text-decoration:none;
 }
 
-#travel_theme_table .travel_posts.no-margin{
+#travel_theme_board .travel_posts.no-margin{
 	margin:0;	
 }
 
-#travel_theme_table .travel_posts .post-image{
+#travel_theme_board .travel_posts .post-image{
 	margin-bottom:7px;
 }
 
-#travel_theme_table .travel_posts .post-subject{
+#travel_theme_board .travel_posts .post-subject{
 	font-size:1.3em;
 	font-weight:bold;
 	color:#5d5d5d;
@@ -283,7 +283,7 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 	margin-bottom:4px;
 }
 
-#travel_theme_table .travel_posts .user-review{
+#travel_theme_board .travel_posts .user-review{
 	font-size:.9em;
 	color:#d7d7d7;
 	padding: 0 10px;
@@ -291,13 +291,13 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 	position:relative;
 }
 
-#travel_theme_table .travel_posts .stars{
+#travel_theme_board .travel_posts .stars{
 	position:absolute;
 	top:-3px;
 	right:45px;
 }
 	
-#travel_theme_table .travel_posts .post-subject .view-guide{
+#travel_theme_board .travel_posts .post-subject .view-guide{
 	font-size:.7em;	
 	font-weight:normal;
 	color:#d7d7d7;
@@ -305,10 +305,19 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 	margin-top:4px;
 }
 
-#travel_theme_table .travel_posts .post-content{
+#travel_theme_board .travel_posts .post-content{
 	font-size:1em;
 	color:#5d5d5d;
 	padding: 0 10px;
 	height:78px;
 	overflow:hidden;
+}
+
+#travel_theme_board .travel-write{
+	margin-bottom:10px;
+	float:right;
+}
+
+#travel_theme_board .lower-buttons{
+	margin-top:10px;	
 }

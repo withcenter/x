@@ -4,9 +4,9 @@
 	
 		<table class='main-top' cellpadding=0 cellspacing=0 width='100%'>
 			<tr valign='top'>
-				<td><img src='<?=x::url()?>/theme/withcenter/img/main_banner.png' /></td>
+				<td width=550><img src='<?=x::url()?>/theme/withcenter/img/main_banner.png' /></td>
 				<td width=10></td>
-				<td></td>
+				<td class='application'><? include 'application.form.php'; ?></td>
 			</tr>
 		</table>
 		<table cellpadding=0 cellspacing=0 width='100%'>

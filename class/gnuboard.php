@@ -355,6 +355,11 @@ class gnuboard {
 		$html			= $o['html'];
 		$ca_name		=	$o['ca_name'];
 		
+		if ( $o['wr_1'] ) $wr_1 = $o['wr_1'];
+		if ( $o['wr_2'] ) $wr_2 = $o['wr_2'];
+		if ( $o['wr_3'] ) $wr_3 = $o['wr_3'];
+		if ( $o['wr_4'] ) $wr_4 = $o['wr_4'];
+		if ( $o['wr_5'] ) $wr_5 = $o['wr_5'];
 		
 		$write_table	= g::write_table( $o['bo_table'] );
 		$wr_num			= get_next_num($write_table);

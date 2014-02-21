@@ -30,7 +30,7 @@
 			echo "<td><a href='?module=multisite&action=admin_update&idx=$site[idx]'>Edit =></a></td>";
 			echo "<td><a href='http://$site[domain]'>$site[domain]</a></td>";
 			echo "<td>$site[mb_id]</td>";
-			echo "<td>$site[title]</td>";
+			echo "<td><span class='site-title'>$site[title]</span></td>";
 			if ( !empty($site['header']) ) $header = 'O';
 			else $header = 'X';
 			echo "<td align='center'>$header</td>";

@@ -130,7 +130,9 @@ body{
 .layout .main-content .main-top{
 	margin-bottom: 27px;
 }
-
+.layout .main-content .main-top tr .application {
+	position: relative;
+}
 .layout table tr .latest_1, .layout table tr .latest_2 {
 	padding-right: 10px;
 }

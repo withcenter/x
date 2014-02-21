@@ -365,7 +365,15 @@ table > .header td:first-child {
 	border-left: 0;
 	font-size: 1em;
 }
-
+.admin-multisite-table tr .site-title {
+	width: 200px;
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+	display: inline-block;
+	position: relative;
+	top: 5px;
+}
 .admin-multisite-table .background {
 	background-color: #efefef;
 	color: #7a7a7a;
