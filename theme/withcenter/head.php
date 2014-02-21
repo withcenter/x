@@ -60,10 +60,10 @@
             }
 	</script>
 <div class='main-menu'><div class='inner'>
-	<a href='?page=intro'>회사소개</a>
-	<a href='?page=application'>가맹사모집</a>
-	<a href='?page=outsouring'>강사아웃소싱</a>
-	<a href='?page=opensource'>오픈소스</a>
+	<a href='<?=g::url()?>/?page=intro'>회사소개</a>
+	<a href='<?=g::url()?>/?page=application'>가맹사모집</a>
+	<a href='<?=g::url()?>/?page=outsouring'>강사아웃소싱</a>
+	<a href='<?=g::url()?>/?page=opensource'>오픈소스</a>
 	<a href='<?=g::url()?>/bbs/board.php?bo_table=withcenter1'>게시판</a>
 </div></div> 
 

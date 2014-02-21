@@ -7,8 +7,8 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 
 <div class='login-box'>
 	<ul class='login-box-top'>
-		<li class='top-button'><div class='selected'>SIGN IN</div></li>
-		<li class='top-button'><div class='unselected'><a href="<?php echo G5_BBS_URL ?>/register.php">REGISTER</a></div></li>
+		<li class='top-button'><div class='selected'>로그인</div></li>
+		<li class='top-button'><div class='unselected'><a href="<?php echo G5_BBS_URL ?>/register.php">회원가입</a></div></li>
 	</ul>
 	<div style='clear:left;'></div>
 	
@@ -28,7 +28,7 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 			
 			<div class='remember_me'>
 				<img class='remember-me-check' src='<?=$outlogin_skin_url?>/unchecked.gif' />
-				<input type="checkbox" style='display: none;' name="auto_login" value="1" id="auto_login"><?php echo _l('Remember me');?>
+				<input type="checkbox" style='display: none;' name="auto_login" value="1" id="auto_login">자동 로그인
 			</div>
 			<input type="image" id="ol_submit" src='<?=$outlogin_skin_url?>/signin_button.png' />
 			<? /*<a href="<?php echo G5_BBS_URL ?>/password_lost.php" id="ol_password_lost"><?php echo _l('Find Password');?></a> */?>
