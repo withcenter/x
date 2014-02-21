@@ -32,6 +32,8 @@
 	*/
 	
 	if( preg_match("/^[0-9a-zA-Z]+$/", $sub_domain) ) {
+	}
+	else {
 		jsBack ( "사이트 주소에는 한글을 입력 할 수 없습니다." );
 		exit;
 	}
