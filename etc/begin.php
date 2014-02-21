@@ -178,9 +178,8 @@ if ( strpos($_SERVER['PHP_SELF'], 'login.php') !== false ) {
  *  All the codes between G5/skin/board folder and x/skin/board folder are compatible.
  *  @see etc/end.php for re-setting the folders of x/skin/board folder.
  */
+
 $board_skin_path = str_replace('skin/board/x/', 'x/', $board_skin_path);
 $board_skin_url = str_replace('skin/board/x/', 'x/', $board_skin_url);
-
-
 
     
