@@ -1,5 +1,5 @@
 <?php
-
+include_once(G5_LIB_PATH.'/thumbnail.lib.php'); 
 x::hook_register('head_begin', 'hook_multisite_head_begin');
 function hook_multisite_head_begin() {
 
