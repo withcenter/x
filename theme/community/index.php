@@ -1,4 +1,3 @@
-<script src='<?=x::url_theme()?>/js/banner_rotation.js'></script>
 <div class='top-panel'>
 	<div style='border: solid 1px #0d98ba; padding: 1px; border-radius: 3px;'>
 		<div class='banner'>

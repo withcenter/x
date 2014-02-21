@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="<?=x::url_theme()?>/css/theme.css">
-
+<script src='<?=x::url_theme()?>/js/theme.js'></script>
 <!-- 상단 시작 { -->
 <div id="header-container">
     <div id="travel-hd-wrapper">
