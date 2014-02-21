@@ -103,14 +103,17 @@ if( $recent_comments ) {
 			$comments_content = cut_str($comments_li['wr_content'],30,'...');
 			$comments_url = g::url().'/bbs/board.php?bo_table='.$comments_li['bo_table'].'&wr_id='.$comments_li['wr_id'];
 			$comments_author = $comments_li['mb_id'];
-			date_default_timezone_set("Australia/Melbourne");
-			$interval = date_diff(date_create($comments_li['wr_datetime']), date_create(date('Y-m-d H:m:s')));
+
+			$current_time = new DateTime(date('Y-m-d H:m:s'), new DateTimeZone('Europe/Berlin'));
+			$old_time = new DateTime($comments_li['wr_datetime'], new DateTimeZone('Europe/Berlin'));
+
+			$interval = date_diff($old_time,$current_time);
 			if ( $interval->format('%y') > 0 )  $timeago = $interval->format('%yyrs');
 			else if ( $interval->format('%m') > 0 ) $timeago = $interval->format('%mmo(s)');
 			else if ( $interval->format('%d') > 0 ) $timeago = $interval->format('%day(s)');
 			else if ( $interval->format('%h') > 0 ) $timeago = $interval->format('%hhr(s)');
+			else if ( $interval->format('%i') == 0 ) $timeago = $interval->format('%ssec(s)');
 			else if ( $interval->format('%i') > 0 ) $timeago = $interval->format('%imin(s)');
-			else if ( $interval->format('%s') > 0 ) $timeago = $interval->format('%ssec(s)');
 			
 			
 	?>	
@@ -118,7 +121,7 @@ if( $recent_comments ) {
 		<a href='<?=$comments_url?>'>	
 		<table <?if($i==$no_of_comments) echo "class='last-table'" ?> >
 			<tr valign='top'>
-				<td>
+				<td width='30px'>
 					<img src='<?=x::url_theme()?>/img/comments-pic.png'>
 				</td>
 				<td>
