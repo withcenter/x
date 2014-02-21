@@ -13,7 +13,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 						<div class='label'>MY POSTS</div>
 					</td>
 					<td align='right'>
-						<div class='posts-more'>more <img src="<?=$latest_skin_url?>/img/more-icon.png"></div>
+						<div class='posts-more'><a href="<?=g::url()?>/bbs/board.php?bo_table=<?=$bo_table?>">more <img src="<?=$latest_skin_url?>/img/more-icon.png"></a></div>
 					</td>
 				</tr>
 			</table>

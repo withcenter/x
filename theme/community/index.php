@@ -17,4 +17,17 @@
 
 		</div>
 	</div>
+	<div class='top-posts'>
+		<div class='top-posts-1'>
+		
+		</div>
+		<div class='top-posts-2'>
+		
+		</div>
+	
+		<div class='top-posts-3'>
+			<?=latest( 'x-latest-community-posts-images' , ms::board_id(etc::domain()).'_1' , 4, 25)?>
+		</div>
+
+	</div>
 </div>
