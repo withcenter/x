@@ -21,7 +21,7 @@ foreach( $list as $l ){
         for ($i=0; $i<count($list); $i+=3) {		
         ?>
 			<tr valign='top'>
-				<td>
+				<td width='243px'>
 					<a href ='<?=$list[$i]['href']?>'>
 						<div class='travel_posts'>
 						<div class='post-image'><img src = '<?=$images[$i]['src']?>' /></div>
@@ -38,7 +38,8 @@ foreach( $list as $l ){
 						<div class='post-content'><?=cut_str(strip_tags($list[$i]['wr_content']),200,"...")?></div>
 						</div>
 					</a>
-				</td>
+				</td width='243px'>
+				<?if ($$list[$i+1]){?>
 				<td>
 					<a href ='<?=$list[$i+1]['href']?>'>
 						<div class='travel_posts'>
@@ -57,7 +58,9 @@ foreach( $list as $l ){
 						</div>
 					</a>
 				</td>
-				<td>
+				<?}?>
+				<?if ($$list[$i+2]){?>
+				<td width='243px'>
 					<a href ='<?=$list[$i+2]['href']?>'>
 						<div class='travel_posts no-margin'>
 						<div class='post-image'><img src = '<?=$images[$i+2]['src']?>' /></div>
@@ -75,6 +78,7 @@ foreach( $list as $l ){
 						</div>
 					</a>
 				</td>
+				<?}?>
 			</tr>
         <?php } ?>
         <?php if (count($list) == 0) { echo '<tr><td colspan="'.$colspan.'" class="empty_table">게시물이 없습니다.</td></tr>'; } ?>        
