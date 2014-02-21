@@ -29,7 +29,10 @@ class multidomain {
 				$row = db::row("SELECT * FROM ".MD_CONFIG." WHERE idx=$idx");
 			}
 			else {
-				/** @short 현재 도메인의 설정을 찾는다. */
+				/** @short 현재 도메인의 설정을 찾는다.
+				 *  @warning This may take a while if there are thousands of multi domain(or multisite) registered.
+				 *  @todo cache this code.
+				 */
 				$rows = db::rows("SELECT * FROM ".MD_CONFIG." ORDER BY priority DESC");
 				
 				/** @note theme 을 찾아서 $theme 에 저장한다. */
@@ -51,6 +54,10 @@ class multidomain {
 	 *  @brief updates domain configuration
 	 *  
 	 *  @return empty
+	 *  
+	 *  @param global $theme
+	 *  @param global $priority
+	 *  @param global $domain
 	 *  
 	 *  @details use this function when super user updates the domain setting
 	 *  It can be used to add a domain programtically.

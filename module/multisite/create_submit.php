@@ -18,15 +18,29 @@
 		exit;
 	}
 	
+	
+	
+	/**
 	if( preg_match("/[\xA1-\xFE\xA1-\xFE]/", $sub_domain) ) {
 		jsBack ( "사이트 주소에는 한글을 입력 할 수 없습니다." );
 		exit;
 	}
-	
 	if( preg_match("/[!#$%^&*()?+=\/]/", $sub_domain) ) {
 		jsBack ( "사이트 주소에는 특수문자를 입력 할 수 없습니다." );
 		exit;
 	}
+	*/
+	
+	if( preg_match("/^[0-9a-zA-Z]+$/", $sub_domain) ) {
+		jsBack ( "사이트 주소에는 한글을 입력 할 수 없습니다." );
+		exit;
+	}
+	
+	
+	
+	
+	
+	
 	
 	if ( empty ( $title ) ) {
 		jsBack ( "사이트 제목을 입력해 주세요" );
