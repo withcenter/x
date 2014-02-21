@@ -46,6 +46,10 @@
 	padding-bottom: 10px;
 }
 
+.community-posts .posts-items ul li.last-item {
+	padding-bottom: 0;
+}
+
 .community-posts .posts-items ul li a {
 	text-decoration: none;
 }

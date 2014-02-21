@@ -21,7 +21,8 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	<div class='posts-items'>
 		<ul>
 		<?php
-			
+			$i = 1;
+			$no_of_posts = count($list);
 			foreach ( $list as $li ) {
 				$subject = $li['wr_subject'];
 				$subject .= ":";
@@ -34,12 +35,13 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 					$no_comment = 'no-comment';
 				}
 		?>	
-			<li>
+			<li <? if( $i == $no_of_posts ) echo "class='last-item'"; ?> >
 				<a href='<?=$url?>' target='_blank'>					
 				<?
 					echo "<div class='subject'>$subject</div> <div class='post-content'>$content</div> <div class='no-of-comments $no_comment'>($comment_count)</div>";
 				?>
 				</a>
+				<?$i++;?>
 			</li>		
 		<?}?>
 		</ul>
