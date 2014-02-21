@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="<?=x::url_theme()?>/css/theme.css">
 <script src='<?=x::url_theme()?>/js/theme.js'></script> 
+<?include_once(G5_LIB_PATH.'/thumbnail.lib.php');?>
 <!-- 상단 시작 { -->
 <div id="travel-theme-1-hd">
     <h1 id="hd_h1"><?php echo $g5['title'] ?></h1>
@@ -94,43 +95,68 @@
 			if ( g::forum_exist($latest_bo_table) ) echo latest("x-latest-post-travel-2", $latest_bo_table, 3, 20);
 			else echo "<div class='notice'>NO POST AVAILABLE FOR WRITE TABLE ".$latest_bo_table."</div>";
 			
-			
-		/*?>
+			include "visitor_stats.php";
+		?>
 
 	<div class='sidebar-thumb'>
 		<div class='thumb-container'>
-			<?php 
+			<?php
+				$old_board = $board['bo_table'];
 				$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";
 				$current_date = date('Y-m-d').' 23:59:59';
 				$previous_date = date('Y-m-d', strtotime("-7 day", strtotime($current_date))).' 00:00:00';
 				$rows = db::rows( "SELECT bo_table, wr_id FROM $g5[board_new_table] WHERE $qb AND bn_datetime BETWEEN '$previous_date' AND '$current_date' ORDER BY bn_datetime DESC" );	
+				
+				$table_suffix = ms::board_id(etc::domain());
+
 				if( !empty( $rows ) ) {
 					foreach ( $rows as $row ) {	
 						$board['bo_table'] = $row['bo_table'];
-						$images[] = get_file($board['bo_table'],$row['wr_id']);
+						$images2[] = get_file($board['bo_table'],$row['wr_id']);
+						$thumbnail_list[] = get_list_thumbnail($board['bo_table'], $row['wr_id'], 56, 56);
 					}
 					
-					$count = 1;				
-					foreach ( $images as $image ) {
-						foreach ( $image as $key => $value ) {
-							if ( $count <= 9 ) {
-								if( $count % 3 == 0 ) $nomargin = 'no-margin';
-								else $nomargin = '';
-								if( $count >= 7 ) $nomargin_bottom = 'no-margin-bottom';								
-								if( $value['view'] ) {
-									$img = get_view_thumbnail($value['view'], 94);
-									$img_thumbnail = "<div class='sidebar-img-wrapper $nomargin $nomargin_bottom'>".$img."</div>";																		
-									echo $img_thumbnail;
-									$count++;
+					foreach ( $images2 as $image ) {
+						if( !$image['count'] == 0 ){
+							for( $i = 0; $i <= $image['count']; $i++){
+								if( $image[$i]['view'] ){
+									$image_file = $image[$i]['file'];
+									break;
 								}
 							}
+							$bo_table_links = substr($image[0]['path'],strpos($image[0]['path'], $table_suffix));								
+							$links[] = G5_BBS_URL."/view_image.php?bo_table=".$bo_table_links."&fn=".$image_file;
 						}
+					}	
+					
+					$num_of_thumbnails = 0;
+					
+					foreach ( $thumbnail_list as $thumbnail ) {
+						if( $thumbnail['src'] ){
+							$images2_link[] = $thumbnail['src'];
+							$num_of_thumbnails++;
+						}						
 					}
-				}
+					
+					if( $num_of_thumbnails > 9 ){
+						$num_of_thumbnails = 9;
+					}
+					
+					for( $ctr = 1; $ctr <= $num_of_thumbnails; $ctr++ ){
+						if( $ctr % 3 == 0 ) $nomargin = 'no-margin';
+						else $nomargin = '';
+						if( $ctr >= 7 ) $nomargin_bottom = 'no-margin-bottom';						
+						$img = "<a href = '".$links[$ctr-1]."'><img src ='".$images2_link[$ctr-1]."'/></a>";
+						$img_thumbnail = "<div class='sidebar-img-wrapper $nomargin $nomargin_bottom'>".$img."</div>";
+						echo $img_thumbnail;
+					}
+
+				}				
+				$board['bo_table'] = $old_board;				
 			?>
 		</div>
 		</div>	
-		<?*/?>
+		<??>
     </div>
     <div id="container">
 		<?if ( preg_match('/^config/', $action) ) include ms::site_menu();?>
