@@ -26,8 +26,10 @@
 			</tr>
 		</table>
 		
+		
 		<div class='latest_4'>
 			<? 
+			
 				$option = array('bo_table' => 'withcenter1');
 				include x::dir().'/theme/withcenter/bottom_latest.php';
 			?>

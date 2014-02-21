@@ -19,20 +19,22 @@ for ($i=0; $row = sql_fetch_array($result); $i++) {
      $list[$i] = get_list($row, $board, $latest_skin_url, 60);
 }
 
+if ( $list ) {
 echo "<div class='bottom_latest'>";
-foreach ( $list as $li ) {
-	$thumb = get_list_thumbnail($bo_table, $li['wr_id'], 95, 95);
-	$url = $li['href'];
-	$subject = conv_subject($li['wr_subject'], 20, "..." );
-	if ( $thumb['src'] ) {
-		echo "
-				<span class='photo'>
-					<a href='$url'><img src='".$thumb['src']."' /></a>
-					<a class='subject' href='$url'>
-						<b>$subject</b>
-					</a>
-				</span>";
+	foreach ( $list as $li ) {
+		$thumb = get_list_thumbnail($bo_table, $li['wr_id'], 95, 95);
+		$url = $li['href'];
+		$subject = conv_subject($li['wr_subject'], 20, "..." );
+		if ( $thumb['src'] ) {
+			echo "
+					<span class='photo'>
+						<a href='$url'><img src='".$thumb['src']."' /></a>
+						<a class='subject' href='$url'>
+							<b>$subject</b>
+						</a>
+					</span>";
+		}
 	}
+	echo "</div>";
 }
-echo "</div>";
 ?>
