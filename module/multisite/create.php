@@ -17,6 +17,7 @@
 			<form action='?'>
 				<input type='hidden' name='module' value='multisite'>
 				<input type='hidden' name='action' value='create_submit'>
+				<input type='hidden' name='theme' value='y' />
 					<div><span class='item'>사이트 주소</span> http://<input type='text' name='sub_domain'>.<?=etc::base_domain()?></div>
 					<div><span class='item'>사이트 제목</span> <input type='text' name='title'></div>
 					<div>
