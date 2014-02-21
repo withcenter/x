@@ -154,6 +154,7 @@
 				}				
 				$board['bo_table'] = $old_board;				
 			?>
+			<div style='clear:both;'></div>
 		</div>
 		</div>	
 		<??>
