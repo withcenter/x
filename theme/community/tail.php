@@ -1,6 +1,6 @@
 
 </div>
-
+<div style='clear:both'>&nbsp</div>
 <div class='footer-info'>
 	<div class='footer-logo'>
 		<?if( ms::meta('comfooter_logo') ) $company_banner = ms::meta('img_url').ms::meta('comfooter_logo');

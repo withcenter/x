@@ -48,11 +48,13 @@
 				$recent_content = cut_str($recent_li['wr_content'],30,'...');
 				$recent_url = g::url().'/bbs/board.php?bo_table='.$recent_li['bo_table'].'&wr_id='.$recent_li['wr_id'];
 				$recent_comment_count = $recent_li['wr_comment'];
+				if ( $recent_comment_count == 0 ) $no_comment = 'no-comment';
+				else $no_comment = '';
 		?>	
 			<li>
 				<a href='<?=$recent_url?>'>					
 				<?
-					echo "<div class='subject'>$recent_subject</div> <div class='post-content'>$recent_content</div> <div class='no-of-recent-comments'>($recent_comment_count)</div>";
+					echo "<div class='subject'>$recent_subject</div> <div class='post-content'>$recent_content</div> <div class='no-of-recent-comments $no_comment'>($recent_comment_count)</div>";
 				?>
 				</a>
 			</li>		

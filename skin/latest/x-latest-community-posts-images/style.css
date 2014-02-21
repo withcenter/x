@@ -4,6 +4,7 @@
 	margin-top: 10px;
 	border-radius: 3px;
 	font-family: Gulim, Arial;
+	min-height: 200px;
 }
 
 .posts .title {
@@ -62,3 +63,6 @@
 	color: #ff0000;
 }
 
+.posts a .no-of-comments.no-comment {
+	color: #9b9b9b;
+}

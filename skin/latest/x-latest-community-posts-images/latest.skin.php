@@ -40,7 +40,11 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			$subject = conv_subject($li['wr_subject'], 18, "...");
 			$content = cut_str($li['wr_content'],30,'...');
 			$url = $li['href'];
-			$comment_count = $li['comment_cnt'];
+			$no_comment = '';
+			if ( !$comment_count = $li['comment_cnt'] ) {
+				$comment_count = 0;
+				$no_comment = 'no-comment';
+			}
 	?>	
 		<a href='<?=$url?>' target='_blank'>
 			<table width='100%'>
@@ -62,7 +66,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 					<td align='left'>
 						<div class='posts-info'>
 							<span class='subject'><?=$subject?>: </span>
-							<span class='content'><?=$content?><span class='no-of-comments'><?='('.$comment_count.')'?></span></span>
+							<span class='content'><?=$content?><span class='no-of-comments <?=$no_comment?>'><?='('.$comment_count.')'?></span></span>
 						</div>
 					</td>
 				</tr>
