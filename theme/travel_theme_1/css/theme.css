@@ -448,6 +448,10 @@
 	color:#ffffff;
 }
 
+#visitor_stats .inner .sort-list .sort-by.selected{
+	background-color:#5d5d5d;
+}
+
 #visitor_stats .inner .sort-list .sort-by:hover{
 	cursor:pointer;
 }	

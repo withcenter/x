@@ -1,9 +1,13 @@
 $(function(){
 	/****visitor stats****/
 	$(".sorted-order.week").addClass("selected");
+	$(".sort-by[sort='week']").addClass('selected');
+	
 	$(".sort-by").click(function(){
 		$(".sorted-order").removeClass("selected");
 		var sort_order = $(this).attr("sort");
+		$('.sort-by').removeClass('selected');
+		$(this).addClass('selected');
 		$(".sorted-order."+sort_order).addClass("selected");
 		
 	});
