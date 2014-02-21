@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="<?=x::url_theme()?>/css/theme.css">
-
+<script src='<?=x::url_theme()?>/js/theme.js'></script>
 <!-- 상단 시작 { -->
 <div id="header-container">
     <div id="travel-hd-wrapper">
@@ -10,8 +10,13 @@
 					<a href='#'>EMAIL</a><a>&#8226;</a>
 					<a href='#'>FAQS</a>
 					<div class='customer-support'>
-						<a href='#'>LOG IN</a><a>&#8226;</a>
-						<a href='<?=G5_URL?>/<?=G5_BBS_DIR?>/register.php'>SIGN UP</a>
+						<? if ( !login() ) { ?>
+							<a href='#'>LOG IN</a><a>&#8226;</a>
+							<a href='<?=g::url()?>/<?=G5_BBS_DIR?>/register.php'>SIGN UP</a>
+						<?} else {?>
+							<a href='#'>Welcome <?=$member['mb_nick']?></a><a>&#8226;</a>
+							<a href='<?=g::url()?>/<?=G5_BBS_DIR?>/logout.php'>LOGOUT</a>
+						<?}?>
 					</div>
 			</div>
 		</div>

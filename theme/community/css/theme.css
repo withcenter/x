@@ -400,6 +400,19 @@
 	margin-right: 0;
 }
 
+/**NOTICE*/
+.notice{
+	border:1px solid #d5d5d5;
+	background-color:#f8f8f8;
+	color:#222222;
+	font-size: 8pt;
+	font-weight:bold;
+	padding:10px;
+	margin:auto;
+	margin-top:10px;
+	text-align:center;
+	font-family: Arial, Gulim;
+}
 
 /**BOTTOM POSTS*/
 .bottom-posts > div {

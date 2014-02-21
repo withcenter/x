@@ -26,7 +26,7 @@
 	imagefilledrectangle( $img, 0, 0, CAPTCHA_WIDTH, CAPTCHA_HEIGHT, $bg_color );
 	
 	
-	imagettftext( $img, 17, rand(0, 5), 5, CAPTCHA_HEIGHT - 3, $text_color, 'Courier New Bold.ttf', $characters );
+	imagettftext( $img, 17, 0, 5, CAPTCHA_HEIGHT - 3, $text_color, 'Courier New Bold.ttf', $characters );
 	
 	header( "Content-type: image/png" );
 	imagepng( $img );
