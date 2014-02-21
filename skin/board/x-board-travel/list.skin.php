@@ -39,7 +39,7 @@ foreach( $list as $l ){
 						</div>
 					</a>
 				</td width='243px'>
-				<?if ($$list[$i+1]){?>
+				<?if ($list[$i+1]){?>
 				<td>
 					<a href ='<?=$list[$i+1]['href']?>'>
 						<div class='travel_posts'>
@@ -59,7 +59,7 @@ foreach( $list as $l ){
 					</a>
 				</td>
 				<?}?>
-				<?if ($$list[$i+2]){?>
+				<?if ($list[$i+2]){?>
 				<td width='243px'>
 					<a href ='<?=$list[$i+2]['href']?>'>
 						<div class='travel_posts no-margin'>
