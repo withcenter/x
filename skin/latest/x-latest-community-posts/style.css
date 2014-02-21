@@ -1,12 +1,13 @@
-.my-posts {
+.community-posts {
 	border: solid 1px #0d98ba;
 	border-top: 0;
 	margin-top: 10px;
 	border-radius: 3px;
 	font-family: Gulim, Arial;
+	min-height: 200px;
 }
 
-.my-posts .title {
+.community-posts .title {
 	background: #1f9ebd;
 	height: 14px;
 	border-top: solid 2px #51b6ce;
@@ -19,43 +20,49 @@
 	font-weight: bold;
 }
 
-.my-posts .title a {
+.community-posts .title a {
 	text-decoration: none;
 	color: #ffffff;
 }
 
-.my-posts .title .title-left > div {
+.community-posts .title .label {
+	text-transform: uppercase;
+}
+
+.community-posts .title .title-left > div {
 	display: inline-block;
 }
 
-.my-posts .posts-items {
+.community-posts .posts-items {
 
 }
 
-.my-posts .posts-items ul {
-	padding-left: 30px;
+.community-posts .posts-items ul {
+	padding: 0 10px 0 30px;
 	list-style: square;
 }
 
-.my-posts .posts-items ul li a {
+.community-posts .posts-items ul li {
+	padding-bottom: 10px;
+}
+
+.community-posts .posts-items ul li a {
 	text-decoration: none;
 }
 
-.my-posts .posts-items ul li a > div {
+.community-posts .posts-items ul li a > div {
 	display: inline-block;
 	vertical-align: top;
 }
-
-.my-posts a .subject {
+.community-posts a .subject {
 	overflow: hidden;
-	width: 120px;
 }
 
-.my-posts a .no-of-comments {
+.community-posts a .no-of-comments {
 	color: #ff0000;
 }
 
-.my-posts a .no-of-comments.no-comment {
+.community-posts a .no-of-comments.no-comment {
 	color: #9b9b9b;
 }
 

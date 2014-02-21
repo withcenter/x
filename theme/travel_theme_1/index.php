@@ -1,4 +1,3 @@
-<script src='<?=x::url_theme()?>/js/banner_rotation.js'></script>
 <div class='top-panel'>
 	<div style='border: solid 1px #d9d9d9; padding: 1px'>
 		<div class='banner'>
@@ -64,32 +63,55 @@
 	<div class='photo-gallery'>
 		<h2>Photo Gallery</h2>
 		<div class='thumb-container'>
-			<?php 
+			<?php 				
 				$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";
 				$current_date = date('Y-m-d').' 23:59:59';
 				$previous_date = date('Y-m-d', strtotime("-7 day", strtotime($current_date))).' 00:00:00';
 				$rows = db::rows( "SELECT bo_table, wr_id FROM $g5[board_new_table] WHERE $qb AND bn_datetime BETWEEN '$previous_date' AND '$current_date' ORDER BY bn_datetime DESC" );	
+				
+				$table_suffix = ms::board_id(etc::domain());
+
 				if( !empty( $rows ) ) {
 					foreach ( $rows as $row ) {	
 						$board['bo_table'] = $row['bo_table'];
 						$images[] = get_file($board['bo_table'],$row['wr_id']);
+						$thumbnail_list[] = get_list_thumbnail($board['bo_table'], $row['wr_id'], 94, 59);
 					}
 					
-					$count = 1;				
 					foreach ( $images as $image ) {
-						foreach ( $image as $key => $value ) {
-							if ( $count <= 9 ) {
-								if( $count % 3 == 0 ) $nomargin = 'no-margin';
-								else $nomargin = '';
-								if( $value['view'] ) {
-									$img = get_view_thumbnail($value['view'], 94);
-									$img_thumbnail = "<div class='gallery-img-wrapper $nomargin'>".$img."</div>";																		
-									echo $img_thumbnail;
-									$count++;
+						if( !$image['count'] == 0 ){
+							for( $i = 0; $i <= $image['count']; $i++){
+								if( $image[$i]['view'] ){
+									$image_file = $image[$i]['file'];
+									break;
 								}
 							}
+							$bo_table_links = substr($image[0]['path'],strpos($image[0]['path'], $table_suffix));								
+							$links[] = G5_BBS_URL."/view_image.php?bo_table=".$bo_table_links."&fn=".$image_file;
 						}
+					}	
+					
+					$num_of_thumbnails = 0;
+					
+					foreach ( $thumbnail_list as $thumbnail ) {
+						if( $thumbnail['src'] ){
+							$images_link[] = $thumbnail['src'];
+							$num_of_thumbnails++;
+						}						
 					}
+					
+					if( $num_of_thumbnails > 9 ){
+						$num_of_thumbnails = 9;
+					}
+					
+					for( $ctr = 1; $ctr <= $num_of_thumbnails; $ctr++ ){
+						if( $ctr % 3 == 0 ) $nomargin = 'no-margin';
+						else $nomargin = '';						
+						$img = "<a href = '".$links[$ctr-1]."'><img src ='".$images_link[$ctr-1]."'/></a>";
+						$img_thumbnail = "<div class='gallery-img-wrapper $nomargin'>".$img."</div>";
+						echo $img_thumbnail;
+					}
+
 				}
 			?>
 		</div>

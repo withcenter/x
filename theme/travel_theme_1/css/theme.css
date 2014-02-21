@@ -181,9 +181,21 @@
 	font-size:.9em;	
 }
 
-#top-menu .inner a{
-	display:inline-block;
-	float:left;
+#top-menu .inner{
+	position:relative;
+}
+
+#top-menu .inner #pop-up-login{
+	position:absolute;
+	top:35px;
+	left:0;
+	z-index:10000;
+	display:none;
+}
+
+
+#top-menu .inner .top-menu-item  a{
+	display:inline-block;	
 	margin:8px 13px 8px 3px;
 	text-decoration:none;
 	color:#717171;
@@ -276,6 +288,10 @@
 }
 
 #gnb .gnb_1dli a:hover{
+	background-color:#183e5d;
+}
+
+#gnb .gnb_1dli.selected a{
 	background-color:#183e5d;
 }
 

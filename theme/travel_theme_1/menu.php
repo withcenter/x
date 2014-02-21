@@ -1,32 +1,13 @@
 <?php
-
 	$main = array();
-	
-	
-
 ?>
 
-   <nav id="gnb">
-
+<nav id="gnb">
 
 <script>$('#gnb').addClass('gnb_js');</script>
 <h2>메인메뉴</h2>
 	
-<ul id="gnb_1dul">
-	<?php
-		/*
-			<li class="gnb_1dli"><a href='/' class="gnb_1da"><?=ln('Home')?></a></li>
-		*/
-		
-		
-		
-	?>
-	
-<? /*
-	<li class="gnb_1dli">
-		<a href="<?=g::url_board(ms::board_id(etc::domain()))?>" class="gnb_1da"><?=ln('Forum')?></a>
-	</li>
-*/?>	
+<ul id="gnb_1dul">	
 	<?php
 		$i = 0;
 		foreach ( $main as $row ) {
@@ -55,17 +36,24 @@
 		$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('menu_'.$i)."'");
 		if ( !$menu = $row['bo_subject'] ) $menu = null;
 	?>
-		<li class="gnb_1dli"><a href='<?=g::url()?>/bbs/board.php?bo_table=<?=ms::meta('menu_'.$i)?>' class="gnb_1da" <?// if ($extra['menu'.$i.'_target'] == 'Y') echo "target='_blank'"?>><?=$menu?></a></li>
+		<li class="gnb_1dli <?=ms::meta('menu_'.$i)?>"><a href='<?=g::url()?>/bbs/board.php?bo_table=<?=ms::meta('menu_'.$i)?>' class="gnb_1da" <?// if ($extra['menu'.$i.'_target'] == 'Y') echo "target='_blank'"?>><?=$menu?></a></li>
 	<?}}?>
 	
 	
 	
-	
-	<li class="gnb_1dli">
+	<?if( ms::admin() ) {?>
+	<li class="gnb_1dli admin-menu">
 		<a href="<?=ms::url_config()?>" class="gnb_1da"><?=ln('Admin Page')?></a>
 	</li>
-	
+	<?}?>
 	
 </ul>
 </nav>
-	
+
+
+<script>
+	$(function(){			
+		if( '<?=$in['bo_table']?>' != '' ) $(".gnb_1dli.<?=$in['bo_table']?>").addClass("selected");
+		else if( '<?=$in['module']?>' ) $(".gnb_1dli.admin-menu").addClass("selected");		
+	});
+</script>

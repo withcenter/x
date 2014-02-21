@@ -42,11 +42,11 @@
 	
 	
 	
-	
+	<? if ( ms::admin() ) { ?>
 	<li>
 		<a href="<?=ms::url_config()?>"><?=ln('Admin Page')?></a>
 	</li>
-	
+	<? } ?>
 	
 </ul>
 </div>

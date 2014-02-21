@@ -17,4 +17,49 @@
 
 		</div>
 	</div>
+	<div class='top-posts'>
+		<div class='top-posts-1'>
+			<?=latest( 'x-latest-community-posts' , ms::board_id(etc::domain()).'_1' , 6, 25)?>		
+		</div>
+		<div class='top-posts-2'>
+				<?=latest( 'x-latest-community-posts' , ms::board_id(etc::domain()).'_2' , 6, 25)?>	
+		</div>
+		<div class='top-posts-3'>
+			<?=latest( 'x-latest-community-posts-images' , ms::board_id(etc::domain()).'_3' , 4, 25)?>
+		</div>
+	</div>
+</div>
+
+<div class='middle-panel'>
+	<div class='middle-banner'>
+		<?if( ms::meta('combanner_middle') ) {?><img src="<?=ms::meta('img_url').ms::meta('combanner_middle')?>"><?}?>
+	</div>
+	<div class='middle-posts'>
+		<div class='middle-posts-1'>
+			<?=latest( 'x-latest-community-posts' , ms::board_id(etc::domain()).'_4' , 6, 25)?>		
+		</div>
+		<div class='middle-posts-2'>
+				<?=latest( 'x-latest-community-posts' , ms::board_id(etc::domain()).'_5' , 6, 25)?>	
+		</div>
+		<div class='middle-posts-3'>
+			<?=latest( 'x-latest-community-posts-images' , ms::board_id(etc::domain()).'_6' , 4, 25)?>
+		</div>
+	</div>
+</div>
+
+<div class='bottom-panel'>
+	<div class='bottom-banner'>
+		<?if( ms::meta('combanner_bottom') ) {?><img src="<?=ms::meta('img_url').ms::meta('combanner_bottom')?>"><br><?}?>	
+	</div>
+	<div class='bottom-posts'>
+		<div class='bottom-posts-1'>
+			<?=latest( 'x-latest-community-posts' , ms::board_id(etc::domain()).'_7' , 4, 25)?>		
+		</div>
+		<div class='bottom-posts-2'>
+				<?=latest( 'x-latest-community-posts' , ms::board_id(etc::domain()).'_8' , 4, 25)?>	
+		</div>
+		<div class='bottom-posts-3'>
+			<?=latest( 'x-latest-community-posts-images' , ms::board_id(etc::domain()).'_9' , 2, 25)?>
+		</div>
+	</div>
 </div>
