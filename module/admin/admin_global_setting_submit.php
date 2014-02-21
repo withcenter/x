@@ -1,17 +1,4 @@
 <?php
-?>
-
-admin_global_setting_submit
-
-f
-ads
-fasd
-fa
-sdf
-asf
-sadf
-
-<hr>
-adf
-asd
-f
+	x::config('system_global_setting', string::scalar($in));
+	jsGo("?module=$module&action=admin_global_setting");
+	

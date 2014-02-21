@@ -242,5 +242,20 @@ class x {
 		}
 	}
 	
+	/**
+	 *  @brief stores global setting values into self::$config['global']
+	 *  
+	 *  @return Return_Description
+	 *  
+	 *  @details Details
+	 */
+	static function load_global_config()
+	{
+		$v = self::config( 'system_global_setting' );
+		if ( empty($v) ) self::$config['global'] = array();
+		else self::$config['global'] = string::unscalar( $v );
+	}
+	
+	
 	
 }

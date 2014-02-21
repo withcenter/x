@@ -1,9 +1,9 @@
 <?php
-
-
 x::hook_register('end_before_html', 'hook_rsd_patch');
 x::hook_register('end_before_html', 'hook_metaweblogapi');
 x::hook_register('end_before_html', 'hook_html_symbol');
+x::hook_register('end_before_html', 'hook_css_js_version');
+
 
 function hook_rsd_patch()
 {
@@ -70,6 +70,51 @@ function hook_html_symbol()
 
 	$html = str_replace( $source, $target, $html );
 }
+
+
+
+/**
+ *  @brief Update CSS & Javascript Version to let the web browser download new version.
+ *  
+ *  @return none
+ *  
+ *  @details To refresh(download) new css and javascript file, update the version on admin pannel.
+ */
+function hook_css_js_version()
+{
+	debug::log("hook_html_symbol() begin");
+	global $html;
+	
+	preg_match_all("/<link[^>]+>/", $html, $ms);
+	foreach ( $ms[0] as $link ) {
+		if ( strpos( $link, ".css" ) ) {
+			$new_link = str_replace( ".css", ".css?version=" . x::$config['global']['site_css_js_version'], $link);
+			$html = str_replace( $link, $new_link, $html);
+		}
+	}
+	
+	
+	preg_match_all("/<script[^>]+>/", $html, $ms);
+	foreach ( $ms[0] as $link ) {
+		if ( strpos( $link, ".js" ) ) {
+			$new_link = str_replace( ".js", ".js?version=" . x::$config['global']['site_css_js_version'], $link);
+			$html = str_replace( $link, $new_link, $html);
+		}
+	}
+	
+	/*
+	preg_match_all("/<script[^>]+>/", $html, $ms);
+	dlog( $ms );
+	*/
+	
+}
+
+
+
+
+
+
+
 
 /** @short reset forum skin select in admin page to support the skin path of x
  *  
