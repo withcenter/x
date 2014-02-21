@@ -17,6 +17,6 @@ function hook_multisite_tail_begin() {
 	if($theme_sidebar == 'left') {
 	?><style>
 		#aside {float:left;}
-		#container {border-right: 0; border-left: 1px solid #dde4e9;}
+		#container {border-right: 0; border-left: 1px solid #dde4e9;margin:0 0 0 10px;}
 	</style><?}
 }
