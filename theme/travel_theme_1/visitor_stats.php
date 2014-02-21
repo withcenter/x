@@ -70,16 +70,16 @@ $year_is[] = $visits['year'];
 ?>
 <div id = 'visitor_stats'>
 	<div class='inner'>
-		<div class='head'><img src='<?=x::theme_url()?>/img/visitors_stats.png'/><div class='title'>VISITOR STATS</div></div>
+		<div class='head'><img src='<?=x::url_theme()?>/img/visitors_stats.png'/><div class='title'>VISITOR STATS</div></div>
 		<div id='visitor-content'>
-			<table class='sorted-order week' width='100%' cellpadding=0 cellspacing=0 style="background:url('<?=x::theme_url()?>/img/graph.png'); background-repeat:no-repeat; background-position:0 5px; ">
+			<table class='sorted-order week' width='100%' cellpadding=0 cellspacing=0 style="background:url('<?=x::url_theme()?>/img/graph.png'); background-repeat:no-repeat; background-position:0 5px; ">
 				<tr valign='top'>
 					<?for( $i = 3; $i >= 0; $i-- ){
 						$percentage = round(($visits_this_week[$i]/$visits_this_week_total*100),2)."%";
 					?>					
 							<td>
 								<div class='bars'>
-									<div class='grey-bar' style="background:url('<?=x::theme_url()?>/img/bars.png'); height:<?=$percentage?>;">
+									<div class='grey-bar' style="background:url('<?=x::url_theme()?>/img/bars.png'); height:<?=$percentage?>;">
 									
 									</div>
 								</div>
@@ -90,14 +90,14 @@ $year_is[] = $visits['year'];
 					<?}?>
 				</tr>
 			</table>
-			<table class='sorted-order month' width='100%' cellpadding=0 cellspacing=0 style="background:url('<?=x::theme_url()?>/img/graph.png'); background-repeat:no-repeat; background-position:0 5px; ">
+			<table class='sorted-order month' width='100%' cellpadding=0 cellspacing=0 style="background:url('<?=x::url_theme()?>/img/graph.png'); background-repeat:no-repeat; background-position:0 5px; ">
 				<tr valign='top'>
 					<?for( $i = 3; $i >= 0; $i-- ){
 						$percentage = round(($visits_this_month[$i]/$visits_this_month_total*100),2)."%";
 					?>
 							<td>
 							<div class='bars'>
-							<div class='grey-bar' style="background:url('<?=x::theme_url()?>/img/bars.png'); height:<?=$percentage?>;"></div>
+							<div class='grey-bar' style="background:url('<?=x::url_theme()?>/img/bars.png'); height:<?=$percentage?>;"></div>
 							</div>							
 							<div><?=$month_is[$i]?></div>
 							<div>(<?=$visits_this_month[$i]?>)</div>
@@ -106,14 +106,14 @@ $year_is[] = $visits['year'];
 					<?}?>
 				</tr>
 			</table>
-			<table class='sorted-order year' width='100%' cellpadding=0 cellspacing=0 style="background:url('<?=x::theme_url()?>/img/graph.png'); background-repeat:no-repeat; background-position:0 5px; ">
+			<table class='sorted-order year' width='100%' cellpadding=0 cellspacing=0 style="background:url('<?=x::url_theme()?>/img/graph.png'); background-repeat:no-repeat; background-position:0 5px; ">
 				<tr valign='top'>
 					<?for( $i = 3; $i >= 0; $i-- ){
 						$percentage = round(($visits_this_year[$i]/$visits_this_year_total*100),2)."%";
 					?>
 							<td>
 								<div class='bars'>
-								<div class='grey-bar' style="background:url('<?=x::theme_url()?>/img/bars.png'); height:<?=$percentage?>;"></div>	
+								<div class='grey-bar' style="background:url('<?=x::url_theme()?>/img/bars.png'); height:<?=$percentage?>;"></div>	
 								</div>								
 								<div><?=$year_is[$i]?></div>
 								<div>(<?=$visits_this_year[$i]?>)</div>
