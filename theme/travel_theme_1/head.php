@@ -1,9 +1,5 @@
-<?include_once(G5_LIB_PATH.'/thumbnail.lib.php');?>
 <link rel="stylesheet" href="<?=x::url_theme()?>/css/theme.css">
-<?
-//di(get_list_thumbnail("ms_travel_1", 11, 85, 81));
-//exit;
-?>
+<script src='<?=x::url_theme()?>/js/theme.js'></script> 
 <!-- 상단 시작 { -->
 <div id="travel-theme-1-hd">
     <h1 id="hd_h1"><?php echo $g5['title'] ?></h1>
@@ -13,9 +9,10 @@
     <div id="travel-hd-wrapper">
 		<div id="top-menu">
 			<div class='inner'>
-				<a href='#'>LOG IN</a>
-				<a href='<?=G5_URL?>/<?=G5_BBS_DIR?>/register.php'>SIGN UP</a>
-				<a href='#'>CUSTOMER SERVICE</a>
+				<span class ='top-menu-item login'><a href='#'>LOG IN</a></span>
+				<div id ='pop-up-login'><?php echo outlogin('x-outlogin-travel-pop-up');?></div>
+				<span class ='top-menu-item register'><a href='<?=G5_URL?>/<?=G5_BBS_DIR?>/register.php'>SIGN UP</a></span>
+				<span class ='top-menu-item customer-service'><a href='#'>CUSTOMER SERVICE</a></span>
 				<div class='customer-support'><img src='<?=x::url_theme()?>/img/phone.png'/>CUSTOMER SUPPORT: 123-45-67</div>
 			</div>
 		</div>

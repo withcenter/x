@@ -60,11 +60,11 @@
 	
 	
 	
-	
+	<?if( ms::admin() ) {?>
 	<li class="gnb_1dli">
 		<a href="<?=ms::url_config()?>" class="gnb_1da"><?=ln('Admin Page')?></a>
 	</li>
-	
+	<?}?>
 	
 </ul>
 </nav>
