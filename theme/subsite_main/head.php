@@ -1,3 +1,4 @@
+<script type='text/javascript' src='<?=x::url()?>/js/default.js'></script>
 <link rel="stylesheet" href="<?=x::url_theme()?>/css/theme.css">
 <!-- 상단 시작 { -->
 <div id='website-wrapper'>

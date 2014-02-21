@@ -8,6 +8,9 @@ $(function(){
 		rotate_the_banner();		
 	},5000);
 	
+	
+	
+	
 	$('.banner').mouseover(function(){
 		clearInterval(banner_rotate_interval);
 	});
@@ -28,7 +31,7 @@ $(function(){
 		page_num++;
 		var banner_page = ".image_num_"+page_num;
 		
-		if( $( banner_page ).length){console.log('page: '+banner_page);}
+		if ( $( banner_page ).length){ console.log('page: '+banner_page); }
 		else rotate_the_banner();
 				
 		$(banner_page).addClass('selected');

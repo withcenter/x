@@ -27,8 +27,11 @@ x::hook('begin');
 
 
 /// https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.bqguddm7sk01
-if ( preg_match("/_submit$/", $action) ) {
+if ( $in['theme'] == 'y' ) {
+}
+else if ( $in['theme'] == 'n' || preg_match("/_submit$/", $action) ) {
 	include "module/$module/$action.php";
 	include 'end.php';
 	exit;
 }
+
