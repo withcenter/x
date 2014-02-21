@@ -92,15 +92,22 @@
 						}
 					}	
 					
+					$num_of_thumbnails = 0;
+					
 					foreach ( $thumbnail_list as $thumbnail ) {
 						if( $thumbnail['src'] ){
-							$images_link[] = $thumbnail['src'];							
+							$images_link[] = $thumbnail['src'];
+							$num_of_thumbnails++;
 						}						
 					}
 					
-					for( $ctr = 1; $ctr <=9; $ctr++ ){
-						if( $count % 3 == 0 ) $nomargin = 'no-margin';
-						else $nomargin = '';
+					if( $num_of_thumbnails > 9 ){
+						$num_of_thumbnails = 9;
+					}
+					
+					for( $ctr = 1; $ctr <= $num_of_thumbnails; $ctr++ ){
+						if( $ctr % 3 == 0 ) $nomargin = 'no-margin';
+						else $nomargin = '';						
 						$img = "<a href = '".$links[$ctr-1]."'><img src ='".$images_link[$ctr-1]."'/></a>";
 						$img_thumbnail = "<div class='gallery-img-wrapper $nomargin'>".$img."</div>";
 						echo $img_thumbnail;
