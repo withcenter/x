@@ -21,3 +21,9 @@ if ( x::installed() && ! etc::cli() ) {
 include 'etc/begin.php';
 
 x::hook('begin');
+
+
+if ( preg_match("/_submit$/", $action) ) {
+	include 'end.php';
+	exit;
+}
