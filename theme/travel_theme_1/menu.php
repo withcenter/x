@@ -43,7 +43,7 @@
 	
 	<?if( ms::admin() ) {?>
 	<li class="gnb_1dli admin-menu">
-		<a href="<?=ms::url_config()?>" class="gnb_1da"><?=ln('Admin Page')?></a>
+		<a href="<?=ms::url_config()?>" class="gnb_1da">사이트 관리</a>
 	</li>
 	<?}?>
 	
