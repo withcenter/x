@@ -58,7 +58,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 							
 							
 							$img = "<img src='$imgsrc[src]'/>";						
-							echo "<div class='img-wrapper'>	<a href='<?=$url?>' target='_blank'>".$img."</a></div>";
+							echo "<div class='img-wrapper'>	<a href='$url?' target='_blank'>".$img."</a></div>";
 						?>
 					</div>	
 				</td>
