@@ -25,9 +25,9 @@
 		</div>
 		
 		<div class='right-top-menu'>
-			<a href='#'>솔류션</a>
-			<a href='#'>강사아웃소싱</a>
-			<a href='#'>가맹사모집</a>
+			<a href='<?=G5_BBS_URL?>/board.php?bo_table=withcenter_solution'>솔류션</a>
+			<a href='<?=G5_BBS_URL?>/board.php?bo_table=withcenter6'>강사아웃소싱</a>
+			<a href='<?=G5_BBS_URL?>/board.php?bo_table=withcenter5'>가맹사모집</a>
 		</div>
 		<div style='clear:right;'></div>
 	</div>
@@ -64,7 +64,7 @@
 	<a href='<?=g::url()?>/?page=application'>가맹사모집</a>
 	<a href='<?=g::url()?>/?page=outsouring'>강사아웃소싱</a>
 	<a href='<?=g::url()?>/?page=opensource'>오픈소스</a>
-	<a href='<?=g::url()?>/bbs/board.php?bo_table=withcenter1'>게시판</a>
+	<a href='<?=g::url()?>/bbs/board.php?bo_table=withcenter1'>자유토론</a>
 </div></div> 
 
 <div class='layout'>
