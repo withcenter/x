@@ -123,7 +123,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
         </tr>
 		
         <tr>
-            <th scope="row"><label for="wr_1">Sub Title<strong class="sound_only">Sub Title</strong></label></th>
+            <th scope="row"><label for="wr_1">부제목<strong class="sound_only">부제목</strong></label></th>
             <td>
 				<input type="text" name="wr_1" value="<?php echo $wr_1 ?>" id="wr_1" class="frm_input" size="50" maxlength="255">				
             </td>
@@ -145,9 +145,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
         </tr>
 		
 		<tr>
-            <th scope="row"><label for="wr_2">Availability<strong class="sound_only">Availability</strong></label></th>
+            <th scope="row"><label for="wr_2">추가정보<strong class="sound_only">추가정보</strong></label></th>
             <td>
-				<input placeholder='e.g. 196 hotels, 125 guesthouses, 13 apartments, ...' type="text" name="wr_2" value="<?php echo $wr_2 ?>" id="wr_2" class="frm_input" size="50" maxlength="255">				
+				<input placeholder='예) 호텔 룸 갯수 16개, 조식 제공 등등' type="text" name="wr_2" value="<?php echo $wr_2 ?>" id="wr_2" class="frm_input" size="50" maxlength="255">				
             </td>
         </tr>
 

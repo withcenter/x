@@ -1,6 +1,8 @@
-
     </div>
 </div>
+<div class='footer-text'><div class='inner'>
+	<?=nl2br(ms::meta('footer_text'))?>
+</div></div>
 
 <!-- } 콘텐츠 끝 -->
 

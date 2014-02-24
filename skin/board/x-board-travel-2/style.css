@@ -255,8 +255,11 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 #bo_vc_sns input {margin:0 0 0 5px}
 
 /***NEW BOARD***/
+#travel_theme_board_2  {
+	font-family: '맑은 고딕', AppleGothic;
+}
 #travel_theme_board_2 .travel_posts{
-	font-family:arial;
+	
 }
 
 #travel_theme_board_2 td.no-padding{

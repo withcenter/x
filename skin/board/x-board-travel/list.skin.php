@@ -40,7 +40,13 @@ foreach( $list as $l ){
 		<?}?>
         <table width='750px;' cellpadding=0 cellspacing=0>        
         <?php
-        for ($i=0; $i<count($list); $i+=3) {		
+        for ($i=0; $i<count($list); $i+=3) {	
+			if ( $list[$i]['wr_comment'] ) $no_of_comment = "<b>코멘트</b>(".$list[$i]['wr_comment'].")";
+			else $no_of_comment = null;
+			
+			if ( $list[$i]['wr_hit'] ) $no_of_view = "<b>조회수</b>(".number_format($list[$i]['wr_hit']).")";
+			else $no_of_view = null;
+			
         ?>
 			<tr valign='top'>
 				<td width='33%'>					
@@ -52,10 +58,13 @@ foreach( $list as $l ){
 						</div>
 						<div class='post-subject'>
 							<a href ='<?=$list[$i]['href']?>'>
-								<?=conv_subject($list[$i]['wr_subject'],10,"...")?><span class='view-guide'>VIEW GUIDE</span>
+								<?=conv_subject($list[$i]['wr_subject'],10,"...")?>
 							</a>
 						</div>
-						<div class='user-review'>User Review (<?=$list[$i]['wr_comment']?>)
+						<div class='user-review'>
+							<span class='view-guide'><?=$no_of_view?></span>&nbsp;&nbsp;<?=$no_of_comment?> 
+							
+							<? /*
 							<div class='stars'>
 								<img src='<?=$board_skin_url?>/img/star.png'/>
 								<img src='<?=$board_skin_url?>/img/star.png'/>
@@ -63,6 +72,8 @@ foreach( $list as $l ){
 								<img src='<?=$board_skin_url?>/img/star.png'/>
 								<img src='<?=$board_skin_url?>/img/star.png'/>
 							</div>
+							*/?>
+							
 						</div>
 						<div class='post-content'>
 							<a href ='<?=$list[$i]['href']?>'>

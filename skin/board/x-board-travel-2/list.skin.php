@@ -56,8 +56,8 @@ foreach( $list as $l ){
 								$post_content = cut_str(strip_tags($list[$i]['wr_content']),150,"...");
 								$post_availability = cut_str($list[$i]['wr_2'],50,"...");
 								
-								if( $post_sub_title == '' ) $post_sub_title = 'No Subtitle';
-								if( $post_availability == '' ) $post_availability = 'No Availability Inputted';
+								if( empty($post_sub_title) ) $post_sub_title = null;
+								if( empty($post_availability) ) $post_availability = null;
 							?>
 							<div class='post-subject'><a href ='<?=$list[$i]['href']?>'><?=$post_subject?></a></div>
 							<div class='post-sub-title'><a href ='<?=$list[$i]['href']?>'><?=$post_sub_title?></a></div>
