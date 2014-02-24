@@ -8,9 +8,14 @@
 		<img src="<?=$company_banner?>">		
 	</div>
 	<div class='footer-text'>
+		<div class='footer-links'>
+			<? if( ms::meta('comfooter_about') ) { ?> <a href='<?=g::url()?>/?page=about'>ABOUT</a> <?}?>
+			<? if ( ms::meta ('comfooter_terms') ) { ?> <a href='<?=g::url()?>/?page=terms'>TERMS & CONDITIONS</a> <?}?>
+			<? if ( ms::meta ('comfooter_privacy') ) { ?> <a href='<?=g::url()?>/?page=privacy'>PRIVACY POLICY</a> <?}?>
+			<? if ( ms::meta ('comfooter_faqs') ) { ?> <a href='<?=g::url()?>/?page=faqs'>FAQS</a> <?}?>
+		</div>
 	<? if( ms::meta('footer_text') == '' ) {?>
-			<div class='footer-links'><a href='#'>ABOUT</a><a href='#'>TERMS & CONDITIONS</a><a href='#'>PRIVACY POLICY</a><a href='#'>FAQS</a></div>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>COPYRIGHT @ 2014 &nbsp&nbsp ALL RIGHTS RESERVED &nbsp&nbsp WITHCENTER.COM
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>COPYRIGHT @ 2014 &nbsp&nbsp ALL RIGHTS RESERVED &nbsp&nbsp WITHCENTER.COM
 	<?} else echo ms::meta('footer_text');?>
 	</div>
 </div>

@@ -4,6 +4,9 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 ?>
 
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
+<?if ( !$list ) return;?>
+<div class='travel-stories'>
+<h2>Travel Stories</h2>
 <div class='stories-container'>
 <?php
 	foreach( $list as $li ) {
@@ -63,4 +66,4 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 	}
 ?>
 </div>
-
+</div>
