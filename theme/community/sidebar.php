@@ -129,7 +129,7 @@ if( $recent_comments ) {
 	</div>
 </div> <!--posts--recent-->
 <? } ?>
-
+ 
 <?
 /** Recent Comments from Forum 1 */
 $latest_bo_table = ms::meta('forum_no_1');
