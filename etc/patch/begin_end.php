@@ -1,16 +1,13 @@
 <?php
 
-	patch_begin(__FILE__);
-
 
 	if ( copy('etc/x.php', "$dir_root/extend/x.php") ) {
-		echo "	copy x.php -> extend/x.php OK\n";
+		patch_message("patched : copy x.php -> extend/x.php");
 	}
 	else patch_failed();
 	
 	
-	
-	echo "			adding begin.php to head.php	";
+	patch_message("adding begin.php to head.php");
 	
 	$path = $dir_root . '/head.php';
 	$data = file::read($path);
@@ -24,13 +21,13 @@
 ?>";
 	
 	if ( pattern_exist( $data, $patch ) ) {
-		echo " already patched : OK\n";
+		patch_message("already patched");
 	}
 	else {
 		if ( pattern_exist( $data, $find ) ) {
 			$data = str_replace( $find, "\n$patch\n$find", $data );
 			file::write( $path, $data );
-			echo " patched : OK";
+			patch_message('patched');
 		}
 		else {
 			patch_failed();
@@ -38,7 +35,8 @@
 	}
 	
 	
-	echo "			adding x/end.php to G5_PATH/tail.php";
+	
+	patch_message("adding x/end.php to G5_PATH/tail.php");
 	$path = $dir_root . '/tail.php';
 	$data = file::read($path);
 	$find = "/G5_IS_MOBILE[^>]*>/s";
@@ -53,32 +51,30 @@
 		?>
 	";
 	if ( pattern_exist( $data, $patch ) ) {
-		echo " already patched : OK\n";
+		patch_message("already patched");
 	}
 	else {
 		if ( preg_match($find, $data, $ms) ) {
 			//di($ms[0]);
 			$data = str_replace($ms[0], "$ms[0]\n$patch\n", $data);
 			file::write( $path, $data );
-			echo " patched : OK\n";
+			patch_message('patched');
 		}
 		else patch_failed();
 	}
 	
 	
-	
-	
-	echo "			adding x/end.php to G5_PATH/tail.sub.php";
+	patch_message("adding x/end.php to G5_PATH/tail.sub.php");
 	$path = $dir_root . '/tail.sub.php';
 	$data = file::read( $path );
 	$src = "<?include G5_PATH . '/x/end.php'?>";
 	if ( pattern_exist($data, $src) ) {
-		echo " already patched : OK\n";
+		patch_message("already patched");
 	}
 	else {
 		$data = "$data\n$src\n";
 		file::write( $path, $data );
-		echo " patched : OK\n";
+		patch_message('patched');
 	}
 
 	

@@ -90,8 +90,10 @@
     <div id="aside">
 		<?php echo outlogin('basic'); // 외부 로그인  ?>
 		
+		<? if ( login() ) { ?>
 		<div><a href='<?=x::url_setting()?>'><?php echo _L('Member Setting');?></a></div>
 		<div><a href='<?=x::url_admin()?>'><?php echo _L('Admin Page');?></a></div>
+		<? } ?>
 		
     </div>
     <div id="container">

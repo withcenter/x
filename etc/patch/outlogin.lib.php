@@ -1,21 +1,20 @@
 <?php
-	patch_begin(__FILE__);
 	$path = $dir_root . '/lib/outlogin.lib.php';
 	$data = file::read($path);
 	$src = "ob_start();";
 	$dst = $src . "\nx::hook( 'outlogin' );";
 	
 	if ( pattern_exist($data, $dst) ) {
-		echo("	already patched\n");
+		patch_message('already patched');
 	}
 	else {
 		if ( ! pattern_exist($data, $src) ) {
 			echo " srouce pattern does not exist. FAILED\n[ source patttern ] : $src";
-			return;
+			patch_failed();
 		}
 		else {
 			$data = str_replace( $src, $dst, $data );
-			echo " patched";
+			patch_message('patched');
 		}
 	}
 	
@@ -25,23 +24,18 @@
 	$dst = '/* x patch */ global $skin_folder, $outlogin_skin_path, $outlogin_skin_url; $skin_folder=$skin_dir;' . "\n" . $src;
 	
 	if ( pattern_exist($data, $dst) ) {
-		echo("	already patched\n");
+		patch_message('already patched');
 	}
 	else {
 		if ( ! pattern_exist($data, $src) ) {
 			echo " srouce pattern does not exist. FAILED\n[ source patttern ] : $src";
-			return;
+			patch_failed();
 		}
 		else {
 			$data = str_replace( $src, $dst, $data );
-			echo " patched";
+			patch_message('patched');
 		}
 	}
 	
 	file::write( $path,  $data );
-	
-	
-	
-	
-	
-		
+	patch_message('patched');

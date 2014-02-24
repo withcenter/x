@@ -1,5 +1,5 @@
 <?php
-	echo "index.php	:";
+
 
 	$path = $dir_root . '/index.php';
 	$data = file::read($path);
@@ -7,7 +7,7 @@
 	
 	$p = "include x::theme_folder() . '/index.php';";
 	if ( strpos( $data, $p ) ) {
-		message("patched alredy");
+		patch_message('patched alredy');
 		return;
 	}
 	
@@ -27,8 +27,7 @@
 	
 	$data = "$a$sp$add$b";
 	
-	
 	file::write( $path,  $data );
 	
-	message("patched");
+	patch_message('patched');
 	

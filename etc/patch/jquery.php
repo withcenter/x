@@ -9,7 +9,7 @@
  *    
  */
  
-	patch_begin(__FILE__);
+ 
 	$path = $dir_root . '/head.sub.php';
 	$data = file::read($path);
 	if ( $data == file::FILE_NOT_FOUND ) return $data;
@@ -26,7 +26,7 @@ EOP;
 
 	if ( ! pattern_exist($data, $src) ) {
 		if ( pattern_exist($data, $dst) ) {
-			echo("	already patched\n");
+			patch_message("already patched");
 		}
 		else {
 			return -1;
@@ -35,7 +35,7 @@ EOP;
 	else {
 		$data = str_replace( $src, $dst, $data );
 		file::write( $path,  $data );
-		message(' patched');
+		patch_message('patched');
 	}
 	
 	// patch common.js

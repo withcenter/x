@@ -10,8 +10,6 @@ echo $html;
 			x::hook( 'end_after_html' );
 			x::hook( 'end' );
 
-
-
 if ( debug::mode() ) {
 	debug::log("x end\t}}");
 	//di( "theme: " . x::theme() );

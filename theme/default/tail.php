@@ -10,7 +10,7 @@
 <div id="ft">
     <?php echo popular('basic'); // 인기검색어  ?>
     <?php echo visit('basic'); // 방문자수  ?>
-    <div id="ft_catch"><?=__FILE__?></div>
+    
     <div id="ft_copy">
         <p>
             Copyright &copy; <b>소유하신 도메인.</b> All rights reserved.<br>
