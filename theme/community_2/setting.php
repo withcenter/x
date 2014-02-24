@@ -1,7 +1,7 @@
 <table cellpadding=10px width='100%' class='image-config'>
 	</tr>	
 		<tr>
-		<td colspan=3 align='center'><div class='title'>LOGO AND BANNERS<div></th>
+		<th colspan=3 align='center'><div class='title'>LOGO AND BANNERS<div></th>
 	</tr>
 	<tr valign='top' align='center'>
 		<td>
@@ -41,7 +41,7 @@
 		</td>
 	</tr>
 </table>
-
+<div class='title'>FORUM MENUS</div>
 <div class="select-box-left">
 	<div class='title-small'> Three Forum Menu on Top ( Beside Search ) </div>
 <? for ( $i = 1; $i <= 3; $i++ ) { ?>
@@ -73,6 +73,8 @@
 		<input class='hidden-value' type='hidden' name='forum_top_no_<?=$i?>' value='<?=ms::meta('forum_top_no_'.$i)?>' />
 	</div>
 <? } ?>
+</div>
+<div class="select-box-left">
 	<div class='title-small'> QnA Forum </div>
 	<div>
 		<span class='select-wrapper'><span class='inner'>
