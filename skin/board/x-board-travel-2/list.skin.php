@@ -45,13 +45,10 @@ foreach( $list as $l ){
 		else $no_padding = ndivl;
         ?>
 			<tr class = 'travel_posts' valign='top'>					
-				<td width ='148px' class = '<?=$no_padding?>'>
-					<a href ='<?=$list[$i]['href']?>'>
-						<div class='post-image'><img src = '<?=$images[$i]['src']?>' /></div>
-					</a>
+				<td width ='148px' class = '<?=$no_padding?>'>					
+					<div class='post-image'><a href ='<?=$list[$i]['href']?>'><img src = '<?=$images[$i]['src']?>' /></a></div>					
 				</td>
 				<td class = '<?=$no_padding?>'>
-					<a href ='<?=$list[$i]['href']?>'>
 						<div class='text-info'>
 							<?
 								$post_subject = conv_subject($list[$i]['wr_subject'],20,"...");
@@ -62,13 +59,12 @@ foreach( $list as $l ){
 								if( $post_sub_title == '' ) $post_sub_title = 'No Subtitle';
 								if( $post_availability == '' ) $post_availability = 'No Availability Inputted';
 							?>
-							<div class='post-subject'><?=$post_subject?></div>
-							<div class='post-sub-title'><?=$post_sub_title?></div>
-							<div class='post-content'><?=$post_content?></div>
-							<div class='post-availability'><?=$post_availability?></div>
-							<img src ='<?=$board_skin_url?>/img/arrow.png'/>						
+							<div class='post-subject'><a href ='<?=$list[$i]['href']?>'><?=$post_subject?></a></div>
+							<div class='post-sub-title'><a href ='<?=$list[$i]['href']?>'><?=$post_sub_title?></a></div>
+							<div class='post-content'><a href ='<?=$list[$i]['href']?>'><?=$post_content?></a></div>
+							<div class='post-availability'><a href ='<?=$list[$i]['href']?>'><?=$post_availability?></a></div>
+							<a href ='<?=$list[$i]['href']?>'><img src ='<?=$board_skin_url?>/img/arrow.png'/></a>					
 						</div>
-					</a>
 				</td>					
 			</tr>
 				
