@@ -61,10 +61,10 @@
 	</script>
 <div class='main-menu'><div class='inner'>
 	<a href='<?=g::url()?>/?page=intro'>회사소개</a>
-	<a href='<?=g::url()?>/?page=application'>가맹사모집</a>
-	<a href='<?=g::url()?>/?page=outsouring'>강사아웃소싱</a>
-	<a href='<?=g::url()?>/?page=opensource'>오픈소스</a>
-	<a href='<?=g::url()?>/bbs/board.php?bo_table=withcenter1'>자유토론</a>
+	<a href='<?=G5_BBS_URL?>/board.php?bo_table=withcenter2'>가맹사모집</a>
+	<a href='<?=G5_BBS_URL?>/board.php?bo_table=withcenter3'>강사아웃소싱</a>
+	<a href='<?=G5_BBS_URL?>/board.php?bo_table=withcenter4'>오픈소스</a>
+	<a href='<?=G5_BBS_URL?>/board.php?bo_table=withcenter1'>자유토론</a>
 </div></div> 
 
 <div class='layout'>
