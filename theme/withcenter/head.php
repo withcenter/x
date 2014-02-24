@@ -26,7 +26,7 @@
 		
 		<div class='right-top-menu'>
 			<a href='<?=G5_BBS_URL?>/board.php?bo_table=withcenter_solution'>솔류션</a>
-			<a href='<?=G5_BBS_URL?>/board.php?bo_table=withcenter6'>강사아웃소싱</a>
+			<a href='<?=G5_BBS_URL?>/board.php?bo_table=withcenter3'>강사아웃소싱</a>
 			<a href='<?=G5_BBS_URL?>/board.php?bo_table=withcenter5'>가맹사모집</a>
 		</div>
 		<div style='clear:right;'></div>
