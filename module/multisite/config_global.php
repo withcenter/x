@@ -100,11 +100,13 @@
 		
 
 		
+		<?if ( !ms::meta('theme') == 'community_2' ) { ?>
 		<div class='title-bottom'>추가 설정</div>
 		<div><span class='title-small'>사이드 바 위치:</span>
 			<input type="radio" name="theme_sidebar" value="left"  <?if(!ms::meta('theme_sidebar') || ms::meta('theme_sidebar') == 'left') echo "checked"?>><span class='radio-left'>왼쪽</span> 
 			<input type="radio" name="theme_sidebar" value="right" <?if(ms::meta('theme_sidebar') =='right') echo "checked"?>><span class='radio-right'>오른쪽</span>
 		</div>
+		<? } ?>
 		
 		
 		<? if ( ms::meta('theme') ) { ?>
