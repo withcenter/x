@@ -96,6 +96,13 @@
 			else echo "<div class='notice'>NO POST AVAILABLE FOR WRITE TABLE ".$latest_bo_table."</div>";
 			
 			include "visitor_stats.php";
+			
+			$old_table = $board['bo_table'];			
+			$latest_bo_table = ms::board_id(etc::domain()).'_3';
+			$board['bo_table'] = $latest_bo_table;
+			if ( g::forum_exist($latest_bo_table) ) echo latest("x-latest-post-travel-3", $latest_bo_table, 1, 20);
+			else echo "<div class='notice'>NO POST AVAILABLE FOR WRITE TABLE ".$latest_bo_table."</div>";
+			$board['bo_table'] = $old_table;
 		?>
 
 	<div class='sidebar-thumb'>
@@ -145,7 +152,8 @@
 					for( $ctr = 1; $ctr <= $num_of_thumbnails; $ctr++ ){
 						if( $ctr % 3 == 0 ) $nomargin = 'no-margin';
 						else $nomargin = '';
-						if( $ctr >= $num_of_thumbnails/3*3 ) $nomargin_bottom = 'no-margin-bottom';						
+						
+						if( $ctr >= intval(($num_of_thumbnails-1)/3)*3 ) $nomargin_bottom = 'no-margin-bottom';						
 						$img = "<a href = '".$links[$ctr-1]."'><img src ='".$images2_link[$ctr-1]."'/></a>";
 						$img_thumbnail = "<div class='sidebar-img-wrapper $nomargin $nomargin_bottom'>".$img."</div>";
 						echo $img_thumbnail;

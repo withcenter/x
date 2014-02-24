@@ -21,8 +21,8 @@
 		<table cellpadding=0 cellspacing=0 width='100%'>
 			<tr valign='top'>
 				<td width='33%' class='latest_1'><?=latest('x-latest-withcenter','withcenter4', 6, 60, 1, x::url_theme().'/img/icon1.gif')?></td>
-				<td width='34%' class='latest_2'><?=latest('x-latest-withcenter','withcenter5', 6, 60, 1, x::url_theme().'/img/icon3.gif')?></td>
-				<td width='33%' class='latest_3'><?=latest('x-latest-withcenter','withcenter6', 6, 60, 1, x::url_theme().'/img/icon3.gif')?></td>
+				<td width='34%' class='latest_2'><?=latest('x-latest-withcenter','withcenter_solution', 6, 60, 1, x::url_theme().'/img/icon3.gif')?></td>
+				<td width='33%' class='latest_3'><?=latest('x-latest-withcenter','withcenter_qna', 6, 60, 1, x::url_theme().'/img/icon3.gif')?></td>
 			</tr>
 		</table>
 		

@@ -54,17 +54,10 @@
 <div class='middle-panel'>
 <?
 $latest_bo_table = ms::board_id(etc::domain()).'_1';
-if ( g::forum_exist($latest_bo_table) ){
-?>
-	<div class='travel-stories'>
-		<h2>Travel Stories</h2>
-		<?	
-			
-			echo latest("x-latest-travel-stories",  $latest_bo_table, 3, 20);
-		?>
-	</div>
-<?}?>
-<?
+if ( g::forum_exist($latest_bo_table) ){		
+	echo latest("x-latest-travel-stories",  $latest_bo_table, 3, 20);
+}
+
 $qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";
 $current_date = date('Y-m-d').' 23:59:59';
 $previous_date = date('Y-m-d', strtotime("-7 day", strtotime($current_date))).' 00:00:00';

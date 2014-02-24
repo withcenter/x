@@ -43,11 +43,18 @@ foreach( $list as $l ){
         for ($i=0; $i<count($list); $i+=3) {		
         ?>
 			<tr valign='top'>
-				<td width='243px'>
-					<a href ='<?=$list[$i]['href']?>'>
+				<td width='33%'>					
 						<div class='travel_posts'>
-						<div class='post-image'><img src = '<?=$images[$i]['src']?>' /></div>
-						<div class='post-subject'><?=conv_subject($list[$i]['wr_subject'],10,"...")?><span class='view-guide'>VIEW GUIDE</span></div>
+						<div class='post-image'>
+							<a href ='<?=$list[$i]['href']?>'>
+								<img src = '<?=$images[$i]['src']?>' />
+							</a>
+						</div>
+						<div class='post-subject'>
+							<a href ='<?=$list[$i]['href']?>'>
+								<?=conv_subject($list[$i]['wr_subject'],10,"...")?><span class='view-guide'>VIEW GUIDE</span>
+							</a>
+						</div>
 						<div class='user-review'>User Review (<?=$list[$i]['wr_comment']?>)
 							<div class='stars'>
 								<img src='<?=$board_skin_url?>/img/star.png'/>
@@ -57,16 +64,26 @@ foreach( $list as $l ){
 								<img src='<?=$board_skin_url?>/img/star.png'/>
 							</div>
 						</div>
-						<div class='post-content'><?=cut_str(strip_tags($list[$i]['wr_content']),200,"...")?></div>
+						<div class='post-content'>
+							<a href ='<?=$list[$i]['href']?>'>
+								<?=cut_str(strip_tags($list[$i]['wr_content']),200,"...")?>
+							</a>
 						</div>
-					</a>
-				</td width='243px'>
+						</div>
+				</td>
 				<?if ($list[$i+1]){?>
 				<td>
-					<a href ='<?=$list[$i+1]['href']?>'>
-						<div class='travel_posts'>
-						<div class='post-image'><img src = '<?=$images[$i+1]['src']?>' /></div>
-						<div class='post-subject'><?=conv_subject($list[$i+1]['wr_subject'],10,"...")?><span class='view-guide'>VIEW GUIDE</span></div>
+					<div class='travel_posts'>
+						<div class='post-image'>
+							<a href ='<?=$list[$i+1]['href']?>'>
+								<img src = '<?=$images[$i+1]['src']?>' />
+							</a>
+						</div>
+						<div class='post-subject'>
+							<a href ='<?=$list[$i+1]['href']?>'>
+								<?=conv_subject($list[$i+1]['wr_subject'],10,"...")?><span class='view-guide'>VIEW GUIDE</span>
+							</a>
+						</div>
 						<div class='user-review'>User Review (<?=$list[$i+1]['wr_comment']?>)
 							<div class='stars'>
 								<img src='<?=$board_skin_url?>/img/star.png'/>
@@ -76,17 +93,27 @@ foreach( $list as $l ){
 								<img src='<?=$board_skin_url?>/img/star.png'/>
 							</div>
 						</div>
-						<div class='post-content'><?=cut_str(strip_tags($list[$i+1]['wr_content']),200,"...")?></div>
+						<div class='post-content'>
+							<a href ='<?=$list[$i+1]['href']?>'>
+								<?=cut_str(strip_tags($list[$i+1]['wr_content']),200,"...")?>
+							</a>
 						</div>
-					</a>
+					</div>
 				</td>
 				<?}?>
 				<?if ($list[$i+2]){?>
-				<td width='243px'>
-					<a href ='<?=$list[$i+2]['href']?>'>
-						<div class='travel_posts no-margin'>
-						<div class='post-image'><img src = '<?=$images[$i+2]['src']?>' /></div>
-						<div class='post-subject'><?=conv_subject($list[$i+2]['wr_subject'],10,"...")?><span class='view-guide'>VIEW GUIDE</span></div>
+				<td>
+					<div class='travel_posts'>
+						<div class='post-image'>
+							<a href ='<?=$list[$i+2]['href']?>'>
+								<img src = '<?=$images[$i+2]['src']?>' />
+							</a>
+						</div>
+						<div class='post-subject'>
+							<a href ='<?=$list[$i+2]['href']?>'>
+								<?=conv_subject($list[$i+2]['wr_subject'],10,"...")?><span class='view-guide'>VIEW GUIDE</span>
+							</a>
+						</div>
 						<div class='user-review'>User Review (<?=$list[$i+2]['wr_comment']?>)
 							<div class='stars'>
 								<img src='<?=$board_skin_url?>/img/star.png'/>
@@ -96,9 +123,12 @@ foreach( $list as $l ){
 								<img src='<?=$board_skin_url?>/img/star.png'/>
 							</div>
 						</div>
-						<div class='post-content'><?=cut_str(strip_tags($list[$i+2]['wr_content']),200,"...")?></div>
+						<div class='post-content'>
+							<a href ='<?=$list[$i+2]['href']?>'>
+								<?=cut_str(strip_tags($list[$i+2]['wr_content']),200,"...")?>
+							</a>
 						</div>
-					</a>
+					</div>
 				</td>
 				<?}?>
 			</tr>
