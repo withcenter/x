@@ -4,17 +4,16 @@
 <!-- 상단 시작 { -->
 <div id="travel-theme-1-hd">
     <h1 id="hd_h1"><?php echo $g5['title'] ?></h1>
-
-    <div id="skip_to_container"><a href="#container">본문 바로가기</a></div>
-
+	
     <div id="travel-hd-wrapper">
 		<div id="top-menu">
 			<div class='inner'>
-				<span class ='top-menu-item login'><a href='#'>LOG IN</a></span>
+				<span class ='top-menu-item login'><a href='javascript:void(0)'>로그인</a></span>
 				<div id ='pop-up-login'><?php echo outlogin('x-outlogin-travel-pop-up');?></div>
-				<span class ='top-menu-item register'><a href='<?=G5_URL?>/<?=G5_BBS_DIR?>/register.php'>SIGN UP</a></span>
-				<span class ='top-menu-item customer-service'><a href='#'>CUSTOMER SERVICE</a></span>
+				<span class ='top-menu-item register'><a href='<?=G5_URL?>/<?=G5_BBS_DIR?>/register.php'>회원가입</a></span>
+				<? /*
 				<div class='customer-support'><img src='<?=x::url_theme()?>/img/phone.png'/>CUSTOMER SUPPORT: 123-45-67</div>
+				*/ ?> 
 			</div>
 		</div>
 		
@@ -35,8 +34,8 @@
 						<input type="hidden" name="sfl" value="wr_subject||wr_content">
 						<input type="hidden" name="sop" value="and">
 						<label for="sch_stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
-						<input type="text" name="stx" id="sch_stx" maxlength="20" placeholder='Quick Search'>
-						<input type="submit" id="sch_submit" value="Go!">
+						<input type="text" name="stx" id="sch_stx" maxlength="20" placeholder='검색어를 입력해 주세요'>
+						<input type="submit" id="sch_submit" value="검색">
 						</form>
 
 						<script>
@@ -89,11 +88,9 @@
 		<?
 			$latest_bo_table = ms::board_id(etc::domain()).'_1';
 			if ( g::forum_exist($latest_bo_table) ) echo latest("x-latest-post-travel", $latest_bo_table, 3, 20);
-			else echo "<div class='notice'>NO POST AVAILABLE FOR WRITE TABLE ".$latest_bo_table."</div>";
 			
 			$latest_bo_table = ms::board_id(etc::domain()).'_2';
 			if ( g::forum_exist($latest_bo_table) ) echo latest("x-latest-post-travel-2", $latest_bo_table, 3, 20);
-			else echo "<div class='notice'>NO POST AVAILABLE FOR WRITE TABLE ".$latest_bo_table."</div>";
 			
 			include "visitor_stats.php";
 			
@@ -101,22 +98,23 @@
 			$latest_bo_table = ms::board_id(etc::domain()).'_3';
 			$board['bo_table'] = $latest_bo_table;
 			if ( g::forum_exist($latest_bo_table) ) echo latest("x-latest-post-travel-3", $latest_bo_table, 1, 20);
-			else echo "<div class='notice'>NO POST AVAILABLE FOR WRITE TABLE ".$latest_bo_table."</div>";
 			$board['bo_table'] = $old_table;
-		?>
-
-	<div class='sidebar-thumb'>
-		<div class='thumb-container'>
-			<?php
-				$old_board = $board['bo_table'];
-				$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";
-				$current_date = date('Y-m-d').' 23:59:59';
-				$previous_date = date('Y-m-d', strtotime("-7 day", strtotime($current_date))).' 00:00:00';
-				$rows = db::rows( "SELECT bo_table, wr_id FROM $g5[board_new_table] WHERE $qb AND bn_datetime BETWEEN '$previous_date' AND '$current_date' ORDER BY bn_datetime DESC" );									
+	
+	// sitebar-thumb 
+		$old_board = $board['bo_table'];
+		$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";
+		$current_date = date('Y-m-d').' 23:59:59';
+		$previous_date = date('Y-m-d', strtotime("-7 day", strtotime($current_date))).' 00:00:00';
+		$rows = db::rows( "SELECT bo_table, wr_id FROM $g5[board_new_table] WHERE $qb AND bn_datetime BETWEEN '$previous_date' AND '$current_date' ORDER BY bn_datetime DESC" );									
 				
-				$table_suffix = ms::board_id(etc::domain());
+		$table_suffix = ms::board_id(etc::domain());
+		
+	if ( $rows ) {?>
+	<div class='sidebar-thumb'>
+		<div class='thumb-container'>	
+			<?php
 
-				if( !empty( $rows ) ) {
+				if( $rows ) {
 					foreach ( $rows as $row ) {	
 						$board['bo_table'] = $row['bo_table'];
 						$images2[] = get_file($board['bo_table'],$row['wr_id']);
@@ -161,15 +159,11 @@
 
 				}				
 				$board['bo_table'] = $old_board;
-
-				if( empty($rows) ){
-						echo "Gallery is empty";
-					}
 			?>
 			<div style='clear:both;'></div>
 		</div>
 		</div>	
-		<??>
+		<?}?>
     </div>
     <div id="container">
 		<?if ( preg_match('/^config/', $action) ) include ms::site_menu();?>

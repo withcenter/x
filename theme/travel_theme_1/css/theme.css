@@ -1,8 +1,10 @@
 #travel-theme-1-hd{
-	font-family:arial;
+	font-family: '맑은 고딕', AppleGothic;
 	margin-bottom:10px;
 }
-
+#travel-theme-1-hd a {
+	font-family: '맑은 고딕', AppleGothic;
+}
 /** header */
 
 #logo {
@@ -49,8 +51,7 @@
 }
 
 #container .no-banner {
-	font-size:100px;	
-	margin:100px 0 0 35px;	
+	
 }
 
 
@@ -308,26 +309,22 @@
 
 /**PLACE HOLDER*****/
 #hd_sch ::-webkit-input-placeholder {
-	font-style:italic;
-	font-family:arial;
+	font-family:'맑은 고딕', AppleGothic;
 	color:#b0b0b0;		
 }
 
 #hd_sch :-moz-placeholder { /* Firefox 18- */
-	font-style:italic;
-	font-family:arial;
+	font-family:'맑은 고딕', AppleGothic;
 	color:#b0b0b0; 	
 }
 
 #hd_sch ::-moz-placeholder {  /* Firefox 19+ */
-	font-style:italic;
-	font-family:arial;
+	font-family:'맑은 고딕', AppleGothic;
 	color:#b0b0b0; 
 }
 
 #hd_sch :-ms-input-placeholder {  
-	font-style:italic;
-	font-family:arial;
+	font-family:'맑은 고딕', AppleGothic;
 	color:#b0b0b0; 
 }
 
