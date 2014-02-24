@@ -54,4 +54,11 @@
 	margin: 0 0 0 0.5em;
 }
 
-
+.travel-stories .title {
+	border-bottom: 1px solid #a9a9a9;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #1a1a1a;
+	font-family: '맑은 고딕', AppleGothic;
+	padding-bottom: 8px;
+}

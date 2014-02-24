@@ -423,6 +423,7 @@
 	padding:1px;
 	word-break:break-all;
 	margin-bottom:10px;
+	font-family: '맑은 고딕', AppleGOthic;
 }
 
 #visitor_stats .inner{
@@ -444,8 +445,10 @@
 #visitor_stats .inner .head .title{
 	margin-left:20px;
 	border-bottom:1px solid #a9a9a9;
-	color:#1a1a1a;
 	padding-bottom:5px;
+	font-size: 10pt;
+	font-weight: bold;
+	color:#5d5d5d;
 }
 
 #visitor_stats .inner .sort-list .sort-by{
@@ -501,3 +504,12 @@
 	display:block;
 }
 
+
+.photo-gallery > .title {
+	border-bottom: 1px solid #a9a9a9;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #1a1a1a;
+	font-family: '맑은 고딕', AppleGothic;
+	padding-bottom: 8px;
+}

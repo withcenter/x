@@ -24,7 +24,6 @@
 
 .travel-package .travel-title {
 	margin: 0.25em 0 0 0;
-	text-align: center;
 	font-size: 11pt;
 	font-weight: bold;
 	color: #5d5d5d;
@@ -47,8 +46,8 @@
 }
 
 .travel-package .travel-content {
-	margin: 0.25em 0 0 0;
-	color: #979797;
+	margin: 10px 0 0 0;
+	color: #919191;
 	height: 2.5em;
 	overflow: hidden;
 }
@@ -60,3 +59,11 @@
 	font-size: 10.5pt;
 }
 
+.bottom-panel .travel-packages .title {
+	border-bottom: 1px solid #a9a9a9;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #1a1a1a;
+	font-family: '맑은 고딕', AppleGothic;
+	padding-bottom: 8px;
+}

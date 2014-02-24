@@ -6,7 +6,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
 <div class='bottom-panel'>
 	<div class='travel-packages'>
-		<h2> Best Travel Packages </h2>
+		<div class='title'><?=$bo_subject?></div>
 <?php
 	$count = 1;
 	foreach( $list as $li ) {
@@ -46,10 +46,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 					<div class='travel-title'><a href='<?=$li['href']?>'><?=conv_subject( $li['wr_subject'], 40, '...' )?></a></div>
 					<div class='travel-content'><a href='<?=$li['href']?>'><?=cut_str(strip_tags( $li['wr_content']), 50, '...' )?></a></div>
 					<div class='travel-price'><a href='<?=$li['href']?>'>
-					<?
-						if ( !empty($li['wr_1']) ) echo $li['wr_1'];
-						else echo "<b>clone x-board-travel<br>to input price</b>";					
-					?>
+					<? if ( $li['wr_1'] ) echo $li['wr_1'];	?>
 					</a>
 					</div>
 				</div>

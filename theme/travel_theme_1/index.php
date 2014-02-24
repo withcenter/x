@@ -66,7 +66,7 @@ $rows = db::rows( "SELECT bo_table, wr_id FROM $g5[board_new_table] WHERE $qb AN
 if( $rows ){
 ?>
 	<div class='photo-gallery'>
-		<h2>여행 갤러리</h2>
+		<div class='title'>여행 갤러리</div>
 		<div class='thumb-container'>
 			<?php 												
 				$table_suffix = ms::board_id(etc::domain());

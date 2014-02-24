@@ -6,7 +6,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
 <?if ( !$list ) return;?>
 <div class='travel-stories'>
-<h2>여행 이야기</h2>
+	<div class='title'><?=$bo_subject?></div>
 <div class='stories-container'>
 <?php
 	foreach( $list as $li ) {
@@ -44,8 +44,8 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 						<td>
 						<?php
 							echo "<span class='travel-title'><a href='<?=$li[href]?>'>".conv_subject($li['wr_subject'],20,'...')."</a></span><br>";
-							echo "<span class='travel-meta'>posted by ".$li['mb_id']."<br>";
-							echo "on ".date('M d, Y',strtotime($li['wr_datetime']))."</span>";
+							echo "<span class='travel-meta'><b>작성자</b> ".$li['mb_id']."<br>";
+							echo "<b>등록일</b> ".date('Y.m.d',strtotime($li['wr_datetime']))."</span>";
 						?>
 						</td>
 					</tr>
