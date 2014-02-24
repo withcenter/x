@@ -22,19 +22,16 @@
 		<div class='top-posts-1'>
 		<?php $latest_bo_table = ms::meta('forum_no_1');
 			if ( g::forum_exist($latest_bo_table ) ) echo latest( 'x-latest-community-posts' , $latest_bo_table , 6, 25);
-			else echo "<div class='notice'>YOU MUST ADD FORUM NO. 1 ON ADMIN PAGE</div>";
 		?>
 		</div>
 		<div class='top-posts-2'>
 		<?php $latest_bo_table = ms::meta('forum_no_2');
 			if ( g::forum_exist($latest_bo_table ) ) echo latest( 'x-latest-community-posts' , $latest_bo_table , 6, 25);
-			else echo "<div class='notice'>YOU MUST ADD FORUM NO. 2 ON ADMIN PAGE</div>";
 		?>
 		</div>
 		<div class='top-posts-3'>
 		<?php $latest_bo_table = ms::meta('forum_no_3');
 			if ( g::forum_exist($latest_bo_table ) ) echo latest( 'x-latest-community-posts-images' , ms::board_id(etc::domain()).'_3' , 4, 25);
-			else echo "<div class='notice'>YOU MUST ADD FORUM NO. 3 ON ADMIN PAGE</div>";
 		?>
 		</div>
 	</div>
@@ -42,58 +39,42 @@
 
 <div class='middle-panel'>
 	<div class='middle-banner'>
-		<?if( ms::meta('combanner_middle') ) $middle_banner = ms::meta('img_url').ms::meta('combanner_middle');
-		 else $middle_banner = x::url_theme().'/img/no-image-750w-140h.png';?>
-		 <img src='<?=$middle_banner?>'>
+		<?if( ms::meta('combanner_middle') ) ?><img src='<?=ms::meta('img_url').ms::meta('combanner_middle')?>'>
 	</div>
 	<div class='middle-posts'>
 		<div class='middle-posts-1'>
 		<?php $latest_bo_table = ms::meta('forum_no_4');
-			if ( g::forum_exist($latest_bo_table ) ) echo latest( 'x-latest-community-posts' , $latest_bo_table , 6, 25);
-			else echo "<div class='notice'>YOU MUST ADD FORUM NO. 4 ON ADMIN PAGE</div>";
-		?>	
+			if ( g::forum_exist($latest_bo_table ) ) echo latest( 'x-latest-community-posts' , $latest_bo_table , 6, 25);?>	
 		</div>
 		<div class='middle-posts-2'>
 		<?php $latest_bo_table = ms::meta('forum_no_5');
-			if ( g::forum_exist($latest_bo_table ) ) echo latest( 'x-latest-community-posts' , $latest_bo_table , 6, 25);
-			else echo "<div class='notice'>YOU MUST ADD FORUM NO. 5 ON ADMIN PAGE</div>";
-		?>
+			if ( g::forum_exist($latest_bo_table ) ) echo latest( 'x-latest-community-posts' , $latest_bo_table , 6, 25);?>
 		</div>
 		<div class='middle-posts-3'>
 		<?php
 			$latest_bo_table = ms::meta('forum_no_6');
-			if ( g::forum_exist($latest_bo_table ) ) echo latest( 'x-latest-community-posts-images' , $latest_bo_table , 4, 25);
-			else echo "<div class='notice'>YOU MUST ADD FORUM NO. 6 ON ADMIN PAGE</div>";
-		?>
+			if ( g::forum_exist($latest_bo_table ) ) echo latest( 'x-latest-community-posts-images' , $latest_bo_table , 4, 25);?>
 		</div>
 	</div>
 </div>
 
 <div class='bottom-panel'>
 	<div class='bottom-banner'>
-		<?if( ms::meta('combanner_bottom') ) $bottom_banner = ms::meta('img_url').ms::meta('combanner_bottom');
-		 else $bottom_banner = x::url_theme().'/img/no-image-750w-140h.png';?>
-		 <img src='<?=$bottom_banner?>'>
+		<?if( ms::meta('combanner_bottom') ) ?><img src='<?=ms::meta('img_url').ms::meta('combanner_bottom')?>'>
 	</div>
 	<div class='bottom-posts'>
 		<div class='bottom-posts-1'>
 		<?php $latest_bo_table = ms::meta('forum_no_7');
-			if ( g::forum_exist($latest_bo_table ) ) echo latest( 'x-latest-community-posts' , $latest_bo_table , 6, 25);
-			else echo "<div class='notice'>YOU MUST ADD FORUM NO. 7 ON ADMIN PAGE</div>";
-		?>
+			if ( g::forum_exist($latest_bo_table ) ) echo latest( 'x-latest-community-posts' , $latest_bo_table , 6, 25);?>
 		</div>
 		<div class='bottom-posts-2'>
 		<?php $latest_bo_table = ms::meta('forum_no_8');
-			if ( g::forum_exist($latest_bo_table ) ) echo latest( 'x-latest-community-posts' , $latest_bo_table , 6, 25);
-			else echo "<div class='notice'>YOU MUST ADD FORUM NO. 8 ON ADMIN PAGE</div>";
-		?>
+			if ( g::forum_exist($latest_bo_table ) ) echo latest( 'x-latest-community-posts' , $latest_bo_table , 6, 25);?>
 		</div>
 		<div class='bottom-posts-3'>
 		<?php
 			$latest_bo_table = ms::meta('forum_no_9');
-			if ( g::forum_exist($latest_bo_table) ) echo latest( 'x-latest-community-posts-images' , $latest_bo_table , 4, 25);
-			else echo "<div class='notice'>YOU MUST ADD FORUM NO. 9 ON ADMIN PAGE</div>";
-		?>
+			if ( g::forum_exist($latest_bo_table) ) echo latest( 'x-latest-community-posts-images' , $latest_bo_table , 4, 25);?>
 		</div>
 	</div>
 </div>

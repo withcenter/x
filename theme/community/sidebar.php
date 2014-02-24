@@ -1,9 +1,7 @@
 <?=outlogin('x-outlogin-community') ?>	
 
 <div class='company-banner'>
-	<?if( ms::meta('companybanner_1') ) $company_banner = ms::meta('img_url').ms::meta('companybanner_1');
-	else $company_banner = x::url_theme().'/img/community_company_banner.png';?>
-	<img src="<?=$company_banner?>">
+	<?if( ms::meta('companybanner_1') ) ?> <img src="<?=ms::meta('img_url').ms::meta('companybanner_1')?>">
 </div>
 
 <?=latest( 'x-latest-community-comments' , ms::board_id(etc::domain()).'_1' , 5, 25)?>
@@ -62,7 +60,7 @@ if( $recent_rows ) {
 		</ul>
 	</div>
 </div> <!--posts--recent-->
-<? } else echo "<div class='notice'>MUST HAVE AT LEAST ONE POST FROM ANY FORUM</div>";?>
+<? } ?>
 
 
 	
@@ -142,7 +140,7 @@ if( $recent_comments ) {
 
 	</div>
 </div> <!--posts--recent-->
-<? } else echo "<div class='notice'>MUST HAVE AT LEAST ONE COMMENT FROM ANY FORUM POST</div>";?>
+<? } ?>
 
 <div class='sidebar-banner'>
 	<?if( !$sidebar_banner_title = ms::meta('combanner_sidebar_text1') ) $sidebar_banner_title = 'SIDEBAR BANNER TITLE' ?>

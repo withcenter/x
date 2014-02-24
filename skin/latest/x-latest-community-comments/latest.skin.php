@@ -3,7 +3,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 ?>
 
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
-
+<? if( $list ) { ?>
 <div class="my-posts" >
 		<div class='title'>
 			<table width='100%'>
@@ -43,4 +43,5 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		</ul>
 	</div>
 </div>
+<? } ?>
 
