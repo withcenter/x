@@ -75,13 +75,13 @@
 
 	$option = array(
 					'bo_table'=>'application',
-					'mb_name'=>$application,
-					'mb_email'=>$email,
 					'wr_1'=>$landline,
 					'wr_2'=>$email,
 					'wr_3'=>$address,
 					'wr_4'=>$job,
 					'wr_5'=>$begin_date,
+					'wr_6'=>$applicant,
+					'wr_7'=>$mobile,
 					'wr_subject'=>$subject,
 					'wr_content'=>$experience
 					

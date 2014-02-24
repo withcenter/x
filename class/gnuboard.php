@@ -360,6 +360,8 @@ class gnuboard {
 		if ( $o['wr_3'] ) $wr_3 = $o['wr_3'];
 		if ( $o['wr_4'] ) $wr_4 = $o['wr_4'];
 		if ( $o['wr_5'] ) $wr_5 = $o['wr_5'];
+		if ( $o['wr_6'] ) $wr_6 = $o['wr_6'];
+		if ( $o['wr_7'] ) $wr_7 = $o['wr_7'];
 		
 		$write_table	= g::write_table( $o['bo_table'] );
 		$wr_num			= get_next_num($write_table);
