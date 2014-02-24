@@ -97,9 +97,9 @@
 			
 			include "visitor_stats.php";
 			
-			$old_table = $board['bo_table'];
-			$board['bo_table'] = ms::board_id(etc::domain()).'_3';
+			$old_table = $board['bo_table'];			
 			$latest_bo_table = ms::board_id(etc::domain()).'_3';
+			$board['bo_table'] = $latest_bo_table;
 			if ( g::forum_exist($latest_bo_table) ) echo latest("x-latest-post-travel-3", $latest_bo_table, 1, 20);
 			else echo "<div class='notice'>NO POST AVAILABLE FOR WRITE TABLE ".$latest_bo_table."</div>";
 			$board['bo_table'] = $old_table;
