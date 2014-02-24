@@ -96,6 +96,13 @@
 			else echo "<div class='notice'>NO POST AVAILABLE FOR WRITE TABLE ".$latest_bo_table."</div>";
 			
 			include "visitor_stats.php";
+			
+			$old_table = $board['bo_table'];
+			$board['bo_table'] = ms::board_id(etc::domain()).'_3';
+			$latest_bo_table = ms::board_id(etc::domain()).'_3';
+			if ( g::forum_exist($latest_bo_table) ) echo latest("x-latest-post-travel-3", $latest_bo_table, 1, 20);
+			else echo "<div class='notice'>NO POST AVAILABLE FOR WRITE TABLE ".$latest_bo_table."</div>";
+			$board['bo_table'] = $old_table;
 		?>
 
 	<div class='sidebar-thumb'>
