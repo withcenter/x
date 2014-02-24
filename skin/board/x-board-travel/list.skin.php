@@ -32,10 +32,12 @@ foreach( $list as $l ){
 		<span>Total <?php echo number_format($total_count) ?>건</span>
 		<?php echo $page ?> 페이지
 	</div>
-		<div class="travel-write">
-			<?php if ($list_href) { ?><a href="<?php echo $list_href ?>" class="btn_b01">목록</a><?php } ?>
-			<?php if ($write_href) { ?><a href="<?php echo $write_href ?>" class="btn_b02">글쓰기</a><?php } ?>
-		</div>
+		<?if( ms::admin() ){?>
+			<div class="travel-write">		
+				<?php if ($list_href) { ?><a href="<?php echo $list_href ?>" class="btn_b01">목록</a><?php } ?>
+				<?php if ($write_href) { ?><a href="<?php echo $write_href ?>" class="btn_b02">글쓰기</a><?php } ?>		
+			</div>
+		<?}?>
         <table width='750px;' cellpadding=0 cellspacing=0>        
         <?php
         for ($i=0; $i<count($list); $i+=3) {		
@@ -103,6 +105,7 @@ foreach( $list as $l ){
         <?php } ?>
         <?php if (count($list) == 0) { echo '<tr><td colspan="'.$colspan.'" class="empty_table">게시물이 없습니다.</td></tr>'; } ?>        
         </table>
+		<?if( ms::admin() ){?>
 			<?php if ($list_href || $is_checkbox || $write_href) { ?>
 			<div class="lower-buttons">
 				<?php if ($is_checkbox) { ?>
@@ -112,16 +115,17 @@ foreach( $list as $l ){
 					<input type="submit" name="btn_submit" value="선택이동" onclick="document.pressed=this.value">
 				</div>
 				<?php } ?>
-
+				
 				<?php if ($list_href || $write_href) { ?>
 				<div class="btn_bo_user">
 					<?php if ($list_href) { ?><a href="<?php echo $list_href ?>" class="btn_b01">목록</a><?php } ?>
 					<?php if ($write_href) { ?><a href="<?php echo $write_href ?>" class="btn_b02">글쓰기</a><?php } ?>
 				</div>
-				<?php } ?>
+				<?php } ?>				
 			</div>
 			<div style='clear:both;'></div>
-    <?php } ?>
+			<?php } ?>
+		<?}?>
 	</form>
     </div>
 	<?php echo $write_pages;  ?>
