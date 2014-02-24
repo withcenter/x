@@ -136,39 +136,41 @@ $latest_bo_table = ms::meta('forum_no_1');
 if ( g::forum_exist( $latest_bo_table ) ) {
 $post_comments = db::rows("SELECT * FROM $g5[write_prefix]$latest_bo_table WHERE wr_is_comment=1 LIMIT 5" );
 $board_title  = db::result("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='$latest_bo_table'");
-?>
-<div class="posts-recent" >
-		<div class='title'>
-			<table width='100%'>
-				<tr valign='top'>
-					<td align='left' class='title-left'>
-						<div><img src="<?=x::url_theme()?>/img/recent-posts.png"></div>
-						<div class='label'><?=$board_title?>, Comments</div>
-					</td>
-					<td align='right'>
-						<div class='posts-more'><a href='<?g::url()?>/bbs/board.php?bo_table=<?=$latest_bo_table?>'>more <img src="<?=x::url_theme()?>/img/more-icon.png"></a></div>
-					</td>
-				</tr>
-			</table>
+
+if( $post_comments ) {
+	?>
+	<div class="posts-recent" >
+			<div class='title'>
+				<table width='100%'>
+					<tr valign='top'>
+						<td align='left' class='title-left'>
+							<div><img src="<?=x::url_theme()?>/img/recent-posts.png"></div>
+							<div class='label'><?=$board_title?>, Comments</div>
+						</td>
+						<td align='right'>
+							<div class='posts-more'><a href='<?g::url()?>/bbs/board.php?bo_table=<?=$latest_bo_table?>'>more <img src="<?=x::url_theme()?>/img/more-icon.png"></a></div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		<div class='recent-comments-items'>
+			<ul>
+		<?php
+			$i = 1;
+			$no_of_comments = count($post_comments);
+			foreach ( $post_comments as $post_comment ) {
+				$comment_content = cut_str($post_comment['wr_content'],30,'...');
+				$comment_url = g::url().'/bbs/board.php?bo_table='.$latest_bo_table.'&wr_id='.$post_comment['wr_id'];
+				$timeago = getTimeDuration(strtotime($post_comment['wr_datetime'])); ?>	
+				<li <?if($i==$no_of_comments) echo "class='last-comment'" ?>>
+					<a href='<?=$comment_url?>'>	
+						<?=$comment_content?>
+					</a>
+				</li>
+				<? $i++; }?>
+			</ul>
 		</div>
-	<div class='recent-comments-items'>
-		<ul>
-	<?php
-		$i = 1;
-		$no_of_comments = count($post_comments);
-		foreach ( $post_comments as $post_comment ) {
-			$comment_content = cut_str($post_comment['wr_content'],30,'...');
-			$comment_url = g::url().'/bbs/board.php?bo_table='.$latest_bo_table.'&wr_id='.$post_comment['wr_id'];
-			$timeago = getTimeDuration(strtotime($post_comment['wr_datetime'])); ?>	
-			<li <?if($i==$no_of_comments) echo "class='last-comment'" ?>>
-				<a href='<?=$comment_url?>'>	
-					<?=$comment_content?>
-				</a>
-			</li>
-			<? $i++; }?>
-		</ul>
-	</div>
-</div> <? } ?><!--posts--recent-->
+	</div> <? }} ?><!--posts--recent-->
 
 <?if( ms::meta('combanner_sidebar') ) { ?>
 <div class='sidebar-banner'>
