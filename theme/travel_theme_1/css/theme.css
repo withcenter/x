@@ -93,15 +93,23 @@
 	top: 0;
 	left: 0;
 	display:none;
+	width: 651px;
+	height: 350px;
 }
 
 #container .banner-image.selected {
 	display:block
 }
 
-#container .banner img {
-	width: 653px;
+#container .banner {
+	width: 651px;
 	height: 350px;
+	overflow:hidden;
+}
+
+#container .banner img {
+	width:100%;
+	
 }
 
 #container .banner p {
@@ -111,6 +119,7 @@
 	padding: 0 0 0.25em 0.5em;
 	color: #ffffff;
 	font-size: 33pt;
+	text-shadow:2px 2px #000000;
 }
 #container .top-panel > div {
 	display: inline-block;
