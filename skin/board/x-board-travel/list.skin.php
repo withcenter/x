@@ -32,20 +32,29 @@ foreach( $list as $l ){
 		<span>Total <?php echo number_format($total_count) ?>건</span>
 		<?php echo $page ?> 페이지
 	</div>
-		<div class="travel-write">
-			<?php if ($list_href) { ?><a href="<?php echo $list_href ?>" class="btn_b01">목록</a><?php } ?>
-			<?php if ($write_href) { ?><a href="<?php echo $write_href ?>" class="btn_b02">글쓰기</a><?php } ?>
-		</div>
+		<?if( ms::admin() ){?>
+			<div class="travel-write">		
+				<?php if ($list_href) { ?><a href="<?php echo $list_href ?>" class="btn_b01">목록</a><?php } ?>
+				<?php if ($write_href) { ?><a href="<?php echo $write_href ?>" class="btn_b02">글쓰기</a><?php } ?>		
+			</div>
+		<?}?>
         <table width='750px;' cellpadding=0 cellspacing=0>        
         <?php
         for ($i=0; $i<count($list); $i+=3) {		
         ?>
 			<tr valign='top'>
-				<td width='243px'>
-					<a href ='<?=$list[$i]['href']?>'>
+				<td width='33%'>					
 						<div class='travel_posts'>
-						<div class='post-image'><img src = '<?=$images[$i]['src']?>' /></div>
-						<div class='post-subject'><?=conv_subject($list[$i]['wr_subject'],10,"...")?><span class='view-guide'>VIEW GUIDE</span></div>
+						<div class='post-image'>
+							<a href ='<?=$list[$i]['href']?>'>
+								<img src = '<?=$images[$i]['src']?>' />
+							</a>
+						</div>
+						<div class='post-subject'>
+							<a href ='<?=$list[$i]['href']?>'>
+								<?=conv_subject($list[$i]['wr_subject'],10,"...")?><span class='view-guide'>VIEW GUIDE</span>
+							</a>
+						</div>
 						<div class='user-review'>User Review (<?=$list[$i]['wr_comment']?>)
 							<div class='stars'>
 								<img src='<?=$board_skin_url?>/img/star.png'/>
@@ -55,16 +64,26 @@ foreach( $list as $l ){
 								<img src='<?=$board_skin_url?>/img/star.png'/>
 							</div>
 						</div>
-						<div class='post-content'><?=cut_str(strip_tags($list[$i]['wr_content']),200,"...")?></div>
+						<div class='post-content'>
+							<a href ='<?=$list[$i]['href']?>'>
+								<?=cut_str(strip_tags($list[$i]['wr_content']),200,"...")?>
+							</a>
 						</div>
-					</a>
-				</td width='243px'>
+						</div>
+				</td>
 				<?if ($list[$i+1]){?>
 				<td>
-					<a href ='<?=$list[$i+1]['href']?>'>
-						<div class='travel_posts'>
-						<div class='post-image'><img src = '<?=$images[$i+1]['src']?>' /></div>
-						<div class='post-subject'><?=conv_subject($list[$i+1]['wr_subject'],10,"...")?><span class='view-guide'>VIEW GUIDE</span></div>
+					<div class='travel_posts'>
+						<div class='post-image'>
+							<a href ='<?=$list[$i+1]['href']?>'>
+								<img src = '<?=$images[$i+1]['src']?>' />
+							</a>
+						</div>
+						<div class='post-subject'>
+							<a href ='<?=$list[$i+1]['href']?>'>
+								<?=conv_subject($list[$i+1]['wr_subject'],10,"...")?><span class='view-guide'>VIEW GUIDE</span>
+							</a>
+						</div>
 						<div class='user-review'>User Review (<?=$list[$i+1]['wr_comment']?>)
 							<div class='stars'>
 								<img src='<?=$board_skin_url?>/img/star.png'/>
@@ -74,17 +93,27 @@ foreach( $list as $l ){
 								<img src='<?=$board_skin_url?>/img/star.png'/>
 							</div>
 						</div>
-						<div class='post-content'><?=cut_str(strip_tags($list[$i+1]['wr_content']),200,"...")?></div>
+						<div class='post-content'>
+							<a href ='<?=$list[$i+1]['href']?>'>
+								<?=cut_str(strip_tags($list[$i+1]['wr_content']),200,"...")?>
+							</a>
 						</div>
-					</a>
+					</div>
 				</td>
 				<?}?>
 				<?if ($list[$i+2]){?>
-				<td width='243px'>
-					<a href ='<?=$list[$i+2]['href']?>'>
-						<div class='travel_posts no-margin'>
-						<div class='post-image'><img src = '<?=$images[$i+2]['src']?>' /></div>
-						<div class='post-subject'><?=conv_subject($list[$i+2]['wr_subject'],10,"...")?><span class='view-guide'>VIEW GUIDE</span></div>
+				<td>
+					<div class='travel_posts'>
+						<div class='post-image'>
+							<a href ='<?=$list[$i+2]['href']?>'>
+								<img src = '<?=$images[$i+2]['src']?>' />
+							</a>
+						</div>
+						<div class='post-subject'>
+							<a href ='<?=$list[$i+2]['href']?>'>
+								<?=conv_subject($list[$i+2]['wr_subject'],10,"...")?><span class='view-guide'>VIEW GUIDE</span>
+							</a>
+						</div>
 						<div class='user-review'>User Review (<?=$list[$i+2]['wr_comment']?>)
 							<div class='stars'>
 								<img src='<?=$board_skin_url?>/img/star.png'/>
@@ -94,15 +123,19 @@ foreach( $list as $l ){
 								<img src='<?=$board_skin_url?>/img/star.png'/>
 							</div>
 						</div>
-						<div class='post-content'><?=cut_str(strip_tags($list[$i+2]['wr_content']),200,"...")?></div>
+						<div class='post-content'>
+							<a href ='<?=$list[$i+2]['href']?>'>
+								<?=cut_str(strip_tags($list[$i+2]['wr_content']),200,"...")?>
+							</a>
 						</div>
-					</a>
+					</div>
 				</td>
 				<?}?>
 			</tr>
         <?php } ?>
         <?php if (count($list) == 0) { echo '<tr><td colspan="'.$colspan.'" class="empty_table">게시물이 없습니다.</td></tr>'; } ?>        
         </table>
+		<?if( ms::admin() ){?>
 			<?php if ($list_href || $is_checkbox || $write_href) { ?>
 			<div class="lower-buttons">
 				<?php if ($is_checkbox) { ?>
@@ -112,16 +145,17 @@ foreach( $list as $l ){
 					<input type="submit" name="btn_submit" value="선택이동" onclick="document.pressed=this.value">
 				</div>
 				<?php } ?>
-
+				
 				<?php if ($list_href || $write_href) { ?>
 				<div class="btn_bo_user">
 					<?php if ($list_href) { ?><a href="<?php echo $list_href ?>" class="btn_b01">목록</a><?php } ?>
 					<?php if ($write_href) { ?><a href="<?php echo $write_href ?>" class="btn_b02">글쓰기</a><?php } ?>
 				</div>
-				<?php } ?>
+				<?php } ?>				
 			</div>
 			<div style='clear:both;'></div>
-    <?php } ?>
+			<?php } ?>
+		<?}?>
 	</form>
     </div>
 	<?php echo $write_pages;  ?>
