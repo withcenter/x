@@ -24,7 +24,11 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 					?>
 					</div>
 				
-				<?}?>	
+				<?}
+					if( empty($list) ){
+						echo "empty";
+					}
+				?>	
 		<a class='more-posts' href='<?=g::url()?>/bbs/board.php?bo_table=<?=$bo_table?>'><img src='<?=$latest_skin_url?>/img/more-btn.png'/></a>
 	</div>
 </div>
