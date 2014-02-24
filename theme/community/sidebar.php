@@ -146,7 +146,7 @@ $board_title  = db::result("SELECT bo_subject FROM $g5[board_table] WHERE bo_tab
 						<div class='label'><?=$board_title?>, Comments</div>
 					</td>
 					<td align='right'>
-						<div class='posts-more'><a href='#'>more <img src="<?=x::url_theme()?>/img/more-icon.png"></a></div>
+						<div class='posts-more'><a href='<?g::url()?>/bbs/board.php?bo_table=<?=$latest_bo_table?>'>more <img src="<?=x::url_theme()?>/img/more-icon.png"></a></div>
 					</td>
 				</tr>
 			</table>
