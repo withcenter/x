@@ -46,32 +46,32 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 				$no_comment = 'no-comment';
 			}
 	?>	
-		<a href='<?=$url?>' target='_blank'>
-			<table width='100%'>
-				<tr valign='top'>
-					<td width='60px'>
-						<div class='posts-image'>					
-							<?
-								if ( $has_image) {							
-									$imgsrc = get_list_thumbnail($bo_table, $li['wr_id'], 60, 60);							
-								}
-								else $imgsrc['src'] = $latest_skin_url.'/img/no-image.png';
-								
-								
-								$img = "<img src='$imgsrc[src]'/>";						
-								echo "<div class='img-wrapper'>".$img."</div>";
-							?>
-						</div>	
-					</td>
-					<td align='left'>
-						<div class='posts-info'>
+		<table width='100%'>
+			<tr valign='top'>
+				<td width='60px'>
+					<div class='posts-image'>					
+						<?
+							if ( $has_image) {							
+								$imgsrc = get_list_thumbnail($bo_table, $li['wr_id'], 60, 60);							
+							}
+							else $imgsrc['src'] = $latest_skin_url.'/img/no-image.png';
+							
+							
+							$img = "<img src='$imgsrc[src]'/>";						
+							echo "<div class='img-wrapper'>	<a href='<?=$url?>' target='_blank'>".$img."</a></div>";
+						?>
+					</div>	
+				</td>
+				<td align='left'>
+					<div class='posts-info'>
+						<a href='<?=$url?>' target='_blank'>
 							<span class='subject'><?=$subject?>: </span>
 							<span class='content'><?=$content?><span class='no-of-comments <?=$no_comment?>'><?='('.$comment_count.')'?></span></span>
-						</div>
-					</td>
-				</tr>
+						</a>
+					</div>
+				</td>
+			</tr>
 		</table>
-	</a>
 	<?}?>
 	</div>
 </div>

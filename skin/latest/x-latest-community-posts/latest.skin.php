@@ -35,12 +35,10 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 					$no_comment = 'no-comment';
 				}
 		?>	
-			<li <? if( $i == $no_of_posts ) echo "class='last-item'"; ?> >
-				<a href='<?=$url?>' target='_blank'>					
+			<li <? if( $i == $no_of_posts ) echo "class='last-item'"; ?> >				
 				<?
-					echo "<div class='subject'>$subject</div> <div class='post-content'>$content</div> <div class='no-of-comments $no_comment'>($comment_count)</div>";
+					echo "<div class='post-content'><a href='<?=$url?>' target='_blank'> $subject $content <span class='no-of-comments $no_comment'>($comment_count)</span></a></div>";
 				?>
-				</a>
 				<?$i++;?>
 			</li>		
 		<?}?>

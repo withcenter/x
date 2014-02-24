@@ -6,9 +6,9 @@
 		<div id="top-menu">
 			<div class='inner'>
 				<a href='#'>
-					<a href='#'>CALL: 123-4567</a><a>&#8226;</a>
+					<a href='#'>CALL: <?=ms::meta('comheader_contact_number')?></a><a>&#8226;</a>
 					<a href='#'>EMAIL</a><a>&#8226;</a>
-					<a href='#'>FAQS</a>
+					<a href='<?=g::url()?>/?page=faqs'>FAQS</a>
 					<div class='customer-support'>
 						<? if ( !login() ) { ?>
 							<a href='#'>LOG IN</a><a>&#8226;</a>

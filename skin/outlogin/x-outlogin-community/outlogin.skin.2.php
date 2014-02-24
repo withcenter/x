@@ -7,7 +7,8 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 <div class='login-box'><div class='inner'>
 		<div class='login-box-info'>
 			<?php if ($is_admin == 'super' || $is_auth) {  ?>
-				<div class='admin-pannel'><a href="<?php echo G5_ADMIN_URL ?>">Admin Pannel</a></div>
+				<div class='admin-mode'><a href="<?php echo G5_ADMIN_URL ?>">ADMIN PANEL</a></div>
+				<div class='admin-mode'><a href="<?=x::url_admin()?>">X Admin Panel</a></div>
 			<?php }  ?>
 			<div class='username'><?php echo $nick ?><?=lang(' is logged in', '님 로그인')?></div>
 			

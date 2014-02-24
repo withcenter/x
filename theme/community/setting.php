@@ -164,4 +164,38 @@
 			</div>
 		</td>
 	</tr>
+	</tr>	
+	<tr>
+		<td colspan=2 align='center'><div class='title'>TOP MENU and FOOTER LINKS<div></th>
+	</tr>
+		<tr valign='top'>
+		<td>
+			<div class='title'>Contact Number</div>
+			<input type='text' name='comheader_contact_number' value='<?=ms::meta('comheader_contact_number')?>'>
+		</td>
+		<td>
+			<div class='title'>Contact Email</div>
+			<input type='text' type='text' name='comheader_email' value='<?=ms::meta('comheader_email')?>'>
+		</td>
+	</tr>
+	<tr valign='top'>
+		<td>
+			<div class='title'>About</div>
+			<textarea name='comfooter_about'><?=ms::meta('comfooter_about')?></textarea>
+		</td>
+		<td>
+			<div class='title'>Terms and Conditions</div>
+			<textarea type='text' name='comfooter_terms' ><?=ms::meta('comfooter_terms')?></textarea>
+		</td>
+	</tr>
+	<tr valign='top'>
+		<td>
+			<div class='title'>Privacy Policy</div>
+			<textarea type='text' name='comfooter_privacy' ><?=ms::meta('comfooter_privacy')?></textarea>
+		</td>
+		<td>
+			<div class='title'>FAQs</div>
+			<textarea name='comfooter_faqs'><?=ms::meta('comfooter_faqs')?></textarea>
+		</td>
+	</tr>
 </table>

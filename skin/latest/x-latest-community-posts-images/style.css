@@ -7,6 +7,10 @@
 	min-height: 200px;
 }
 
+.posts a {
+	text-decoration: none;
+}
+
 .posts .title {
 	background: #1f9ebd;
 	height: 14px;
@@ -55,14 +59,14 @@
 	outline-offset: -1px;
 }
 
-.posts a .subject {
+.posts .subject {
 	font-weight: bold;
 }
 
-.posts a .no-of-comments {
+.posts .no-of-comments {
 	color: #ff0000;
 }
 
-.posts a .no-of-comments.no-comment {
+.posts .no-of-comments.no-comment {
 	color: #9b9b9b;
 }

@@ -1,8 +1,11 @@
-<?=outlogin('x-outlogin-community') ?>	
+<?=outlogin('x-outlogin-community') ?>
 
-<div class='company-banner'>
-	<?if( ms::meta('companybanner_1') ) ?> <img src="<?=ms::meta('img_url').ms::meta('companybanner_1')?>">
-</div>
+
+<?if( ms::meta('companybanner_1') ) { ?>
+	<div class='company-banner'>
+	<img src="<?=ms::meta('img_url').ms::meta('companybanner_1')?>">
+	</div>
+<? } ?>
 
 <?=latest( 'x-latest-community-comments' , ms::board_id(etc::domain()).'_1' , 5, 25)?>
 
@@ -49,12 +52,11 @@ if( $recent_rows ) {
 				if ( $recent_comment_count == 0 ) $no_comment = 'no-comment';
 				else $no_comment = '';
 		?>	
-			<li>
-				<a href='<?=$recent_url?>'>					
+			<li>				
 				<?
-					echo "<div class='subject'>$recent_subject</div> <div class='post-content'>$recent_content</div> <div class='no-of-recent-comments $no_comment'>($recent_comment_count)</div>";
+					echo "<div class='post-content'><a href='$recent_url'>$recent_subject $recent_content <span class='no-of-recent-comments $no_comment'>($recent_comment_count)</span></a></div>";
 				?>
-				</a>
+
 			</li>		
 		<?}?>
 		</ul>
@@ -101,39 +103,25 @@ if( $recent_comments ) {
 			$comments_content = cut_str($comments_li['wr_content'],30,'...');
 			$comments_url = g::url().'/bbs/board.php?bo_table='.$comments_li['bo_table'].'&wr_id='.$comments_li['wr_id'];
 			$comments_author = $comments_li['mb_id'];
-			
-			date_default_timezone_set("Asia/Seoul");
-			$current_time = new DateTime(date('Y-m-d H:m:s'), new DateTimeZone("Asia/Seoul"));
-			$old_time = new DateTime($comments_li['wr_datetime'], new DateTimeZone("Asia/Seoul"));
 
-			$interval = date_diff($old_time, $current_time);
-
-			if ( $interval->format('%y') > 0 )  $timeago = $interval->format('%yyrs');
-			else if ( $interval->format('%m') > 0 ) $timeago = $interval->format('%mmo(s)');
-			else if ( $interval->format('%d') > 0 ) $timeago = $interval->format('%day(s)');
-			else if ( $interval->format('%h') > 0 ) $timeago = $interval->format('%hhr(s)');
-			else if ( $interval->format('%i') == 0 ) $timeago = $interval->format('%ssec(s)');
-			else if ( $interval->format('%i') > 0 ) $timeago = $interval->format('%imin(s)');
+		$timeago = getTimeDuration(strtotime($comments_li['wr_datetime']));
 			
 			
 	?>	
 
-		<a href='<?=$comments_url?>'>	
-		<table <?if($i==$no_of_comments) echo "class='last-table'" ?> >
-			<tr valign='top'>
-				<td width='30px'>
+
+		<div  class='recent-items <?if($i==$no_of_comments) echo "last-item" ?>' >
+			<a href='<?=$comments_url?>'>	
+				<!--<span style='width: 30px; height: 50px;'>
 					<img src='<?=x::url_theme()?>/img/comments-pic.png'>
-				</td>
-				<td>
-					<div class='post-content'>
+				</span>-->
+				<span class='post-content'>
 						<?=$comments_author?>: <?=$comments_content?>
 						<span class='time-ago'>posted <?=$timeago?> ago</span>
-					</div>
-				</td>
-			</tr>
-		</table>
-		</a>
-		
+				</span>
+			</a>
+		</div>
+
 		<?
 			$i++;
 		}?>
@@ -142,6 +130,47 @@ if( $recent_comments ) {
 </div> <!--posts--recent-->
 <? } ?>
 
+<?
+/** Recent Comments from Forum 1 */
+$latest_bo_table = ms::meta('forum_no_1');
+if ( g::forum_exist( $latest_bo_table ) ) {
+$post_comments = db::rows("SELECT * FROM $g5[write_prefix]$latest_bo_table WHERE wr_is_comment=1 LIMIT 5" );
+$board_title  = db::result("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='$latest_bo_table'");
+?>
+<div class="posts-recent" >
+		<div class='title'>
+			<table width='100%'>
+				<tr valign='top'>
+					<td align='left' class='title-left'>
+						<div><img src="<?=x::url_theme()?>/img/recent-posts.png"></div>
+						<div class='label'><?=$board_title?>, Comments</div>
+					</td>
+					<td align='right'>
+						<div class='posts-more'><a href='#'>more <img src="<?=x::url_theme()?>/img/more-icon.png"></a></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	<div class='recent-comments-items'>
+		<ul>
+	<?php
+		$i = 1;
+		$no_of_comments = count($post_comments);
+		foreach ( $post_comments as $post_comment ) {
+			$comment_content = cut_str($post_comment['wr_content'],30,'...');
+			$comment_url = g::url().'/bbs/board.php?bo_table='.$latest_bo_table.'&wr_id='.$post_comment['wr_id'];
+			$timeago = getTimeDuration(strtotime($post_comment['wr_datetime'])); ?>	
+			<li <?if($i==$no_of_comments) echo "class='last-comment'" ?>>
+				<a href='<?=$comment_url?>'>	
+					<?=$comment_content?>
+				</a>
+			</li>
+			<? $i++; }?>
+		</ul>
+	</div>
+</div> <? } ?><!--posts--recent-->
+
+<?if( ms::meta('combanner_sidebar') ) { ?>
 <div class='sidebar-banner'>
 	<?if( !$sidebar_banner_title = ms::meta('combanner_sidebar_text1') ) $sidebar_banner_title = 'SIDEBAR BANNER TITLE' ?>
 	<div class='sidebar-banner-title'><?=$sidebar_banner_title?></div>
@@ -149,4 +178,34 @@ if( $recent_comments ) {
 	else $sidebar_banner = x::url_theme().'/img/no-image-190w-160h.png';?>
 	<img src="<?=$sidebar_banner?>">
 </div>
+<?}?>
 
+
+<?php
+function getTimeDuration($unixTime) {
+	$period    =   '';
+	$secsago   =   time() - $unixTime;
+	 
+	if ( $secsago < 60 ){
+		$period = $secsago == 1 ? '1 second'     : $secsago . ' seconds';
+	} else if ($secsago < 3600) {
+		$period    =   round($secsago/60);
+		$period    =   $period == 1 ? '1 minute' : $period . ' minutes';
+	} else if ($secsago < 86400) {
+		$period    =   round($secsago/3600);
+		$period    =   $period == 1 ? '1 hour'   : $period . ' hours';
+	} else if ($secsago < 604800) {
+		$period    =   round($secsago/86400);
+		$period    =   $period == 1 ? '1 day'    : $period . ' days';
+	} else if ($secsago < 2419200) {
+		$period    =   round($secsago/604800);
+		$period    =   $period == 1 ? '1 week'   : $period . ' weeks';
+	} else if ($secsago < 29030400) {
+		$period    =   round($secsago/2419200);
+		$period    =   $period == 1 ? '1 month'   : $period . ' months';
+	} else {
+		$period    =   round($secsago/29030400);
+		$period    =   $period == 1 ? '1 year'    : $period . ' years';
+	}
+	return $period;
+}

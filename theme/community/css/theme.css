@@ -51,7 +51,7 @@
 	background: #fafafa;
 	border: solid 1px #0d98ba;
 	border-radius: 3px;
-	padding: 0 10px 10px 10px;
+	padding: 0 10px 10px 8px;
 }
 
 #aside .sidebar-banner .sidebar-banner-title {
@@ -61,6 +61,8 @@
 }
 
 #aside .sidebar-banner img {
+	border: solid 1px #0d98ba;
+	border-radius: 3px;
 	width: 190px;
 	height: 160px;
 }
@@ -96,7 +98,7 @@
 }
 
 #container .banner-image.selected {
-	display:block;
+	display: block;
 }
 
 #container .banner img {
@@ -149,7 +151,7 @@
 	padding:9px;
 }
 
-#container .top-panel h2 img {
+#container .top-panel.top-panel h2 img {
 	margin: 0 0.5em 0 0;
 }
 
@@ -349,6 +351,7 @@
 	display: inline-block;
 	vertical-align: top;
 	margin-right: 6px;
+
 }
 
 .top-posts .top-posts-1, .top-posts .top-posts-3 {
@@ -440,7 +443,7 @@
 	margin-top: 10px;
 	border-radius: 3px;
 	font-family: Gulim, Arial;
-	min-height: 200px;
+
 }
 
 .posts-recent .title {
@@ -460,28 +463,53 @@
 	text-decoration: none;
 	color: #ffffff;
 }
+.posts-recent .title .label {
+	text-transform: uppercase;
+}
 
 .posts-recent .title .title-left > div {
 	display: inline-block;
 }
 
-.posts-recent-items {
+.recent-comments-items {
 	word-break: break-all;
 	padding-right: 10px;
 }
 
-.posts-recent-items ul {
-	padding-left: 30px;
+.recent-comments-items ul {
+	padding-right: 10px;
+	padding-left: 20px;
+	margin: 0;
 	list-style: square;
+}
+.recent-comments-items ul li {
+	margin-bottom: 10px;
+}
+
+.recent-comments-items ul li.last-comment {
+	margin-bottom: 0;
+}
+
+.recent-comments-items ul li a {
+	text-decoration: none;
+}
+
+.posts-recent-items ul {
+	padding-right: 15px;
+	padding-left: 30px;
+	word-break: break-all;
+	list-style: square;
+}
+.posts-recent-items ul li {
+	margin-bottom: 10px;
+}
+
+.posts-recent-items ul li.last-comment {
+	margin-bottom: 0;
 }
 
 .posts-recent-items ul li a {
 	text-decoration: none;
-}
-
-.posts-recent-items ul li a > div {
-	display: inline-block;
-	vertical-align: top;
 }
 
 .posts-recent .time-ago {
@@ -490,24 +518,27 @@
 }
 
 .recent-comments-items {
-	padding: 10px;
+	padding: 15px;
+}
+.recent-comments-items .recent-items a {
+	text-decoration: none;
 }
 
-.recent-comments-items table {
+.recent-comments-items .recent-items {
 	margin-bottom: 10px;
 }
-.recent-comments-items table.last-table {
+.recent-comments-items .recent-items.last-item {
 	margin-bottom: 0;
 }
 
-.recent-post-items a .subject {
+.recent-post-items .subject {
 
 }
 
-.posts-recent-items a .no-of-recent-comments {
+.posts-recent-items .no-of-recent-comments {
 	color: #ff7538;
 }
 
-.posts-recent-items a .no-of-recent-comments.no-comment {
+.posts-recent-items .no-of-recent-comments.no-comment {
 	color: #9b9b9b;
 }
