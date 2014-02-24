@@ -25,8 +25,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 			}
 			else $has_image = null;
 		}
-		?>
-		<a href='<?=$li['href']?>'>
+		?>		
 		<?
 			if( $count == 5 ) $nomargin = 'no-margin';
 		?>
@@ -41,20 +40,20 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 						
 						
 						$img = "<img src='$imgsrc[src]'/>";						
-						echo "<div class='img-wrapper'>".$img."</div>";
+						echo "<div class='img-wrapper'><a href='<?=$li[href]?>'>".$img."</a></div>";
 					?>
 					</div>
-					<div class='travel-title'><?=conv_subject( $li['wr_subject'], 40, '...' )?></div>
-					<div class='travel-content'><?=cut_str(strip_tags( $li['wr_content']), 50, '...' )?></div>
-					<div class='travel-price'>
+					<div class='travel-title'><a href='<?=$li['href']?>'><?=conv_subject( $li['wr_subject'], 40, '...' )?></a></div>
+					<div class='travel-content'><a href='<?=$li['href']?>'><?=cut_str(strip_tags( $li['wr_content']), 50, '...' )?></a></div>
+					<div class='travel-price'><a href='<?=$li['href']?>'>
 					<?
 						if ( !empty($li['wr_1']) ) echo $li['wr_1'];
 						else echo "<b>clone x-board-travel<br>to input price</b>";					
 					?>
+					</a>
 					</div>
 				</div>
-			</div>	
-		</a>	
+			</div>		
 <?
 	$count++;
 	}

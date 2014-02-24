@@ -8,6 +8,10 @@
 	height: 200px;
 }
 
+.stories-container a{
+	text-decoration:none;
+}
+
 .stories-container .travel-story table img {
 	width:100%;
 }
