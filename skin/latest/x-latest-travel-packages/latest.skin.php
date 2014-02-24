@@ -2,10 +2,12 @@
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 ?>
-
+<?if( $list ) {?>
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
+<div class='bottom-panel'>
+	<div class='travel-packages'>
+		<h2> Best Travel Packages </h2>
 <?php
-//di($list);exit;
 	$count = 1;
 	foreach( $list as $li ) {
 	
@@ -58,3 +60,6 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 	}
 ?>
 
+	</div>
+</div>
+<?}?>

@@ -52,30 +52,37 @@
 </div>
 
 <div class='middle-panel'>
+<?
+$latest_bo_table = ms::board_id(etc::domain()).'_1';
+if ( g::forum_exist($latest_bo_table) ){
+?>
 	<div class='travel-stories'>
 		<h2>Travel Stories</h2>
 		<?	
-			$latest_bo_table = ms::board_id(etc::domain()).'_1';
-			if ( g::forum_exist($latest_bo_table) ) echo latest("x-latest-travel-stories",  $latest_bo_table, 3, 20);
-			else echo "<div class='notice'>NO POST AVAILABLE FOR WRITE TABLE ".$latest_bo_table."</div>";
+			
+			echo latest("x-latest-travel-stories",  $latest_bo_table, 3, 20);
 		?>
 	</div>
+<?}?>
+<?
+$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";
+$current_date = date('Y-m-d').' 23:59:59';
+$previous_date = date('Y-m-d', strtotime("-7 day", strtotime($current_date))).' 00:00:00';
+$rows = db::rows( "SELECT bo_table, wr_id FROM $g5[board_new_table] WHERE $qb AND bn_datetime BETWEEN '$previous_date' AND '$current_date' ORDER BY bn_datetime DESC" );	
+
+if( $rows ){
+?>
 	<div class='photo-gallery'>
 		<h2>Photo Gallery</h2>
 		<div class='thumb-container'>
-			<?php 				
-				$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";
-				$current_date = date('Y-m-d').' 23:59:59';
-				$previous_date = date('Y-m-d', strtotime("-7 day", strtotime($current_date))).' 00:00:00';
-				$rows = db::rows( "SELECT bo_table, wr_id FROM $g5[board_new_table] WHERE $qb AND bn_datetime BETWEEN '$previous_date' AND '$current_date' ORDER BY bn_datetime DESC" );	
-				
+			<?php 												
 				$table_suffix = ms::board_id(etc::domain());
 
 				if( !empty( $rows ) ) {
 					foreach ( $rows as $row ) {	
 						$board['bo_table'] = $row['bo_table'];
 						$images[] = get_file($board['bo_table'],$row['wr_id']);
-						$thumbnail_list[] = get_list_thumbnail($board['bo_table'], $row['wr_id'], 94, 59);
+						$thumbnail_list2[] = get_list_thumbnail($board['bo_table'], $row['wr_id'], 94, 59);
 					}
 					
 					foreach ( $images as $image ) {
@@ -93,7 +100,7 @@
 					
 					$num_of_thumbnails = 0;
 					
-					foreach ( $thumbnail_list as $thumbnail ) {
+					foreach ( $thumbnail_list2 as $thumbnail ) {
 						if( $thumbnail['src'] ){
 							$images_link[] = $thumbnail['src'];
 							$num_of_thumbnails++;
@@ -116,15 +123,10 @@
 			?>
 		</div>
 	</div>
+<?}?>
 </div>
 
-<div class='bottom-panel'>
-	<div class='travel-packages'>
-		<h2> Best Travel Packages </h2>
-		<?
-			$latest_bo_table = ms::board_id( etc::domain() ).'_1';
-			if ( g::forum_exist($latest_bo_table)) echo latest("x-latest-travel-packages",  $latest_bo_table, 5, 20);
-			else echo "<div class='notice'>NO POST AVAILABLE FOR WRITE TABLE ".$latest_bo_table."</div>";
-		?>
-	</div>
-</div>
+<?
+	$latest_bo_table = ms::board_id( etc::domain() ).'_1';
+	if ( g::forum_exist($latest_bo_table)) echo latest("x-latest-travel-packages",  $latest_bo_table, 5, 20);
+?>

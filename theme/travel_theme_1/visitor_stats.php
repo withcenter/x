@@ -11,7 +11,7 @@ for( $ctr = 0; $ctr < 4; $ctr ++){
 	$visits_week[$ctr]['week'] = $week_now+1 ;
 	$week_now = $week_now - 1;
 	if( $visits_week[$ctr] == '') $visits_week[$ctr] = 0;
-	$visits_this_month[$ctr] = 0;
+	if( !isset($visits_week[$ctr][0]['vs_count'] )) $visits_week[$ctr][0]['vs_count']	= 0;
 }
 
 for( $ctr = 0; $ctr < 4; $ctr ++){	
@@ -19,23 +19,26 @@ for( $ctr = 0; $ctr < 4; $ctr ++){
 	$visits_month[$ctr]['month'] = $month_text ;
 	$month_now = $month_now - 1;
 	if( $month_now == 0 ) $month_now = 12;
-	$month_text = date('M', strtotime("-".($ctr+1)." month", strtotime($current_date)));
-	$visits_this_month[$ctr] = 0;	
+	$month_text = date('M', strtotime("-".($ctr+1)." month", strtotime($current_date)));	
+	if( !isset($visits_month[$ctr][0]['vs_count'] )) $visits_month[$ctr][0]['vs_count']	= 0;
 }
 
 for( $ctr = 0; $ctr < 4; $ctr ++){	
 	$visits_year[] = db::rows( "SELECT * FROM ".$g5['visit_sum_table']." WHERE YEAR(vs_date) = $year_now");	
 	$visits_year[$ctr]['year'] = $year_now;
 	$year_now = $year_now - 1;
-	$visits_this_year[$ctr] = 0;
-}
+	if( !isset($visits_year[$ctr][0]['vs_count'] )) $visits_year[$ctr][0]['vs_count']	= 0;
 
+}
+//di($visits_year);exit;
 $count = 0;
 foreach( $visits_week as $visits ){
 $week_is[] = $visits['week'];
-	foreach( $visits as $weekly ){
-			$visits_this_week[$count] += $weekly['vs_count'];
-			$visits_this_week_total += $weekly['vs_count'];
+	foreach( $visits as $weekly ){			
+			if( isset($weekly['vs_count'] )){
+				$visits_this_week[$count] += $weekly['vs_count'];
+				$visits_this_week_total += $weekly['vs_count'];
+			}
 		}
 	$count++;
 }
@@ -43,19 +46,23 @@ $week_is[] = $visits['week'];
 $count = 0;
 foreach( $visits_month as $visits ){
 $month_is[] = $visits['month'];
-	foreach( $visits as $monthly ){		
-			$visits_this_month[$count] += $monthly['vs_count'];
-			$visits_this_month_total += $monthly['vs_count'];
+	foreach( $visits as $monthly ){	
+			if( isset($monthly['vs_count'] )){
+				$visits_this_month[$count] += $monthly['vs_count'];
+				$visits_this_month_total += $monthly['vs_count'];
+			}
+			
 		}
 	$count++;
 }
-
 $count = 0;
 foreach( $visits_year as $visits ){
 $year_is[] = $visits['year'];
 	foreach( $visits as $yearly ){
-			$visits_this_year[$count] += $yearly['vs_count'];
-			$visits_this_year_total += $yearly['vs_count'];
+			if( isset($yearly['vs_count'] )){
+				$visits_this_year[$count] += $yearly['vs_count'];
+				$visits_this_year_total += $yearly['vs_count'];
+			}
 		}
 	$count++;
 }

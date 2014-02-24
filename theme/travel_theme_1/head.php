@@ -105,7 +105,7 @@
 				$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";
 				$current_date = date('Y-m-d').' 23:59:59';
 				$previous_date = date('Y-m-d', strtotime("-7 day", strtotime($current_date))).' 00:00:00';
-				$rows = db::rows( "SELECT bo_table, wr_id FROM $g5[board_new_table] WHERE $qb AND bn_datetime BETWEEN '$previous_date' AND '$current_date' ORDER BY bn_datetime DESC" );	
+				$rows = db::rows( "SELECT bo_table, wr_id FROM $g5[board_new_table] WHERE $qb AND bn_datetime BETWEEN '$previous_date' AND '$current_date' ORDER BY bn_datetime DESC" );									
 				
 				$table_suffix = ms::board_id(etc::domain());
 
@@ -145,14 +145,18 @@
 					for( $ctr = 1; $ctr <= $num_of_thumbnails; $ctr++ ){
 						if( $ctr % 3 == 0 ) $nomargin = 'no-margin';
 						else $nomargin = '';
-						if( $ctr >= 7 ) $nomargin_bottom = 'no-margin-bottom';						
+						if( $ctr >= $num_of_thumbnails/3*3 ) $nomargin_bottom = 'no-margin-bottom';						
 						$img = "<a href = '".$links[$ctr-1]."'><img src ='".$images2_link[$ctr-1]."'/></a>";
 						$img_thumbnail = "<div class='sidebar-img-wrapper $nomargin $nomargin_bottom'>".$img."</div>";
 						echo $img_thumbnail;
 					}
 
 				}				
-				$board['bo_table'] = $old_board;				
+				$board['bo_table'] = $old_board;
+
+				if( empty($rows) ){
+						echo "Gallery is empty";
+					}
 			?>
 			<div style='clear:both;'></div>
 		</div>
