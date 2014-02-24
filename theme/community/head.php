@@ -5,7 +5,6 @@
     <div id="travel-hd-wrapper">
 		<div id="top-menu">
 			<div class='inner'>
-				<a href='#'>
 					<a href='#'>CALL: <?=ms::meta('comheader_contact_number')?></a><a>&#8226;</a>
 					<a href='#'>EMAIL</a><a>&#8226;</a>
 					<a href='<?=g::url()?>/?page=faqs'>FAQS</a>
