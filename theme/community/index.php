@@ -1,14 +1,18 @@
 <?if ( $in['page'] ) include x::theme( $in['page'] );
 else { ?>
 <div class='top-panel'>
-	<?	for ( $i = 1, $no_image = 5; $i <= 5 ; $i++) { if( !$banner_image = ms::meta( 'combanner_'.$i ) ) $no_image = $no_image-1; }
-		if ( $no_image > 1 ) {
+	<?	for ( $i = 1, $has_images = 0; $i <= 5 ; $i++) { 
+			if( $banner_image = ms::meta( 'combanner_'.$i ) ) {
+				$has_images++;
+				break;
+		}}
+		if ( $has_images > 0 ) {
 	?>
 	<div style='border: solid 1px #0d98ba; padding: 1px; border-radius: 3px;'>
 		<div class='banner'>
 			<?
 				$banner_url = ms::meta('img_url');
-				for ( $i = 1, $no_image = 5; $i <= 5 ; $i++) {
+				for ( $i = 1; $i <= 5 ; $i++) {
 					if( !$banner_image = ms::meta( 'combanner_'.$i ) ){
 						continue;
 					}
