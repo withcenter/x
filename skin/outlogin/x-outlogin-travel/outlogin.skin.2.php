@@ -12,9 +12,10 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 	</ul>
 	<div style='clear:left;'></div>
 	<div class='login-box-middle'>
-	<?php if ($is_admin == 'super' || $is_auth) {  ?>
-		<div class='admin-mode'><a href="<?php echo G5_ADMIN_URL ?>">ADMIN PANEL</a></div>
-	<?php }  ?>
+			<?php if ($is_admin == 'super' || $is_auth) {  ?>
+				<div class='admin-mode'><a href="<?php echo G5_ADMIN_URL ?>">ADMIN PANEL</a></div>
+				<div class='admin-mode'><a href="<?=x::url_admin()?>">X Admin Panel</a></div>
+			<?php }  ?>
      
 		<div class='user-info'><b><?php echo $nick ?></b>님 로그인</div>
         
