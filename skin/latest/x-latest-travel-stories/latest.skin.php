@@ -6,7 +6,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
 <?if ( !$list ) return;?>
 <div class='travel-stories'>
-<h2>Travel Stories</h2>
+<h2>여행 이야기</h2>
 <div class='stories-container'>
 <?php
 	foreach( $list as $li ) {
@@ -37,7 +37,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 								}
 								else $imgsrc['src'] = $latest_skin_url.'/img/no-image.png';							
 								$img = "<img src='".$imgsrc['src']."'/>";																
-								echo "<div class='img-wrapper'><a href='<?=$li[href]?>'>".$img."</a><div>";
+								echo "<div class='img-wrapper'><a href='<?=$li[href]?>'>".$img."</a></div>";
 							?>	
 						</div>
 						</td>
@@ -67,3 +67,4 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 ?>
 </div>
 </div>
+

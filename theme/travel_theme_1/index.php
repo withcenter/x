@@ -55,10 +55,7 @@
 $latest_bo_table = ms::board_id(etc::domain()).'_1';
 if ( g::forum_exist($latest_bo_table) ){
 ?>
-	<div class='travel-stories'>
-		<h2>여행 이야기</h2>
 			<?=latest("x-latest-travel-stories",  $latest_bo_table, 3, 20); ?>
-	</div>
 <?}?>
 <?
 $qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";
