@@ -5,8 +5,6 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
 <?
 global $board;
-//echo $board['bo_table'];exit;
-//di($board);di($list);di($g5);exit;
 ?>
 <div class="image-posts" >
 	<div class='inner'>
