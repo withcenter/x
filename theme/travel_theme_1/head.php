@@ -103,7 +103,7 @@
 			$old_table = $board['bo_table'];			
 			$latest_bo_table = ms::board_id(etc::domain()).'_3';
 			$board['bo_table'] = $latest_bo_table;
-			if ( g::forum_exist($latest_bo_table) ) echo latest("x-latest-travel-stories", $latest_bo_table, 1, 20);
+			if ( g::forum_exist($latest_bo_table) ) echo latest("x-latest-travel-stories-right", $latest_bo_table, 1, 20);
 			$board['bo_table'] = $old_table;
 	
 	// sitebar-thumb 
