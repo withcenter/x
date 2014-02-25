@@ -1,5 +1,4 @@
 <?php
-	patch_begin(__FILE__);
 	$path = $dir_root . '/lib/latest.lib.php';
 	$data = file::read($path);
 	
@@ -18,8 +17,4 @@
 	
 	file::write( $path,  $data );
 	
-	
-	
-	
-	
-		
+	patch_message('patch data saved');

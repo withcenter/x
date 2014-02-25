@@ -53,19 +53,17 @@ if ( $argv[1] == 'language' ) {
 	//result(0);
 	
 	
-function patch_begin($file)
-{
-	$pi = pathinfo($file);
+	echo "\n-- PATCH SUCCESS --\n";
 	
-	echo sprintf("\n%-15s :", $pi['basename']);
-}
+	
+	
 function message($msg)
 {
-	echo " $msg";
+	patch_message($msg);
 }
 function patch_failed()
 {
-	echo " ... FAILED";
+	patch_message("-----------------------------  FAILED --");
 	exit;
 }
 
@@ -131,7 +129,7 @@ function patch_file( $file, $kvs )
 		
 	}
 	file::write( $file, $data );
-	echo "$file patched\n";
+	patch_message("patched: $file");
 }
 
 
@@ -142,16 +140,26 @@ function patch_string( $string, $src, $dst )
 		echo " [ERROR] No php source data";
 	}
 	if ( pattern_exist($string, $dst) ) {
-		echo("	Already patched\n");
+		patch_message('already patched');
 	}
 	else {
 		if ( ! pattern_exist($string, $src) ) {
 			echo " Srouce pattern does not exist. FAILED\n[ source patttern ] : $src";
+			patch_failed();
 		}
 		else {
 			$string = str_replace( $src, $dst, $string );
-			echo " Patched";
+			patch_message('patched');
 		}
 	}
 	return $string;
+}
+
+function patch_message($str)
+{
+	$files = get_included_files();
+	$file = $files[ count($files) - 1];
+	$pi = pathinfo($file);
+	$basename = $pi['basename'];
+	printf( "%-20s: $str\n", $basename, $str);
 }

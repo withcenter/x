@@ -1,8 +1,18 @@
 <?php
-
-di ( g::board_config() );
-
+	// di ( g::board_config() );
 ?>
 
+<div style="font-size: 2em;">
 
-<h1 style="font-size: 10em;"> This is index.php </h1>
+	<p>
+		Welcome To Gnuboard5 Extended<br>
+		GNUBoard5 Extended 입니다.
+	</p>
+	&nbsp;
+	<p>
+		This is <?=x::theme('index')?><br>
+		파일 이름: <?=x::theme('index')?><br>
+		
+	</p>
+	
+</div>

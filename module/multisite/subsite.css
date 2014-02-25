@@ -354,6 +354,8 @@
 }
 
 .config_general .image-config .image-upload img{
+	width: 100%;
+	height: 100px;
 	margin: 0.5em;
 	padding: 1px;
 	border: solid 1px #d5d5d5;

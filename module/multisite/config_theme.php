@@ -33,7 +33,7 @@
 				if ( $theme_config['type'] != 'subsite' ) continue;
 				
 				$url = x::url().'/theme/'.$dir.'/preview.jpg';
-				if( preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower(ms::meta('theme'))) != preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower($name)) ) { ?>
+				if( preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower(ms::meta('theme'))) != preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower($dir)) ) { ?>
 					<button type='submit' name='theme' value='<?=$dir?>' onclick="return confirm('Do you really want to change Theme?');">
 						<div class='theme-thumb inactive'>
 						<img src='<?=$url?>' >
