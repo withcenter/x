@@ -265,43 +265,30 @@
 	height:29px;
 }
 
-
-/** Menu */
-#menu-container {
-	height: 42px;
+#menu-top{
+	width: 100%;
 	background-color: #096e87;
 	border: solid 1px #12586d;
 }
-
-#menu-container #menu-top {
+#menu-top > .inner {
+	width:970px;
+	margin: 0 auto;
+}
+#menu-top ul {
 	width: 970px;
 	margin: 0 auto;
-	padding: 13px 0 0 25px;
-}
-
-<<<<<<< HEAD
-#menu-top ul li {
-	display: block;
-=======
-#menu-top span {
->>>>>>> 87c9bde57ae940e9fd344d784a45f33ce8ce07b4
-	margin: 0.8em;
-	border-color: #4792a5;
-	border-left-style: groove;
+	list-style:none;
+	padding:0;
+	margin:0;
 	float: left;
-	position: relative;
-	top: -4px;
-	height: 22px;
-	line-height: 22px;
-	
+}
+#menu-top ul  li {
+	float: left;
+	height: 42px;
+	line-height: 42px;
 }
 
-
-#menu-top span.first-menu {
-	border-left: 0;
-}
-
-#menu-top span a {
+#menu-top ul  li a {
 	text-decoration: none;
 	font-family: '맑은 고딕', AppleGothic;
 	font-size: 10pt;
@@ -310,21 +297,14 @@
 	line-height: 30px;
 	display: inline-block;
 	border: 1px solid transparent;
-	margin-left: 20px;
+	border-radius: 5px;
 	position: relative;
-	top: -4px;
+	top: 1px;
+	margin: 0 10px;
 }
-
-<<<<<<< HEAD
 #menu-top ul li a:hover {
 	background: #6b6b6b;
 	border:1px solid #464646;
-=======
-#menu-top span a:hover {
-	background: #085e74;
-	border: solid 1px #044e67;
->>>>>>> 87c9bde57ae940e9fd344d784a45f33ce8ce07b4
-	border-radius: 5px;	
 }
 #menu-top ul li a .inner {
 	border-top: 1px solid transparent;
@@ -332,16 +312,10 @@
 	padding: 0 18px;
 }
 
-<<<<<<< HEAD
 #menu-top ul li a:hover .inner {
 	border-top: 1px solid #7c7c7c;
 }
-#menu-top ul li.first-menu  a{
-=======
-#menu-top span.first-menu  a{
->>>>>>> 87c9bde57ae940e9fd344d784a45f33ce8ce07b4
-	margin-left: 0;
-}
+
 
 .footer-info {
 	margin-top: 20px;
@@ -374,10 +348,17 @@
 	margin: 0 1em 0 0;
 }
 
-.footer-text {
-	
+.footer-info {
+	width: 100%;
+	background-color: #f3f3f3;
+	padding: 0 10px;
+	min-height: 60px;
+	text-align: center;
 }
-
+.footer-info  .inner {
+	width: 970px;
+	margin: 0 auto;
+}
 /**TOP POSTS*/
 
 

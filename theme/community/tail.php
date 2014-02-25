@@ -1,24 +1,20 @@
 
 </div>
-<div style='clear:both'>&nbsp</div>
-<div class='footer-info'>
-	<div class='footer-logo'>
+<div style='clear:both'></div>
+<div class='footer-info'><div class='inner'>
+	<span class='footer-logo'>
 		<?if( ms::meta('comfooter_logo') ) $company_banner = ms::meta('img_url').ms::meta('comfooter_logo');
 		else $company_banner = x::url_theme().'/img/community_footer_logo.png';?>
 		<img src="<?=$company_banner?>">		
-	</div>
-	<div class='footer-text'>
-		<div class='footer-links'>
-			<? if( ms::meta('comfooter_about') ) { ?> <a href='<?=g::url()?>/?page=about'>ABOUT</a> <?}?>
-			<? if ( ms::meta ('comfooter_terms') ) { ?> <a href='<?=g::url()?>/?page=terms'>TERMS & CONDITIONS</a> <?}?>
-			<? if ( ms::meta ('comfooter_privacy') ) { ?> <a href='<?=g::url()?>/?page=privacy'>PRIVACY POLICY</a> <?}?>
-			<? if ( ms::meta ('comfooter_faqs') ) { ?> <a href='<?=g::url()?>/?page=faqs'>FAQS</a> <?}?>
-		</div>
-	<? if( ms::meta('footer_text') == '' ) {?>
-		어드민 페이지에서 하단 메세지를 입력 해 주세요.
-	<?} else echo ms::meta('footer_text');?>
-	</div>
-</div>
+	</span>
+	<span class='footer-text'>
+	<?php 
+		if( ms::meta('footer_text') ) { 
+			echo ms::meta('footer_text');
+		} else echo '어드민 페이지에서 하단 메세지를 입력 해 주세요.';
+	?>
+	</span>
+</div></div>
 
 <!--  하단 끝 -->
 
