@@ -29,7 +29,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 				
 				<table>
 					<tr valign='top'>
-						<td width='50px'>
+						<td width='88px'>
 						<div class='img-container'>
 							<?
 								if ( $has_image ){
@@ -50,7 +50,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 						</td>
 					</tr>
 					<tr valign='top'>
-						<td colspan=2 width='100px'>
+						<td colspan=2 width='200px'>
 						<?php
 							echo "<span class='travel-content'><a href='<?=$li[href]?>'>".cut_str( strip_tags( $li['wr_content'] ) ,100,'...')."</a></span>";
 						?>

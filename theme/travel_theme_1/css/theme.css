@@ -61,6 +61,8 @@
 	height: 350px;
 	overflow: hidden;	
 	position: relative;
+	border:1px solid #d9d9d9;
+	padding:1px;
 }
 
 #container .banner-pagination {
@@ -91,11 +93,12 @@
 
 #container .banner-image {
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 1px;
+	left: 1px;
 	display:none;
 	width: 651px;
 	height: 350px;
+	overflow:hidden;
 }
 
 #container .banner-image.selected {

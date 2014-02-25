@@ -26,3 +26,36 @@ $(function() {
 <?php
 include_once(G5_PATH."/tail.sub.php");
 ?>
+
+<!--[if IE 7]>
+	<style>				
+		.banner{
+			width:651px;
+			float:left;
+		}
+		.forum-list{
+			float:left;			
+		}
+		
+		.middle-panel{			
+			clear:both;			
+		}
+		
+		.travel-stories{
+			float:left;		
+		}
+		
+		.travel-story{
+			float:left;				
+		}
+		
+		.middle-panel .photo-gallery {
+			float:left;					
+		}
+		
+		.travel-package-container{
+			float:left;
+		}
+		
+	</style>
+<![endif]-->
