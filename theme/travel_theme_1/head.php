@@ -93,17 +93,32 @@
         
 		<?
 			$latest_bo_table = ms::board_id(etc::domain()).'_1';
-			if ( g::forum_exist($latest_bo_table) ) echo latest("x-latest-post-travel", $latest_bo_table, 3, 20);
+			if ( g::forum_exist($latest_bo_table) ) {
+			$latest_1_output = latest("x-latest-post-travel", $latest_bo_table, 3, 20);
+				if( $latest_1_output ){
+					echo $latest_1_output;
+				}
+			}
 			
 			$latest_bo_table = ms::board_id(etc::domain()).'_2';
-			if ( g::forum_exist($latest_bo_table) ) echo latest("x-latest-post-travel-2", $latest_bo_table, 3, 20);
+			if ( g::forum_exist($latest_bo_table) ) {
+			$latest_2_output = latest("x-latest-post-travel-2", $latest_bo_table, 3, 20);
+				if( $latest_2_output ){
+					echo $latest_2_output;
+				}
+			}
 			
 			include "visitor_stats.php";
 			
 			$old_table = $board['bo_table'];			
 			$latest_bo_table = ms::board_id(etc::domain()).'_3';
 			$board['bo_table'] = $latest_bo_table;
-			if ( g::forum_exist($latest_bo_table) ) echo latest("x-latest-travel-stories-right", $latest_bo_table, 1, 20);
+			if ( g::forum_exist($latest_bo_table) ){
+			$latest_3_output = latest("x-latest-travel-stories-right", $latest_bo_table, 1, 20);
+				if( $latest_3_output ){
+					echo $latest_3_output;
+				}
+			}
 			$board['bo_table'] = $old_table;
 	
 	// sitebar-thumb 
