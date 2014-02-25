@@ -15,7 +15,7 @@
 			<? if ( ms::meta ('comfooter_faqs') ) { ?> <a href='<?=g::url()?>/?page=faqs'>FAQS</a> <?}?>
 		</div>
 	<? if( ms::meta('footer_text') == '' ) {?>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>COPYRIGHT @ 2014 &nbsp&nbsp ALL RIGHTS RESERVED &nbsp&nbsp WITHCENTER.COM
+		어드민 페이지에서 하단 메세지를 입력 해 주세요.
 	<?} else echo ms::meta('footer_text');?>
 	</div>
 </div>

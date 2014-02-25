@@ -140,28 +140,24 @@
 
 /**PLACE HOLDER*****/
 .login-box  ::-webkit-input-placeholder {
-	font-style:italic;
 	font-family:arial;
 	color:#8e9295;
 	font-size:1em;
 }
 
 .login-box  :-moz-placeholder { /* Firefox 18- */
-	font-style:italic;
 	font-family:arial;
 	color:#8e9295; 	
 	font-size:1em;
 }
 
 .login-box  ::-moz-placeholder {  /* Firefox 19+ */
-	font-style:italic;
 	font-family:arial;
 	color:#8e9295; 
 	font-size:1em;
 }
 
 .login-box  :-ms-input-placeholder {  
-	font-style:italic;
 	font-family:arial;
 	color:#8e9295; 
 	font-size:1em;

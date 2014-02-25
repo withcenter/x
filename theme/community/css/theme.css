@@ -1,5 +1,5 @@
 #header-container{
-	font-family:arial;
+	font-family: '맑은 고딕', AppleGothic;
 	margin-bottom:10px;
 }
 
@@ -58,6 +58,7 @@
 	padding: 10px 0 10px 0;
 	font-weight: bold;
 	text-transform: uppercase;
+	font-family: '맑은 고딕', AppleGothic;
 }
 
 #aside .sidebar-banner img {
@@ -167,7 +168,7 @@
 #container .middle-panel h2, #container .bottom-panel h2 {
 	color: #5d5d5d;
 	font-size: 12pt;
-	font-family: Arial;
+	font-family: '맑은 고딕', AppleGothic;
 	font-weight: normal !important;
 	padding: 0 0 0.5em 0;
 	border-bottom: solid 2px #5d5d5d;
@@ -251,8 +252,7 @@
 	color:#acacac;
 	border: 0;
 	font-size: 12pt;
-	font-style: italic;
-	font-family: Arial;
+	font-family: '맑은 고딕', AppleGothic;
 }
 
 #header-search #search-submit{
@@ -280,10 +280,16 @@
 }
 
 #menu-top ul li {
-	display: inline-block;
+	display: block;
 	margin: 0.8em;
 	border-color: #4792a5;
 	border-left-style: groove;
+	float: left;
+	position: relative;
+	top: -4px;
+	height: 22px;
+	line-height: 22px;
+	
 }
 
 
@@ -293,20 +299,32 @@
 
 #menu-top ul li a {
 	text-decoration: none;
-	font-family: Gulim, Arial;
+	font-family: '맑은 고딕', AppleGothic;
 	font-size: 10pt;
-	margin: 0 0 0 20px;
 	color: #ffffff;
-	padding: 10px 18px 10px 18px;
-	border: solid 1px transparent;
+	height: 30px;
+	line-height: 30px;
+	display: inline-block;
+	border: 1px solid transparent;
+	margin-left: 20px;
+	position: relative;
+	top: -4px;
 }
 
 #menu-top ul li a:hover {
-	background: #085e74;
-	border: solid 1px #044e67;
+	background: #6b6b6b;
+	border:1px solid #464646;
 	border-radius: 5px;	
 }
+#menu-top ul li a .inner {
+	border-top: 1px solid transparent;
+	border-radius: 5px;
+	padding: 0 18px;
+}
 
+#menu-top ul li a:hover .inner {
+	border-top: 1px solid #7c7c7c;
+}
 #menu-top ul li.first-menu  a{
 	margin-left: 0;
 }
@@ -442,7 +460,7 @@
 	border-top: 0;
 	margin-top: 10px;
 	border-radius: 3px;
-	font-family: Gulim, Arial;
+	font-family: '맑은 고딕', AppleGothic;
 
 }
 
@@ -453,7 +471,7 @@
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
 	padding: 4px 4px 10px 4px;
-	font-family: Arial, Gulim;
+	font-family: '맑은 고딕', AppleGothic;
 	font-size: 0.9em;
 	color: #ffffff;
 	font-weight: bold;

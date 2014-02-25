@@ -1,11 +1,11 @@
 <?=outlogin('x-outlogin-community') ?>
 
-
 <?if( ms::meta('companybanner_1') ) { ?>
 	<div class='company-banner'>
-	<img src="<?=ms::meta('img_url').ms::meta('companybanner_1')?>">
+			<img src="<?=ms::meta('img_url').ms::meta('companybanner_1')?>">
 	</div>
-<? } ?>
+<?} else echo "<a href='http://www.philgo.com' target='_blank'><img src='".x::url_theme()."/img/philgo_banner.gif' style='border:0;'/></a>";?>
+
 
 <?=latest( 'x-latest-community-comments' , ms::board_id(etc::domain()).'_1' , 5, 25)?>
 
@@ -31,11 +31,13 @@ if( $recent_rows ) {
 				<tr valign='top'>
 					<td align='left' class='title-left'>
 						<div><img src="<?=x::url_theme()?>/img/recent-posts.png"></div>
-						<div class='label'>RECENT POSTS</div>
+						<div class='label'>최근 등록글</div>
 					</td>
+					<? /*
 					<td align='right'>
-						<div class='posts-more'><a href='#'>more <img src="<?=x::url_theme()?>/img/more-icon.png"></a></div>
+						<div class='posts-more'><a href='#'>자세히<img src="<?=x::url_theme()?>/img/more-icon.png"></a></div>
 					</td>
+					*/?>
 				</tr>
 			</table>
 		</div>
@@ -46,7 +48,7 @@ if( $recent_rows ) {
 			foreach ( $recent_list as $recent_li ) {
 				$recent_subject = $recent_li['wr_subject'];
 				$recent_subject .= ":";
-				$recent_content = cut_str($recent_li['wr_content'],30,'...');
+				$recent_content = cut_str(strip_tags($recent_li['wr_content']),30,'...');
 				$recent_url = g::url().'/bbs/board.php?bo_table='.$recent_li['bo_table'].'&wr_id='.$recent_li['wr_id'];
 				$recent_comment_count = $recent_li['wr_comment'];
 				if ( $recent_comment_count == 0 ) $no_comment = 'no-comment';
@@ -86,11 +88,13 @@ if( $recent_comments ) {
 				<tr valign='top'>
 					<td align='left' class='title-left'>
 						<div><img src="<?=x::url_theme()?>/img/recent-posts.png"></div>
-						<div class='label'>RECENT COMMENTS</div>
+						<div class='label'>최근 댓글</div>
 					</td>
+					<? /*
 					<td align='right'>
 						<div class='posts-more'><a href='#'>more <img src="<?=x::url_theme()?>/img/more-icon.png"></a></div>
 					</td>
+					*/ ?>
 				</tr>
 			</table>
 		</div>
@@ -117,7 +121,7 @@ if( $recent_comments ) {
 				</span>-->
 				<span class='post-content'>
 						<?=$comments_author?>: <?=$comments_content?>
-						<span class='time-ago'>posted <?=$timeago?> ago</span>
+						<span class='time-ago'>작성일 <?=$timeago?></span>
 				</span>
 			</a>
 		</div>
@@ -145,10 +149,10 @@ if( $post_comments ) {
 					<tr valign='top'>
 						<td align='left' class='title-left'>
 							<div><img src="<?=x::url_theme()?>/img/recent-posts.png"></div>
-							<div class='label'><?=$board_title?>, Comments</div>
+							<div class='label'><?=$board_title?> 댓글</div>
 						</td>
 						<td align='right'>
-							<div class='posts-more'><a href='<?g::url()?>/bbs/board.php?bo_table=<?=$latest_bo_table?>'>more <img src="<?=x::url_theme()?>/img/more-icon.png"></a></div>
+							<div class='posts-more'><a href='<?g::url()?>/bbs/board.php?bo_table=<?=$latest_bo_table?>'>자세히<img src="<?=x::url_theme()?>/img/more-icon.png"></a></div>
 						</td>
 					</tr>
 				</table>
@@ -159,7 +163,7 @@ if( $post_comments ) {
 			$i = 1;
 			$no_of_comments = count($post_comments);
 			foreach ( $post_comments as $post_comment ) {
-				$comment_content = cut_str($post_comment['wr_content'],30,'...');
+				$comment_content = cut_str(strip_tags($post_comment['wr_content']),30,'...');
 				$comment_url = g::url().'/bbs/board.php?bo_table='.$latest_bo_table.'&wr_id='.$post_comment['wr_id'];
 				$timeago = getTimeDuration(strtotime($post_comment['wr_datetime'])); ?>	
 				<li <?if($i==$no_of_comments) echo "class='last-comment'" ?>>
@@ -172,15 +176,13 @@ if( $post_comments ) {
 		</div>
 	</div> <? }} ?><!--posts--recent-->
 
-<?if( ms::meta('combanner_sidebar') ) { ?>
 <div class='sidebar-banner'>
-	<?if( !$sidebar_banner_title = ms::meta('combanner_sidebar_text1') ) $sidebar_banner_title = 'SIDEBAR BANNER TITLE' ?>
-	<div class='sidebar-banner-title'><?=$sidebar_banner_title?></div>
-	<?if( ms::meta('combanner_sidebar') ) $sidebar_banner = ms::meta('img_url').ms::meta('combanner_sidebar');
-	else $sidebar_banner = x::url_theme().'/img/no-image-190w-160h.png';?>
-	<img src="<?=$sidebar_banner?>">
+	<?if( !$sidebar_banner_title = ms::meta('combanner_sidebar_text1') ) $sidebar_banner_title = '배너 제목을 입력하세요'; ?>
+		<div class='sidebar-banner-title'><?=$sidebar_banner_title?></div>
+		<?if( ms::meta('combanner_sidebar') ) $sidebar_banner = ms::meta('img_url').ms::meta('combanner_sidebar');
+		else $sidebar_banner = x::url_theme().'/img/no_image_banner3.png';?>
+		<img src="<?=$sidebar_banner?>">
 </div>
-<?}?>
 
 
 <?php
@@ -189,25 +191,25 @@ function getTimeDuration($unixTime) {
 	$secsago   =   time() - $unixTime;
 	 
 	if ( $secsago < 60 ){
-		$period = $secsago == 1 ? '1 second'     : $secsago . ' seconds';
+		$period = $secsago == 1 ? '1 초'     : $secsago . ' 초전';
 	} else if ($secsago < 3600) {
 		$period    =   round($secsago/60);
-		$period    =   $period == 1 ? '1 minute' : $period . ' minutes';
+		$period    =   $period == 1 ? '1 분' : $period . ' 분전';
 	} else if ($secsago < 86400) {
 		$period    =   round($secsago/3600);
-		$period    =   $period == 1 ? '1 hour'   : $period . ' hours';
+		$period    =   $period == 1 ? '1 시'   : $period . ' 시간전';
 	} else if ($secsago < 604800) {
 		$period    =   round($secsago/86400);
-		$period    =   $period == 1 ? '1 day'    : $period . ' days';
+		$period    =   $period == 1 ? '1 일'    : $period . ' 일전';
 	} else if ($secsago < 2419200) {
 		$period    =   round($secsago/604800);
-		$period    =   $period == 1 ? '1 week'   : $period . ' weeks';
+		$period    =   $period == 1 ? '1 주'   : $period . ' 주전';
 	} else if ($secsago < 29030400) {
 		$period    =   round($secsago/2419200);
-		$period    =   $period == 1 ? '1 month'   : $period . ' months';
+		$period    =   $period == 1 ? '1 달'   : $period . ' 달전';
 	} else {
 		$period    =   round($secsago/29030400);
-		$period    =   $period == 1 ? '1 year'    : $period . ' years';
+		$period    =   $period == 1 ? '1 년'    : $period . ' 년전';
 	}
 	return $period;
 }

@@ -3,7 +3,6 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 ?>
 
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
-<? if( $list ) { ?>
 <div class="posts" >
 		<div class='title'>
 			<table width='100%'>
@@ -13,13 +12,13 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 						<div class='label'><?=$bo_subject?></div>
 					</td>
 					<td align='right'>
-						<div class='posts-more'><a href="<?=g::url()?>/bbs/board.php?bo_table=<?=$bo_table?>" target='_blank'>more <img src="<?=$latest_skin_url?>/img/more-icon.png"></a></div>
+						<div class='posts-more'><a href="<?=g::url()?>/bbs/board.php?bo_table=<?=$bo_table?>" target='_blank'>자세히 <img src="<?=$latest_skin_url?>/img/more-icon.png"></a></div>
 					</td>
 				</tr>
 			</table>
 		</div>
 	<div class='posts-items-with-image'>
-	<?php
+	<? if( $list ) { 
 		$count = 1;
 		foreach ( $list as $li ) {
 			if( !$li['wr_subject'] == '' ) {
@@ -72,8 +71,8 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 				</td>
 			</tr>
 		</table>
-	<?}?>
+		<?}?>
+	<? } else echo "<b>".$bo_subject."</b> 게시판에 글을 등록해 주세요"; ?>
 	</div>
 </div>
-<? } ?>
 

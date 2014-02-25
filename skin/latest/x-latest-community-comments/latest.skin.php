@@ -10,10 +10,10 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 				<tr valign='top'>
 					<td align='left' class='title-left'>
 						<div><img src="<?=$latest_skin_url?>/img/my-posts.png"></div>
-						<div class='label'>MY POSTS</div>
+						<div class='label'>내 글</div>
 					</td>
 					<td align='right'>
-						<div class='posts-more'><a href="<?=g::url()?>/bbs/board.php?bo_table=<?=$bo_table?>">more <img src="<?=$latest_skin_url?>/img/more-icon.png"></a></div>
+						<div class='posts-more'><a href="<?=g::url()?>/bbs/board.php?bo_table=<?=$bo_table?>">자세히 <img src="<?=$latest_skin_url?>/img/more-icon.png"></a></div>
 					</td>
 				</tr>
 			</table>
@@ -27,7 +27,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 				$subject .= ":";
 				$url = $li['href'];
 				$no_comment = '';
-				if ( !$comment_count = $li['comment_cnt'] ) {
+				if ( !$comment_count = strip_tags($li['comment_cnt'])) {
 						$comment_count = 0;
 						$no_comment = 'no-comment';
 					}

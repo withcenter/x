@@ -3,7 +3,6 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 ?>
 
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
-<? if( $list ) { ?>
 <div class="community-posts" >
 		<div class='title'>
 			<table width='100%'>
@@ -13,12 +12,13 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 						<div class='label'><?=$bo_subject?></div>
 					</td>
 					<td align='right'>
-						<div class='posts-more'><a href="<?=g::url()?>/bbs/board.php?bo_table=<?=$bo_table?>" target='_blank'>more <img src="<?=$latest_skin_url?>/img/more-icon.png"></a></div>
+						<div class='posts-more'><a href="<?=g::url()?>/bbs/board.php?bo_table=<?=$bo_table?>" target='_blank'>자세히 <img src="<?=$latest_skin_url?>/img/more-icon.png"></a></div>
 					</td>
 				</tr>
 			</table>
 		</div>
 	<div class='posts-items'>
+		<? if( $list ) { ?>
 		<ul>
 		<?php
 			$i = 1;
@@ -26,7 +26,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			foreach ( $list as $li ) {
 				$subject = $li['wr_subject'];
 				$subject .= ":";
-				$content = cut_str($li['wr_content'],30,'...');
+				$content = cut_str(strip_tags($li['wr_content']),30,'...');
 				$url = $li['href'];
 				$comment_count = $li['wr_comment'];
 				$no_comment = '';
@@ -43,7 +43,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			</li>		
 		<?}?>
 		</ul>
+		<? }
+			else echo "<ul><li><b>".$bo_subject.'</b>게시판에 글을 등록해 주세요</li></ul>';
+		?>
 	</div>
 </div>
-<? } ?>
 
