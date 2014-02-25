@@ -327,7 +327,7 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 
 #travel_theme_board_2 .travel-write{
 	margin-bottom:10px;
-	float:right;	
+	text-align:right;
 }
 
 #travel_theme_board_2 .lower-buttons{

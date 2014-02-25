@@ -49,7 +49,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 						</td>
 					</tr>	
 					<tr valign='top'>
-						<td colspan=2 width='100px'>
+						<td colspan=2>
 						<?php
 							echo "<span class='travel-content'><a href='$li[href]'>".cut_str( strip_tags( $li['wr_content'] ) ,100,'...')."</a></span>";
 						?>
