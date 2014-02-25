@@ -67,7 +67,7 @@ include_once(G5_PATH."/tail.sub.php");
 		}
 		
 		#logo-and-search{
-			height:75px;
+			height:65px;
 		}
 		
 		#hd_sch #sch_stx {
