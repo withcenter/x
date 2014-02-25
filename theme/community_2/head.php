@@ -59,7 +59,7 @@
             }
 	</script>
 <div class='main-menu'><div class='inner'>
-	<a href='<?=g::url()?>/?page=intro'>회사소개</a>
+	<? if( ms::meta( 'com2_info' ) ) { ?> <a href='<?=g::url()?>/?page=intro'>회사소개</a> <?}?>
 	<? for ( $i = 1; $i <= 6; $i++ ) { ?>
 	<? if ( ms::meta('menu_'.$i) ) { 
 		$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('menu_'.$i)."'");
