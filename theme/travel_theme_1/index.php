@@ -1,5 +1,4 @@
 <div class='top-panel'>
-	<div style='border: solid 1px #d9d9d9; padding: 1px'>
 	<div class='banner'>
 		<?
 			for ( $i = 1 ; $i <= 5 ; $i++ ) {
@@ -14,19 +13,17 @@
 			}
 		?>
 		<div class='banner-pagination'>
-
-			<?
-				$count = 0;
-				for ( $i = 1 ; $i <= 5 ; $i++ ) {
-					if( ms::meta( 'travelbanner_'.$i ) ){
-						echo "<div class='banner-image image_num_$i'>";
-						echo "<img src='".ms::meta('img_url').ms::meta('travelbanner_'.$i)."'>";
-						echo "<p class='banner-text'>".ms::meta('travelbanner_'.$i.'_text1')."</p>";
-						echo "</div>";
+				<?
+					$count = 0;
+					for ( $i = 1 ; $i <= 5 ; $i++ ) {
+					if( !ms::meta( 'travelbanner_'.$i ) ){
+						continue;
 					}
-				}
-			?>
-		</div>
+					$count++ ;
+				?>
+					<div class='pages' image_meta_num='<?=$i?>'><?=$count?></div>
+				<?}?>
+			</div>
 		<?
 			if( $count == 0 ){?>
 			<div class='no-banner'>
@@ -34,8 +31,7 @@
 			</div>
 		<?}?>
 	</div>
-</div>
-</div>
+
 	
 	<div class='forum-list'>
 		<div class='inner'>
@@ -51,6 +47,7 @@
 			?>		
 		</div>
 	</div>
+</div>
 <div class='middle-panel'>
 <?
 $latest_bo_table = ms::board_id(etc::domain()).'_1';
