@@ -22,11 +22,11 @@ if( $posts ) { ?>
 		  foreach ( $posts as $board_id => $post ) {
 			foreach ( $post as $p ) {
 				$url = G5_BBS_URL."/board.php?bo_table=$board_id&wr_id=$p[wr_id]";
-				$subject = conv_subject( $p['wr_subject'], 14, '...');
+				$new_subject = conv_subject( $p['wr_subject'], 14, '...');
 				$dot_url = x::url_theme().'/img/dot.gif';
 				echo "
 						<div class='row'>
-							<img class='dot-icon' src='$dot_url'/><a href='$url'>$subject</a>
+							<img class='dot-icon' src='$dot_url'/><a href='$url'>$new_subject</a>
 						</div>
 				";
 

@@ -27,11 +27,11 @@ if ( g::forum_exist($forum_1) && g::forum_exist($forum_2) && g::forum_exist($for
 	foreach ( $posts as $key => $post ) {
 		foreach ( $post as $p ) {
 			$url = G5_BBS_URL."/board.php?bo_table=$key&wr_id=$p[wr_id]";
-			$subject = conv_subject( $p['wr_subject'], 14, '...');
+			$popular_subject = conv_subject( $p['wr_subject'], 14, '...');
 			$dot_url = x::url_theme().'/img/dot.gif';
 			echo "
 					<div class='row'>
-						<img class='dot-icon' src='$dot_url'/><a href='$url'>$subject</a>
+						<img class='dot-icon' src='$dot_url'/><a href='$url'>$popular_subject</a>
 					</div>
 			";
 		}

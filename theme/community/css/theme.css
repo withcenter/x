@@ -269,29 +269,28 @@
 /** Menu */
 #menu-container {
 	height: 42px;
-	background: #096e87;
+	background-color: #096e87;
 	border: solid 1px #12586d;
 }
 
 #menu-container #menu-top {
 	width: 970px;
 	margin: 0 auto;
-	padding: 3px 0 0 25px;
+	padding: 13px 0 0 25px;
 }
 
-#menu-top ul li {
-	display: inline-block;
+#menu-top span {
 	margin: 0.8em;
 	border-color: #4792a5;
 	border-left-style: groove;
 }
 
 
-#menu-top ul li.first-menu {
+#menu-top span.first-menu {
 	border-left: 0;
 }
 
-#menu-top ul li a {
+#menu-top span a {
 	text-decoration: none;
 	font-family: Gulim, Arial;
 	font-size: 10pt;
@@ -301,13 +300,13 @@
 	border: solid 1px transparent;
 }
 
-#menu-top ul li a:hover {
+#menu-top span a:hover {
 	background: #085e74;
 	border: solid 1px #044e67;
 	border-radius: 5px;	
 }
 
-#menu-top ul li.first-menu  a{
+#menu-top span.first-menu  a{
 	margin-left: 0;
 }
 
