@@ -20,9 +20,11 @@ else { ?>
 						if ( $i == 1 ) $first_image = 'selected';
 						else $first_image = '';
 						echo "<div class='banner-image image_num_$i $first_image'>";
-						echo "<a href='".ms::meta('combanner_'.$i.'_text3')."' target='_blank'><img src='".$banner_url.$banner_image."'>";
+						if ( !$url = ms::meta('combanner_'.$i.'_text3') )  $url = "javascript:void(0)";
+						
+						echo "<a href='$url' target='_blank'><img src='".$banner_url.$banner_image."'>";
 						echo "<p class='banner-text'><span class='banner-title'>".ms::meta('combanner_'.$i.'_text1')." |</span> <span class='banner-content'>".cut_str(strip_tags(ms::meta('combanner_'.$i.'_text2')),60,'...')."</span></p>";
-						echo "<div class='banner-more'>MORE ></div>";
+						echo "<div class='banner-more'>MORE &gt;</div>";
 						echo "</a></div>";
 					}
 				}

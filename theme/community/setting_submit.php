@@ -19,9 +19,4 @@
 	
 	
 	ms::meta('comheader_contact_number',$in['comheader_contact_number']);
-	ms::meta('comheader_email',$in['comheader_email']);
-	
-	ms::meta('comfooter_about',$in['comfooter_about']);
-	ms::meta('comfooter_terms',$in['comfooter_terms']);
-	ms::meta('comfooter_privacy',$in['comfooter_privacy']);
-	ms::meta('comfooter_faqs',$in['comfooter_faqs']);
+	ms::meta('footer_text', $in['footer_text']);
