@@ -127,16 +127,9 @@
 	vertical-align: top;
 }
 
-#container .top-panel .forum-list {
-	width: 301px;
-	margin-left: 6px;
-	border: solid 1px #d9d9d9;
-	border-radius: 2px;
-	padding: 1px;
-}
+
 
 #container .top-panel .forum-list .inner{
-	background: #f8f8f8;
 	height: 332px;
 	padding:9px;
 }

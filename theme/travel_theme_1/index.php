@@ -119,6 +119,6 @@ if( $rows ){
 <?}?>
 </div>
 <?
-	$latest_bo_table = ms::board_id( etc::domain() ).'_5';
+	$latest_bo_table = ms::board_id( etc::domain() ).'_3';
 	if ( g::forum_exist($latest_bo_table)) echo latest("x-latest-travel-packages",  $latest_bo_table, 5, 20);
 ?>
