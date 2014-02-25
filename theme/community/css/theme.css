@@ -269,6 +269,8 @@
 	width: 100%;
 	background-color: #096e87;
 	border: solid 1px #12586d;
+	border-right: 0;
+	border-left: 0;
 }
 #menu-top > .inner {
 	width:970px;
@@ -317,48 +319,23 @@
 }
 
 
-.footer-info {
-	margin-top: 20px;
-	background: #e7e7e7;
-	height: 40px;
-	padding: 20px;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-}
-
 .footer-info, .footer-info a {
 	color: #767676;
-}
-
-.footer-info a {
-	margin: 0 1em 1em 0;
-	text-decoration: none;
-}
-
-.footer-info .footer-links {
-	padding: 0 0 10px 0;
-}
-
-.footer-info > div {
-	display: inline-block;
-	vertical-align: middle;
-}
-
-.footer-logo{
-	margin: 0 1em 0 0;
 }
 
 .footer-info {
 	width: 100%;
 	background-color: #f3f3f3;
-	padding: 0 10px;
-	min-height: 60px;
 	text-align: center;
+	min-height: 50px;
+	margin-top: 20px;
 }
 .footer-info  .inner {
 	width: 970px;
 	margin: 0 auto;
+	padding: 10px 0;
 }
+
 /**TOP POSTS*/
 
 

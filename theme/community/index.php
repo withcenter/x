@@ -34,21 +34,21 @@ else { ?>
 	</div>
 	
 	<div class='top-posts'>
-		<table width='750px' cellspacing=0 cellpadding=0>
+		<table width='100%' cellspacing=0 cellpadding=0>
 			<tr valign='top'>
-			<td width='240px'>
+			<td width='240'>
 				<?php $latest_bo_table = ms::meta('forum_no_1');
 					if ( g::forum_exist($latest_bo_table ) ) echo latest( 'x-latest-community-posts' , $latest_bo_table , 6, 25);
 				?>
 			</td>
-			<td width="10px"></td>
-			<td width='250px'>
+			<td width="10"></td>
+			<td width='250'>
 				<?php $latest_bo_table = ms::meta('forum_no_2');
 					if( g::forum_exist($latest_bo_table ) ) echo latest( 'x-latest-community-posts' , $latest_bo_table , 6, 25);
 				?>
 			</td>
-			<td width="10px"></td>
-			<td width='240px' class='last-table-data'>
+			<td width="10"></td>
+			<td width='240' class='last-table-data'>
 				<?php $latest_bo_table = ms::meta('forum_no_3');
 					if ( g::forum_exist($latest_bo_table ) ) echo latest( 'x-latest-community-posts-images' , $latest_bo_table , 4, 25);
 				?>
@@ -70,21 +70,21 @@ else { ?>
 		</div>
 	
 	<div class='middle-posts'>
-		<table width='750px' cellspacing=0 cellpadding=0>
+		<table cellspacing=0 cellpadding=0 width='100%'> 
 			<tr valign='top'>
-			<td width='240px'>
+			<td width='240'>
 				<?php $latest_bo_table = ms::meta('forum_no_4');
 					if ( g::forum_exist($latest_bo_table ) ) echo latest( 'x-latest-community-posts' , $latest_bo_table , 6, 25);
 				?>
 			</td>
-			<td width="10px"></td>
-			<td width='250px'>
+			<td width="10"></td>
+			<td width='250'>
 				<?php $latest_bo_table = ms::meta('forum_no_5');
 					if( g::forum_exist($latest_bo_table ) ) echo latest( 'x-latest-community-posts' , $latest_bo_table , 6, 25);
 				?>
 			</td>
-			<td width="10px"></td>
-			<td width='240px' class='last-table-data'>
+			<td width="10"></td>
+			<td width='240' class='last-table-data'>
 				<?php $latest_bo_table = ms::meta('forum_no_6');
 					if ( g::forum_exist($latest_bo_table ) ) echo latest( 'x-latest-community-posts-images' , $latest_bo_table , 4, 25);
 				?>
@@ -105,21 +105,21 @@ else { ?>
 	</div>
 	
 	<div class='bottom-posts'>
-		<table width='750px' cellspacing=0 cellpadding=0>
+		<table width='100%' cellspacing=0 cellpadding=0>
 			<tr valign='top'>
-			<td width='240px'>
+			<td width='240'>
 				<?php $latest_bo_table = ms::meta('forum_no_7');
 					if ( g::forum_exist($latest_bo_table ) ) echo latest( 'x-latest-community-posts' , $latest_bo_table , 6, 25);
 				?>
 			</td>
-			<td width="10px"></td>
-			<td width='250px'>
+			<td width="10"></td>
+			<td width='250'>
 				<?php $latest_bo_table = ms::meta('forum_no_8');
 					if( g::forum_exist($latest_bo_table ) ) echo latest( 'x-latest-community-posts' , $latest_bo_table , 6, 25);
 				?>
 			</td>
-			<td width="10px"></td>
-			<td width='240px' class='last-table-data'>
+			<td width="10"></td>
+			<td width='240' class='last-table-data'>
 				<?php $latest_bo_table = ms::meta('forum_no_9');
 					if ( g::forum_exist($latest_bo_table ) ) echo latest( 'x-latest-community-posts-images' , $latest_bo_table , 4, 25);
 				?>
