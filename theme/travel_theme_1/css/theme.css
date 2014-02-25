@@ -447,6 +447,18 @@
 	color:#5d5d5d;
 }
 
+#visitor_stats .inner .visitor-status-container{
+	position:relative;
+	height:165px;
+}
+
+#visitor_stats .inner .info{
+	position:absolute;
+	left:13px;
+	width:45px;
+	bottom:5px;	
+}
+
 #visitor_stats .inner .sort-list .sort-by{
 	float:left;
 	width:60px;
@@ -474,7 +486,7 @@
 }
 
 #visitor_stats .inner .sorted-order td{
-	width:42px;		
+	width:40px;		
 }
 
 #visitor_stats .inner .sorted-order td .bars{
@@ -482,6 +494,7 @@
 	width:20px;	
 	margin:auto;
 	position:relative;
+	left:5px;
 	margin-bottom:10px;
 }
 

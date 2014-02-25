@@ -141,14 +141,18 @@ function write_cache($cache_file, $var_name, $content){
 						$percentage = round(($visits['week'][$i]['visit_sum']/$visits['week']['total']*100),2)."%";
 					?>					
 							<td>
-								<div class='bars'>
-									<div class='grey-bar' style="background:url('<?=x::url_theme()?>/img/bars.png'); height:<?=$percentage?>;">
-									
+								<div class='visitor-status-container'>
+									<div class='bars'>
+										<div class='grey-bar' style="background:url('<?=x::url_theme()?>/img/bars.png'); height:<?=$percentage?>;">
+										
+										</div>
+									</div>
+									<div class='info'>
+										<?=$visits['week'][$i]['title']?><br/>
+										(<?=$visits['week'][$i]['visit_sum']?>)<br/>
+										<?=$percentage?>
 									</div>
 								</div>
-								<div><?=$visits['week'][$i]['title']?></div>
-								<div>(<?=$visits['week'][$i]['visit_sum']?>)</div>								
-								<div class='week-percent'><?=$percentage?></div>
 							</td>
 					<?}?>
 				</tr>
@@ -159,12 +163,18 @@ function write_cache($cache_file, $var_name, $content){
 						$percentage = round(($visits['month'][$i]['visit_sum']/$visits['month']['total']*100),2)."%";
 					?>
 							<td>
-							<div class='bars'>
-							<div class='grey-bar' style="background:url('<?=x::url_theme()?>/img/bars.png'); height:<?=$percentage?>;"></div>
-							</div>							
-							<div><?=$visits['month'][$i]['title']?></div>
-							<div>(<?=$visits['month'][$i]['visit_sum']?>)</div>
-							<div class='month-percent'><?=$percentage?></div>
+							<div class='visitor-status-container'>
+									<div class='bars'>
+										<div class='grey-bar' style="background:url('<?=x::url_theme()?>/img/bars.png'); height:<?=$percentage?>;">
+										
+										</div>
+									</div>
+									<div class='info'>
+										<?=$visits['month'][$i]['title']?><br/>
+										(<?=$visits['month'][$i]['visit_sum']?>)<br/>
+										<?=$percentage?>
+									</div>
+								</div>
 							</td>
 					<?}?>
 				</tr>
@@ -175,12 +185,19 @@ function write_cache($cache_file, $var_name, $content){
 						$percentage = round(($visits['year'][$i]['visit_sum']/$visits['year']['total']*100),2)."%";
 					?>
 							<td>
-								<div class='bars'>
-								<div class='grey-bar' style="background:url('<?=x::url_theme()?>/img/bars.png'); height:<?=$percentage?>;"></div>	
-								</div>								
-								<div>Year<br/><?=$visits['year'][$i]['title']?></div>
-								<div>(<?=$visits['year'][$i]['visit_sum']?>)</div>
-								<div class='year-percent'><?=$percentage?></div>
+								<div class='visitor-status-container'>
+									<div class='bars'>
+										<div class='grey-bar' style="background:url('<?=x::url_theme()?>/img/bars.png'); height:<?=$percentage?>;">
+										
+										</div>
+									</div>
+									<br/>
+									<div class='info'>										
+										<?=$visits['year'][$i]['title']?><br/>
+										(<?=$visits['year'][$i]['visit_sum']?>)<br/>
+										<?=$percentage?>
+									</div>
+								</div>
 							</td>
 					<?}?>
 				</tr>
