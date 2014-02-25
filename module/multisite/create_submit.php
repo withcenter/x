@@ -45,7 +45,7 @@
 	else {
 			$o = array(
 				'id'	=> ms::board_id( $domain ) . '_1',
-				'subject'	=> $title,
+				'subject'	=> $title.$i,
 				'group_id'	=> 'multisite',
 				'bo_admin' => $member['mb_id'],
 				'bo_use_dhtml_editor' => 1
@@ -54,17 +54,34 @@
 			
 			// 사이트 생성시 처음 메뉴 저장
 			db::insert('x_multisite_meta', array('domain'=>$domain, 'code'=>'menu_1', 'value'=>ms::board_id ( $domain ).'_1' ) );
-			
+			db::insert('x_multisite_meta', array('domain'=>$domain, 'code'=>'forum_no_1', 'value'=>ms::board_id ( $domain ).'_1' ) ); 
 			
 			if ( $in['site-type'] ) {
 				if ( $in['site-type'] == 'community' ) $site_type = 'blog';
-				else if ( $in['site-type'] == 'travel' ) 	$site_type = 'blog';
+				else if ( $in['site-type'] == 'travel' ) 	$site_type = 'travel_theme_1';
 				else if ( $in['site-type'] == 'shopping' ) $site_type = 'blog';
 				else if ( $in['site-type'] == 'academy' ) $site_type = 'blog';
 				else if ( $in['site-type'] == 'blog' ) $site_type = 'blog';
 				else $site_type = 'blog';
 			}
 			else $site_type = 'blog';
+			
+			// 테마에 따라 각각 더 추가 생성 되는 게시판 및 메뉴
+			if ( $site_type == 'travel_theme_1' ) {
+				for ( $i = 2; $i <= 5; $i++ ) {
+					$o = array(
+						'id'	=> ms::board_id( $domain ) . '_'.$i,
+						'subject'	=> $title.$i,
+						'group_id'	=> 'multisite',
+						'bo_admin' => $member['mb_id'],
+						'bo_use_dhtml_editor' => 1
+					);
+					g::board_create($o);
+					// 사이트 생성시 메뉴 저장
+					db::insert('x_multisite_meta', array('domain'=>$domain, 'code'=>'menu_'.$i, 'value'=>ms::board_id ( $domain ).'_'.$i ) );
+					db::insert('x_multisite_meta', array('domain'=>$domain, 'code'=>'forum_no_'.$i, 'value'=>ms::board_id ( $domain ).'_'.$i ) );
+				}
+			}
 			
 			$meta_op = array(
 							'domain' => $domain,
