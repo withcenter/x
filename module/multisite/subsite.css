@@ -349,18 +349,47 @@
 }
 
 .config_general .image-config .image-upload {
-	border-bottom: solid 1px #c3c3c3;
-	padding: 0 0 1em 1em;
+	border: solid 1px #c3c3c3;
+	padding: 5px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.config_general .image-config .image-upload .title {
+	margin: 0;
+	padding: 0;
+}
+
+.config_general .image-config {
+	table-layout: fixed;
+}
+
+.config_general .image-config .image-upload input[type='text'] {
+	width: 100%;
+}
+
+.config_general .image-config .image-upload input[type='file'], .config_general .image-config .image-upload input[type='checkbox']  {
+	margin-bottom: 5px;
+}
+
+.config_general .image-config .image-upload textarea {
+	width: 98%;
+	height: 50px;
 }
 
 .config_general .image-config .image-upload img{
 	width: 100%;
 	height: 100px;
-	margin: 0.5em;
-	padding: 1px;
-	border: solid 1px #d5d5d5;
+	margin-bottom: 5px;
+	border-radius: 3px;
 }
 
-.config_general .image-config .image-upload .title {
+.config_general .image-config .image-title {
 	margin: 0;
+	background: #474747;
+	padding: 7px;
+	color: #ffffff;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-top: solid 5px #d2d2d2;
 }
