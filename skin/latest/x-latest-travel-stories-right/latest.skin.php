@@ -5,8 +5,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
 <?if ( !$list ) return;?>
-<div class='travel-stories-right'>
-
+<div class='travel-stories-right'>	
 <div class='stories-container'>
 <?php
 	foreach( $list as $li ) {
@@ -25,10 +24,11 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 			else $has_image = null;
 		}
 		?>
-		<div class='travel-story'>				
-				<table width='100%'>
+		<div class='travel-story'>
+				
+				<table>
 					<tr valign='top'>
-						<td width='50px'>
+						<td width='88px'>
 						<div class='img-container'>
 							<?
 								if ( $has_image ){
@@ -36,25 +36,27 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 								}
 								else $imgsrc['src'] = $latest_skin_url.'/img/no-image.png';							
 								$img = "<img src='".$imgsrc['src']."'/>";																
-								echo "<div class='img-wrapper'><a href='$li[href]'>".$img."</a></div>";
+								echo "<div class='img-wrapper'><a href='<?=$li[href]?>'>".$img."</a></div>";
 							?>	
 						</div>
 						</td>
-						<td style='word-break:break-all;'>
+						<td width='112px'>
 						<?php
-							echo "<span class='travel-title'><a href='$li[href]'>".conv_subject($li['wr_subject'],10,'...')."</a></span><br>";
-							echo "<span class='travel-meta'><b>작성자</b> ".$li['mb_id']."<br>";
-							echo "<b>등록일</b> ".date('Y.m.d',strtotime($li['wr_datetime']))."</span>";
-						?>
-						</td>
-					</tr>	
-					<tr valign='top'>
-						<td colspan=2 width='100px'>
-						<?php
-							echo "<span class='travel-content'><a href='$li[href]'>".cut_str( strip_tags( $li['wr_content'] ) ,100,'...')."</a></span>";
+							echo "<div class='travel-title'><a href='$li[href]'>".conv_subject($li['wr_subject'],20,'...')."</a></div>";
+							echo "<div class='travel-meta'><b>작성자</b> ".$li['mb_id']."<br>";
+							echo "<b>등록일</b> ".date('Y.m.d',strtotime($li['wr_datetime']))."</div>";
 						?>
 						</td>
 					</tr>
+					<tr valign='top'>
+						<td colspan=2 width='200px'>
+						<?php
+							echo "<span class='travel-content'><a href='<?=$li[href]?>'>".cut_str( strip_tags( $li['wr_content'] ) ,100,'...')."</a></span>";
+						?>
+						</td>
+					</tr>
+		
+
 				</table>
 				<div class='more-button'><a href='<?=$li['href']?>'><img src="<?=$latest_skin_url.'/img/more-btn.png'?>"></a></div>			
 			</a>

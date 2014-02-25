@@ -227,6 +227,7 @@ table > .header td:first-child {
 /* theme config */
 .config-theme {
 	font-family: '맑은 고딕', AppleGothic;
+	width: 100%;
 }
 .config-theme table {
 	margin: 0;
@@ -285,6 +286,9 @@ table > .header td:first-child {
 	border: none;
 	background: transparent;
 	color: #ffffff;
+	width: 320px;
+	height: 240px;
+	margin: 5px;
 }
 
 .config-theme button[name='theme']:focus {
