@@ -1,12 +1,12 @@
 <?
-$cache_file = G5_DATA_PATH."/cache/".etc::domain()."_".basename(__FILE__);
+$file_path = G5_DATA_PATH."/cache/".etc::domain()."_".basename(__FILE__);
 /*************get_cache*****************/
 //get_cache(file path full directory, EXPIRATION TIME);
 //*NOTE that leaving it blank or adding "0" as expiration time disables time expiration for the file/
-$get_cache = get_cache($cache_file, 3600);
+$get_cache = get_cache($file_path, 3600);
 /***************************************/
 if( G5_USE_CACHE && $get_cache != 1 ){
-	include_once($get_cache);	
+	include_once($file_path);
 }
 else{
 	$current_date = date('Y-m-d');
@@ -97,15 +97,12 @@ else{
 	}
 	/***************write_cache*************/
 	//write_cache(full path directory, the variable name which will hold the array, variable values)
-	write_cache($cache_file, $var_name = 'visits', $visits);
+	write_cache($file_path, $var_name = 'visits', $visits);
 	/***************************************/
 }
 
 function get_cache( $cache_file, $time = 0 ){
-	$cache_fwrite = false;
-	if(G5_USE_CACHE) {	
-	$filetime = filemtime($cache_file);
-	
+	if(G5_USE_CACHE) {			
 	if(!file_exists($cache_file)) {
             $cache_fwrite = true;
         } else {			
@@ -117,7 +114,7 @@ function get_cache( $cache_file, $time = 0 ){
                 }
             }
             if(!$cache_fwrite){
-                return $cache_file;				
+                $cache_fwrite = false;			
 			}
         }
 	}
