@@ -1,7 +1,6 @@
 <div class='top-panel'>
 	<div style='border: solid 1px #d9d9d9; padding: 1px'>
 		<div class='banner'>
-			test
 			<?
 				for ( $i = 1 ; $i <= 5 ; $i++ ) {
 					if( ms::meta( 'travelbanner_'.$i ) ){
@@ -10,14 +9,11 @@
 						echo "<p class='banner-text'>".ms::meta('travelbanner_'.$i.'_text1')."</p>";
 						echo "</div>";
 					}
-					else {
-						echo "<div>배너 없음</div>";
-					}
+					
 					
 				}
 			?>
 			<div class='banner-pagination'>
-				test
 				<?
 					$count = 0;
 					for ( $i = 1 ; $i <= 5 ; $i++ ) {
