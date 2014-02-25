@@ -29,37 +29,51 @@ include_once(G5_PATH."/tail.sub.php");
 
 <!--[if IE 7]>
 	<style>				
-		.banner{
+		#container .banner{
 			width:651px;
 			float:left;
 		}
-		.forum-list{
+		#container .forum-list{
 			float:left;			
 		}
 		
-		.middle-panel{			
+		#container .middle-panel{			
 			clear:both;			
 		}
 		
-		.travel-stories{
+		#container .travel-stories{
 			float:left;		
 		}
 		
-		.travel-story{
+		#container .travel-story{
 			float:left;				
 		}
 		
-		.middle-panel .photo-gallery {
+		#container .middle-panel .photo-gallery {
 			float:left;					
 		}
 		
-		.travel-package-container{
+		#container .travel-package-container{
 			float:left;
 		}
 		
-		.banner-pagination .pages{
+		#container .banner-pagination .pages{
 			float:left;
 			margin:0 3px 0 3px;
+		}
+		
+		#aside .submit-button input{
+			padding:5px 0;
+		}
+		
+		#logo-and-search{
+			height:75px;
+		}
+		
+		#hd_sch #sch_stx {
+			position:relative;
+			top:4px;
+			padding:5px;
 		}
 		
 	</style>
