@@ -57,5 +57,10 @@ include_once(G5_PATH."/tail.sub.php");
 			float:left;
 		}
 		
+		.banner-pagination .pages{
+			float:left;
+			margin:0 3px 0 3px;
+		}
+		
 	</style>
 <![endif]-->

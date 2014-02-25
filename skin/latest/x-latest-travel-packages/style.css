@@ -34,6 +34,7 @@
 
 .travel-package .travel-image {
 	height: 100px;
+	margin-bottom:10px;
 }
 
 .travel-package .travel-image .img-wrapper{
