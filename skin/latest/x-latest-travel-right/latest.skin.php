@@ -14,7 +14,7 @@ else $icon_image = null;
     <?php for ($i=0; $i<count($list); $i++) {  ?>
         <li>
             <?php
-			$subject = "<span class='subject'><img class='dot' src='$latest_skin_url/img/dot.gif' />".conv_subject($list[$i]['wr_subject'],35,'...').":</span>";
+			$subject = "<span class='subject'><img class='dot' src='$latest_skin_url/img/dot.gif' />".conv_subject($list[$i]['wr_subject'],15,'...').":</span>";
 			$content = "<span class='content'>".cut_str(strip_tags($list[$i]['wr_content']),70,'...')."</span>";			
 			
             echo "<div class='text-container'><a href=\"".$list[$i]['href']."\">";
