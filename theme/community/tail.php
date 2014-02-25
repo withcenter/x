@@ -2,11 +2,6 @@
 </div>
 <div style='clear:both'></div>
 <div class='footer-info'><div class='inner'>
-	<span class='footer-logo'>
-		<?if( ms::meta('comfooter_logo') ) $company_banner = ms::meta('img_url').ms::meta('comfooter_logo');
-		else $company_banner = x::url_theme().'/img/community_footer_logo.png';?>
-		<img src="<?=$company_banner?>">		
-	</span>
 	<span class='footer-text'>
 	<?php 
 		if( ms::meta('footer_text') ) { 
