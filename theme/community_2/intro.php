@@ -1,1 +1,1 @@
-intro.php
+<?=ms::meta( 'com2_info' )?>

@@ -26,27 +26,26 @@ if( $recent_rows ) {
 	}
 ?>
 <div class="posts-recent" >
-		<div class='title'>
-			<table width='100%'>
-				<tr valign='top'>
-					<td align='left' class='title-left'>
-						<div><img src="<?=x::url_theme()?>/img/recent-posts.png"></div>
-						<div class='label'>RECENT POSTS</div>
-					</td>
-					<td align='right'>
-						<div class='posts-more'><a href='#'>more <img src="<?=x::url_theme()?>/img/more-icon.png"></a></div>
-					</td>
-				</tr>
-			</table>
-		</div>
+	<div class='title'>
+		<table width='100%'>
+			<tr valign='top'>
+				<td align='left' class='title-left'>
+					<div><img src="<?=x::url_theme()?>/img/recent-posts.png"></div>
+					<div class='label'>RECENT POSTS</div>
+				</td>
+				<td align='right'>
+					<div class='posts-more'><a href='#'>more <img src="<?=x::url_theme()?>/img/more-icon.png"></a></div>
+				</td>
+			</tr>
+		</table>
+	</div>
 	<div class='posts-recent-items'>
 		<ul>
 		<?php
-			
 			foreach ( $recent_list as $recent_li ) {
 				$recent_subject = $recent_li['wr_subject'];
 				$recent_subject .= ":";
-				$recent_content = cut_str($recent_li['wr_content'],30,'...');
+				$recent_content = cut_str(strip_tags($recent_li['wr_content']),30,'...');
 				$recent_url = g::url().'/bbs/board.php?bo_table='.$recent_li['bo_table'].'&wr_id='.$recent_li['wr_id'];
 				$recent_comment_count = $recent_li['wr_comment'];
 				if ( $recent_comment_count == 0 ) $no_comment = 'no-comment';
@@ -56,7 +55,6 @@ if( $recent_rows ) {
 				<?
 					echo "<div class='post-content'><a href='$recent_url'>$recent_subject $recent_content <span class='no-of-recent-comments $no_comment'>($recent_comment_count)</span></a></div>";
 				?>
-
 			</li>		
 		<?}?>
 		</ul>
@@ -81,35 +79,29 @@ if( $recent_comments ) {
 ?>
 
 <div class="posts-recent" >
-		<div class='title'>
-			<table width='100%'>
-				<tr valign='top'>
-					<td align='left' class='title-left'>
-						<div><img src="<?=x::url_theme()?>/img/recent-posts.png"></div>
-						<div class='label'>RECENT COMMENTS</div>
-					</td>
-					<td align='right'>
-						<div class='posts-more'><a href='#'>more <img src="<?=x::url_theme()?>/img/more-icon.png"></a></div>
-					</td>
-				</tr>
-			</table>
-		</div>
+	<div class='title'>
+		<table width='100%'>
+			<tr valign='top'>
+				<td align='left' class='title-left'>
+					<div><img src="<?=x::url_theme()?>/img/recent-posts.png"></div>
+					<div class='label'>RECENT COMMENTS</div>
+				</td>
+				<td align='right'>
+					<div class='posts-more'><a href='#'>more <img src="<?=x::url_theme()?>/img/more-icon.png"></a></div>
+				</td>
+			</tr>
+		</table>
+	</div>
 	<div class='recent-comments-items'>
-
 	<?php
 		$i = 1;
 		$no_of_comments = count($comments_list);
 		foreach ( $comments_list as $comments_li ) {
-			$comments_content = cut_str($comments_li['wr_content'],30,'...');
+			$comments_content = cut_str(strip_tags($comments_li['wr_content']),30,'...');
 			$comments_url = g::url().'/bbs/board.php?bo_table='.$comments_li['bo_table'].'&wr_id='.$comments_li['wr_id'];
 			$comments_author = $comments_li['mb_id'];
-
-		$timeago = getTimeDuration(strtotime($comments_li['wr_datetime']));
-			
-			
+			$timeago = getTimeDuration(strtotime($comments_li['wr_datetime']));	
 	?>	
-
-
 		<div  class='recent-items <?if($i==$no_of_comments) echo "last-item" ?>' >
 			<a href='<?=$comments_url?>'>	
 				<!--<span style='width: 30px; height: 50px;'>
@@ -121,7 +113,6 @@ if( $recent_comments ) {
 				</span>
 			</a>
 		</div>
-
 		<?
 			$i++;
 		}?>
@@ -140,26 +131,26 @@ $board_title  = db::result("SELECT bo_subject FROM $g5[board_table] WHERE bo_tab
 if( $post_comments ) {
 	?>
 	<div class="posts-recent" >
-			<div class='title'>
-				<table width='100%'>
-					<tr valign='top'>
-						<td align='left' class='title-left'>
-							<div><img src="<?=x::url_theme()?>/img/recent-posts.png"></div>
-							<div class='label'><?=$board_title?>, Comments</div>
-						</td>
-						<td align='right'>
-							<div class='posts-more'><a href='<?g::url()?>/bbs/board.php?bo_table=<?=$latest_bo_table?>'>more <img src="<?=x::url_theme()?>/img/more-icon.png"></a></div>
-						</td>
-					</tr>
-				</table>
-			</div>
+		<div class='title'>
+			<table width='100%'>
+				<tr valign='top'>
+					<td align='left' class='title-left'>
+						<div><img src="<?=x::url_theme()?>/img/recent-posts.png"></div>
+						<div class='label'><?=$board_title?>, Comments</div>
+					</td>
+					<td align='right'>
+						<div class='posts-more'><a href='<?g::url()?>/bbs/board.php?bo_table=<?=$latest_bo_table?>'>more <img src="<?=x::url_theme()?>/img/more-icon.png"></a></div>
+					</td>
+				</tr>
+			</table>
+		</div>
 		<div class='recent-comments-items'>
 			<ul>
 		<?php
 			$i = 1;
 			$no_of_comments = count($post_comments);
 			foreach ( $post_comments as $post_comment ) {
-				$comment_content = cut_str($post_comment['wr_content'],30,'...');
+				$comment_content = cut_str(strip_tags($post_comment['wr_content']),30,'...');
 				$comment_url = g::url().'/bbs/board.php?bo_table='.$latest_bo_table.'&wr_id='.$post_comment['wr_id'];
 				$timeago = getTimeDuration(strtotime($post_comment['wr_datetime'])); ?>	
 				<li <?if($i==$no_of_comments) echo "class='last-comment'" ?>>
@@ -170,7 +161,8 @@ if( $post_comments ) {
 				<? $i++; }?>
 			</ul>
 		</div>
-	</div> <? }} ?><!--posts--recent-->
+	</div>
+<? }} ?><!--recent-comments-->
 
 <?if( ms::meta('combanner_sidebar') ) { ?>
 <div class='sidebar-banner'>

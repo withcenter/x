@@ -28,14 +28,6 @@
             </form>
 		</div>
 		
-		<div class='right-top-menu'>
-			<? for ( $i = 1; $i <= 10; $i++ ) { ?>
-				<? if ( ms::meta('forum_top_no_'.$i) ) { 
-					$menu_row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('forum_top_no_'.$i)."'");
-					if ( !$menu_top = $menu_row['bo_subject'] ) $menu_top = null; ?>
-					<a href='<?=g::url()?>/bbs/board.php?bo_table=<?=ms::meta('forum_top_no_'.$i)?>'><?=$menu_top?></a>
-			<?}}?>
-		</div>
 		<div style='clear:right;'></div>
 	</div>
 </div>
@@ -68,7 +60,7 @@
 	</script>
 <div class='main-menu'><div class='inner'>
 	<a href='<?=g::url()?>/?page=intro'>회사소개</a>
-	<? for ( $i = 1; $i <= 10; $i++ ) { ?>
+	<? for ( $i = 1; $i <= 6; $i++ ) { ?>
 	<? if ( ms::meta('menu_'.$i) ) { 
 		$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('menu_'.$i)."'");
 		if ( !$menu = $row['bo_subject'] ) $menu = null;
