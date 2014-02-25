@@ -6,7 +6,7 @@
 			<input type='file' name='header_logo'>
 			<?if( ms::meta('header_logo') != '' ) { ?>
 				<input type='hidden' name='header_logo_remove' value='n'>
-				<input type='checkbox' name='header_logo_remove' value='y'><span class='title-small'>Remove Image</span>
+				<input type='checkbox' name='header_logo_remove' value='y'><span class='title-small'>이미지 제거</span>
 			<?}?>
 		</td>
 		<td>
@@ -21,9 +21,9 @@
 			<input type='file' name='travelbanner_1'>
 			<?if( ms::meta('travelbanner_1') != '' ) { ?>
 				<input type='hidden' name='travelbanner_1_remove' value='n'>
-				<input type='checkbox' name='travelbanner_1_remove' value='y'><span class='title-small'>Remove Image</span>
+				<input type='checkbox' name='travelbanner_1_remove' value='y'><span class='title-small'>이미지 제거</span>
 			<?}?>
-			<div class='title'>배너1의 문구1</div>
+			<div class='title'>배너1의 문구</div>
 			<textarea name='travelbanner_1_text1'><?=stripslashes(ms::meta('travelbanner_1_text1'))?></textarea>
 		</td>
  
@@ -33,9 +33,9 @@
 			<input type='file' name='travelbanner_2'>
 			<?if( ms::meta('travelbanner_2') != '' ) { ?>
 				<input type='hidden' name='travelbanner_2_remove' value='n'>
-				<input type='checkbox' name='travelbanner_2_remove' value='y'><span class='title-small'>Remove Image</span>
+				<input type='checkbox' name='travelbanner_2_remove' value='y'><span class='title-small'>이미지 제거</span>
 			<?}?>
-			<div class='title'>배너2의 문구1</div>
+			<div class='title'>배너2의 문구</div>
 			<textarea name='travelbanner_2_text1'><?=stripslashes(ms::meta('travelbanner_2_text1'))?></textarea>
 		</td>
 	</tr>
@@ -46,9 +46,9 @@
 			<input type='file' name='travelbanner_3'>
 			<?if( ms::meta('travelbanner_3') != '' ) { ?>
 				<input type='hidden' name='travelbanner_3_remove' value='n'>
-				<input type='checkbox' name='travelbanner_3_remove' value='y'><span class='title-small'>Remove Image</span>
+				<input type='checkbox' name='travelbanner_3_remove' value='y'><span class='title-small'>이미지 제거</span>
 			<?}?>
-			<div class='title'>배너1의 문구1</div>
+			<div class='title'>배너3의 문구</div>
 			<textarea name='travelbanner_3_text1'><?=stripslashes(ms::meta('travelbanner_3_text1'))?></textarea>
 		</td>
 
@@ -58,22 +58,22 @@
 			<input type='file' name='travelbanner_4'>
 			<?if( ms::meta('travelbanner_4') != '' ) { ?>
 				<input type='hidden' name='travelbanner_4_remove' value='n'>
-				<input type='checkbox' name='travelbanner_4_remove' value='y'><span class='title-small'>Remove Image</span>
+				<input type='checkbox' name='travelbanner_4_remove' value='y'><span class='title-small'>이미지 제거</span>
 			<?}?>
-			<div class='title'>배너2의 문구1</div>
+			<div class='title'>배너3의 문구</div>
 			<textarea name='travelbanner_4_text1'><?=stripslashes(ms::meta('travelbanner_4_text1'))?></textarea>
 		</td>
 	</tr>
 		<tr valign='top'>
 		<td>
-			<div class='title'>배너이미지1</div>
+			<div class='title'>배너이미지5</div>
 			<?if( ms::meta('travelbanner_5') ) {?><img src="<?=ms::meta('img_url').ms::meta('travelbanner_5')?>" width=280px height=160px><br><?}?>
 			<input type='file' name='travelbanner_5'>
 			<?if( ms::meta('travelbanner_5') != '' ) { ?>
 				<input type='hidden' name='travelbanner_5_remove' value='n'>
-				<input type='checkbox' name='travelbanner_5_remove' value='y'><span class='title-small'>Remove Image</span>
+				<input type='checkbox' name='travelbanner_5_remove' value='y'><span class='title-small'>이미지 제거</span>
 			<?}?>
-			<div class='title'>배너1의 문구1</div>
+			<div class='title'>배너5의 문구</div>
 			<textarea name='travelbanner_5_text1'><?=stripslashes(ms::meta('travelbanner_5_text1'))?></textarea>
 		</td>
 

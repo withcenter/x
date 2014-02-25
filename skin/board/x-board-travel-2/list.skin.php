@@ -27,12 +27,9 @@ foreach( $list as $l ){
     <input type="hidden" name="page" value="<?php echo $page ?>">
     <input type="hidden" name="sw" value="">
 	<!------------------------------------------------------->
-	<h2 id="container_title"><?php echo $board['bo_subject'] ?><span class="sound_only"> 목록</span></h2>
-	<div id="bo_list_total">
-		<span>Total <?php echo number_format($total_count) ?>건</span>
-		<?php echo $page ?> 페이지
-	</div>
-	<?if( ms::admin() ){?>
+	<?php
+		if( ms::meta('theme') == 'travel_theme_1' && !ms::admin() ){}
+		else {?>
 		<div class="travel-write">
 			<?php if ($list_href) { ?><a href="<?php echo $list_href ?>" class="btn_b01">목록</a><?php } ?>
 			<?php if ($write_href) { ?><a href="<?php echo $write_href ?>" class="btn_b02">글쓰기</a><?php } ?>
@@ -81,13 +78,16 @@ foreach( $list as $l ){
 					<input type="submit" name="btn_submit" value="선택이동" onclick="document.pressed=this.value">
 				</div>
 				<?php } ?>
-
+			<?php
+				if( ms::meta('theme') == 'travel_theme_1' && !ms::admin() ){}
+				else {?>
 				<?php if ($list_href || $write_href) { ?>
 				<div class="btn_bo_user">
 					<?php if ($list_href) { ?><a href="<?php echo $list_href ?>" class="btn_b01">목록</a><?php } ?>
 					<?php if ($write_href) { ?><a href="<?php echo $write_href ?>" class="btn_b02">글쓰기</a><?php } ?>
 				</div>
-				<?php } ?>
+				<?php } 
+				}?>
 			</div>
 			<div style='clear:both;'></div>
 			<?php } ?>

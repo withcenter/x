@@ -8,9 +8,15 @@
     <div id="travel-hd-wrapper">
 		<div id="top-menu">
 			<div class='inner'>
-				<span class ='top-menu-item login'><a href='javascript:void(0)'>로그인</a></span>
-				<div id ='pop-up-login'><?php echo outlogin('x-outlogin-travel-pop-up');?></div>
-				<span class ='top-menu-item register'><a href='<?=G5_URL?>/<?=G5_BBS_DIR?>/register.php'>회원가입</a></span>
+				<span class ='top-menu-item'><a href='<?=g::url()?>'>홈</a></span>
+				<? if ( $member['mb_id'] ) {?>
+					<span class ='top-menu-item'><a href='<?=G5_BBS_URL?>/logout.php'>로그아웃</a></span>
+					<span class ='top-menu-item register'><a href='<?=G5_BBS_URL?>/member_confirm.php?url=register_form.php'>회원정보 수정</a></span>
+				<?} 
+					else {?>
+						<span class ='top-menu-item'><a href='<?=G5_BBS_URL?>/login.php'>로그인</a></span>
+						<span class ='top-menu-item register'><a href='<?=G5_URL?>/<?=G5_BBS_DIR?>/register.php'>회원가입</a></span>
+					<? }?>
 				<? /*
 				<div class='customer-support'><img src='<?=x::url_theme()?>/img/phone.png'/>CUSTOMER SUPPORT: 123-45-67</div>
 				*/ ?> 

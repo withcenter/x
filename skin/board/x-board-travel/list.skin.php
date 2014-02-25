@@ -1,4 +1,5 @@
 <?php
+
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 ?>
@@ -27,12 +28,10 @@ foreach( $list as $l ){
     <input type="hidden" name="page" value="<?php echo $page ?>">
     <input type="hidden" name="sw" value="">
 	<!------------------------------------------------------->
-	<h2 id="container_title"><?php echo $board['bo_subject'] ?><span class="sound_only"> 목록</span></h2>
-	<div id="bo_list_total">
-		<span>Total <?php echo number_format($total_count) ?>건</span>
-		<?php echo $page ?> 페이지
-	</div>
-		<?if( ms::admin() ){?>
+		<?
+			if( ms::meta('theme') == 'travel_theme_1' && !ms::admin() ){}
+			else {
+		?>
 			<div class="travel-write">		
 				<?php if ($list_href) { ?><a href="<?php echo $list_href ?>" class="btn_b01">목록</a><?php } ?>
 				<?php if ($write_href) { ?><a href="<?php echo $write_href ?>" class="btn_b02">글쓰기</a><?php } ?>		
@@ -82,7 +81,13 @@ foreach( $list as $l ){
 						</div>
 						</div>
 				</td>
-				<?if ($list[$i+1]){?>
+				<?if ($list[$i+1]){
+					if ( $list[$i+1]['wr_comment'] ) $no_of_comment = "<b>코멘트</b>(".$list[$i]['wr_comment'].")";
+					else $no_of_comment = null;
+			
+					if ( $list[$i+1]['wr_hit'] ) $no_of_view = "<b>조회수</b>(".number_format($list[$i]['wr_hit']).")";
+					else $no_of_view = null;
+				?>
 				<td>
 					<div class='travel_posts'>
 						<div class='post-image'>
@@ -92,17 +97,20 @@ foreach( $list as $l ){
 						</div>
 						<div class='post-subject'>
 							<a href ='<?=$list[$i+1]['href']?>'>
-								<?=conv_subject($list[$i+1]['wr_subject'],10,"...")?><span class='view-guide'>VIEW GUIDE</span>
+								<?=conv_subject($list[$i+1]['wr_subject'],10,"...")?>
 							</a>
 						</div>
-						<div class='user-review'>User Review (<?=$list[$i+1]['wr_comment']?>)
+						<div class='user-review'>
+							<span class='view-guide'><?=$no_of_view?></span>&nbsp;&nbsp;<?=$no_of_comment?> 
+							
+							<? /*
 							<div class='stars'>
 								<img src='<?=$board_skin_url?>/img/star.png'/>
 								<img src='<?=$board_skin_url?>/img/star.png'/>
 								<img src='<?=$board_skin_url?>/img/star.png'/>
 								<img src='<?=$board_skin_url?>/img/star.png'/>
 								<img src='<?=$board_skin_url?>/img/star.png'/>
-							</div>
+							</div> */?>
 						</div>
 						<div class='post-content'>
 							<a href ='<?=$list[$i+1]['href']?>'>
@@ -112,7 +120,13 @@ foreach( $list as $l ){
 					</div>
 				</td>
 				<?}?>
-				<?if ($list[$i+2]){?>
+				<?if ($list[$i+2]){
+					if ( $list[$i+2]['wr_comment'] ) $no_of_comment = "<b>코멘트</b>(".$list[$i]['wr_comment'].")";
+					else $no_of_comment = null;
+					
+					if ( $list[$i+2]['wr_hit'] ) $no_of_view = "<b>조회수</b>(".number_format($list[$i]['wr_hit']).")";
+					else $no_of_view = null;
+				?>
 				<td>
 					<div class='travel_posts'>
 						<div class='post-image'>
@@ -125,7 +139,9 @@ foreach( $list as $l ){
 								<?=conv_subject($list[$i+2]['wr_subject'],10,"...")?><span class='view-guide'>VIEW GUIDE</span>
 							</a>
 						</div>
-						<div class='user-review'>User Review (<?=$list[$i+2]['wr_comment']?>)
+						<div class='user-review'>
+							<span class='view-guide'><?=$no_of_view?></span>&nbsp;&nbsp;<?=$no_of_comment?> 
+							<? /*
 							<div class='stars'>
 								<img src='<?=$board_skin_url?>/img/star.png'/>
 								<img src='<?=$board_skin_url?>/img/star.png'/>
@@ -133,6 +149,7 @@ foreach( $list as $l ){
 								<img src='<?=$board_skin_url?>/img/star.png'/>
 								<img src='<?=$board_skin_url?>/img/star.png'/>
 							</div>
+							*/?>
 						</div>
 						<div class='post-content'>
 							<a href ='<?=$list[$i+2]['href']?>'>
@@ -157,12 +174,17 @@ foreach( $list as $l ){
 				</div>
 				<?php } ?>
 				
-				<?php if ($list_href || $write_href) { ?>
-				<div class="btn_bo_user">
-					<?php if ($list_href) { ?><a href="<?php echo $list_href ?>" class="btn_b01">목록</a><?php } ?>
-					<?php if ($write_href) { ?><a href="<?php echo $write_href ?>" class="btn_b02">글쓰기</a><?php } ?>
-				</div>
-				<?php } ?>				
+			
+			<?php
+				if( ms::meta('theme') == 'travel_theme_1' && !ms::admin() ){}
+				else {
+					if ($list_href || $write_href) { ?>
+						<div class="btn_bo_user">
+							<?php if ($list_href) { ?><a href="<?php echo $list_href ?>" class="btn_b01">목록</a><?php } ?>
+							<?php if ($write_href) { ?><a href="<?php echo $write_href ?>" class="btn_b02">글쓰기</a><?php } ?>
+						</div>
+				<?php } 
+				}?>				
 			</div>
 			<div style='clear:both;'></div>
 			<?php } ?>
