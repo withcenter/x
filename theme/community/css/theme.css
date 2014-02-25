@@ -346,24 +346,8 @@
 }
 
 /**TOP POSTS*/
-.top-posts > div {
-	display: inline-block;
-	vertical-align: top;
-	margin-right: 6px;
 
-}
 
-.top-posts .top-posts-1, .top-posts .top-posts-3 {
-	width: 240px;
-}
-
-.top-posts .top-posts-2 {
-	width: 250px;
-}
-
-.top-posts .top-posts-3 {
-	margin-right: 0;
-}
 
 /**MIDLE BANNER*/
 .middle-panel .middle-banner img {
@@ -384,23 +368,7 @@
 }
 
 /**MIDDLE POSTS*/
-.middle-posts > div {
-	display: inline-block;
-	vertical-align: top;
-	margin-right: 6px;
-}
 
-.middle-posts .middle-posts-1, .middle-posts .middle-posts-3 {
-	width: 240px;
-}
-
-.middle-posts .middle-posts-2 {
-	width: 250px;
-}
-
-.middle-posts .middle-posts-3 {
-	margin-right: 0;
-}
 
 /**NOTICE*/
 .notice{
@@ -417,23 +385,7 @@
 }
 
 /**BOTTOM POSTS*/
-.bottom-posts > div {
-	display: inline-block;
-	vertical-align: top;
-	margin-right: 6px;
-}
 
-.bottom-posts .bottom-posts-1, .bottom-posts .bottom-posts-3 {
-	width: 240px;
-}
-
-.bottom-posts .bottom-posts-2 {
-	width: 250px;
-}
-
-.bottom-posts .bottom-posts-3 {
-	margin-right: 0;
-}
 
 /**recent posts sidebar */
 .posts-recent {
