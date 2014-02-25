@@ -25,9 +25,8 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 			else $has_image = null;
 		}
 		?>
-		<div class='travel-story'>
-				
-				<table>
+		<div class='travel-story'>				
+				<table width='100%'>
 					<tr valign='top'>
 						<td width='50px'>
 						<div class='img-container'>
@@ -41,14 +40,14 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 							?>	
 						</div>
 						</td>
-						<td>
+						<td style='word-break:break-all;'>
 						<?php
-							echo "<span class='travel-title'><a href='$li[href]'>".conv_subject($li['wr_subject'],20,'...')."</a></span><br>";
+							echo "<span class='travel-title'><a href='$li[href]'>".conv_subject($li['wr_subject'],10,'...')."</a></span><br>";
 							echo "<span class='travel-meta'><b>작성자</b> ".$li['mb_id']."<br>";
 							echo "<b>등록일</b> ".date('Y.m.d',strtotime($li['wr_datetime']))."</span>";
 						?>
 						</td>
-					</tr>
+					</tr>	
 					<tr valign='top'>
 						<td colspan=2 width='100px'>
 						<?php
@@ -56,8 +55,6 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 						?>
 						</td>
 					</tr>
-		
-
 				</table>
 				<div class='more-button'><a href='<?=$li['href']?>'><img src="<?=$latest_skin_url.'/img/more-btn.png'?>"></a></div>			
 			</a>
