@@ -26,7 +26,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			foreach ( $list as $li ) {
 				$subject = $li['wr_subject'];
 				$subject .= ":";
-				$content = cut_str($li['wr_content'],30,'...');
+				$content = cut_str(strip_tags($li['wr_content']),30,'...');
 				$url = $li['href'];
 				$comment_count = $li['wr_comment'];
 				$no_comment = '';
