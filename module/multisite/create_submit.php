@@ -45,7 +45,7 @@
 	else {
 			$o = array(
 				'id'	=> ms::board_id( $domain ) . '_1',
-				'subject'	=> $title.$i,
+				'subject'	=> $title,
 				'group_id'	=> 'multisite',
 				'bo_admin' => $member['mb_id'],
 				'bo_use_dhtml_editor' => 1
@@ -59,8 +59,8 @@
 			if ( $in['site-type'] ) {
 				if ( $in['site-type'] == 'community' ) $site_type = 'community';
 				else if ( $in['site-type'] == 'travel' ) 	$site_type = 'travel_theme_1';
-				else if ( $in['site-type'] == 'shopping' ) $site_type = 'blog';
-				else if ( $in['site-type'] == 'academy' ) $site_type = 'blog';
+				else if ( $in['site-type'] == 'shopping' ) $site_type = 'community';
+				else if ( $in['site-type'] == 'academy' ) $site_type = 'community';
 				else if ( $in['site-type'] == 'blog' ) $site_type = 'blog';
 				else $site_type = 'blog';
 			}
