@@ -78,7 +78,7 @@ function hook_html_symbol()
  *  
  *  @return none
  *  
- *  @details To refresh(download) new css and javascript file, update the version on admin pannel.
+ *  @details To let the web browser automatically download new/updated css and javascript file from the server, update the version number on admin pannel.
  */
 function hook_css_js_version()
 {
