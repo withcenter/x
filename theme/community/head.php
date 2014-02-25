@@ -5,9 +5,9 @@
     <div id="travel-hd-wrapper">
 		<div id="top-menu">
 			<div class='inner'>
-					<a href='#'>CALL: <?=ms::meta('comheader_contact_number')?></a><a>&#8226;</a>
-					<a href='#'>EMAIL</a><a>&#8226;</a>
-					<a href='<?=g::url()?>/?page=faqs'>FAQS</a>
+					<? if( $contact_num = ms::meta('comheader_contact_number') ) { ?> <a href='#'>CALL: <?=$contact_num?></a> <?}?>
+					<? if( $contact_email = ms::meta('comheader_email') ) { ?> <a>&#8226;</a> <a href='#'>EMAIL ( <?=$contact_email?> )</a> <?}?>
+					<? if( $contact_email = ms::meta('comfooter_faqs') ) { ?> <a>&#8226;</a> <a href='<?=g::url()?>/?page=faqs'>FAQS</a> <?}?>
 					<div class='customer-support'>
 						<? if ( !login() ) { ?>
 							<a href='#'>LOG IN</a><a>&#8226;</a>
