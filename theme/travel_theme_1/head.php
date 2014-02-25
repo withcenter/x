@@ -172,7 +172,7 @@
 						if( $ctr % 3 == 0 ) $nomargin = 'no-margin';
 						else $nomargin = '';
 						
-						if( $ctr >= intval(($num_of_thumbnails-1)/3)*3 ) $nomargin_bottom = 'no-margin-bottom';						
+						if( $ctr >= intval(($num_of_thumbnails-1)/3)*3+1 ) $nomargin_bottom = 'no-margin-bottom';						
 						$img = "<a href = '".$links[$ctr-1]."'><img src ='".$images2_link[$ctr-1]."'/></a>";
 						$img_thumbnail = "<div class='sidebar-img-wrapper $nomargin $nomargin_bottom'>".$img."</div>";
 						echo $img_thumbnail;
