@@ -10,10 +10,7 @@
 
 	<div class='config config-theme'>
 		<div class='title'><div class='inner'>원하시는 테마를 선택하신 후 클릭하시면 반영이 됩니다.</div></div>
-		<table>
-			<tr>
-				<td>
-					
+		<div class='thumb-list'>
 			<?if ( ms::meta('theme') ) { ?>
 				<button type='submit' name='theme' disabled="disabled">
 					<div class='theme-thumb'>
@@ -23,9 +20,7 @@
 					</div>
 				</button>
 			<?}?>
-			</td>
 		<?php
-			$theme_ctr = 1;
 			$dirs = file::getDirs(X_DIR_THEME);
 			foreach ( $dirs as $dir ) {
 				$path = X_DIR_THEME . "/$dir/config.php";
@@ -39,18 +34,15 @@
 				
 				$url = x::url().'/theme/'.$dir.'/preview.jpg';
 				if( preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower(ms::meta('theme'))) != preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower($dir)) ) { ?>
-				<?if($theme_ctr==2) { echo "</td></tr><tr><td>"; $theme_ctr = 1;
-				} else { echo "</td><td>"; }?>
-				<button type='submit' name='theme' value='<?=$dir?>' onclick="return confirm('Do you really want to change Theme?');">
+					<button type='submit' name='theme' value='<?=$dir?>' onclick="return confirm('Do you really want to change Theme?');">
 						<div class='theme-thumb inactive'>
 						<img src='<?=$url?>' >
 						<table cellpadding='10px'><tr><td><?=$name?></td></table>
 						</div>
-					</button></td>
+					</button>
 					<? }
 				$theme_ctr++;
 			} ?>
-	
-		</table>
+		</div> <!--thumb-list-->
 	</div> <!--config--theme-->
 </form>
