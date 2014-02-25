@@ -23,14 +23,15 @@
 				<td width='50%'>
 					<span>메인 타이틀</span><input type='text' name='title' value='<?=ms::meta('title')?>'>
 				</td>
-				<td width='50%'>
-					<span>서브 타이틀</span><input type='text' name='secondary_title' value='<?=ms::meta('secondary_title')?>'>
+				<td rowspan=2>
+					하단 문구<textarea name='footer_text' style='margin-left: 50px; height: 100%; width: 265px;'><?=stripslashes(ms::meta('footer_text'))?></textarea>
 				</td>
 			</tr>
 			<tr valign='top'>
-				<td colspan=2>
-					<span>하단 문구</span><textarea name='footer_text'><?=stripslashes(ms::meta('footer_text'))?></textarea>
+				<td>
+					<span>서브 타이틀</span><input type='text' name='secondary_title' value='<?=ms::meta('secondary_title')?>'>
 				</td>
+	
 			</tr>
 		</table>
 		<div class='middle-title'>첫 페이지에 나타날 글의 게시판을 선택하십시오.</div>
