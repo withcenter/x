@@ -1,8 +1,13 @@
 <?php
+/**remove tags*/
+foreach ( $in as $key => $value) {
+	$in[$key] = strip_tags($value);
+}
+
 /** new config meta update method */
 ms::meta( 'title' , $in['title'] );
 ms::meta( 'secondary_title' , $in['secondary_title'] );
-ms::meta( 'footer_text' , strip_tags( $in['footer_text'] ) );
+ms::meta( 'footer_text' , $in['footer_text'] );
 
 for( $i = 1; $i <= 10; $i++ ) {
 	ms::meta( 'forum_no_'.$i , $in['forum_no_'.$i] );

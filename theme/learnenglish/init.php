@@ -19,3 +19,4 @@ function hook_multisite_tail_begin() {
 	}
 }
 }
+

@@ -269,18 +269,22 @@
 /** Menu */
 #menu-container {
 	height: 42px;
-	background: #096e87;
+	background-color: #096e87;
 	border: solid 1px #12586d;
 }
 
 #menu-container #menu-top {
 	width: 970px;
 	margin: 0 auto;
-	padding: 3px 0 0 25px;
+	padding: 13px 0 0 25px;
 }
 
+<<<<<<< HEAD
 #menu-top ul li {
 	display: block;
+=======
+#menu-top span {
+>>>>>>> 87c9bde57ae940e9fd344d784a45f33ce8ce07b4
 	margin: 0.8em;
 	border-color: #4792a5;
 	border-left-style: groove;
@@ -293,11 +297,11 @@
 }
 
 
-#menu-top ul li.first-menu {
+#menu-top span.first-menu {
 	border-left: 0;
 }
 
-#menu-top ul li a {
+#menu-top span a {
 	text-decoration: none;
 	font-family: '맑은 고딕', AppleGothic;
 	font-size: 10pt;
@@ -311,9 +315,15 @@
 	top: -4px;
 }
 
+<<<<<<< HEAD
 #menu-top ul li a:hover {
 	background: #6b6b6b;
 	border:1px solid #464646;
+=======
+#menu-top span a:hover {
+	background: #085e74;
+	border: solid 1px #044e67;
+>>>>>>> 87c9bde57ae940e9fd344d784a45f33ce8ce07b4
 	border-radius: 5px;	
 }
 #menu-top ul li a .inner {
@@ -322,10 +332,14 @@
 	padding: 0 18px;
 }
 
+<<<<<<< HEAD
 #menu-top ul li a:hover .inner {
 	border-top: 1px solid #7c7c7c;
 }
 #menu-top ul li.first-menu  a{
+=======
+#menu-top span.first-menu  a{
+>>>>>>> 87c9bde57ae940e9fd344d784a45f33ce8ce07b4
 	margin-left: 0;
 }
 

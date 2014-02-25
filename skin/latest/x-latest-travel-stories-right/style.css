@@ -1,0 +1,68 @@
+.travel-stories-right{
+	border:1px solid #a9a9a9;
+	padding:1px;
+	margin-bottom:10px;
+	border-radius:3px;
+}
+
+.travel-stories-right .stories-container{
+	background-color:#f5f5f5;
+	padding:10px 10px 30px 10px;
+}
+
+.travel-stories-right .stories-container .travel-story {
+	vertical-align: top;
+	font-family: Gotum, Arial;
+	position: relative;	
+}
+
+.travel-stories-right .stories-container a{
+	text-decoration:none;
+}
+
+.travel-stories-right .stories-container .travel-story table img {
+	width:100%;
+}
+
+.travel-stories-right  .stories-container .travel-story table .img-container {
+	padding: 1px;
+	border: solid 1px #d5d5d5;
+	border-radius:3px;
+}
+
+.travel-stories-right  .stories-container .travel-story table .img-wrapper {
+	width:84px;
+	height:84px;
+	overflow:hidden;
+}
+
+
+.travel-stories-right .stories-container .travel-story table .travel-meta {
+	color: #a9a9a9;
+	font-style: italic;
+}
+
+.travel-stories-right .stories-container .travel-story .more-button {
+	position: absolute;
+	bottom: -20px;	
+	right: 0;
+}
+.travel-stories-right .stories-container .travel-story table .travel-content {
+	font-family: Malgun Gothic;
+	font-size: 9pt;
+	color: #5d5d5d;
+}
+.travel-stories-right .stories-container .travel-story table .more-button > div {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 0 0 0.5em;
+}
+
+.travel-stories .title {
+	border-bottom: 1px solid #a9a9a9;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #1a1a1a;
+	font-family: '맑은 고딕', AppleGothic;
+	padding-bottom: 8px;
+}

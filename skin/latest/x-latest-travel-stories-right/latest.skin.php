@@ -5,8 +5,8 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
 <?if ( !$list ) return;?>
-<div class='travel-stories'>
-	<div class='title'><?=$bo_subject?></div>
+<div class='travel-stories-right'>
+
 <div class='stories-container'>
 <?php
 	foreach( $list as $li ) {
@@ -37,7 +37,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 								}
 								else $imgsrc['src'] = $latest_skin_url.'/img/no-image.png';							
 								$img = "<img src='".$imgsrc['src']."'/>";																
-								echo "<div class='img-wrapper'><a href='<?=$li[href]?>'>".$img."</a></div>";
+								echo "<div class='img-wrapper'><a href='$li[href]'>".$img."</a></div>";
 							?>	
 						</div>
 						</td>
@@ -52,7 +52,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 					<tr valign='top'>
 						<td colspan=2 width='100px'>
 						<?php
-							echo "<span class='travel-content'><a href='<?=$li[href]?>'>".cut_str( strip_tags( $li['wr_content'] ) ,100,'...')."</a></span>";
+							echo "<span class='travel-content'><a href='$li[href]'>".cut_str( strip_tags( $li['wr_content'] ) ,100,'...')."</a></span>";
 						?>
 						</td>
 					</tr>

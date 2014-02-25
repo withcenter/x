@@ -17,6 +17,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 				</tr>
 			</table>
 		</div>
+
 	<div class='posts-items-with-image'>
 	<? if( $list ) { 
 		$count = 1;
@@ -36,29 +37,27 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 					else $has_image = null;
 				}
 		
-			$subject = conv_subject($li['wr_subject'], 18, "...");
-			$content = cut_str($li['wr_content'],30,'...');
-			$url = $li['href'];
-			$no_comment = '';
-			if ( !$comment_count = $li['comment_cnt'] ) {
-				$comment_count = 0;
-				$no_comment = 'no-comment';
-			}
+		$subject = conv_subject($li['wr_subject'], 18, "...");
+		$content = cut_str( strip_tags($li['wr_content']) ,30,'...');
+		$url = $li['href'];
+		$no_comment = '';
+		if ( !$comment_count = $li['comment_cnt'] ) {
+			$comment_count = 0;
+			$no_comment = 'no-comment';
+		}
 	?>	
 		<table width='100%'>
 			<tr valign='top'>
 				<td width='60px'>
 					<div class='posts-image'>					
-						<?
-							if ( $has_image) {							
-								$imgsrc = get_list_thumbnail($bo_table, $li['wr_id'], 60, 60);							
-							}
-							else $imgsrc['src'] = $latest_skin_url.'/img/no-image.png';
-							
-							
-							$img = "<img src='$imgsrc[src]'/>";						
-							echo "<div class='img-wrapper'>	<a href='$url?' target='_blank'>".$img."</a></div>";
-						?>
+					<?
+						if ( $has_image) {							
+							$imgsrc = get_list_thumbnail($bo_table, $li['wr_id'], 60, 60);							
+						}
+						else $imgsrc['src'] = $latest_skin_url.'/img/no-image.png';	
+						$img = "<img src='$imgsrc[src]'/>";						
+						echo "<div class='img-wrapper'>	<a href='$url?' target='_blank'>".$img."</a></div>";
+					?>
 					</div>	
 				</td>
 				<td align='left'>

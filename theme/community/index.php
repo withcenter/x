@@ -49,7 +49,7 @@ else { ?>
 		
 		<div class='top-posts-3'>
 		<?php $latest_bo_table = ms::meta('forum_no_3');
-			if ( g::forum_exist($latest_bo_table ) ) echo latest( 'x-latest-community-posts-images' , ms::board_id(etc::domain()).'_3' , 4, 25);
+			if ( g::forum_exist($latest_bo_table ) ) echo latest( 'x-latest-community-posts-images' , $latest_bo_table , 4, 25);
 		?>
 		</div>
 		
