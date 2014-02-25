@@ -1,4 +1,4 @@
-<table cellpadding=5px class='image-config'>
+<table cellpadding=5 class='image-config'>
 	<tr valign='top'>
 		<td>
 			<div class='title'>사이트 로고</div>

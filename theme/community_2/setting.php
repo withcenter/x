@@ -42,6 +42,12 @@
 	</tr>
 </table>
 <div class="select-box-left">
+	<div class='title-small'> Page Introduction </div>
+		<textarea name='com2_info'><?=ms::meta( 'com2_info' )?></textarea>
+	</div>
+</div>
+
+<div class="select-box-left">
 	<div class='title-small'> QnA Forum </div>
 	<div>
 		<span class='select-wrapper'><span class='inner'>
@@ -71,9 +77,4 @@
 		<input class='hidden-value' type='hidden' name='qna_forum' value='<?=ms::meta('qna_forum')?>' />
 	</div>
 	
-</div>
-<div class="select-box-left">
-	<div class='title-small'> Page Introduction </div>
-		<textarea name='com2_info'><?=ms::meta( 'com2_info' )?></textarea>
-	</div>
 </div>
