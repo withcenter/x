@@ -40,7 +40,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 						
 						
 						$img = "<img src='$imgsrc[src]'/>";						
-						echo "<div class='img-wrapper'><a href='<?=$li[href]?>'>".$img."</a></div>";
+						echo "<div class='img-wrapper'><a href='$li[href]'>".$img."</a></div>";
 					?>
 					</div>
 					<div class='travel-title'><a href='<?=$li['href']?>'><?=conv_subject( $li['wr_subject'], 40, '...' )?></a></div>

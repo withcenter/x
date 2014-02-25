@@ -37,13 +37,13 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 								}
 								else $imgsrc['src'] = $latest_skin_url.'/img/no-image.png';							
 								$img = "<img src='".$imgsrc['src']."'/>";																
-								echo "<div class='img-wrapper'><a href='<?=$li[href]?>'>".$img."</a></div>";
+								echo "<div class='img-wrapper'><a href='$li[href]'>".$img."</a></div>";
 							?>	
 						</div>
 						</td>
 						<td>
 						<?php
-							echo "<span class='travel-title'><a href='<?=$li[href]?>'>".conv_subject($li['wr_subject'],20,'...')."</a></span><br>";
+							echo "<span class='travel-title'><a href='$li[href]'>".conv_subject($li['wr_subject'],20,'...')."</a></span><br>";
 							echo "<span class='travel-meta'><b>작성자</b> ".$li['mb_id']."<br>";
 							echo "<b>등록일</b> ".date('Y.m.d',strtotime($li['wr_datetime']))."</span>";
 						?>
@@ -52,7 +52,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 					<tr valign='top'>
 						<td colspan=2 width='100px'>
 						<?php
-							echo "<span class='travel-content'><a href='<?=$li[href]?>'>".cut_str( strip_tags( $li['wr_content'] ) ,100,'...')."</a></span>";
+							echo "<span class='travel-content'><a href='$li[href]'>".cut_str( strip_tags( $li['wr_content'] ) ,100,'...')."</a></span>";
 						?>
 						</td>
 					</tr>
