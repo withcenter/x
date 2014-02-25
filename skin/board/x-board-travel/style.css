@@ -314,6 +314,7 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 	padding: 0 10px;
 	height:78px;
 	overflow:hidden;
+	line-height:13px;
 }
 
 #travel_theme_board .travel-write{

@@ -307,7 +307,8 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 	font-size:1em;
 	color:#868686;
 	margin-right:113px;
-	margin-bottom:15px;
+	margin-bottom:10px;
+	line-height:14px;
 	height: 30px;
 	overflow:hidden;
 }
