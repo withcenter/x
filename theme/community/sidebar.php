@@ -26,7 +26,6 @@ if( $recent_rows ) {
 	}
 ?>
 <div class="posts-recent" >
-<<<<<<< HEAD
 		<div class='title'>
 			<table width='100%'>
 				<tr valign='top'>
@@ -42,21 +41,7 @@ if( $recent_rows ) {
 				</tr>
 			</table>
 		</div>
-=======
-	<div class='title'>
-		<table width='100%'>
-			<tr valign='top'>
-				<td align='left' class='title-left'>
-					<div><img src="<?=x::url_theme()?>/img/recent-posts.png"></div>
-					<div class='label'>RECENT POSTS</div>
-				</td>
-				<td align='right'>
-					<div class='posts-more'><a href='#'>more <img src="<?=x::url_theme()?>/img/more-icon.png"></a></div>
-				</td>
-			</tr>
-		</table>
-	</div>
->>>>>>> 87c9bde57ae940e9fd344d784a45f33ce8ce07b4
+
 	<div class='posts-recent-items'>
 		<ul>
 		<?php
@@ -97,7 +82,6 @@ if( $recent_comments ) {
 ?>
 
 <div class="posts-recent" >
-<<<<<<< HEAD
 		<div class='title'>
 			<table width='100%'>
 				<tr valign='top'>
@@ -113,21 +97,7 @@ if( $recent_comments ) {
 				</tr>
 			</table>
 		</div>
-=======
-	<div class='title'>
-		<table width='100%'>
-			<tr valign='top'>
-				<td align='left' class='title-left'>
-					<div><img src="<?=x::url_theme()?>/img/recent-posts.png"></div>
-					<div class='label'>RECENT COMMENTS</div>
-				</td>
-				<td align='right'>
-					<div class='posts-more'><a href='#'>more <img src="<?=x::url_theme()?>/img/more-icon.png"></a></div>
-				</td>
-			</tr>
-		</table>
-	</div>
->>>>>>> 87c9bde57ae940e9fd344d784a45f33ce8ce07b4
+
 	<div class='recent-comments-items'>
 	<?php
 		$i = 1;
@@ -167,7 +137,6 @@ $board_title  = db::result("SELECT bo_subject FROM $g5[board_table] WHERE bo_tab
 if( $post_comments ) {
 	?>
 	<div class="posts-recent" >
-<<<<<<< HEAD
 			<div class='title'>
 				<table width='100%'>
 					<tr valign='top'>
@@ -181,21 +150,6 @@ if( $post_comments ) {
 					</tr>
 				</table>
 			</div>
-=======
-		<div class='title'>
-			<table width='100%'>
-				<tr valign='top'>
-					<td align='left' class='title-left'>
-						<div><img src="<?=x::url_theme()?>/img/recent-posts.png"></div>
-						<div class='label'><?=$board_title?>, Comments</div>
-					</td>
-					<td align='right'>
-						<div class='posts-more'><a href='<?g::url()?>/bbs/board.php?bo_table=<?=$latest_bo_table?>'>more <img src="<?=x::url_theme()?>/img/more-icon.png"></a></div>
-					</td>
-				</tr>
-			</table>
-		</div>
->>>>>>> 87c9bde57ae940e9fd344d784a45f33ce8ce07b4
 		<div class='recent-comments-items'>
 			<ul>
 		<?php
