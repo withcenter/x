@@ -65,9 +65,9 @@
 
 .login-box .login-box-middle .input-wrapper input[type='text'], .login-box .login-box-middle .input-wrapper input[type='password'] {
 	height: 28px;
-	width: 170px;
+	width: 139px;
 	background-color: transparent;
-	display: inline-block;
+
 	padding-left: 29px;
 	font-style: italic;
 	line-height: 28px;
