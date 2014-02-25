@@ -1,12 +1,12 @@
-<table cellpadding=10px width='100%' class='image-config'>
+<table cellpadding=5 width='100%' class='image-config'>
 	</tr>	
 		<tr>
 		<th colspan=3 align='center'><div class='title'>LOGO AND BANNERS<div></th>
 	</tr>
-	<tr valign='top' align='center'>
+	<tr valign='top'>
 		<td>
+			<div class='image-title'>HEADER LOGO</div>
 			<div class='image-upload'>
-				<div class='title'>HEADER LOGO</div>
 				<?if( ms::meta('header_logo') ) {?><img src="<?=ms::meta('img_url').ms::meta('header_logo')?>" width=280px height=160px><br><?}?>
 				<input type='file' name='header_logo'><br>
 				<?if( ms::meta('header_logo') != '' ) { ?>
@@ -17,8 +17,8 @@
 		</td>
 
 		<td>
+				<div class='image-title'>MAIN BANNER</div>
 			<div class='image-upload'>
-				<div class='title'>MAIN BANNER</div>
 				<?if( ms::meta('com2banner_main') ) {?><img src="<?=ms::meta('img_url').ms::meta('com2banner_main')?>" width=280px height=160px><br><?}?>
 				<input type='file' name='com2banner_main'><br>
 				<?if( ms::meta('com2banner_main') != '' ) { ?>
@@ -29,8 +29,8 @@
 		</td>
 
 		<td>
+			<div class='image-title'>BANNER ( Bottom )</div>
 			<div class='image-upload'>
-				<div class='title'>BANNER ( Bottom )</div>
 				<?if( ms::meta('com2banner_bottom') ) {?><img src="<?=ms::meta('img_url').ms::meta('com2banner_bottom')?>" width=280px height=160px><br><?}?>
 				<input type='file' name='com2banner_bottom'><br>
 				<?if( ms::meta('com2banner_bottom') != '' ) { ?>
