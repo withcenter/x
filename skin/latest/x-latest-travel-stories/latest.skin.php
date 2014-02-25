@@ -43,9 +43,9 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 						</td>
 						<td>
 						<?php
-							echo "<span class='travel-title'><a href='$li[href]'>".conv_subject($li['wr_subject'],20,'...')."</a></span><br>";
-							echo "<span class='travel-meta'><b>작성자</b> ".$li['mb_id']."<br>";
-							echo "<b>등록일</b> ".date('Y.m.d',strtotime($li['wr_datetime']))."</span>";
+							echo "<div class='travel-title'><a href='$li[href]'>".conv_subject($li['wr_subject'],20,'...')."</a></div>";
+							echo "<div class='travel-meta'><b>작성자</b> ".$li['mb_id']."<br>";
+							echo "<b>등록일</b> ".date('Y.m.d',strtotime($li['wr_datetime']))."</div>";
 						?>
 						</td>
 					</tr>
