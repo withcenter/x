@@ -1,12 +1,12 @@
 <?
-$file_path = G5_DATA_PATH."/cache/".etc::domain()."_".basename(__FILE__);
+$file_name = etc::domain()."_".basename(__FILE__);
 /*************get_cache*****************/
 //get_cache(file path full directory, EXPIRATION TIME);
 //*NOTE that leaving it blank or adding "0" as expiration time disables time expiration for the file/
-$get_cache = get_cache($file_path, 3600);
+$get_cache = get_cache($file_name, 3600);
 /***************************************/
-if( G5_USE_CACHE && $get_cache != 1 ){
-	include_once($file_path);
+if( G5_USE_CACHE && $get_cache != 1 ){		
+	include_once($get_cache);	
 }
 else{
 	$current_date = date('Y-m-d');
@@ -97,24 +97,26 @@ else{
 	}
 	/***************write_cache*************/
 	//write_cache(full path directory, the variable name which will hold the array, variable values)
-	write_cache($file_path, $var_name = 'visits', $visits);
+	write_cache($file_name, $var_name = 'visits', $visits);
 	/***************************************/
 }
 
 function get_cache( $cache_file, $time = 0 ){
+	$file_path = G5_DATA_PATH."/cache/".$cache_file;
+	
 	if(G5_USE_CACHE) {			
-	if(!file_exists($cache_file)) {
+	if(!file_exists($file_path)) {
             $cache_fwrite = true;
         } else {			
             if( $time > 0) {
-                $filetime = filemtime($cache_file);
+                $filetime = filemtime($file_path);
                 if($filetime && $filetime < (G5_SERVER_TIME - $time)) {
-                    @unlink($cache_file);
+                    @unlink($file_path);
                     $cache_fwrite = true;									
                 }
             }
             if(!$cache_fwrite){
-                $cache_fwrite = false;			
+                return $file_path;		
 			}
         }
 	}
@@ -122,8 +124,8 @@ function get_cache( $cache_file, $time = 0 ){
 }
 
 function write_cache($cache_file, $var_name, $content){
-	
-	$handle = fopen($cache_file, 'w');
+	$file_path = G5_DATA_PATH."/cache/".$cache_file;
+	$handle = fopen($file_path, 'w');
 	$cache_content = "<?php\nif (!defined('_GNUBOARD_')) exit;\n\$".$var_name."=".var_export($content, true)."?>";
 	fwrite($handle, $cache_content);
 	fclose($handle);	
