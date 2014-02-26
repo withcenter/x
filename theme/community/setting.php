@@ -1,10 +1,10 @@
 <div class='config-wrapper'>
-	<div class='config-title'><span class='config-title-info'>사이트 로고</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>	
+	<div class='config-title'><span class='config-title-info'>로고</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>	
 	<div class='config-container'>
 	<table cellpadding=5 width='100%' class='image-config'>
 	<tr valign='top' >
 		<td width='50%'>
-			<div class='image-title'></div>
+			<div class='image-title'>사이트 로고</div>
 			<div class='image-upload'>
 				<?if( ms::meta('header_logo') ) {?><img src="<?=ms::meta('img_url').ms::meta('header_logo')?>" width=280px height=160px><br><?}?>
 				<input type='file' name='header_logo'>

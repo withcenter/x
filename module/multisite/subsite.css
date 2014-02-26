@@ -356,8 +356,9 @@
 }
 
 .config_general .image-config .image-upload {
-	border: solid 1px #c3c3c3;
-	padding: 5px;
+	border: solid 1px #e8e8e8;
+	border-top: 0;
+	padding: 10px;
 	border-bottom-left-radius: 3px;
 	border-bottom-right-radius: 3px;
 }
@@ -396,7 +397,8 @@
 	background: #474747;
 	padding: 7px;
 	color: #ffffff;
-
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
 }
 
 /**new design*/
