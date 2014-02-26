@@ -22,8 +22,8 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 			</div>
 			
 			<div class='input-wrapper border-bottom'>
-				<img class='password-icon' src='<?=$outlogin_skin_url?>/key.gif' />
-				<input type="password" name="mb_password" id="ol_pw" required maxlength="20" placeholder='비밀번호' style='width: 200px;'>
+				<span><img class='password-icon' src='<?=$outlogin_skin_url?>/key.gif' />
+				<input type="password" name="mb_password" id="ol_pw" required maxlength="20" placeholder='비밀번호'></span>
 			</div>
 			
 			<div class='remember_me'>

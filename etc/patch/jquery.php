@@ -29,7 +29,8 @@ EOP;
 			patch_message("already patched");
 		}
 		else {
-			return -1;
+			patch_message("-- FAILED -- No source pattern & No patch pattern");
+			exit;
 		}
 	}
 	else {
@@ -85,9 +86,7 @@ EOP;
 	);
 	
 	
+	patch_message("patched");
 	
 	
-	
-	return 0;
-
 	

@@ -24,18 +24,41 @@ if ( g::forum_exist($forum_1) && g::forum_exist($forum_2) && g::forum_exist($for
 		조회수가 많은 글
 	</div>
 	<?php
-	foreach ( $posts as $key => $post ) {
-		foreach ( $post as $p ) {
-			$url = G5_BBS_URL."/board.php?bo_table=$key&wr_id=$p[wr_id]";
-			$popular_subject = conv_subject( $p['wr_subject'], 14, '...');
-			$dot_url = x::url_theme().'/img/dot.gif';
-			echo "
-					<div class='row'>
-						<img class='dot-icon' src='$dot_url'/><a href='$url'>$popular_subject</a>
-					</div>
-			";
-		}
-	 }
-	?>
-</div>
+	if ( $posts ) {
+		foreach ( $posts as $key => $post ) {
+			foreach ( $post as $p ) {
+				$url = G5_BBS_URL."/board.php?bo_table=$key&wr_id=$p[wr_id]";
+				$popular_subject = conv_subject( $p['wr_subject'], 14, '...');
+				$dot_url = x::url_theme().'/img/dot.gif';
+				echo "
+						<div class='row'>
+							<img class='dot-icon' src='$dot_url'/><a href='$url'>$popular_subject</a>
+						</div>
+				";
+			}
+		 }
+	}
+	else {?>
+				<div class='row'>
+					<img class='dot-icon' src='<?=$dot_url?>'/>
+					<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=5'>사이트 만들기 안내</a>
+				</div>
+				<div class='row'>
+					<img class='dot-icon' src='<?=$dot_url?>'/>
+					<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=4'>블로그 만들기</a>
+				</div>
+				<div class='row'>
+					<img class='dot-icon' src='<?=$dot_url?>'/>
+					<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=3'>커뮤니티 사이트 만들기</a>
+				</div>
+				<div class='row'>
+					<img class='dot-icon' src='<?=$dot_url?>'/>
+					<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=2'>여행사 사이트 만들기</a>
+				</div>
+				<div class='row'>
+					<img class='dot-icon' src='<?=$dot_url?>'/>
+					<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=1'>(모바일)홈페이지, 스마트폰 앱</a>
+				</div>
+	<?}?>
+	</div>
 <?}?>

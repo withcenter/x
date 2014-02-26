@@ -3,6 +3,7 @@
 	width: 186px;
 	display: inline-block;
 	vertical-align: top;
+	
 }
 
 .travel-package-container.no-margin {
@@ -33,6 +34,7 @@
 
 .travel-package .travel-image {
 	height: 100px;
+	margin-bottom:10px;
 }
 
 .travel-package .travel-image .img-wrapper{

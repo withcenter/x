@@ -1,7 +1,3 @@
-<?php
-
-
-?>
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/theme.css' />
 <script src='<?=x::url_theme()?>/js/theme.js' /></script>
 <?php
@@ -14,7 +10,9 @@
 		<a href='<?=g::url()?>'>
 			<?if( ms::meta('header_logo') ) { ?>
 				<img src="<?=ms::meta('img_url').ms::meta('header_logo')?>">
-			<?}?>
+			<?}
+				else echo "<span class='no-logo'>어드민 페이지에서 로고를 업로드 해 주세요.</span>";
+			?>
 		</a>
 		
 		<div class='search-bar'>
@@ -22,7 +20,7 @@
 				<input type="hidden" name="sfl" value="wr_subject||wr_content">
 				<input type="hidden" name="sop" value="and">
 				<div class='wrapper'><div class='s_inner'><div class='s_inner_inner'>
-					<input type="text" name="stx" id="sch_stx" maxlength="20" placeholder='Search' value='<?=$in['stx']?>' />
+					<input type="text" name="stx" id="sch_stx" maxlength="20" placeholder='검색' value='<?=$in['stx']?>' />
 					<input type="image" src='<?=$image_dir?>/submit_button.png'>  
 				</div></div></div>
             </form>
@@ -59,7 +57,6 @@
             }
 	</script>
 <div class='main-menu'><div class='inner'>
-	<? if( ms::meta( 'com2_info' ) ) { ?> <a href='<?=g::url()?>/?page=intro'>회사소개</a> <?}?>
 	<? for ( $i = 1; $i <= 6; $i++ ) { ?>
 	<? if ( ms::meta('menu_'.$i) ) { 
 		$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('menu_'.$i)."'");
@@ -68,7 +65,7 @@
 		<a href='<?=g::url()?>/bbs/board.php?bo_table=<?=ms::meta('menu_'.$i)?>'><?=$menu?></a>
 	<?}}?>
 	<? if ( ms::admin() ) { ?>
-		<a href="<?=ms::url_config()?>"><?=ln('Admin Page')?></a>
+		<a href="<?=ms::url_config()?>">사이트 관리</a>
 	<? } ?>
 </div></div> 
 
@@ -78,7 +75,7 @@
 			<td class='left' width='200'>	
 				<? include x::theme('left') ?>				
 			</td>
-			<td width='10'></td>
+			<td class='layout-divider'></td>
 			<td class='content'>
 				<?if ( preg_match('/^config/', $action) ) include ms::site_menu();?>
 				<?php if ((!$bo_table || $w == 's' ) && !defined("_INDEX_")) { ?><div id="container_title"><?php echo $g5['title'] ?></div><?php } ?>

@@ -4,11 +4,12 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 ?>
 
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
-<?if ( !$list ) return;?>
+
 <div class='travel-stories'>
 	<div class='title'><?=$bo_subject?></div>
 <div class='stories-container'>
 <?php
+if ( $list ) {
 	foreach( $list as $li ) {
 		if( !$li['wr_subject'] == '' ) {
 		if( !$li['file']['count'] == 0 ) { /**checks if there is a file on the post */
@@ -23,13 +24,12 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 				}
 			}
 			else $has_image = null;
-		}
-		?>
+		}?>
 		<div class='travel-story'>
 				
 				<table>
 					<tr valign='top'>
-						<td width='50px'>
+						<td width='88px'>
 						<div class='img-container'>
 							<?
 								if ( $has_image ){
@@ -43,14 +43,14 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 						</td>
 						<td>
 						<?php
-							echo "<span class='travel-title'><a href='$li[href]'>".conv_subject($li['wr_subject'],20,'...')."</a></span><br>";
-							echo "<span class='travel-meta'><b>작성자</b> ".$li['mb_id']."<br>";
-							echo "<b>등록일</b> ".date('Y.m.d',strtotime($li['wr_datetime']))."</span>";
+							echo "<div class='travel-title'><a href='$li[href]'>".conv_subject($li['wr_subject'],20,'...')."</a></div>";
+							echo "<div class='travel-meta'><b>작성자</b> ".$li['mb_id']."<br>";
+							echo "<b>등록일</b> ".date('Y.m.d',strtotime($li['wr_datetime']))."</div>";
 						?>
 						</td>
 					</tr>
 					<tr valign='top'>
-						<td colspan=2 width='100px'>
+						<td colspan=2 width='200px'>
 						<?php
 							echo "<span class='travel-content'><a href='<?=$li[href]?>'>".cut_str( strip_tags( $li['wr_content'] ) ,100,'...')."</a></span>";
 						?>
@@ -62,9 +62,12 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 				<div class='more-button'><a href='<?=$li['href']?>'><img src="<?=$latest_skin_url.'/img/more-btn.png'?>"></a></div>			
 			</a>
 		</div>
-		<?
-	}
-?>
+	<? }
+	} else {?>
+		<div class='travel-story'>
+			<b><?=$bo_subject?></b>게시판에 글을 등록해 주세요.
+		</div>
+	<?}?>
 </div>
 </div>
 

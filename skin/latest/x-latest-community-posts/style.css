@@ -5,7 +5,9 @@
 	border-radius: 3px;
 	font-family: '맑은 고딕', AppleGothic;
 	word-break: break-word;
-	min-height: 200px;
+	height: 343px;
+	overflow: hidden;
+	
 }
 
 .community-posts .title {

@@ -127,8 +127,8 @@
 	display: inline-block;
 	height: 25px;
 	line-height: 25px;
-	padding: 0 10px;
-	width: 220px;
+	padding-left: 10px;
+	width: 200px;
 }
 
 #aside .menu-name a:hover {

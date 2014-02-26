@@ -12,6 +12,5 @@ $(function() {
 		$(this).parent().parent().find('.select-wrapper .inner').text( bo_subject );
 		
 		$(this).parent().hide();
-	});
-	
+	});	
 });

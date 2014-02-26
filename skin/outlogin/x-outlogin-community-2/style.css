@@ -65,11 +65,9 @@
 
 .login-box .login-box-middle .input-wrapper input[type='text'], .login-box .login-box-middle .input-wrapper input[type='password'] {
 	height: 28px;
-	width: 170px;
+	width: 139px;
 	background-color: transparent;
-	display: inline-block;
 	padding-left: 29px;
-	font-style: italic;
 	line-height: 28px;
 	border: 0;
 }
@@ -146,7 +144,7 @@
 	background-color: #78bb9f;
 	color: #ffffff;
 	text-align: center;
-	margin-bottom: 10px;
+	margin-bottom: 6px;
 }
 .login-box .login-box-middle .admin-mode a {
 	display: inline-block;
@@ -156,8 +154,11 @@
 	text-decoration: none;
 	font-weight: bold;
 }
+.login-box .login-box-middle .user-info a{
+	color: #585858;
+}
 
-.login-box .login-box-middle  .message .no_of_unreaded_message {
+.login-box .login-box-middle .no_of_unreaded_message {
 	display: inline-block;
 	height: 15px;
 	width: 15px;
@@ -165,5 +166,5 @@
 	color: #ffffff;
 	border-radius: 50%;
 	text-align: center;
-	margin-left: 10px;
+	margin-left: 5px;
 }

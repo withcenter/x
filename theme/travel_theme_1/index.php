@@ -1,23 +1,18 @@
 <div class='top-panel'>
-	<div style='border: solid 1px #d9d9d9; padding: 1px'>
-		<div class='banner'>
-			test
-			<?
-				for ( $i = 1 ; $i <= 5 ; $i++ ) {
-					if( ms::meta( 'travelbanner_'.$i ) ){
-						echo "<div class='banner-image image_num_$i'>";
-						echo "<img src='".ms::meta('img_url').ms::meta('travelbanner_'.$i)."'>";
-						echo "<p class='banner-text'>".ms::meta('travelbanner_'.$i.'_text1')."</p>";
-						echo "</div>";
-					}
-					else {
-						echo "<div>배너 없음</div>";
-					}
-					
+	<div class='banner'>
+		<?
+			for ( $i = 1 ; $i <= 5 ; $i++ ) {
+				if( ms::meta( 'travelbanner_'.$i ) ){
+					echo "<div class='banner-image image_num_$i'>";
+					echo "<img src='".ms::meta('img_url').ms::meta('travelbanner_'.$i)."'>";
+					echo "<p class='banner-text'>".ms::meta('travelbanner_'.$i.'_text1')."</p>";
+					echo "</div>";
 				}
-			?>
-			<div class='banner-pagination'>
-				test
+				
+				
+			}
+		?>
+		<div class='banner-pagination'>
 				<?
 					$count = 0;
 					for ( $i = 1 ; $i <= 5 ; $i++ ) {
@@ -29,15 +24,14 @@
 					<div class='pages' image_meta_num='<?=$i?>'><?=$count?></div>
 				<?}?>
 			</div>
-			<?
-				if( $count == 0 ){?>
-				<div class='no-banner'>
-					<img src='<?=x::url_theme()?>/img/no_banner.png' />
-				</div>
-			<?}?>
-		</div>
+		<?
+			if( $count == 0 ){?>
+			<div class='no-banner'>
+				<img src='<?=x::url_theme()?>/img/no_banner.png' />
+			</div>
+		<?}?>
 	</div>
-	
+
 	
 	<div class='forum-list'>
 		<div class='inner'>
@@ -54,7 +48,6 @@
 		</div>
 	</div>
 </div>
-
 <div class='middle-panel'>
 <?
 $latest_bo_table = ms::board_id(etc::domain()).'_1';
@@ -68,7 +61,6 @@ $current_date = date('Y-m-d').' 23:59:59';
 $previous_date = date('Y-m-d', strtotime("-7 day", strtotime($current_date))).' 00:00:00';
 $rows = db::rows( "SELECT bo_table, wr_id FROM $g5[board_new_table] WHERE $qb AND bn_datetime BETWEEN '$previous_date' AND '$current_date' ORDER BY bn_datetime DESC" );	
 
-if( $rows ){
 ?>
 	<div class='photo-gallery'>
 		<div class='title'>여행 갤러리</div>
@@ -118,10 +110,10 @@ if( $rows ){
 					}
 
 				}
+				else echo "게시핀에 글을 등록해 주세요";
 			?>
 		</div>
 	</div>
-<?}?>
 </div>
 <?
 	$latest_bo_table = ms::board_id( etc::domain() ).'_3';

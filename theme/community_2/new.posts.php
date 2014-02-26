@@ -11,7 +11,7 @@ foreach ( $q_tmp as $key => $value ) {
 	$posts[$key] = db::rows("SELECT wr_id, wr_subject FROM ".$g5['write_prefix'].$key." WHERE ".implode ( ' OR ', $value ) );
 
 }
-if( $posts ) { ?>
+?>
 	<link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/new.posts.css' />
 	<div class='new-posts'>
 		 <div class='title'>
@@ -19,19 +19,41 @@ if( $posts ) { ?>
 			새로 등록된 글
 		 </div>
 		 <?php
-		  foreach ( $posts as $board_id => $post ) {
-			foreach ( $post as $p ) {
-				$url = G5_BBS_URL."/board.php?bo_table=$board_id&wr_id=$p[wr_id]";
-				$new_subject = conv_subject( $p['wr_subject'], 14, '...');
-				$dot_url = x::url_theme().'/img/dot.gif';
-				echo "
-						<div class='row'>
-							<img class='dot-icon' src='$dot_url'/><a href='$url'>$new_subject</a>
-						</div>
-				";
+		 if ( $posts ) {
+			  foreach ( $posts as $board_id => $post ) {
+				foreach ( $post as $p ) {
+					$url = G5_BBS_URL."/board.php?bo_table=$board_id&wr_id=$p[wr_id]";
+					$new_subject = conv_subject( $p['wr_subject'], 14, '...');
+					$dot_url = x::url_theme().'/img/dot.gif';
+					echo "
+							<div class='row'>
+								<img class='dot-icon' src='$dot_url'/><a href='$url'>$new_subject</a>
+							</div>
+					";
 
-			}
+				}
+			  }
 		  }
-		 ?>
+		  else {?>
+			<div class='row'>
+				<img class='dot-icon' src='<?=$dot_url?>'/>
+				<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=5'>사이트 만들기 안내</a>
+			</div>
+			<div class='row'>
+				<img class='dot-icon' src='<?=$dot_url?>'/>
+				<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=4'>블로그 만들기</a>
+			</div>
+			<div class='row'>
+				<img class='dot-icon' src='<?=$dot_url?>'/>
+				<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=3'>커뮤니티 사이트 만들기</a>
+			</div>
+			<div class='row'>
+				<img class='dot-icon' src='<?=$dot_url?>'/>
+				<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=2'>여행사 사이트 만들기</a>
+			</div>
+			<div class='row'>
+				<img class='dot-icon' src='<?=$dot_url?>'/>
+				<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=1'>(모바일)홈페이지, 스마트폰 앱</a>
+			</div>
+		<?}?>
 	</div>
-<?}?>

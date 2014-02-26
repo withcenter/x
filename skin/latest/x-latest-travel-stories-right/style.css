@@ -53,6 +53,10 @@
 	word-break:break-all;
 }
 
+.travel-stories-right .stories-container .travel-story table td {
+	word-break:break-all;
+}
+
 .travel-stories-right .stories-container .travel-story table .more-button > div {
 	display: inline-block;
 	vertical-align: middle;

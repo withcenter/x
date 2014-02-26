@@ -39,57 +39,45 @@
 		exit;
 	}
 
+	if ( $in['site-type'] ) {
+		if ( $in['site-type'] == 'community' ) $site_type = 'community';
+		else if ( $in['site-type'] == 'travel' ) 	$site_type = 'travel_theme_1';
+		else if ( $in['site-type'] == 'shopping' ) $site_type = 'community';
+		else if ( $in['site-type'] == 'academy' ) $site_type = 'community_2';
+		else if ( $in['site-type'] == 'blog' ) $site_type = 'blog';
+		else $site_type = 'blog';
+	}
+	else $site_type = 'blog';
+	
 	$domain = $sub_domain . '.' . etc::base_domain();
 		
 	if ( $error_code = ms::create( array('domain'=>$domain, 'title'=>$title) ) ) include module( 'create_fail' );
 	else {
 			$o = array(
 				'id'	=> ms::board_id( $domain ) . '_1',
-				'subject'	=> $title,
+				'subject'	=> "메뉴1",
 				'group_id'	=> 'multisite',
 				'bo_admin' => $member['mb_id'],
 				'bo_use_dhtml_editor' => 1
 			);
+			
+			if ( $site_type == 'blog' ) $o['bo_skin'] = 'x/skin/board/x-board-blog';
+			
 			g::board_create($o);
 			
 			// 사이트 생성시 처음 메뉴 저장
 			db::insert('x_multisite_meta', array('domain'=>$domain, 'code'=>'menu_1', 'value'=>ms::board_id ( $domain ).'_1' ) );
 			db::insert('x_multisite_meta', array('domain'=>$domain, 'code'=>'forum_no_1', 'value'=>ms::board_id ( $domain ).'_1' ) ); 
 			
-			if ( $in['site-type'] ) {
-				if ( $in['site-type'] == 'community' ) $site_type = 'community';
-				else if ( $in['site-type'] == 'travel' ) 	$site_type = 'travel_theme_1';
-				else if ( $in['site-type'] == 'shopping' ) $site_type = 'community';
-				else if ( $in['site-type'] == 'academy' ) $site_type = 'community';
-				else if ( $in['site-type'] == 'blog' ) $site_type = 'blog';
-				else $site_type = 'blog';
-			}
-			else $site_type = 'blog';
+
 			
 			// 테마에 따라 각각 더 추가 생성 되는 게시판 및 메뉴
-			if ( $site_type == 'travel_theme_1' ) {
+			if ( $site_type == 'travel_theme_1' || $site_type == 'community_2' ) {
 				
-				for ( $i = 2; $i <= 5; $i++ ) {
+				for ( $i = 2; $i <= 6; $i++ ) {
 					$o = array(
 						'id'	=> ms::board_id( $domain ) . '_'.$i,
-						'subject'	=> $title.$i,
-						'group_id'	=> 'multisite',
-						'bo_admin' => $member['mb_id'],
-						'bo_use_dhtml_editor' => 1
-					);
-					g::board_create($o);
-					// 사이트 생성시 메뉴 저장
-					db::insert('x_multisite_meta', array('domain'=>$domain, 'code'=>'menu_'.$i, 'value'=>ms::board_id ( $domain ).'_'.$i ) );
-					db::insert('x_multisite_meta', array('domain'=>$domain, 'code'=>'forum_no_'.$i, 'value'=>ms::board_id ( $domain ).'_'.$i ) );
-				}
-			}
-			
-			if ( $site_type == 'community' ) {
-				
-				for ( $i = 2; $i <= 10; $i++ ) {
-					$o = array(
-						'id'	=> ms::board_id( $domain ) . '_'.$i,
-						'subject'	=> $title.$i,
+						'subject'	=> "메뉴".$i,
 						'group_id'	=> 'multisite',
 						'bo_admin' => $member['mb_id'],
 						'bo_use_dhtml_editor' => 1
@@ -101,6 +89,22 @@
 				}
 			}
 			
+			if ( $site_type == 'community' ) {
+				
+				for ( $i = 2; $i <= 10; $i++ ) {
+					$o = array(
+						'id'	=> ms::board_id( $domain ) . '_'.$i,
+						'subject'	=> "메뉴".$i,
+						'group_id'	=> 'multisite',
+						'bo_admin' => $member['mb_id'],
+						'bo_use_dhtml_editor' => 1
+					);
+					g::board_create($o);
+					// 사이트 생성시 메뉴 저장
+					if ( $i <= 5 ) db::insert('x_multisite_meta', array('domain'=>$domain, 'code'=>'menu_'.$i, 'value'=>ms::board_id ( $domain ).'_'.$i ) );
+					db::insert('x_multisite_meta', array('domain'=>$domain, 'code'=>'forum_no_'.$i, 'value'=>ms::board_id ( $domain ).'_'.$i ) );
+				}
+			}
 			
 			
 			$meta_op = array(

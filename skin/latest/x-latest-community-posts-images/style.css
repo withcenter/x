@@ -4,7 +4,8 @@
 	margin-top: 10px;
 	border-radius: 3px;
 	font-family: Gulim, Arial;
-	min-height: 200px;
+	height: 343px;
+	overflow: hidden;
 }
 
 .posts a {

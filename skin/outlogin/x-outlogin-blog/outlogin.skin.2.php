@@ -13,14 +13,14 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 			<div class='username'><?php echo $nick ?><?=lang(' is logged in', '님 로그인')?></div>
 			
 			<div class='setting'>
-				<img src='<?=$outlogin_skin_url?>/message.gif' />
+				<img src='<?=$outlogin_skin_url?>/message.png' />
 				<a href="<?php echo G5_BBS_URL ?>/memo.php" target="_blank" id="ol_after_memo" class="win_memo">쪽지
 					<span style='border-radius: 30%; padding: 0 0.5em; font-size: 11px; color: #000000; background-color: #ffffff;' class='message_new'><?=$memo_not_read ?></span>
 				</a>
 			</div>
 			
 			<div class='profile'>
-				<img src='<?=$outlogin_skin_url?>/lock.gif' />
+				<img src='<?=$outlogin_skin_url?>/lock.png' />
 				<a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=register_form.php" id="ol_after_info">정보수정</a>
 			</div>
 			

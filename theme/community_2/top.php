@@ -1,9 +1,14 @@
 <div class='site_top'>
 	<div class='inner'>
 		<a href='<?=g::url()?>'>홈</a>
-		<a href='<?=G5_BBS_URL?>/board.php?bo_table=<?=ms::board_id( etc::domain() ).'_1'?>'>자유토론</a>
-		<? if ( !login() ) { ?> <a href='<?=G5_BBS_URL?>/register.php'>회원가입</a> <? } ?>
-		<? if( ms::meta( 'com2_info' ) ) { ?>  <a href='<?=g::url()?>/?page=intro'>회사소개</a> <?}?>
-		<? if( $qna_forum = ms::meta( 'com2_info' ) ) { ?>  <a href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$qna_forum?>'>고객지원</a> <?}?>
+		<? if ( login() ) {?>
+			<a href='<?=G5_BBS_URL?>/logout.php'>로그아웃</a>
+			<a href='<?=G5_BBS_URL?>/member_confirm.php?url=register_form.php'>회원정보수정</a> 
+		<?}
+		else {?>
+			<a href='<?=G5_BBS_URL?>/login.php'>로그인</a>
+			<a href='<?=G5_BBS_URL?>/register.php'>회원가입</a> 
+		<? } ?>
+
 	</div>
 </div>
