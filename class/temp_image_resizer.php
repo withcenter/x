@@ -1,6 +1,6 @@
 <?php
 class imageresizer {
-	public function __construct($filename, $width=100, $height=100, $image_type, $quality = 60, $dest = null) {
+	public function __construct($filename, $width=100, $height=100, $image_type, $quality, $dest = null) {
 			
 			if ( $image_type == 'image/jpeg' || $image_type == 'image/pjpeg' ) {
 				$this->jpeg_resize($filename, $width, $height, $image_type, $quality, $dest);

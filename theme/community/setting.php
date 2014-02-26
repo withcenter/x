@@ -1,7 +1,10 @@
-<table cellpadding=5 width='100%' class='image-config'>
+<div class='config-wrapper'>
+	<div class='config-title'><span class='config-title-info'>사이트 로고</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>	
+	<div class='config-container'>
+	<table cellpadding=5 width='100%' class='image-config'>
 	<tr valign='top' >
 		<td width='50%'>
-			<div class='image-title'>사이트 로고</div>
+			<div class='image-title'></div>
 			<div class='image-upload'>
 				<?if( ms::meta('header_logo') ) {?><img src="<?=ms::meta('img_url').ms::meta('header_logo')?>" width=280px height=160px><br><?}?>
 				<input type='file' name='header_logo'>
@@ -24,10 +27,12 @@
 		</td>
 	</tr>	
 </table>
+</div>
+</div>
+<div class='config-wrapper'>
+	<div class='config-title'><span class='config-title-info'>롤링 배너(메인 배너)</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>	
+	<div class='config-container'>
 <table cellpadding=5 width='100%' class='image-config'>
-		<tr>
-		<th colspan=3 align='center'><div class='title'>롤링 배너(메인 배너)<div></th>
-	</tr>
 	<tr valign='top' >
 		<td width='33%'>
 			<div class='image-title'>롤링배너1</div>		
@@ -119,11 +124,12 @@
 		</td>
 	</tr>
 </table>
+</div>
+</div>
+<div class='config-wrapper'>
+	<div class='config-title'><span class='config-title-info'>일반 배너</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
+	<div class='config-container'>
 <table cellpadding=5 width='100%' class='image-config'>
-	</tr>	
-		<tr>
-		<th colspan=3 align='center'><div class='title'>일반 배너<div></th>
-	</tr>
 	<tr valign='top' >
 		<td width='33%'> 
 			<div class='image-title'>중간 위치 배너</div>
@@ -170,3 +176,5 @@
 		</td>
 	</tr>
 </table>
+</div>
+</div>
