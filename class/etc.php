@@ -622,7 +622,7 @@ function imageresize ( $file, $width = 100, $height = 100, $quality) {
 }
 
 /*********************GET IMAGE URL FROM ckeditor CONTENT*********************/
-function get_image_thumbnail_url($image_content, $width, $height, $quality = 60){
+function get_image_thumbnail_url($image_content, $width = 100, $height = 100, $quality = 60){
 	$image = get_editor_image($image_content);
 
 	if( $image[0] ){
