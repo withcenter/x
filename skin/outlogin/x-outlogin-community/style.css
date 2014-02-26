@@ -87,7 +87,7 @@
 .login-box .inner  .submit-button {
 	position: absolute;
 	right: 9px;
-	bottom: 30px;
+	bottom: 10px;
 }
 .login-box .inner  .submit-button input[type='submit']{
 	width: 53px;

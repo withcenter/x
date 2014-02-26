@@ -18,13 +18,10 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 				<input type="checkbox" name="auto_login" value="1" id="auto_login">
 				<label for="auto_login" class='remember-text' id="auto_login_label">로그인 상태 유지</label>
 			</div>
-			<div class='setting'>				
-				<a class='find-password' id="ol_password_lost" href="<?php echo G5_BBS_URL ?>/password_lost.php" target='_blank'>비밀번호찾기</a>
-			</div>
 		</div>
 		<div class='submit-button'><input type="submit"  value='' style="background: url('<?=$outlogin_skin_url?>/submit-button.png')"></div>
     </form>
-	<div class='no-account'><a href = '<?=G5_URL?>/<?=G5_BBS_DIR?>/register.php'>회원가입</a></div>
+	<div class='no-account'><a class='find-password' id="ol_password_lost" href="<?php echo G5_BBS_URL ?>/password_lost.php" target='_blank'>비밀번호찾기</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href = '<?=G5_URL?>/<?=G5_BBS_DIR?>/register.php'>회원가입</a></div>
 </div></div>
 <script>
 
