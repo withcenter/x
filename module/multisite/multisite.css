@@ -236,19 +236,18 @@ table > .header td:first-child {
 .config-theme td {
 
 	color: #ffffff;
-	padding: 0.75em;
+
 }
 
 .config-theme .theme-thumb {
 	position: relative;
-	margin-top: 1em;
+
 	overflow: hidden;
 }
 
 .config-theme .theme-thumb table {
 	position: absolute;
 	bottom: 0;
-	padding: 1em;
 	background: #333333;
 	width: 100%;
 }
@@ -262,7 +261,7 @@ table > .header td:first-child {
 }
 
 .config-theme .theme-thumb {
-	margin: 0.5em;
+
 	display: inline-block;
 	width: 320px;
 	height: 240px;
@@ -288,7 +287,6 @@ table > .header td:first-child {
 	color: #ffffff;
 	width: 320px;
 	height: 240px;
-	margin: 5px;
 }
 
 .config-theme button[name='theme']:focus {
