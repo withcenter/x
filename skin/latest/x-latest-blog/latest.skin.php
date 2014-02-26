@@ -1,5 +1,7 @@
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
+include_once(G5_LIB_PATH.'/thumbnail.lib.php'); 
+
 ?>
 
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
@@ -7,17 +9,13 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
 if ( $list ) {
 	foreach ( $list as $li ) {
-
-		if( !$li['wr_subject'] == '' ) {
-			if( !$li['file']['count'] == 0 ) { /**checks if there is a file on the post */
-				$i = 0;
-				while( $i <= $li['file']['count'] ) { /** get file(s) info **/
-					$li['file']['meta'] = db::rows("SELECT * FROM $g5[board_file_table] WHERE bo_table='$bo_table' AND wr_id='".$li['wr_id']."'");
-					$li['file']['path'] = G5_URL.'/'.G5_DATA_DIR.'/file/'.$bo_table.'/';
-					$i++;
-				}
-				
-		}}
+		$thumb = get_list_thumbnail($bo_table, $li['wr_id'], 300, 300);
+		if ( empty($thumb['src']) ) {  // 만약 로컬 데이터 저장소에 이미지가 없다면 본문의 img 태그에서 이미지를 가져온다.
+			//$content = get_view_thumbnail ( $li['wr_content'], 50 );  /* 사이즈 조절이 안된다. */
+			
+			$image = get_editor_image( $li['wr_content'] );
+		}
+		
 ?>
 		<div class='post-container'>
 			<a href='<?=g::url()?>/bbs/board.php?bo_table=<?=$bo_table?>&wr_id=<?=$li['wr_id']?>'>
@@ -27,20 +25,21 @@ if ( $list ) {
 					<td align='right'>
 						<div  class='date-author-container'>
 							<span class='date-author'>
-								<b>글쓴이</b> <span><?=$li['wr_name']?></span>
+								<? /* <b>글쓴이</b> <span><?=$li['wr_name']?></span>  */?>
 								<b>작성일</b><?=$newDate = date("Y-m-d", strtotime($li['wr_datetime']))?>
 							</span>
 						</div>
 					</td>
 				</tr>
 				<tr><td colspan=2><span class='post-content'>
+				<?php  if ( $thumb['src'] ) $image_url = $image_content = "<img src='".$thumb['src']."' />";
+						else if ( empty($thumb['src']) && $image[0][0] ) $image_content = $image[0][0];
+				?>
+				
 				<span class='post-images'>
-				<? for ( $img = 0; $img < 1; $img++ ) { 
-					if ($li['file']['meta'][$img]['bf_file'] != '') {?>
-						<img src="<?=$li['file']['path'].$li['file']['meta'][$img]['bf_file']?>">
-				<?}}?>
+					<?=$image_content?>
 				</span>
-					<?=cut_str(strip_tags($li['wr_content']),1000,'...')?></span></td></tr>
+				<?=cut_str(strip_tags($li['wr_content']),1000,'...')?></span></td></tr>
 			</table>
 			</a>
 		</div>
