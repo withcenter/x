@@ -41,6 +41,11 @@ body{
 	left: 25px;
 	border: 0;
 }
+
+.logo_search .inner  img {
+	max-width: 200px;
+	max-height: 50px;
+}
 .logo_search .inner .no-logo {
 	top: 15px;
 	border: 2px solid #82c0b5;
@@ -179,8 +184,9 @@ body{
 	text-align: center;
 	width: 100%;
 	border-top: 1px solid #dddddd;
-	height: 39px;
+	min-height: 39px;
 	line-height: 39px;
+	margin-top: 50px;
 }
 
 .footer .inner {

@@ -52,5 +52,32 @@ if ( $list ) {
 <? 	
 	}
 }
-?>
+else {?>
+			<div class='post-container'>
+			<a href='<?=g::url()?>/bbs/board.php?bo_table=<?=$bo_table?>&wr_id=<?=$li['wr_id']?>'>
+			<table width='100%'>
+				<tr>
+					<td><div  class='subject-container' ><span class='subject'>필고 블로그 테마를 이용중 입니다.</span></div></td>
+					<td align='right'>
+						<div  class='date-author-container'>
+							<span class='date-author'>
+								<b>작성일</b><?=$newDate = date("Y-m-d", time())?>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr><td colspan=2><span class='post-content'>
+				
+				<span class='post-images'>
+					<img src='http://philgo.com/theme/philgo/img/logo.png' />
+				</span>
+				필고 블로그 테마를 선택 해 주셔서 감사합니다. 
+				<div>현재에는 등록된 글이 없으며, 사이트는 <b>기본 설정</b>으로 되어 있습니다.</div>
+				<div>
+					<a style='color: #ffffff;' class='button' href='<?=ms::url_config()?>'>사이트 설정 바로 가기</a>
+				</div>
+			</table>
+			</a>
+		</div>
+<?}?>
 
