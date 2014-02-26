@@ -18,7 +18,7 @@
 	
 	
 	if ( pattern_exist($data, $dst) ) {
-			message('already patched : OK');
+			patch_message('already patched : OK');
 	}
 	else {
 		$src = '<nav id="gnb">';
@@ -27,7 +27,7 @@
 			list ( $c, $d ) = explode( "</nav>", $b );
 			$data = $a . $dst . $d;
 			file::write( $path,  $data );
-			message('menu patched : OK');	
+			patch_message('menu patched : OK');	
 		}
 		else patch_failed();
 		

@@ -57,10 +57,7 @@ if ( $argv[1] == 'language' ) {
 	
 	
 	
-function message($msg)
-{
-	patch_message($msg);
-}
+	
 function patch_failed()
 {
 	patch_message("-----------------------------  FAILED --");
