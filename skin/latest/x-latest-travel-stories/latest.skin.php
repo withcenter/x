@@ -4,11 +4,12 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 ?>
 
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
-<?if ( !$list ) return;?>
+
 <div class='travel-stories'>
 	<div class='title'><?=$bo_subject?></div>
 <div class='stories-container'>
 <?php
+if ( $list ) {
 	foreach( $list as $li ) {
 		if( !$li['wr_subject'] == '' ) {
 		if( !$li['file']['count'] == 0 ) { /**checks if there is a file on the post */
@@ -23,8 +24,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 				}
 			}
 			else $has_image = null;
-		}
-		?>
+		}?>
 		<div class='travel-story'>
 				
 				<table>
@@ -62,9 +62,12 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 				<div class='more-button'><a href='<?=$li['href']?>'><img src="<?=$latest_skin_url.'/img/more-btn.png'?>"></a></div>			
 			</a>
 		</div>
-		<?
-	}
-?>
+	<? }
+	} else {?>
+		<div class='travel-story'>
+			<b><?=$bo_subject?></b>게시판에 글을 등록해 주세요.
+		</div>
+	<?}?>
 </div>
 </div>
 
