@@ -57,13 +57,13 @@
 							<?php
 							foreach ( $rows as $row ) {
 								if ( ms::meta('forum_no_'.$i) && ms::meta('forum_no_'.$i) == $row['bo_table'] ) {
-									$default_value =  $row['bo_subject'];
+									$default_value =  '(forum no. '.$i.') '.$row['bo_subject'];
 									break;
 								}
 								else $default_value = null;
 							}
 							
-							echo $default_value ? $default_value : '게시판 선택';
+							echo $default_value ? $default_value : '(select forum no. '.$i.') 게시판 선택';
 							?>
 						</span></span>
 						<span class='select-button'><span class='inner'>
@@ -80,6 +80,7 @@
 						<input class='hidden-value' type='hidden' name='forum_no_<?=$i?>' value='<?=ms::meta('forum_no_'.$i)?>' />
 					</div>
 				<? } ?>
+	
 			</div>
 		</div>
 		
