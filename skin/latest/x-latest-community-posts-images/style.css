@@ -27,6 +27,15 @@
 
 .posts .title .label {
 	text-transform: uppercase;
+	width:150px;
+	overflow:hidden;
+	white-space:nowrap;
+}
+
+.posts .top-left-icon{
+	position:relative;
+	top:-3px;
+	left:0;
 }
 
 .posts .title a {
