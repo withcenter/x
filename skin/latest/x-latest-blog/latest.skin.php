@@ -8,7 +8,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
 if ( $list ) {
 	$w = 200;
-	$h = 100;
+	$h = 160;
 	foreach ( $list as $li ) {
 		$thumb = get_list_thumbnail($bo_table, $li['wr_id'], $w, $h);
 		if ( empty($thumb['src']) ) {  // 만약 로컬 데이터 저장소에 이미지가 없다면 본문의 img 태그에서 이미지를 가져온다.
