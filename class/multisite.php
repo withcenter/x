@@ -399,7 +399,7 @@ class multisite {
 	{
 		global $g5;
 		
-		$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";
+		$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "\_%'";
 		$q = "SELECT COUNT(*) FROM $g5[board_table] WHERE $qb";
 		return db::result($q);
 	}
