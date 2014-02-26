@@ -414,7 +414,7 @@ class multisite {
 	static function forum()
 	{
 		global $g5;
-		$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "_%'";	
+		$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "\_%'";	
 		$rows = db::rows( "SELECT bo_table FROM $g5[board_table] WHERE $qb");
 		$ret = array();
 		if ( $rows ) {
