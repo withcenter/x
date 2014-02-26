@@ -10,8 +10,9 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 if ( $list ) {
 	foreach ( $list as $li ) {
 		$thumb = get_list_thumbnail($bo_table, $li['wr_id'], 200, 160);				
-		if ( empty($thumb['src']) ) {  // 만약 로컬 데이터 저장소에 이미지가 없다면 본문의 img 태그에서 이미지를 가져온다.			
-			$thumb['src'] = get_url_from_ckeditor($li['wr_content']);
+		if ( empty($thumb['src']) ) {  // 만약 로컬 데이터 저장소에 이미지가 없다면 본문의 img 태그에서 이미지를 가져온다.
+			//get_view_image_url([string with img src content],[width],[height],[quality(1-100?)]);
+			$thumb['src'] = get_image_thumbnail_url($li['wr_content'],200,160,100);
 		}
 ?>
 		<div class='post-container'>
