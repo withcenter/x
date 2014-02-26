@@ -69,7 +69,7 @@
 			// 테마에 따라 각각 더 추가 생성 되는 게시판 및 메뉴
 			if ( $site_type == 'travel_theme_1' || $site_type == 'community_2' ) {
 				
-				for ( $i = 2; $i <= 5; $i++ ) {
+				for ( $i = 2; $i <= 6; $i++ ) {
 					$o = array(
 						'id'	=> ms::board_id( $domain ) . '_'.$i,
 						'subject'	=> "메뉴".$i,
@@ -79,7 +79,7 @@
 					);
 					g::board_create($o);
 					// 사이트 생성시 메뉴 저장
-					db::insert('x_multisite_meta', array('domain'=>$domain, 'code'=>'menu_'.$i, 'value'=>ms::board_id ( $domain ).'_'.$i ) );
+					if ( $i <= 5 ) db::insert('x_multisite_meta', array('domain'=>$domain, 'code'=>'menu_'.$i, 'value'=>ms::board_id ( $domain ).'_'.$i ) );
 					db::insert('x_multisite_meta', array('domain'=>$domain, 'code'=>'forum_no_'.$i, 'value'=>ms::board_id ( $domain ).'_'.$i ) );
 				}
 			}

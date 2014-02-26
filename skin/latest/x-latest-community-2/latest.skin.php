@@ -2,7 +2,6 @@
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 ?>
 
-<? if ($list) { ?>
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
 <div class='withcenter_latest'>
 	<div class='title'>
@@ -31,8 +30,26 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
         </li>
     <?php }  ?>
     <?php if (count($list) == 0) { //게시물이 없을 때  ?>
-    <li>게시물이 없습니다.</li>
+			<li>
+				<img class='dot' src='<?=$latest_skin_url?>/img/dot.gif' />
+				<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=5'>사이트 만들기 안내</a>
+			</li>
+			<li>
+				<img class='dot' src='<?=$latest_skin_url?>/img/dot.gif' />
+				<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=4'>블로그 만들기</a>
+			</li>
+			<li>
+				<img class='dot' src='<?=$latest_skin_url?>/img/dot.gif' />
+				<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=3'>커뮤니티 사이트 만들기</a>
+			</li>
+			<li>
+				<img class='dot' src='<?=$latest_skin_url?>/img/dot.gif' />
+				<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=2'>여행사 사이트 만들기</a>
+			</li>
+			<li>
+				<img class='dot' src='<?=$latest_skin_url?>/img/dot.gif' />
+				<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=1'>(모바일)홈페이지, 스마트폰 앱</a>
+			</li>
     <?php }  ?>
     </ul>
 </div>
-<? } ?>
