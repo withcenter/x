@@ -13,7 +13,7 @@
 	$find = "<!doctype html>";
 	$patch = "\n<?include 'x/etc/install/install.php'?>\n";
 	if ( pattern_exist( $data, $patch ) ) {
-		message(' already patched');
+		patch_message(' already patched');
 	}
 	else {
 		if ( pattern_exist($data, $find) ) {
@@ -21,45 +21,45 @@
 			list ( $a, $b ) = explode( $find, $data );
 			$data = $a . $patch . $find . $b;
 			file::write( $path, $data );
-			message(" patched");
+			patch_message(" patched");
 			
 		}
 		else patch_failed();
 	}
 	
 	
-	message("install/index.php");
+	patch_message("install/index.php");
 	$path = '../install/index.php';
 	$data = file::read($path);
 	$patch = "<?php return include '../x/etc/install/index.php'?>";
 	if ( pattern_exist( $data, $patch ) ) {
-		message('already patch');
+		patch_message('already patch');
 	}
 	else {
 		$data = "$patch\n$data";
 		file::write( $path, $data );
-		message("patched");
+		patch_message("patched");
 	}
 	
 	
-	message("install.inc.php");
+	patch_message("install.inc.php");
 	$path = '../install/install.inc.php';
 	$data = file::read($path);
 	$patch = "<?php return include '../x/etc/install/install.inc.php'?>";
 	if ( pattern_exist( $data, $patch ) ) {
-		message('already patch');
+		patch_message('already patch');
 	}
 	else {
 		$data = "$patch\n$data";
 		file::write( $path, $data );
-		message("patched");
+		patch_message("patched");
 	}
 	
 	
 	/**
 	 *  For install_db.php will not create a new script. It will only patch Korean to Enlgish.
 	 */
-	message("install_db.php");
+	patch_message("install_db.php");
 	$path = '../install/install_db.php';
 	$data = file::read($path);
 	
@@ -142,23 +142,23 @@
 	
 	
 	file::write( $path, $data );
-	message("patched");
+	patch_message("patched");
 	
 	
-	message("install_config.php");
+	patch_message("install_config.php");
 	$path = '../install/install_config.php';
 	$data = file::read($path);
 	$patch = "<?php return include '../x/etc/install/install_config.php'?>";
 	if ( pattern_exist( $data, $patch ) ) {
-		message('already patch');
+		patch_message('already patch');
 	}
 	else {
 		$data = "$patch\n$data";
 		file::write( $path, $data );
-		message("patched");
+		patch_message("patched");
 	}
 	
-	message("OK");
+	patch_message("OK");
 	
 	
 	
