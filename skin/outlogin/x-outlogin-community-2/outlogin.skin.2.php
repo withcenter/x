@@ -17,7 +17,7 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 		<div class='admin-mode'><a href="<?=x::url_admin()?>">X Admin Panel</a></div>
 	<?php }  ?>
      
-		<div class='user-info'><b><?php echo $nick ?></b>님 로그인&nbsp;&nbsp;
+		<div class='user-info'><b><?php echo $nick ?></b>님 로그인
 			<a href="<?php echo G5_BBS_URL ?>/memo.php" target="_blank" id="ol_after_memo" class="win_memo">
 				쪽지<span class='no_of_unreaded_message'><?php echo $memo_not_read ?></span>
 			</a>
