@@ -11,7 +11,7 @@
 	}
 	if ( !$no_of_board = $in['no_of_board'] ) $no_of_board = 1;
 	
-	$board_id = ms::board_id( etc::domain() ) . '_'.++$no_of_board;
+	$board_id = ms::board_id( etc::domain() ) . 'p'.++$no_of_board;
 	
 	$option = array(
 					'id'	=> $board_id,
