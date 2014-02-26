@@ -39,6 +39,12 @@
 	margin-bottom: 9px;
 }
 
+.config_general .site-global .top-title {
+	color: #565656;
+	margin-bottom: 9px;
+}
+
+
 .config_general .site-global table tr td span {
 	width: 100px;
 	display: inline-block;
@@ -178,6 +184,7 @@
 	text-align: center;
 	border: 0;
 	border-radius: 0;
+	margin-top: 10px;
 	float: right;
 	margin-right: 10px;
 }
@@ -389,7 +396,50 @@
 	background: #474747;
 	padding: 7px;
 	color: #ffffff;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
-	border-top: solid 5px #d2d2d2;
+
+}
+
+/**new design*/
+.config_general .site-global .config-main-title  {
+	border: 1px solid #d5d5d5;
+	background-color: #f9f9f9;
+	border-radius: 3px;
+	margin: 10px 0;
+}
+.config_general .site-global .config-main-title .inner  {
+	border: 1px solid #ffffff;
+	border-radius: 3px;
+	padding: 0 10px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #2c5991;
+}
+
+.config_general .site-global .config-title {
+	margin: 0;
+	background: #474747;
+	padding: 7px;
+	color: #ffffff;
+	border-radius: 3px;
+	margin-bottom: 5px;
+}
+
+.config_general .site-global .config-title .config-title-notice {
+	float: right;
+}
+
+ 
+.config_general .site-global .config-container {
+	display: none;
+	border: solid 1px #e8e8e8;
+	border-radius: 3px;
+	background: #f9f9f9;
+	padding: 10px;
+	margin-bottom: 10px;
+} 
+
+.config_general .site-global .config-container.show-config {
+	display: block;
 }

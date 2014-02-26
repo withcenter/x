@@ -1,8 +1,7 @@
+<div class='config-wrapper'>
+	<div class='config-title'>사이트로고 배너</div>	
+	<div class='config-container'>
 <table cellpadding=5 width='100%' class='image-config'>
-	</tr>	
-		<tr>
-		<th colspan=3 align='center'><div class='title'>사이트로고 배너<div></th>
-	</tr>
 	<tr valign='top'>
 		<td>
 			<div class='image-title'>사이트 로고</div>
@@ -41,3 +40,5 @@
 		</td>
 	</tr>
 </table>
+</div>
+</div>

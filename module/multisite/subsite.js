@@ -14,4 +14,10 @@ $(function() {
 		$(this).parent().hide();
 	});
 	
+	$(".config-wrapper .config-title").click(function() {
+		$dropdown = $(this).parent('.config-wrapper').find('.config-container');
+		if ( $dropdown.css("display") == "none") $dropdown.slideDown('fast');
+		else $dropdown.slideUp('fast');
+	});
+	
 });
