@@ -78,7 +78,7 @@
 			<td class='left' width='200'>	
 				<? include x::theme('left') ?>				
 			</td>
-			<td width='10'></td>
+			<td class='layout-divider'></td>
 			<td class='content'>
 				<?if ( preg_match('/^config/', $action) ) include ms::site_menu();?>
 				<?php if ((!$bo_table || $w == 's' ) && !defined("_INDEX_")) { ?><div id="container_title"><?php echo $g5['title'] ?></div><?php } ?>

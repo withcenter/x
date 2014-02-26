@@ -20,7 +20,7 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 			</div>
 			
 			<div class='profile'>
-				<img src='<?=$outlogin_skin_url?>/lock.gif' />
+				<img src='<?=$outlogin_skin_url?>/lock.png' />
 				<a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=register_form.php" id="ol_after_info">정보수정</a>
 			</div>
 			

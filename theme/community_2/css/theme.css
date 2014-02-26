@@ -135,6 +135,11 @@ body{
 	height: 250px;
 	width: 100%;
 }
+
+.layout .main-content .layout-divider {
+	width: 10px;
+}
+
 .layout .main-content .main-top tr .application {
 	position: relative;
 }
