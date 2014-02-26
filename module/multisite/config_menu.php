@@ -23,14 +23,19 @@
 		<input type='hidden' name='module' value='multisite' />
 		<input type='hidden' name='action' value='config_menu_submit' />
 <div class='config'>
-	<table width='100%' cellpadding='5px' class='config-menu-table'>
+<div class='config site-global'>
+	<div class='config-main-title'><div class='inner'><img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 메뉴 선택</div></div>
+		<div class='config-wrapper'>
+			<div class='config-title'><span class='config-title-info'>Select a menu from the dropdown list</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>	
+			<div class='config-container'>
+	<table width='100%' cellpadding='5' class='config-menu-table'>
 		<tr class='line-header'>
-			<td width=170>번호</td>
+			<td width=80>번호</td>
 			<td>메뉴 선택</td>
 		</tr>
 		<? for ( $i = 1; $i <= 10; $i++ ) { ?>
 		<tr>
-			<td class='menu-no'><?=$i?></td>
+			<td class='menu-no' valign='top'><?=$i?></td>
 			<td>
 				<span class='select-wrapper'><span class='inner'>
 					<?php
@@ -65,5 +70,6 @@
 			<td colspan=2><input type='submit' value='업데이트'></td>
 		</tr>
 	</table>
+	</div></div>
 </div>
 </form>

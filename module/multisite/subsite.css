@@ -201,12 +201,13 @@
 
 
 /* config_menu */
+
 .config_menu .config {
 	font-family: '맑은 고딕', AppleGothic;
 }
 .config_menu .config table .line-header td{
-	border-bottom: 1px solid #616161;
-	padding-top: 20px;
+	border-bottom: 1px solid #c3c3c3;
+	
 	font-size: 1.125em;
 }
 .config_menu .config table tr .menu-no {
@@ -402,13 +403,13 @@
 }
 
 /**new design*/
-.config_general .site-global .config-main-title  {
+.config .config-main-title  {
 	border: 1px solid #d5d5d5;
 	background-color: #f9f9f9;
 	border-radius: 3px;
 	margin: 10px 0;
 }
-.config_general .site-global .config-main-title .inner  {
+.config .config-main-title .inner  {
 	border: 1px solid #ffffff;
 	border-radius: 3px;
 	padding: 0 10px;
@@ -419,7 +420,11 @@
 	color: #2c5991;
 }
 
-.config_general .site-global .config-title {
+.config .config-main-title .inner  img {
+	width: 19px;
+}
+
+.config  .config-title {
 	margin: 0;
 	background: #474747;
 	padding: 7px;
@@ -428,15 +433,19 @@
 	margin-bottom: 5px;
 }
 
-.config_general .site-global .config-title .config-title-notice {
+.config  .config-title .config-title-notice {
 	float: right;
 }
 
  
-.config_general .site-global .config-container {
+.config  .config-container {
 	border: solid 1px #e8e8e8;
 	border-radius: 3px;
 	background: #f9f9f9;
 	padding: 10px;
 	margin-bottom: 10px;
 } 
+
+.config_menu.create-forum {
+	margin: 0 0 5px 0;
+}

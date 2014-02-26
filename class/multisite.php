@@ -391,9 +391,9 @@ class multisite {
 	/**
 	 *  @brief returns the number of forum of the site.
 	 *  
-	 *  @return Return_Description
+	 *  @return int
 	 *  
-	 *  @details Details
+	 *  @details Use this function to count the number of forums of a sub-site.
 	 */
 	static function count_forum()
 	{
