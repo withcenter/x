@@ -10,6 +10,7 @@
 
 	<div class='config config-theme'>
 		<div class='config-main-title'><div class='inner'><img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 원하시는 테마를 선택하신 후 클릭하시면 반영이 됩니다.</div></div>
+		<div class='config-container'>
 		<table cellspacing='0' cellpadding='5'>
 			<tr>
 				<td>
@@ -54,5 +55,6 @@
 				}}
 				} ?>
 		</table>
+		</div>
 	</div> <!--config--theme-->
 </form>

@@ -26,7 +26,6 @@
 <div class='config site-global'>
 	<div class='config-main-title'><div class='inner'><img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 메뉴 선택</div></div>
 		<div class='config-wrapper'>
-			<div class='config-title'><span class='config-title-info'>Select a menu from the dropdown list</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>	
 			<div class='config-container'>
 	<table width='100%' cellpadding='5' class='config-menu-table'>
 		<tr class='line-header'>
