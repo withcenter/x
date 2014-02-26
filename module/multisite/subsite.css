@@ -432,14 +432,9 @@
 
  
 .config_general .site-global .config-container {
-	display: none;
 	border: solid 1px #e8e8e8;
 	border-radius: 3px;
 	background: #f9f9f9;
 	padding: 10px;
 	margin-bottom: 10px;
 } 
-
-.config_general .site-global .config-container.show-config {
-	display: block;
-}
