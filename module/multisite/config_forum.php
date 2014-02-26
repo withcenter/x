@@ -8,7 +8,6 @@
 			/* 생성된 게시판 정보를 가저온다 */
 			$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "_%'";
 			$q = "SELECT bo_table, bo_subject, bo_count_write FROM $g5[board_table] WHERE $qb";
-			echo $q;
 			$rows = db::rows( $q );
 			
 			$no_of_board = count($rows);
