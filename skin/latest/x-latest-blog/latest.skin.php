@@ -44,5 +44,29 @@ if ( $list ) {
 		</div>
 <? }
 }
-?>
+else {?>
+			<div class='post-container'>
+			<a href='<?=g::url()?>/bbs/board.php?bo_table=<?=$bo_table?>&wr_id=<?=$li['wr_id']?>'>
+			<table width='100%'>
+				<tr>
+					<td><div  class='subject-container' ><span class='subject'>필고 블로그 테마를 이용중 입니다.</span></div></td>
+					<td align='right'>
+						<div  class='date-author-container'>
+							<span class='date-author'>
+								<b>작성일</b><?=$newDate = date("Y-m-d", time())?>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr><td colspan=2><span class='post-content'>
+				
+				<span class='post-images'>
+					<img src='http://philgo.com/theme/philgo/img/logo.png' />
+				</span>
+				필고 블로그 테마를 선택 해 주셔서 감사합니다. 
+				
+			</table>
+			</a>
+		</div>
+<?}?>
 

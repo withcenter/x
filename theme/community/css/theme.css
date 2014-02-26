@@ -311,7 +311,7 @@
 #menu-top ul li a .inner {
 	border-top: 1px solid transparent;
 	border-radius: 5px;
-	padding: 0 18px;
+	padding: 0 10px;
 }
 
 #menu-top ul li a:hover .inner {
