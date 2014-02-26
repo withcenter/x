@@ -103,7 +103,7 @@
 
 .login-box .inner .login-box-info, .login-box .inner .login-box-info a {
 	padding-top: 4px;
-	font-size: 9pt;
+	font-size: 8pt;
 	font-family: Arial;
 	color: #ffffff;
 }
@@ -130,7 +130,9 @@
 	height: 26px;
 	line-height: 26px;
 }
-
+.login-box .inner .login-box-info .profile {
+	margin-top: 5px;
+}
 .login-box .inner .login-box-info .profile a, .login-box .inner .login-box-info .setting a  {
 
 }
