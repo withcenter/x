@@ -602,7 +602,7 @@ EOH;
 }
 
 /**********************Temporary Image Resize**********************/
-function imageresize ( $file, $width = 100, $height = 100, $quality) {	
+function imageresize ( $file, $width = 100, $height = 100, $quality = 60) {	
 	$output_filename = basename($file).'_thumbnail('.$width.'x'.$height.')_q['.$quality.']';
 	$dest = G5_DATA_PATH.'/file/imageresizer/'.$output_filename;
 	$dest_url = G5_DATA_URL.'/file/imageresizer/'.$output_filename;
