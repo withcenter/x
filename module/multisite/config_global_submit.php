@@ -39,7 +39,7 @@ foreach( $_FILES as $key => $value ) {
 			if ( !$name = $pi['filename'] )  $name = "no_filename";
 			if ( $pi['basename'] ) {
 				$name = substr(md5($name),0,10); 
-				while( file_exists( $folder.$name ) ) $name = uniqid( etc::domain(),true ).$name; // if file exists, add random 6 digit numbers before name																				
+				while( file_exists( $folder.$name ) ) $name = md5(uniqid( etc::domain(),true ).$name); // if file exists, add random 6 digit numbers before name																				
 				move_uploaded_file( $_FILES[$key]['tmp_name'] , $folder.$name );				 // ex: 123456_filename
 				ms::meta ( $key, $name );
 			}
