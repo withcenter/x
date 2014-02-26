@@ -116,6 +116,8 @@ body{
 .main-menu {
 	width: 100%;
 	background-color: #217f7c;
+	height: 40px;
+	overflow:hidden;
 }
 .main-menu .inner {
 	background-color: #329996;
