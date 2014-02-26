@@ -469,6 +469,49 @@ static function utf8($string)
   return iconv("EUC-KR", "UTF-8", $string);
 }
 
+
+	/**
+	 *  @brief returns cache file path
+	 *  
+	 *  @param [in] $id Parameter_Description
+	 *  @param [in] $intval INT of minutes. cache data duration. 
+	 *  @return Return_Description
+	 *  
+	 *  @code
+	 *  	$visits = etc::cache_read( $file_name );
+	 *  	if ( empty($visits) ) {
+	 *  		.... // code ....
+	 *  		etc::cache_write( $file_name, $visits );
+	 *  	}
+	 *  @endcode
+	 *  @details use this if you need to cache
+	 *  @warning it is vernerrable to be hacked since php file can be downloaded with its content.
+	 *  @todo
+	 *  	1.	make it not to be downloadable. add "<?php exit;?>" on top.
+	 *		2.	and add unix time stamp inside the file.
+	 *  
+	 */
+	function cache_read( $id, $intval = 25 )
+	{
+		$intval = $intval * 60;
+		$file_path = G5_DATA_PATH."/cache/latest-".$id;
+		if( ! G5_USE_CACHE ) return null;
+		if( ! file_exists($file_path) ) return null;
+		$filetime = filemtime($file_path);
+		if ( $filetime && $filetime < ( G5_SERVER_TIME - $intval) ) {
+			@unlink($file_path);
+			return null;
+		}
+		return string::unscalar(file::read( $file_path ));
+	}
+
+	
+	function cache_write( $id, $data )
+	{
+		$file_path = G5_DATA_PATH."/cache/latest-".$id;
+		file::write( $file_path, string::scalar( $data ) );
+	}
+
 } // eo etc class
 
 

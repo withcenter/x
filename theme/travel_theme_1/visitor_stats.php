@@ -3,12 +3,8 @@ $file_name = etc::domain()."_".basename(__FILE__);
 /*************get_cache*****************/
 //get_cache(file path full directory, EXPIRATION TIME);
 //*NOTE that leaving it blank or adding "0" as expiration time disables time expiration for the file/
-$get_cache = get_cache($file_name, 3600);
-/***************************************/
-if( G5_USE_CACHE && $get_cache != 1 ){		
-	include_once($get_cache);	
-}
-else{
+$visits = etc::cache_read( $file_name );
+if ( empty($visits) ) {
 	$current_date = date('Y-m-d');
 	$week_now = date('W')-1;
 	$year_now_week_compare = date('Y');
@@ -95,17 +91,17 @@ else{
 			$count++;
 		}
 	}
-	/***************write_cache*************/
-	//write_cache(full path directory, the variable name which will hold the array, variable values)
-	write_cache($file_name, $var_name = 'visits', $visits);
-	/***************************************/
+	etc::cache_write( $file_name, $visits );
+	
 }
+
+
 
 function get_cache( $cache_file, $time = 0 ){
 	$file_path = G5_DATA_PATH."/cache/".$cache_file;
 	
-	if(G5_USE_CACHE) {			
-	if(!file_exists($file_path)) {
+	if(!G5_USE_CACHE) {			
+		if(!file_exists($file_path)) {
             $cache_fwrite = true;
         } else {			
             if( $time > 0) {
@@ -123,6 +119,8 @@ function get_cache( $cache_file, $time = 0 ){
 	return $cache_fwrite;
 }
 
+	/***************write_cache*************/
+	//write_cache(full path directory, the variable name which will hold the array, variable values)
 function write_cache($cache_file, $var_name, $content){
 	$file_path = G5_DATA_PATH."/cache/".$cache_file;
 	$handle = fopen($file_path, 'w');
