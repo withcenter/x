@@ -622,7 +622,9 @@ function imageresize ( $file, $width = 100, $height = 100, $quality = 60 ) {
 }
 
 /*********************GET IMAGE URL FROM ckeditor CONTENT*********************/
-function get_url_from_ckeditor($image){
+function get_url_from_ckeditor($image_content){
+	$image = get_editor_image($image_content);
+
 	if( $image[0] ){
 		$image = explode(" ",$image[1][0]);	
 		$image = str_replace('"', "", $image[2]);

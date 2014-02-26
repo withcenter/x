@@ -11,8 +11,7 @@ if ( $list ) {
 	foreach ( $list as $li ) {
 		$thumb = get_list_thumbnail($bo_table, $li['wr_id'], 200, 160);				
 		if ( empty($thumb['src']) ) {  // 만약 로컬 데이터 저장소에 이미지가 없다면 본문의 img 태그에서 이미지를 가져온다.			
-			$editor_image = get_editor_image( $li['wr_content'] );
-			$thumb['src'] = get_url_from_ckeditor($editor_image);						
+			$thumb['src'] = get_url_from_ckeditor($li['wr_content']);
 		}
 ?>
 		<div class='post-container'>
