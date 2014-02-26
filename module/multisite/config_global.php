@@ -17,10 +17,10 @@
 		<input type='hidden' name='module' value='multisite'>
 		<input type='hidden' name='action' value='config_global_submit'>
 <div class='config site-global'>
-	<div class='config-main-title'><div class='inner'><img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 사이트 정보, click the title to view the settings</div></div>
+	<div class='config-main-title'><div class='inner'><img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 사이트 정보</div></div>
 		<div class='config-wrapper'>
 			<div class='config-title'><span class='config-title-info'>BASIC SITE SETTINGS</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>	
-			<div class='config-container show-config'>
+			<div class='config-container'>
 				<table cellpadding=0 cellspacing=0 width='100%'>
 					<tr valign='top'>
 						<td >
