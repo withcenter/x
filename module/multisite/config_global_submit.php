@@ -33,7 +33,7 @@ foreach( $_FILES as $key => $value ) {
 	if( $in[$key.'_remove'] == 'y' ) ms::meta( $key , '' );							// if checkbox( file-upload-name_remove ) == 'y' 
 	$pi = pathinfo( $value['name'] );													// then set meta ( file-upload-name = '' ) to remove photo
 	$allowed_files = array( 'jpg', 'jpeg', 'gif', 'png', 'bmp' );	
-	if ( !empty( $pi['basename'] ) && !in_array( $pi['extension'], $allowed_files ) ) jsGo("?module=$module&action=config_global","Invalid File(s), Please upload Image Files Only, ex: .jpg, .jpeg, .png, .gif, .bmp");
+	if ( !empty( $pi['basename'] ) && !in_array( strtolower($pi['extension']), $allowed_files ) ) jsGo("?module=$module&action=config_global","Invalid File(s), Please upload Image Files Only, ex: .jpg, .jpeg, .png, .gif, .bmp");
 	else {	
 			
 			if ( !$name = $pi['filename'] )  $name = "no_filename";
