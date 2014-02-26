@@ -741,6 +741,28 @@ class gnuboard {
 	{
 		return db::table_exist( self::board_table($bo_table) );
 	}
+	static function thumbnail_from_image_tag( $html, $bo_table, $width=200, $height=200 )
+	{
+		if ( empty($html) ) return null;
+		$image = get_editor_image($html);
+		if ( empty( $image[1][0] ) ) return null;
+		
+		preg_match( "/http([^'\" ]*)/", $image[1][0], $ms );
+		$file = $ms[0];
+		
+		if ( empty($file) ) return null;
+		
+		require_once x::dir() . '/etc/phpthumb/ThumbLib.inc.php';
+		
+		
+		$phpThumb = PhpThumbFactory::create( $file );
+		$phpThumb->adaptiveResize($width, $height);
+		$output_filename = "thumb-" . basename($file).'_thumbnail_x'.$width.'_h'.$height . '.png';
+		$dest_file = G5_DATA_PATH . '/file/' . $bo_table . '/' . $output_filename;
+		$phpThumb->save($dest_file, 'png');
+		return G5_DATA_URL . '/file/' . $bo_table . '/' . $output_filename;
+	}
+	
 	
 	
 } // eo class

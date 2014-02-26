@@ -8,11 +8,16 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 <?
 
 if ( $list ) {
+	$w = 200;
+	$h = 100;
 	foreach ( $list as $li ) {
-		$thumb = get_list_thumbnail($bo_table, $li['wr_id'], 200, 160);				
+		$thumb = get_list_thumbnail($bo_table, $li['wr_id'], $w, $h);
 		if ( empty($thumb['src']) ) {  // 만약 로컬 데이터 저장소에 이미지가 없다면 본문의 img 태그에서 이미지를 가져온다.
 			//get_view_image_url([string with img src content],[width],[height],[quality(1-100?)]);
-			$thumb['src'] = get_image_thumbnail_url($li['wr_content'],200,160,100);
+			// $thumb['src'] = get_image_thumbnail_url($li['wr_content'],200,160,100);
+
+			$thumb['src'] = g::thumbnail_from_image_tag( $li['wr_content'], $bo_table, $w, $h );
+
 		}
 ?>
 		<div class='post-container'>
