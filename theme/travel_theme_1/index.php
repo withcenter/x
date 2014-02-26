@@ -61,7 +61,6 @@ $current_date = date('Y-m-d').' 23:59:59';
 $previous_date = date('Y-m-d', strtotime("-7 day", strtotime($current_date))).' 00:00:00';
 $rows = db::rows( "SELECT bo_table, wr_id FROM $g5[board_new_table] WHERE $qb AND bn_datetime BETWEEN '$previous_date' AND '$current_date' ORDER BY bn_datetime DESC" );	
 
-if( $rows ){
 ?>
 	<div class='photo-gallery'>
 		<div class='title'>여행 갤러리</div>
@@ -111,10 +110,10 @@ if( $rows ){
 					}
 
 				}
+				else echo "게시핀에 글을 등록해 주세요";
 			?>
 		</div>
 	</div>
-<?}?>
 </div>
 <?
 	$latest_bo_table = ms::board_id( etc::domain() ).'_3';
