@@ -602,7 +602,7 @@ EOH;
 }
 
 /**********************Temporary Image Resize**********************/
-function imageresize ( $file, $width = 100, $height = 100, $quality) {	
+function imageresize ( $file, $width = 100, $height = 100, $quality = 60) {	
 	$output_filename = basename($file).'_thumbnail('.$width.'x'.$height.')_q['.$quality.']';
 	$dest = G5_DATA_PATH.'/file/imageresizer/'.$output_filename;
 	$dest_url = G5_DATA_URL.'/file/imageresizer/'.$output_filename;
@@ -622,7 +622,7 @@ function imageresize ( $file, $width = 100, $height = 100, $quality) {
 }
 
 /*********************GET IMAGE URL FROM ckeditor CONTENT*********************/
-function get_image_thumbnail_url($image_content, $width, $height, $quality = 60){
+function get_image_thumbnail_url($image_content, $width = 100, $height = 100, $quality = 60){
 	$image = get_editor_image($image_content);
 
 	if( $image[0] ){
