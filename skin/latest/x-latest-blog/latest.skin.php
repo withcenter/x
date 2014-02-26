@@ -1,6 +1,7 @@
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 include_once(x::dir().'/class/temp_image_resizer.php');
+include_once(G5_LIB_PATH.'/thumbnail.lib.php'); 
 ?>
 
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
@@ -8,13 +9,16 @@ include_once(x::dir().'/class/temp_image_resizer.php');
 
 if ( $list ) {
 	foreach ( $list as $li ) {
-		$thumb = get_list_thumbnail($bo_table, $li['wr_id'], 300, 300);
-		if ( empty($thumb['src']) ) {  // 만약 로컬 데이터 저장소에 이미지가 없다면 본문의 img 태그에서 이미지를 가져온다.
-			//$content = get_view_thumbnail ( $li['wr_content'], 50 );  /* 사이즈 조절이 안된다. */
-			
+		$thumb = get_list_thumbnail($bo_table, $li['wr_id'], 200, 160);				
+		if ( empty($thumb['src']) ) {  // 만약 로컬 데이터 저장소에 이미지가 없다면 본문의 img 태그에서 이미지를 가져온다.			
 			$image = get_editor_image( $li['wr_content'] );
+			if( $image[0] ){
+				$image = explode(" ",$image[1][0]);	
+				$image = str_replace('"', "", $image[2]);
+				$image_url = str_replace('src=', "", $image);				
+				$thumb['src'] = imageresize ( $image_url, 200, 160, 100 );
+			}			
 		}
-		
 ?>
 		<div class='post-container'>
 			<a href='<?=g::url()?>/bbs/board.php?bo_table=<?=$bo_table?>&wr_id=<?=$li['wr_id']?>'>
@@ -31,18 +35,22 @@ if ( $list ) {
 					</td>
 				</tr>
 				<tr><td colspan=2><span class='post-content'>
-				<?php  if ( $thumb['src'] ) $image_url = $image_content = "<img src='".$thumb['src']."' />";
-						else if ( empty($thumb['src']) && $image[0][0] ) $image_content = $image[0][0];
+				<?php  if ( $thumb['src'] ) $image_content = "<img src='".$thumb['src']."' />";
+					   else $image_content = null;
 				?>
 				
-				<span class='post-images'>
-					<?=$image_content?>
-				</span>
+				<?if( $image_content ){?>
+					<span class='post-images'>
+						<?=$image_content?>
+					</span>
+				<?}?>
+				
 				<?=cut_str(strip_tags($li['wr_content']),1000,'...')?></span></td></tr>
 			</table>
 			</a>
 		</div>
-<? }
+<? 	
+	}
 }
 else {?>
 			<div class='post-container'>
