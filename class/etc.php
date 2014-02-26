@@ -610,7 +610,7 @@ function imageresize ( $file, $width = 100, $height = 100, $quality = 60 ) {
 		return $dest_url;
 	}
 	else{
-		$image_info = getimagesize( $file );//currently still produces warning messages in case the url is not an image url
+		$image_info = @getimagesize( $file );//currently still produces warning messages in case the url is not an image url
 		if( $image_info ){			
 			new imageresizer ( $file, $width, $height, $image_info['mime'], $quality, $dest );		
 			return $dest_url;
@@ -619,4 +619,18 @@ function imageresize ( $file, $width = 100, $height = 100, $quality = 60 ) {
 			return false;
 		}
 	}	
+}
+
+/*********************GET IMAGE URL FROM ckeditor CONTENT*********************/
+function get_url_from_ckeditor($image_content){
+	$image = get_editor_image($image_content);
+
+	if( $image[0] ){
+		$image = explode(" ",$image[1][0]);	
+		$image = str_replace('"', "", $image[2]);
+		$image_url = str_replace('src=', "", $image);				
+		$thumbnail = imageresize ( $image_url, 200, 160, 100 );
+		return $thumbnail;
+	}
+	else return null;
 }
