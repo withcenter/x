@@ -35,13 +35,23 @@ body{
 	overflow: hidden;
 }
 
-.logo_search .inner  img {
+.logo_search .inner  img, .logo_search .inner .no-logo {
 	position: absolute;
 	top: 10px;
 	left: 25px;
 	border: 0;
 }
-
+.logo_search .inner .no-logo {
+	top: 15px;
+	border: 2px solid #82c0b5;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 3px;
+	padding: 0 10px;
+	color: #ffffff;
+	font-size: 11pt;
+	font-weight: bold;
+}
 .logo_search .inner .right-top-menu{
 	float: right;
 	margin: 21px 18px 0 0;
@@ -135,6 +145,11 @@ body{
 	height: 250px;
 	width: 100%;
 }
+
+.layout .main-content .layout-divider {
+	width: 10px;
+}
+
 .layout .main-content .main-top tr .application {
 	position: relative;
 }
@@ -172,4 +187,43 @@ body{
 	width: 970px;
 	color: #959595;
 	font-size: 0.875em;
+}
+
+.no-image-banner {
+	border: 1px solid #d5d5d5;
+	height: 248px;
+	line-height: 248px;
+	font-weight: bold;
+	font-size: 15pt;
+	color: #25535a;
+	text-align: center;
+	background-color: #ebebeb;
+}
+
+.no-image-banner {
+	height: 250px;
+	position: relative;
+}
+
+.no-image-banner .button {
+	font-size: 10pt;
+	font-weight: normal;
+	background-color: #666666;
+	color: #ffffff;
+	display: inline-block;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 10px;
+	border-radius: 3px;
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}
+.no-image-banner .button:hover {
+	text-decoration: none;
+}
+
+.bottom-no-image-banner {
+	height: 130px;
+	line-height: 130px;
 }

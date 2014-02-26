@@ -1,11 +1,17 @@
-<?php
-	if ( $in['page'] ) include x::theme( $in['page'] );
-	else {?>
-	
 		<table class='main-top' cellpadding=0 cellspacing=0 width='100%'>
 			<tr valign='top'>
-				<td width=750><?if( ms::meta('com2banner_main') ) {?><img src="<?=ms::meta('img_url').ms::meta('com2banner_main')?>"><?}?></td>
-				<td width=10></td>
+				<td>
+					<?	if( ms::meta('com2banner_main') ) {?>
+							<img src="<?=ms::meta('img_url').ms::meta('com2banner_main')?>"><?
+						}
+						else {?>
+							<div class='no-image-banner'>
+								배너 이미지를 어드민 페이지에서 등록해 주세요.
+								<a class='button' href='<?=ms::url_config()?>'>사이트 관리 바로가기</a>
+							</div>
+						<?}
+					?>
+				</td>
 			</tr>
 		</table>
 		<table cellpadding=0 cellspacing=0 width='100%'>
@@ -15,7 +21,16 @@
 				<? if( $forum_3 ) { ?><td width='33%' class='latest_3'><?=latest('x-latest-community-2',$forum_3, 6, 60, 1, x::url_theme().'/img/icon3.gif')?></td> <?}?>
 			</tr>
 		</table>
-		<div class='bottom-banner'><?if( ms::meta('com2banner_bottom') ) {?><img src="<?=ms::meta('img_url').ms::meta('com2banner_bottom')?>"><?}?></div>
+		<div class='bottom-banner'>
+			<?if( ms::meta('com2banner_bottom') ) {?>
+				<img src="<?=ms::meta('img_url').ms::meta('com2banner_bottom')?>" />
+			<?} else {?>
+					<div class='no-image-banner bottom-no-image-banner'>
+						배너 이미지를 어드민 페이지에서 등록해 주세요.
+							<a class='button' href='<?=ms::url_config()?>'>사이트 관리 바로가기</a>
+					</div>
+			<?}?>
+		</div>
 		
 		<table cellpadding=0 cellspacing=0 width='100%'>
 			<tr valign='top'>
@@ -32,4 +47,3 @@
 				include x::dir().'/theme/withcenter/bottom_latest.php';
 			?>
 		</div>
-	<?}
