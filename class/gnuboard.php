@@ -156,6 +156,8 @@ class gnuboard {
 	{
 		if ( empty($o['device']) ) $o['device'] = 'both';
 		global $g5;
+		
+		if ( !$bo_skin = $o['bo_skin'] ) $bo_skin = 'basic';
 		$q = "
 			insert into {$g5['board_table']}
 			set
@@ -208,7 +210,7 @@ class gnuboard {
 				bo_new = '24',
 				bo_hot = '100',
 				bo_image_width = '600',
-				bo_skin = 'basic',
+				bo_skin = '$bo_skin',
 				bo_mobile_skin = 'basic',
 				bo_include_head = '_head.php',
 				bo_include_tail = '_tail.php',
