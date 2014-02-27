@@ -1,6 +1,7 @@
 .sidebar .community3-posts {
 	margin-top: 10px;
 	border: solid 1px #bbbbbb;
+	white-space: nowrap;
 }
 
 .sidebar .community3-posts a {
