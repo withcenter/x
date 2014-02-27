@@ -5,14 +5,17 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
 <div class='community_images_with_captions_2'>		
 <?php
-	if ( $list ) {
+	if ( $list ) {	
 		$count = 1;
 		
-			$imgsrc = get_list_thumbnail($bo_table, $li['wr_id'], 288, 258);													
+			$imgsrc = get_list_thumbnail($bo_table, $list[0]['wr_id'], 288, 258);													
 			if( !$imgsrc['src'] ) $imgsrc['src'] = $latest_skin_url.'/img/no-image-big.png';
 
-			$img = "<img src='$imgsrc[src]'/>";						
-			echo "<div class='first_image'><a href='$li[href]'>".$img."</a></div>";
+			$img = "<img src='".$imgsrc['src']."'/>";						
+			echo "<div class='first_image'>
+					<a href='".$list[0]['href']."'>".$img."</a>
+					<div class='first_image_caption'><a href='".$list[0]['href']."'>".conv_subject($list[0]['wr_subject'],20,"...")."</a></div>
+				</div>";
 			
 		?>
 		<div class='other_images'>
