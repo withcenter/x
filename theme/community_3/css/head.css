@@ -1,10 +1,33 @@
 .top{
 	width:100%;	
+	background-color:#cc4235;
 }
 
-.top > div{
+.top .inner{
+	max-width:970px;
+	height:30px;
+	margin:auto;
+	color:white;
+}
+
+.top .inner a{
+	color:white;
+	text-decoration:none;
+	display:inline-block;		
+	padding:7px 0;
+}
+
+.top .inner .dot{
+	margin:0 6px;
+}
+
+.top .inner > div{
 	display:inline-block;
-	width:49.5%;		
+	width:49.5%;
+}
+
+.top .inner .left{
+	
 }
 
 .top .right{

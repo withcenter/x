@@ -4,18 +4,13 @@
 
 <div class='layout'>
 	<div class='top'>
-		<div class='left'>
-			<a href='<?=x::url()?>'>Home</a>
-			<span class="dot">•</span><a href='#'>Login</a>
-			<span class="dot">•</span><a href='#'>Profile</a>
-			<span class="dot">•</span><a href='#'>Community</a>
-			<span class="dot">•</span><a href='#'>QnA</a>
-		</div>
-		<div class='right'>
-			<a href='#'>Cafe</a>
-			<span class="dot">•</span><a href='#'>앱 다운로드</a>
-			<span class="dot">•</span><a href='#'>Adv</a>
-			<span class="dot">•</span><a href='#'>Contact: +82 070 7529 1749</a>
+		<div class='inner'>
+			<div class='left'>
+				<a href='<?=g::url()?>'>Home</a><span class="dot">•</span><a href='#'>Login</a><span class="dot">•</span><a href='#'>Profile</a><span class="dot">•</span><a href='#'>Community</a><span class="dot">•</span></span><a href='#'>QnA</a>
+			</div>
+			<div class='right'>
+				<a href='#'>Cafe</a><span class="dot">•</span><a href='#'>앱 다운로드</a><span class="dot">•</span><a href='#'>Adv</a><span class="dot">•</span><a href='#'>Contact: +82 070 7529 1749</a>
+			</div>
 		</div>
 	</div>
 	<div class='header'>
@@ -29,4 +24,4 @@
 				<? include x::theme('sidebar'); ?>
 			</div>
 			<div class='content'>
-
+				<?if (preg_match('/^config/', $action ) ) include ms::site_menu();?>
