@@ -754,12 +754,13 @@ class gnuboard {
 		
 		require_once x::dir() . '/etc/phpthumb/ThumbLib.inc.php';
 		
-		
-		$phpThumb = PhpThumbFactory::create( $file );
-		$phpThumb->adaptiveResize($width, $height);
 		$output_filename = "thumb-" . basename($file).'_thumbnail_x'.$width.'_h'.$height . '.png';
 		$dest_file = G5_DATA_PATH . '/file/' . $bo_table . '/' . $output_filename;
-		$phpThumb->save($dest_file, 'png');
+		if( !file_exists( $dest_file ) ){
+			$phpThumb = PhpThumbFactory::create( $file );
+			$phpThumb->adaptiveResize($width, $height);		
+			$phpThumb->save($dest_file, 'png');
+		}
 		return G5_DATA_URL . '/file/' . $bo_table . '/' . $output_filename;
 	}
 	
