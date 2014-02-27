@@ -7,7 +7,7 @@
 						else {?>
 							<div class='no-image-banner'>
 								배너 이미지를 어드민 페이지에서 등록해 주세요.
-								<a class='button' href='<?=ms::url_config()?>'>사이트 관리 바로가기</a>
+								<a class='button' href='<?=ms::url_config()?>#banner_description'>사이트 관리 바로가기</a>
 							</div>
 						<?}
 					?>
@@ -27,7 +27,7 @@
 			<?} else {?>
 					<div class='no-image-banner bottom-no-image-banner'>
 						배너 이미지를 어드민 페이지에서 등록해 주세요.
-							<a class='button' href='<?=ms::url_config()?>'>사이트 관리 바로가기</a>
+							<a class='button' href='<?=ms::url_config()?>#banner_description'>사이트 관리 바로가기</a>
 					</div>
 			<?}?>
 		</div>

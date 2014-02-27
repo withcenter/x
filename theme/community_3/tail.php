@@ -1,4 +1,5 @@
-﻿			</div><!--content-->			
+﻿
+			</div><!--content-->			
 		
 		</div><!--main-content-->
 	</div><!--body-wrapper-->
