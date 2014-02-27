@@ -132,7 +132,7 @@
 
 #bo_list  .right {
 	float: left;
-	max-width: 620px;
+	max-width: 630px;
 }
 #bo_list  .right_100 {
 	width: 100%;
@@ -205,6 +205,7 @@
 
 #bo_list  .right .product-rate-info .product-info {
 	float: right; 
+	margin-right: 20px;
 }
 
 /* 게시판 목록 공통 */
