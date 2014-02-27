@@ -1,0 +1,12 @@
+.top{
+	width:100%;
+}
+
+.top > div{
+	display:inline-block;
+	width:49.5%;		
+}
+
+.top .right{
+	text-align:right;
+}
