@@ -82,9 +82,8 @@ echo $latest_1_output;
 
 <div class='images_with_caption_2'>
 	<?
-	/*$latest_bo_table = ms::board_id(etc::domain()).'_1';
+	$latest_bo_table = ms::board_id(etc::domain()).'_1';
 	$latest_1_output = latest("x-community_3_images_with_caption_2", $latest_bo_table, 7, 20);
 	echo $latest_1_output;
-	*/
 	?>
 </div>
