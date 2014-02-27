@@ -11,7 +11,7 @@
 	}
 
 	
-	$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";
+	$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "\_%'";
 	
 	$q = "SELECT bo_table, bo_subject FROM $g5[board_table] WHERE $qb";
 	
