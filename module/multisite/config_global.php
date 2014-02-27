@@ -19,7 +19,7 @@
 <div class='config site-global'>
 	<div class='config-main-title'><div class='inner'><img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 사이트 정보</div></div>
 		<div class='config-wrapper'>
-			<div class='config-title'><span class='config-title-info'>BASIC SITE SETTINGS</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>	
+			<div class='config-title'><span class='config-title-info'>기본 사이트 설정</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>	
 			<div class='config-container'>
 				<table cellpadding=0 cellspacing=0 width='100%'>
 					<tr valign='top'>
@@ -56,14 +56,14 @@
 						<span class='select-wrapper'><span class='inner'>
 							<?php
 							foreach ( $rows as $row ) {
-								if ( ms::meta('forum_no_'.$i) && ms::meta('forum_no_'.$i) == $row['bo_table'] ) {
+								if ( ms::meta('게시판 번호 '.$i) && ms::meta('forum_no_'.$i) == $row['bo_table'] ) {
 									$default_value =  '(forum no. '.$i.') '.$row['bo_subject'];
 									break;
 								}
 								else $default_value = null;
 							}
 							
-							echo $default_value ? $default_value : '(select forum no. '.$i.') 게시판 선택';
+							echo $default_value ? $default_value : '(게시판 번호 '.$i.') 게시판 선택';
 							?>
 						</span></span>
 						<span class='select-button'><span class='inner'>
