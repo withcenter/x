@@ -19,10 +19,9 @@
 ?>
 <link rel='stylesheet' type='text/css' href='<?=x::url()?>/module/multisite/subsite.css' />
 <script src='<?=x::url()?>/module/multisite/subsite.js'></script>
-<form action='?' class='config_menu'>
+<form action='?' class='config config_menu'>
 		<input type='hidden' name='module' value='multisite' />
 		<input type='hidden' name='action' value='config_menu_submit' />
-<div class='config'>
 <div class='config site-global'>
 	<div class='config-main-title'><div class='inner'><img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 메뉴 선택</div></div>
 		<div class='config-wrapper'>
