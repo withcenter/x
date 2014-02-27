@@ -3,7 +3,6 @@
 <script src='<?=x::url_theme()?>/js/theme.js' /></script>
 
 
-
 <div class='top'>
 	<div class='left'>
 		<a href='<?=x::url()?>'>Home</a>
@@ -22,3 +21,12 @@
 <div class='header'>
 	
 </div>
+
+
+<div class='layout'>
+	<div class='main-content'>
+		<div class='sidebar'>	
+			<? include x::theme('sidebar'); ?>
+		</div>
+		<div class='content'>
+
