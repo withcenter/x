@@ -19,8 +19,9 @@
 .sidebar .sidebanner {
 	margin-top: 10px;
 	width: 210px;
-	height: 280px;
+
 	overflow: hidden;
+	border: solid 1px #bbbbbb;
 }
 
 .sidebar .sidebanner img {
