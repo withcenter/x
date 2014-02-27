@@ -132,7 +132,7 @@
 
 #bo_list  .right {
 	float: left;
-	max-width: 630px;
+	max-width: 640px;
 }
 #bo_list  .right_100 {
 	width: 100%;
@@ -154,6 +154,7 @@
 	line-height: 17px;
 	overflow: hidden;
 	margin-bottom: 5px;
+	max-width: 620px;
 }
 #bo_list  .right .subject a{
 	color: #44474f;
@@ -165,6 +166,7 @@
 	line-height: 17px;
 	height: 34px;
 	overflow: hidden;
+	max-width: 640px;
 }
 #bo_list  .right .content  a {
 	font-size: 9pt;
