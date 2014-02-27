@@ -97,7 +97,7 @@ echo $latest_1_output;
 	echo $latest_1_output;
 	?>
 	</td>
-	<td width='50%'>
+	<td width='50%' class='right'>
 	<?
 	$latest_bo_table = ms::board_id(etc::domain()).'_2';
 	$latest_1_output = latest("x-community-3-timed-list-with-images", $latest_bo_table, 6, 20);
