@@ -36,7 +36,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		?>	
 			<tr <? if( $i == $no_of_posts ) echo "class='last-item'"; ?> valign='top'>				
 				<?
-					echo "<td width='10' valign='middle'><div class='posts-square'>■</div></td><td width='130'><a href='$url'>$content</a></td><td width='50' align='right'><a href='$url'> <span class='no-of-comments $no_comment'>[ $comment_count ]</span></a></td>";
+					echo "<td width='10' valign='middle'><div class='posts-square'>■</div></td><td width='120'><a href='$url' class='content-community-3'>$content</a></td><td width='40' align='right'><a href='$url'> <span class='no-of-comments $no_comment'>[ $comment_count ]</span></a></td>";
 				?>
 				<?$i++;?>
 			</tr>	
