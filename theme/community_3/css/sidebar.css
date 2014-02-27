@@ -1,0 +1,101 @@
+.sidebar {
+	word-break: break-all;
+}
+
+/**Company Banner*/
+.sidebar .company-banner {
+	margin-top: 10px;
+	width: 210px;
+	height: 100px;
+	overflow: hidden;
+	border: solid 1px #bbbbbb;
+}
+
+.sidebar .company-banner img {
+	width: 100%;
+}
+
+
+/**Popular Posts*/
+.sidebar .popular-posts {
+	margin-top: 10px;
+	border: solid 1px #bbbbbb;
+}
+
+.sidebar .popular-posts a {
+	text-decoration: none;
+}
+
+.sidebar .popular-posts .title {
+	padding: 7px;
+	background: #fafafa;
+	border-bottom: solid 1px #bbbbbb;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.sidebar .popular-posts .title img {
+	margin: 0 7px 0 0;
+}
+
+.sidebar .popular-posts .popular-posts-items {
+	padding: 5px;
+}
+
+.sidebar .popular-posts .popular-posts-items table td {
+	border-bottom: dashed 1px #bebebe;
+}
+
+.sidebar .popular-posts .popular-posts-items table tr.last-post td {
+	border: 0;
+}
+
+.sidebar .popular-posts .post-num {
+	padding: 4px;
+	background: #1a1a1a;
+	color: #ffffff;
+	text-align: center;
+}
+.sidebar .popular-posts .popular-posts-items table td .num_views {
+	font-size: 11px;
+}
+.sidebar .popular-posts .popular-posts-items table td .num_comments {
+	color: #cc4235;
+	font-size: 11px;
+}
+
+.popular-views tr td{
+	border-bottom: 0 !important;
+}
+
+
+
+
+
+/**Latest Comments*/
+.sidebar .latest-comments {
+	margin-top: 10px;
+	border: solid 1px #bbbbbb;
+}
+
+.sidebar .latest-comments a {
+	text-decoration: none;
+}
+
+.sidebar .latest-comments .title {
+	padding: 7px;
+	background: #fafafa;
+	border-bottom: solid 1px #bbbbbb;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.sidebar .latest-comments .title img {
+	margin: 0 7px 0 0;
+}
+
+.sidebar .latest-comments .latest-comments-items {
+	padding: 10px;
+}
+
+
