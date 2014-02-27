@@ -13,7 +13,7 @@ $forum_6 = ms::meta('forum_no_6');
 
 <div class='company-banner'>
 	<?
-	if ( $company_banner = ms::meta('com3banner_company') ) $imgsrc = $company_banner;
+	if ( $company_banner = ms::meta('com3banner_company') ) $imgsrc = ms::meta('img_url').$company_banner;
 	else $imgsrc = x::url_theme().'/img/company_banner.png';
 	?>
 	<img src='<?=$imgsrc?>'>
@@ -22,3 +22,11 @@ $forum_6 = ms::meta('forum_no_6');
 <?=latest('x-latest-community3-posts', $forum_1 , 5 , 20)?>
 <? include x::theme('popular_posts') ?>
 <? include x::theme('latest_comments') ?>
+
+<?
+if ( $company_banner = ms::meta('com3banner_sidebar') ) { ?>
+<div class='sidebanner'>
+	<?$imgsrc = ms::meta('img_url').$company_banner?>
+	<img src='<?=$imgsrc?>'>
+</div>
+<?}?>

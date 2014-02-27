@@ -17,6 +17,7 @@
 
 .layout .body-wrapper .main-content .content {
 	width: 750px;
+	float: left;
 }
 
 .layout .body-wrapper .main-content .sidebar {
