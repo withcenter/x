@@ -1,0 +1,33 @@
+.sidebar .community3-posts {
+	margin-top: 10px;
+	border: solid 1px #bbbbbb;
+}
+
+.sidebar .community3-posts a {
+	text-decoration: none;
+}
+
+.sidebar .community3-posts .title {
+	padding: 7px;
+	background: #fafafa;
+	border-bottom: solid 1px #bbbbbb;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.sidebar .community3-posts .title img {
+	margin: 0 7px 0 0;
+}
+
+.sidebar .community3-posts .community3-posts-items {
+	padding: 10px;
+}
+
+.sidebar .community3-posts .community3-posts-items .posts-square {
+	font-size: 10px;
+}
+
+.sidebar .community3-posts .community3-posts-items .no-of-comments {
+	color: #ff0000;
+	font-size: 11px;
+}
