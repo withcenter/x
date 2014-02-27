@@ -17,9 +17,21 @@
 
 .layout .body-wrapper .main-content .content {
 	width: 750px;
+	float: left;
 }
 
 .layout .body-wrapper .main-content .sidebar {
 	float: right;
 	width: 210px;
+}
+/***index***/
+.layout .body-wrapper .main-content .banner{
+	border:1px solid #bbbbbb;
+	height:238px;
+	margin-bottom:10px;
+}
+
+.layout .body-wrapper .main-content .images_with_caption_wrapper{
+	border:1px solid #bbbbbb;
+	margin-bottom:10px;
 }
