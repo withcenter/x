@@ -449,3 +449,10 @@
 .config_menu.create-forum {
 	margin: 0 0 5px 0;
 }
+
+.site-global .config-wrapper {
+	margin-bottom: 50px;
+}
+.site-global .config-wrapper:last-child {
+	margin-bottom: 0;
+}
