@@ -13,12 +13,8 @@
 
 
 <div class='layout'>
-	<table class='main-content' cellpadding=0 cellspacing=0 width='100%' border=0>
-		<tr valign='top'>
-			<td class='content'>
-			
-			</td>
-			<td width='10'></td>
-			<td class='right' width='200'>	
-				<? include x::theme('right') ?>
-			</td>
+	<div class='main-content'>
+		<div class='sidebar'>	
+			<? include x::theme('sidebar'); ?>
+		</div>
+		<div class='content'>
