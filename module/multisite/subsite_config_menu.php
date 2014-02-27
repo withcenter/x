@@ -16,7 +16,7 @@
 	if ( $selected ) {
 		echo "
 			<style>
-				.multisite-menu li a[setting_menu_no='".$selected."'] {
+				.multisite-menu > .sub-menu a[setting_menu_no='".$selected."'] {
 					background-color: #616161;
 				}
 			</style>
@@ -26,28 +26,28 @@
 ?>
 <ul class='multisite-menu'>
 	
-	<li>
+	<li class='sub-menu'>
 		<a setting_menu_no=1 href='?module=multisite&action=config_global'>일반 설정</a>
 	</li>
 	
-	<li>
+	<li class='sub-menu'>
 		<a setting_menu_no=2 href='?module=multisite&action=config_menu'>메뉴</a>
 	</li>
 	
 	
-	<li>
+	<li class='sub-menu'>
 		<a setting_menu_no=3 href='?module=multisite&action=config_forum'>게시판</a>
 	</li>
 	
-	<li>
+	<li class='sub-menu'>
 		<a setting_menu_no=4 href='?module=multisite&action=config_write'>글쓰기</a>
 	</li>
 	
 	
-	<li>
+	<li class='sub-menu'>
 		<a setting_menu_no=5 href='?module=multisite&action=config_theme'>테마</a>
 	</li>
-	<li>
+	<li class='sub-menu'>
 		<a setting_menu_no=6 href='?module=multisite&action=config'>도움말</a>
 	</li>	
 	

@@ -161,8 +161,8 @@ include_once G5_LIB_PATH.'/thumbnail.lib.php';
 			<div style='clear:left;'></div>
         </div>
         <?php } ?>
-    </div>
-
+	</div>
+	
     <?php if ($list_href || $is_checkbox || $write_href) { ?>
     <div class="bo_fx">
         <?php if ($is_checkbox) { ?>

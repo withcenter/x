@@ -1,5 +1,5 @@
 <div class='config-wrapper'>
-	<div class='config-title'><span class='config-title-info'>HEADER LOGO and BANNERS</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
+	<div class='config-title'><span class='config-title-info'>사이트 로고 및 배너</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
 	<div class='config-container'>
 <table cellpadding=5 class='image-config' width='100%'>
 	<tr valign='top'>
