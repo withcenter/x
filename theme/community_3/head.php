@@ -1,4 +1,4 @@
-﻿<link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/theme.css' />
+<link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/theme.css' />
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/head.css' />
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/tail.css' />
 <script src='<?=x::url_theme()?>/js/theme.js' /></script>
