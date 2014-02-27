@@ -130,8 +130,12 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
             <?php if ($move_href) { ?><li><a href="<?php echo $move_href ?>" class="btn_admin" onclick="board_move(this.href); return false;">이동</a></li><?php } ?>
             <?php if ($search_href) { ?><li><a href="<?php echo $search_href ?>" class="btn_b01">검색</a></li><?php } ?>
             <li><a href="<?php echo $list_href ?>" class="btn_b01">목록</a></li>
-            <?php if ($reply_href) { ?><li><a href="<?php echo $reply_href ?>" class="btn_b01">답변</a></li><?php } ?>
-            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b02">글쓰기</a></li><?php } ?>
+            <? if ( ms::admin() ) {?>
+				<?php if ($reply_href) { ?>
+					<li><a href="<?php echo $reply_href ?>" class="btn_b01">답변</a></li><?php 
+				} ?>
+				<?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b02">글쓰기</a></li><?php } ?>
+			<? }?>
         </ul>
         <?php
         $link_buttons = ob_get_contents();
