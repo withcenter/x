@@ -9,11 +9,11 @@
 
         <div id="logo">
             <a href="<?php echo G5_URL ?>">
-			<? if( $ms::meta('header_logo') ) { ?>
+			<?// if( $ms::meta('header_logo') ) { ?>
 				<img src="<?=ms::url_site(etc::domain()).ms::meta('img_url').ms::meta('header_logo')?>" width=240 height=119>
-			<?} else {?>
+			<?//} else {?>
 				<img src='<?=x::url_theme()?>/img/logo.png'>
-			<?}?>
+			<?//}?>
 			</a>
         </div>
 
