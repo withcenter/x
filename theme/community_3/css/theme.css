@@ -35,3 +35,9 @@
 	border:1px solid #bbbbbb;
 	margin-bottom:10px;
 }
+
+.layout .body-wrapper .main-content .bulleted_list{
+	border:1px solid #bbbbbb;
+	margin-bottom:10px;
+	padding:10px;
+}
