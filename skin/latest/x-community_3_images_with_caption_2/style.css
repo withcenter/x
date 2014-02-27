@@ -1,0 +1,30 @@
+.community_images_with_captions_container_2 {
+	width:138px;	
+	display: inline-block;
+}
+
+.community_images_with_captions_container_2.no-margin {
+	margin-right:0;
+}
+
+.images_with_captions_2 .img-wrapper_2{
+	width:138px;
+	height:98px;
+	border:1px solid #bbbbbb;
+}
+
+.images_with_captions_2 .img-wrapper_2_first img{
+	width:100%;
+}
+
+.images_with_captions_2 .img-wrapper_2_first{
+	width:288px;
+	height:258px;
+}
+
+.images_with_captions_2 .caption_2{	
+	width:172px;
+	text-align:center;
+	overflow:hidden;
+	white-space:nowrap;
+}
