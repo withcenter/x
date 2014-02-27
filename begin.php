@@ -15,10 +15,11 @@ else {
 	ms::set_title();
 }
 
-if ( x::installed() && ! etc::cli() ) {
+if ( x::installed() && etc::web() ) {
 	x::$config['site'] = md::config( etc::domain_name() );
-	include_once x::theme('init');
 	ob_start();
+	if ( file_exists(x::theme('init')) ) include_once x::theme('init');
+	
 }
 
 include 'etc/begin.php';

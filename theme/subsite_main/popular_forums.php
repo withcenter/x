@@ -20,9 +20,13 @@
 			}					
 		}
 
-		usort($allhits, function($a, $b) {
+		/** @todo : bug check 
+			@warning : do not use anonymous function.
+		*/
+		function comp_hit($a, $b) {
 			return $b['wr_hit'] - $a['wr_hit'];
-		});
+		}
+		usort($allhits, 'comp_hit');
 
 		for( $count = 0; $count < 3; $count++ ) {
 		$post_url = g::url()."/bbs/board.php?bo_table=".$allhits[$count]['bo_table']."&wr_id=".$allhits[$count]['wr_id'];
