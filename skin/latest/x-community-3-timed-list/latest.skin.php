@@ -5,8 +5,8 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
 
 <!-- <?php echo $bo_subject; ?> 최신글 시작 { -->
-<div class="comm3_bulleted_list">
-    <div class="bulleted_list_title">		
+<div class="comm3_timed_list">
+    <div class="timed_list_title">		
 		<?php echo $bo_subject; ?>
 		<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=<?php echo $bo_table ?>">more</a>
 	</div>
@@ -20,9 +20,10 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
                 echo "<strong>".$list[$i]['subject']."</strong>";
             else
                 echo $list[$i]['subject'];
-			if( !$list[$i]['comment_cnt'] ) $list[$i]['comment_cnt'] = 0;
+			if( !$list[$i]['comment_cnt'] ) $comment_count = "<span class='comment_count no-comment'>0</span>";
+			else $comment_count = "<span class='comment_count'>".strip_tags($list[$i]['comment_cnt'])."</span>";
 			
-			echo "<span class='comment_count'> [".strip_tags($list[$i]['comment_cnt'])."]</span>";
+			echo "<div class='comment_and_time'>".$comment_count."<span class='time'>".$list[$i]['datetime2']."</span></div>";
 
             echo "</a>";
 
