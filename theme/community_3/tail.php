@@ -2,11 +2,14 @@
 		
 		</div><!--main-content-->
 	</div><!--body-wrapper-->
+	<div style='clear:both'></div>
 	<div class='footer'>
 		<div class='footer-menus'>
 			<ul id="comm3_main_menu">			
 				<?
+					$count = 0;
 					if( ms::admin() ) {
+					$count++;
 					$max_menus = 6;
 				?>
 						<li class="comm3_menu border-left" page = "admin-menu">
@@ -21,16 +24,18 @@
 					if( $i2 == 1 && $max_menus == 7) $border_left = 'border-left';
 					else $border_left = null;
 				?>
-				<? if ( ms::meta('menu_'.$i2) ) { 
+				<? if ( ms::meta('menu_'.$i2) ) {	
+					$count++;
 					$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('menu_'.$i2)."'");
 					if ( !$menu = $row['bo_subject'] ) $menu = null;
 				?>
 					<li class="comm3_menu <?=$border_left?>" page = "<?=ms::meta('menu_'.$i2)?>"><a href='<?=g::url()?>/bbs/board.php?bo_table=<?=ms::meta('menu_'.$i2)?>'><?=$menu?></a></li>
-				<?}
-					if( $i2 == $max_menus ){?>
+				<?}}?>
+				<?				
+				
+				for( $ctr = $count; $ctr <= 7; $ctr++ ){?>
 						<li class="comm3_menu <?=$border_left?>"><a href='#'></a></li>
-					<?}
-				}?>
+				<?}?>
 				<li class="comm3_menu images"><a href='#'><img class='phone' src='<?=x::url_theme()?>/img/phone.png'/></a></li>
 				<li class="comm3_menu images"><a href='#'><img class='arrow' src='<?=x::url_theme()?>/img/arrow-up.png'/></a></li>
 			</ul>
