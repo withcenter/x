@@ -20,6 +20,7 @@
 						else $first_image = '';
 						echo "<div class='banner-image image_num_$i $first_image'>";
 						if ( !$url = ms::meta('com3banner_'.$i.'_text2') )  $url = "javascript:void(0)";
+						
 						echo "<a href='$url' target='_blank'><img src='".$banner_url.$banner_image."'>";
 						echo "<p class='banner-text'><span class='banner-content'>".cut_str(strip_tags(ms::meta('com3banner_'.$i.'_text1')),60,'...')."</span></p>";
 						echo "<div class='banner-more'>MORE &gt;</div>";
@@ -55,25 +56,6 @@ echo $latest_1_output;
 	<?
 	$latest_bo_table = ms::board_id(etc::domain()).'_2';
 	$latest_1_output = latest("x-community-3-bulleted-list", $latest_bo_table, 14, 20);
-	echo $latest_1_output;
-	?>
-	</td>
-	</tr></table>
-</div>
-
-<div class='timed_list'>
-	<table width='100%' cellspacing=0 cellpadding=0><tr valign='top'>
-	<td width='50%'>
-	<?
-	$latest_bo_table = ms::board_id(etc::domain()).'_1';
-	$latest_1_output = latest("x-community-3-timed-list", $latest_bo_table, 11, 20);
-	echo $latest_1_output;
-	?>
-	</td>
-	<td width='50%'>
-	<?
-	$latest_bo_table = ms::board_id(etc::domain()).'_2';
-	$latest_1_output = latest("x-community-3-timed-list", $latest_bo_table, 11, 20);
 	echo $latest_1_output;
 	?>
 	</td>
