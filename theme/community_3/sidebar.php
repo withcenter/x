@@ -1,1 +1,1 @@
-Right Panel
+<?=outlogin('x-outlogin-community-3') ?>
