@@ -38,6 +38,8 @@
 				<?}?>
 				<div class='title'>배너1의 문구</div>
 				<textarea name='com3banner_1_text1'><?=stripslashes(ms::meta('com3banner_1_text1'))?></textarea>
+				<div class='title'>배너1 링크</div>
+				<input type='text' name='com3banner_1_text2' value='<?=ms::meta('com3banner_1_text2')?>'>
 			</div>
 		</td>
  
@@ -52,6 +54,8 @@
 			<?}?>
 			<div class='title'>배너2의 문구</div>
 			<textarea name='com3banner_2_text1'><?=stripslashes(ms::meta('com3banner_2_text1'))?></textarea>
+				<div class='title'>배너2 링크</div>
+				<input type='text' name='com3banner_2_text2' value='<?=ms::meta('com3banner_2_text2')?>'>
 			</div>
 		</td>
 	</tr>
@@ -67,6 +71,8 @@
 			<?}?>
 			<div class='title'>배너3의 문구</div>
 			<textarea name='com3banner_3_text1'><?=stripslashes(ms::meta('com3banner_3_text1'))?></textarea>
+				<div class='title'>배너3 링크</div>
+				<input type='text' name='com3banner_3_text2' value='<?=ms::meta('com3banner_3_text2')?>'>
 			</div>
 		</td>
 
@@ -81,6 +87,8 @@
 			<?}?>
 			<div class='title'>배너3의 문구</div>
 			<textarea name='com3banner_4_text1'><?=stripslashes(ms::meta('com3banner_4_text1'))?></textarea>
+				<div class='title'>배너4 링크</div>
+				<input type='text' name='com3banner_4_text2' value='<?=ms::meta('com3banner_4_text2')?>'>
 			</div>
 		</td>
 	</tr>
@@ -96,6 +104,8 @@
 			<?}?>
 			<div class='title'>배너5의 문구</div>
 			<textarea name='com3banner_5_text1'><?=stripslashes(ms::meta('com3banner_5_text1'))?></textarea>
+				<div class='title'>배너5 링크</div>
+				<input type='text' name='com3banner_5_text2' value='<?=ms::meta('com3banner_5_text2')?>'>
 			</div>
 		</td>
 	</tr>
