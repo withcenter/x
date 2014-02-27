@@ -39,11 +39,12 @@
 				<? if( $forum_6 ) { ?> <td width='33%' class='latest_3'><?=latest('x-latest-community-2',$forum_6, 6, 60, 1, x::url_theme().'/img/icon3.gif')?></td> <?}?>
 			</tr>
 		</table>
-		
-		<div class='latest_4'>
-			<? 
-			
-				$option = array('bo_table' => $forum_1);
-				include x::dir().'/theme/withcenter/bottom_latest.php';
-			?>
-		</div>
+		<? if ( g::forum_exist($forum_1) ) { ?>
+			<div class='latest_4'>
+				<? 
+				
+					$option = array('bo_table' => $forum_1);
+					include x::dir().'/theme/withcenter/bottom_latest.php';
+				?>
+			</div>
+		<? }?>
