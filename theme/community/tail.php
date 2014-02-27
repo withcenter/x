@@ -1,7 +1,6 @@
 
 </div>
 <div style='clear:both'></div>
-</div>
 <div class='footer-info'><div class='inner'>
 	<?php 
 		if( ms::meta('footer_text') ) { 
