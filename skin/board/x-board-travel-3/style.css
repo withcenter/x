@@ -168,7 +168,7 @@
 	line-height: 17px;
 	height: 34px;
 	overflow: hidden;
-	width: 640px;
+	max-width: 640px;
 	word-break: break-all;
 }
 #bo_list  .right .content  a {
