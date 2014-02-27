@@ -5,17 +5,20 @@
 
 .layout .body-wrapper {
 	width: 100%;
-	margin: 0;
+	margin: 20px 0 0 0;
 	padding: 0;
 }
 
 .layout .body-wrapper .main-content {
-	max-width: 970px;
+	width: 970px;
 	margin: auto;
-	border: solid 1px gray;
 }
 
-.layout .body-wrapper .sidebar {
+.layout .body-wrapper .main-content .content {
+	width: 750px;
+}
+
+.layout .body-wrapper .main-content .sidebar {
 	float: right;
 	width: 210px;
 }

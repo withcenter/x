@@ -1,0 +1,90 @@
+.footer{
+	width:100%;		
+}
+
+.footer .footer-menus{
+	background-color:#050505;
+	height:44px;
+	overflow:hidden;
+}
+
+.footer #comm3_main_menu{
+	max-width:970px;
+	margin:auto;
+	padding:0;		
+	height:44px;
+}
+
+.footer #comm3_main_menu .comm3_menu{
+	list-style:none;	
+	float:left;
+	overflow:hidden;
+	border-right:1px solid #3f3f3f;
+}
+
+.footer #comm3_main_menu .comm3_menu.border-left{
+	border-left:1px solid #3f3f3f;
+}
+
+.footer #comm3_main_menu .comm3_menu a{
+	font-family: '맑은 고딕', AppleGothic;
+	display:inline-block;
+	color:#ececec;
+	text-align:center;
+	width:110px;
+	padding-top:4px;
+	height:40px;	
+	overflow:hidden;
+	font-size:1em;
+	font-weight:normal;
+	line-height:35px;
+	text-decoration:none;
+}
+
+.footer #comm3_main_menu .comm3_menu.images{
+	width:39px;
+	height:44px;
+	position:relative;
+}
+
+.footer #comm3_main_menu .comm3_menu img{
+	position:absolute;	
+}
+
+.footer #comm3_main_menu .comm3_menu .phone{
+	left:14px;
+	top:14px;
+}
+
+.footer #comm3_main_menu .comm3_menu .arrow{
+	left:12px;
+	top:18px;
+}
+
+.footer #comm3_main_menu .comm3_menu a:hover{
+	background-color:#4d4d4d;
+	opacity:.8;
+}
+
+.footer .copyright{
+	width:100%;
+	background:url('../img/header-bg.png');
+}
+
+.footer .copyright .inner{
+	max-width:970px;
+	margin:auto;	
+	position:relative;
+}
+
+.footer .copyright .inner .foot-logo{
+	position:absolute;
+	left:20px;
+	top:19px;
+}
+
+.footer .copyright .inner .text-info{
+	color:#9b9b9b;
+	margin-left:90px;
+	padding:25px 0;
+}
