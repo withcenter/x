@@ -1,7 +1,7 @@
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/banner.css' />
 <script src='<?=x::url_theme()?>/js/banner.js' /></script>
 	<?	for ( $i = 1, $has_images = 0; $i <= 5 ; $i++) { 
-			if( $banner_image = ms::meta( 'combanner_'.$i ) ) {
+			if( $banner_image = ms::meta( 'com3banner_'.$i ) ) {
 				$has_images++;
 				break;
 			}
@@ -13,7 +13,7 @@
 				if ( $has_images ) {
 					$banner_url = ms::meta('img_url');
 					for ( $i = 1; $i <= 5 ; $i++) {
-						if( !$banner_image = ms::meta( 'combanner_'.$i ) ){
+						if( !$banner_image = ms::meta( 'com3banner_'.$i ) ){
 							continue;
 						}
 						if ( $i == 1 ) $first_image = 'selected';
@@ -40,7 +40,6 @@ $latest_bo_table = ms::board_id(etc::domain()).'_1';
 $latest_1_output = latest("x-community_3_images_with_caption", $latest_bo_table, 8, 20);
 echo $latest_1_output;
 ?>
-</a>
 </div>
 
 <div class='bulleted_list'>
@@ -79,4 +78,13 @@ echo $latest_1_output;
 	?>
 	</td>
 	</tr></table>
+</div>
+
+<div class='images_with_caption_2'>
+	<?
+	/*$latest_bo_table = ms::board_id(etc::domain()).'_1';
+	$latest_1_output = latest("x-community_3_images_with_caption_2", $latest_bo_table, 7, 20);
+	echo $latest_1_output;
+	*/
+	?>
 </div>
