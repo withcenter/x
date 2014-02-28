@@ -1,9 +1,10 @@
 .layout {
 	width: 100%;
 	font-size: 10pt;
-	font-family: '맑은 고딕', AppleGothic;
 }
-
+.layout, .layout a {
+	font-family: Dotum, '맑은 고딕', AppleGothic;
+}
 .layout .body-wrapper {
 	width: 100%;
 	margin: 20px 0 0 0;

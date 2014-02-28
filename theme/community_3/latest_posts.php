@@ -13,7 +13,7 @@ if( $latest_rows ) {
 		$i++;
 	}
 ?>
-<div class="latest-posts" >
+<div class="com3-latest-posts" >
 		<div class='title'>
 			<table width='100%'>
 				<tr valign='top'>
@@ -25,7 +25,7 @@ if( $latest_rows ) {
 			</table>
 		</div>
 
-	<div class='latest-posts-items'>
+	<div class='com3-latest-posts-items'>
 		<table>
 		<?php
 			$i = 1;
