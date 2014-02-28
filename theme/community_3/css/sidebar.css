@@ -63,7 +63,8 @@
 }
 
 .sidebar .popular-posts .post-num {
-	padding: 4px;
+	padding: 1px;
+	font-size: 8pt;
 	background: #1a1a1a;
 	color: #ffffff;
 	text-align: center;
@@ -147,8 +148,7 @@
 }
 
 .sidebar .com3-latest-posts .com3-latest-posts-items .post-image img {
-	border: solid 4px #e5e5e5;
-	outline: solid 1px #cccccc;
+	border: solid 1px #cccccc;
 }
 
 .sidebar .com3-latest-posts .com3-latest-posts-items .num_comments {
