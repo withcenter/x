@@ -36,4 +36,9 @@
 	background-color:#e6e6e6;
 	width:210px;
 	margin-left:10px;
+	overflow:hidden;
+}
+
+.travel_2_right_banner img{
+	width:100%;
 }

@@ -67,7 +67,7 @@
 			<?=date('Y m d A h:i:s')?>
 		</div>
 		<div class='travel_2_right_banner'>
-			
+			<img src='<?=ms::meta('img_url').ms::meta('travel2banner_right')?>' />
 		</div>
 	</td>
 </td></table>
