@@ -34,7 +34,7 @@
 				<label for="sch_stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
 					<table id='search_table_holder' cellpadding=0 cellspacing=0><tr>
 						<td>
-							<input type="text" name="stx" id="comm3_search_text" maxlength="20" placeholder='Search'>
+							<input type="text" name="stx" id="comm3_search_text" maxlength="20" placeholder='Search' autocomplete='off'>
 						</td>
 						<td width=40>				
 							<input type="image" src="<?=x::url_theme()?>/img/search.png" id="comm3_search_submit">

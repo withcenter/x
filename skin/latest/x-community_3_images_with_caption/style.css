@@ -36,3 +36,8 @@
 	overflow:hidden;
 	white-space:nowrap;
 }
+
+.images_with_captions .caption a{	
+	font-family:dotum;
+	text-decoration:none;
+}
