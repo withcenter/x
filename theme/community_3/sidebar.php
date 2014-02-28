@@ -30,3 +30,5 @@ if ( $company_banner = ms::meta('com3banner_sidebar') ) { ?>
 	<img src='<?=$imgsrc?>'>
 </div>
 <?}?>
+
+<? include x::theme('latest_posts') ?>

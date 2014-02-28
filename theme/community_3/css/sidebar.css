@@ -1,8 +1,9 @@
+/**SIDEBAR*/
 .sidebar {
 	word-break: break-all;
 }
 
-/**Company Banner*/
+/**COMPANY BANNER*/
 .sidebar .company-banner {
 	margin-top: 10px;
 	width: 210px;
@@ -15,11 +16,10 @@
 	width: 100%;
 }
 
-/**sidebar banner */
+/**SIDEBAR BANNER*/
 .sidebar .sidebanner {
 	margin-top: 10px;
-	width: 210px;
-
+	width: 208px;
 	overflow: hidden;
 	border: solid 1px #bbbbbb;
 }
@@ -28,7 +28,7 @@
 	width: 100%;
 }
 
-/**Popular Posts*/
+/**POPULAR POSTS*/
 .sidebar .popular-posts {
 	margin-top: 10px;
 	border: solid 1px #bbbbbb;
@@ -39,8 +39,8 @@
 }
 
 .sidebar .popular-posts .title {
-	padding: 7px;
-	background: #fafafa;
+	padding: 3px 0 3px 5px;
+	background: #f7f7f7;
 	border-bottom: solid 1px #bbbbbb;
 	font-weight: bold;
 	font-size: 12px;
@@ -80,11 +80,7 @@
 	border-bottom: 0 !important;
 }
 
-
-
-
-
-/**Latest Comments*/
+/**LATEST COMMENTS*/
 .sidebar .latest-comments {
 	margin-top: 10px;
 	border: solid 1px #bbbbbb;
@@ -95,8 +91,8 @@
 }
 
 .sidebar .latest-comments .title {
-	padding: 7px;
-	background: #fafafa;
+	padding: 3px 0 3px 5px;
+	background: #f7f7f7;
 	border-bottom: solid 1px #bbbbbb;
 	font-weight: bold;
 	font-size: 12px;
@@ -111,3 +107,49 @@
 }
 
 
+/**LATEST POSTS*/
+.sidebar .latest-posts {
+	border: solid 1px #bbbbbb;
+}
+
+.sidebar .latest-posts a {
+	text-decoration: none;
+}
+
+.sidebar .latest-posts .title {
+	padding: 3px 0 3px 5px;
+	background: #f7f7f7;
+	border-bottom: solid 1px #bbbbbb;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.sidebar .latest-posts .title img {
+	margin: 0 7px 0 0;
+}
+
+.sidebar .latest-posts .latest-posts-items {
+	padding: 0 7px 7px 7px;
+}
+
+.sidebar .latest-posts .latest-posts-items tr td {
+	border-bottom: dashed 1px #bebebe;
+	padding: 10px 0;
+}
+
+.sidebar .latest-posts .latest-posts-items tr.last-item td {
+	border-bottom: 0;
+}
+
+.sidebar .latest-posts .latest-posts-items tr td img {
+	margin-right: 10px;
+}
+
+.sidebar .latest-posts .latest-posts-items .post-image img {
+	border: solid 4px #e5e5e5;
+	outline: solid 1px #cccccc;
+}
+
+.sidebar .latest-posts .latest-posts-items .num_comments {
+	color: #cc4235;
+}
