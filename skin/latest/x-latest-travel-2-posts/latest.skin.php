@@ -9,7 +9,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 				<tr valign='top'>
 					<td align='left' class='title-left'>
 						<img src="<?=$latest_skin_url?>/img/my-posts.png">
-						<span class='label'><?=$bo_subject?></span>
+						<span class='label'>WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW</span>
 					</td>
 					<td align='right'>
 						<div class='posts-more'><a href="<?=g::url()?>/bbs/board.php?bo_table=<?=$bo_table?>" >자세히 <!--<img src="<?=$latest_skin_url?>/img/more-icon.png">--></a></div>
@@ -25,7 +25,6 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			$no_of_posts = count($list);
 			foreach ( $list as $li ) {
 				$subject = $li['wr_subject'];
-				$subject .= ":";
 				$content = cut_str(strip_tags($li['wr_content']),15,'...');
 				$url = $li['href'];
 				$no_comment = '';
