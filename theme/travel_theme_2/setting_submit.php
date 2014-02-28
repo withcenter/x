@@ -21,7 +21,7 @@
 	ms::meta('travel2banner3_sidebar_text1',$in['travel2banner3_sidebar_text1']);
 	ms::meta('travel2banner4_sidebar_text1',$in['travel2banner4_sidebar_text1']);
 	ms::meta('travel2banner_bottom_text1',$in['travel2banner_bottom_text1']);
-	
+	ms::meta('travel2banner_right_text1',$in['travel2banner_right_text1']);
 	ms::meta('travel2banner1_floating_text1',$in['travel2banner1_floating_text1']);
 	ms::meta('travel2banner2_floating_text1',$in['travel2banner2_floating_text1']);
 	ms::meta('travel2banner3_floating_text1',$in['travel2banner3_floating_text1']);

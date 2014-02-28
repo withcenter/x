@@ -238,6 +238,18 @@
 		</td>
 	</tr>
 	<tr valign='top'>
+			<td>
+			<div class='image-title'>RIGHT BANNER</div>
+			<div class='image-upload'>
+			<?if( ms::meta('travel2banner_right') ) {?><img src="<?=ms::meta('img_url').ms::meta('travel2banner_right')?>" width=280px height=160px><br><?}?>
+			<input type='file' name='travel2banner_right'>
+			<?if( ms::meta('travel2banner_right') != '' ) { ?>
+				<input type='hidden' name='travel2banner_right_remove' value='n'>
+				<input type='checkbox' name='travel2banner_right_remove' value='y'><span class='title-small'>이미지 제거</span>
+			<?}?>
+			<div class='title'>RIGHTBANNER URL</div>
+			<input type='text' name='travel2banner_right_text1' value='<?=ms::meta('travel2banner_right_text1')?>'>
+		</td>
 		<td>
 			<div class='image-title'>BOTTOM BANNER</div>
 			<div class='image-upload'>
@@ -250,6 +262,7 @@
 			<div class='title'>BOTTOM BANNER URL</div>
 			<input type='text' name='travel2banner_bottom_text1' value='<?=ms::meta('travel2banner_bottom_text1')?>'>
 		</td>
+		
 	</tr>
 </table>
 </div>
