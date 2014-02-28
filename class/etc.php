@@ -220,6 +220,14 @@ class etc {
 		return php_sapi_name() == 'cli';
 	}
 	
+	/** @short returns true if the script is running by web browser
+	 *
+	 */
+	static function web()
+	{
+		return ! self::cli();
+	}
+	
 	
 	/**
 	 *  @brief 입력받은 도메인에서 첫 부분을 리턴한다.
@@ -642,4 +650,5 @@ function html_header()
 <meta charset="utf-8">
 </head>
 EOH;
+
 }

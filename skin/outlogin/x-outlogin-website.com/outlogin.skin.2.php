@@ -22,7 +22,7 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
         
 		<div class='message-num'>
 			<a href="<?php echo G5_BBS_URL ?>/memo.php" target="_blank" id="ol_after_memo" class="win_memo">
-               쪽지 <span class='no_of_unreaded_message'><?php echo $memo_not_read ?></span>
+               쪽지 <span class='no_of_unreaded_message' <? if ( $memo_not_read ) echo "style='background-color: #892525'"; ?>><?php echo $memo_not_read ?></span>
             </a>
 		</div>
 		<div class='point-scrap'>

@@ -78,9 +78,10 @@
 	margin-right: 1px;
 	cursor: pointer;
 }
-
+.application-form  .reset2-icon {
+	cursor: pointer;
+}
 .application-form  .dropdown-icon {
-	margin-left: 1px;
 	cursor: pointer;
 }
 
@@ -100,7 +101,7 @@
 
 .application-form  .extra-form  .captcha {
 	position: absolute;
-	right: 80px;
+	right: 98px;
 	bottom: -3px;
 }
 

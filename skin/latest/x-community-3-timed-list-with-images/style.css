@@ -1,0 +1,85 @@
+.comm3_timed_list_with_image {
+	border:1px solid #bbbbbb;
+	width:368px;
+	display:inline-block;
+	height: 208px;
+}
+
+.comm3_timed_list_with_image .timed_list_title{
+	font-weight:bold;	
+	font-family:Dotum;
+	padding: 0 10px;
+	height: 28px;
+	line-height: 28px;
+	border-bottom:1px solid #bbbbbb;
+	background-color: #fcfcfc;
+	
+}
+
+.comm3_timed_list_with_image .timed_list_title img{
+	position:relative;
+	top:-2px;
+	margin-right:5px;
+}
+
+.comm3_timed_list_with_image .timed_list_title .more-button {
+	float: right;
+	font-weight: normal;
+	margin-top: 2px;
+}
+.comm3_timed_list_with_image .timed_list_title .more-button a {
+	color:#808080;
+	font-size: 9pt
+}
+
+.comm3_timed_list_with_image .comment_and_time{
+	float:right;
+	text-align: right;
+}
+
+.comm3_timed_list_with_image  .timed_list_image {
+	margin-right: 10px;
+	border:1px solid  #cccccc;
+	height:30px;
+	width:38px;
+	background-color:#e5e5e5;
+} 
+
+.comm3_timed_list_with_image .timed_list_image img {	
+}
+
+.comm3_timed_list_with_image .comment_and_time .time{	
+	width:35px;
+	text-align:center;
+	margin-left:10px;
+}
+
+.comm3_timed_list_with_image a{
+	text-decoration:none;
+	font-family:Dotum;
+}
+
+.comm3_timed_list_with_image .comment_count.no-comment{
+	color:#808080;
+}
+
+.comm3_timed_list_with_image .comment_count{
+	color:#cc4235;
+}
+
+/******************/
+.comm3_timed_list_with_image .subject{
+	width:240px;
+	word-break:break-all;
+	height:30px;
+	overflow:hidden;	
+	line-height:15px;
+}
+
+.comm3_timed_list_with_image  td{
+	padding-top:10px;	
+}
+
+.comm3_timed_list_with_image table{
+	padding:0 10px 10px 10px;	
+}

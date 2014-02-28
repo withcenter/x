@@ -13,15 +13,19 @@
 			$no_of_board = count($rows);
 		?>
 	<link rel='stylesheet' type='text/css' href='<?=x::url()?>/module/multisite/subsite.css' />
-	<div class='config_forum'>
-		<form class='config_menu' target='hidden_iframe' autocomplete='off'>
+	<div class='config config_forum'>
+	<div class='config-main-title'><div class='inner'><img src='<?=x::url().'/module/multisite/img/direction.png'?>'> Create a forum by putting a title on the textbox below</div></div>
+		<div class='config-wrapper'>
+			<div class='config-title'><span class='config-title-info'>Board List | 게시판 수 : <b><?=count($rows)?></span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>	
+			<div class='config-container'>
+		<form class='config_menu create-forum' target='hidden_iframe' autocomplete='off'>
 			<input type='hidden' name='module' value='multisite' />
 			<input type='hidden' name='action' value='config_forum_submit' />
 			<input type='hidden' name='no_of_board' value=<?=$no_of_board?> />
 			<input class='create-forum-input' type='text' name='subject' placeholder='게시판 제목을 입력하세요.' />
 			<input type='submit' value='생성'/>
 		</form>
-		<div class='no_of_board'>게시판 수 : <b><?=count($rows)?></b></div>
+		<!--<div class='no_of_board'>게시판 수 : <b><?=count($rows)?></b></div>-->
 		<div style='clear:right;'></div>
 		
 		<table class='board_list' cellpadding=0 cellspacing=0 width='100%'>
@@ -52,5 +56,6 @@
 		</table>
 
 		<iframe src='javascript:void(0);' name='hidden_iframe' style='width: 100%; height: 300px; display:none;'></iframe>
+		</div></div>
 	</div>
 <?}?>

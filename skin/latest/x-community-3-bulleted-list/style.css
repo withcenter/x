@@ -1,0 +1,34 @@
+.comm3_bulleted_list .bulleted_list_title{
+	font-weight:bold;
+	margin-bottom:13px;
+	font-family:Dotum;
+}
+
+.comm3_bulleted_list .bulleted_list_title a{
+	font-weight:normal;
+	color:#808080;
+	font-size:.8em;
+	float:right;
+	margin:3px 10px 0 0;
+	text-decoration:none;
+}
+
+.comm3_bulleted_list ul{
+	list-style:square;
+	padding:0;
+	margin:0;
+	margin-left:20px;
+}
+
+.comm3_bulleted_list ul li{
+	margin-bottom:3px;
+}
+
+.comm3_bulleted_list ul li a{
+	text-decoration:none;
+	font-family:Dotum;
+}
+
+.comm3_bulleted_list ul li .comment_count{
+	color:#cc4235;
+}

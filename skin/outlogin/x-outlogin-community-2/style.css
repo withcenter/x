@@ -102,11 +102,13 @@
 	line-height: 30px;
 	text-align: center;
 	position: absolute;
-	bottom: 10px;
+	bottom: 8px;
 	left: 10px;
 	font-weight: bold;
 }
-
+.login-box .login-box-middle .user-info {
+	margin-bottom: 10px;
+}
 .login-box .login-box-middle .user-info, .login-box .login-box-middle .message, .login-box .login-box-middle .point-scrap {
 	color: #585858;
 	height: 20px;
@@ -120,9 +122,12 @@
 .login-box .login-box-middle .point-scrap a {
 	color: #585858;
 }
+.login-box .login-box-middle .point-scrap {
+	margin-top: -3px;
+	font-size: 9pt;
+}
 
 .login-box .login-box-middle .point-scrap .scrap-button {
-	float: right;
 	background-color: #18a7b5;
 	color: #ffffff;
 	display: inline-block;
@@ -130,6 +135,7 @@
 	height: 20px;
 	line-height: 20px;
 	padding: 0 10px;
+
 }
 
 .login-box .login-box-middle .point-scrap .scrap-button:hover {

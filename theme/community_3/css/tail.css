@@ -1,0 +1,27 @@
+.footer{
+	width:100%;		
+}
+
+.footer .copyright{
+	width:100%;	
+	background-color:#e6e6e6;
+}
+
+.footer .copyright .inner{
+	max-width:970px;
+	margin:auto;	
+	position:relative;
+}
+
+.footer .copyright .inner .foot-logo{
+	position:absolute;
+	left:20px;
+	top:19px;
+}
+
+.footer .copyright .inner .text-info{
+	margin-top:100px;
+	color:#404040;
+	text-align:center;
+	padding:26px 0 27px 0;
+}

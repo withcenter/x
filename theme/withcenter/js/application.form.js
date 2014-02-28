@@ -22,6 +22,10 @@ $(function() {
 	$(".application-form .captcha img, .application-form .pannel-bottom .reset-icon").click(function() {
 		$(".application-form .captcha img").prop('src', './x/theme/withcenter/captcha.php');
 	});
+	
+	$(".application-form .reset2-icon").click(function() {
+		$(".application-form input[type='text'], .application-form textarea").val('');
+	});
 }); 
 
 function callback_application_submit( message ) {

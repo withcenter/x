@@ -11,20 +11,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 <?php
 if ( $list ) {
 	foreach( $list as $li ) {
-		if( !$li['wr_subject'] == '' ) {
-		if( !$li['file']['count'] == 0 ) { /**checks if there is a file on the post */
-				$li['file']['meta'] = db::rows("SELECT * FROM $g5[board_file_table] WHERE bo_table='$bo_table' AND wr_id='".$li['wr_id']."'");
-				$li['file']['path'] = G5_URL.'/'.G5_DATA_DIR.'/file/'.$bo_table.'/';
-				
-				for( $ctr = 0; $ctr <= $li['file']['count']; $ctr++ ){
-					if( $li['file']['meta'][$ctr]['bf_file'] ){
-						$has_image = $li['file']['meta'][$ctr]['bf_file'];
-						break;
-					}
-				}
-			}
-			else $has_image = null;
-		}?>
+	?>
 		<div class='travel-story'>
 				
 				<table>
@@ -32,10 +19,9 @@ if ( $list ) {
 						<td width='88px'>
 						<div class='img-container'>
 							<?
-								if ( $has_image ){
-									$imgsrc = get_list_thumbnail($bo_table, $li['wr_id'], 84, 84);
-								}
-								else $imgsrc['src'] = $latest_skin_url.'/img/no-image.png';							
+					
+								$imgsrc = get_list_thumbnail($bo_table, $li['wr_id'], 84, 84);
+								if ( empty($imgsrc['src']) ) $imgsrc['src'] = $latest_skin_url.'/img/no-image.png';							
 								$img = "<img src='".$imgsrc['src']."'/>";																
 								echo "<div class='img-wrapper'><a href='<?=$li[href]?>'>".$img."</a></div>";
 							?>	
@@ -52,7 +38,7 @@ if ( $list ) {
 					<tr valign='top'>
 						<td colspan=2 width='200px'>
 						<?php
-							echo "<span class='travel-content'><a href='<?=$li[href]?>'>".cut_str( strip_tags( $li['wr_content'] ) ,100,'...')."</a></span>";
+							echo "<span class='travel-content'><a href='$li[href]'>".cut_str( strip_tags( $li['wr_content'] ) ,100,'...')."</a></span>";
 						?>
 						</td>
 					</tr>

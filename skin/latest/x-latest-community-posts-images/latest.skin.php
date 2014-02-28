@@ -8,11 +8,11 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			<table width='100%'>
 				<tr valign='top'>
 					<td align='left' class='title-left'>
-						<div><img src="<?=$latest_skin_url?>/img/recent-posts.png"></div>
+						<div class='top-left-icon'><img src="<?=$latest_skin_url?>/img/recent-posts.png"></div>
 						<div class='label'><?=$bo_subject?></div>
 					</td>
 					<td align='right'>
-						<div class='posts-more'><a href="<?=g::url()?>/bbs/board.php?bo_table=<?=$bo_table?>" target='_blank'>자세히 <img src="<?=$latest_skin_url?>/img/more-icon.png"></a></div>
+						<div class='posts-more'><a href="<?=g::url()?>/bbs/board.php?bo_table=<?=$bo_table?>">자세히 <img src="<?=$latest_skin_url?>/img/more-icon.png"></a></div>
 					</td>
 				</tr>
 			</table>
@@ -56,13 +56,13 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 						}
 						else $imgsrc['src'] = $latest_skin_url.'/img/no-image.png';	
 						$img = "<img src='$imgsrc[src]'/>";						
-						echo "<div class='img-wrapper'>	<a href='$url?' target='_blank'>".$img."</a></div>";
+						echo "<div class='img-wrapper'>	<a href='$url?'>".$img."</a></div>";
 					?>
 					</div>	
 				</td>
 				<td align='left'>
 					<div class='posts-info'>
-						<a href='<?=$url?>' target='_blank'>
+						<a href='<?=$url?>'>
 							<span class='subject'><?=$subject?>: </span>
 							<span class='content'><?=$content?><span class='no-of-comments <?=$no_comment?>'><?='('.$comment_count.')'?></span></span>
 						</a>

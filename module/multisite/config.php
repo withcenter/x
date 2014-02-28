@@ -31,7 +31,16 @@
 				);
 				
 			for( $i=1; $i <=10; $i++ ) {
-				echo "<div class='sub-title'>".$description[$i-1]."</div>";
+				
+				echo "<div class='sub-title'>";
+				if ( $i == 9 ) echo "<a name='banner_description'>";
+				
+				echo $description[$i-1];
+				
+				if ( $i == 9 ) echo "</a>";
+				
+				echo "</div>";
+				
 				echo "
 					<div class='support-image'><img src='".x::url()."/module/multisite/support_img/g{$i}.png' /></div>";
 			}?>

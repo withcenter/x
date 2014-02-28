@@ -1,0 +1,57 @@
+.layout {
+	width: 100%;
+	font-size: 10pt;
+}
+.layout, .layout a {
+	font-family: Dotum, '맑은 고딕', AppleGothic;
+}
+.layout .body-wrapper {
+	width: 100%;
+	margin: 20px 0 0 0;
+	padding: 0;
+}
+
+.layout .body-wrapper .main-content {
+	width: 970px;
+	margin: auto;
+}
+
+.layout .body-wrapper .main-content .content {
+	width: 750px;
+	float: left;
+}
+
+.layout .body-wrapper .main-content .sidebar {
+	float: right;
+	width: 210px;
+}
+/***index***/
+
+.layout .body-wrapper .main-content .images_with_caption_wrapper{
+	border:1px solid #bbbbbb;
+	margin-bottom:10px;
+}
+
+.layout .body-wrapper .main-content .bulleted_list{
+	border:1px solid #bbbbbb;
+	margin-bottom:10px;
+	padding:10px;
+}
+
+.layout .body-wrapper .main-content .timed_list{	
+	margin-bottom:10px;
+}
+
+.layout .body-wrapper .main-content .timed_list .right{	
+	padding-left:5px;
+}
+
+.layout .body-wrapper .main-content .timed_list_with_images .right{	
+	padding-left:5px;
+}
+
+.layout .body-wrapper .main-content .images_with_caption_2{	
+	border:1px solid #bbbbbb;
+	margin-bottom:10px;
+	padding:10px;
+}

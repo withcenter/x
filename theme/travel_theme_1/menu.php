@@ -6,7 +6,6 @@
 
 <script>$('#gnb').addClass('gnb_js');</script>
 <h2>메인메뉴</h2>
-	
 <ul id="gnb_1dul">	
 	<?php
 		$i = 0;
@@ -46,7 +45,6 @@
 		<a href="<?=ms::url_config()?>" class="gnb_1da">사이트 관리</a>
 	</li>
 	<?}?>
-	
 </ul>
 </nav>
 

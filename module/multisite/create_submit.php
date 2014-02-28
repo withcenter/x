@@ -62,14 +62,14 @@
 			);
 			
 			if ( $site_type == 'blog' ) $o['bo_skin'] = 'x/skin/board/x-board-blog';
-			
+			else if ( $site_type == 'travel_theme_1' )  $o['bo_skin'] = 'x/skin/board/x-board-travel-3';
 			g::board_create($o);
 			
 			// 사이트 생성시 처음 메뉴 저장
-			db::insert('x_multisite_meta', array('domain'=>$domain, 'code'=>'menu_1', 'value'=>ms::board_id ( $domain ).'_1' ) );
-			db::insert('x_multisite_meta', array('domain'=>$domain, 'code'=>'forum_no_1', 'value'=>ms::board_id ( $domain ).'_1' ) ); 
-			
-
+			//db::insert('x_multisite_meta', array('domain'=>$domain, 'code'=>'menu_1', 'value'=>ms::board_id ( $domain ).'_1' ) );
+			//db::insert('x_multisite_meta', array('domain'=>$domain, 'code'=>'forum_no_1', 'value'=>ms::board_id ( $domain ).'_1' ) ); 
+			ms::meta( $domain, 'menu_1', ms::board_id ( $domain ).'_1' );
+			ms::meta( $domain, 'forum_no_1', ms::board_id ( $domain ).'_1' );
 			
 			// 테마에 따라 각각 더 추가 생성 되는 게시판 및 메뉴
 			if ( $site_type == 'travel_theme_1' || $site_type == 'community_2' ) {
@@ -82,6 +82,13 @@
 						'bo_admin' => $member['mb_id'],
 						'bo_use_dhtml_editor' => 1
 					);
+					
+					if ( $site_type == 'travel_theme_1'){
+						if ( $i == 2 || $i == 3 ) {
+							$o['bo_skin'] = 'x/skin/board/x-board-travel-3';
+						}
+					}
+					
 					g::board_create($o);
 					// 사이트 생성시 메뉴 저장
 					if ( $i <= 5 ) db::insert('x_multisite_meta', array('domain'=>$domain, 'code'=>'menu_'.$i, 'value'=>ms::board_id ( $domain ).'_'.$i ) );
@@ -106,18 +113,25 @@
 				}
 			}
 			
+			/**
+			 * @bug This is a data integrity violation.
+			 * Theme value is set on both of x_multidomain_config and x_multisite_meta and it will cause problem in the future.
 			
+			*/
+			/*
 			$meta_op = array(
 							'domain' => $domain,
 							'code'=>'theme',
 							'value'=> $site_type
 			);
 			db::insert('x_multisite_meta', $meta_op );
-
+			*/
+			ms::meta( $domain, 'theme', $site_type );
+			/*
 			$theme = $site_type;
 			$priority = 10;
 			md::config_update();
-			
+			*/
 			include module( 'create_success' );
 	}
 ?>

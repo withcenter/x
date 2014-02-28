@@ -1,0 +1,35 @@
+body {
+	margin:0;
+	padding:0;
+	font-size: 9pt;
+}
+#header {
+	color:white;
+}
+#header a {
+	display:inline-block;
+	padding: 4px;
+	border: 1px solid grey;
+	border-radius: 1px;
+	color: white;
+	text-decoration:none;
+}
+#header .top {
+	padding: 10px;
+}
+#header .bottom {
+	padding: 10px;
+	background-color: #2b08c2;
+}
+#content {
+	width: 100%;
+	border: 0;
+	min-height: 1024px;
+}
+
+#footer {
+	background-color: black;
+	color:white;
+	padding: 10px;
+}
+

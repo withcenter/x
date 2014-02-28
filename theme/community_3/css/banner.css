@@ -1,0 +1,46 @@
+ .layout .body-wrapper .main-content  .content > .banner{
+	width: 748px;
+	height: 238px;
+	overflow: hidden;	
+	position: relative;	
+	height: 238px;
+	font-family: dotum;
+	margin-bottom: 10px;
+	border: solid 1px #bbbbbb;
+}
+
+.layout .body-wrapper .main-content .banner-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display:none;
+	width:100%;
+}
+
+.layout .body-wrapper .main-content .banner-image.selected {
+	display: block;
+}
+
+.layout .body-wrapper .main-content .banner img {
+	width: 100%;
+}
+
+.layout .body-wrapper .main-content .banner p {
+	position: absolute;
+	top: 190px;
+	left: 0;
+	padding: 16px;
+	color: #ffffff;
+	font-size: 15px;
+	background: #bbbbbb;
+	width: 100%;
+}
+
+.layout .body-wrapper .main-content .banner .banner-more {
+	position: absolute;
+	top: 205px;
+	right: 0;
+	padding: 0.5em;
+	color: #ffffff;
+	font-size:.8em;
+}

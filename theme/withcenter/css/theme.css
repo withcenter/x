@@ -158,12 +158,44 @@ body{
 	text-align: center;
 	width: 100%;
 	border-top: 1px solid #dddddd;
-	height: 39px;
-	line-height: 39px;
+	line-height: 150%;
+	padding: 20px 0;
+	
 }
 
 .footer .inner {
 	width: 970px;
-	color: #959595;
-	font-size: 0.875em;
+	color: #666666;
+	font-size: 9pt;
+}
+
+/* intro.php */
+.intro_banner {
+	margin-bottom: 30px;
+	color: #555555;
+}
+.intro {
+	margin-bottom: 30px;
+}
+.intro  > .title {
+	font-family: '맑은 고딕', AppleGothic;
+	font-weight: bold;
+	font-size: 13pt;
+	color: #244555;
+	padding: 0 0 10px 10px;
+	
+}
+.intro > .content {
+	border-top: 1px solid #d5d5d5;
+	padding: 10px;
+	font-size: 10pt;
+	color: #666666;
+}
+.intro > .content > div {
+	margin-bottom: 5px;
+}
+.intro > .content  .subtitle {
+	width: 120px;
+	display: inline-block;
+	font-weight: bold;
 }

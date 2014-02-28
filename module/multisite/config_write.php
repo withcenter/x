@@ -8,7 +8,10 @@ if ( $in['done'] ) {
 	echo "<div class='message'>수정 되었습니다.</div>";
 }
 ?>
-<div class='config-write'>
+<div class='config config-write'>
+<div class='config-main-title'><div class='inner'><img src='<?=x::url().'/module/multisite/img/direction.png'?>'> Add blog API's here</div></div>
+	<div class='config-wrapper'>
+	<div class='config-container'>
 	<form method='get'> 
 		<input type='hidden' name='module' value='multisite' />
 		<input type='hidden' name='action' value='config_write' />
@@ -16,7 +19,7 @@ if ( $in['done'] ) {
 <?php 
 	for ( $i = 1; $i <=3; $i++ ) {?>
 		<fieldset class='api-info'>
-			<div class='title'>API 정보 <?=$i?></div>
+			<div class='config-title'>API 정보 <?=$i?></div>
 			<div class='row'>
 				<span class='item4'>API연결 URL</span>
 				<input type='text' name='api-end-point<?=$i?>' value='<?=ms::meta('api-end-point'.$i)?>' />
@@ -36,4 +39,5 @@ if ( $in['done'] ) {
 		<input type='submit' value='업데이트' />
 		<div style='clear:right;'></div>
 	</form>
+</div></div>
 </div>
