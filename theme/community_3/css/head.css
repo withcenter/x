@@ -36,8 +36,16 @@
 	background-color:#e6e6e6;	
 }
 
+.header #comm3_logo{
+	height:60px;
+	max-width:400px;
+	overflow:hidden;	
+}
+
+
 .header #comm3_logo img{
 	padding:7px 0;
+	height:100%;	
 }
 
 .header > table{
