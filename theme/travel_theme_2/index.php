@@ -1,5 +1,3 @@
-<link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/index.css' />
-<link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/banner.css' />
 <script src='<?=x::url_theme()?>/js/banner.js' /></script>
 	<?	for ( $i = 1, $has_images = 0; $i <= 5 ; $i++) { 
 			if( $banner_image = ms::meta( 'travel2banner_'.$i ) ) {

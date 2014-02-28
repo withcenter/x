@@ -1,4 +1,8 @@
 <link rel="stylesheet" href="<?=x::url_theme()?>/css/theme.css">
+<link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/banner.css' />
+<link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/index.css' />
+<link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/tail.css' />
+
 <!-- 상단 시작 { -->
 <?php
 	include 'top.php';
