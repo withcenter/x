@@ -3,10 +3,13 @@ body {
 	padding:0;
 	font-size: 9pt;
 }
+img {
+	border: 0;
+}
 #header {
 	color:white;
 }
-#header a {
+#header .bottom a {
 	display:inline-block;
 	padding: 4px;
 	border: 1px solid grey;

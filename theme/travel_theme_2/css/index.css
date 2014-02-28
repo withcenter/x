@@ -1,0 +1,39 @@
+.travel_images_with_caption_wrapper{
+	border:1px solid #bbbbbb;	
+	height:608px;
+}
+
+.travel_posts_with_image_right{
+	border:1px solid #bbbbbb;
+	margin:0 0 10px 10px;
+	height:329px;
+}
+
+.travel_2_timezone{
+	border:1px solid #bbbbbb;
+	margin:0 0 10px 10px;
+	padding:10px;
+	height:77px;
+}
+
+.travel_2_timezone .header{	
+	margin:0 0 10px 0;	
+}
+
+.travel_2_timezone .header img{	
+	position:relative;
+	top:-2px;
+}
+
+.travel_2_timezone .header .title{	
+	display:inline-block;
+	margin:0 0 0 8px;
+}
+
+.travel_2_right_banner{
+	height:158px;
+	border:1px solid #bbbbbb;
+	background-color:#e6e6e6;
+	width:210px;
+	margin-left:10px;
+}
