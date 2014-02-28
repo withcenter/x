@@ -85,32 +85,40 @@ class multisite {
 	/**
 	 *  @brief get or set meata data.
 	 *  
-	 *  @param [in] $code Parameter_Description
-	 *  @param [in] $value Parameter_Description
-	 *  @return Return_Description
+	 *  @param [in] $code 'code' or 'domain'
+	 *  @param [in] $value 'vlaue' or 'code'
+	 *	 @param [in] $value
+	 *  @return empty
 	 *  
 	 *  @details This function does memory cache. So how many times you call this function, it will only access to data base one time in the first.
 	 */	
-	static function meta($code, $value=null)
+	static function meta($code, $value=null, $third_value=null)
 	{
 		global $_meta;
 		
-		$d = etc::domain();
+		if ( $third_value ) {
+			$domain	= $code;
+			$code		= $value;
+			$value		= $third_value;
+		}
+		
+		if ( empty($domain) ) $domain = etc::domain();
+		
 		if ( $value === null ) {
-			$k = "$d.$code";
+			$k = "$domain.$code";
 			if ( ! isset($_meta[$k]) ) {
-				$_meta[$k] = db::result("SELECT `value` FROM x_multisite_meta WHERE domain='$d' AND code='$code'");
+				$_meta[$k] = db::result("SELECT `value` FROM x_multisite_meta WHERE domain='$domain' AND code='$code'");
 			}
 			return $_meta[$k];
 		}
 		else {
-			$q = "SELECT code FROM x_multisite_meta WHERE domain='$d' AND code='$code'";
+			$q = "SELECT code FROM x_multisite_meta WHERE domain='$domain' AND code='$code'";
 			$val = db::result($q);
 			if ( $val ) {
-				db::update('x_multisite_meta', array('value'=>$value), array('domain'=>$d, 'code'=>$code) );
+				db::update('x_multisite_meta', array('value'=>$value), array('domain'=>$domain, 'code'=>$code) );
 			}
 			else {
-				db::insert('x_multisite_meta', array('domain'=>$d, 'code'=>$code, 'value'=>$value) );
+				db::insert('x_multisite_meta', array('domain'=>$domain, 'code'=>$code, 'value'=>$value) );
 			}
 		}
 	}

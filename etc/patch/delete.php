@@ -1,4 +1,5 @@
 <?php
+
 	$path = $dir_root . '/bbs/delete.php';
 	$data = file::read($path);
 	$src = "include_once('./_common.php');";

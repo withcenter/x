@@ -33,6 +33,7 @@ if( $latest_rows ) {
 			foreach ( $latest_list as $latest_li ) {
 				$latest_subject = conv_subject($latest_li['wr_subject'],15, '...' );
 				$latest_subject .= ":";
+
 				$latest_url = g::url().'/bbs/board.php?bo_table='.$latest_li['bo_table'].'&wr_id='.$latest_li['wr_id'];
 				$latest_comment_count = '['.strip_tags($latest_li['wr_comment']).']';
 				if ( $latest_comment_count == 0 ) $no_comment = 'no-comment';

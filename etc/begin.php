@@ -32,7 +32,7 @@
  */
 if ( strpos($_SERVER['PHP_SELF'], 'register_result.php') !== false && file_exists(x::theme('register_result.skin')) ) {
 	$member_skin_path	= x::theme_folder();
-	$member_skin_url	= x::theme_url( '/' );
+	$member_skin_url	= x::theme_url(  );
 }
 /** @short the code below are the same as above.
  * 
@@ -172,14 +172,21 @@ if ( strpos($_SERVER['PHP_SELF'], 'login.php') !== false ) {
 
 
 
-/** @short reset board skin path
+/** @short reset board skin path for PC and mobile.
  *  
  *  @note if there is board skin under x/skin/board folder, G5, then, can use it as its board skin.
  *  All the codes between G5/skin/board folder and x/skin/board folder are compatible.
  *  @see etc/end.php for re-setting the folders of x/skin/board folder.
  */
+if ( G5_IS_MOBILE ) {
+	/** @todo for mobile, it must be redone. */
+    // $board_skin_path    = G5_MOBILE_PATH.'/'.G5_SKIN_DIR.'/board/'.$board['bo_mobile_skin'];
+    // $board_skin_url     = G5_MOBILE_URL .'/'.G5_SKIN_DIR.'/board/'.$board['bo_mobile_skin'];
+}
+else {
+	$board_skin_path = str_replace('skin/board/x/', 'x/', $board_skin_path);
+	$board_skin_url = str_replace('skin/board/x/', 'x/', $board_skin_url);
+}
 
-$board_skin_path = str_replace('skin/board/x/', 'x/', $board_skin_path);
-$board_skin_url = str_replace('skin/board/x/', 'x/', $board_skin_url);
 
-    
+

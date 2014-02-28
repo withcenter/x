@@ -1,0 +1,42 @@
+.layout .container .banner{
+	width: 730px;
+	height: 220px;
+	overflow: hidden;	
+	position: relative;	
+	font-family: dotum;
+}
+
+.layout .container .banner-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display:none;
+	width:100%;
+}
+
+.layout .container .banner-image.selected {
+	display: block;
+}
+
+.layout .container .banner img {
+	width: 100%;
+}
+
+.layout .container .banner p {
+	position: absolute;
+	top: 171px;
+	left: 0;
+	padding: 16px;
+	color: #ffffff;
+	font-size: 15px;
+	background: #bbbbbb;
+	width: 100%;
+}
+
+.layout .container .banner .banner-more {
+	position: absolute;
+	top: 190px;
+	right: 10px;
+	color: #ffffff;
+	font-size:.8em;
+}

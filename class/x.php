@@ -63,7 +63,7 @@ class x {
 	{
 		$dir = self::url() . '/theme/' . self::$config['site']['theme'];
 		if ( empty( $file ) ) return $dir;
-		else return $dir . DIRECTORY_SEPARATOR . $file;
+		else return $dir . '/' . $file;
 	}
 	
 
@@ -72,10 +72,12 @@ class x {
 	 *  
 	 *  @param [in] $file same as url_theme()
 	 *  @return same as url_theme()
-	 *  
+	 *  @code
+			$member_skin_url	= x::theme_url(  );
+		@endcode
 	 *  @details return url_theme()
 	 */	
-	static function theme_url($file)
+	static function theme_url($file=null)
 	{
 		return self::url_theme($file);
 	}
@@ -213,6 +215,23 @@ class x {
 		*/
 	}
 	
+	/** @short loads(finds) the site information of the domain.
+	 * @note site information is like the theme name of the connected domain
+	 *
+	 * https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.hoh26aiibh8t
+	 */
+	static function load_site()
+	{
+		$theme = ms::meta('theme');
+		if ( empty($theme) ) {
+			$cfg = md::config( etc::domain_name() );
+			if ( $cfg['theme'] ) $theme = $cfg['theme'];
+			else $theme = 'default';
+		}
+		self::$config['site']['theme'] = $theme;
+	}
+	
+	
 	/**
 	 * @brief returns the path for theme folder
 	 *
@@ -243,11 +262,11 @@ class x {
 	}
 	
 	/**
-	 *  @brief stores global setting values into self::$config['global']
+	 *  @brief stores the config values that are set in global setting page into self::$config['global']
 	 *  
-	 *  @return Return_Description
+	 *  @return null
 	 *  
-	 *  @details Details
+	 *  @details It loads 'global setting value' 
 	 */
 	static function load_global_config()
 	{
