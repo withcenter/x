@@ -99,6 +99,7 @@
 		<? if ( login() ) { ?>
 		<div><a href='<?=x::url_setting()?>'><?php echo _L('Member Setting');?></a></div>
 		<div><a href='<?=x::url_admin()?>'><?php echo _L('Admin Page');?></a></div>
+		<div><a href='<?=x::url()?>/?module=multisite&action=config'>Multisite Config</a></div>
 		<? } ?>
 		
     </div>

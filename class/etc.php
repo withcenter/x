@@ -208,6 +208,8 @@ class etc {
 	
 	
 	
+	
+	
 	/**
 	 *  @brief return true if the script is running on CLI
 	 *  
@@ -549,6 +551,17 @@ function lang($code)
 	return etc::lang($code);
 }
 
+function ln($en, $ko=null)
+{
+	$ln = etc::user_language();
+	if ( $ln == 'en' ) return $en;
+	else {
+		if ( $ko ) return $ko;
+		else return $en;
+	}
+}
+
+
 /**
  *  @brief 슈퍼 관리자이면 참을 리턴한다.
  *  
@@ -608,10 +621,6 @@ function patch( $file )
 
 
 
-function ln($code, $a=null, $b=null, $c=null)
-{
-	return etc::lang($code, $a, $b, $c);
-}
 function _L($code, $a=null, $b=null, $c=null)
 {
 	return etc::lang($code, $a, $b, $c);

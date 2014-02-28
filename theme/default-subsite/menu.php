@@ -62,7 +62,7 @@
 	
 	
 	<li class="gnb_1dli">
-		<a href="<?=ms::url_config()?>" class="gnb_1da"><?=ln('Admin Page')?></a>
+		<a href="<?=ms::url_config()?>" class="gnb_1da"><?=lang('Admin Page')?></a>
 	</li>
 	
 	

@@ -248,7 +248,7 @@ class multisite {
 		if ( $domain ) $host = self::url_site($domain) . '/x';
 		else $host = x::url();
 		
-		return $host . '/?module=multisite&action=config';
+		return $host . '/?module=multisite&action=config_help';
 	}
 	
 	

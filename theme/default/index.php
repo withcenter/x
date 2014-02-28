@@ -1,11 +1,7 @@
 <?php
 
 	
-	// https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.n5ieikl0bsnp
-	if (G5_IS_MOBILE) {	
-		include x::theme('mobile/index');
-		exit;
-	}
+
 
 ?>
 

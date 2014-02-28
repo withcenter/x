@@ -12,8 +12,8 @@ echo $html;
 
 if ( debug::mode() ) {
 	debug::log("x end\t}}");
-	//di( "theme: " . x::theme() );
-	//di( etc::included_files() );
+	di( "theme: " . x::theme() );
+	di( etc::included_files() );
 }
 
 
