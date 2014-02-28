@@ -17,8 +17,7 @@
 }
 
 #container .post-container .post-content img {
-	width: 200px;
-	height: 160px;
+	max-width: 200px;
 	display: inline-block;
 	margin: 0.1em;
 	padding: 0;
