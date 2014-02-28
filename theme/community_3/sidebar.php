@@ -21,7 +21,7 @@ $forum_6 = ms::meta('forum_no_6');
 
 <?=latest('x-latest-community3-posts', $forum_1 , 5 , 20)?>
 <? include x::theme('popular_posts') ?>
-<? include x::theme('latest_comments') ?>
+<!--<? include x::theme('latest_comments') ?> //Removed in the new design-->
 
 <?
 if ( $company_banner = ms::meta('com3banner_sidebar') ) { ?>

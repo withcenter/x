@@ -18,8 +18,8 @@ if( $latest_rows ) {
 			<table width='100%'>
 				<tr valign='top'>
 					<td align='left' class='title-left'>
-						<img src="<?=x::url_theme()?>/img/latest-comments.png">
-						<span class='label'>LATEST POST</span>
+						<img src="<?=x::url_theme()?>/img/latest-posts.png">
+						<span class='label'>LATEST POSTS</span>
 					</td>
 				</tr>
 			</table>
@@ -37,7 +37,7 @@ if( $latest_rows ) {
 				$latest_comment_count = '['.strip_tags($latest_li['wr_comment']).']';
 				if ( $latest_comment_count == 0 ) $no_comment = 'no-comment';
 				else $no_comment = '';
-				$latest_img = get_list_thumbnail( $latest_li['bo_table'] , $latest_li['wr_id'], 32, 32 );
+				$latest_img = get_list_thumbnail( $latest_li['bo_table'] , $latest_li['wr_id'], 38, 38);
 				if ( !$latest_img ) $img = x::url_theme().'/img/no-image.png';
 				else $img = $latest_img['src'];
 				if( $i == $ctr ) $last_post = "class='last-item'";

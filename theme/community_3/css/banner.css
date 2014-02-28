@@ -1,10 +1,12 @@
  .layout .body-wrapper .main-content .banner{
-	width: 730px;
-	height: 220px;
+	width: 748px;
+	height: 238px;
 	overflow: hidden;	
 	position: relative;	
-	height:238px;
-	font-family:dotum;
+	height: 238px;
+	font-family: dotum;
+	margin-bottom: 8px;
+	border: solid 1px #bbbbbb;
 }
 
 .layout .body-wrapper .main-content .banner-image {
@@ -25,18 +27,18 @@
 
 .layout .body-wrapper .main-content .banner p {
 	position: absolute;
-	top: 189px;
+	top: 190px;
 	left: 0;
-	padding: 14px;
+	padding: 16px;
 	color: #ffffff;
-	font-size: 12pt;
+	font-size: 15px;
 	background: #bbbbbb;
 	width: 100%;
 }
 
 .layout .body-wrapper .main-content .banner .banner-more {
 	position: absolute;
-	top: 202px;
+	top: 205px;
 	right: 0;
 	padding: 0.5em;
 	color: #ffffff;

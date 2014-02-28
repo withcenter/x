@@ -1,6 +1,6 @@
 .login-box {
 	font-family: '맑은 고딕', AppleGothic;
-	background: #222222;
+	background: #cccccc;
 	color: #ffffff;
 	padding: 10px;
 	font-size: 10.5px;
@@ -12,10 +12,26 @@
 	text-decoration: none;
 }
 
+
+.login-box .login-extra, .login-box .login-extra a {
+	color: #808080;
+}
+
 .login-box table tr td input[type='text'], .login-box table tr td input[type='password']{
 	width: 98px;
 	height: 26.5px;
 	padding-left: 10px;
+}
+
+.login-box .login-table-input {
+	padding-bottom: 5px;
+}
+
+.login-box .login-user, .login-box .login-pass {
+	border-top: solid 1px #b2b2b2;
+	border-bottom: solid 1px #b2b2b2;
+	border-left: solid 1px #c2c2c2;
+	border-right: solid 1px #c2c2c2;
 }
 
 .login-box input[type='image']{
@@ -25,7 +41,7 @@
 
 
 .login-box .admin-mode {
-	background: #cc4235;
+	background: #808080;
 	margin-bottom: 5px;
 	padding: 5px;
 	text-align: center;
@@ -37,8 +53,13 @@
 
 
 .login-box #ol_after_logout {
-	background: #cc4235;
-	border-top: solid 2px #d45e53;
+	background: #808080;
+	border-top: solid 2px #b2b2b2;
 	padding: 7px 12px 7px 12px;
 	text-align: center;
+}
+
+
+.login-box.logout-community3, .login-box.logout-community3 a {
+	color: #000000;
 }

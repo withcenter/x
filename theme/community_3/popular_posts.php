@@ -38,10 +38,10 @@ if ( g::forum_exist($forum_1) && g::forum_exist($forum_2) && g::forum_exist($for
 						if ( $i==$ctr ) $last_post = "class='last-post'";
 						echo "
 								<tr $last_post>
-									<td width='20'>
-										<div class='post-num'>$i </div>
+									<td width='15'>
+										<div class='post-num'>$i</div>
 									</td>
-									<td width='120'>
+									<td width='125'>
 										<a href='$url'>$popular_subject</a>
 									</td>
 									<td width='50' align='right'>

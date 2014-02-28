@@ -6,28 +6,38 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 <link rel="stylesheet" href="<?php echo $outlogin_skin_url ?>/style.css">
 
 <div class='login-box'>
-
-	
 	<div class='login-box-middle'>
 		<form name="foutlogin" action="<?php echo $outlogin_action_url ?>" onsubmit="return fhead_submit(this);" method="post" autocomplete="off">
 			<input type="hidden" name="url" value="<?php echo $outlogin_url ?>">
-			<table cellspacing=5 width='190' height='70' >
+			<table width='100%'>
 				<tr valign='top'>
 					<td>
-						<input type="text" id="ol_id" name="mb_id" required  maxlength="20" placeholder='아이디'>
-					</td>
+						<table width='100%' cellspacing='0' cellpadding='0'>
+							<tr valign='top'>
+								<td  class='login-table-input'>
+									<div class='login-user'>
+										<input type="text" id="ol_id" name="mb_id" required  maxlength="20" placeholder='아이디'>
+									</div>
+								</td>
+							</tr>
+								<tr>
+									<td>
+										<div class='login-pass'>
+											<input type="password" name="mb_password" id="ol_pw" required maxlength="20" placeholder='비밀번호'>
+										</div>
+									</td>
+								</tr>	
+						</table>
+					<td>
 					<td rowspan=2>
 						<input type="image" id="ol_submit" src='<?=$outlogin_skin_url?>/signin_button.png' />
 					</td>
 				</tr>
-				<tr>
-					<td><input type="password" name="mb_password" id="ol_pw" required maxlength="20" placeholder='비밀번호'></td>
-				</tr>
 			</table>
-			<table width='100%' cellspacing=5>
+			<table width='100%' cellspacing=5 class='login-extra'>
 				<tr valign='top'>
 					<td>
-						<a href='<?=G5_URL?>/<?=G5_BBS_DIR?>/register.php'>회원가입</a>
+						<a href='<?=G5_URL?>/<?=G5_BBS_DIR?>/register.php' class='login-reg'><b>회원가입</b></a>
 					</td>
 					<td rowspan=2>
 						<img class='remember-me-check' src='<?=$outlogin_skin_url?>/unchecked.gif' />
@@ -40,9 +50,6 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 					</td>
 				</tr>
 			</table>
-
-		
-			
 		</form>
 	</div>
 </div>

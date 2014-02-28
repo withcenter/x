@@ -12,7 +12,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 						<span class='label'><?=$bo_subject?></span>
 					</td>
 					<td align='right'>
-						<div class='posts-more'><a href="<?=g::url()?>/bbs/board.php?bo_table=<?=$bo_table?>" >자세히 <img src="<?=$latest_skin_url?>/img/more-icon.png"></a></div>
+						<div class='posts-more'><a href="<?=g::url()?>/bbs/board.php?bo_table=<?=$bo_table?>" >자세히 <!--<img src="<?=$latest_skin_url?>/img/more-icon.png">--></a></div>
 					</td>
 				</tr>
 			</table>
@@ -36,7 +36,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		?>	
 			<tr <? if( $i == $no_of_posts ) echo "class='last-item'"; ?> valign='top'>				
 				<?
-					echo "<td width='10' valign='middle'><div class='posts-square'>■</div></td><td width='120'><a href='$url' class='content-community-3'>$content</a></td><td width='40' align='right'><a href='$url'> <span class='no-of-comments $no_comment'>[$comment_count]</span></a></td>";
+					echo "<td width='10' valign='middle'><div class='posts-square'><img src='$latest_skin_url/img/square-icon.png'></div></td><td width='120'><a href='$url' class='content-community-3'>$content</a></td><td width='40' align='right'><a href='$url'> <span class='no-of-comments $no_comment'>[$comment_count]</span></a></td>";
 				?>
 				<?$i++;?>
 			</tr>	
