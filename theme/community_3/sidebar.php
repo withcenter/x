@@ -18,7 +18,7 @@ for ( $i = 1 ; $i <= 10; $i++ ) {
 	<img src='<?=$imgsrc?>'>
 </div>
 
-<?=latest('x-latest-community3-posts', $forum_1 , 6 , 20)?>
+<?=latest('x-latest-community3-posts', $forum_1 , 4 , 20)?>
 <? include x::theme('popular_posts') ?>
 <!--<? include x::theme('latest_comments') ?> //Removed in the new design-->
 

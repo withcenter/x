@@ -140,42 +140,42 @@
 	<table cellpadding=5 class='image-config' width='100%'>	
 		<tr valign='top'>
 		<td>
-			<div class='image-title'>SIDEBAR BANNER 1 (Left)</div>
+			<div class='image-title'>FLOATING BANNER 1</div>
 			<div class='image-upload'>
-			<?if( ms::meta('travel2banner1_sidebar') ) {?><img src="<?=ms::meta('img_url').ms::meta('travel2banner1_sidebar')?>" width=280px height=160px><br><?}?>
-			<input type='file' name='travel2banner1_sidebar'>
-			<?if( ms::meta('travel2banner1_sidebar') != '' ) { ?>
-				<input type='hidden' name='travel2banner1_sidebar_remove' value='n'>
-				<input type='checkbox' name='travel2banner1_sidebar_remove' value='y'><span class='title-small'>이미지 제거</span>
+			<?if( ms::meta('travel2banner1_floating') ) {?><img src="<?=ms::meta('img_url').ms::meta('travel2banner1_floating')?>" width=280px height=160px><br><?}?>
+			<input type='file' name='travel2banner1_floating'>
+			<?if( ms::meta('travel2banner1_floating') != '' ) { ?>
+				<input type='hidden' name='travel2banner1_floating_remove' value='n'>
+				<input type='checkbox' name='travel2banner1_floating_remove' value='y'><span class='title-small'>이미지 제거</span>
 			<?}?>
-			<div class='title'>SIDEBAR BANNER 1 URL</div>
-			<input type='text' name='travel2banner1_sidebar_text1' value='<?=ms::meta('travel2banner1_sidebar_text1')?>'>
+			<div class='title'>FLOATING BANNER 1 URL</div>
+			<input type='text' name='travel2banner1_floating_text1' value='<?=ms::meta('travel2banner1_floating_text1')?>'>
 		</td>
 		<td>
-			<div class='image-title'>SIDEBAR BANNER 2 (Left)</div>
+			<div class='image-title'>FLOATING BANNER 2 (Left)</div>
 			<div class='image-upload'>
-			<?if( ms::meta('travel2banner2_sidebar') ) {?><img src="<?=ms::meta('img_url').ms::meta('travel2banner2_sidebar')?>" width=280px height=160px><br><?}?>
-			<input type='file' name='travel2banner2_sidebar'>
-			<?if( ms::meta('travel2banner2_sidebar') != '' ) { ?>
-				<input type='hidden' name='travel2banner2_sidebar_remove' value='n'>
-				<input type='checkbox' name='travel2banner2_sidebar_remove' value='y'><span class='title-small'>이미지 제거</span>
+			<?if( ms::meta('travel2banner2_floating') ) {?><img src="<?=ms::meta('img_url').ms::meta('travel2banner2_floating')?>" width=280px height=160px><br><?}?>
+			<input type='file' name='travel2banner2_floating'>
+			<?if( ms::meta('travel2banner2_floating') != '' ) { ?>
+				<input type='hidden' name='travel2banner2_floating_remove' value='n'>
+				<input type='checkbox' name='travel2banner2_floating_remove' value='y'><span class='title-small'>이미지 제거</span>
 			<?}?>
-			<div class='title'>SIDEBAR BANNER 2 URL</div>
-			<input type='text' name='travel2banner2_sidebar_text1' value='<?=ms::meta('travel2banner2_sidebar_text1')?>'>
+			<div class='title'>FLOATING 2 URL</div>
+			<input type='text' name='travel2banner2_floating_text1' value='<?=ms::meta('travel2banner2_floating_text1')?>'>
 		</td>
 	</tr>
 	<tr valign='top'>
 		<td>
-			<div class='image-title'>SIDEBAR BANNER 3 (Left)</div>
+			<div class='image-title'>FLOATING BANNER 3 (Left)</div>
 			<div class='image-upload'>
-			<?if( ms::meta('travel2banner3_sidebar') ) {?><img src="<?=ms::meta('img_url').ms::meta('travel2banner3_sidebar')?>" width=280px height=160px><br><?}?>
-			<input type='file' name='travel2banner3_sidebar'>
-			<?if( ms::meta('travel2banner3_sidebar') != '' ) { ?>
-				<input type='hidden' name='travel2banner3_sidebar_remove' value='n'>
-				<input type='checkbox' name='travel2banner3_sidebar_remove' value='y'><span class='title-small'>이미지 제거</span>
+			<?if( ms::meta('travel2banner3_floating') ) {?><img src="<?=ms::meta('img_url').ms::meta('travel2banner3_floating')?>" width=280px height=160px><br><?}?>
+			<input type='file' name='travel2banner3_floating'>
+			<?if( ms::meta('travel2banner3_floating') != '' ) { ?>
+				<input type='hidden' name='travel2banner3_floating_remove' value='n'>
+				<input type='checkbox' name='travel2banner3_floating_remove' value='y'><span class='title-small'>이미지 제거</span>
 			<?}?>
-			<div class='title'>SIDEBAR BANNER 3 URL</div>
-			<input type='text' name='travel2banner3_sidebar_text1' value='<?=ms::meta('travel2banner3_sidebar_text1')?>'>
+			<div class='title'>FLOATING BANNER 3 URL</div>
+			<input type='text' name='travel2banner3_floating_text1' value='<?=ms::meta('travel2banner3_floating_text1')?>'>
 		</td>
 	</tr>
 </table>
