@@ -12,6 +12,7 @@
 	text-decoration: none;
 }
 
+
 .login-box .login-extra, .login-box .login-extra a {
 	color: #808080;
 }
@@ -40,7 +41,7 @@
 
 
 .login-box .admin-mode {
-	background: #cc4235;
+	background: #808080;
 	margin-bottom: 5px;
 	padding: 5px;
 	text-align: center;
@@ -52,8 +53,13 @@
 
 
 .login-box #ol_after_logout {
-	background: #cc4235;
-	border-top: solid 2px #d45e53;
+	background: #808080;
+	border-top: solid 2px #b2b2b2;
 	padding: 7px 12px 7px 12px;
 	text-align: center;
+}
+
+
+.login-box.logout-community3, .login-box.logout-community3 a {
+	color: #000000;
 }
