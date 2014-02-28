@@ -4,7 +4,11 @@
 	<table width='100%' cellpadding=0 cellspacing=0><tr valign='top'>
 	<td width=310>
 		<div class='travel_left_posts'>
-			NO POST
+		<?
+			$latest_bo_table = ms::board_id(etc::domain()).'_2';
+			$latest_1_output = latest("x-latest-travel-lower-posts-with-image", $latest_bo_table, 5, 20);
+			echo $latest_1_output;
+		?>
 		</div>
 	</td>
 	<td width=340>
