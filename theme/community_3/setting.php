@@ -1,3 +1,10 @@
+  <div class='config-wrapper'>
+	<div class='config-title'><span class='config-title-info'>ADDITIONAL SITE INFORMATION</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
+	<div class='config-container'>
+		<span class='title-small'>Contact Number: </span><input type='text' name='com3contact_num' value='<?=ms::meta('com3contact_num')?>'>	
+	</div>
+</div>
+
  <div class='config-wrapper'>
 	<div class='config-title'><span class='config-title-info'>HEADER LOGO and BANNERS</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
 	<div class='config-container'>
