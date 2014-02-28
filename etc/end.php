@@ -3,6 +3,17 @@ x::hook_register('end_before_html', 'hook_rsd_patch');
 x::hook_register('end_before_html', 'hook_metaweblogapi');
 x::hook_register('end_before_html', 'hook_html_symbol');
 x::hook_register('end_before_html', 'hook_css_js_version');
+x::hook_register('end_before_html', 'hook_html_meta');
+
+function hook_html_meta()
+{
+	global $html;
+	$src = '<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">';
+	$dst = '<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1,maximum-scale=1,user-scalable=no">';
+	$html = str_replace($src, $dst, $html);
+}
+
+
 
 
 function hook_rsd_patch()

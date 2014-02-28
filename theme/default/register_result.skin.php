@@ -3,15 +3,15 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 ?>
 
 <!-- 회원가입결과 시작 { -->
-<link rel="stylesheet" href="<?php echo $member_skin_url ?>/style.css">
+<link rel="stylesheet" href="<?php echo $member_skin_url ?>/css/theme.css">
 
 <div id="reg_result" class="mbskin">
 
-find ... "회원가입이 완료되었습니다." and delete..
+
 
     <div id="result_logo">
 		<div>Change logo</div>
-		<img src="<?php echo $member_skin_url ?>/img/reg_result_logo.jpg" alt="">
+		<img src="<?php echo $member_skin_url ?>/img/title_register_result.png" alt="">
 	</div>
 
     <p>

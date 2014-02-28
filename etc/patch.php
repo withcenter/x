@@ -31,26 +31,20 @@ if ( $argv[1] == 'language' ) {
  */
 
 
+	include x::dir() . "/etc/patch/x.php";
 	include x::dir() . "/etc/patch/index.php";
 	include x::dir() . "/etc/patch/database.php";
 	include x::dir() . "/etc/patch/jquery.php";
-	//include x::dir() . "/etc/patch/blogapi.php";
-	include x::dir() . "/etc/patch/begin_end.php";
+	//include x::dir() . "/etc/patch/begin_end.php";
+	include x::dir() . "/etc/patch/head.php";
+	include x::dir() . "/etc/patch/tail.php";
+	include x::dir() . "/etc/patch/tail.sub.php";
+
+	
 	include x::dir() . "/etc/patch/write_update.php";
 	include x::dir() . "/etc/patch/delete.php";
 	include x::dir() . "/etc/patch/outlogin.lib.php";
 	include x::dir() . "/etc/patch/latest.lib.php";
-	
-	
-	//include x::dir() . "/etc/patch/menu.php";
-	//include x::dir() . "/etc/patch/menu.php";
-	// include x::dir() . "/etc/patch/hook.php";
-	// include x::dir() . "/etc/patch/translate_installation_page_to_english.php";
-	//message("Hooks");
-	//result(0);
-	
-	//message("Language");
-	//result(0);
 	
 	
 	echo "\n-- PATCH SUCCESS --\n";

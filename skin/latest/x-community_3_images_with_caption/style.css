@@ -1,7 +1,12 @@
+.community_images_with_captions  {
+	height: 158px;
+}
 .community_images_with_captions  .title{
 	border-bottom:1px solid #bbbbbb;
 	margin-bottom:10px;
-	padding:8px 0 8px 26px;
+	padding-left: 26px;
+	height: 28px;
+	line-height: 28px;
 	font-weight:bold;
 	background-color:#fcfcfc;
 	position:relative;

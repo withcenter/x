@@ -2,9 +2,10 @@
 	font-family: '맑은 고딕', AppleGothic;
 	background: #cccccc;
 	color: #ffffff;
-	padding: 10px;
+	padding: 6px 8px 13px 8px;
 	font-size: 10.5px;
 	margin-bottom: 10px;
+	height: 110px;
 }
 
 .login-box a {

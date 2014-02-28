@@ -1,11 +1,11 @@
- .layout .body-wrapper .main-content .banner{
+ .layout .body-wrapper .main-content  .content > .banner{
 	width: 748px;
 	height: 238px;
 	overflow: hidden;	
 	position: relative;	
 	height: 238px;
 	font-family: dotum;
-	margin-bottom: 8px;
+	margin-bottom: 10px;
 	border: solid 1px #bbbbbb;
 }
 

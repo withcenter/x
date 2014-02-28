@@ -13,7 +13,7 @@ if ( $posts ) { ?>
 			<tr valign='top'>
 				<td align='left' class='title-left'>
 					<img src="<?=x::url_theme()?>/img/popular-posts.png">
-					<span class='label'>POPULAR POSTS</span>
+					<span class='label'>조회수가 많은 글</span>
 				</td>
 			</tr>
 		</table>
@@ -29,7 +29,7 @@ if ( $posts ) { ?>
 			foreach ( $posts as $key => $post ) { if($i >= 2) break;
 				foreach ( $post as $p ) {
 					$url = G5_BBS_URL."/board.php?bo_table=$key&wr_id=$p[wr_id]";
-					$popular_subject = conv_subject( $p['wr_subject'], 14, '...');
+					$popular_subject = conv_subject( $p['wr_subject'], 15, '...');
 					$no_of_views = $p['wr_hit'];
 					$no_of_comments = $p['wr_comment'];
 					
