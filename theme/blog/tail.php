@@ -23,4 +23,6 @@ $(function() {
 body {
 	background: url(<?=x::url_theme()?>/img/bg.jpg);
 }
+
+
 </style>
