@@ -1,0 +1,62 @@
+.lower-travel-posts {
+	border: solid 1px #bbbbbb;
+	height: 327px;
+}
+
+.lower-travel-posts a {
+	text-decoration: none;
+}
+
+.lower-travel-posts .title {
+	padding-left: 5px;
+	line-height: 24px;
+	height: 29px;
+	background: #f7f7f7;
+	border-bottom: solid 1px #bbbbbb;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.lower-travel-posts .title img {
+	margin: 0 2px 0 0;
+	position: relative;
+
+}
+
+.lower-travel-posts .title .posts-more a {
+	color: #808080;
+	font-weight: normal! important;
+	margin-right: 5px;
+}
+
+.lower-travel-posts .lower-travel-posts-items {
+	padding: 0 10px 0 10px;
+}
+
+.lower-travel-posts .lower-travel-posts-items tr td {
+	border-bottom: dashed 1px #bebebe;
+	padding: 10px 0 9px 0;
+}
+.lower-travel-posts .lower-travel-posts-items tr td .subject {
+	height: 34px;
+	line-height: 17px; 
+	overflow: hidden;
+}
+
+.lower-travel-posts .lower-travel-posts-items tr.last-item td {
+	border-bottom: 0;
+}
+
+.lower-travel-posts .lower-travel-posts-items tr td img {
+	margin-right: 10px;
+}
+
+.lower-travel-posts .lower-travel-posts-items .post-image img {
+	border: solid 1px #cccccc;
+}
+
+.lower-travel-posts .lower-travel-posts-items .num_comments {
+	color: #cc4235;
+}
+
+

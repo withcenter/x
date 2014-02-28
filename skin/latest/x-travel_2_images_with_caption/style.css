@@ -7,6 +7,15 @@
 	position:relative;
 }
 
+.travel_images_with_captions .title a{
+	font-weight:normal;
+	color:#808080;
+	font-size:.8em;
+	float:right;
+	margin:3px 10px 0 0;
+	text-decoration:none;
+}
+
 .travel_images_with_captions  .title img{
 	position:absolute;
 	top:10px;
