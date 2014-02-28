@@ -16,7 +16,9 @@
 				<a href='<?=g::url()?>'>Home</a><span class="dot">•</span><?=$do_log?><span class="dot">•</span><?=$profile?><span class="dot">•</span><a href='#'>Community</a><span class="dot">•</span></span><a href='#'>QnA</a>
 			</div>
 			<div class='right'>
-				<a href='#'>Cafe</a><span class="dot">•</span><a href='#'>앱 다운로드</a><span class="dot">•</span><a href='#'>Adv</a><span class="dot">•</span><a href='#'>Contact: +82 070 7529 1749</a>
+				<a href='#'>Cafe</a><span class="dot">•</span><a href='#'>앱 다운로드</a><span class="dot">•</span><a href='#'>Adv</a><span class="dot">
+				<? if ( !$com3_contact_number = ms::meta('com3contact_num') ) $com3_contact_number = '+82 070 7529 1749'?>
+				•</span><a href='#'>Contact: <?=$com3_contact_number?></a>
 			</div>
 		</div>
 	</div>
