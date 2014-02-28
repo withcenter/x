@@ -1,3 +1,9 @@
+<?php
+	if (G5_IS_MOBILE) {
+		include x::theme('mobile/head');
+		return;
+	}
+?>
 <link rel="stylesheet" href="<?=x::url_theme()?>/css/theme.css">
 <!-- 상단 시작 { -->
 

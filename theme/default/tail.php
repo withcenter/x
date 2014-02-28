@@ -1,4 +1,10 @@
-
+<?php
+	// https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.57zps76ham9m
+	if (G5_IS_MOBILE) {
+		include x::theme('mobile/tail');
+		return;
+	}
+?>
     </div>
 </div>
 

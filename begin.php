@@ -12,14 +12,18 @@ if ( admin_page() ) {
 	
 }
 else {
+	/**
+	 * @bug check what if the site is not multisite? still it hsa to set title?
+	 */
 	ms::set_title();
 }
 
+
 if ( x::installed() && etc::web() ) {
-	x::$config['site'] = md::config( etc::domain_name() );
+	//x::$config['site'] = md::config( etc::domain_name() );
+	x::load_site();
 	ob_start();
-	if ( file_exists(x::theme('init')) ) include_once x::theme('init');
-	
+	if ( file_exists(x::theme('init')) ) include_once x::theme('init');	
 }
 
 include 'etc/begin.php';
