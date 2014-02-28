@@ -1,10 +1,17 @@
 .sidebar .community3-posts {
 	margin-top: 10px;
 	border: solid 1px #bbbbbb;
+	white-space: nowrap;
 }
 
 .sidebar .community3-posts a {
 	text-decoration: none;
+}
+
+.sidebar .community3-posts .content-community-3 {
+	display: inline-block;
+	width: 130px;
+	overflow: hidden;
 }
 
 .sidebar .community3-posts .title {

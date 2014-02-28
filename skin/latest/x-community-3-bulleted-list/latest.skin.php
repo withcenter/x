@@ -7,10 +7,11 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 <!-- <?php echo $bo_subject; ?> 최신글 시작 { -->
 <div class="comm3_bulleted_list">
     <div class="bulleted_list_title">		
-		<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=<?php echo $bo_table ?>"><?php echo $bo_subject; ?></a>
+		<?php echo $bo_subject; ?>
+		<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=<?php echo $bo_table ?>">more</a>
 	</div>
     <ul>
-    <?php for ($i=0; $i<count($list); $i++) {  ?>
+    <?php for ($i=0; $i<count($list); $i++) {?>
         <li>
 		
             <?php
@@ -19,6 +20,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
                 echo "<strong>".$list[$i]['subject']."</strong>";
             else
                 echo $list[$i]['subject'];
+			if( !$list[$i]['comment_cnt'] ) $list[$i]['comment_cnt'] = 0;
+			
+			echo "<span class='comment_count'> [".strip_tags($list[$i]['comment_cnt'])."]</span>";
 
             echo "</a>";
 

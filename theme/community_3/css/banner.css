@@ -1,0 +1,42 @@
+ .layout .body-wrapper .main-content .banner{
+	width: 730px;
+	height: 220px;
+	overflow: hidden;	
+	position: relative;	
+	height:238px;
+}
+
+.layout .body-wrapper .main-content .banner-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display:none;
+	width:100%;
+}
+
+.layout .body-wrapper .main-content .banner-image.selected {
+	display: block;
+}
+
+.layout .body-wrapper .main-content .banner img {
+	width: 100%;
+}
+
+.layout .body-wrapper .main-content .banner p {
+	position: absolute;
+	top: 189px;
+	left: 0;
+	padding: 14px;
+	color: #ffffff;
+	font-size: 12pt;
+	background: #bbbbbb;
+	width: 100%;
+}
+
+.layout .body-wrapper .main-content .banner .banner-more {
+	position: absolute;
+	top: 200px;
+	right: 0;
+	padding: 0.5em;
+	color: #ffffff;
+}
