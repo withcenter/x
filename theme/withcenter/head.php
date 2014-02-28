@@ -26,8 +26,8 @@
 		
 		<div class='right-top-menu'>
 			<a href='<?=G5_BBS_URL?>/board.php?bo_table=withcenter_solution'>솔류션</a>
-			<a href='<?=G5_BBS_URL?>/board.php?bo_table=withcenter3'>강사아웃소싱</a>
-			<a href='<?=G5_BBS_URL?>/board.php?bo_table=withcenter5'>가맹사모집</a>
+			<a href='https://ontue.com/video-chat/' target='_blank'>화상채팅</a>
+			<a href='http://blog.naver.com/thruthesky' target='_blank'>위세너 블로그</a>
 		</div>
 		<div style='clear:right;'></div>
 	</div>
@@ -64,7 +64,7 @@
 	<a href='<?=G5_BBS_URL?>/board.php?bo_table=withcenter2'>가맹사모집</a>
 	<a href='<?=G5_BBS_URL?>/board.php?bo_table=withcenter3'>강사아웃소싱</a>
 	<a href='<?=G5_BBS_URL?>/board.php?bo_table=withcenter4'>오픈소스</a>
-	<a href='<?=G5_BBS_URL?>/board.php?bo_table=withcenter1'>자유토론</a>
+	<a href='<?=G5_BBS_URL?>/board.php?bo_table=withcenter_qna'>질문과답변</a>
 </div></div> 
 
 <div class='layout'>
