@@ -1,3 +1,4 @@
+parent.postMessage( { 'name' : 'move top' }, '*' );
 $(function(){
 	resize_iframe();
 	setTimeout(function () { resize_iframe(); }, 1000);	// resize after 1 second for sure.
@@ -11,7 +12,7 @@ $(window).load(function () {
 });
 function resize_iframe()
 {
-		var height = $('body').height();
-		var data = { 'name' : 'resize', 'height': height };
-		parent.postMessage( data, '*' );	
+	var height = $('body').height();
+	var data = { 'name' : 'resize', 'height': height };
+	parent.postMessage( data, '*' );
 }
