@@ -4,6 +4,7 @@
 	overflow: hidden;	
 	position: relative;	
 	height:238px;
+	font-family:dotum;
 }
 
 .layout .body-wrapper .main-content .banner-image {
@@ -35,8 +36,9 @@
 
 .layout .body-wrapper .main-content .banner .banner-more {
 	position: absolute;
-	top: 200px;
+	top: 202px;
 	right: 0;
 	padding: 0.5em;
 	color: #ffffff;
+	font-size:.8em;
 }
