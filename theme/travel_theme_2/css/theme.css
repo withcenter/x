@@ -1,0 +1,126 @@
+/* top.php */
+.travel-theme-top-wrapper {
+	width: 100%;
+	background-color: #fafafa;
+	color: #323232;
+	border-bottom: 1px solid #24accb;
+	height: 39px;
+	line-height: 39px;
+}
+.travel-theme-top-wrapper > .inner {
+	width: 970px;
+	margin: 0 auto;
+}
+.travel-theme-top-wrapper .inner .search-bar  {
+	float: right;
+}
+.travel-theme-top-wrapper .inner .search-bar input[type='text'] {
+	border: 0;
+	border-top: 1px solid #24accb;
+	border-left: 1px solid #24accb;
+	height: 38px;
+	line-height: 38px;
+	position: relative;
+	left: 4px;
+	width: 323px;
+	padding: 0 10px;
+}
+
+/* logo_menu.php */
+.travel_theme2_header > .header_wrapper  {
+	padding-top: 17px;
+}
+.travel_theme2_header > .header_wrapper > .logo {
+	float: left;
+}
+.travel_theme2_header > .header_wrapper > .top-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 22px 0;
+	float: right;	
+}
+.travel_theme2_header > .header_wrapper > .middle-menu {
+	list-style:none;
+	padding: 0;
+	margin: 0;
+}
+.travel_theme2_header > .header_wrapper > .middle-menu li {
+	display: block;
+	float: left;
+	margin-right: 45px;
+}
+.travel_theme2_header > .header_wrapper > .middle-menu li  a {
+	font-size: 12pt;
+	font-family: '맑은 고딕', AppleGothic;
+	color: #333333;
+	display: inline-block;
+	border-bottom: 2px solid transparent;
+	padding: 0 8px 5px 8px;
+	
+}
+
+.travel_theme2_header > .header_wrapper > .middle-menu li:last-child {
+	margin-right: 0;
+}
+
+.travel_theme2_header > .header_wrapper > .middle-menu li  a:hover {
+	text-decoration: none;
+	border-bottom: 2px solid #a6ddea;
+}
+
+.travel_theme2_header > .header_wrapper > .top-menu li {
+	border: 1px solid #0e5565;
+	border-right: 0;
+	display: block;
+	float: left;
+}
+.travel_theme2_header > .header_wrapper > .top-menu li:last-child {
+	border-right: 1px solid #0e5565;
+}
+.travel_theme2_header > .header_wrapper > .top-menu li > .inner {
+	border-left: 1px solid #88ceda;
+	border-top: 1px solid #b5e3eb;
+	background-color: #16859e;
+}
+.travel_theme2_header > .header_wrapper > .top-menu li > .inner :hover {
+	background-color: #24abc2; 
+}
+
+.travel_theme2_header > .header_wrapper > .top-menu li > .inner a {
+	display: inline-block;
+	height: 37px;
+	line-height: 35px;
+	padding: 0 17px;
+	color: #ffffff;
+	font-size: 9pt;
+	font-family: '맑은 고딕', AppleGothic;
+}
+.travel_theme2_header > .header_wrapper > .top-menu li > .inner a:hover {
+	text-decoration: none;
+}
+.layout {
+	width: 100%;
+}
+.layout > .inner {
+	width: 970px;
+	margin: 0 auto;
+}
+
+.layout > .inner  > .left {
+	width: 210px;
+	float: left;
+	margin-right: 10px;
+}
+.layout > .inner  > .container {
+	float: left;
+	width: 750px;
+}
+
+.travel_theme2_header {
+	width: 100%;
+}
+
+.travel_theme2_header > .header_wrapper {
+	width: 970px;
+	margin: 0 auto;
+}
