@@ -36,4 +36,4 @@ for ( $i = 1 ; $i <= 10; $i++ ) {
 		echo "<a href='$url' target='_blank'><img class='$banner_class' src='".$banner_img."'></a>";		
 	}
 	?>
-</div>
+</div> 
