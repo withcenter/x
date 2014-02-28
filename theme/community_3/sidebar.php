@@ -31,4 +31,4 @@ if ( $company_banner = ms::meta('com3banner_sidebar') ) { ?>
 </div>
 <?}?>
 
-<? include x::theme('latest_posts') ?>
+<? include( x::theme('latest_posts') ) ?>

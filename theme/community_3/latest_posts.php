@@ -1,4 +1,4 @@
-﻿<?
+<?
 /** POSTS RECENT */
 $qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";
 $current_date = date('Y-m-d').' 23:59:59';
