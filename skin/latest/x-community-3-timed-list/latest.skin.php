@@ -14,19 +14,13 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
     <?php for ($i=0; $i<count($list); $i++) {?>
         <li>
 		
-            <?php
-            echo "<a href=\"".$list[$i]['href']."\">";
-            if ($list[$i]['is_notice'])
-                echo "<strong>".$list[$i]['subject']."</strong>";
-            else
-                echo $list[$i]['subject'];
+            <?php            		
+            echo "<span class='subject'><a href=\"".$list[$i]['href']."\">".$list[$i]['subject']."</a></span>";
+			
 			if( !$list[$i]['comment_cnt'] ) $comment_count = "<span class='comment_count no-comment'>0</span>";
 			else $comment_count = "<span class='comment_count'>".strip_tags($list[$i]['comment_cnt'])."</span>";
 			
 			echo "<div class='comment_and_time'>".$comment_count."<span class='time'>".$list[$i]['datetime2']."</span></div>";
-
-            echo "</a>";
-
              ?>
         </li>
     <?php }  ?>
