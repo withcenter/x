@@ -2,20 +2,34 @@
 	border:1px solid #bbbbbb;
 	width:368px;
 	display:inline-block;
-	height:100%;
+	height: 208px;
 }
 
 .comm3_timed_list_with_image .timed_list_title{
 	font-weight:bold;	
 	font-family:Dotum;
-	padding:10px;
+	padding: 0 10px;
+	height: 28px;
+	line-height: 28px;
 	border-bottom:1px solid #bbbbbb;
+	background-color: #fcfcfc;
+	
 }
 
 .comm3_timed_list_with_image .timed_list_title img{
 	position:relative;
 	top:-2px;
 	margin-right:5px;
+}
+
+.comm3_timed_list_with_image .timed_list_title .more-button {
+	float: right;
+	font-weight: normal;
+	margin-top: 2px;
+}
+.comm3_timed_list_with_image .timed_list_title .more-button a {
+	color:#808080;
+	font-size: 9pt
 }
 
 .comm3_timed_list_with_image .comment_and_time{

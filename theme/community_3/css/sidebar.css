@@ -5,8 +5,8 @@
 
 /**COMPANY BANNER*/
 .sidebar .company-banner {
-	width: 210px;
-	height: 100px;
+	width: 208px;
+	height: 99px;
 	overflow: hidden;
 	border: solid 1px #bbbbbb;
 	margin-bottom: 10px;
@@ -14,6 +14,7 @@
 
 .sidebar .company-banner img {
 	width: 100%;
+	height: 100%;
 }
 
 /**SIDEBAR BANNER*/
@@ -31,7 +32,8 @@
 /**POPULAR POSTS*/
 .sidebar .popular-posts {
 	border: solid 1px #bbbbbb;
-	margin-bottom: 10px;
+	margin-bottom: 9px;
+	height: 138px;
 }
 
 .sidebar .popular-posts a {
@@ -39,7 +41,9 @@
 }
 
 .sidebar .popular-posts .title {
-	padding: 3px 0 3px 5px;
+	padding-left: 5px;
+	height: 28px;
+	line-height: 24px;
 	background: #f7f7f7;
 	border-bottom: solid 1px #bbbbbb;
 	font-weight: bold;
@@ -47,7 +51,9 @@
 }
 
 .sidebar .popular-posts .title img {
-	margin: 0 7px 0 0;
+	margin: 0 2px 0 0;
+	position: relative;
+	top: -2px;
 }
 
 .sidebar .popular-posts .popular-posts-items {
@@ -100,7 +106,9 @@
 }
 
 .sidebar .latest-comments .title img {
-	margin: 0 7px 0 0;
+	margin: 0 2px 0 0;
+	position: relative;
+	top: -2px;
 }
 
 .sidebar .latest-comments .latest-comments-items {
@@ -112,6 +120,7 @@
 .sidebar .com3-latest-posts {
 	border: solid 1px #bbbbbb;
 	margin-bottom: 10px;
+	height: 208px;
 }
 
 .sidebar .com3-latest-posts a {
@@ -119,7 +128,9 @@
 }
 
 .sidebar .com3-latest-posts .title {
-	padding: 3px 0 3px 5px;
+	padding-left: 5px;
+	line-height: 24px;
+	height: 28px;
 	background: #f7f7f7;
 	border-bottom: solid 1px #bbbbbb;
 	font-weight: bold;
@@ -127,7 +138,9 @@
 }
 
 .sidebar .com3-latest-posts .title img {
-	margin: 0 7px 0 0;
+	margin: 0 2px 0 0;
+	position: relative;
+	top: -2px;
 }
 
 .sidebar .com3-latest-posts .com3-latest-posts-items {
@@ -136,7 +149,12 @@
 
 .sidebar .com3-latest-posts .com3-latest-posts-items tr td {
 	border-bottom: dashed 1px #bebebe;
-	padding: 10px 0;
+	padding: 10px 0 9px 0;
+}
+.sidebar .com3-latest-posts .com3-latest-posts-items tr td .subject {
+	height: 34px;
+	line-height: 17px; 
+	overflow: hidden;
 }
 
 .sidebar .com3-latest-posts .com3-latest-posts-items tr.last-item td {

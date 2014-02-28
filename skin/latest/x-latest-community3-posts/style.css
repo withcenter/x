@@ -2,6 +2,7 @@
 	border: solid 1px #bbbbbb;
 	white-space: nowrap;
 	margin-bottom: 10px;
+	height: 158px;
 }
 
  .community3-posts a {
@@ -15,7 +16,9 @@
 }
 
  .community3-posts .title {
-	padding: 3px 5px 3px 5px;
+	padding: 0 5px;
+	height: 28px;
+	line-height: 24px;
 	background: #f7f7f7;
 	border-bottom: solid 1px #bbbbbb;
 	font-weight: bold;
@@ -26,7 +29,9 @@
 }
 
  .community3-posts .title img {
-	margin: 0 7px 0 0;
+	margin: 0 2px 0 0;
+	position: relative;
+	top: -2px;
 }
 
  .community3-posts .community3-posts-items {
@@ -40,4 +45,9 @@
  .community3-posts .community3-posts-items .no-of-comments {
 	color: #ff0000;
 	font-size: 11px;
+}
+.community3-posts .posts-more {
+	font-weight: normal;
+	font-size: 9pt;
+	color:#808080;
 }

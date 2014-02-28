@@ -2,14 +2,17 @@
 	border:1px solid #bbbbbb;
 	width:368px;	
 	display:inline-block;
-	height:100%;
+	height:138px;
 }
 
 .comm3_timed_list .timed_list_title{
 	font-weight:bold;	
 	font-family:Dotum;
 	border-bottom:1px solid #bbbbbb;
-	padding:7px 10px 5px 10px;
+	padding:0 10px;
+	line-height: 28px;
+	height: 28px;
+	background-color: #fcfcfc;
 }
 
 .comm3_timed_list .timed_list_title img{
@@ -21,10 +24,10 @@
 .comm3_timed_list .timed_list_title a{
 	font-weight:normal;
 	color:#808080;
-	font-size:.8em;
+	font-size: 9pt;
 	float:right;
-	margin:3px 0 0 0;
 	text-decoration:none;
+	margin-top: 2px;
 }
 
 .comm3_timed_list ul{
@@ -68,5 +71,8 @@
 	display:inline-block;
 	width:250px;
 	overflow:hidden;
-	white-space:no-wrap;
+	white-space:nowrap;
+	line-height: 18px;
+	height: 18px;
+	
 }

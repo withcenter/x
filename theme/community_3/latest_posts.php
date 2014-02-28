@@ -19,19 +19,19 @@ if( $latest_rows ) {
 				<tr valign='top'>
 					<td align='left' class='title-left'>
 						<img src="<?=x::url_theme()?>/img/latest-posts.png">
-						<span class='label'>LATEST POSTS</span>
+						<span class='label'>최신글</span>
 					</td>
 				</tr>
 			</table>
 		</div>
 
 	<div class='com3-latest-posts-items'>
-		<table>
+		<table cellpadding=0 cellspacing=0>
 		<?php
 			$i = 1;
 			$ctr = count($latest_list);
 			foreach ( $latest_list as $latest_li ) {
-				$latest_subject = conv_subject($latest_li['wr_subject'], 20, '...' );
+				$latest_subject = conv_subject($latest_li['wr_subject'],15, '...' );
 				$latest_subject .= ":";
 				$latest_url = g::url().'/bbs/board.php?bo_table='.$latest_li['bo_table'].'&wr_id='.$latest_li['wr_id'];
 				$latest_comment_count = '['.strip_tags($latest_li['wr_comment']).']';
@@ -48,7 +48,7 @@ if( $latest_rows ) {
 						<div class='post-image'><a href='<?=$img?>' target='_blank'><img src='<?=$img?>'></a></div>
 					</td>
 					<td width='110'>
-						<a href='<?=$url?>'><?=$latest_subject?></a>
+						<div class='subject'><a href='<?=$url?>'><?=$latest_subject?></a></div>
 					</td>
 					<td width='40' align='right'>
 						<span class='num_comments'><?=$latest_comment_count?></span>
