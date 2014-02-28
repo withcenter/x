@@ -11,6 +11,11 @@
 	ms::meta('travel2banner_5_text2',$in['travel2banner_5_text2']);
 	ms::meta('com3contact_num',$in['com3contact_num']);
 	
+	ms::meta('travel2contact_num1',$in['travel2contact_num1']);
+	ms::meta('travel2contact_num2',$in['travel2contact_num2']);	
+	ms::meta('travel2contact_hours1',$in['travel2contact_hours1']);
+	ms::meta('travel2contact_hours2',$in['travel2contact_hours2']);
+	
 	ms::meta('travel2banner1_sidebar_text1',$in['travel2banner1_sidebar_text1']);
 	ms::meta('travel2banner2_sidebar_text1',$in['travel2banner2_sidebar_text1']);
 	ms::meta('travel2banner3_sidebar_text1',$in['travel2banner3_sidebar_text1']);

@@ -30,7 +30,10 @@
 <!-- 콘텐츠 시작 { -->
 <div class="layout"><div class='inner'>
     <div class="left">
-        <?php echo outlogin('basic'); // 외부 로그인  ?>
+		<div class='login-sidebar'>
+			<?php echo outlogin('x-outlogin-travel-2'); // 외부 로그인  ?>
+		</div>
+		<?php include x::theme('sidebar_left') ?>
     </div>
     <div class="container">
 		<?if ( (preg_match('/^config/', $action)) || (preg_match('/^config_/', $action)) ) include ms::site_menu();?>

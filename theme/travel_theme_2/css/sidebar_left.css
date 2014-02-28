@@ -1,0 +1,50 @@
+﻿/**SIDEBAR LEFT*/
+.layout .left {
+	font-family: Gulim;
+}
+
+/**SIDEBAR LOGIN*/
+.layout .left .login-sidebar {
+	margin-bottom: 10px;
+}
+
+/** Contact Information **/
+.layout .left .contact-wrapper {
+	border: solid 1px #bbbbbb;
+	padding: 10px;
+	margin-bottom: 10px;
+	height: 77px;
+}
+
+.layout .left .contact-wrapper .contact-info {
+	margin: 5px 10px 0 20px;
+}
+
+.layout .left .contact-wrapper img {
+	margin: -4px 10px 0 10px;
+}
+
+/**POSTS LEFT 1 */
+.layout .left .posts-left-1 {
+	margin-bottom: 10px;
+}
+
+/**SIDEBAR LEFT (BANNERS) */
+.layout .left .banners-left {
+	border: solid 1px #bbbbbb;
+	padding: 9px;
+}
+
+.layout .left .banners-left img {
+	width: 100%;
+	margin-bottom: 10px;
+	height: 75px;
+}
+
+.layout .left .banners-left img.left-banner-2 {
+	height: 80px;
+}
+
+.layout .left .banners-left img.left-banner-3 {
+	margin-bottom: 0;
+}

@@ -1,4 +1,19 @@
- <div class='config-wrapper'>
+  <div class='config-wrapper'>
+	<div class='config-title'><span class='config-title-info'>ADDITIONAL SITE INFORMATION</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
+	<div class='config-container'>
+		<div>
+			<span class='title-small'>Contact Number 1: </span><input type='text' name='travel2contact_num1' value='<?=ms::meta('travel2contact_num1')?>'>
+			<span class='title-small'>Office Hours 1: </span><input type='text' name='travel2contact_hours1' value='<?=ms::meta('travel2contact_hours1')?>'>		
+		</div>
+		<br>
+		<div>
+			<span class='title-small'>Contact Number 2: </span><input type='text' name='travel2contact_num2' value='<?=ms::meta('travel2contact_num2')?>'>
+			<span class='title-small'>Office Hours 2: </span><input type='text' name='travel2contact_hours2' value='<?=ms::meta('travel2contact_hours2')?>'>		
+		</div>
+	</div>
+</div>
+
+<div class='config-wrapper'>
 	<div class='config-title'><span class='config-title-info'>HEADER LOGO AND COMPANY BANNER</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
 	<div class='config-container'>
 <table cellpadding=5 class='image-config' width='100%'>
