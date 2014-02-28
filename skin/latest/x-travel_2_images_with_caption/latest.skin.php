@@ -4,7 +4,11 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 ?>
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
 <div class='travel_images_with_captions'>
-		<div class='title'><img src='<?=$latest_skin_url?>/img/2paperswhite.png'/> <?=$bo_subject?></div>
+		<div class='title'>
+		<img src='<?=$latest_skin_url?>/img/2paperswhite.png'/>
+		<?=$bo_subject?>
+		<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=<?php echo $bo_table ?>">MORE</a>
+		</div>
 <?php	
 	if ( $list ) {
 	$count = 1;
