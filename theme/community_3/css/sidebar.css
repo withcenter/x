@@ -5,11 +5,11 @@
 
 /**COMPANY BANNER*/
 .sidebar .company-banner {
-	margin-top: 10px;
 	width: 210px;
 	height: 100px;
 	overflow: hidden;
 	border: solid 1px #bbbbbb;
+	margin-bottom: 10px;
 }
 
 .sidebar .company-banner img {
@@ -18,10 +18,10 @@
 
 /**SIDEBAR BANNER*/
 .sidebar .sidebanner {
-	margin-top: 10px;
 	width: 208px;
 	overflow: hidden;
 	border: solid 1px #bbbbbb;
+	margin-bottom: 10px;
 }
 
 .sidebar .sidebanner img {
@@ -30,8 +30,8 @@
 
 /**POPULAR POSTS*/
 .sidebar .popular-posts {
-	margin-top: 10px;
 	border: solid 1px #bbbbbb;
+	margin-bottom: 10px;
 }
 
 .sidebar .popular-posts a {
@@ -63,7 +63,8 @@
 }
 
 .sidebar .popular-posts .post-num {
-	padding: 4px;
+	padding: 1px;
+	font-size: 8pt;
 	background: #1a1a1a;
 	color: #ffffff;
 	text-align: center;
@@ -82,8 +83,8 @@
 
 /**LATEST COMMENTS*/
 .sidebar .latest-comments {
-	margin-top: 10px;
 	border: solid 1px #bbbbbb;
+	margin-bottom: 10px;
 }
 
 .sidebar .latest-comments a {
@@ -108,15 +109,16 @@
 
 
 /**LATEST POSTS*/
-.sidebar .latest-posts {
+.sidebar .com3-latest-posts {
 	border: solid 1px #bbbbbb;
+	margin-bottom: 10px;
 }
 
-.sidebar .latest-posts a {
+.sidebar .com3-latest-posts a {
 	text-decoration: none;
 }
 
-.sidebar .latest-posts .title {
+.sidebar .com3-latest-posts .title {
 	padding: 3px 0 3px 5px;
 	background: #f7f7f7;
 	border-bottom: solid 1px #bbbbbb;
@@ -124,32 +126,31 @@
 	font-size: 12px;
 }
 
-.sidebar .latest-posts .title img {
+.sidebar .com3-latest-posts .title img {
 	margin: 0 7px 0 0;
 }
 
-.sidebar .latest-posts .latest-posts-items {
-	padding: 0 7px 7px 7px;
+.sidebar .com3-latest-posts .com3-latest-posts-items {
+	padding: 0 7px 0 7px;
 }
 
-.sidebar .latest-posts .latest-posts-items tr td {
+.sidebar .com3-latest-posts .com3-latest-posts-items tr td {
 	border-bottom: dashed 1px #bebebe;
 	padding: 10px 0;
 }
 
-.sidebar .latest-posts .latest-posts-items tr.last-item td {
+.sidebar .com3-latest-posts .com3-latest-posts-items tr.last-item td {
 	border-bottom: 0;
 }
 
-.sidebar .latest-posts .latest-posts-items tr td img {
+.sidebar .com3-latest-posts .com3-latest-posts-items tr td img {
 	margin-right: 10px;
 }
 
-.sidebar .latest-posts .latest-posts-items .post-image img {
-	border: solid 4px #e5e5e5;
-	outline: solid 1px #cccccc;
+.sidebar .com3-latest-posts .com3-latest-posts-items .post-image img {
+	border: solid 1px #cccccc;
 }
 
-.sidebar .latest-posts .latest-posts-items .num_comments {
+.sidebar .com3-latest-posts .com3-latest-posts-items .num_comments {
 	color: #cc4235;
 }

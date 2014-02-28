@@ -1,5 +1,6 @@
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
+
 ?>
 
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
@@ -7,6 +8,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 <!-- <?php echo $bo_subject; ?> 최신글 시작 { -->
 <div class="comm3_timed_list">
     <div class="timed_list_title">		
+		<?if( $options ) echo "<img class='icon' src='".$options."'/>";?>
 		<?php echo $bo_subject; ?>
 		<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=<?php echo $bo_table ?>">more</a>
 	</div>
@@ -14,7 +16,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
     <?php for ($i=0; $i<count($list); $i++) {?>
         <li>
 		
-            <?php            		
+            <?php 			
             echo "<span class='subject'><a href=\"".$list[$i]['href']."\">".$list[$i]['subject']."</a></span>";
 			
 			if( !$list[$i]['comment_cnt'] ) $comment_count = "<span class='comment_count no-comment'>0</span>";

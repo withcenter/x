@@ -5,7 +5,7 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 <!-- 로그인 후 아웃로그인 시작 { -->
 <link rel="stylesheet" href="<?php echo $outlogin_skin_url ?>/style.css">
 
-<div class='login-box'>
+<div class='login-box logout-community3'>
 	<table>
 		<tr>
 			<td>
@@ -21,7 +21,7 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 		<div class='admin-mode'><a href="<?php echo G5_ADMIN_URL ?>">ADMIN PANEL</a></div>
 		<div class='admin-mode'><a href="<?=x::url_admin()?>">X Admin Panel</a></div>
 	<?php }  ?>
-    <table width='100%'>
+    <table width='100%' >
 		<tr>
 			<td>
 				<div class='user-info'><b><?php echo $nick ?></b>님 로그인 </div>

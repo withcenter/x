@@ -1,9 +1,9 @@
-﻿<?
+<?
 /** POSTS RECENT */
 $qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";
 $current_date = date('Y-m-d').' 23:59:59';
 $previous_date = date('Y-m-d', strtotime("-7 day", strtotime($current_date))).' 00:00:00';
-$latest_rows = db::rows( "SELECT bo_table, wr_id FROM $g5[board_new_table] WHERE $qb AND bn_datetime BETWEEN '$previous_date' AND '$current_date' AND wr_id=wr_parent ORDER BY bn_datetime DESC LIMIT 5" );	
+$latest_rows = db::rows( "SELECT bo_table, wr_id FROM $g5[board_new_table] WHERE $qb AND bn_datetime BETWEEN '$previous_date' AND '$current_date' AND wr_id=wr_parent ORDER BY bn_datetime DESC LIMIT 3" );	
 
 if( $latest_rows ) {
 	$i = 0;
@@ -13,19 +13,19 @@ if( $latest_rows ) {
 		$i++;
 	}
 ?>
-<div class="latest-posts" >
+<div class="com3-latest-posts" >
 		<div class='title'>
 			<table width='100%'>
 				<tr valign='top'>
 					<td align='left' class='title-left'>
-						<img src="<?=x::url_theme()?>/img/latest-comments.png">
-						<span class='label'>LATEST POST</span>
+						<img src="<?=x::url_theme()?>/img/latest-posts.png">
+						<span class='label'>LATEST POSTS</span>
 					</td>
 				</tr>
 			</table>
 		</div>
 
-	<div class='latest-posts-items'>
+	<div class='com3-latest-posts-items'>
 		<table>
 		<?php
 			$i = 1;
@@ -37,7 +37,7 @@ if( $latest_rows ) {
 				$latest_comment_count = '['.strip_tags($latest_li['wr_comment']).']';
 				if ( $latest_comment_count == 0 ) $no_comment = 'no-comment';
 				else $no_comment = '';
-				$latest_img = get_list_thumbnail( $latest_li['bo_table'] , $latest_li['wr_id'], 32, 32 );
+				$latest_img = get_list_thumbnail( $latest_li['bo_table'] , $latest_li['wr_id'], 38, 38);
 				if ( !$latest_img ) $img = x::url_theme().'/img/no-image.png';
 				else $img = $latest_img['src'];
 				if( $i == $ctr ) $last_post = "class='last-item'";
