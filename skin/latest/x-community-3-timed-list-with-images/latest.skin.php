@@ -6,7 +6,8 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
 <!-- <?php echo $bo_subject; ?> 최신글 시작 { -->
 <div class="comm3_timed_list_with_image">
-    <div class="timed_list_title">		
+    <div class="timed_list_title">
+		<?if( $options ) echo "<img class='icon' src='".$options."'/>";?>
 		<?php echo $bo_subject; ?>		
 	</div>
     <table width='100%' cellpadding=0 cellspacing=0>
@@ -14,10 +15,12 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	<tr valign='top'>
 		
             <?php			
-			$imgsrc = get_list_thumbnail( $bo_table , $list[$i]['wr_id'], 32, 32 );
+			$imgsrc = get_list_thumbnail( $bo_table , $list[$i]['wr_id'], 38, 30 );
 			
-			if ( !$imgsrc ) $img = $latest_skin_url.'/img/no-image.png';
-			else $img = $imgsrc['src'];
+			//if ( !$imgsrc ) $img = $latest_skin_url.'/img/no-image.png';
+			//else $img = $imgsrc['src'];
+			if( $imgsrc ) $img = $imgsrc['src'];
+			else $img = null;
 			
 			echo "<td width=40><div class='timed_list_image'><a href='".$list[$i]['href']."'><img src='$img'/></a></div></td>";
 			        

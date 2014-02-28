@@ -30,8 +30,8 @@
 
 
 <script>
-	$(function(){			
-		if( '<?=$in['bo_table']?>' != '' ) $(".gnb_1dli.<?=$in['bo_table']?>").addClass("selected");
-		else if( '<?=$in['module']?>' ) $(".gnb_1dli.admin-menu").addClass("selected");		
+	$(function(){				
+		if( '<?=$in['bo_table']?>' != '' ) $(".comm3_menu[page='<?=$in['bo_table']?>']").addClass("selected");
+		else if( '<?=$in['module']?>' ) $(".comm3_menu[page='admin-menu']").addClass("selected");		
 	});
 </script>

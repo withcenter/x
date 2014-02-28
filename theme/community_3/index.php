@@ -47,14 +47,14 @@ echo $latest_1_output;
 	<td class='left' width='50%'>
 		<?
 		$latest_bo_table = ms::board_id(etc::domain()).'_1';
-		$latest_1_output = latest("x-community-3-timed-list", $latest_bo_table, 5, 25);
+		$latest_1_output = latest("x-community-3-timed-list", $latest_bo_table, 5, 25, $cache_time=1, x::url_theme()."/img/notes.png");
 		echo $latest_1_output;
 		?>
 	</td>
 	<td class='right' width='50%'>
 		<?
 		$latest_bo_table = ms::board_id(etc::domain()).'_2';
-		$latest_1_output = latest("x-community-3-timed-list", $latest_bo_table, 5, 25);
+		$latest_1_output = latest("x-community-3-timed-list", $latest_bo_table, 5, 25, $cache_time=1, x::url_theme()."/img/chat_icon.png");
 		echo $latest_1_output;
 		?>
 	</td>
@@ -66,14 +66,14 @@ echo $latest_1_output;
 	<td width='50%'>
 		<?
 		$latest_bo_table = ms::board_id(etc::domain()).'_1';
-		$latest_1_output = latest("x-community-3-timed-list-with-images", $latest_bo_table, 4, 50);
+		$latest_1_output = latest("x-community-3-timed-list-with-images", $latest_bo_table, 4, 50, $cache_time=1, x::url_theme()."/img/2papers.png");
 		echo $latest_1_output;
 		?>
 	</td>
 	<td width='50%' class='right'>
 		<?
 		$latest_bo_table = ms::board_id(etc::domain()).'_2';
-		$latest_1_output = latest("x-community-3-timed-list-with-images", $latest_bo_table, 4, 50);
+		$latest_1_output = latest("x-community-3-timed-list-with-images", $latest_bo_table, 4, 50, $cache_time=1, x::url_theme()."/img/newspaper.png");
 		echo $latest_1_output;
 		?>
 	</td>

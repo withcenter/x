@@ -4,8 +4,16 @@
 <div class='layout'>
 	<div class='top'>
 		<div class='inner'>
+			<? if ( $member['mb_id'] ) {
+				$do_log = "<a href='".G5_BBS_URL."/logout.php'>Log Out</a>";
+				$profile = "<a href='".G5_BBS_URL."/member_confirm.php?url=register_form.php'>Profile</a>";
+			} 
+				else {
+				$do_log = "<a href='".G5_BBS_URL."/login.php'>Log In</a>";
+				$profile = "<a href='".G5_URL."/".G5_BBS_DIR."/register.php'>Register</a>";
+			}?>
 			<div class='left'>
-				<a href='<?=g::url()?>'>Home</a><span class="dot">•</span><a href='#'>Login</a><span class="dot">•</span><a href='#'>Profile</a><span class="dot">•</span><a href='#'>Community</a><span class="dot">•</span></span><a href='#'>QnA</a>
+				<a href='<?=g::url()?>'>Home</a><span class="dot">•</span><?=$do_log?><span class="dot">•</span><?=$profile?><span class="dot">•</span><a href='#'>Community</a><span class="dot">•</span></span><a href='#'>QnA</a>
 			</div>
 			<div class='right'>
 				<a href='#'>Cafe</a><span class="dot">•</span><a href='#'>앱 다운로드</a><span class="dot">•</span><a href='#'>Adv</a><span class="dot">•</span><a href='#'>Contact: +82 070 7529 1749</a>
