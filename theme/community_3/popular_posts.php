@@ -1,13 +1,11 @@
 <?php
-if ( g::forum_exist($forum_1) ) $row1[$forum_1] = db::rows("SELECT wr_id, wr_subject, wr_datetime, wr_comment, wr_hit FROM ".$g5['write_prefix'].$forum_1." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 2");
-if ( g::forum_exist($forum_2) ) $row2[$forum_2] = db::rows("SELECT wr_id, wr_subject, wr_datetime, wr_comment, wr_hit FROM ".$g5['write_prefix'].$forum_2." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 2");
-if ( g::forum_exist($forum_3) ) $row3[$forum_3] = db::rows("SELECT wr_id, wr_subject, wr_datetime, wr_comment, wr_hit FROM ".$g5['write_prefix'].$forum_3." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 2");
-if ( g::forum_exist($forum_4) ) $row4[$forum_4] = db::rows("SELECT wr_id, wr_subject, wr_datetime, wr_comment, wr_hit FROM ".$g5['write_prefix'].$forum_4." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 2");
-if ( g::forum_exist($forum_5) ) $row5[$forum_5] = db::rows("SELECT wr_id, wr_subject, wr_datetime, wr_comment, wr_hit FROM ".$g5['write_prefix'].$forum_5." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 2");
 
-if ( g::forum_exist($forum_1) && g::forum_exist($forum_2) && g::forum_exist($forum_3) && g::forum_exist($forum_4) && g::forum_exist($forum_5)) { 
-	$posts = array_merge ( $row1, $row2, $row3, $row4, $row5 ); 
-?>
+for ( $i = 1 ; $i <= 5 ; $i++ ) {
+	if ( !(${'forum_' . $i}) ) continue;
+		$posts[${'forum_' . $i}] = db::rows("SELECT wr_id, wr_subject, wr_datetime, wr_comment, wr_hit FROM ".$g5['write_prefix'].${'forum_' . $i}." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 2");
+}
+
+if ( $posts ) { ?>
 
 <div class='popular-posts'>
 	<div class='title'>
@@ -26,9 +24,9 @@ if ( g::forum_exist($forum_1) && g::forum_exist($forum_2) && g::forum_exist($for
 		<?php
 		if ( $posts ) {
 			$i = 1;
-			$ctr = 0;
-			foreach ( $posts as $key => $value ) {  $ctr = $ctr + count($value); }
-			foreach ( $posts as $key => $post ) {
+			$ctr = 2;
+			//foreach ( $posts as $key => $value ) {  $ctr = $ctr + count($value); }
+			foreach ( $posts as $key => $post ) { if($i >= 2) break;
 				foreach ( $post as $p ) {
 					$url = G5_BBS_URL."/board.php?bo_table=$key&wr_id=$p[wr_id]";
 					$popular_subject = conv_subject( $p['wr_subject'], 14, '...');
@@ -64,32 +62,12 @@ if ( g::forum_exist($forum_1) && g::forum_exist($forum_2) && g::forum_exist($for
 								</tr>
 						";
 					$i++;
+				
 				}
 		
 			 }
 		}
-		/**else {?>
-					<div class='row'>
-						<span class='post-num'> 1 </span>
-						<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=5'>사이트 만들기 안내</a>
-					</div>
-					<div class='row'>
-						<span class='post-num'> 2 </span>
-						<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=4'>블로그 만들기</a>
-					</div>
-					<div class='row'>
-						<span class='post-num'> 3 </span>
-						<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=3'>커뮤니티 사이트 만들기</a>
-					</div>
-					<div class='row'>
-						<span class='post-num'> 4 </span>
-						<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=2'>여행사 사이트 만들기</a>
-					</div>
-					<div class='row'>
-						<span class='post-num'> 5 </span>
-						<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=1'>(모바일)홈페이지, 스마트폰 앱</a>
-					</div>
-		<?}*/?>
+		?>
 		</table>
 	</div>
 	</div>
