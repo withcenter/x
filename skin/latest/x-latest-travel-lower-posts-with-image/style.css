@@ -1,7 +1,6 @@
 .lower-travel-posts {
 	border: solid 1px #bbbbbb;
-	margin-bottom: 10px;
-	height: 330px;
+	height: 327px;
 }
 
 .lower-travel-posts a {
@@ -11,7 +10,7 @@
 .lower-travel-posts .title {
 	padding-left: 5px;
 	line-height: 24px;
-	height: 28px;
+	height: 29px;
 	background: #f7f7f7;
 	border-bottom: solid 1px #bbbbbb;
 	font-weight: bold;
@@ -21,7 +20,7 @@
 .lower-travel-posts .title img {
 	margin: 0 2px 0 0;
 	position: relative;
-	top: -2px;
+
 }
 
 .lower-travel-posts .title .posts-more a {
