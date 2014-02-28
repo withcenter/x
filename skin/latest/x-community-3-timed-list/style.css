@@ -57,3 +57,10 @@
 .comm3_timed_list ul li .comment_count.no-comment{
 	color:#808080;
 }
+
+.comm3_timed_list .subject{
+	display:inline-block;
+	width:270px;
+	overflow:hidden;
+	white-space:no-wrap;
+}
