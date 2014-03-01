@@ -6,7 +6,7 @@
 ?>
 <form action='?' class='config_theme' method='post'>
 	<input type='hidden' name='module' value='multisite'>
-	<input type='hidden' name='action' value='config_theme_submit'>
+	<input type='hidden' name='action' value='config_mobile_theme_submit'>
 
 	<div class='config config-theme'>
 		<div class='config-main-title'><div class='inner'><img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 원하시는 테마를 선택하신 후 클릭하시면 반영이 됩니다.</div></div>
@@ -18,7 +18,7 @@
 			<?if ( ms::meta('mobile_theme') ) { ?>
 				<button type='submit' name='theme' disabled="disabled">
 					<div class='theme-thumb'>
-						<img src='theme/<?=ms::meta('theme')?>/preview.jpg' >
+						<img src='theme/<?=ms::meta('mobile_theme')?>/preview.jpg' >
 						<p><b>선택 되었습니다.</b></p>
 						<table cellpadding='10px'><tr><td><?=ms::meta('mobile_theme')?></td></table>
 					</div>
@@ -40,7 +40,7 @@
 				if ( $theme_config['type'] != 'mobile' ) continue;
 				
 				$url = x::url().'/theme/'.$dir.'/preview.jpg';
-				if( preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower(ms::meta('theme'))) != preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower($dir)) ) { ?>
+				if( preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower(ms::meta('mobile_theme'))) != preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower($dir)) ) { ?>
 				<button type='submit' name='theme' value='<?=$dir?>' onclick="return confirm('Do you really want to change Theme?');">
 						<div class='theme-thumb inactive'>
 						<img src='<?=$url?>' >

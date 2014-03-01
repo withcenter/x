@@ -190,7 +190,7 @@ else {
 
 
 
-
+/// https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.an2o30375xzf
 x::hook_register( 'begin', 'hook_begin_status' );
 function hook_begin_status()
 {
@@ -199,3 +199,16 @@ function hook_begin_status()
 		jsGo( g::url_base(), "This site has been closed." );
 	}
 }
+
+
+
+// Change mobile theme if MOBILE 
+x::hook_register('before_theme_init', 'hook_theme_change');
+function hook_theme_change()
+{
+	if ( G5_IS_MOBILE ) {
+		x::$config['site']['theme'] = ms::meta('mobile_theme');
+	}
+}
+
+	

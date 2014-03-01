@@ -219,6 +219,7 @@ class x {
 	 * @note site information is like the theme name of the connected domain
 	 *
 	 * https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.hoh26aiibh8t
+	 * @note theme will be available at this point.
 	 */
 	static function load_site()
 	{

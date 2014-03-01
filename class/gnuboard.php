@@ -775,5 +775,22 @@ class gnuboard {
 	
 	
 	
+	
+	/** @short returns the number of new (un-read) memo
+	 *
+	 *
+	 */
+	static function memo_count_new()
+	{
+		global $g5, $member, $is_member;
+
+	    if ($is_member) {
+			$sql = " select count(*) as cnt from {$g5['memo_table']} where me_recv_mb_id = '{$member['mb_id']}' and me_read_datetime = '0000-00-00 00:00:00' ";
+			$row = sql_fetch($sql);
+			return $row['cnt'];
+		}
+	}
+	
+	
 } // eo class
 

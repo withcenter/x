@@ -22,15 +22,15 @@ else {
 if ( x::installed() && etc::web() ) {
 	//x::$config['site'] = md::config( etc::domain_name() );
 	x::load_site();
-	
 	ob_start();
-	if ( file_exists(x::theme('init')) ) include_once x::theme('init');	
 }
 
 include 'etc/begin.php';
-
 x::hook('begin');
 
+x::hook('before_theme_init');
+if ( file_exists(x::theme('init')) ) include_once x::theme('init');	
+x::hook('after_theme_init');
 
 /// https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.bqguddm7sk01
 if ( $in['theme'] == 'y' ) {
