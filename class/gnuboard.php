@@ -24,6 +24,15 @@ class gnuboard {
 		return G5_URL;
 	}
 	
+	static function url_base()
+	{
+		$url = self::url();
+		$old = etc::domain();
+		$new = 'www.' . etc::base_domain();
+		return str_replace($old, $new, $url);
+	}
+	
+	
 	/**
 	 *	@brief returns the URL of a forum
 	 * @code

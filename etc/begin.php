@@ -190,3 +190,12 @@ else {
 
 
 
+
+x::hook_register( 'begin', 'hook_begin_status' );
+function hook_begin_status()
+{
+	$status = ms::meta_get( etc::domain(), 'status' );
+	if ( $status == 'close' ) {
+		jsGo( g::url_base(), "This site has been closed." );
+	}
+}

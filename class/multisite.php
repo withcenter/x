@@ -89,13 +89,11 @@ class multisite {
 	 *  @param [in] $value 'vlaue' or 'code'
 	 *	 @param [in] $value
 	 *  @return empty
-	 *  
+	 *  @warning when you get data,  cannot use 'domain'. Use 'meta_get()' to use domain.
 	 *  @details This function does memory cache. So how many times you call this function, it will only access to data base one time in the first.
-	 */	
+	 */
 	static function meta($code, $value=null, $third_value=null)
 	{
-		global $_meta;
-		
 		if ( $third_value ) {
 			$domain	= $code;
 			$code		= $value;
@@ -105,11 +103,7 @@ class multisite {
 		if ( empty($domain) ) $domain = etc::domain();
 		
 		if ( $value === null ) {
-			$k = "$domain.$code";
-			if ( ! isset($_meta[$k]) ) {
-				$_meta[$k] = db::result("SELECT `value` FROM x_multisite_meta WHERE domain='$domain' AND code='$code'");
-			}
-			return $_meta[$k];
+			return self::meta_get($domain, $code);
 		}
 		else {
 			$q = "SELECT code FROM x_multisite_meta WHERE domain='$domain' AND code='$code'";
@@ -121,6 +115,16 @@ class multisite {
 				db::insert('x_multisite_meta', array('domain'=>$domain, 'code'=>$code, 'value'=>$value) );
 			}
 		}
+	}
+	
+	function meta_get($domain, $code)
+	{
+		global $_meta;
+		$k = "$domain.$code";
+		if ( ! isset($_meta[$k]) ) {
+			$_meta[$k] = db::result("SELECT `value` FROM x_multisite_meta WHERE domain='$domain' AND code='$code'");
+		}
+		return $_meta[$k];
 	}
 	
 	

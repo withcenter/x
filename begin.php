@@ -22,6 +22,7 @@ else {
 if ( x::installed() && etc::web() ) {
 	//x::$config['site'] = md::config( etc::domain_name() );
 	x::load_site();
+	
 	ob_start();
 	if ( file_exists(x::theme('init')) ) include_once x::theme('init');	
 }
