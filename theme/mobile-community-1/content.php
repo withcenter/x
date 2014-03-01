@@ -1,9 +1,5 @@
-<?php
-	include_once('../../../common.php');
-	include_once(G5_PATH.'/head.php');
-?>
 
-<!-- 메인화면 최신글 시작 -->
+
 <?php
 //  최신글
 $sql = " select bo_table from `{$g5['board_table']}` a left join `{$g5['group_table']}` b on (a.gr_id=b.gr_id)  where a.bo_device <> 'pc' order by b.gr_order, a.bo_order ";
@@ -17,7 +13,4 @@ for ($i=0; $row=sql_fetch_array($result); $i++) {
     echo latest("basic", $row['bo_table'], 5, 25);
 }
 ?>
-<!-- 메인화면 최신글 끝 -->
 
-<?php
-	include_once(G5_PATH.'/tail.php');

@@ -5,8 +5,55 @@ include_once(G5_PATH.'/head.sub.php');
 include_once(G5_LIB_PATH.'/latest.lib.php');
 include_once(G5_LIB_PATH.'/outlogin.lib.php');
 ?>
-<script src="<?=x::theme_url()?>/js/content.js"></script>
-
+<link rel="stylesheet" href="<?=x::theme_url()?>/css/theme.css">
+<script src="x/theme/mobile-community-1/js/theme.js"></script>
+<div id='header'>
+	<div class='top'>
+		<a href='x/theme/mobile-community-1/content.php' target='content'><img src="x/theme/mobile-community-1/img/logo.png"></a>
+	</div>
+	<div class='bottom'>
+		<!--<a href='x/theme/mobile-community-1/content.php' target='content'>홈</a>-->
+		<a href='bbs/board.php?bo_table=freetalk' target='content'>
+			<div><img src='<?=x::theme_url()?>/img/chat.png'></div>
+			<div>자유토론</div>
+		</a>
+		<a href='bbs/board.php?bo_table=qna' target='content'>
+			<div><img src='<?=x::theme_url()?>/img/qna.png'></div>
+			<div>질문답변</div>
+		</a>
+		
+		<a href='bbs/board.php?bo_table=qna' target='content'>
+			<div><img src='<?=x::theme_url()?>/img/list.png'></div>
+			<div>최신 글</div>
+		</a>
+		
+		<a href='bbs/board.php?bo_table=qna' target='content'>
+			<div><img src='<?=x::theme_url()?>/img/search.png'></div>
+			<div>검색</div>
+		</a>
+		
+		<a href='bbs/board.php?bo_table=qna' target='content'>
+			<div><img src='<?=x::theme_url()?>/img/edit.png'></div>
+			<div>추가메뉴</div>
+		</a>
+		
+		
+		<a href='bbs/board.php?bo_table=qna' target='content'>
+			<div><img src='<?=x::theme_url()?>/img/edit.png'></div>
+			<div>추가메뉴</div>
+		</a>
+		
+		
+		<a href='bbs/board.php?bo_table=qna' target='content'>
+			<div><img src='<?=x::theme_url()?>/img/edit.png'></div>
+			<div>추가메뉴</div>
+		</a>
+		<a href='bbs/board.php?bo_table=qna' target='content'>
+			<div><img src='<?=x::theme_url()?>/img/edit.png'></div>
+			<div>추가메뉴</div>
+		</a>
+	</div>
+</div>
 <header id="hd">
 
     <div id="hd_wrapper">
@@ -29,7 +76,7 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
             <li><a href="<?php echo G5_BBS_URL ?>/logout.php?url=<?=urlencode( '../x/theme/' . x::$config['site']['theme'] . '/content.php' )?>" id="snb_logout">로그아웃</a></li>
             <?php } else { ?>
             <li><a href="<?php echo G5_BBS_URL ?>/register.php" id="snb_join">회원가입</a></li>
-            <li><a href="<?php echo G5_BBS_URL ?>/login.php" id="snb_login">로그인</a></li>
+            <li><a href="javascript:void(0);" id="login-button">로그인</a></li>
             <?php } ?>
         </ul>
 
@@ -39,7 +86,7 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
 <hr>
 
 <div id="wrapper">
-    <div id="aside">
+    <div id="login-box">
        <?php
 				if ( ! login() ) {
 					echo outlogin('basic'); // 외부 로그인

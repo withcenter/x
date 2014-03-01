@@ -6,9 +6,13 @@ body {
 img {
 	border: 0;
 }
-#header {
+#header, #footer {
 	color:white;
 }
+#header a, #footer a {
+	color:white;
+}
+
 #header .bottom a {
 	display:inline-block;
 	padding: 4px;
@@ -36,7 +40,9 @@ img {
 
 #footer {
 	background-color: black;
-	color:white;
 	padding: 10px;
 }
 
+#login-box {
+	display:none;
+}

@@ -6,6 +6,12 @@ $(function(){
 	setTimeout(function () { resize_iframe(); }, 5000);	// resize after 5 seconds for sure.
 	setTimeout(function () { resize_iframe(); }, 15000);	// resize after 15 seconds for sure.
 	// if it takes more than 15 seconds, then let's assume that the internet is too slow.
+	
+	
+	
+	$('#login-button').click(function(){
+		$('#login-box').show();
+	});
 });
 $(window).load(function () {
 	resize_iframe();
@@ -16,3 +22,4 @@ function resize_iframe()
 	var data = { 'name' : 'resize', 'height': height };
 	parent.postMessage( data, '*' );
 }
+
