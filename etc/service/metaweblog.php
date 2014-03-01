@@ -1,6 +1,9 @@
 <?php
-// https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.5bptpncn3pxa
-define ('DEBUG_METAWEBLOG', 1);
+
+// https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.lrnrjlaf0fm5
+
+if ( etc::localhost() ) $DEBUG_METAWEBLOG = 1;
+else $DEBUG_METAWEBLOG = 0;
 dlog('etc/metaweblog.php begins');
 $data		= &$HTTP_RAW_POST_DATA;
 $xml			= new SimpleXMLElement($data);
@@ -9,7 +12,7 @@ $input		= mw_parse_xml_input($xml);
 dlog("method: $input[method]");
 dlog($input);
 
-if ( DEBUG_METAWEBLOG ) {
+if ( $DEBUG_METAWEBLOG ) {
 	file::write( g::dir() . '/data/metaweblog_' . $input['method'], $data );
 }
 

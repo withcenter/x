@@ -591,22 +591,28 @@ class gnuboard {
 	static function update( $o )
 	{
 		$write_table = self::board_table($o['bo_table']);
-		$sql = " update $write_table
-					set ";
-		if ( isset($o['wr_subject']) ) $sql .= "wr_subject = '$o[wr_subject]',";
-		if ( isset($o['wr_content']) ) $sql .= "wr_content = '$o[wr_content]',";
-		if ( isset($o['wr_last']) ) $sql .= "wr_last = '".G5_TIME_YMDHIS."',";
-		if ( isset($o['wr_ip']) ) $sql .= "wr_ip = '{$_SERVER['REMOTE_ADDR']}'";
+		
+		$fd = array();
+		if ( isset($o['wr_subject']) ) $fd[] = "wr_subject = '$o[wr_subject]'";
+		if ( isset($o['wr_content']) ) $fd[] = "wr_content = '$o[wr_content]'";
+		if ( isset($o['wr_last']) ) $fd[] = "wr_last = '" . G5_TIME_YMDHIS."'";
+		if ( isset($o['wr_ip']) ) $fd[] = "wr_ip = '{$_SERVER['REMOTE_ADDR']}'";
 		
 		for ( $i=1; $i<=10; $i++ ) {
 			if ( isset($o["wr_$i"]) ) {
 				$v = $o["wr_$i"];
-				$sql .= "wr_$i = '$v'";
+				$fd[] = "wr_$i = '$v'";
 			}
 		}
 		
 		
-		$sql .= "where wr_id=$o[wr_id]";
+		$fds = implode(',', $fd);
+		
+		$sql = " update $write_table
+					set $fds
+					where wr_id=$o[wr_id]
+				";
+				
 		db::query($sql);
 	}
 	
