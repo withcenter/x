@@ -37,6 +37,8 @@
 }
 
 .header #comm3_logo{
+/* bug fix: should be margined here intead of padding image for 7 px */
+	margin-top: 7px;
 	height:60px;
 	max-width:400px;
 	overflow:hidden;	
@@ -44,7 +46,6 @@
 
 
 .header #comm3_logo img{
-	padding:7px 0;
 	height:100%;	
 }
 
