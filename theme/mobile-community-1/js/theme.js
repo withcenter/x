@@ -1,6 +1,7 @@
 $(function(){
 	$('#login-button').click(function(){
-		$('#login-box').show();
+		if ( $('#login-box').css('display') == 'none' ) $('#login-box').show();
+		else $('#login-box').hide();
 	});
 });
 

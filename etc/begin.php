@@ -139,12 +139,11 @@ function hook_latest_path()
 	global $skin_folder, $latest_skin_path, $latest_skin_url;
 	
 	
-	if ( G5_IS_MOBILE ) $mobile_path = "/mobile";
 	
-	$path = x::dir() . "/skin$mobile_path/latest/" . $skin_folder;
+	$path = x::dir() . "/skin/latest/" . $skin_folder;
 	if ( file_exists( $path ) ) {
 		$latest_skin_path = $path;
-		$latest_skin_url = x::url() . "/skin$mobile_path/latest/" . $skin_folder;
+		$latest_skin_url = x::url() . "/skin/latest/" . $skin_folder;
 	}
 	
 	dlog("skin_folder: $skin_folder");

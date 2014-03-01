@@ -6,53 +6,12 @@ include_once(G5_LIB_PATH.'/latest.lib.php');
 include_once(G5_LIB_PATH.'/outlogin.lib.php');
 ?>
 <link rel="stylesheet" href="<?=x::theme_url()?>/css/theme.css">
-<script src="x/theme/mobile-community-1/js/theme.js"></script>
+<script src="<?=x::theme_url()?>/js/theme.js"></script>
 <div id='header'>
 	<div class='top'>
-		<a href='x/theme/mobile-community-1/content.php' target='content'><img src="x/theme/mobile-community-1/img/logo.png"></a>
+		<a href='<?=g::url()?>'><img src="<?=x::theme_url('img/logo.png')?>"></a>
 	</div>
-	<div class='bottom'>
-		<!--<a href='x/theme/mobile-community-1/content.php' target='content'>홈</a>-->
-		<a href='bbs/board.php?bo_table=freetalk' target='content'>
-			<div><img src='<?=x::theme_url()?>/img/chat.png'></div>
-			<div>자유토론</div>
-		</a>
-		<a href='bbs/board.php?bo_table=qna' target='content'>
-			<div><img src='<?=x::theme_url()?>/img/qna.png'></div>
-			<div>질문답변</div>
-		</a>
-		
-		<a href='bbs/board.php?bo_table=qna' target='content'>
-			<div><img src='<?=x::theme_url()?>/img/list.png'></div>
-			<div>최신 글</div>
-		</a>
-		
-		<a href='bbs/board.php?bo_table=qna' target='content'>
-			<div><img src='<?=x::theme_url()?>/img/search.png'></div>
-			<div>검색</div>
-		</a>
-		
-		<a href='bbs/board.php?bo_table=qna' target='content'>
-			<div><img src='<?=x::theme_url()?>/img/edit.png'></div>
-			<div>추가메뉴</div>
-		</a>
-		
-		
-		<a href='bbs/board.php?bo_table=qna' target='content'>
-			<div><img src='<?=x::theme_url()?>/img/edit.png'></div>
-			<div>추가메뉴</div>
-		</a>
-		
-		
-		<a href='bbs/board.php?bo_table=qna' target='content'>
-			<div><img src='<?=x::theme_url()?>/img/edit.png'></div>
-			<div>추가메뉴</div>
-		</a>
-		<a href='bbs/board.php?bo_table=qna' target='content'>
-			<div><img src='<?=x::theme_url()?>/img/edit.png'></div>
-			<div>추가메뉴</div>
-		</a>
-	</div>
+	<?include 'menu.php'?>
 </div>
 <header id="hd">
 

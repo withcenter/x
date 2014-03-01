@@ -4,7 +4,7 @@
 	
 	
 	$src = "ob_start();";
-	$dst = $src . "\nx::hook( 'latest' );";
+	$dst = $src . "\n\tx::hook( 'latest' );";
 	
 	$data = patch_string( $data, $src, $dst );
 	
