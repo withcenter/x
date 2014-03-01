@@ -1,66 +1,83 @@
 .login-box {
-	font-family: '맑은 고딕', AppleGothic;
 	background: #cccccc;
 	color: #ffffff;
-	padding: 6px 8px 13px 8px;
-	font-size: 10.5px;
-	margin-bottom: 10px;
-	height: 110px;
+	height: 100px;
+	padding: 7px;
+}
+.login-box  input[type='text'], .login-box input[type='password'] {
+	width: 96px;
+	height: 22px;
+	line-height: 22px;
+	padding: 0 10px;
+}
+.login-box .login-user {
+	margin-bottom: 8px;
 }
 
-.login-box a {
+.login-box .register_autologin {
+	margin-top: 5px;
+	padding: 0 5px;
+}
+.login-box .register_autologin .login-reg {
+	float: left;
+}
+.login-box .register_autologin .auto_login {
+	float: right;
+}
+.login-box #ol_password_lost {
+	margin-left: 6px;
+	font-size: 8.7pt;  
+}
+
+/* outlogin.skin.2.php */
+.logout-community3 {
+	padding: 10px;
+	position: relative;
+}
+
+.logout-community3  #ol_after_info {
+	background-color: #444444;
 	color: #ffffff;
+	display: inline-block;
+	padding: 0 10px;
+	height: 20px;
+	line-height: 20px;
+	margin-right: 2px;
+}
+.logout-community3 .admin-mode {
+	margin-top: 3px;
+}
+
+.logout-community3  .admin-mode a{
+	margin-right: 10px;
+}
+
+.logout-community3  .user-info {
+	margin:3px 0;
+}
+.logout-community3 .no_of_unreaded_message {
+	border-radius: 10px;
+	display: inline-block;
+	width: 11px;
+	height: 15px;
+	background-color: #444444;
+	color: #ffffff;
+	padding-left: 4px;
+}
+
+.logout-community3 #ol_after_logout {
+	display: inline-block;
+	width: 80px;
+	height: 24px;
+	background-color: #808080;
+	font-weight: bold;
+	line-height: 24px;
+	text-align: center;
+	color: #ffffff;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
+.logout-community3  a:hover {
 	text-decoration: none;
-}
-
-
-.login-box .login-extra, .login-box .login-extra a {
-	color: #808080;
-}
-
-.login-box table tr td input[type='text'], .login-box table tr td input[type='password']{
-	width: 98px;
-	height: 26.5px;
-	padding-left: 10px;
-}
-
-.login-box .login-table-input {
-	padding-bottom: 5px;
-}
-
-.login-box .login-user, .login-box .login-pass {
-	border-top: solid 1px #b2b2b2;
-	border-bottom: solid 1px #b2b2b2;
-	border-left: solid 1px #c2c2c2;
-	border-right: solid 1px #c2c2c2;
-}
-
-.login-box input[type='image']{
-	margin-left: 3px;
-}
-
-
-
-.login-box .admin-mode {
-	background: #808080;
-	margin-bottom: 5px;
-	padding: 5px;
-	text-align: center;
-}
-
-.login-box .admin-mode a {
-
-}
-
-
-.login-box #ol_after_logout {
-	background: #808080;
-	border-top: solid 2px #b2b2b2;
-	padding: 7px 12px 7px 12px;
-	text-align: center;
-}
-
-
-.login-box.logout-community3, .login-box.logout-community3 a {
-	color: #000000;
 }

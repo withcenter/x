@@ -7,8 +7,9 @@ for ( $i = 1 ; $i <= 10; $i++ ) {
 }
 
 ?>
-
+<div class='login'>
 <?=outlogin('x-outlogin-community-3') ?>
+</div>
 
 <div class='company-banner'>
 	<?

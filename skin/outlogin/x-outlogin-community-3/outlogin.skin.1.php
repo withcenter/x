@@ -34,22 +34,16 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 					</td>
 				</tr>
 			</table>
-			<table width='100%' cellspacing=5 class='login-extra'>
-				<tr valign='top'>
-					<td>
-						<a href='<?=G5_URL?>/<?=G5_BBS_DIR?>/register.php' class='login-reg'><b>회원가입</b></a>
-					</td>
-					<td rowspan=2>
-						<img class='remember-me-check' src='<?=$outlogin_skin_url?>/unchecked.gif' />
-						<input type="checkbox" style='display: none;' name="auto_login" value="1" id="auto_login">자동 로그인
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<a href="<?php echo G5_BBS_URL ?>/password_lost.php" id="ol_password_lost">아이디/비번 찾기</a>
-					</td>
-				</tr>
-			</table>
+			
+			<div class='register_autologin'>
+				<a href='<?=G5_URL?>/<?=G5_BBS_DIR?>/register.php' class='login-reg'><b>회원가입</b></a>
+				
+				<span class='auto_login'><input type="checkbox" name="auto_login" value="1" id="auto_login">자동 로그인</span>
+				<div style='clear:both;'></div>
+			</div>
+				
+			<a href="<?php echo G5_BBS_URL ?>/password_lost.php" id="ol_password_lost">아이디/비번 찾기</a>
+				
 		</form>
 	</div>
 </div>
@@ -57,18 +51,12 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 <script>
 
 $(function() {	
-	$(".remember-me-check").click(function() {
-		if ( $("#auto_login").is(":checked") ) {
-			$(this).attr('src', '<?=$outlogin_skin_url?>/unchecked.gif');
-			$("#auto_login").prop('checked', false);
-		}
-		else {
-			$(this).attr('src', '<?=$outlogin_skin_url?>/checked.gif');
-			$("#auto_login").prop('checked', true);
-			 if(!confirm("자동로그인을 사용하시면 다음부터 회원아이디와 비밀번호를 입력하실 필요가 없습니다.\n\n공공장소에서는 개인정보가 유출될 수 있으니 사용을 자제하여 주십시오.\n\n자동로그인을 사용하시겠습니까?"))
+	 $("#auto_login").click(function(){
+        if ($(this).is(":checked")) {
+            if(!confirm("자동로그인을 사용하시면 다음부터 회원아이디와 패스워드를 입력하실 필요가 없습니다.\n\n공공장소에서는 개인정보가 유출될 수 있으니 사용을 자제하여 주십시오.\n\n자동로그인을 사용하시겠습니까?"))
                 return false;
-		}
-	});	
+        }
+    });
 });
 
 function fhead_submit(f)

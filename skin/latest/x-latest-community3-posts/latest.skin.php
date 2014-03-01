@@ -18,9 +18,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			</table>
 		</div>
 	<div class='community3-posts-items'>
-		<? if( $list ) { ?>
 		<table cellspacing='5'>
-		<?php
+	<?php
+		if( $list ) { 
 			$i = 1;
 			$no_of_posts = count($list);
 			foreach ( $list as $li ) {
@@ -40,11 +40,24 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 				?>
 				<?$i++;?>
 			</tr>	
+		<?}
+		}
+		else {?>
+			<tr>
+			<td width='10' valign='middle'><div class='posts-square'><img src='<?=$latest_skin_url?>/img/square-icon.png'></div></td><td width='120'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=4' class='content-community-3'>블로그 만들기</a></td><td width='40' align='right'><a href='$url'> <span class='no-of-comments $no_comment'>[99]</span></a></td>
+			</tr>
+			<tr>
+			<td width='10' valign='middle'><div class='posts-square'><img src='<?=$latest_skin_url?>/img/square-icon.png'></div></td><td width='120'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=3' class='content-community-3'>커뮤니티 사이트 만들기</a></td><td width='40' align='right'><a href='$url'> <span class='no-of-comments $no_comment'>[99]</span></a></td>
+			</tr>
+			<tr>
+			<td width='10' valign='middle'><div class='posts-square'><img src='<?=$latest_skin_url?>/img/square-icon.png'></div></td><td width='120'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=3' class='content-community-3'>여행사 사이트 만들기 안내</a></td><td width='40' align='right'><a href='$url'> <span class='no-of-comments $no_comment'>[99]</span></a></td>
+			</tr>
+			<tr class='last-item'>
+			<td width='10' valign='middle'><div class='posts-square'><img src='<?=$latest_skin_url?>/img/square-icon.png'></div></td><td width='120'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=1' class='content-community-3'>(모바일)홈페이지, 스마트폰 앱</a></td><td width='40' align='right'><a href='$url'> <span class='no-of-comments $no_comment'>[99]</span></a></td>
+			</tr>
 		<?}?>
 		</table>
-		<? }
-			else echo "<ul><li><b>".$bo_subject.'</b>게시판에 글을 등록해 주세요</li></ul>';
-		?>
+		
 	</div>
 </div>
 

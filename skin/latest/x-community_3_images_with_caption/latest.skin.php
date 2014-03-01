@@ -26,7 +26,23 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 	<?
 		}
 	}
-	else echo "<b>".$bo_subject."</b>게시판에 글을 등록해 주세요";
+	else {
+		for ( $i = 0; $i < 4; $i++ ) {?>
+			<div class='community_images_with_captions_container <?=$nomargin?>'>
+				<div class='images_with_captions'>
+						<div class='caption_image'>					
+						<? $imgsrc['src'] = $latest_skin_url.'/img/no-image.png';
+														
+							$img = "<img src='$imgsrc[src]'/>";						
+							echo "<div class='img-wrapper'><a href='".ms::url_config()."'>".$img."</a></div>";
+						?>
+						</div>
+					<div class='caption'><a href='<?=ms::url_config()?>'>글을 등록해 주세요</a></div>						
+				</div>
+			</div>		
+	<?
+		}
+	}	
 ?>
 
 </div>

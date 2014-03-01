@@ -2,11 +2,13 @@
 .sidebar {
 	word-break: break-all;
 }
-
+.sidebar > .login {
+	margin-bottom: 10px;
+}
 /**COMPANY BANNER*/
 .sidebar .company-banner {
 	width: 208px;
-	height: 99px;
+	height: 114px;
 	overflow: hidden;
 	border: solid 1px #bbbbbb;
 	margin-bottom: 10px;

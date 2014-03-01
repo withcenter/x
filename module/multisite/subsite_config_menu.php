@@ -28,11 +28,11 @@
 	
 	
 	<li class='sub-menu'>
-		<a href='?module=multisite&action=config_theme'><?=ln('Theme', '테마')?></a>
+		<a href='?module=multisite&action=config_theme'>테마</a>
 	</li>
 	
 	<li class='sub-menu'>
-		<a href='?module=multisite&action=config_mobile_theme'><?=ln('Mobile Theme', '모바일테마')?></a>
+		<a href='?module=multisite&action=config_mobile_theme'>모바일 테마</a>
 	</li>
 	
 	
