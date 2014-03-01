@@ -1,12 +1,12 @@
   <div class='config-wrapper'>
-	<div class='config-title'><span class='config-title-info'>ADDITIONAL SITE INFORMATION</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
+	<div class='config-title'><span class='config-title-info'>추가 사이트 정보</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
 	<div class='config-container'>
-		<span class='title-small'>Contact Number: </span><input type='text' name='com3contact_num' value='<?=ms::meta('com3contact_num')?>'>	
+		<span class='title-small'>전화번호: </span><input type='text' name='com3contact_num' value='<?=ms::meta('com3contact_num')?>'>	
 	</div>
 </div>
 
  <div class='config-wrapper'>
-	<div class='config-title'><span class='config-title-info'>HEADER LOGO and BANNERS</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
+	<div class='config-title'><span class='config-title-info'>사이트 로고 및 배너</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
 	<div class='config-container'>
 <table cellpadding=5 class='image-config' width='100%'>
 	<tr valign='top' >
@@ -92,7 +92,7 @@
 				<input type='hidden' name='com3banner_4_remove' value='n'>
 				<input type='checkbox' name='com3banner_4_remove' value='y'><span class='title-small'>이미지 제거</span>
 			<?}?>
-			<div class='title'>배너3의 문구</div>
+			<div class='title'>배너4의 문구</div>
 			<textarea name='com3banner_4_text1'><?=stripslashes(ms::meta('com3banner_4_text1'))?></textarea>
 				<div class='title'>배너4 링크</div>
 				<input type='text' name='com3banner_4_text2' value='<?=ms::meta('com3banner_4_text2')?>'>
@@ -114,19 +114,6 @@
 				<div class='title'>배너5 링크</div>
 				<input type='text' name='com3banner_5_text2' value='<?=ms::meta('com3banner_5_text2')?>'>
 			</div>
-		</td>
-	</tr>
-	
-		<tr valign='top'>
-		<td>
-			<div class='image-title'>SIDEBAR BANNER (Bottom)</div>
-			<div class='image-upload'>
-			<?if( ms::meta('com3banner_sidebar') ) {?><img src="<?=ms::meta('img_url').ms::meta('com3banner_sidebar')?>" width=280px height=160px><br><?}?>
-			<input type='file' name='com3banner_sidebar'>
-			<?if( ms::meta('com3banner_sidebar') != '' ) { ?>
-				<input type='hidden' name='com3banner_sidebar_remove' value='n'>
-				<input type='checkbox' name='com3banner_sidebar_remove' value='y'><span class='title-small'>이미지 제거</span>
-			<?}?>
 		</td>
 	</tr>
 </table>

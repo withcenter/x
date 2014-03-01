@@ -4,7 +4,7 @@
 		return;
 	}
 	/* 생성된 게시판 정보를 가저온다 */
-	$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";
+	$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "\_%'";
 	
 	$q = "SELECT bo_table, bo_subject, bo_count_write FROM $g5[board_table] WHERE $qb";
 	
@@ -56,7 +56,7 @@
 						<span class='select-wrapper'><span class='inner'>
 							<?php
 							foreach ( $rows as $row ) {
-								if ( ms::meta('게시판 번호 '.$i) && ms::meta('forum_no_'.$i) == $row['bo_table'] ) {
+								if ( ms::meta('forum_no_'.$i) && ms::meta('forum_no_'.$i) == $row['bo_table'] ) {
 									$default_value =  '(forum no. '.$i.') '.$row['bo_subject'];
 									break;
 								}

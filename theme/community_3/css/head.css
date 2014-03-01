@@ -91,7 +91,6 @@
 .main-menu #comm3_main_menu .comm3_menu{
 	list-style:none;	
 	overflow:hidden;
-	margin-right:40px;	
 	float:left;
 	height:44px;
 }
@@ -104,14 +103,14 @@
 	font-family: '맑은 고딕', AppleGothic;
 	color:#ececec;
 	display:inline-block;	
-	text-align:center;
-	width:100px;	
-	padding:4px 0;	
+	text-align:center;	
 	overflow:hidden;
-	font-size:1.3em;
+	font-size:11pt;
 	font-weight:normal;
-	line-height:35px;	
+	line-height:40px;	
+	height: 44px;
 	text-decoration:none;
+	padding: 0 15px;
 }
 
 .main-menu #comm3_main_menu .comm3_menu a:hover{

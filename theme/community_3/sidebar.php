@@ -21,7 +21,6 @@ for ( $i = 1 ; $i <= 10; $i++ ) {
 
 <?=latest('x-latest-community3-posts', $forum_1 , 4 , 20)?>
 <? include x::theme('popular_posts') ?>
-<!--<? include x::theme('latest_comments') ?> //Removed in the new design-->
 
 <?
 if ( $company_banner = ms::meta('com3banner_sidebar') ) { ?>

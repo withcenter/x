@@ -1,3 +1,12 @@
+<? 
+	if ( ms::meta('forum_no_6') ) {
+		$menu_row1 = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('forum_no_6')."'");
+	}
+	if ( ms::meta('forum_no_7') ) {
+		$menu_row2 = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('forum_no_7')."'");
+	}
+	
+?>
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/theme.css' />
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/head.css' />
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/tail.css' />
@@ -5,20 +14,27 @@
 	<div class='top'>
 		<div class='inner'>
 			<? if ( $member['mb_id'] ) {
-				$do_log = "<a href='".G5_BBS_URL."/logout.php'>Log Out</a>";
-				$profile = "<a href='".G5_BBS_URL."/member_confirm.php?url=register_form.php'>Profile</a>";
+				$do_log = "<a href='".G5_BBS_URL."/logout.php'>로그아웃</a>";
+				$profile = "<a href='".G5_BBS_URL."/member_confirm.php?url=register_form.php'>회원정보수정</a>";
 			} 
 				else {
-				$do_log = "<a href='".G5_BBS_URL."/login.php'>Log In</a>";
-				$profile = "<a href='".G5_URL."/".G5_BBS_DIR."/register.php'>Register</a>";
+				$do_log = "<a href='".G5_BBS_URL."/login.php'>로그인</a>";
+				$profile = "<a href='".G5_URL."/".G5_BBS_DIR."/register.php'>회원가입</a>";
 			}?>
 			<div class='left'>
-				<a href='<?=g::url()?>'>Home</a><span class="dot">•</span><?=$do_log?><span class="dot">•</span><?=$profile?><span class="dot">•</span><a href='#'>Community</a><span class="dot">•</span></span><a href='#'>QnA</a>
+				<a href='<?=g::url()?>'>홈</a><span class="dot">•</span><?=$do_log?><span class="dot">•</span><?=$profile?>
+				<? if ( $menu_row1['bo_subject'] ) {?>
+					<span class="dot">•</span>
+					<a href='<?=G5_BBS_URL?>/board.php?bo_table=<?=ms::meta('forum_6')?>'><?=$menu_row1['bo_subject']?></a>
+				<? }?>
+				<? if ( $menu_row2['bo_subject'] ) {?>
+					<span class="dot">•</span>
+					<a href='<?=G5_BBS_URL?>/board.php?bo_table=<?=ms::meta('forum_7')?>'><?=$menu_row2['bo_subject']?></a>
+				<? }?>
 			</div>
 			<div class='right'>
-				<a href='#'>Cafe</a><span class="dot">•</span><a href='#'>앱 다운로드</a><span class="dot">•</span><a href='#'>Adv</a><span class="dot">
 				<? if ( !$com3_contact_number = ms::meta('com3contact_num') ) $com3_contact_number = '+82 070 7529 1749'?>
-				•</span><a href='#'>Contact: <?=$com3_contact_number?></a>
+				</span><a href='javascript:void(0)'>전화번호: <?=$com3_contact_number?></a>
 			</div>
 		</div>
 	</div>

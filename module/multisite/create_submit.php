@@ -40,7 +40,7 @@
 	}
 
 	if ( $in['site-type'] ) {
-		if ( $in['site-type'] == 'community' ) $site_type = 'community';
+		if ( $in['site-type'] == 'community' ) $site_type = 'community_3';
 		else if ( $in['site-type'] == 'travel' ) 	$site_type = 'travel_theme_1';
 		else if ( $in['site-type'] == 'shopping' ) $site_type = 'community';
 		else if ( $in['site-type'] == 'academy' ) $site_type = 'community_2';
@@ -72,7 +72,7 @@
 			ms::meta( $domain, 'forum_no_1', ms::board_id ( $domain ).'_1' );
 			
 			// 테마에 따라 각각 더 추가 생성 되는 게시판 및 메뉴
-			if ( $site_type == 'travel_theme_1' || $site_type == 'community_2' ) {
+			if ( $site_type == 'travel_theme_1' || $site_type == 'community_2' || $site_type == 'community_3' ) {
 				
 				for ( $i = 2; $i <= 6; $i++ ) {
 					$o = array(
