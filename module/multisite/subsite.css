@@ -329,10 +329,10 @@
 	font-family: '맑은 고딕', AppleGothic;
 }
 
-.config_forum .board_list .header  {
+.config_forum .board_list .header, .config_forum .board_list .header1 {
 	background-color: #8f8f8f;
 }
-.config_forum .board_list .header td {
+.config_forum .board_list  .header td, .config_forum .board_list  .header1 td  {
 	border-left: 0;
 	color: #ffffff;
 }

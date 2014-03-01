@@ -29,7 +29,7 @@
 		<div style='clear:right;'></div>
 		
 		<table class='board_list' cellpadding=0 cellspacing=0 width='100%'>
-			<tr class='header'>
+			<tr class='header1'>
 				<td width=148>게시판 아이디</td>
 				<td width=130>게시판 제목</td>
 				<td width=80 align='center'>글 수</td>
