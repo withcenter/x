@@ -69,7 +69,7 @@ echo $latest_1_output;
 		<?
 		$latest_bo_table = ms::board_id(etc::domain()).'_4';
 		if ( g::forum_exist( $latest_bo_table ) ) {
-			$latest_1_output = latest("x-community-3-timed-list-with-images", $latest_bo_table, 4, 50, $cache_time=1, x::url_theme()."/img/2papers.png");
+			$latest_1_output = latest("x-community-3-timed-list-with-images", $latest_bo_table, 5, 50, $cache_time=1, x::url_theme()."/img/2papers.png");
 			echo $latest_1_output;
 		}
 		?>

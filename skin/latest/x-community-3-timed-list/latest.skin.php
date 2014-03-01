@@ -17,7 +17,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
         <li>
 		
             <?php 			
-            echo "<span class='subject'><a href=\"".$list[$i]['href']."\">".$list[$i]['subject']."</a></span>";
+            echo "<span class='subject'><img class='dot' src='$latest_skin_url/img/square-icon.png' /><a href=\"".$list[$i]['href']."\">".$list[$i]['subject']."</a></span>";
 			
 			if( !$list[$i]['comment_cnt'] ) $comment_count = "<span class='comment_count no-comment'>0</span>";
 			else $comment_count = "<span class='comment_count'>".strip_tags($list[$i]['comment_cnt'])."</span>";
@@ -27,7 +27,11 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
         </li>
     <?php }  ?>
     <?php if (count($list) == 0) { //게시물이 없을 때  ?>
-    <li><span class='subject'><a></a></span></li>
+		<li><span class='subject'><img class='dot' src='<?=$latest_skin_url?>/img/square-icon.png' /><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=5'>사이트 만들기 안내</a></span></li>
+		<li><span class='subject'><img class='dot' src='<?=$latest_skin_url?>/img/square-icon.png' /><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=4'>블로그 만들기</a></span></li>
+		<li><span class='subject'><img class='dot' src='<?=$latest_skin_url?>/img/square-icon.png' /><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=3'>커뮤니타 사이트 만들기</a></span></li>
+		<li><span class='subject'><img class='dot' src='<?=$latest_skin_url?>/img/square-icon.png' /><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=2'>여행사 사이트 만들기</a></span></li>
+		<li><span class='subject'><img class='dot' src='<?=$latest_skin_url?>/img/square-icon.png' /><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=1'>(모바일)홈페이지, 스마트폰 앱</a></span></li>
     <?php }  ?>
     </ul>
     <?/*<div class="lt_more"><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=<?php echo $bo_table ?>"><span class="sound_only"><?php echo $bo_subject ?></span>더보기</a></div>*/?>

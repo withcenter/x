@@ -3,6 +3,7 @@
 	color: #ffffff;
 	height: 100px;
 	padding: 7px;
+	overflow: hidden;
 }
 .login-box  input[type='text'], .login-box input[type='password'] {
 	width: 96px;
@@ -33,6 +34,7 @@
 .logout-community3 {
 	padding: 10px;
 	position: relative;
+	height: 93px;
 }
 
 .logout-community3  #ol_after_info {
@@ -45,7 +47,6 @@
 	margin-right: 2px;
 }
 .logout-community3 .admin-mode {
-	margin-top: 3px;
 }
 
 .logout-community3  .admin-mode a{
@@ -53,7 +54,7 @@
 }
 
 .logout-community3  .user-info {
-	margin:3px 0;
+	margin:2px 0;
 }
 .logout-community3 .no_of_unreaded_message {
 	border-radius: 10px;
