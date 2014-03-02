@@ -436,6 +436,9 @@ class gnuboard {
 	}
 	
 	
+	/** @short returns the number of post (excluding comment) in a forum.
+	 *
+	 */
 	static function count_write($write_table)
 	{
 		$q = "SELECT COUNT(*) FROM $write_table WHERE wr_parent=0";
