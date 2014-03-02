@@ -4,6 +4,7 @@
 	echo forum_tab('a', 'ms_test6_1');
 	echo forum_tab('b', 'ms_test6_2');
 	echo forum_tab('c', 'freetalk');
+	echo forum_tab('d', 'ms_test6_6');
 	
 function forum_tab( $cls, $id ) {
 	$posts = g::posts( array( 'bo_table' => $id, 'limit'=>5 ) );

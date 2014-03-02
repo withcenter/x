@@ -3,31 +3,47 @@
 }
 
 
-.forum-tab .a, .forum-tab .b, .forum-tab .c {
+.forum-tab .a, .forum-tab .b, .forum-tab .c, .forum-tab .d {
 	float: left;
-	width: 33.25%;
 }
 
 .forum-tab-inner {
-	margin: 0.1em;
+	margin: 0 0.2em;
 	padding: 0.5em;
 	border: 1px solid #cdcdcd;
 }
 
 .forum-tab-inner .subject {
 	margin: 0.4em 0;
-	height: 1em;
+	height: 1.2em;
 	overflow: hidden;
 }
 
-@media all and ( max-width: 25em ) {
 	.forum-tab .a {
 		width: 99%;
 		float: none;
+		margin-bottom: 0.5em;
 	}
 	.forum-tab .b, .forum-tab .c {
 		width: 49.5%;
 	}
-	#header .top-below-500-px { display:block; }
+		.forum-tab .d {
+		display: none;
+	}
+	
+@media all and ( min-width: 25em ) {
+	.forum-tab .a, .forum-tab .b, .forum-tab .c {
+		float:left;
+		width: 33.3%;
+	}
 }
 
+
+@media all and ( min-width: 50em ) {
+	.forum-tab .d {
+		display: block;
+	}
+	.forum-tab .a, .forum-tab .b, .forum-tab .c, .forum-tab .d {
+		width: 25%;
+	}
+}
