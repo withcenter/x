@@ -6,10 +6,10 @@
 	echo forum_tab('c', 'freetalk');
 	
 function forum_tab( $cls, $id ) {
-	$posts = g::posts( array( 'bo_table' => $id ) );
+	$posts = g::posts( array( 'bo_table' => $id, 'limit'=>5 ) );
 	$ret .= "<div class='$cls'><div class='forum-tab-inner'>";
 	foreach ( $posts as $p ) {
-		$ret .= "<div>$p[wr_subject]</div>";
+		$ret .= "<div class='subject'><a href='$p[href]'>$p[wr_subject]</a></div>";
 	}
 	$ret .= "</div></div>";
 	return $ret;
