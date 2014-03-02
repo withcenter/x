@@ -8,7 +8,7 @@
 	@param $options['height']		썸네일 높이.
 	@param $options['radisu']		radius
 	@code
-		echo latest( 'x-gallery', 'ms_test6_1', 40, 40, 1, array('width'=>300, 'height'=>140));8
+		echo latest( 'x-gallery', 'ms_test6_1', 40, 40, 1, array('width'=>300, 'height'=>140));
 	@endcode
  *
  *
