@@ -1,6 +1,22 @@
 <?php
+echo latest( 'x-gallery', 'ms_test6_1', 40, 40, 1,
+	array(
+		'width'		=>300,
+		'height'	=>180,
+		'radius'	=> 0
+	)
+);
+?>
+<style>
+	.x-gallery .text {
+		background-color: white!important;
+	}
+	.x-gallery .text a {
+		color: black!important;
+	}
+</style>
 
-echo latest( 'x-gallery', 'ms_test6_1', 40, 40, 1, array('width'=>300, 'height'=>180));
+<?
 
 
 
