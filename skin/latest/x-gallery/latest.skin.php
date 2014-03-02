@@ -2,7 +2,7 @@
 /**
  *
 	@short		반응형 이미지 갤러리. 장치에 따라서 반응하므로 모바일 및 기타 장치에 대한 버젼이 따로 없으며, 필요한 곳에 복사를 하고 호출하면 된다.
-	@site		http://g5x.philgo.net/
+	@source	https://github.com/withcenter/x/tree/master/skin/latest/x-gallery		
 
 	@param $options['width']		썸네일 너비.
 	@param $options['height']		썸네일 높이.
@@ -44,7 +44,6 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
                         } else {
                             continue;
                         }
-						
 ?>	
 	<li>
 		<div class='photo'><a href="<?=$list[$i]['href']?>"><?=$img?></a></div>
