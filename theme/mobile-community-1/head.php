@@ -9,48 +9,34 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
 <script src="<?=x::theme_url()?>/js/theme.js"></script>
 <div id='header'>
 	<div class='top'>
-		<a href='<?=g::url()?>'><img src="<?=x::theme_url('img/logo.png')?>"></a>
+		<div class='logo'><a href='<?=g::url()?>'><img src="<?=x::theme_url('img/logo.png')?>"></a></div>
+		<div class='search'><?include x::theme('search')?></div>
+		<div style='clear:both;'></div>
 	</div>
-	<?include 'menu.php'?>
+	<div class='top-below-500-px'>
+		<div class='logo'><a href='<?=g::url()?>'><img src="<?=x::theme_url('img/logo-below-500-px.png')?>"></a></div>
+	</div>
+	
+	<div class='menu'><?include 'menu.php'?></div>
+	<div class='submenu'><?include 'submenu.php'?></div>
+	
 </div>
-<header id="hd">
 
-    <div id="hd_wrapper">
-
-        <ul id="hd_nb">
-            <li><a href="<?php echo G5_BBS_URL ?>/qalist.php" id="snb_new">1:1문의</a></li>
-            <li><a href="<?php echo G5_BBS_URL ?>/current_connect.php" id="snb_cnt">접속자 <?php echo connect(); // 현재 접속자수 ?></a></li>
-            <li><a href="<?php echo G5_BBS_URL ?>/new.php" id="snb_new">새글</a></li>
-            <?php if ($is_member) { ?>
-            <?php if ($is_admin) { ?>
-            <li><a href="<?php echo G5_ADMIN_URL ?>" id="snb_adm"><b>관리자</b></a></li>
-            <?php } ?>
-				<li>
-					<a href="<?php echo G5_BBS_URL ?>/memo.php" target="_blank">
-					<span class="sound_only">안 읽은 </span>쪽지
-					<strong><?php echo g::memo_count_new(); ?></strong>
-				</a>
-				</li>
-            <li><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=<?php echo G5_BBS_URL ?>/register_form.php" id="snb_modify">정보수정</a></li>
-            <li><a href="<?php echo G5_BBS_URL ?>/logout.php?url=<?=urlencode( '../x/theme/' . x::$config['site']['theme'] . '/content.php' )?>" id="snb_logout">로그아웃</a></li>
-            <?php } else { ?>
-            <li><a href="<?php echo G5_BBS_URL ?>/register.php" id="snb_join">회원가입</a></li>
-            <li><a href="javascript:void(0);" id="login-button">로그인</a></li>
-            <?php } ?>
-        </ul>
-
-    </div>
-</header>
-
-<hr>
-
-<div id="wrapper">
-    <div id="login-box">
-       <?php
-				if ( ! login() ) {
-					echo outlogin('basic'); // 외부 로그인
-				}
-		?>
-    </div>
-    <div id="container">
-        <?php if ((!$bo_table || $w == 's' ) && !defined("_INDEX_")) { ?><div id="container_title"><?php echo $g5['title'] ?></div><?php } ?>
+	
+<div id="content">
+    <div class="inner">
+		<?/* G5 의 모바일 게시판 스킨을 DIV 으로 반응형 처리가 어려워서 table 로 한다. */?>
+		<table cellpadding='0' cellspacing='0' border='0' width='100%'>
+			<tr valign='top'>
+				<td><div id='sidebar'><?include 'sidebar.php'?></div></td>
+				<td width='100%'>
+					<div id='data'>
+					<div id="login-box">
+					   <?php
+								if ( ! login() ) {
+									echo outlogin('basic'); // 외부 로그인
+								}
+						?>
+					</div>
+					<?php if ((!$bo_table || $w == 's' ) && !defined("_INDEX_")) { ?><div id="container_title"><?php echo $g5['title'] ?></div><?php } ?>
+					

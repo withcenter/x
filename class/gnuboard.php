@@ -710,7 +710,7 @@ class gnuboard {
 	 *  @param [in] $wr_id post no
 	 *  @return an assoc row of the field.
 	 *  
-	 *  @details use this function to get the fields of the post.
+	 *  @details use this function to get the fields of a post.
 	 */
 	static function post( $bo_table, $wr_id )
 	{
@@ -727,29 +727,6 @@ class gnuboard {
 		return g::url() . "/bbs/board.php?bo_table=$bo_table&wr_id=$wr_id";
 	}
 	
-	static function posts( $o )
-	{
-		$bo_table = self::board_table( $o['bo_table'] );
-		
-		$cond = array();
-		if ( $o['mb_id'] ) $cond['mb_id'] = $o['mb_id'];
-		
-		$q_where = null;
-		if ( $cond ) {
-			$q_where = implode(" AND ", $cond );
-		}
-		
-		if ( $o['limit'] ) $limit = "LIMIT $o[limit]";
-		else $limit = "LIMIT 10";
-		
-		
-		if ( $o['order by'] ) $order_by = "ORDER BY " . $o['order by'];
-		else $order_by = "ORDER BY wr_id DESC";
-		
-		$rows = db::rows("SELECT * FROM $bo_table $q_where $order_by $limit");
-		
-		return $rows;
-	}
 	
 	
 	static function forum_exist($bo_table)
@@ -795,6 +772,84 @@ class gnuboard {
 			$row = sql_fetch($sql);
 			return $row['cnt'];
 		}
+	}
+	
+	/**
+	 *
+	 *
+	 * @param 'limit' limits the number of results.
+			examples of value
+				5
+				0,9
+				10,20
+	 *
+	 * @return array. the return value is the same as that of latest.lib.php
+	 */
+	static function posts( $option )
+	{
+		global $g5;
+		
+		$o			= array();
+		$cond		= array();
+		$where	= null;
+		
+		if ( is_array( $option ) ) $o = $option;
+		else $o['bo_table'] = $option;
+		
+		if ( ! isset( $o['wr_is_comment']  ) ) $cond[] = 'wr_is_comment=0';
+		
+		if ( $cond ) {
+			$where = "WHERE " . implode( 'AND', $cond );
+		}
+		
+		
+		if ( isset( $o['order by'] ) ) $order_by = $o['order by'];
+		else $order_by = "wr_num";
+		
+		if ( isset( $o['limit'] ) ) $limit = "$o[limit]";
+		else $limit = "0,10";
+		
+		$board				= self::config( $o['bo_table'] );
+        $bo_subject		= get_text($board['bo_subject']);
+		$board_table	= self::board_table( $o['bo_table'] );
+		$sql = "
+			SELECT *
+			FROM $board_table
+			$where
+			ORDER BY $order_by
+			LIMIT $limit
+		";
+		$rows = db::rows( $sql );
+		$i = 0;
+		foreach ( $rows as $row ) {
+			$list[$i] = get_list($row, $board, $latest_skin_url, $subject_len);
+			$i++;
+		}
+		return $list;
+	}
+	
+	static function posts_old( $o )
+	{
+		$bo_table = self::board_table( $o['bo_table'] );
+		
+		$cond = array();
+		if ( $o['mb_id'] ) $cond['mb_id'] = $o['mb_id'];
+		
+		$q_where = null;
+		if ( $cond ) {
+			$q_where = implode(" AND ", $cond );
+		}
+		
+		if ( $o['limit'] ) $limit = "LIMIT $o[limit]";
+		else $limit = "LIMIT 10";
+		
+		
+		if ( $o['order by'] ) $order_by = "ORDER BY " . $o['order by'];
+		else $order_by = "ORDER BY wr_id DESC";
+		
+		$rows = db::rows("SELECT * FROM $bo_table $q_where $order_by $limit");
+		
+		return $rows;
 	}
 	
 	

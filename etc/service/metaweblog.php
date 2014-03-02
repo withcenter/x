@@ -474,7 +474,7 @@ EOH;
 
 
 
-	$rows = g::posts( array('bo_table'=>$input['blog_id'], 'mb_id'=>$user['mb_id']) );
+	$rows = g::posts_old( array('bo_table'=>$input['blog_id'], 'mb_id'=>$user['mb_id']) );
 	
 	
 	

@@ -1,0 +1,27 @@
+.forum-tab {
+	padding: 0.25em;
+}
+
+
+.forum-tab .a, .forum-tab .b, .forum-tab .c {
+	float: left;
+	width: 33.25%;
+}
+
+.forum-tab-inner {
+	margin: 0.1em;
+	border: 1px solid #cdcdcd;
+}
+
+
+@media all and ( max-width: 25em ) {
+	.forum-tab .a {
+		width: 99%;
+		float: none;
+	}
+	.forum-tab .b, .forum-tab .c {
+		width: 49.5%;
+	}
+	#header .top-below-500-px { display:block; }
+}
+

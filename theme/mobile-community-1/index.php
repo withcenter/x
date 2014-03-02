@@ -1,5 +1,7 @@
 <?php
 	include 'head.php';
 	include 'content.php';
-	include 'tail.php';
+
+	
+	/** tail.php is included by G5_PATH/index.php */
 	
