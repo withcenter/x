@@ -17,7 +17,7 @@
 					<?if( ms::meta('header_logo') ) { ?>
 						<img src="<?=ms::meta('img_url').ms::meta('header_logo')?>">
 					<?} else {?>
-						<img src='<?=x::url_theme()?>/img/community_sample_banner.png'>
+						<img src='<?=x::url_theme()?>/img/default-logo.png'>
 					<?}?>
 					</a>
 				</div>
