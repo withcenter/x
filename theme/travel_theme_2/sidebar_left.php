@@ -25,13 +25,11 @@ for ( $i = 1 ; $i <= 10; $i++ ) {
 <div class='banner-left'>
 	<?
 	$banner_url = ms::meta('img_url');
-		$url = ms::meta('travel2banner1_sidebar_text1');
-		if ( $banner_image = ms::meta( 'travel2banner1_sidebar' )) {
-			$banner_img = g::thumbnail_from_image_tag( "<img src='".$banner_url.$banner_image."'>", ms::board_id( etc::domain() ).'_1', 208, 88 );
-			$banner_left = "<a href='$url' target='_blank'><img src='".$banner_img."'></a>";
-		} else $banner_left = null;
-		
-		echo $banner_left;
+	$url = ms::meta('travel2banner1_sidebar_text1');
+	$banner_image = ms::meta( 'travel2banner1_sidebar' );
+	if ( $banner_image ) {
+		echo "<a href='$url' target='_blank'><img src='".$banner_url.$banner_image."'></a>";
+	} 
 	?>
 </div> 
 
