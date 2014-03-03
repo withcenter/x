@@ -2,6 +2,7 @@
 	border: solid 1px #bbbbbb;
 	white-space: nowrap;
 	height: 317px;
+	line-height:14px;
 }
 
 .travel-2-posts span.label {
@@ -41,6 +42,11 @@
 
  .travel-2-posts .travel-2-posts-items .posts-square {
 	font-size: 10px;
+}
+
+.travel-2-posts .travel-2-posts-items .posts-square  img{
+	position:relative;
+	top:-4px;
 }
 
  .travel-2-posts .travel-2-posts-items .no-of-comments {

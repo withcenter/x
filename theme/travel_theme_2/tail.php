@@ -1,5 +1,5 @@
 		</div> <!-- container -->
-<div style='clear:both;'></div>
+<div style='clear:both; margin-bottom:10px;'></div>
 		<div class='foot_banner'>
 		<?
 			if( ms::meta('travel2banner_bottom') ) $img = "<img src = '".ms::meta('img_url').ms::meta('travel2banner_bottom')."'/>";
