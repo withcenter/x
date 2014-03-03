@@ -8,13 +8,15 @@
 	font-weight:bold;	
 	font-family:Dotum;
 	background-color:#f7f7f7;
-	padding:7px 6px 9px 10px;
+	padding:0 6px 0 10px;
+	height: 28px;
+	line-height: 28px;
 	border-bottom:1px solid #bbbbbb;
 }
 
 .travel_2_timed_list_with_image .title img{
 	position:relative;
-	top:-2px;
+	top: 0;
 	margin-right:5px;
 }
 
@@ -51,11 +53,13 @@
 	text-decoration:none;
 }
 
-.travel_2_timed_list_with_image  td{
+.travel_2_timed_list_with_image  tr td{
 	padding:10px 0 8px 0;
 	border-bottom:1px dashed #bfbfbf;
 }
-
+.travel_2_timed_list_with_image  tr:last-child td{
+	border-bottom: 0;
+}
 .travel_2_timed_list_with_image  td.no-padding{
 	padding:10px 0 0 0;
 	border-bottom:none;
