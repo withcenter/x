@@ -22,18 +22,22 @@ for ( $i = 1 ; $i <= 10; $i++ ) {
 	<?=latest('x-latest-travel-2-posts', $forum_1 , 14 , 20)?>
 </div>
 
-<div class='banners-left'>
+<div class='banner-left'>
 	<?
 	$banner_url = ms::meta('img_url');
-	for ($i=1; $i<=3; $i++) {
-		$url = ms::meta('travel2banner'.$i.'_sidebar_text1');
-		if( $i==2 ) $height = 80;
-		else $height = 75;
-		if ( $banner_image = ms::meta( 'travel2banner'.$i.'_sidebar' )) {
-			$banner_img = g::thumbnail_from_image_tag( "<img src='".$banner_url.$banner_image."'>", ms::board_id( etc::domain() ).'_1', 190, $height );
+		$url = ms::meta('travel2banner1_sidebar_text1');
+		if ( $banner_image = ms::meta( 'travel2banner1_sidebar' )) {
+			$banner_img = g::thumbnail_from_image_tag( "<img src='".$banner_url.$banner_image."'>", ms::board_id( etc::domain() ).'_1', 208, 88 );
 		} else $banner_img = '';
-		$banner_class = 'left-banner-'.$i;
-		echo "<a href='$url' target='_blank'><img class='$banner_class' src='".$banner_img."'></a>";		
-	}
+		echo "<a href='$url' target='_blank'><img src='".$banner_img."'></a>";		
 	?>
 </div> 
+
+<div class='exchange-rate-wrapper'>
+	<div class='title'>
+		<img src='<?=x::url_theme()?>/img/exchange-rate.png'><b>EXCHANGE RATE</b>
+	</div>
+	<div class='exchange-rate'>
+		<iframe src="http://community.fxkeb.com/fxportal/jsp/RS/DEPLOY_EXRATE/381_0.html" width="178" height="136" border="0" frameborder="no" scrolling="no" marginwidth="0" hspace="0" vspace="0"></iframe>
+	</div>
+</div>

@@ -19,7 +19,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		</div>
 	<div class='travel-2-posts-items'>
 		<? if( $list ) { ?>
-		<table cellspacing='5'>
+		<table cellspacing='3px' cellpadding='0'>
 		<?php
 			$i = 1;
 			$no_of_posts = count($list);
@@ -40,10 +40,10 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 				<?$i++;?>
 			</tr>	
 		<?}?>
-		</table>
 		<? }
-			else echo "<ul><li><b>".$bo_subject.'</b>게시판에 글을 등록해 주세요</li></ul>';
+			else echo "<tr><td><b>".$bo_subject.'</b>게시판에 글을 등록해 주세요</td></tr>';
 		?>
+		</table>
 	</div>
 </div>
 

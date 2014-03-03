@@ -238,7 +238,7 @@
 		</td>
 	</tr>
 	<tr valign='top'>
-			<td>
+		<td>
 			<div class='image-title'>RIGHT BANNER</div>
 			<div class='image-upload'>
 			<?if( ms::meta('travel2banner_right') ) {?><img src="<?=ms::meta('img_url').ms::meta('travel2banner_right')?>" width=280px height=160px><br><?}?>
