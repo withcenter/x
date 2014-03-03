@@ -70,10 +70,7 @@
 		</div>
 	</div>
 	<div class='travel_2_right_banner'>
-		<?php
-			$right_thumb = g::thumbnail_from_image_tag( "<img src='".ms::meta('img_url').ms::meta('travel2banner_right')."'>", ms::board_id( etc::domain() ).'_1', 208, 88 );
-		?>
-		<img src='<?=$right_thumb?>' />
+		<img src='<?=ms::meta('img_url').ms::meta('travel2banner_right')?>' />
 	</div>
 </div>
 <div style='clear:both;'></div>
