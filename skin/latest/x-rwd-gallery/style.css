@@ -10,10 +10,14 @@
 }
 .x-gallery li {
 	display:inline-block;
-	position:relative;
-	width: 24%;
-	margin: 0.15%;
+	float:left;
+	border: 0 solid blue;
+	width: 25%;
 }
+.x-gallery li .post {
+	position:relative;
+}
+
 .x-gallery .photo img {
 	width: 100%;
 	height: auto;
@@ -47,13 +51,30 @@
 	overflow:hidden;
 }
 @media all and ( max-width: 50em ) {
-	.x-gallery li:nth-child(3) {
+	.x-gallery li:nth-child(4) {
 		display: none;
 	}
 	.x-gallery li {
-		width: 32%;
+		width: 33.33%;
 	}
 	.x-gallery .text .desc {
 		display:none;
 	}
 }
+
+
+@media all and ( max-width: 25em ) {
+	.x-gallery li:nth-child(3) {
+		display: none;
+	}
+	.x-gallery li:nth-child(2) {
+		display: none;
+	}
+	.x-gallery li {
+		width: 100%;
+	}
+	.x-gallery .text .desc {
+		display:block;
+	}
+}
+

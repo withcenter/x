@@ -23,7 +23,10 @@ class gnuboard {
 	{
 		return G5_URL;
 	}
-	
+
+	/** @short returns url of base domain
+	 *
+	 */
 	static function url_base()
 	{
 		$url = self::url();
@@ -31,6 +34,24 @@ class gnuboard {
 		$new = 'www.' . etc::base_domain();
 		return str_replace($old, $new, $url);
 	}
+	
+	
+	/** @short returns the url of skin
+	 *
+		@code
+			$url_icon = g::url_skin('img/icon.png');
+		@endcode
+			will returns like "http://test6.work.org/g5-5.0b24/x/skin/latest/x-rwd-text-with-thumbnail/img/icon.png"
+	 */
+	static function url_skin( $path )
+	{
+		$file = etc::last_included();
+		if ( strpos( $file, 'latest' ) ) {
+			global $latest_skin_url;
+			return $latest_skin_url . '/' . $path;
+		}
+	}
+	
 	
 	
 	/**

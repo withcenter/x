@@ -501,7 +501,7 @@ static function utf8($string)
 	 *		2.	and add unix time stamp inside the file.
 	 *  
 	 */
-	function cache_read( $id, $intval = 25 )
+	static function cache_read( $id, $intval = 25 )
 	{
 		$intval = $intval * 60;
 		$file_path = G5_DATA_PATH."/cache/latest-".$id;
@@ -516,11 +516,27 @@ static function utf8($string)
 	}
 
 	
-	function cache_write( $id, $data )
+	static function cache_write( $id, $data )
 	{
 		$file_path = G5_DATA_PATH."/cache/latest-".$id;
 		file::write( $file_path, string::scalar( $data ) );
 	}
+	
+	/** @short returns the path of last included file.
+		@code
+		$file = etc::last_included();
+		if ( strpos( $file, 'latest' ) ) {
+		...
+		}
+		@endcode
+	 */
+	static function last_included()
+	{
+		$included_files = get_included_files();
+		return $included_files[ count($included_files) - 1 ];
+	}
+	
+	
 
 } // eo etc class
 

@@ -1,0 +1,90 @@
+.x-rwd-text-with-thumbnail {
+	border:1px solid #bbbbbb;
+}
+
+.x-rwd-text-with-thumbnail > .title {
+	font-weight:bold;	
+	font-family:Dotum;
+	padding: 0.4em 0.7em;
+	height: 1.4em;
+	border-bottom:1px solid #bbbbbb;
+	background-color: #fcfcfc;
+	
+}
+
+.x-rwd-text-with-thumbnail > .title img{
+	position:relative;
+	top:-2px;
+	margin-right:5px;
+}
+
+.x-rwd-text-with-thumbnail > .title .more-button {
+	float: right;
+	font-weight: normal;
+	margin-top: 2px;
+}
+.x-rwd-text-with-thumbnail > .title .more-button a {
+	color:#808080;
+	font-size: 9pt
+}
+
+.x-rwd-text-with-thumbnail .comment_and_time{
+	float:right;
+	text-align: right;
+}
+
+.x-rwd-text-with-thumbnail  .photo {
+	width:100%;
+	height:auto;
+} 
+
+
+
+.x-rwd-text-with-thumbnail .comment_and_time .time{	
+	width:2.2em;
+	text-align:center;
+	margin-left:0.65em;
+}
+
+.x-rwd-text-with-thumbnail a{
+	text-decoration:none;
+	font-family:Dotum;
+}
+
+.x-rwd-text-with-thumbnail .comment_count.no-comment{
+	color:#808080;
+}
+
+.x-rwd-text-with-thumbnail .comment_count{
+	color:#cc4235;
+}
+
+/******************/
+.x-rwd-text-with-thumbnail .subject{
+	margin-left: 0.75em;
+	margin-bottom: 0.3em;
+	height:1.2em;
+	overflow:hidden;
+	font-weight: bold;
+}
+.x-rwd-text-with-thumbnail .subject a {
+	color: #494949;
+}
+
+.x-rwd-text-with-thumbnail .contents_wrapper {
+	margin-left: 0.75em;
+	height:2.2em;
+	overflow:hidden;	
+}
+
+.x-rwd-text-with-thumbnail .contents_wrapper a{
+	color: #808080;
+}	
+
+.x-rwd-text-with-thumbnail  td{
+	padding-top:0.65em;
+}
+
+.x-rwd-text-with-thumbnail table{
+	padding:0 0.7em 0.7em 0.7em;	
+}

@@ -46,12 +46,15 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
                         }
 ?>	
 	<li>
-		<div class='photo'><a href="<?=$list[$i]['href']?>"><?=$img?></a></div>
-		<div class='text'>
-			<div class='title'><a href="<?=$list[$i]['href']?>"><?php echo cut_str($list[$i]['subject'], 20, "..") ?></a></div>
-			<div class='desc'><a href="<?=$list[$i]['href'] ?>"><?php echo get_text(cut_str(strip_tags($list[$i][wr_content]), 65, '...' )) ?></a></div>
+		<div class='post'>
+			<div class='photo'><a href="<?=$list[$i]['href']?>"><?=$img?></a></div>
+			<div class='text'>
+				<div class='title'><a href="<?=$list[$i]['href']?>"><?php echo cut_str($list[$i]['subject'], 20, "..") ?></a></div>
+				<div class='desc'><a href="<?=$list[$i]['href'] ?>"><?php echo get_text(cut_str(strip_tags($list[$i][wr_content]), 65, '...' )) ?></a></div>
+			</div>
 		</div>
 	</li>
 <?php } ?>
 </ul>
+<div style='clear:both;'></div>
 </div>
