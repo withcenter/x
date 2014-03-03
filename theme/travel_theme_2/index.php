@@ -27,7 +27,7 @@
 					}
 				}
 				else {
-					echo "<img src='".x::url_theme()."/img/no-main-banner.png' />";
+					echo "<img src='".x::url_theme()."/img/no_main_banner.png' />";
 				}
 			?>
 		</div>
@@ -46,7 +46,7 @@
 	<div class='right-widgets'>
 		<div class='travel_posts_with_image_right'>
 		<?
-		$latest_bo_table = ms::board_id(etc::domain()).'_2';
+		$latest_bo_table = ms::board_id(etc::domain()).'_3';
 		if(g::forum_exist($latest_bo_table)){	
 			$latest_2_output = latest("x-travel_2_posts_with_image_right", $latest_bo_table, 3, 50, $cache_time=1, x::url_theme()."/img/chat_icon2.png");
 			echo $latest_2_output;
@@ -54,20 +54,17 @@
 		?>
 		</div>
 		<div class='travel_2_timezone'>
-			<div class='header'><img src='<?=x::url_theme()?>/img/earth.png'/><span class='title'>TIMEZONE</span></div>
+			<div class='header'><img src='<?=x::url_theme()?>/img/earth.png'/><span class='title'>현재 시간</span></div>
 			<div class='timezones'>
 				<?
 				$old_timezone = date_default_timezone_get();
 				date_default_timezone_set("Asia/Manila");
 				?>
-				Philippines
-				<br/>			
-				<?=date('Y m d A h:i:s')?>
+				<div class='row first-row'><span class='sub-item'>필리핀</span><?=date('H시 i분 A')?></div>
+				
 				<?date_default_timezone_set($old_timezone);?>
-				<br>
-				Korea
-				<br/>			
-				<?=date('Y m d A h:i:s')?>
+				
+				<div class='row'><span class='sub-item'>한국</span><?=date('H시 i분 A')?></div>
 			</div>
 		</div>
 		<div class='travel_2_right_banner'>
@@ -77,8 +74,10 @@
 				$banner_image = ms::meta( 'travel2banner_right' );
 				if ( $banner_image ) {
 					echo "<a href='$url' target='_blank'><img src='".$banner_url.$banner_image."'></a>";
-				} 
-				?>
+				}
+				else {?>
+					<a href='javascript:void(0)' ><img src='<?=x::url_theme()?>/img/no_side_banner.png'></a>
+				<?}?>
 		</div>
 	</div>
 	<div style='clear:both;'></div>
@@ -87,7 +86,7 @@
 <div class='lower-posts'>
 	<div class='travel_left_posts'>		
 		<?
-		$latest_bo_table = ms::board_id(etc::domain()).'_1';
+		$latest_bo_table = ms::board_id(etc::domain()).'_4';
 		if(g::forum_exist($latest_bo_table)){	
 			$latest_1_output = latest("x-latest-travel-lower-posts", $latest_bo_table, 4, 20, $cache_time=1, x::url_theme()."/img/folded-paper.png");
 			echo $latest_1_output;
@@ -96,7 +95,7 @@
 	</div>
 	<div class='travel_middle_posts'>		
 		<?
-		$latest_bo_table = ms::board_id(etc::domain()).'_2';
+		$latest_bo_table = ms::board_id(etc::domain()).'_5';
 		if(g::forum_exist($latest_bo_table)){	
 			$latest_1_output = latest("x-latest-travel-lower-posts", $latest_bo_table, 4, 20, $cache_time=1, x::url_theme()."/img/folded-paper.png");
 			echo $latest_1_output;
@@ -105,7 +104,7 @@
 	</div>
 	<div class='travel_right_posts'>		
 		<?
-		$latest_bo_table = ms::board_id(etc::domain()).'_3';
+		$latest_bo_table = ms::board_id(etc::domain()).'_6';
 		if(g::forum_exist($latest_bo_table)){	
 			$latest_1_output = latest("x-latest-travel-lower-posts", $latest_bo_table, 4, 20, $cache_time=1, x::url_theme()."/img/folded-paper.png");
 			echo $latest_1_output;

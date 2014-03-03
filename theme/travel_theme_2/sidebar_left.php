@@ -29,8 +29,10 @@ for ( $i = 1 ; $i <= 10; $i++ ) {
 	$banner_image = ms::meta( 'travel2banner1_sidebar' );
 	if ( $banner_image ) {
 		echo "<a href='$url' target='_blank'><img src='".$banner_url.$banner_image."'></a>";
-	} 
-	?>
+	}
+	else {?>
+		<a href='javascript:void(0)' ><img src='<?=x::url_theme()?>/img/no_side_banner.png'></a>
+	<?}?>
 </div> 
 
 <div class='exchange-rate-wrapper'>
