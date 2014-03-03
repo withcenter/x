@@ -41,7 +41,6 @@
 .travel-theme-top-wrapper #menu-top-left .inner ul li, .travel-theme-top-wrapper #menu-top-right .inner ul li{
 	float: left;
 	margin-right: 10px;
-
 }
 
 .travel-theme-top-wrapper #menu-top-left .inner ul li.last-menu, .travel-theme-top-wrapper #menu-top-right .inner ul li.last-menu{
@@ -114,6 +113,10 @@
 
 .main-menu li  a:hover {
 	text-decoration: none;
+	background: #1b97b3;
+}
+
+.main-menu li.selected {
 	background: #1b97b3;
 }
 
