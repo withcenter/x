@@ -4,7 +4,11 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 ?>
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
 <div class='community_images_with_captions'>
-		<div class='title'><img src='<?=$latest_skin_url?>/img/icon.png'/> <?=$bo_subject?></div>
+		<div class='title'>
+			<img src='<?=$latest_skin_url?>/img/icon.png'/> <?=$bo_subject?>
+			<a class='more-button' href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$bo_table?>'>자세히</a>
+			<div style='clear:right;'></div>
+		</div>
 <?php
 	if ( $list ) {
 		foreach( $list as $li ) {
