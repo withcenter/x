@@ -43,6 +43,7 @@
 /**EXCHANGE RATE*/
 .layout .left .exchange-rate-wrapper {
 	border: solid 1px #d1d1d1;
+	height:168px;
 }
 
 .layout .left .exchange-rate-wrapper .title {
