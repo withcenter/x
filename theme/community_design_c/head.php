@@ -38,11 +38,11 @@
 				<a class='<?=$in_home_page?>' href='<?=g::url()?>'>홈</a><?=$do_log?><?=$profile?>
 				<? if ( $menu_row1['bo_subject'] ) {?>
 					
-					<a page = '<?=ms::meta('forum_no_6')?>' href='<?=G5_BBS_URL?>/board.php?bo_table=<?=ms::meta('forum_no_6')?>'><?=$menu_row1['bo_subject']?></a>
+					<a page = '<?=ms::meta('forum_no_6')?>' href='<?=G5_BBS_URL?>/board.php?bo_table=<?=ms::meta('forum_no_6')?>'><?=cut_str($menu_row1['bo_subject'],15,'...')?></a>
 				<? }?>
 				<? if ( $menu_row2['bo_subject'] ) {?>
 					
-					<a page = '<?=ms::meta('forum_no_7')?>' href='<?=G5_BBS_URL?>/board.php?bo_table=<?=ms::meta('forum_no_7')?>'><?=$menu_row2['bo_subject']?></a>
+					<a page = '<?=ms::meta('forum_no_7')?>' href='<?=G5_BBS_URL?>/board.php?bo_table=<?=ms::meta('forum_no_7')?>'><?=cut_str($menu_row2['bo_subject'],15,'...')?></a>
 				<? }?>
 			</div>
 			
