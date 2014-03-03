@@ -20,8 +20,9 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 						<?						
 							$imgsrc = get_list_thumbnail($bo_table, $li['wr_id'], 161, 108);							
 							if ( empty($imgsrc['src']) )  $imgsrc['src'] = null;
-														
-							$img = "<img src='$imgsrc[src]'/>";						
+							if( $imgsrc['src'] ) $img = "<img src='$imgsrc[src]'/>";
+							else $img = null;
+							
 							echo "<div class='img-wrapper'><a href='$li[href]'>".$img."</a></div>";
 							
 							if( $li['wr_1'] ) $product_name = conv_subject( $li['wr_1'], 20, '...' );
