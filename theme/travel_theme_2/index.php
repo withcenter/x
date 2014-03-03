@@ -30,58 +30,58 @@
 				}
 			?>
 		</div>
-
-<div class='travel_images_with_caption_wrapper'>
-	<?
-	$latest_bo_table = ms::board_id(etc::domain()).'_2';
-	if(g::forum_exist($latest_bo_table)){	
-		$latest_1_output = latest("x-travel_2_images_with_caption", $latest_bo_table, 6, 20);
-		echo $latest_1_output;
-	}
-	?>
-</div>
-
-
-<div class='right-widgets'>
-	<div class='travel_posts_with_image_right'>
-	<?
-	$latest_bo_table = ms::board_id(etc::domain()).'_2';
-	if(g::forum_exist($latest_bo_table)){	
-		$latest_2_output = latest("x-travel_2_posts_with_image_right", $latest_bo_table, 3, 50, $cache_time=1, x::url_theme()."/img/chat_icon2.png");
-		echo $latest_2_output;
-	}
-	?>
+<div class ='main-content'>
+	<div class='travel_images_with_caption_wrapper'>
+		<?
+		$latest_bo_table = ms::board_id(etc::domain()).'_2';
+		if(g::forum_exist($latest_bo_table)){	
+			$latest_1_output = latest("x-travel_2_images_with_caption", $latest_bo_table, 6, 20);
+			echo $latest_1_output;
+		}
+		?>
 	</div>
-	<div class='travel_2_timezone'>
-		<div class='header'><img src='<?=x::url_theme()?>/img/earth.png'/><span class='title'>TIMEZONE</span></div>
-		<div class='timezones'>
-			<?
-			$old_timezone = date_default_timezone_get();
-			date_default_timezone_set("Asia/Manila");
-			?>
-			Philippines
-			<br/>			
-			<?=date('Y m d A h:i:s')?>
-			<?date_default_timezone_set($old_timezone);?>
-			<br>
-			Korea
-			<br/>			
-			<?=date('Y m d A h:i:s')?>
+
+
+	<div class='right-widgets'>
+		<div class='travel_posts_with_image_right'>
+		<?
+		$latest_bo_table = ms::board_id(etc::domain()).'_2';
+		if(g::forum_exist($latest_bo_table)){	
+			$latest_2_output = latest("x-travel_2_posts_with_image_right", $latest_bo_table, 3, 50, $cache_time=1, x::url_theme()."/img/chat_icon2.png");
+			echo $latest_2_output;
+		}
+		?>
+		</div>
+		<div class='travel_2_timezone'>
+			<div class='header'><img src='<?=x::url_theme()?>/img/earth.png'/><span class='title'>TIMEZONE</span></div>
+			<div class='timezones'>
+				<?
+				$old_timezone = date_default_timezone_get();
+				date_default_timezone_set("Asia/Manila");
+				?>
+				Philippines
+				<br/>			
+				<?=date('Y m d A h:i:s')?>
+				<?date_default_timezone_set($old_timezone);?>
+				<br>
+				Korea
+				<br/>			
+				<?=date('Y m d A h:i:s')?>
+			</div>
+		</div>
+		<div class='travel_2_right_banner'>
+				<?
+				$banner_url = ms::meta('img_url');
+				$url = ms::meta('travel2banner_right_text1');
+				$banner_image = ms::meta( 'travel2banner_right' );
+				if ( $banner_image ) {
+					echo "<a href='$url' target='_blank'><img src='".$banner_url.$banner_image."'></a>";
+				} 
+				?>
 		</div>
 	</div>
-	<div class='travel_2_right_banner'>
-			<?
-			$banner_url = ms::meta('img_url');
-			$url = ms::meta('travel2banner_right_text1');
-			$banner_image = ms::meta( 'travel2banner_right' );
-			if ( $banner_image ) {
-				echo "<a href='$url' target='_blank'><img src='".$banner_url.$banner_image."'></a>";
-			} 
-			?>
-	</div>
+	<div style='clear:both;'></div>
 </div>
-<div style='clear:both; margin-bottom:10px;'></div>
-
 
 <div class='lower-posts'>
 	<div class='travel_left_posts'>		
