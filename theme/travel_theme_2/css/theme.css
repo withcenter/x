@@ -236,12 +236,14 @@
 	vertical-align: top;
 }
 
-.travel_theme2_header > .header_wrapper .header-logo {
+.travel_theme2_header > .header_wrapper #header-logo {
 	float: left;
+	height: 57px;
 }
 
-.travel_theme2_header > .header_wrapper .header-logo img {
-	width: 100%;
+.travel_theme2_header > .header_wrapper #header-logo img {
+	height: 100%;
+	
 }
 
 .travel_theme2_header > .header_wrapper .search-bar {
