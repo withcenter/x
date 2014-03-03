@@ -209,20 +209,7 @@
 			<div class='title'>왼쪽 사이트 배너 URL</div>
 			<input type='text' name='travel2banner1_sidebar_text1' value='<?=ms::meta('travel2banner1_sidebar_text1')?>'>
 		</td>
-		<td>
-			<div class='image-title'>오른쪽 사이드 배너</div>
-			<div class='image-upload'>
-			<?if( ms::meta('travel2banner4_sidebar') ) {?><img src="<?=ms::meta('img_url').ms::meta('travel2banner4_sidebar')?>" width=280px height=160px><br><?}?>
-			<input type='file' name='travel2banner4_sidebar'>
-			<?if( ms::meta('travel2banner4_sidebar') != '' ) { ?>
-				<input type='hidden' name='travel2banner4_sidebar_remove' value='n'>
-				<input type='checkbox' name='travel2banner4_sidebar_remove' value='y'><span class='title-small'>이미지 제거</span>
-			<?}?>
-			<div class='title'>오른쪽 사이드 배너 URL</div>
-			<input type='text' name='travel2banner4_sidebar_text1' value='<?=ms::meta('travel2banner4_sidebar_text1')?>'>
-		</td>
-	</tr>
-	<tr valign='top'>
+
 		<td>
 			<div class='image-title'>RIGHT BANNER</div>
 			<div class='image-upload'>
@@ -235,6 +222,9 @@
 			<div class='title'>RIGHTBANNER URL</div>
 			<input type='text' name='travel2banner_right_text1' value='<?=ms::meta('travel2banner_right_text1')?>'>
 		</td>
+
+	</tr>
+	<tr valign='top'>
 		<td>
 			<div class='image-title'>BOTTOM BANNER</div>
 			<div class='image-upload'>
