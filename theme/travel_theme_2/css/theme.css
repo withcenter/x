@@ -125,8 +125,8 @@
 /**floating-bar******/
 .floating-bar{
 	position:absolute;
-	right:90px;
-	top:147px;	
+	right:-100px;
+	top:0;	
 }
 
 .floating-bar .float-image-wrapper{

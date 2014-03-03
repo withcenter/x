@@ -40,13 +40,15 @@
 	}
 	?>
 </div>
+
+
 <div class='right-widgets'>
 	<div class='travel_posts_with_image_right'>
 	<?
 	$latest_bo_table = ms::board_id(etc::domain()).'_2';
 	if(g::forum_exist($latest_bo_table)){	
-		$latest_1_output = latest("x-travel_2_posts_with_image_right", $latest_bo_table, 3, 50, $cache_time=1, x::url_theme()."/img/chat_icon2.png");
-		echo $latest_1_output;
+		$latest_2_output = latest("x-travel_2_posts_with_image_right", $latest_bo_table, 3, 50, $cache_time=1, x::url_theme()."/img/chat_icon2.png");
+		echo $latest_2_output;
 	}
 	?>
 	</div>
@@ -75,6 +77,8 @@
 	</div>
 </div>
 <div style='clear:both;'></div>
+
+
 <div class='lower-posts'>
 	<div class='travel_left_posts'>		
 		<?
@@ -104,5 +108,3 @@
 		?>
 	</div>
 </div>
-﻿
-

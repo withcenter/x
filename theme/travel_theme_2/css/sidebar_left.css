@@ -33,16 +33,19 @@
 .layout .left .banner-left {
 	border: solid 1px #bbbbbb;
 	margin-bottom: 10px;
+	height: 88px;
+	overflow: hidden;
 }
 
 .layout .left .banner-left img {
 	width: 100%;
-	height: 88px;
+
 }
 
 /**EXCHANGE RATE*/
 .layout .left .exchange-rate-wrapper {
 	border: solid 1px #d1d1d1;
+	height:168px;
 }
 
 .layout .left .exchange-rate-wrapper .title {

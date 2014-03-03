@@ -1,10 +1,23 @@
 		</div> <!-- container -->
-<div style='clear:both;'></div>
+<div style='clear:both; margin-bottom:10px;'></div>
+		<div class='foot_banner'>
+		<?
+			if( ms::meta('travel2banner_bottom') ) $img = "<img src = '".ms::meta('img_url').ms::meta('travel2banner_bottom')."'/>";
+			else $img = null;
+		?>
+		<?=$img?>
+	</div>
+	
 </div>
-<div class='footer-wrapper'>
+<div class='footer-wrapper'>	
 	<div class='footer'>
 		<div class='footer-logo'>
 		<img src='<?=ms::meta('img_url').ms::meta('footer_logo')?>' />
+
+		<?php
+			//$footer_thumb = g::thumbnail_from_image_tag( "<img src='".ms::meta('img_url').ms::meta('footer_logo')."'>", ms::board_id( etc::domain() ).'_1', 100, 90 );
+		?>
+		<img src='<?=$footer_thumb?>' />
 		</div>
 		<div class='footer-info'>
 			<div class='footer-tagline'>
