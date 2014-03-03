@@ -1,15 +1,21 @@
 <ul id="comm3_main_menu">		
 	
 	<?
-		if( ms::admin() ) {
-			$max_menus = 6;
+		for( $count = 1; $count <=7; $count++ ){
+			if( ms::meta('menu_'.$count) ) $total_menus++;
 		}
-		else $max_menus = 7;
+		
+		if( ms::admin() ) {
+			$max_menus = 6;			
+		}
+		else $max_menus = 7;		
 	?>
 	
-	<? for ( $i = 1; $i <= $max_menus; $i++ ) { 
-		if( $i == $max_menus )$no_margin = 'no-margin';
-		else $no_margin = null;
+	<? for ( $i = 1; $i <= $total_menus; $i++ ) {
+		if( !ms::admin() ){
+			if( $i == $total_menus)$no_margin = 'no-margin';
+			else $no_margin = null;
+		}
 	?>
 	<? if ( ms::meta('menu_'.$i) ) { 
 		$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('menu_'.$i)."'");
@@ -34,7 +40,11 @@
 
 <script>
 	$(function(){				
-		if( '<?=$in['bo_table']?>' != '' ) $(".comm3_menu[page='<?=$in['bo_table']?>']").addClass("selected");
-		else if( '<?=$in['module']?>' ) $(".comm3_menu[page='admin-menu']").addClass("selected");		
+		if( '<?=$in['bo_table']?>' != '' ){
+			$(".comm3_menu[page='<?=$in['bo_table']?>']").addClass("selected");
+			$(".top .inner .left a[page='<?=$in['bo_table']?>']").addClass("selected");
+		}
+		else if( '<?=$in['module']?>' ) $(".comm3_menu[page='admin-menu']").addClass("selected");
+		//else $(".top .inner .left .home").addClass("selected");
 	});
 </script>

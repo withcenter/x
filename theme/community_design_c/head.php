@@ -14,29 +14,42 @@
 	<div class='top'>
 		<div class='inner'>
 			<? if ( $member['mb_id'] ) {
+				if( $_SERVER['REQUEST_URI'] == "/".G5_BBS_DIR."/register_form.php" ) $in_register_page = 'selected';
+				else $in_register_page = null;
+			
 				$do_log = "<a href='".G5_BBS_URL."/logout.php'>로그아웃</a>";
-				$profile = "<a href='".G5_BBS_URL."/member_confirm.php?url=register_form.php'>회원정보수정</a>";
+				$profile = "<a class = '".$in_register_page."' href='".G5_BBS_URL."/member_confirm.php?url=register_form.php'>회원정보수정</a>";
 			} 
 				else {
-				$do_log = "<a href='".G5_BBS_URL."/login.php'>로그인</a>";
-				$profile = "<a href='".G5_URL."/".G5_BBS_DIR."/register.php'>회원가입</a>";
+				if( $_SERVER['REQUEST_URI'] == "/".G5_BBS_DIR."/login.php" ) $in_login_page = 'selected';
+				else $in_login_page = null;
+			
+				if( $_SERVER['REQUEST_URI'] == "/".G5_BBS_DIR."/register.php" ) $in_register_page = 'selected';
+				else $in_register_page = null;
+				
+				$do_log = "<a class = '".$in_login_page."' href='".G5_BBS_URL."/login.php'>로그인</a>";
+				$profile = "<a class ='".$in_register_page."'href='".G5_URL."/".G5_BBS_DIR."/register.php'>회원가입</a>";
 			}?>
+			<?
+				if( $_SERVER['REQUEST_URI'] == "/" ) $in_home_page = 'selected';
+				else $in_home_page = null;
+			?>
 			<div class='left'>
-				<a href='<?=g::url()?>'>홈</a><span class="dot">•</span><?=$do_log?><span class="dot">•</span><?=$profile?>
+				<a class='<?=$in_home_page?>' href='<?=g::url()?>'>홈</a><?=$do_log?><?=$profile?>
 				<? if ( $menu_row1['bo_subject'] ) {?>
-					<span class="dot">•</span>
-					<a href='<?=G5_BBS_URL?>/board.php?bo_table=<?=ms::meta('forum_6')?>'><?=$menu_row1['bo_subject']?></a>
+					
+					<a page = '<?=ms::meta('forum_no_6')?>' href='<?=G5_BBS_URL?>/board.php?bo_table=<?=ms::meta('forum_no_6')?>'><?=$menu_row1['bo_subject']?></a>
 				<? }?>
 				<? if ( $menu_row2['bo_subject'] ) {?>
-					<span class="dot">•</span>
-					<a href='<?=G5_BBS_URL?>/board.php?bo_table=<?=ms::meta('forum_7')?>'><?=$menu_row2['bo_subject']?></a>
+					
+					<a page = '<?=ms::meta('forum_no_7')?>' href='<?=G5_BBS_URL?>/board.php?bo_table=<?=ms::meta('forum_no_7')?>'><?=$menu_row2['bo_subject']?></a>
 				<? }?>
 			</div>
 			
 			<div class='right'>
 				<? if ( !$com3_contact_number = ms::meta('com3contact_num') ) $com3_contact_number = '+82 070 7529 1749'?>
 				<a href='javascript:void(0)'>전화번호: <?=$com3_contact_number?></a>
-				<span class="dot">•</span>
+				
 				<a href='<?=g::url()?>?device=mobile'>모바일</a>
 			</div>
 			
@@ -70,7 +83,7 @@
 							<input type="text" name="stx" id="comm3_search_text" maxlength="20" placeholder='Search' autocomplete='off'>
 						</td>
 						<td width=40>				
-							<input type="image" src="<?=x::url_theme()?>/img/search.png" id="comm3_search_submit">
+							<input type="image" src="<?=x::url_theme()?>/img/search2.png" id="comm3_search_submit">
 						</td>
 					</tr></table>
 				</form>
