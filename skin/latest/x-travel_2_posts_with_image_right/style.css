@@ -24,7 +24,7 @@
 	border:1px solid  #cccccc;
 	height:38px;
 	width:38px;	
-} 
+}
 
 .travel_2_timed_list_with_image  .travel_2_image .no-image{
 	border:3px solid #e5e5e5;
@@ -45,6 +45,10 @@
 	height:30px;
 	overflow:hidden;	
 	line-height:15px;	
+}
+
+.travel_2_timed_list_with_image .travel_2_subject a{
+	text-decoration:none;
 }
 
 .travel_2_timed_list_with_image  td{

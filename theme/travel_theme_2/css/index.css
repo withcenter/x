@@ -1,44 +1,89 @@
 .travel_images_with_caption_wrapper{
 	border:1px solid #bbbbbb;	
-	height:608px;
+	height:417px;
+	width:528px;
+	float:left;
+	margin-bottom:10px;
 }
 
-.travel_posts_with_image_right{
+.right-widgets{
+	width:210px;
+	float:left;
+	margin-bottom:10px;
+}
+
+.right-widgets .travel_posts_with_image_right{
 	border:1px solid #bbbbbb;
 	margin:0 0 10px 10px;
-	height:329px;
+	height:208px;
+	width:208px;
 }
 
-.travel_2_timezone{
+.right-widgets .travel_2_timezone{
 	border:1px solid #bbbbbb;
-	margin:0 0 10px 10px;
-	padding:10px;
-	height:77px;
+	margin:0 0 10px 10px;	
+	height:97px;
+	width:208px;
 }
 
-.travel_2_timezone .header{	
-	margin:0 0 10px 0;	
+.right-widgets .travel_2_timezone .header{	
+	padding:10px 8px 9px 8px;
+	border-bottom:1px solid #bbbbbb;
 }
 
-.travel_2_timezone .header img{	
+.right-widgets .travel_2_timezone .header img{	
 	position:relative;
 	top:-2px;
 }
 
-.travel_2_timezone .header .title{	
+.right-widgets .travel_2_timezone .header .title{	
 	display:inline-block;
 	margin:0 0 0 8px;
 }
 
-.travel_2_right_banner{
-	height:158px;
+.right-widgets .travel_2_timezone .timezones{
+	padding:10px;
+	font-size:.8em;	
+}
+
+.right-widgets .travel_2_right_banner{
+	height:88px;
 	border:1px solid #bbbbbb;
 	background-color:#e6e6e6;
-	width:210px;
+	width:208px;
 	margin-left:10px;
 	overflow:hidden;
 }
 
-.travel_2_right_banner img{
+.right-widgets .travel_2_right_banner img{
 	width:100%;
+}
+
+/*****************************/
+.lower-posts{
+	margin-bottom:10px;	
+}
+
+.lower-posts .travel_left_posts{	
+	width:260px;
+	float:left;
+	height:168px;
+}
+
+.lower-posts .travel_middle_posts{
+	margin-left:10px;	
+	width:260px;
+	float:left;
+	height:168px;
+}
+
+.lower-posts .travel_right_posts{	
+	margin-left:10px;
+	width:210px;
+	float:left;
+	height:168px;
+}
+
+.travel_right_posts .travel_lower_post_title .board_subject{
+	width:100px;
 }
