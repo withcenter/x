@@ -33,11 +33,13 @@
 .layout .left .banner-left {
 	border: solid 1px #bbbbbb;
 	margin-bottom: 10px;
+	height:88px;
+	overflow:hidden;
+	background-color:#e6e6e6;
 }
 
 .layout .left .banner-left img {
-	width: 100%;
-	height: 88px;
+	width: 100%;	
 }
 
 /**EXCHANGE RATE*/

@@ -70,10 +70,17 @@
 		</div>
 	</div>
 	<div class='travel_2_right_banner'>
-		<?php
-			$right_thumb = g::thumbnail_from_image_tag( "<img src='".ms::meta('img_url').ms::meta('travel2banner_right')."'>", ms::board_id( etc::domain() ).'_1', 208, 88 );
-		?>
-		<img src='<?=$right_thumb?>' />
+		
+			<?
+			$banner_url = ms::meta('img_url');
+				$url = ms::meta('travel2banner1_sidebar_text1');
+				if ( $banner_image = ms::meta( 'travel2banner_right' )) {
+					$banner_img = g::thumbnail_from_image_tag( "<img src='".$banner_url.$banner_image."'>", ms::board_id( etc::domain() ).'_1', 208, 88 );
+					$banner_left = "<a href='$url' target='_blank'><img src='".$banner_img."'></a>";
+				} else $banner_left = null;
+				
+				echo $banner_left;
+			?>
 	</div>
 </div>
 <div style='clear:both;'></div>
