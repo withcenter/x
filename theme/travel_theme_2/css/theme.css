@@ -11,18 +11,15 @@
 	width: 970px;
 	margin: 0 auto;
 }
-.travel-theme-top-wrapper .inner .search-bar  {
-	float: right;
-}
-.travel-theme-top-wrapper .inner .search-bar input[type='text'] {
-	border: 0;
-	border-top: 1px solid #24accb;
-	border-left: 1px solid #24accb;
-	height: 38px;
-	line-height: 38px;
+
+.search-bar input[type='text'] {
+	border: 3px solid #0e5565;
+	border-right: 0;
+	height: 39px;
+	line-height: 39px;
 	position: relative;
 	left: 4px;
-	width: 323px;
+	width: 319px;
 	padding: 0 10px;
 }
 
@@ -50,67 +47,69 @@
 	margin-right: 0;
 }
 
-/* logo_menu.php */
+/* menu.php */
 .travel_theme2_header > .header_wrapper  {
-	padding-top: 17px;
+	padding: 10px 0;
 }
-.travel_theme2_header > .header_wrapper > .logo {
-	float: left;
-}
-.travel_theme2_header > .header_wrapper > .top-menu {
+
+ .top-menu {
 	list-style: none;
 	padding: 0;
 	margin: 0 0 22px 0;
 	float: right;	
 }
-.travel_theme2_header > .header_wrapper > .middle-menu {
+
+.main-menu-wrapper  {
+	height: 45px;
+	margin-bottom: 10px;
+}
+.main-menu {
+	width: 970px;
+	margin: auto;
+}
+ .main-menu ul {
 	list-style:none;
 	padding: 0;
 	margin: 0;
 }
-.travel_theme2_header > .header_wrapper > .middle-menu li {
+ .main-menu li {
 	display: block;
 	float: left;
 	margin-right: 45px;
 }
-.travel_theme2_header > .header_wrapper > .middle-menu li  a {
+.main-menu li  a {
 	font-size: 12pt;
 	font-family: '맑은 고딕', AppleGothic;
-	color: #333333;
+	color: #ffffff;
 	display: inline-block;
-	border-bottom: 2px solid transparent;
-	padding: 0 8px 5px 8px;
-	
+	padding: 10px 8px;
 }
 
-.travel_theme2_header > .header_wrapper > .middle-menu li:last-child {
+.main-menu li.last-item {
 	margin-right: 0;
 }
 
-.travel_theme2_header > .header_wrapper > .middle-menu li  a:hover {
+.main-menu li  a:hover {
 	text-decoration: none;
-	border-bottom: 2px solid #a6ddea;
 }
 
-.travel_theme2_header > .header_wrapper > .top-menu li {
+.top-menu li {
 	border: 1px solid #0e5565;
 	border-right: 0;
 	display: block;
 	float: left;
 }
-.travel_theme2_header > .header_wrapper > .top-menu li:last-child {
-	border-right: 1px solid #0e5565;
-}
-.travel_theme2_header > .header_wrapper > .top-menu li > .inner {
+
+.top-menu li > .inner {
 	border-left: 1px solid #88ceda;
 	border-top: 1px solid #b5e3eb;
 	background-color: #16859e;
 }
-.travel_theme2_header > .header_wrapper > .top-menu li > .inner :hover {
+.top-menu li > .inner :hover {
 	background-color: #24abc2; 
 }
 
-.travel_theme2_header > .header_wrapper > .top-menu li > .inner a {
+.top-menu li > .inner a {
 	display: inline-block;
 	height: 37px;
 	line-height: 35px;
@@ -119,7 +118,7 @@
 	font-size: 9pt;
 	font-family: '맑은 고딕', AppleGothic;
 }
-.travel_theme2_header > .header_wrapper > .top-menu li > .inner a:hover {
+.top-menu li > .inner a:hover {
 	text-decoration: none;
 }
 /**floating-bar******/
@@ -187,7 +186,25 @@
 	width: 100%;
 }
 
+
 .travel_theme2_header > .header_wrapper {
 	width: 970px;
 	margin: 0 auto;
+}
+
+.travel_theme2_header > .header_wrapper > div {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.travel_theme2_header > .header_wrapper .header-logo {
+	float: left;
+}
+
+.travel_theme2_header > .header_wrapper .header-logo img {
+	width: 100%;
+}
+
+.travel_theme2_header > .header_wrapper .search-bar {
+	float: right;
 }
