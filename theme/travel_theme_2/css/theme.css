@@ -23,6 +23,7 @@
 	padding: 0 10px;
 }
 
+
 .travel-theme-top-wrapper #menu-top-left .inner ul, .travel-theme-top-wrapper #menu-top-right .inner ul {
 	margin: 0;
 	margin: 0;
@@ -40,9 +41,10 @@
 }
 
 .travel-theme-top-wrapper #menu-top-left .inner ul li, .travel-theme-top-wrapper #menu-top-right .inner ul li{
-	float: left;
-	margin-right: 10px;
+	display: inline-block;
+
 }
+
 
 .travel-theme-top-wrapper #menu-top-left .inner ul li.last-menu, .travel-theme-top-wrapper #menu-top-right .inner ul li.last-menu{
 	margin-right: 0;
@@ -50,6 +52,13 @@
 
 .travel-theme-top-wrapper #menu-top-left .inner ul li a, .travel-theme-top-wrapper #menu-top-right .inner ul li a{
 	text-decoration: none;
+	border-left: solid 1px #000000;
+	padding: 0 10px;
+}
+
+
+.travel-theme-top-wrapper #menu-top-left .inner ul li.first-item a, .travel-theme-top-wrapper #menu-top-right .inner ul li.first-item a{
+	border-left: 0;
 }
 
 /* menu.php */
