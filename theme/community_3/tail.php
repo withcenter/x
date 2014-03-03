@@ -8,7 +8,10 @@
 			<div class='copyright'>
 				<div class='inner'>					
 						<div class='text-info'>						
-						COPYRIGHT © 2014 ALL RIGHT RESERVED BY DOMAIN.COM
+							<? 
+								if ( $footer_text = ms::meta('footer_text') ) echo $footer_text; 
+								else echo "어드민 페이지에서 하단 문구를 입력해 주세요";
+							?>
 						</div>
 				</div>
 			</div>
