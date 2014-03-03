@@ -1,5 +1,7 @@
 .footer{
 	width:100%;		
+	margin-top:100px;
+	background-color:#cccccc;
 }
 
 .footer .copyright{
@@ -19,9 +21,38 @@
 	top:19px;
 }
 
-.footer .copyright .inner .text-info{
-	margin-top:100px;
+.footer .copyright .inner .text-info{	
 	color:#404040;
 	text-align:center;
 	padding:26px 0 27px 0;
+}
+
+ul#footer-menu{
+	padding:0;
+	margin:0;
+	text-decoration:none;
+	background-color:#cccccc;
+	max-width:970px;
+	margin:auto;
+}
+
+ul#footer-menu li{	
+	display:inline-block;
+	border-left:1px solid #afafaf;	
+	padding:3px 10px 4px 10px;
+	margin: 5px 0;
+	font-size:.8em;
+}
+
+ul#footer-menu li.last-menu{	
+	border-right:1px solid #afafaf;	
+}
+
+ul#footer-menu li[page='admin-menu']{	
+	border-right:1px solid #afafaf;	
+}
+
+ul#footer-menu li a{	
+	text-decoration:none;
+	color:#737373;
 }

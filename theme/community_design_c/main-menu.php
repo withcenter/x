@@ -44,7 +44,6 @@
 			$(".comm3_menu[page='<?=$in['bo_table']?>']").addClass("selected");
 			$(".top .inner .left a[page='<?=$in['bo_table']?>']").addClass("selected");
 		}
-		else if( '<?=$in['module']?>' ) $(".comm3_menu[page='admin-menu']").addClass("selected");
-		//else $(".top .inner .left .home").addClass("selected");
+		else if( '<?=$in['module']?>' ) $(".comm3_menu[page='admin-menu']").addClass("selected");		
 	});
 </script>
