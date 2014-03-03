@@ -71,31 +71,54 @@
 .main-menu {
 	width: 970px;
 	margin: auto;
+	overflow: hidden;
 }
  .main-menu ul {
 	list-style:none;
 	padding: 0;
 	margin: 0;
+	overflow: hidden;
 }
  .main-menu li {
 	display: block;
 	float: left;
-	margin-right: 45px;
 }
+
+.main-menu li.first-item {
+	padding-left: 1px;
+}
+
+.main-menu li.first-item .inner {
+	padding-left: 1px;
+}
+
+.main-menu li .inner {
+	border: solid 1px #0e5565;
+
+}
+
 .main-menu li  a {
 	font-size: 12pt;
 	font-family: '맑은 고딕', AppleGothic;
 	color: #ffffff;
 	display: inline-block;
-	padding: 10px 8px;
+	padding: 11px 22px;
+	border-left: solid 1px #83cbd8;
 }
 
 .main-menu li.last-item {
 	margin-right: 0;
+	padding-right: 1px;
+	border-right: solid 1px #83cbd8;
 }
 
 .main-menu li  a:hover {
 	text-decoration: none;
+	background: #1b97b3;
+}
+
+.main-menu li.selected {
+	background: #1b97b3;
 }
 
 .top-menu li {
@@ -214,4 +237,5 @@
 
 .travel_theme2_header > .header_wrapper .search-bar {
 	float: right;
+	margin-top: 5px;
 }
