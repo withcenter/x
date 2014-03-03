@@ -30,9 +30,11 @@
 }
 
 .right-widgets .travel_2_timezone .header{	
-	padding:10px 8px 9px 8px;
+	padding:0 8px;
 	border-bottom:1px solid #bbbbbb;
 	background-color:#fcfcfc;
+	height: 28px;
+	line-height: 28px;
 }
 
 .right-widgets .travel_2_timezone .header img{	
@@ -40,9 +42,10 @@
 	top:-2px;
 }
 
-.right-widgets .travel_2_timezone .header .title{	
+.right-widgets .travel_2_timezone > .header .title{	
 	display:inline-block;
 	margin:0 0 0 8px;
+
 }
 
 .right-widgets .travel_2_timezone .timezones{
@@ -54,7 +57,7 @@
 	color: #444444;
 }
 .right-widgets .travel_2_timezone .timezones > .first-row {
-	margin: 5px 0; 
+	margin: 7px 0; 
 }
 .right-widgets .travel_2_timezone .timezones .sub-item {
 	
@@ -90,6 +93,7 @@
 	width:260px;
 	float:left;
 	height:168px;
+	margin-bottom: 2px;
 }
 
 .lower-posts .travel_middle_posts{

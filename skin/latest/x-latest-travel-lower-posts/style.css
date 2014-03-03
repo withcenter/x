@@ -1,14 +1,15 @@
 .travel_lower_post{
 	border:1px solid #bbbbbb;
 	height:100%;	
-	line-height:14px;
 }
 
 .travel_lower_post_title{
 	font-weight:bold;
-	padding:8px 10px 4px 10px;
+	padding:0 10px;
 	border-bottom:1px solid #bbbbbb;
 	background-color:#fafafa;
+	height: 28px;
+	line-height: 28px;
 }
 
 .travel_lower_post_title .board_subject{
@@ -21,15 +22,15 @@
 .travel_lower_post_title  a{
 	font-weight:normal;
 	color:#808080;
-	font-size:.8em;
+	font-size: 9pt;
 	float:right;
-	margin:3px 10px 0 0;
+	margin-top: 2px;
 	text-decoration:none;
 }
 
 .travel_lower_post_title .icon{
 	position:relative;
-	top:-5px;
+	top: -11px;
 	margin-right:2px;
 }
 
