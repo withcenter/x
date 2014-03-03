@@ -18,15 +18,14 @@
 						else $first_image = '';
 						echo "<div class='banner-image image_num_$i $first_image'>";
 						if ( !$url = ms::meta('travel2banner_'.$i.'_text2') )  $url = "javascript:void(0)";
-						$thumb = g::thumbnail_from_image_tag( "<img src='".$banner_url.$banner_image."'>", ms::board_id( etc::domain() ).'_1', 748, 238 );
-						echo "<a href='$url' target='_blank'><img src='".$thumb."'>";
+						echo "<a href='$url' target='_blank'><img src='".$banner_url.$banner_image."'>";
 						echo "<p class='banner-text'><span class='banner-content'>".cut_str(strip_tags(ms::meta('travel2banner_'.$i.'_text1')),60,'...')."</span></p>";
 						echo "<div class='banner-more'>자세히</div>";
 						echo "</a></div>";
 					}
 				}
 				else {
-					echo "<img src='".x::url_theme()."/img/no_image_banner1.png' />";
+					echo "<img src='".x::url_theme()."/img/no-main-banner.png' />";
 				}
 			?>
 		</div>
