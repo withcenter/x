@@ -1,5 +1,5 @@
 <?php
-	include 'head.php';
+	include_once 'head.php';
 	include 'content.php';
 
 	
