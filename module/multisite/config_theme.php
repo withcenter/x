@@ -37,7 +37,10 @@
 				include $path;
 				$name = $theme_config['name'];
 				if ( empty($name) ) continue;
-				if ( $theme_config['type'] != 'subsite' ) continue;
+				
+				$type = explode(',', $theme_config['type']);
+				if ( ! in_array( 'subsite', $type ) ) continue;
+				
 				
 				$url = x::url().'/theme/'.$dir.'/preview.jpg';
 				if( preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower(ms::meta('theme'))) != preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower($dir)) ) { ?>
