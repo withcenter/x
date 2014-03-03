@@ -6,7 +6,6 @@
 			}
 		}
 	?>
-	<div style='padding: 9px; border: solid 1px #bbbbbb; margin-bottom:10px;'>
 		<div class='banner'>
 			<?
 				if ( $has_images ) {
@@ -19,7 +18,7 @@
 						else $first_image = '';
 						echo "<div class='banner-image image_num_$i $first_image'>";
 						if ( !$url = ms::meta('travel2banner_'.$i.'_text2') )  $url = "javascript:void(0)";
-						$thumb = g::thumbnail_from_image_tag( "<img src='".$banner_url.$banner_image."'>", ms::board_id( etc::domain() ).'_1', 730, 220 );
+						$thumb = g::thumbnail_from_image_tag( "<img src='".$banner_url.$banner_image."'>", ms::board_id( etc::domain() ).'_1', 748, 238 );
 						echo "<a href='$url' target='_blank'><img src='".$thumb."'>";
 						echo "<p class='banner-text'><span class='banner-content'>".cut_str(strip_tags(ms::meta('travel2banner_'.$i.'_text1')),60,'...')."</span></p>";
 						echo "<div class='banner-more'>자세히</div>";
@@ -31,7 +30,6 @@
 				}
 			?>
 		</div>
-	</div>
 
 <div class='travel_images_with_caption_wrapper'>
 	<?
