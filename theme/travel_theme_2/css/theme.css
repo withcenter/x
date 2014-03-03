@@ -47,6 +47,10 @@
 	margin-right: 0;
 }
 
+.travel-theme-top-wrapper #menu-top-left .inner ul li a, .travel-theme-top-wrapper #menu-top-right .inner ul li a{
+	text-decoration: none;
+}
+
 /* menu.php */
 .travel_theme2_header > .header_wrapper  {
 	padding: 10px 0;
