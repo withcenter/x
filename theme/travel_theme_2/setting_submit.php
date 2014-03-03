@@ -25,3 +25,11 @@
 	ms::meta('travel2banner1_floating_text1',$in['travel2banner1_floating_text1']);
 	ms::meta('travel2banner2_floating_text1',$in['travel2banner2_floating_text1']);
 	ms::meta('travel2banner3_floating_text1',$in['travel2banner3_floating_text1']);
+	
+	ms::meta('travel2footer_tagline',$in['travel2footer_tagline']);
+	
+	ms::meta('travel2email_num1',$in['travel2email_num1']);
+	ms::meta('travel2email_num2',$in['travel2email_num2']);
+
+	ms::meta('travel2permit_1',$in['travel2permit_1']);
+	ms::meta('travel2plate_1',$in['travel2plate_1']);
