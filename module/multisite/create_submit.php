@@ -41,7 +41,7 @@
 
 	if ( $in['site-type'] ) {
 		if ( $in['site-type'] == 'community' ) $site_type = 'community_3';
-		else if ( $in['site-type'] == 'travel' ) 	$site_type = 'travel_theme_1';
+		else if ( $in['site-type'] == 'travel' ) 	$site_type = 'travel_theme_2';
 		else if ( $in['site-type'] == 'shopping' ) $site_type = 'community';
 		else if ( $in['site-type'] == 'academy' ) $site_type = 'community_2';
 		else if ( $in['site-type'] == 'blog' ) $site_type = 'blog';
@@ -96,7 +96,7 @@
 				}
 			}
 			
-			if ( $site_type == 'community' ) {
+			if (  $site_type == 'travel_theme_2' || $site_type == 'community' ) {
 				
 				for ( $i = 2; $i <= 10; $i++ ) {
 					$o = array(
@@ -106,6 +106,9 @@
 						'bo_admin' => $member['mb_id'],
 						'bo_use_dhtml_editor' => 1
 					);
+					
+					if ( $site_type == 'travel_theme_2' )  $o['bo_skin'] = 'x/skin/board/x-board-travel-3';
+					
 					g::board_create($o);
 					// 사이트 생성시 메뉴 저장
 					if ( $i <= 5 ) db::insert('x_multisite_meta', array('domain'=>$domain, 'code'=>'menu_'.$i, 'value'=>ms::board_id ( $domain ).'_'.$i ) );

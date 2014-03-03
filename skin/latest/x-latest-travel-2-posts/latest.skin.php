@@ -1,7 +1,6 @@
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 ?>
-
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
 <div class="travel-2-posts" >
 		<div class='title'>
@@ -9,17 +8,17 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 				<tr valign='top'>
 					<td align='left' class='title-left'>
 						<img src="<?=$latest_skin_url?>/img/my-posts.png">
-						<span class='label'><?=$bo_subject?></span>
+						<?=$bo_subject?>
 					</td>
 					<td align='right'>
-						<div class='posts-more'><a href="<?=g::url()?>/bbs/board.php?bo_table=<?=$bo_table?>" >자세히 <!--<img src="<?=$latest_skin_url?>/img/more-icon.png">--></a></div>
+						<div class='posts-more'><a href="<?=g::url()?>/bbs/board.php?bo_table=<?=$bo_table?>" >자세히</a></div>
 					</td>
 				</tr>
 			</table>
 		</div>
 	<div class='travel-2-posts-items'>
 		<? if( $list ) { ?>
-		<table cellspacing='5'>
+		<table cellspacing='0' cellpadding='0'>
 		<?php
 			$i = 1;
 			$no_of_posts = count($list);
@@ -35,15 +34,23 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		?>	
 			<tr <? if( $i == $no_of_posts ) echo "class='last-item'"; ?> valign='top'>				
 				<?
-					echo "<td width='10' valign='middle'><div class='posts-square'><img src='$latest_skin_url/img/square-icon.png'></div></td><td width='120'><a href='$url' class='content-community-3'>$content</a></td><td width='40' align='right'><a href='$url'> <span class='no-of-comments $no_comment'>[$comment_count]</span></a></td>";
+					echo "<td width='10' valign='middle'><div class='posts-square'><img src='$latest_skin_url/img/square-icon.png'></div></td><td width='120'><a class='subject' href='$url' class='content-community-3'>$content</a></td><td width='40' align='right'><a href='$url'> <span class='no-of-comments $no_comment'>[$comment_count]</span></a></td>";
 				?>
 				<?$i++;?>
 			</tr>	
 		<?}?>
-		</table>
 		<? }
-			else echo "<ul><li><b>".$bo_subject.'</b>게시판에 글을 등록해 주세요</li></ul>';
-		?>
+			else {?>
+				<tr><td>
+					<div class='subject'><img class='dot' src='<?=$latest_skin_url?>/img/square-icon.png' /><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=5'>사이트 만들기 안내</a></div>
+					
+					<div class='subject'><img class='dot' src='<?=$latest_skin_url?>/img/square-icon.png' /><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=4'>블로그 만들기</a></div>
+					<div class='subject'><img class='dot' src='<?=$latest_skin_url?>/img/square-icon.png' /><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=3'>커뮤니타 사이트 만들기</a></div>
+					<div class='subject'><img class='dot' src='<?=$latest_skin_url?>/img/square-icon.png' /><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=2' style='color: #cc4235; font-weight: bold;'>여행사 사이트 만들기</a></div>
+					<div class='subject'><img class='dot' src='<?=$latest_skin_url?>/img/square-icon.png' /><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=1'>(모바일)홈페이지, 스마트폰 앱</a></div>
+				</td></tr>
+			<?}?>
+		</table>
 	</div>
 </div>
 

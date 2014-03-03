@@ -1,0 +1,58 @@
+ .community-c-posts {
+	white-space: nowrap;
+	margin-bottom: 10px;
+	height: 160px;
+}
+
+ .community-c-posts a {
+	text-decoration: none;
+}
+
+ .community-c-posts .title-left .label{
+	display:inline-block;
+	width:120px;
+	overflow:hidden;
+}
+
+ .community-c-posts .content-community-3 {
+	display: inline-block;
+	width: 130px;
+	overflow: hidden;
+}
+
+ .community-c-posts .title {
+	padding: 0 5px;
+	height: 28px;
+	line-height: 24px;
+	background: #fcfcfc;
+	border: solid 1px #d9d9d9;
+	font-weight: bold;
+	font-size: 12px;
+}
+ .community-c-posts .title .posts-more a {
+	color: #808080;
+}
+
+ .community-c-posts .title img {
+	margin: 0 2px 0 0;
+	position: relative;
+	top: -10px;
+}
+
+ .community-c-posts .community-c-posts-items {
+	padding: 3px 10px;
+}
+
+ .community-c-posts .community-c-posts-items .posts-square {
+	font-size: 10px;
+}
+
+ .community-c-posts .community-c-posts-items .no-of-comments {
+	color: #ff0000;
+	font-size: 11px;
+}
+.community-c-posts .posts-more {
+	font-weight: normal;
+	font-size: 9pt;
+	color:#808080;
+}

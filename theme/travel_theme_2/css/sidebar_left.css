@@ -13,7 +13,7 @@
 	border: solid 1px #bbbbbb;
 	padding: 10px;
 	margin-bottom: 10px;
-	height: 77px;
+	height: 95px;
 }
 
 .layout .left .contact-wrapper .contact-info {
@@ -29,22 +29,44 @@
 	margin-bottom: 10px;
 }
 
-/**SIDEBAR LEFT (BANNERS) */
-.layout .left .banners-left {
+/**SIDEBARS LEFT (BANNER) */
+.layout .left .banner-left {
 	border: solid 1px #bbbbbb;
-	padding: 9px;
-}
-
-.layout .left .banners-left img {
-	width: 100%;
 	margin-bottom: 10px;
-	height: 75px;
+	height:88px;
+	overflow:hidden;
+	background-color:#e6e6e6;
 }
 
-.layout .left .banners-left img.left-banner-2 {
-	height: 80px;
+.layout .left .banner-left img {
+	width: 100%;	
 }
 
-.layout .left .banners-left img.left-banner-3 {
-	margin-bottom: 0;
+/**EXCHANGE RATE*/
+.layout .left .exchange-rate-wrapper {
+	border: solid 1px #d1d1d1;
+	height:168px;
+}
+
+.layout .left .exchange-rate-wrapper .title {
+	background: #fcfcfc;
+	border-bottom: solid 1px #d1d1d1;
+	padding: 7px 9px;
+}
+
+.layout .left .exchange-rate-wrapper .title img {
+	margin-right: 10px;
+}
+
+.layout .left .exchange-rate-wrapper .title b {
+}
+
+.layout .left .exchange-rate iframe {
+	display: block;
+	margin: 2px auto 2px auto;
+	padding: 0;
+}
+
+.layout .left .exchange-rate iframe body {
+	width: 220px;
 }

@@ -1,25 +1,36 @@
   <div class='config-wrapper'>
-	<div class='config-title'><span class='config-title-info'>ADDITIONAL SITE INFORMATION</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
+	<div class='config-title'><span class='config-title-info'>사이트 추가 설정</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
 	<div class='config-container'>
 		<div>
-			<span class='title-small'>Contact Number 1: </span><input type='text' name='travel2contact_num1' value='<?=ms::meta('travel2contact_num1')?>'>
-			<span class='title-small'>Office Hours 1: </span><input type='text' name='travel2contact_hours1' value='<?=ms::meta('travel2contact_hours1')?>'>		
+			<span class='title-small'>전화번호1: </span><input type='text' name='travel2contact_num1' value='<?=ms::meta('travel2contact_num1')?>'>
+			<span class='title-small'>운영시간1: </span><input type='text' name='travel2contact_hours1' value='<?=ms::meta('travel2contact_hours1')?>'>		
 		</div>
 		<br>
 		<div>
-			<span class='title-small'>Contact Number 2: </span><input type='text' name='travel2contact_num2' value='<?=ms::meta('travel2contact_num2')?>'>
-			<span class='title-small'>Office Hours 2: </span><input type='text' name='travel2contact_hours2' value='<?=ms::meta('travel2contact_hours2')?>'>		
+			<span class='title-small'>전화번호2: </span><input type='text' name='travel2contact_num2' value='<?=ms::meta('travel2contact_num2')?>'>
+			<span class='title-small'>운영시간2: </span><input type='text' name='travel2contact_hours2' value='<?=ms::meta('travel2contact_hours2')?>'>		
+		</div>
+		<div>
+			<span class='title-small'>이메일1 </span><input type='text' name='travel2email_num1' value='<?=ms::meta('travel2email_num1')?>'>
+			<span class='title-small'>이메일2: </span><input type='text' name='travel2email_num2' value='<?=ms::meta('travel2email_num2')?>'>		
+		</div>
+		<div>
+			<span class='title-small'>사업자 등록번호</span><input type='text' name='travel2permit_1' value='<?=ms::meta('travel2permit_1')?>'>
+			<span class='title-small'>사업자 등록회사명 : </span><input type='text' name='travel2plate_1' value='<?=ms::meta('travel2plate_1')?>'>		
+		</div>
+		<div>
+			<span class='title-small'>하단 문구 제목: </span><input type='text' name='travel2footer_tagline' value='<?=ms::meta('travel2footer_tagline')?>' />
 		</div>
 	</div>
 </div>
 
 <div class='config-wrapper'>
-	<div class='config-title'><span class='config-title-info'>HEADER LOGO AND COMPANY BANNER</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
+	<div class='config-title'><span class='config-title-info'>사이트 상하단 로고 & 로고 문구</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
 	<div class='config-container'>
 <table cellpadding=5 class='image-config' width='100%'>
 	<tr valign='top' >
 		<td width='50%'>
-			<div class='image-title'>사이트 로고</div>
+			<div class='image-title'>사이트 상단 로고</div>
 			<div class='image-upload'>
 				<?if( ms::meta('header_logo') ) {?><img src="<?=ms::meta('img_url').ms::meta('header_logo')?>" width=280px height=160px><br><?}?>
 				<input type='file' name='header_logo'>
@@ -30,13 +41,13 @@
 			</div>
 		</td>
 		<td width='50%'>
-			<div class='image-title'>회사로고</div>
+			<div class='image-title'>사이트 하단 로고</div>
 			<div class='image-upload'>
-				<?if( ms::meta('travel2banner_company') ) {?><img src="<?=ms::meta('img_url').ms::meta('travel2banner_company')?>" width=280px height=160px><br><?}?>
-				<input type='file' name='travel2banner_company'>
-				<?if( ms::meta('travel2banner_company') != '' ) { ?>
-					<input type='hidden' name='travel2banner_company_remove' value='n'>
-					<input type='checkbox' name='travel2banner_company_remove' value='y'><span class='title-small'>이미지 제거</span>
+				<?if( ms::meta('footer_logo') ) {?><img src="<?=ms::meta('img_url').ms::meta('footer_logo')?>" width=280px height=160px><br><?}?>
+				<input type='file' name='footer_logo'>
+				<?if( ms::meta('footer_logo') != '' ) { ?>
+					<input type='hidden' name='footer_logo_remove' value='n'>
+					<input type='checkbox' name='footer_logo_remove' value='y'><span class='title-small'>이미지 제거</span>
 				<?}?>
 			</div>
 		</td>
@@ -45,7 +56,7 @@
 </div>
 </div>
  <div class='config-wrapper'>
-	<div class='config-title'><span class='config-title-info'>MAIN BANNER (Rotating)</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
+	<div class='config-title'><span class='config-title-info'>메인 롤링 배너</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
 	<div class='config-container'>
 	<table cellpadding=5 class='image-config' width='100%'>
 	<tr valign='top'>
@@ -107,7 +118,7 @@
 				<input type='hidden' name='travel2banner_4_remove' value='n'>
 				<input type='checkbox' name='travel2banner_4_remove' value='y'><span class='title-small'>이미지 제거</span>
 			<?}?>
-			<div class='title'>배너3의 문구</div>
+			<div class='title'>배너4의 문구</div>
 			<textarea name='travel2banner_4_text1'><?=stripslashes(ms::meta('travel2banner_4_text1'))?></textarea>
 				<div class='title'>배너4 링크</div>
 				<input type='text' name='travel2banner_4_text2' value='<?=ms::meta('travel2banner_4_text2')?>'>
@@ -135,12 +146,12 @@
 </div>
 </div>
  <div class='config-wrapper'>
-	<div class='config-title'><span class='config-title-info'>FLOATING (SCROLLING) RIGHT BANNER</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
+	<div class='config-title'><span class='config-title-info'>오른쪽 날개 배너</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
 	<div class='config-container'>
 	<table cellpadding=5 class='image-config' width='100%'>	
 		<tr valign='top'>
 		<td>
-			<div class='image-title'>FLOATING BANNER 1</div>
+			<div class='image-title'>오른쪽 날개 배너1</div>
 			<div class='image-upload'>
 			<?if( ms::meta('travel2banner1_floating') ) {?><img src="<?=ms::meta('img_url').ms::meta('travel2banner1_floating')?>" width=280px height=160px><br><?}?>
 			<input type='file' name='travel2banner1_floating'>
@@ -148,11 +159,11 @@
 				<input type='hidden' name='travel2banner1_floating_remove' value='n'>
 				<input type='checkbox' name='travel2banner1_floating_remove' value='y'><span class='title-small'>이미지 제거</span>
 			<?}?>
-			<div class='title'>FLOATING BANNER 1 URL</div>
+			<div class='title'>오른쪽 날개 배너1 URL</div>
 			<input type='text' name='travel2banner1_floating_text1' value='<?=ms::meta('travel2banner1_floating_text1')?>'>
 		</td>
 		<td>
-			<div class='image-title'>FLOATING BANNER 2 (Left)</div>
+			<div class='image-title'>오른쪽 날개 배너2</div>
 			<div class='image-upload'>
 			<?if( ms::meta('travel2banner2_floating') ) {?><img src="<?=ms::meta('img_url').ms::meta('travel2banner2_floating')?>" width=280px height=160px><br><?}?>
 			<input type='file' name='travel2banner2_floating'>
@@ -160,13 +171,13 @@
 				<input type='hidden' name='travel2banner2_floating_remove' value='n'>
 				<input type='checkbox' name='travel2banner2_floating_remove' value='y'><span class='title-small'>이미지 제거</span>
 			<?}?>
-			<div class='title'>FLOATING 2 URL</div>
+			<div class='title'>오른쪽 날개 배너2 URL</div>
 			<input type='text' name='travel2banner2_floating_text1' value='<?=ms::meta('travel2banner2_floating_text1')?>'>
 		</td>
 	</tr>
 	<tr valign='top'>
 		<td>
-			<div class='image-title'>FLOATING BANNER 3 (Left)</div>
+			<div class='image-title'>오른쪽 날개 배너3</div>
 			<div class='image-upload'>
 			<?if( ms::meta('travel2banner3_floating') ) {?><img src="<?=ms::meta('img_url').ms::meta('travel2banner3_floating')?>" width=280px height=160px><br><?}?>
 			<input type='file' name='travel2banner3_floating'>
@@ -174,7 +185,7 @@
 				<input type='hidden' name='travel2banner3_floating_remove' value='n'>
 				<input type='checkbox' name='travel2banner3_floating_remove' value='y'><span class='title-small'>이미지 제거</span>
 			<?}?>
-			<div class='title'>FLOATING BANNER 3 URL</div>
+			<div class='title'>오른쪽 날개 배너3 URL</div>
 			<input type='text' name='travel2banner3_floating_text1' value='<?=ms::meta('travel2banner3_floating_text1')?>'>
 		</td>
 	</tr>
@@ -182,12 +193,12 @@
 </div>
 </div>
  <div class='config-wrapper'>
-	<div class='config-title'><span class='config-title-info'>SIDEBAR, MIDDLE, and BOTTOM BANNERS</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
+	<div class='config-title'><span class='config-title-info'>중앙 사이드 배너, 하단 배너</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
 	<div class='config-container'>
 	<table cellpadding=5 class='image-config' width='100%'>	
 		<tr valign='top'>
 		<td>
-			<div class='image-title'>SIDEBAR BANNER 1 (Left)</div>
+			<div class='image-title'>왼쪽 사이드 배너</div>
 			<div class='image-upload'>
 			<?if( ms::meta('travel2banner1_sidebar') ) {?><img src="<?=ms::meta('img_url').ms::meta('travel2banner1_sidebar')?>" width=280px height=160px><br><?}?>
 			<input type='file' name='travel2banner1_sidebar'>
@@ -195,51 +206,12 @@
 				<input type='hidden' name='travel2banner1_sidebar_remove' value='n'>
 				<input type='checkbox' name='travel2banner1_sidebar_remove' value='y'><span class='title-small'>이미지 제거</span>
 			<?}?>
-			<div class='title'>SIDEBAR BANNER 1 URL</div>
+			<div class='title'>왼쪽 사이드 배너 URL</div>
 			<input type='text' name='travel2banner1_sidebar_text1' value='<?=ms::meta('travel2banner1_sidebar_text1')?>'>
 		</td>
+
 		<td>
-			<div class='image-title'>SIDEBAR BANNER 2 (Left)</div>
-			<div class='image-upload'>
-			<?if( ms::meta('travel2banner2_sidebar') ) {?><img src="<?=ms::meta('img_url').ms::meta('travel2banner2_sidebar')?>" width=280px height=160px><br><?}?>
-			<input type='file' name='travel2banner2_sidebar'>
-			<?if( ms::meta('travel2banner2_sidebar') != '' ) { ?>
-				<input type='hidden' name='travel2banner2_sidebar_remove' value='n'>
-				<input type='checkbox' name='travel2banner2_sidebar_remove' value='y'><span class='title-small'>이미지 제거</span>
-			<?}?>
-			<div class='title'>SIDEBAR BANNER 2 URL</div>
-			<input type='text' name='travel2banner2_sidebar_text1' value='<?=ms::meta('travel2banner2_sidebar_text1')?>'>
-		</td>
-	</tr>
-	<tr valign='top'>
-		<td>
-			<div class='image-title'>SIDEBAR BANNER 3 (Left)</div>
-			<div class='image-upload'>
-			<?if( ms::meta('travel2banner3_sidebar') ) {?><img src="<?=ms::meta('img_url').ms::meta('travel2banner3_sidebar')?>" width=280px height=160px><br><?}?>
-			<input type='file' name='travel2banner3_sidebar'>
-			<?if( ms::meta('travel2banner3_sidebar') != '' ) { ?>
-				<input type='hidden' name='travel2banner3_sidebar_remove' value='n'>
-				<input type='checkbox' name='travel2banner3_sidebar_remove' value='y'><span class='title-small'>이미지 제거</span>
-			<?}?>
-			<div class='title'>SIDEBAR BANNER 3 URL</div>
-			<input type='text' name='travel2banner3_sidebar_text1' value='<?=ms::meta('travel2banner3_sidebar_text1')?>'>
-		</td>
-		<td>
-			<div class='image-title'>SIDEBAR BANNER 4 (Right)</div>
-			<div class='image-upload'>
-			<?if( ms::meta('travel2banner4_sidebar') ) {?><img src="<?=ms::meta('img_url').ms::meta('travel2banner4_sidebar')?>" width=280px height=160px><br><?}?>
-			<input type='file' name='travel2banner4_sidebar'>
-			<?if( ms::meta('travel2banner4_sidebar') != '' ) { ?>
-				<input type='hidden' name='travel2banner4_sidebar_remove' value='n'>
-				<input type='checkbox' name='travel2banner4_sidebar_remove' value='y'><span class='title-small'>이미지 제거</span>
-			<?}?>
-			<div class='title'>SIDEBAR BANNER 4 URL</div>
-			<input type='text' name='travel2banner4_sidebar_text1' value='<?=ms::meta('travel2banner4_sidebar_text1')?>'>
-		</td>
-	</tr>
-	<tr valign='top'>
-			<td>
-			<div class='image-title'>RIGHT BANNER</div>
+			<div class='image-title'>오른쪽 사이드 배너</div>
 			<div class='image-upload'>
 			<?if( ms::meta('travel2banner_right') ) {?><img src="<?=ms::meta('img_url').ms::meta('travel2banner_right')?>" width=280px height=160px><br><?}?>
 			<input type='file' name='travel2banner_right'>
@@ -247,11 +219,14 @@
 				<input type='hidden' name='travel2banner_right_remove' value='n'>
 				<input type='checkbox' name='travel2banner_right_remove' value='y'><span class='title-small'>이미지 제거</span>
 			<?}?>
-			<div class='title'>RIGHTBANNER URL</div>
+			<div class='title'>오른쪽 사이드 배너 URL</div>
 			<input type='text' name='travel2banner_right_text1' value='<?=ms::meta('travel2banner_right_text1')?>'>
 		</td>
+
+	</tr>
+	<tr valign='top'>
 		<td>
-			<div class='image-title'>BOTTOM BANNER</div>
+			<div class='image-title'>하단 배너</div>
 			<div class='image-upload'>
 			<?if( ms::meta('travel2banner_bottom') ) {?><img src="<?=ms::meta('img_url').ms::meta('travel2banner_bottom')?>" width=280px height=160px><br><?}?>
 			<input type='file' name='travel2banner_bottom'>
@@ -259,7 +234,7 @@
 				<input type='hidden' name='travel2banner_bottom_remove' value='n'>
 				<input type='checkbox' name='travel2banner_bottom_remove' value='y'><span class='title-small'>이미지 제거</span>
 			<?}?>
-			<div class='title'>BOTTOM BANNER URL</div>
+			<div class='title'>하단 배너 URL</div>
 			<input type='text' name='travel2banner_bottom_text1' value='<?=ms::meta('travel2banner_bottom_text1')?>'>
 		</td>
 		

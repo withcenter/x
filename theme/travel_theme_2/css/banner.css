@@ -1,9 +1,11 @@
 .layout .container .banner{
-	width: 730px;
-	height: 220px;
+	width: 748px;
+	height: 238px;
 	overflow: hidden;	
 	position: relative;	
 	font-family: dotum;
+	border: solid 1px #bbbbbb;
+	margin-bottom: 10px;
 }
 
 .layout .container .banner-image {
@@ -24,18 +26,19 @@
 
 .layout .container .banner p {
 	position: absolute;
-	top: 171px;
+	top: 189px;
 	left: 0;
 	padding: 16px;
 	color: #ffffff;
 	font-size: 15px;
 	background: #bbbbbb;
 	width: 100%;
+	height: 50px;
 }
 
 .layout .container .banner .banner-more {
 	position: absolute;
-	top: 190px;
+	top: 209px;
 	right: 10px;
 	color: #ffffff;
 	font-size:.8em;

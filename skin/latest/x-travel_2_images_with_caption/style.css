@@ -1,18 +1,24 @@
+.travel_images_with_captions{
+	line-height:14px;
+}
+
 .travel_images_with_captions  .title{
 	border-bottom:1px solid #bbbbbb;
 	margin-bottom:10px;
-	padding:8px 0 8px 26px;
+	padding: 0 0 0 26px;
 	font-weight:bold;
 	background-color:#fcfcfc;
 	position:relative;
+	height: 28px;
+	line-height: 28px;
 }
 
 .travel_images_with_captions .title a{
 	font-weight:normal;
 	color:#808080;
-	font-size:.8em;
+	font-size: 9pt;
 	float:right;
-	margin:3px 10px 0 0;
+	margin: 2px 10px 0 0;
 	text-decoration:none;
 }
 
@@ -37,22 +43,39 @@
 	overflow:hidden;
 }
 
-.travel_images_with_captions_container .images_with_captions .caption{	
-	width:172px;
-	text-align:center;
-	overflow:hidden;	
-}
-
 .travel_images_with_captions_container .images_with_captions .caption a{	
 	font-family:dotum;
 	text-decoration:none;
 }
 
-.travel_images_with_captions_container .images_with_captions .caption.product_subject{
-	height:40px;
-	word-break:break-all;	
-}
 
-.travel_images_with_captions_container .images_with_captions .caption.product_price a, .travel_images_with_captions_container .images_with_captions .caption.product_subject a{
-	color:#808080;
+
+.travel_images_with_captions_container .product_name {
+	margin: 4px 0 2px 0;
+}
+.travel_images_with_captions_container .product_name a {
+	color: #333333;
+	font-weight: bold;
+}
+.travel_images_with_captions_container .product_name, .travel_images_with_captions_container  .product_price {
+	line-height: 15px;
+	height: 15px;
+	overflow: hidden;
+	padding: 0 20px;
+	text-align: center;
+}
+.travel_images_with_captions_container .product_price a {
+	color: #334761;
+	font-weight: bold;
+}
+.travel_images_with_captions_container .product_subject {
+	text-align: left;
+	line-height: 17px;
+	height: 34px;
+	overflow: hidden;
+	margin-top: 2px;
+}
+.travel_images_with_captions_container .product_subject a {
+	color: #555555;
+	margin-top: 5px;
 }

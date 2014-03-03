@@ -5,50 +5,55 @@
 
 .travel_lower_post_title{
 	font-weight:bold;
-	padding:10px 10px 5px 10px;
+	padding:0 10px;
 	border-bottom:1px solid #bbbbbb;
 	background-color:#fafafa;
+	height: 28px;
+	line-height: 28px;
+}
+
+.travel_lower_post_title .board_subject{
+	display:inline-block;
+	width:170px;
+	overflow:hidden;
+	white-space:nowrap;
 }
 
 .travel_lower_post_title  a{
 	font-weight:normal;
 	color:#808080;
-	font-size:.8em;
+	font-size: 9pt;
 	float:right;
-	margin:3px 10px 0 0;
+	margin-top: 2px;
 	text-decoration:none;
 }
 
 .travel_lower_post_title .icon{
 	position:relative;
-	top:-2px;
+	top: -11px;
 	margin-right:2px;
 }
 
 .travel_lower_items{
-	padding:10px;
+	padding:0 10px;	
 }
 
-.travel_lower_items .item{
-	margin-bottom:11px;
+.travel_lower_items .item{	
+	border-bottom:1px solid #bbbbbb;
+	padding:7px 0 8px 0;
+}
+
+.travel_lower_items .item .comments{
+	float:right;
+	color:#cc4235;
 }
 
 .travel_lower_items .item.no-margin{
-	margin-bottom:0;
+	margin-bottom:0;	
 }
 
-.travel_lower_items .other-info{
-	color:#7f7f7f;
-	font-size:.8em;
-	margin-left:17px;
-}
-
-.travel_lower_items .other-info .separator{
-	margin:0 5px;
-}
-
-.travel_lower_items .item .subject .new{
-	float:right;
+.travel_lower_items .item .subject a{
+	text-decoration:none;
 }
 
 .travel_lower_items .item .subject .bullet{
