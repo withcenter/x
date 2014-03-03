@@ -2,19 +2,30 @@
 	<div class='config-title'><span class='config-title-info'>ADDITIONAL SITE INFORMATION</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
 	<div class='config-container'>
 		<div>
-			<span class='title-small'>Contact Number 1: </span><input type='text' name='travel2contact_num1' value='<?=ms::meta('travel2contact_num1')?>'>
+			<span class='title-small'>Contact #/Internet Phone #  1: </span><input type='text' name='travel2contact_num1' value='<?=ms::meta('travel2contact_num1')?>'>
 			<span class='title-small'>Office Hours 1: </span><input type='text' name='travel2contact_hours1' value='<?=ms::meta('travel2contact_hours1')?>'>		
 		</div>
 		<br>
 		<div>
-			<span class='title-small'>Contact Number 2: </span><input type='text' name='travel2contact_num2' value='<?=ms::meta('travel2contact_num2')?>'>
+			<span class='title-small'>Contact #/Internet Phone # 2: </span><input type='text' name='travel2contact_num2' value='<?=ms::meta('travel2contact_num2')?>'>
 			<span class='title-small'>Office Hours 2: </span><input type='text' name='travel2contact_hours2' value='<?=ms::meta('travel2contact_hours2')?>'>		
+		</div>
+		<div>
+			<span class='title-small'>Email # 1 </span><input type='text' name='travel2email_num1' value='<?=ms::meta('travel2email_num1')?>'>
+			<span class='title-small'>Email # 2: </span><input type='text' name='travel2email_num2' value='<?=ms::meta('travel2email_num2')?>'>		
+		</div>
+		<div>
+			<span class='title-small'>Business Permit #</span><input type='text' name='travel2permit_1' value='<?=ms::meta('travel2permit_1')?>'>
+			<span class='title-small'>Business Plate #: </span><input type='text' name='travel2plate_1' value='<?=ms::meta('travel2plate_1')?>'>		
+		</div>
+		<div>
+			<span class='title-small'>Footer Tagline: </span><textarea name='travel2footer_tagline'><?=ms::meta('travel2footer_tagline')?></textarea>
 		</div>
 	</div>
 </div>
 
 <div class='config-wrapper'>
-	<div class='config-title'><span class='config-title-info'>HEADER LOGO AND COMPANY BANNER</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
+	<div class='config-title'><span class='config-title-info'>HEADER, FOOTER LOGO & TAGLINES</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
 	<div class='config-container'>
 <table cellpadding=5 class='image-config' width='100%'>
 	<tr valign='top' >
@@ -30,13 +41,13 @@
 			</div>
 		</td>
 		<td width='50%'>
-			<div class='image-title'>회사로고</div>
+			<div class='image-title'>FOOTER LOGO</div>
 			<div class='image-upload'>
-				<?if( ms::meta('travel2banner_company') ) {?><img src="<?=ms::meta('img_url').ms::meta('travel2banner_company')?>" width=280px height=160px><br><?}?>
-				<input type='file' name='travel2banner_company'>
-				<?if( ms::meta('travel2banner_company') != '' ) { ?>
-					<input type='hidden' name='travel2banner_company_remove' value='n'>
-					<input type='checkbox' name='travel2banner_company_remove' value='y'><span class='title-small'>이미지 제거</span>
+				<?if( ms::meta('footer_logo') ) {?><img src="<?=ms::meta('img_url').ms::meta('footer_logo')?>" width=280px height=160px><br><?}?>
+				<input type='file' name='footer_logo'>
+				<?if( ms::meta('footer_logo') != '' ) { ?>
+					<input type='hidden' name='footer_logo_remove' value='n'>
+					<input type='checkbox' name='footer_logo_remove' value='y'><span class='title-small'>이미지 제거</span>
 				<?}?>
 			</div>
 		</td>
