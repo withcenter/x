@@ -11,13 +11,13 @@
 </div>
 <div class='footer-wrapper'>	
 	<div class='footer'>
-		<div class='footer-logo'>
-		<img src='<?=ms::meta('img_url').ms::meta('footer_logo')?>' />
-
+		<div class='footer-logo'>		
 		<?php
 			//$footer_thumb = g::thumbnail_from_image_tag( "<img src='".ms::meta('img_url').ms::meta('footer_logo')."'>", ms::board_id( etc::domain() ).'_1', 100, 90 );
+			if( ms::meta('footer_logo') ) $img = "<img src='".ms::meta('img_url').ms::meta('footer_logo')."' />";
+			else $img = null;
 		?>
-		<img src='<?=$footer_thumb?>' />
+		<?=$img?>
 		</div>
 		<div class='footer-info'>
 			<div class='footer-tagline'>
