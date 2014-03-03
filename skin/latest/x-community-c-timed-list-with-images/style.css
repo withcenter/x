@@ -2,6 +2,7 @@
 	width:368px;
 	display:inline-block;
 	height: 210px;
+	overflow: hidden;
 }
 
 .comm3_timed_list_with_image .timed_list_title{
