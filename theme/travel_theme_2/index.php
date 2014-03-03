@@ -80,7 +80,7 @@
 			?>
 	</div>
 </div>
-<div style='clear:both;'></div>
+<div style='clear:both; margin-bottom:10px;'></div>
 
 
 <div class='lower-posts'>
