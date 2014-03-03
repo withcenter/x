@@ -82,6 +82,7 @@
 	height:15px;
 	overflow:hidden;	
 	line-height:15px;
+	max-width:250px;	
 }
 
 .comm3_timed_list_with_image .contents_wrapper a{
