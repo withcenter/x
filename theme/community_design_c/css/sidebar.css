@@ -10,7 +10,7 @@
 	width: 208px;
 	height: 114px;
 	overflow: hidden;
-	border: solid 1px #bbbbbb;
+	border: solid 1px #d9d9d9;
 	margin-bottom: 10px;
 }
 
@@ -33,9 +33,8 @@
 
 /**POPULAR POSTS*/
 .sidebar .popular-posts {
-	border: solid 1px #bbbbbb;
 	margin-bottom: 9px;
-	height: 138px;
+	height: 141px;
 }
 
 .sidebar .popular-posts a {
@@ -46,8 +45,8 @@
 	padding-left: 5px;
 	height: 28px;
 	line-height: 24px;
-	background: #f7f7f7;
-	border-bottom: solid 1px #bbbbbb;
+	background: #fcfcfc;
+	border: solid 1px #d9d9d9;
 	font-weight: bold;
 	font-size: 12px;
 }
@@ -59,7 +58,7 @@
 }
 
 .sidebar .popular-posts .popular-posts-items {
-	padding: 5px;
+	padding: 0 5px;
 }
 
 .sidebar .popular-posts .popular-posts-items table td {
@@ -73,7 +72,7 @@
 .sidebar .popular-posts .post-num {
 	padding: 1px;
 	font-size: 8pt;
-	background: #1a1a1a;
+	background: #b3b3b3;
 	color: #ffffff;
 	text-align: center;
 }
@@ -89,40 +88,11 @@
 	border-bottom: 0 !important;
 }
 
-/**LATEST COMMENTS*/
-.sidebar .latest-comments {
-	border: solid 1px #bbbbbb;
-	margin-bottom: 10px;
-}
-
-.sidebar .latest-comments a {
-	text-decoration: none;
-}
-
-.sidebar .latest-comments .title {
-	padding: 3px 0 3px 5px;
-	background: #f7f7f7;
-	border-bottom: solid 1px #bbbbbb;
-	font-weight: bold;
-	font-size: 12px;
-}
-
-.sidebar .latest-comments .title img {
-	margin: 0 2px 0 0;
-	position: relative;
-	top: -2px;
-}
-
-.sidebar .latest-comments .latest-comments-items {
-	padding: 10px;
-}
-
 
 /**LATEST POSTS*/
 .sidebar .com3-latest-posts {
-	border: solid 1px #bbbbbb;
 	margin-bottom: 10px;
-	height: 208px;
+	height: 210px;
 }
 
 .sidebar .com3-latest-posts a {
@@ -133,8 +103,8 @@
 	padding-left: 5px;
 	line-height: 24px;
 	height: 28px;
-	background: #f7f7f7;
-	border-bottom: solid 1px #bbbbbb;
+	background: #fcfcfc;
+	border: solid 1px #d9d9d9;
 	font-weight: bold;
 	font-size: 12px;
 }

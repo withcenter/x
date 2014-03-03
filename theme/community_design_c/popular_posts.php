@@ -20,7 +20,7 @@ if ( $posts ) { ?>
 	</div>
 	
 	<div class='popular-posts-items'>
-		<table cellspacing='5'>
+		<table cellspacing='3' cellpadding='5'>
 		<?php
 		if ( $posts ) {
 			$i = 1;

@@ -8,7 +8,7 @@ for ( $i = 1 ; $i <= 10; $i++ ) {
 
 ?>
 <div class='login'>
-<?=outlogin('x-outlogin-community-3') ?>
+<?=outlogin('x-outlogin-community-c') ?>
 </div>
 
 <div class='company-banner'>
@@ -19,15 +19,7 @@ for ( $i = 1 ; $i <= 10; $i++ ) {
 	<img src='<?=$imgsrc?>'>
 </div>
 
-<?=latest('x-latest-community3-posts', $forum_1 , 4 , 20)?>
+<?=latest('x-latest-community-c-posts', $forum_1 , 6 , 20)?>
 <? include x::theme('popular_posts') ?>
-
-<?
-if ( $company_banner = ms::meta('com3banner_sidebar') ) { ?>
-<div class='sidebanner'>
-	<?$imgsrc = ms::meta('img_url').$company_banner?>
-	<img src='<?=$imgsrc?>'>
-</div>
-<?}?>
 
 <? include( x::theme('latest_posts') ) ?>
