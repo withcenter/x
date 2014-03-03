@@ -14,14 +14,25 @@
 
 .community_images_with_captions  .title img{
 	position:absolute;
-	top:10px;
+	top:8px;
 	left:7px;
+}
+
+.community_images_with_captions  .title .more-button {
+	float: right;
+	margin-right: 9px;
+	font-weight:normal;
+	color:#808080;
+	font-size: 9pt;
+	text-decoration:none;
+	margin-top: 2px;
+	
 }
 
 .community_images_with_captions_container {
 	width:172px;	
 	display: inline-block;
-	margin-left:8px;	
+	margin-left:9px;	
 	margin-bottom:10px;
 }
 
@@ -40,6 +51,7 @@
 	text-align:center;
 	overflow:hidden;
 	white-space:nowrap;
+	margin-top: 5px;
 }
 
 .images_with_captions .caption a{	
