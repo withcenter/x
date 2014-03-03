@@ -2,6 +2,7 @@
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/banner.css' />
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/index.css' />
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/tail.css' />
+<script src='<?=x::url_theme()?>/js/floating-bar.js'></script>
 
 <!-- 상단 시작 { -->
 <?php
@@ -32,6 +33,24 @@
 <hr>
 
 <!-- 콘텐츠 시작 { -->
+<div class='floating-bar'>
+<div class='float-image-wrapper'>
+<?
+for( $i = 1; $i <= 3; $i++ ){
+	if ( ms::meta('travel2banner'.$i.'_floating') ) {
+		$img = "<a href='".ms::meta('travel2banner'.$i.'_floating_text'.$i)."'><img src='".ms::meta('img_url').ms::meta('travel2banner'.$i.'_floating')."'/></a>";	
+	}
+	else $img = null;
+	
+	if( $i == 3 ) $no_margin = 'no-margin';
+?>
+	<div class='float-image <?=$no_margin?>'><?=$img?></div>
+<?}?>
+	
+</div>
+<div class='back-to-top'><img src='<?=x::url_theme()?>/img/up-arrow.png'/><br>TOP</div>
+</div>
+
 <div class="layout"><div class='inner'>
     <div class="left">
 		<div class='login-sidebar'>

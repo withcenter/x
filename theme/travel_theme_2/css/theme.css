@@ -98,13 +98,55 @@
 .travel_theme2_header > .header_wrapper > .top-menu li > .inner a:hover {
 	text-decoration: none;
 }
+/**floating-bar******/
+.floating-bar{
+	position:absolute;
+	right:90px;
+	top:147px;	
+}
+
+.floating-bar .float-image-wrapper{
+	border:1px solid #bbbbbb;
+	background-color:#e6e6e6;
+	padding:9px;
+}
+
+.floating-bar .float-image-wrapper .float-image{
+	width:70px;
+	height:70px;
+	overflow:hidden;
+	background-color:#bbbbbb;
+	margin-bottom:10px;
+}
+
+.floating-bar .float-image-wrapper .float-image img{
+	width:100%;
+}
+
+.floating-bar .float-image.no-margin{
+	margin-bottom:0;
+}
+
+.floating-bar .back-to-top{
+	background-color:#bbbbbb;
+	color:#ffffff;
+	height:24px;
+	width:26px;
+	margin:10px auto 0 auto;
+	text-align:center;
+	font-size:.8em;
+	cursor:pointer;
+}
+/***********************************/
 .layout {
-	width: 100%;
+	width: 100%;	
 }
 .layout > .inner {
 	width: 970px;
 	margin: 0 auto;
+	position:relative;
 }
+
 
 .layout > .inner  > .left {
 	width: 210px;
