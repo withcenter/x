@@ -1,0 +1,11 @@
+.foot_banner{
+	height:168px;
+	background-color:#e6e6e6;
+	border:1px solid #bbbbbb;
+	overflow:hidden;
+	margin-bottom:10px;
+}
+
+.foot_banner img{
+	width:100%;
+}

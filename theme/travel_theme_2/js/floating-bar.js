@@ -3,7 +3,7 @@ var float_timeout;
 	$(window).scroll(function(e){
 	clearTimeout(float_timeout);
 		float_timeout = setTimeout(function(){
-			var top_scroll = $(this).scrollTop() + 147;
+			var top_scroll = $(this).scrollTop();
 			$('.floating-bar').animate({
 				top: top_scroll
 			}, 500);
