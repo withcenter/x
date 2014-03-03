@@ -4,10 +4,7 @@
 <div class='footer-wrapper'>
 	<div class='footer'>
 		<div class='footer-logo'>
-		<?php
-			$footer_thumb = g::thumbnail_from_image_tag( "<img src='".ms::meta('img_url').ms::meta('footer_logo')."'>", ms::board_id( etc::domain() ).'_1', 100, 90 );
-		?>
-		<img src='<?=$footer_thumb?>' />
+		<img src='<?=ms::meta('img_url').ms::meta('footer_logo')?>' />
 		</div>
 		<div class='footer-info'>
 			<div class='footer-tagline'>

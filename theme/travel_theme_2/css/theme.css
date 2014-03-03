@@ -1,11 +1,11 @@
 /* top.php */
 .travel-theme-top-wrapper {
 	width: 100%;
-	background-color: #fafafa;
+	background-color: #f2f2f2;
 	color: #323232;
-	border-bottom: 1px solid #24accb;
-	height: 39px;
-	line-height: 39px;
+	border-bottom: 1px solid #d9d9d9;
+	height: 29px;
+	line-height: 29px;
 }
 .travel-theme-top-wrapper > .inner {
 	width: 970px;
@@ -24,6 +24,30 @@
 	left: 4px;
 	width: 323px;
 	padding: 0 10px;
+}
+
+.travel-theme-top-wrapper #menu-top-left .inner ul, .travel-theme-top-wrapper #menu-top-right .inner ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.travel-theme-top-wrapper #menu-top-left {
+	float: left;
+}
+
+
+.travel-theme-top-wrapper #menu-top-right {
+	float: right;
+}
+
+.travel-theme-top-wrapper #menu-top-left .inner ul li, .travel-theme-top-wrapper #menu-top-right .inner ul li{
+	float: left;
+	margin-right: 10px;
+}
+
+.travel-theme-top-wrapper #menu-top-left .inner ul li.last-menu, .travel-theme-top-wrapper #menu-top-right .inner ul li.last-menu{
+	margin-right: 0;
 }
 
 /* logo_menu.php */
