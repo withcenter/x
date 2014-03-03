@@ -3,7 +3,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 ?>
 
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
-<div class="community3-posts" >
+<div class="community-c-posts" >
 		<div class='title'>
 			<table width='100%'>
 				<tr valign='top'>
@@ -17,8 +17,8 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 				</tr>
 			</table>
 		</div>
-	<div class='community3-posts-items'>
-		<table cellspacing='5'>
+	<div class='community-c-posts-items'>
+		<table cellspacing='3' cellpadding='0'>
 	<?php
 		if( $list ) { 
 			$i = 1;
