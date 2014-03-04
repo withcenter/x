@@ -69,12 +69,12 @@
 }
 
 .comm3_timed_list .subject{
-	display:inline-block;
 	width:250px;
 	overflow:hidden;
 	white-space:nowrap;
 	line-height: 14px;
 	height: 14px;
+	float:left;
 }
 
 .comm3_timed_list .subject .dot {
