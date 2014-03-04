@@ -403,6 +403,10 @@
 
 }
 
+.config_general .image-config .image-title img {
+	margin: 0 5px;
+}
+
 /**new design*/
 .config .config-main-title  {
 	border: 1px solid #d5d5d5;
@@ -432,6 +436,8 @@
 	color: #ffffff;
 	margin-bottom: 5px;
 }
+
+
 
 .config  .config-title .config-title-notice {
 	float: right;

@@ -31,7 +31,7 @@
 <table cellspacing='0' cellpadding='3' class='image-config' width='100%'>
 	<tr valign='top' >
 		<td width='50%'>
-			<div class='image-title'>사이트 상단 로고</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>사이트 상단 로고</div>
 			<div class='image-upload'>
 			<?if( ms::meta('header_logo') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('header_logo').">"; 
@@ -44,7 +44,7 @@
 			</div>
 		</td>
 		<td width='50%'>
-			<div class='image-title'>사이트 하단 로고</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>사이트 하단 로고</div>
 			<div class='image-upload'>
 			<?if( ms::meta('footer_logo') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('footer_logo').">"; 
@@ -66,7 +66,7 @@
 	<table cellspacing='0' cellpadding='3' class='image-config' width='100%'>
 	<tr valign='top'>
 		<td>
-			<div class='image-title'>배너이미지1</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지1</div>
 			<div class='image-upload'>
 				<?if( ms::meta('travel2banner_1') ) {
 					echo "<img src=".ms::meta('img_url').ms::meta('travel2banner_1').">"; 
@@ -84,7 +84,7 @@
 		</td>
  
 		<td>
-			<div class='image-title'>배너이미지2</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지2</div>
 			<div class='image-upload'>
 			<?if( ms::meta('travel2banner_2') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner_2').">"; 
@@ -103,7 +103,7 @@
 	</tr>
 	<tr valign='top'>
 		<td>
-			<div class='image-title'>배너이미지3</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지3</div>
 			<div class='image-upload'>
 			<?if( ms::meta('travel2banner_3') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner_3').">"; 
@@ -121,7 +121,7 @@
 		</td>
 
 		<td>
-			<div class='image-title'>배너이미지4</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지4</div>
 			<div class='image-upload'>
 			<?if( ms::meta('travel2banner_4') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner_4').">"; 
@@ -140,7 +140,7 @@
 	</tr>
 		<tr valign='top'>
 		<td>
-			<div class='image-title'>배너이미지5</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지5</div>
 			<div class='image-upload'>
 			<?if( ms::meta('travel2banner_5') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner_5').">"; 
@@ -166,7 +166,7 @@
 	<table cellspacing='0' cellpadding='3' class='image-config' width='100%'>	
 		<tr valign='top'>
 		<td>
-			<div class='image-title'>오른쪽 날개 배너1</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>오른쪽 날개 배너1</div>
 			<div class='image-upload'>
 			<?if( ms::meta('travel2banner1_floating') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner1_floating').">"; 
@@ -180,7 +180,7 @@
 			<input type='text' name='travel2banner1_floating_text1' value='<?=ms::meta('travel2banner1_floating_text1')?>'>
 		</td>
 		<td>
-			<div class='image-title'>오른쪽 날개 배너2</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>오른쪽 날개 배너2</div>
 			<div class='image-upload'>
 			<?if( ms::meta('travel2banner2_floating') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner2_floating').">"; 
@@ -196,7 +196,7 @@
 	</tr>
 	<tr valign='top'>
 		<td>
-			<div class='image-title'>오른쪽 날개 배너3</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>오른쪽 날개 배너3</div>
 			<div class='image-upload'>
 			<?if( ms::meta('travel2banner3_floating') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner3_floating').">"; 
@@ -219,7 +219,7 @@
 	<table cellspacing='0' cellpadding='3' class='image-config' width='100%'>	
 		<tr valign='top'>
 		<td>
-			<div class='image-title'>왼쪽 사이드 배너</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>왼쪽 사이드 배너</div>
 			<div class='image-upload'>
 			<?if( ms::meta('travel2banner1_sidebar') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner1_sidebar').">"; 
@@ -234,7 +234,7 @@
 		</td>
 
 		<td>
-			<div class='image-title'>오른쪽 사이드 배너</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>오른쪽 사이드 배너</div>
 			<div class='image-upload'>
 			<?if( ms::meta('travel2banner_right') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner_right').">"; 
@@ -251,7 +251,7 @@
 	</tr>
 	<tr valign='top'>
 		<td>
-			<div class='image-title'>하단 배너</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>하단 배너</div>
 			<div class='image-upload'>
 			<?if( ms::meta('travel2banner_bottom') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner_bottom').">"; 

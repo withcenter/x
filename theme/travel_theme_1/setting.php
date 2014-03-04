@@ -4,9 +4,11 @@
 <table cellpadding=5 class='image-config' width='100%'>
 	<tr valign='top'>
 		<td colspan=2>
-			<div class='image-title'>사이트 로고</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>사이트 로고</div>
 			<div class='image-upload'>
-				<?if( ms::meta('header_logo') ) {?><img src="<?=ms::meta('img_url').ms::meta('header_logo')?>" width=280px height=160px><br><?}?>
+			<?if( ms::meta('header_logo') ) {
+				echo "<img src=".ms::meta('img_url').ms::meta('header_logo').">"; 
+			} else echo "<div class='setting-no-image'>NO-IMAGE: [360px-width by 60px-height]</div>"; ?>
 				<input type='file' name='header_logo'><br>
 				<?if( ms::meta('header_logo') != '' ) { ?>
 					<input type='hidden' name='header_logo_remove' value='n'>
@@ -19,9 +21,11 @@
 	</tr>	
 	<tr valign='top'>
 		<td>
-			<div class='image-title'>배너이미지1</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지1</div>
 			<div class='image-upload'>
-				<?if( ms::meta('travelbanner_1') ) {?><img src="<?=ms::meta('img_url').ms::meta('travelbanner_1')?>" width=280px height=160px><br><?}?>
+				<?if( ms::meta('travelbanner_1') ) {
+					echo "<img src=".ms::meta('img_url').ms::meta('travelbanner_1').">"; 
+				} else echo "<div class='setting-no-image'>NO-IMAGE: [650px-width by 350px-height]</div>"; ?>
 				<input type='file' name='travelbanner_1'>
 				<?if( ms::meta('travelbanner_1') != '' ) { ?>
 					<input type='hidden' name='travelbanner_1_remove' value='n'>
@@ -33,9 +37,11 @@
 		</td>
  
 		<td>
-			<div class='image-title'>배너이미지2</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지2</div>
 			<div class='image-upload'>
-			<?if( ms::meta('travelbanner_2') ) {?><img src="<?=ms::meta('img_url').ms::meta('travelbanner_2')?>" width=280px height=160px><br><?}?>
+				<?if( ms::meta('travelbanner_2') ) {
+					echo "<img src=".ms::meta('img_url').ms::meta('travelbanner_2').">"; 
+				} else echo "<div class='setting-no-image'>NO-IMAGE: [650px-width by 350px-height]</div>"; ?>
 			<input type='file' name='travelbanner_2'>
 			<?if( ms::meta('travelbanner_2') != '' ) { ?>
 				<input type='hidden' name='travelbanner_2_remove' value='n'>
@@ -48,9 +54,11 @@
 	</tr>
 	<tr valign='top'>
 		<td>
-			<div class='image-title'>배너이미지3</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지3</div>
 			<div class='image-upload'>
-			<?if( ms::meta('travelbanner_3') ) {?><img src="<?=ms::meta('img_url').ms::meta('travelbanner_3')?>" width=280px height=160px><br><?}?>
+				<?if( ms::meta('travelbanner_3') ) {
+					echo "<img src=".ms::meta('img_url').ms::meta('travelbanner_3').">"; 
+				} else echo "<div class='setting-no-image'>NO-IMAGE: [650px-width by 350px-height]</div>"; ?>
 			<input type='file' name='travelbanner_3'>
 			<?if( ms::meta('travelbanner_3') != '' ) { ?>
 				<input type='hidden' name='travelbanner_3_remove' value='n'>
@@ -62,9 +70,11 @@
 		</td>
 
 		<td>
-			<div class='image-title'>배너이미지4</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지4</div>
 			<div class='image-upload'>
-			<?if( ms::meta('travelbanner_4') ) {?><img src="<?=ms::meta('img_url').ms::meta('travelbanner_4')?>" width=280px height=160px><br><?}?>
+				<?if( ms::meta('travelbanner_4') ) {
+					echo "<img src=".ms::meta('img_url').ms::meta('travelbanner_4').">"; 
+				} else echo "<div class='setting-no-image'>NO-IMAGE: [650px-width by 350px-height]</div>"; ?>
 			<input type='file' name='travelbanner_4'>
 			<?if( ms::meta('travelbanner_4') != '' ) { ?>
 				<input type='hidden' name='travelbanner_4_remove' value='n'>
@@ -77,9 +87,11 @@
 	</tr>
 		<tr valign='top'>
 		<td>
-			<div class='image-title'>배너이미지5</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지5</div>
 			<div class='image-upload'>
-			<?if( ms::meta('travelbanner_5') ) {?><img src="<?=ms::meta('img_url').ms::meta('travelbanner_5')?>" width=280px height=160px><br><?}?>
+				<?if( ms::meta('travelbanner_5') ) {
+					echo "<img src=".ms::meta('img_url').ms::meta('travelbanner_5').">"; 
+				} else echo "<div class='setting-no-image'>NO-IMAGE: [650px-width by 350px-height]</div>"; ?>
 			<input type='file' name='travelbanner_5'>
 			<?if( ms::meta('travelbanner_5') != '' ) { ?>
 				<input type='hidden' name='travelbanner_5_remove' value='n'>
