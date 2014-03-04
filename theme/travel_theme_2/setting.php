@@ -3,23 +3,23 @@
 	<div class='config-container' cellspacing='0' cellpadding='3' >
 		<table>
 			<tr>
-				<td><span class='title-small'>전화번호1: </span><input type='text' name='travel2contact_num1' value='<?=ms::meta('travel2contact_num1')?>'></td>
-				<td><span class='title-small'>운영시간1: </span><input type='text' name='travel2contact_hours1' value='<?=ms::meta('travel2contact_hours1')?>'></td>
+				<td><span class='title-small'>전화번호1</span><input type='text' name='travel2contact_num1' value='<?=ms::meta('travel2contact_num1')?>'></td>
+				<td><span class='title-small'>운영시간1</span><input type='text' name='travel2contact_hours1' value='<?=ms::meta('travel2contact_hours1')?>'></td>
 			</tr>
 			<tr>
-				<td><span class='title-small'>전화번호2: </span><input type='text' name='travel2contact_num2' value='<?=ms::meta('travel2contact_num2')?>'></td>
-				<td><span class='title-small'>운영시간2: </span><input type='text' name='travel2contact_hours2' value='<?=ms::meta('travel2contact_hours2')?>'>	</td>	
+				<td><span class='title-small'>전화번호2</span><input type='text' name='travel2contact_num2' value='<?=ms::meta('travel2contact_num2')?>'></td>
+				<td><span class='title-small'>운영시간2</span><input type='text' name='travel2contact_hours2' value='<?=ms::meta('travel2contact_hours2')?>'>	</td>	
 			</tr>
 			<tr>
 				<td><span class='title-small'>이메일1 </span><input type='text' name='travel2email_num1' value='<?=ms::meta('travel2email_num1')?>'></td>
-				<td><span class='title-small'>이메일2: </span><input type='text' name='travel2email_num2' value='<?=ms::meta('travel2email_num2')?>'></td>		
+				<td><span class='title-small'>이메일2</span><input type='text' name='travel2email_num2' value='<?=ms::meta('travel2email_num2')?>'></td>		
 			</tr>
 			<tr>
 				<td><span class='title-small'>사업자 등록번호</span><input type='text' name='travel2permit_1' value='<?=ms::meta('travel2permit_1')?>'></td>
-				<td><span class='title-small'>사업자 등록회사명 : </span><input type='text' name='travel2plate_1' value='<?=ms::meta('travel2plate_1')?>'></td>		
+				<td><span class='title-small'>사업자 등록명</span><input type='text' name='travel2plate_1' value='<?=ms::meta('travel2plate_1')?>'></td>		
 			</tr>
 			<tr>
-				<td colspan='2'><span class='title-small'>하단 문구 제목: </span><input type='text' name='travel2footer_tagline' value='<?=ms::meta('travel2footer_tagline')?>' /></td>
+				<td colspan='2'><span class='title-small'>하단문구제목</span><input type='text' name='travel2footer_tagline' value='<?=ms::meta('travel2footer_tagline')?>' /></td>
 			<tr>
 		</table>
 	</div>
