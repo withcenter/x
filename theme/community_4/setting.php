@@ -15,7 +15,7 @@
 			<div class='image-upload'>
 			<?if( ms::meta('header_logo') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('header_logo').">"; 
-			} else echo "<div class='setting-no-image'>NO-IMAGE: [350px-width by 65px-height]</div>"; ?>
+			} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 350px X 세로 65px]</div>"; ?>
 				<input type='file' name='header_logo'>
 				<?if( ms::meta('header_logo') != '' ) { ?>
 					<input type='hidden' name='header_logo_remove' value='n'>
@@ -28,7 +28,7 @@
 			<div class='image-upload'>
 			<?if( ms::meta('com-c-banner_company') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('com-c-banner_company').">"; 
-			} else echo "<div class='setting-no-image'>NO-IMAGE: [210px-width by 115px-height]</div>"; ?>
+			} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 210px X 세로 115px]</div>"; ?>
 				<input type='file' name='com-c-banner_company'>
 				<?if( ms::meta('com-c-banner_company') != '' ) { ?>
 					<input type='hidden' name='com-c-banner_company_remove' value='n'>
@@ -43,7 +43,7 @@
 			<div class='image-upload'>
 				<?if( ms::meta('com-c-banner_1') ) {
 					echo "<img src=".ms::meta('img_url').ms::meta('com-c-banner_1').">"; 
-				} else echo "<div class='setting-no-image'>NO-IMAGE: [750px-width by 240px-height]</div>"; ?>
+				} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 750px X 세로 240px]</div>"; ?>
 				<input type='file' name='com-c-banner_1'>
 				<?if( ms::meta('com-c-banner_1') != '' ) { ?>
 					<input type='hidden' name='com-c-banner_1_remove' value='n'>
@@ -61,7 +61,7 @@
 			<div class='image-upload'>
 				<?if( ms::meta('com-c-banner_2') ) {
 					echo "<img src=".ms::meta('img_url').ms::meta('com-c-banner_2').">"; 
-				} else echo "<div class='setting-no-image'>NO-IMAGE: [750px-width by 240px-height]</div>"; ?>
+				} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 750px X 세로 240px]</div>"; ?>
 			<input type='file' name='com-c-banner_2'>
 			<?if( ms::meta('com-c-banner_2') != '' ) { ?>
 				<input type='hidden' name='com-c-banner_2_remove' value='n'>
@@ -80,7 +80,7 @@
 			<div class='image-upload'>
 				<?if( ms::meta('com-c-banner_3') ) {
 					echo "<img src=".ms::meta('img_url').ms::meta('com-c-banner_3').">"; 
-				} else echo "<div class='setting-no-image'>NO-IMAGE: [750px-width by 240px-height]</div>"; ?>
+				} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 750px X 세로 240px]</div>"; ?>
 			<input type='file' name='com-c-banner_3'>
 			<?if( ms::meta('com-c-banner_3') != '' ) { ?>
 				<input type='hidden' name='com-c-banner_3_remove' value='n'>
@@ -98,7 +98,7 @@
 			<div class='image-upload'>
 				<?if( ms::meta('com-c-banner_4') ) {
 					echo "<img src=".ms::meta('img_url').ms::meta('com-c-banner_4').">"; 
-				} else echo "<div class='setting-no-image'>NO-IMAGE: [750px-width by 240px-height]</div>"; ?>
+				} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 750px X 세로 240px]</div>"; ?>
 			<input type='file' name='com-c-banner_4'>
 			<?if( ms::meta('com-c-banner_4') != '' ) { ?>
 				<input type='hidden' name='com-c-banner_4_remove' value='n'>
@@ -117,7 +117,7 @@
 			<div class='image-upload'>
 				<?if( ms::meta('com-c-banner_5') ) {
 					echo "<img src=".ms::meta('img_url').ms::meta('com-c-banner_5').">"; 
-				} else echo "<div class='setting-no-image'>NO-IMAGE: [750px-width by 240px-height]</div>"; ?>
+				} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 750px X 세로 240px]</div>"; ?>
 			<input type='file' name='com-c-banner_5'>
 			<?if( ms::meta('com-c-banner_5') != '' ) { ?>
 				<input type='hidden' name='com-c-banner_5_remove' value='n'>

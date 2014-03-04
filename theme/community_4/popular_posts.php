@@ -47,12 +47,12 @@ if ( $posts ) { ?>
 										<tr valign='top' align='right'>												
 											<td width='35'>
 												<img src='".x::url_theme()."/img/views.png'>
-												<span class='num_views'>$no_of_views</span>
+												<span class='num_views'>$no_of_views</span>&nbsp;
 											</td>
 										</tr>
 										<tr valign='top' align='right'>
 											<td>
-												<span class='num_comments'>[ $no_of_comments ]</span>
+												<span class='num_comments'>[$no_of_comments]</span>
 											</td>
 										</tr>
 									</table>
