@@ -4,7 +4,10 @@
 	
 	
 	$src = '$cache_fwrite = false;';
-	$dst = "x::hook( 'latest' ); if ( $error_hook_latest < 0 ) return;\n\t$src";
+	
+	$dst = 'x::hook( "latest" ); if ( $error_hook_latest < 0 ) return "No post on $bo_table";'."\n\t$src";
+
+	
 	$data = patch_string( $data, $src, $dst );
 	
 	$src = "if(G5_IS_MOBILE) {";

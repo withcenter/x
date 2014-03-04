@@ -41,17 +41,26 @@
 }
 
 .images_with_captions .img-wrapper{
-	width:172px;
-	height:87px;
+	width:168px;
+	height:85px;
+	padding: 2px;
 	border:1px solid #bbbbbb;
 }
 
-.images_with_captions .caption{	
-	width:172px;
+.images_with_captions .img-wrapper img {
+	width:100%;
+	height: auto;
+}
+
+
+.images_with_captions .caption {
+	width:160px;
 	text-align:center;
 	overflow:hidden;
-	white-space:nowrap;
-	margin-top: 5px;
+	margin: 0.4em auto 0;
+	line-height: 1em;
+	height: 1em;
+	word-break: break-all;
 }
 
 .images_with_captions .caption a{	

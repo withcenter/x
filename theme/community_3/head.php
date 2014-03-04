@@ -65,14 +65,8 @@
 				<input type="hidden" name="sfl" value="wr_subject||wr_content">
 				<input type="hidden" name="sop" value="and">
 				<label for="sch_stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
-					<table id='search_table_holder' cellpadding=0 cellspacing=0><tr>
-						<td>
-							<input type="text" name="stx" id="comm3_search_text" maxlength="20" placeholder='검색어를 입력해 주세요.' autocomplete='off'>
-						</td>
-						<td width=40>				
-							<input type="image" src="<?=x::url_theme()?>/img/search.png" id="comm3_search_submit">
-						</td>
-					</tr></table>
+				<input type="text" name="stx" id="comm3_search_text" maxlength="20" placeholder='검색어를 입력해 주세요.' autocomplete='off'><input type="submit" value='검색' id="comm3_search_submit">
+
 				</form>
 
 				<script>
@@ -107,8 +101,8 @@
 		</tr></table>
 	</div>
 	<div class='main-menu'>	
-			<?include x::theme('main-menu')?>				
-	</div>	
+			<?include x::theme('main-menu')?>
+	</div>
 
 	<div class='body-wrapper'>
 		<div class='main-content'>
