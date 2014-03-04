@@ -34,7 +34,7 @@
 			</div>
 			<div class='footer-text'>
 			<?
-				if ( $footer_text = ms::meta('footer_text') ) echo $footer_text;
+				if ( $footer_text = ms::meta('footer_text') ) echo nl2br($footer_text);
 				else echo "하단 문구를 입력하세요.";
 			?>
 			</div>
