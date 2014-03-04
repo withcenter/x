@@ -66,8 +66,7 @@ if( ms::admin() ) {
 			width:80px;
 			overflow:hidden;
 			white-space:nowrap;			
-			float:left;
-			border: solid 1px blue;
+			float:left;			
 		}
 		ul#footer-menu{					
 			margin-bottom:5px;
