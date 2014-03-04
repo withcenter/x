@@ -1,7 +1,7 @@
 .login-box {
 	background: #fcfcfc;
 	color: #808080;
-	height: 98px;
+	height: 99px;
 	padding: 7px;
 	overflow: hidden;
 	border: solid 1px #bbbbbb;
@@ -24,6 +24,7 @@
 .login-box .register_autologin {
 	margin-top: 5px;
 	padding: 0 5px;
+	height:18px;
 }
 .login-box .register_autologin .login-reg {
 	float: left;

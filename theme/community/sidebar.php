@@ -30,14 +30,9 @@ if( $recent_rows ) {
 			<table width='100%'>
 				<tr valign='top'>
 					<td align='left' class='title-left'>
-						<div><img src="<?=x::url_theme()?>/img/recent-posts.png"></div>
-						<div class='label'>최근 등록글</div>
+					<img src="<?=x::url_theme()?>/img/recent-posts.png">
+						<span class='label'>최근 등록글</span>
 					</td>
-					<? /*
-					<td align='right'>
-						<div class='posts-more'><a href='#'>자세히<img src="<?=x::url_theme()?>/img/more-icon.png"></a></div>
-					</td>
-					*/?>
 				</tr>
 			</table>
 		</div>
@@ -86,14 +81,9 @@ if( $recent_comments ) {
 			<table width='100%'>
 				<tr valign='top'>
 					<td align='left' class='title-left'>
-						<div><img src="<?=x::url_theme()?>/img/recent-posts.png"></div>
-						<div class='label'>최근 댓글</div>
+						<img src="<?=x::url_theme()?>/img/recent-posts.png">
+						<span class='label'>최근 댓글</span>
 					</td>
-					<? /*
-					<td align='right'>
-						<div class='posts-more'><a href='#'>more <img src="<?=x::url_theme()?>/img/more-icon.png"></a></div>
-					</td>
-					*/ ?>
 				</tr>
 			</table>
 		</div>
@@ -110,9 +100,6 @@ if( $recent_comments ) {
 	?>	
 		<div  class='recent-items <?if($i==$no_of_comments) echo "last-item" ?>' >
 			<a href='<?=$comments_url?>'>	
-				<!--<span style='width: 30px; height: 50px;'>
-					<img src='<?=x::url_theme()?>/img/comments-pic.png'>
-				</span>-->
 				<span class='post-content'>
 						<?=$comments_author?>: <?=$comments_content?>
 						<span class='time-ago'>작성일 <?=$timeago?></span>
@@ -141,8 +128,8 @@ if( $post_comments ) {
 				<table width='100%'>
 					<tr valign='top'>
 						<td align='left' class='title-left'>
-							<div><img src="<?=x::url_theme()?>/img/recent-posts.png"></div>
-							<div class='label'><?=$board_title?> 댓글</div>
+							<img src="<?=x::url_theme()?>/img/recent-posts.png">
+							<span class='label'><?=$board_title?> 댓글</span>
 						</td>
 						<td align='right'>
 							<div class='posts-more'><a href='<?g::url()?>/bbs/board.php?bo_table=<?=$latest_bo_table?>'>자세히<img src="<?=x::url_theme()?>/img/more-icon.png"></a></div>

@@ -29,11 +29,13 @@
 }
 
 .my-posts .posts-items {
-
+	padding: 10px 10px 10px 30px; 
+	position: relative;
 }
 
 .my-posts .posts-items ul {
-	padding-left: 30px;
+	margin: 0;
+	padding: 0;
 	list-style: square;
 }
 
@@ -46,12 +48,15 @@
 	vertical-align: top;
 }
 
+
+
 .my-posts a .subject {
 	overflow: hidden;
 	width: 120px;
 }
-
 .my-posts a .no-of-comments {
+	position: absolute;
+	right: 10px;
 	color: #ff0000;
 }
 

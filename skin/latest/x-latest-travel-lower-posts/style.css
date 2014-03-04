@@ -17,6 +17,7 @@
 	width:65%;
 	overflow:hidden;
 	white-space:nowrap;
+	float: left;
 }
 
 .travel_lower_post_title  a{
@@ -29,9 +30,7 @@
 }
 
 .travel_lower_post_title .icon{
-	position:relative;
-	top: -11px;
-	margin-right:2px;
+
 }
 
 .travel_lower_items{
@@ -42,9 +41,13 @@
 	border-bottom:1px solid #bbbbbb;
 	padding:7px 0 8px 0;
 }
-
+.travel_lower_items .item .subject{
+	position: relative;
+}
 .travel_lower_items .item .comments{
-	float:right;
+	position: absolute;
+	right: 0;
+	top: 0;
 	color:#cc4235;
 }
 

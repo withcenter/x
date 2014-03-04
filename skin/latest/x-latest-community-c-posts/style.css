@@ -1,23 +1,27 @@
- .community-c-posts {
-	white-space: nowrap;
+ .community-c-posts {	
 	margin-bottom: 10px;
 	height: 160px;
 }
 
- .community-c-posts a {
+.community-c-posts a {
 	text-decoration: none;
 }
 
- .community-c-posts .title-left .label{
+.community-c-posts .title-left .label{
 	display:inline-block;
 	width:120px;
 	overflow:hidden;
+	margin-left:20px;
+} 
+.community-c-posts .title-left{
+	position:relative;
 }
 
  .community-c-posts .content-community-3 {
 	display: inline-block;
 	width: 130px;
 	overflow: hidden;
+	white-space: nowrap;
 }
 
  .community-c-posts .title {
@@ -35,8 +39,9 @@
 
  .community-c-posts .title img {
 	margin: 0 2px 0 0;
-	position: relative;
-	top: -10px;
+	position: absolute;
+	top:5px;
+	left:0;
 }
 
  .community-c-posts .community-c-posts-items {
@@ -45,6 +50,9 @@
 
  .community-c-posts .community-c-posts-items .posts-square {
 	font-size: 10px;
+	position:relative;
+	top:-3px;
+	left:0;
 }
 
  .community-c-posts .community-c-posts-items .no-of-comments {

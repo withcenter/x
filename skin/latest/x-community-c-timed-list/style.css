@@ -1,6 +1,5 @@
 .comm3_timed_list{
-	width:368px;	
-	display:inline-block;
+	width:368px;		
 	height:140px;
 }
 
@@ -12,6 +11,7 @@
 	line-height: 28px;
 	height: 28px;
 	background-color: #fcfcfc;
+	position:relative;
 }
 
 .comm3_timed_list .timed_list_title img{
@@ -21,12 +21,14 @@
 }
 
 .comm3_timed_list .timed_list_title a{
+	position:absolute;
+	right:10px;
+	top:0;
 	font-weight:normal;
 	color:#808080;
 	font-size: 9pt;
 	float:right;
 	text-decoration:none;
-	margin-top: 2px;
 }
 
 .comm3_timed_list ul{

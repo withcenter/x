@@ -34,7 +34,7 @@ ul#footer-menu{
 	background-color:#cccccc;
 	max-width:970px;
 	margin:auto;
-	text-align:center;
+	text-align:center;		
 }
 
 ul#footer-menu li{	
@@ -42,11 +42,11 @@ ul#footer-menu li{
 	border-left:1px solid #afafaf;	
 	padding:3px 10px 4px 10px;
 	margin: 5px 0;
-	font-size:.8em;
+	font-size:.8em;	
 }
 
 ul#footer-menu li.last-menu{	
-	border-right:1px solid #afafaf;	
+	border-right:1px solid #afafaf;
 }
 
 ul#footer-menu li[page='admin-menu']{	

@@ -8,8 +8,8 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			<table width='100%'>
 				<tr valign='top'>
 					<td align='left' class='title-left'>
-						<div class='top-left-icon'><img src="<?=$latest_skin_url?>/img/recent-posts.png"></div>
-						<div class='label'><?=$bo_subject?></div>
+						<img src="<?=$latest_skin_url?>/img/recent-posts.png">
+						<span class='label'><?=$bo_subject?></span>
 					</td>
 					<td align='right'>
 						<div class='posts-more'><a href="<?=g::url()?>/bbs/board.php?bo_table=<?=$bo_table?>" >자세히 <img src="<?=$latest_skin_url?>/img/more-icon.png"></a></div>

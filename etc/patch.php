@@ -45,6 +45,7 @@ if ( $argv[1] == 'language' ) {
 	include x::dir() . "/etc/patch/delete.php";
 	include x::dir() . "/etc/patch/outlogin.lib.php";
 	include x::dir() . "/etc/patch/latest.lib.php";
+	include x::dir() . "/etc/patch/head.sub.php";
 	
 	
 	echo "\n-- PATCH SUCCESS --\n";
@@ -54,7 +55,7 @@ if ( $argv[1] == 'language' ) {
 	
 function patch_failed()
 {
-	patch_message("-----------------------------  FAILED --");
+	patch_message("\n-----------------------------  FAILED --");
 	exit;
 }
 
@@ -135,7 +136,7 @@ function patch_string( $string, $src, $dst )
 	}
 	else {
 		if ( ! pattern_exist($string, $src) ) {
-			echo " Srouce pattern does not exist. FAILED\n[ source patttern ] : $src";
+			patch_message( " Srouce pattern does not exist. FAILED\nsource patttern : [$src]");
 			patch_failed();
 		}
 		else {

@@ -7,9 +7,11 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		<div class='title'>
 			<table width='100%'>
 				<tr valign='top'>
-					<td align='left' class='title-left'>
-						<img src="<?=$latest_skin_url?>/img/my-posts.png">
-						<span class='label'><?=cut_str($bo_subject,15,"...")?></span>
+					<td align='left'>
+						<div  class='title-left'>
+							<img src="<?=$latest_skin_url?>/img/my-posts.png">
+							<span class='label'><?=cut_str($bo_subject,15,"...")?></span>
+						</div>
 					</td>
 					<td align='right'>
 						<div class='posts-more'><a href="<?=g::url()?>/bbs/board.php?bo_table=<?=$bo_table?>" >자세히 <!--<img src="<?=$latest_skin_url?>/img/more-icon.png">--></a></div>
@@ -61,3 +63,10 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	</div>
 </div>
 
+<!--[if IE 7]>
+	<style>
+		.community-c-posts td{
+			padding-bottom:3px;
+		}
+	</style>
+<![endif]-->

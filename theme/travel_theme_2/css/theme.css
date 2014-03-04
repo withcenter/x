@@ -41,7 +41,7 @@
 }
 
 .travel-theme-top-wrapper #menu-top-left .inner ul li, .travel-theme-top-wrapper #menu-top-right .inner ul li{
-	display: inline-block;
+	float: left;
 
 }
 

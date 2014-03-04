@@ -3,6 +3,10 @@
 	margin-bottom:10px;
 }
 
+body, body a {
+	font-family: '맑은 고딕', AppleGothic;
+}
+
 /** header */
 
 #header-logo {
@@ -297,12 +301,12 @@
 	color: #ffffff;
 	height: 30px;
 	line-height: 30px;
-	display: inline-block;
+	float: left;
 	border: 1px solid transparent;
 	border-radius: 5px;
 	position: relative;
-	top: 1px;
 	margin: 0 10px;
+	margin-top: 4px;
 }
 #menu-top ul li a:hover {
 	background: #6b6b6b;
@@ -435,10 +439,13 @@
 .recent-comments-items ul li a {
 	text-decoration: none;
 }
+.posts-recent-items {
+	padding: 10px 10px 10px 30px; 
+}
 
 .posts-recent-items ul {
-	padding-right: 15px;
-	padding-left: 30px;
+	margin: 0;
+	padding: 0;
 	word-break: break-all;
 	list-style: square;
 }

@@ -19,8 +19,9 @@
 }
 
 .community_images_with_captions  .title .more-button {
-	float: right;
-	margin-right: 9px;
+	position:absolute;
+	top:0;
+	right:9px;
 	font-weight:normal;
 	color:#808080;
 	font-size: 9pt;
@@ -31,9 +32,9 @@
 
 .community_images_with_captions_container {
 	width:172px;	
-	display: inline-block;
 	margin-left:9px;	
 	margin-bottom:10px;
+	float:left;
 }
 
 .community_images_with_captions_container.no-margin {

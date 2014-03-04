@@ -11,7 +11,8 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 		<?if( $options ) echo "<img class='icon' src='".$options."'/>";?>
 		<?php echo $bo_subject; ?>		
 	</div>
-    <table width='100%' cellpadding=0 cellspacing=0>
+		<div class='travel_images_2_container'>
+    <table cellpadding=0 cellspacing=0 >
     <?php for ($i=0; $i<count($list); $i++) {
 		if( $i+1 == count($list) ){			
 			$nopadding = 'no-padding';
@@ -48,5 +49,6 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
             <td class='$nopadding' width=170><div class='travel_2_subject'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=2'>여행사 사이트 만들기</a></div></td>
 		</tr>
     <?php }  ?>
-    </table>    
+    </table>   
+	</div>
 </div>

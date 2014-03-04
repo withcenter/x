@@ -522,7 +522,7 @@ class gnuboard {
 		
 		
 		$dest_file = G5_DATA_PATH.'/file/'.$bo_table.'/'.$file;
-		dlog("Copy: $path to $dest_file");
+		//dlog("Copy: $path to $dest_file");
 		copy( $path, $dest_file );
 		
 		chmod($dest_file, G5_FILE_PERMISSION);
@@ -568,7 +568,7 @@ class gnuboard {
 		// update the number of file for the post.
 		$board_file_table = self::board_file_table();
 		$write_table	= g::write_table( $bo_table );
-		dlog("write_table: $write_table");
+		//dlog("write_table: $write_table");
 		$cnt = db::result(" select count(*) as cnt from $board_file_table where bo_table = '$bo_table' and wr_id = '$wr_id' ");
 		db::query(" update {$write_table} set wr_file = '{$cnt}' where wr_id = '{$wr_id}' ");
 	}

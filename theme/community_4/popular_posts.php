@@ -29,7 +29,7 @@ if ( $posts ) { ?>
 			foreach ( $posts as $key => $post ) { if($i >= 2) break;
 				foreach ( $post as $p ) {
 					$url = G5_BBS_URL."/board.php?bo_table=$key&wr_id=$p[wr_id]";
-					$popular_subject = conv_subject( $p['wr_subject'], 15, '...');
+					$popular_subject = "<span>".conv_subject( $p['wr_subject'], 15, '...');
 					$no_of_views = $p['wr_hit'];
 					$no_of_comments = $p['wr_comment'];
 					
@@ -44,11 +44,9 @@ if ( $posts ) { ?>
 									</td>
 									<td width='50' align='right'>
 									<table class='popular-views'>
-										<tr valign='top' align='right'>
-											<td rowspan=2 width='10'>
+										<tr valign='top' align='right'>												
+											<td width='35'>
 												<img src='".x::url_theme()."/img/views.png'>
-											</td>
-											<td width='20>
 												<span class='num_views'>$no_of_views</span>
 											</td>
 										</tr>

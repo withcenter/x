@@ -7,7 +7,7 @@
 	
 <div class='footer'>
 	
-		
+	
 <ul id="footer-menu">		
 	
 	<?		
@@ -39,7 +39,7 @@
 			</li>
 	<? } ?>
 	
-	
+	<div style='clear:both;'></div>
 </ul>
 	
 			<div class='copyright'>
@@ -54,3 +54,17 @@
 			</div>
 		</div><!--footer-->
 </div><!--layout-->
+
+<!--[if IE 7]>
+	<style>
+		ul#footer-menu li{	
+			width:100px;
+			overflow:hidden;
+			white-space:nowrap;			
+			float:left;
+		}
+		ul#footer-menu{					
+			margin-bottom:5px;
+		}
+	</style>
+<![endif]-->

@@ -100,13 +100,17 @@
 	font-weight: bold;
 }
 
+.layout .left .exchange-rate  tr td.exchange-date > span {
+	float: left;
+}
+
 .layout .left .exchange-rate  tr td .bottom-title {
 	color: #ffffff;
 	background-color: #0e5565;
 	display: inline-block;
 	height: 17px;
 	line-height: 15px;
-	padding: 0 10px;
+	padding: 0 7px;
 	border-radius: 2px;
 	font-family: '맑은 고딕', AppleGothic;
 }
