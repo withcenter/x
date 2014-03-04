@@ -73,7 +73,7 @@
 
 <!-- 콘텐츠 시작 { -->
 
-
+<div>
 <div class="layout"><div class='inner'>
 
 <div class='floating-bar'>
@@ -93,8 +93,6 @@
 	</div>
 <div class='back-to-top'><img src='<?=x::url_theme()?>/img/up-arrow.png'/><br>TOP</div>
 </div>
-
-
     <div class="left">
 		<div class='login-sidebar'>
 			<?php echo outlogin('x-outlogin-travel_3'); // 외부 로그인  ?>
