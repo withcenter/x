@@ -1,4 +1,5 @@
 </div><!--container-->
+<div style='clear:both'></div>
 <?	
 	if($_SERVER['SCRIPT_NAME'] == '/index.php') {
 	?>
@@ -12,7 +13,6 @@
 		<?=$img?>
 	</div>
 	<?}?>
-<div style='clear:both'></div>
 </div> <!-- inner -->
 <div class='footer-wrapper'>	
 	<div class='footer'>
