@@ -67,9 +67,9 @@
 			$count++;
 			}
 		?>
-	<tr>
+	<tr valign='top'>
 		<td colspan=4 align='right'>
-			<span class='bottom-title'>환율 업데이트</span> <?=date('Y-m-d H:i', $currency['last_update'])?>
+			<span class='exchange-date'><span class='bottom-title'>환율 업데이트</span> <span><?=date('Y-m-d H:i', $currency['last_update'])?></span><div style="clear:both"></div></span>
 		</td>
 	</tr>
 </table>
