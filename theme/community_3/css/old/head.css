@@ -1,0 +1,133 @@
+.top{
+	width:100%;	
+	background-color:#cccccc;
+}
+
+.top .inner{
+	max-width:970px;
+	height:30px;
+	margin:auto;
+	color:#4d4d4d;
+}
+
+.top .inner a{
+	color:#4d4d4d;
+	text-decoration:none;
+	display:inline-block;		
+	padding:7px 0;
+}
+
+.top .inner .dot{
+	margin:0 6px;
+}
+
+.top .inner > div{
+	display:inline-block;
+	width:49.5%;
+}
+
+.top .right{
+	text-align:right;
+}
+
+.header{
+	width:100%;
+	height:75px;
+	background-color:#e6e6e6;	
+}
+
+.header #comm3_logo{
+/* bug fix: should be margined here intead of padding image for 7 px */
+	margin-top: 7px;
+	height:60px;
+	max-width:400px;
+	overflow:hidden;	
+}
+
+
+.header #comm3_logo img{
+	height:100%;	
+}
+
+.header > table{
+	max-width:970px;
+	margin:auto;
+}
+
+.header #search_table_holder{
+	text-align:right;
+	width:100%;
+	margin-top:15px;
+}
+
+.header #search_table_holder #comm3_search_text{
+	padding: 10px;
+	width:316px;
+	border:3px solid #000000;
+	box-shadow: -1px 2px 3px #d3d3d3 inset;
+}
+
+.header #search_table_holder #comm3_search_submit{
+	padding: 10px 10px 9px 11px;	
+	border:3px solid #000000;
+	border-left:none;
+	background-color: #000000;
+}
+
+.main-menu{
+	width:100%;
+	border-top:1px solid #4d4d4d;	
+	margin-bottom:10px;
+	overflow:hidden;
+	
+	background: #494949; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQ5NDk0OSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzMzMzMzMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0OTQ5NDkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top, #494949 0%, #333333 50%, #494949 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#494949), color-stop(50%,#333333), color-stop(100%,#494949)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #494949 0%,#333333 50%,#494949 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #494949 0%,#333333 50%,#494949 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #494949 0%,#333333 50%,#494949 100%); /* IE10+ */
+background: linear-gradient(to bottom, #494949 0%,#333333 50%,#494949 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#494949', endColorstr='#494949',GradientType=0 ); /* IE6-8 */
+}
+
+.main-menu #comm3_main_menu{
+	max-width:970px;
+	margin:auto;
+	padding:0;		
+	height:44px;	
+}
+
+.main-menu #comm3_main_menu .comm3_menu{
+	list-style:none;	
+	overflow:hidden;
+	float:left;
+	height:44px;
+}
+
+.main-menu #comm3_main_menu .comm3_menu.no-margin{
+	margin-right:0;
+}
+
+.main-menu #comm3_main_menu .comm3_menu a{
+	font-family: '맑은 고딕', AppleGothic;
+	color:#ececec;
+	display:inline-block;	
+	text-align:center;	
+	overflow:hidden;
+	font-size:11pt;
+	font-weight:normal;
+	line-height:40px;	
+	height: 44px;
+	text-decoration:none;
+	padding: 0 15px;
+}
+
+.main-menu #comm3_main_menu .comm3_menu a:hover{
+	background-color:#000000;	
+}
+
+.main-menu #comm3_main_menu .comm3_menu.selected a{
+	background-color:#000000;	
+}

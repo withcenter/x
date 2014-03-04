@@ -77,3 +77,17 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
     <?php }  ?>
     </table>    
 </div>
+
+
+
+<!--[if IE]>
+	<style>
+		.comm3_timed_list_with_image .timed_list_title{
+			margin-bottom:10px;
+		}
+		
+		.comm3_timed_list_with_image td{
+			padding-top:0;	
+		}
+	</style>
+<![endif]-->
