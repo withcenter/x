@@ -7,9 +7,10 @@
 
 .travel-2-posts span.label {
 	display: inline-block;
-	width: 100px;
+	width: 120px;
 	overflow: hidden;
 	vertical-align: middle;
+	white-space:nowrap;
 }
  .travel-2-posts a {
 	text-decoration: none;
