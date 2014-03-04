@@ -7,7 +7,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		<div class='title'>
 			<table width='100%'>
 				<tr valign='top'>
-					<td align='left' class='title-left'>
+					<td align='left'>
 						<img src="<?=$latest_skin_url?>/img/my-posts.png">
 						<span class='label'><?=cut_str($bo_subject,15,"...")?></span>
 					</td>

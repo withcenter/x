@@ -5,9 +5,11 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
 <div class='community_images_with_captions'>
 		<div class='title'>
+			<span class='com-subject'>
 			<img src='<?=$latest_skin_url?>/img/icon.png'/> <?=$bo_subject?>
+			
 			<a class='more-button' href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$bo_table?>'>자세히</a>
-			<div style='clear:right;'></div>
+			<div style='clear:both;'></div>
 		</div>
 <?php
 	if ( $list ) {
@@ -26,6 +28,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 						</div>
 						<div class='caption'><a href='<?=$li['href']?>'><?=conv_subject( $li['wr_subject'], 20, '...' )?></a></div>						
 					</div>
+					<div style='clear: left'></div>
 				</div>		
 	<?
 		}
