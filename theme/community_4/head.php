@@ -129,19 +129,12 @@
 	<style>
 		.top .inner{
 			width:970px;
-		}
-		
-				
-		.top .inner a{
-				
 		}			
 		
 		.header .header_and_logo #comm3_logo{
 			width: 400px;
 			margin-top:7px;
-		}
-		
-		
+		}				
 	</style>
 <![endif]-->	
 
