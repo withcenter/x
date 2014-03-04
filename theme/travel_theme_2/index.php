@@ -19,10 +19,10 @@
 								else $first_image = '';
 								echo "<div class='banner-image image_num_$banner_num $first_image'>";
 								if ( !$url = ms::meta('travel2banner_'.$i.'_text2') )  $url = "javascript:void(0)";
-								echo "<a href='$url' target='_blank'><img src='".$banner_url.$banner_image."'>";
+								echo "<a href='$url' target='_blank'><img src='".$banner_url.$banner_image."'></a>";
 								echo "<p class='banner-text'><span class='banner-content'>".cut_str(strip_tags(ms::meta('travel2banner_'.$i.'_text1')),60,'...')."</span></p>";
-								echo "<div class='banner-more'>자세히</div>";
-								echo "</a></div>";
+								echo "<div class='banner-more'><a href='$url' target='_blank'>자세히</a></div>";
+								echo "</div>";
 								$banner_num++;
 							}
 						}

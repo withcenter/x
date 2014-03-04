@@ -39,7 +39,11 @@
 .layout .container .banner .banner-more {
 	position: absolute;
 	top: 209px;
-	right: 10px;
-	color: #ffffff;
+	right: 10px;	
 	font-size:.8em;
+}
+
+.layout .container .banner .banner-more a{
+	text-decoration:none;
+	color: #ffffff;	
 }
