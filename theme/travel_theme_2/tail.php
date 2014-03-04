@@ -60,7 +60,7 @@
 						<td>
 							<?if($footer_email = ms::meta('travel2email_num2')) { ?>
 								<div class='contact-num'>
-									<? if ( ms::meta('travel2email_num1') ) echo "이메일";?>
+									<? if ( !ms::meta('travel2email_num1') ) echo "이메일";?>
 									<?=$footer_email?>
 								</div>
 							<?}?>
