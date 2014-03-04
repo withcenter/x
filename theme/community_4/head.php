@@ -13,25 +13,27 @@
 <div class='layout'>
 	<div class='top'>
 		<div class='inner'>
-			<? if ( $member['mb_id'] ) {
-				if( $_SERVER['REQUEST_URI'] == "/".G5_BBS_DIR."/register_form.php" ) $in_register_page = 'selected';
+			<? 
+				$page_uri = $_SERVER['REQUEST_URI'];
+				if ( $member['mb_id'] ) {
+				if( $page_uri == "/".G5_BBS_DIR."/register_form.php" ) $in_register_page = 'selected';
 				else $in_register_page = null;
 			
 				$do_log = "<a href='".G5_BBS_URL."/logout.php'>로그아웃</a>";
 				$profile = "<a class = '".$in_register_page."' href='".G5_BBS_URL."/member_confirm.php?url=register_form.php'>회원정보수정</a>";
 			} 
 				else {
-				if( $_SERVER['REQUEST_URI'] == "/".G5_BBS_DIR."/login.php" ) $in_login_page = 'selected';
+				if( $page_uri == "/".G5_BBS_DIR."/login.php" ) $in_login_page = 'selected';
 				else $in_login_page = null;
 			
-				if( $_SERVER['REQUEST_URI'] == "/".G5_BBS_DIR."/register.php" ) $in_register_page = 'selected';
+				if( $page_uri == "/".G5_BBS_DIR."/register.php" ) $in_register_page = 'selected';
 				else $in_register_page = null;
 				
 				$do_log = "<a class = '".$in_login_page."' href='".G5_BBS_URL."/login.php'>로그인</a>";
 				$profile = "<a class ='".$in_register_page."'href='".G5_URL."/".G5_BBS_DIR."/register.php'>회원가입</a>";
 			}?>
 			<?
-				if( $_SERVER['REQUEST_URI'] == "/" ) $in_home_page = 'selected';
+				if( $page_uri == "/" || $page_uri == '/index.php') $in_home_page = 'selected';
 				else $in_home_page = null;
 			?>
 			<div class='left'>
