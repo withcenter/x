@@ -164,7 +164,7 @@ class multisite {
 	
 	
 	/**
-	 *  @brief checks if the log-in user owns the site that he/she access.
+	 *  @brief checks if the log-in user owns the (sub)site that he/she access.
 	 *  
 	 *  @param [in] $domain domain of a sub-site.
 	 *  @return boolean

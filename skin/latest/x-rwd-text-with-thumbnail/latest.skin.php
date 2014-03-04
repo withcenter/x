@@ -3,13 +3,14 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
 	$url_forum = g::url_forum( $bo_table );
 	$url_icon = g::url_skin('img/icon.png');
-	
+	global $done_x_rwd_text_with_thumbnail;
 ?>
-
+<? if ( ! $done_x_rwd_text_with_thumbnail ) { $done_x_rwd_text_with_thumbnail = 1; ?>
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
+<? } ?>
 
 <!-- <?php echo $bo_subject; ?> 최신글 시작 { -->
-<div class="x-rwd-text-with-thumbnail">
+<div class="skin-update x-rwd-text-with-thumbnail">
     <div class="title">
 		<?
 			if( $options ) {

@@ -14,3 +14,62 @@ function ajax_load(href, callback)
 			}
 		});
 }
+
+
+
+/**
+ *
+	https://docs.google.com/a/withcenter.com/document/d/17zGlMQgCqdLm7iQxKNFjB7s1NMMpCXSbHLlKIvWad4A/edit#heading=h.i4tdtwn1fawf	
+ */
+var layer_popup_auto_close = 1;
+$(function(){
+	$('body').on('click', '.layer_popup_mask', function(){
+		if ( layer_popup_auto_close == 1 ) close_layer_popup();
+	});
+
+	//// @note ESC 키를 누르면 창이 사라진다.
+	$(document).keydown(function(event) {
+		if ( layer_popup_auto_close == 1 ) {
+			if ( event.which=='27' ) close_layer_popup();
+		}
+	});
+});
+/** 언제 어디서든지 이 함수만 호출하면 열린 팝업창이 닫긴다. */
+function close_layer_popup()
+{
+	$('.layer_popup').remove();
+	$('.layer_popup_mask').remove();
+}
+/** 이 함수는 초기화 안전 장치가 없기 때문에, DOM 초기화가 끝난 다음이나 사용자의 이벤트 입력 후 또는 jQuery 초기화 코드 안에서 실행을 해야 한다.
+ */
+function layer_popup( href, auto_close, w, h, scroll ) { return popup_layer( href, auto_close, w, h, scroll ); }
+function popup_layer( href, auto_close, w, h, scroll )
+{
+	if ( typeof(auto_close) == "undefined" ) layer_popup_auto_close = 1;
+	else layer_popup_auto_close = auto_close;
+	if ( typeof(scroll) == "undefined" ) scroll = '';
+	else scroll = "scrolling='no'";
+	$('body').append("<div class='layer_popup_mask'></div>");
+	$('body').append("<div class='layer_popup'><iframe src='"+href+ "' " + scroll + " style='width:100%; height:100%; border: 0px;'></iframe></div>");
+	$('.layer_popup_mask').css({
+		"position":"absolute",
+		"left":0,
+		"top":0,
+		"z-index":987654321,
+		"background-color": "#000",
+		"opacity": "0.6"
+		})
+		.css({'width':$(window).width(),'height':$(document).height()});
+	$layer = $('.layer_popup');
+	$layer
+		.css('position', 'absolute')
+		.css("z-index", 987654322)
+		.css('width', w + 'px').css('height', h + 'px')
+		.css("top", (($(window).height() - $layer.height()) / 2) + $(window).scrollTop() + "px")
+		.css("left", (($(window).width() - $layer.width()) / 2) + $(window).scrollLeft() + "px")
+		.css('background-color', 'white')
+		.css('border', '1px solid #cdcdcd')
+		.css('border-radius', '2px')
+		;
+	$layer.fadeIn();
+}
