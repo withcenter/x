@@ -11,8 +11,15 @@
 	position:relative;
 	height: 28px;
 	line-height: 28px;
+
+}
+.travel_images_with_captions .title .travel-subject {
+	float: left;
 }
 
+.ttravel_image_with_captions .title a {
+	float: right;
+}
 .travel_images_with_captions .title a{
 	font-weight:normal;
 	color:#808080;
