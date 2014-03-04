@@ -3,12 +3,12 @@
 	$data = file::read($path);
 	
 	
-	$src = "ob_start();";
-	$dst = $src . "\n\tx::hook( 'latest' );";
+	$src = '$cache_fwrite = false;';
+	$dst = "x::hook( 'latest' ); if ( $error_hook_latest < 0 ) return;\n\t$src";
 	$data = patch_string( $data, $src, $dst );
 	
 	$src = "if(G5_IS_MOBILE) {";
-	$dst = '/* x patch */ global $skin_folder, $global_bo_table, $latest_skin_path, $latest_skin_url, $content; $skin_folder=$skin_dir; $global_bo_table=$bo_table;' . "\n$src\n\t";
+	$dst = '/* x patch */ global $error_hook_latest, $skin_folder, $global_bo_table, $latest_skin_path, $latest_skin_url, $content; $skin_folder=$skin_dir; $global_bo_table=$bo_table;' . "\n\t$src\n";
 	$data = patch_string( $data, $src, $dst );
 	
 	

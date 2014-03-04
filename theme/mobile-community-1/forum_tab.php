@@ -7,7 +7,20 @@
 	echo forum_tab('d', 'ms_test6_6');
 	
 function forum_tab( $cls, $id ) {
-	$posts = g::posts( array( 'bo_table' => $id, 'limit'=>5 ) );
+	
+	
+	if ( g::forum_exist( $id ) ) {
+		$posts = g::posts( array( 'bo_table' => $id, 'limit'=>5 ) );
+	}
+	else {
+		$posts = array(
+			array('wr_subject' => 'Forum does not exists'),
+			array('wr_subject' => 'Forum does not exists'),
+			array('wr_subject' => 'Forum does not exists'),
+		);
+	}
+	
+	
 	$ret .= "<div class='$cls'><div class='forum-tab-inner'>";
 	foreach ( $posts as $p ) {
 		$ret .= "<div class='subject'><a href='$p[href]'>$p[wr_subject]</a></div>";
