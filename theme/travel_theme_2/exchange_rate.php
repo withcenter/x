@@ -1,6 +1,6 @@
 <?php
 	$id = "exchange_rate";
-	$expire_time = 60; //minutes
+	$expire_time = 60 * 12; //minutes
 	
 	$currency = etc::cache_read( $id, $expire_time);
 	
@@ -43,7 +43,7 @@
 			 if ( $u ) $currency['thb'][] = $u;
 		}
 				
-		$currency['last_update'] = date("M d Y");
+		$currency['last_update'] = date("M d Y H:i A");
 		etc::cache_write( $id, $currency );
 	}	
 ?>
@@ -65,4 +65,4 @@
 			}
 		?>		
 </table>
-<div class='last-update'>LAST UPDATED: <?=$currency['last_update']?></div>
+<div class='last-update'>Last Update: <?=$currency['last_update']?></div>
