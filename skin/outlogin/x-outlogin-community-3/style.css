@@ -18,6 +18,7 @@
 .login-box .register_autologin {
 	margin-top: 5px;
 	padding: 0 5px;
+	height:18px;
 }
 .login-box .register_autologin .login-reg {
 	float: left;
@@ -34,7 +35,7 @@
 .logout-community3 {
 	padding: 10px;
 	position: relative;
-	height: 93px;
+	height: 94px;
 }
 
 .logout-community3  #ol_after_info {

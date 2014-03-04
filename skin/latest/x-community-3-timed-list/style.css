@@ -1,18 +1,18 @@
 .comm3_timed_list{
 	border:1px solid #bbbbbb;
-	width:368px;	
-	display:inline-block;
-	height:138px;
+	width:368px;		
+	height:140px;
 }
 
 .comm3_timed_list .timed_list_title{
 	font-weight:bold;	
 	font-family:Dotum;
-	border-bottom:1px solid #bbbbbb;
+	border-bottom: 1px solid #d9d9d9;
 	padding:0 10px;
 	line-height: 28px;
 	height: 28px;
 	background-color: #fcfcfc;
+	position:relative;
 }
 
 .comm3_timed_list .timed_list_title img{
@@ -22,12 +22,14 @@
 }
 
 .comm3_timed_list .timed_list_title a{
+	position:absolute;
+	right:10px;
+	top:0;
 	font-weight:normal;
 	color:#808080;
 	font-size: 9pt;
 	float:right;
 	text-decoration:none;
-	margin-top: 2px;
 }
 
 .comm3_timed_list ul{
@@ -68,12 +70,12 @@
 }
 
 .comm3_timed_list .subject{
-	display:inline-block;
 	width:250px;
 	overflow:hidden;
 	white-space:nowrap;
 	line-height: 14px;
 	height: 14px;
+	float:left;
 }
 
 .comm3_timed_list .subject .dot {

@@ -3,6 +3,7 @@
 }
 
 .footer .copyright{
+margin-top:100px;
 	width:100%;	
 	background-color:#e6e6e6;
 }
@@ -19,8 +20,7 @@
 	top:19px;
 }
 
-.footer .copyright .inner .text-info{
-	margin-top:100px;
+.footer .copyright .inner .text-info{	
 	color:#404040;
 	text-align:center;
 	padding:26px 0 27px 0;

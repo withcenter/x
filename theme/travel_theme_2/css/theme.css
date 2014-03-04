@@ -99,12 +99,12 @@
 }
 
 .main-menu li.first-item .inner {
-	padding-left: 1px;
+		border: solid 1px #0e5565;
 }
 
 .main-menu li .inner {
 	border: solid 1px #0e5565;
-
+	border-left: 0;
 }
 
 .main-menu li  a {
@@ -120,17 +120,17 @@
 
 .main-menu li.last-item {
 	margin-right: 0;
-	padding-right: 1px;
 	border-right: solid 1px #83cbd8;
+	
 }
 
 .main-menu li  a:hover {
 	text-decoration: none;
-	background: #1b97b3;
+	background: #116b80;
 }
 
 .main-menu li.selected {
-	background: #1b97b3;
+	background: #116b80;
 }
 
 .top-menu li {
