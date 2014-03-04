@@ -41,6 +41,10 @@
 	top: 205px;
 	right: 0;
 	padding: 0.5em;
-	color: #ffffff;
 	font-size:.8em;
+}
+
+.layout .body-wrapper .main-content .banner .banner-more a{
+	text-decoration:none;
+	color: #ffffff;
 }
