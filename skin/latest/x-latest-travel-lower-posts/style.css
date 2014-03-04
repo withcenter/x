@@ -14,7 +14,7 @@
 
 .travel_lower_post_title .board_subject{
 	display:inline-block;
-	width:170px;
+	width:65%;
 	overflow:hidden;
 	white-space:nowrap;
 }
@@ -53,7 +53,11 @@
 }
 
 .travel_lower_items .item .subject a{
-	text-decoration:none;
+	display:inline-block;
+	white-space:nowrap;
+	max-width:75%;
+	text-decoration:none;	
+	overflow:hidden;
 }
 
 .travel_lower_items .item .subject .bullet{
