@@ -38,4 +38,4 @@
 	}
 	
 	file::write( $path,  $data );
-	patch_message('patched');
+	patch_message('patch data saved');

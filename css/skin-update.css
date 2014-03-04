@@ -1,0 +1,1 @@
+.skin-update {	position:relative;}.skin-update > .skin-update-button{	display:none;	position:absolute;	z-index: 12345;	top:0;	right:0;	padding: 0.4em 1em;	color: red;	border: 2px solid #FF3300;	border-radius: 2px;	background-color: white;	font-weight: bold;	cursor: pointer;}

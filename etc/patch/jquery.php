@@ -86,7 +86,7 @@ EOP;
 	);
 	
 	
-	patch_message("patched");
+	patch_message("patch data saved");
 	
 	
 	
