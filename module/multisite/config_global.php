@@ -1,7 +1,7 @@
 <?php
 	if ( ! ms::admin() ) {
 		echo "You are not admin";
-		return;
+		return; 
 	}
 	/* 생성된 게시판 정보를 가저온다 */
 	$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "\_%'";
