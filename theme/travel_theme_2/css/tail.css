@@ -38,7 +38,7 @@
 }
 
 .layout .footer > div {
-	display: inline-block;
+	float: left;
 	vertical-align: top;
 }
 

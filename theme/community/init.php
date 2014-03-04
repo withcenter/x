@@ -8,7 +8,7 @@ function hook_multisite_tail_begin() {
 	
 	if($theme_sidebar == 'right') {
 	?><style>
-		#aside {float:right;}
+		#aside {float:right; margin: 0;}
 	</style><?}
 	
 	?>

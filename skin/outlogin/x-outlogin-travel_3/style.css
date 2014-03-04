@@ -1,7 +1,7 @@
 .login-box {
 	background: #1789a2;
 	color: #ffffff;
-	height: 100px;
+	height: 99px;
 	padding: 7px;
 	overflow: hidden;
 }
@@ -16,16 +16,19 @@
 }
 
 .login-box .register_autologin {
-	margin-top: 5px;
-	padding: 0 5px;
+	padding: 5px 5px 0 5px;
 }
 .login-box .register_autologin .login-reg {
 	float: left;
+	margin: 0;
 }
 .login-box .register_autologin .auto_login {
 	float: right;
+	margin: 0;
 }
 .login-box #ol_password_lost {
+	margin: 0;
+	padding: 0;
 	margin-left: 6px;
 	font-size: 8.7pt;  
 }

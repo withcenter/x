@@ -86,7 +86,7 @@
 
 /*****************************/
 .lower-posts{
-	
+	margin-bottom:10px;
 }
 
 .lower-posts .travel_left_posts{	
@@ -108,8 +108,4 @@
 	width:210px;
 	float:left;
 	height:168px;
-}
-
-.travel_right_posts .travel_lower_post_title .board_subject{
-	width:100px;
 }

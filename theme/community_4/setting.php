@@ -8,12 +8,14 @@
  <div class='config-wrapper'>
 	<div class='config-title'><span class='config-title-info'>사이트 로고 및 배너</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
 	<div class='config-container'>
-<table cellpadding=5 class='image-config' width='100%'>
+<table cellspacing='0' cellpadding='3' class='image-config' width='100%'>
 	<tr valign='top' >
 		<td width='50%'>
-			<div class='image-title'>사이트 로고</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>사이트 로고</div>
 			<div class='image-upload'>
-				<?if( ms::meta('header_logo') ) {?><img src="<?=ms::meta('img_url').ms::meta('header_logo')?>" width=280px height=160px><br><?}?>
+			<?if( ms::meta('header_logo') ) {
+				echo "<img src=".ms::meta('img_url').ms::meta('header_logo').">"; 
+			} else echo "<div class='setting-no-image'>NO-IMAGE: [350px-width by 65px-height]</div>"; ?>
 				<input type='file' name='header_logo'>
 				<?if( ms::meta('header_logo') != '' ) { ?>
 					<input type='hidden' name='header_logo_remove' value='n'>
@@ -22,9 +24,11 @@
 			</div>
 		</td>
 		<td width='50%'>
-			<div class='image-title'>회사로고</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>회사로고</div>
 			<div class='image-upload'>
-				<?if( ms::meta('com-c-banner_company') ) {?><img src="<?=ms::meta('img_url').ms::meta('com-c-banner_company')?>" width=280px height=160px><br><?}?>
+			<?if( ms::meta('com-c-banner_company') ) {
+				echo "<img src=".ms::meta('img_url').ms::meta('com-c-banner_company').">"; 
+			} else echo "<div class='setting-no-image'>NO-IMAGE: [210px-width by 115px-height]</div>"; ?>
 				<input type='file' name='com-c-banner_company'>
 				<?if( ms::meta('com-c-banner_company') != '' ) { ?>
 					<input type='hidden' name='com-c-banner_company_remove' value='n'>
@@ -35,9 +39,11 @@
 	</tr>
 	<tr valign='top'>
 		<td>
-			<div class='image-title'>배너이미지1</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지1</div>
 			<div class='image-upload'>
-				<?if( ms::meta('com-c-banner_1') ) {?><img src="<?=ms::meta('img_url').ms::meta('com-c-banner_1')?>" width=280px height=160px><br><?}?>
+				<?if( ms::meta('com-c-banner_1') ) {
+					echo "<img src=".ms::meta('img_url').ms::meta('com-c-banner_1').">"; 
+				} else echo "<div class='setting-no-image'>NO-IMAGE: [750px-width by 240px-height]</div>"; ?>
 				<input type='file' name='com-c-banner_1'>
 				<?if( ms::meta('com-c-banner_1') != '' ) { ?>
 					<input type='hidden' name='com-c-banner_1_remove' value='n'>
@@ -51,9 +57,11 @@
 		</td>
  
 		<td>
-			<div class='image-title'>배너이미지2</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지2</div>
 			<div class='image-upload'>
-			<?if( ms::meta('com-c-banner_2') ) {?><img src="<?=ms::meta('img_url').ms::meta('com-c-banner_2')?>" width=280px height=160px><br><?}?>
+				<?if( ms::meta('com-c-banner_2') ) {
+					echo "<img src=".ms::meta('img_url').ms::meta('com-c-banner_2').">"; 
+				} else echo "<div class='setting-no-image'>NO-IMAGE: [750px-width by 240px-height]</div>"; ?>
 			<input type='file' name='com-c-banner_2'>
 			<?if( ms::meta('com-c-banner_2') != '' ) { ?>
 				<input type='hidden' name='com-c-banner_2_remove' value='n'>
@@ -68,9 +76,11 @@
 	</tr>
 	<tr valign='top'>
 		<td>
-			<div class='image-title'>배너이미지3</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지3</div>
 			<div class='image-upload'>
-			<?if( ms::meta('com-c-banner_3') ) {?><img src="<?=ms::meta('img_url').ms::meta('com-c-banner_3')?>" width=280px height=160px><br><?}?>
+				<?if( ms::meta('com-c-banner_3') ) {
+					echo "<img src=".ms::meta('img_url').ms::meta('com-c-banner_3').">"; 
+				} else echo "<div class='setting-no-image'>NO-IMAGE: [750px-width by 240px-height]</div>"; ?>
 			<input type='file' name='com-c-banner_3'>
 			<?if( ms::meta('com-c-banner_3') != '' ) { ?>
 				<input type='hidden' name='com-c-banner_3_remove' value='n'>
@@ -84,9 +94,11 @@
 		</td>
 
 		<td>
-			<div class='image-title'>배너이미지4</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지4</div>
 			<div class='image-upload'>
-			<?if( ms::meta('com-c-banner_4') ) {?><img src="<?=ms::meta('img_url').ms::meta('com-c-banner_4')?>" width=280px height=160px><br><?}?>
+				<?if( ms::meta('com-c-banner_4') ) {
+					echo "<img src=".ms::meta('img_url').ms::meta('com-c-banner_4').">"; 
+				} else echo "<div class='setting-no-image'>NO-IMAGE: [750px-width by 240px-height]</div>"; ?>
 			<input type='file' name='com-c-banner_4'>
 			<?if( ms::meta('com-c-banner_4') != '' ) { ?>
 				<input type='hidden' name='com-c-banner_4_remove' value='n'>
@@ -101,9 +113,11 @@
 	</tr>
 		<tr valign='top'>
 		<td>
-			<div class='image-title'>배너이미지5</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지5</div>
 			<div class='image-upload'>
-			<?if( ms::meta('com-c-banner_5') ) {?><img src="<?=ms::meta('img_url').ms::meta('com-c-banner_5')?>" width=280px height=160px><br><?}?>
+				<?if( ms::meta('com-c-banner_5') ) {
+					echo "<img src=".ms::meta('img_url').ms::meta('com-c-banner_5').">"; 
+				} else echo "<div class='setting-no-image'>NO-IMAGE: [750px-width by 240px-height]</div>"; ?>
 			<input type='file' name='com-c-banner_5'>
 			<?if( ms::meta('com-c-banner_5') != '' ) { ?>
 				<input type='hidden' name='com-c-banner_5_remove' value='n'>

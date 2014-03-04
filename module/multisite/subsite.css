@@ -358,11 +358,9 @@
 }
 
 .config_general .image-config .image-upload {
-	border: solid 1px #e8e8e8;
+	border: solid 1px #d8d8d8;
 	border-top: 0;
 	padding: 10px;
-	border-bottom-left-radius: 3px;
-	border-bottom-right-radius: 3px;
 }
 
 .config_general .image-config .image-upload .title {
@@ -376,15 +374,18 @@
 
 .config_general .image-config .image-upload input[type='text'] {
 	width: 100%;
+	border: solid 1px #d8d8d8;
 }
 
 .config_general .image-config .image-upload input[type='file'], .config_general .image-config .image-upload input[type='checkbox']  {
 	margin-bottom: 5px;
+	
 }
 
 .config_general .image-config .image-upload textarea {
 	width: 98%;
 	height: 50px;
+	border: solid 1px #d8d8d8;
 }
 
 .config_general .image-config .image-upload img{
@@ -396,11 +397,14 @@
 
 .config_general .image-config .image-title {
 	margin: 0;
-	background: #474747;
-	padding: 7px;
-	color: #ffffff;
-	border-top-right-radius: 3px;
-	border-top-left-radius: 3px;
+	background: #fafafa;
+	border: solid 1px #d8d8d8;
+	padding: 5px 5px;
+
+}
+
+.config_general .image-config .image-title img {
+	margin: 0 5px;
 }
 
 /**new design*/
@@ -430,9 +434,10 @@
 	background: #474747;
 	padding: 7px;
 	color: #ffffff;
-	border-radius: 3px;
 	margin-bottom: 5px;
 }
+
+
 
 .config  .config-title .config-title-notice {
 	float: right;
@@ -440,20 +445,30 @@
 
  
 .config  .config-container {
-	border: solid 1px #e8e8e8;
-	border-radius: 3px;
-	background: #f9f9f9;
-	padding: 10px;
+	padding: 5px 10px;
 	margin-bottom: 10px;
 } 
 
 .config_menu.create-forum {
-	margin: 0 0 5px 0;
+	margin: 0 0 5px 0; 
 }
 
 .site-global .config-wrapper {
 	margin-bottom: 50px;
 }
+
 .site-global .config-wrapper:last-child {
 	margin-bottom: 0;
 }
+
+.setting-no-image {
+	width: 100%;
+	background: #ffffff;
+	text-align: center;
+	font-size: 10pt;
+	font-weight: bold;
+	padding: 10px 0;
+	border: solid 1px #f3f3f3;
+	background: #fafafa;
+	margin-bottom: 10px;
+} 

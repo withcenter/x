@@ -14,16 +14,36 @@
 	padding: 10px;
 	margin-bottom: 10px;
 	height: 95px;
+	background-color: #1a9fbd;
+	color: #ffffff;
+	position: relative;
+}
+.layout .left .contact-wrapper .contact-title {
+	margin: 6px 0 12px 0;
 }
 
 .layout .left .contact-wrapper .contact-info {
-	margin: 5px 10px 0 20px;
+	margin-top: 2px;
 }
 
+.layout .left .contact-wrapper .contact-info .contact-num, .layout .left .contact-wrapper .contact-info .contact-hours {
+	margin: 0 0 3px 5px;
+}
+
+.layout .left .contact-wrapper .contact-info .contact-num span, .layout .left .contact-wrapper .contact-info .contact-hours span {
+	display: inline-block;
+	width: 70px;
+	font-weight: bold;
+}
 .layout .left .contact-wrapper img {
-	margin: -4px 10px 0 10px;
+	position: absolute;
+	top: 9px;
+	left: 9px;
 }
-
+.layout .left .contact-wrapper b {
+	margin-left: 50px;
+	font-size: 10pt;
+}
 /**POSTS LEFT 1 */
 .layout .left .posts-left-1 {
 	margin-bottom: 10px;
@@ -43,30 +63,54 @@
 }
 
 /**EXCHANGE RATE*/
-.layout .left .exchange-rate-wrapper {
-	border: solid 1px #d1d1d1;
+.layout .left .exchange-rate-wrapper {	
 	height:168px;
+	border: 1px solid #bbbbbb;
 }
 
 .layout .left .exchange-rate-wrapper .title {
-	background: #fcfcfc;
-	border-bottom: solid 1px #d1d1d1;
+	background: #fafafa;
+	border-bottom: 1px solid #bbbbbb;
 	padding: 7px 9px;
+	color:#333333;
 }
 
-.layout .left .exchange-rate-wrapper .title img {
+.layout .left .exchange-rate-wrapper .title img {	
 	margin-right: 10px;
+	position:relative;
+	top:-2px;
+}
+.layout .left .exchange-rate  .exchange-info {
+	padding: 5px 8px;
 }
 
-.layout .left .exchange-rate-wrapper .title b {
+.layout .left .exchange-rate td{
+	padding-bottom:13px;
 }
 
-.layout .left .exchange-rate iframe {
-	display: block;
-	margin: 2px auto 2px auto;
-	padding: 0;
+.layout .left .exchange-rate td img{
+	margin-right:6px;
+	position:relative;
+	top:-2px;
 }
 
-.layout .left .exchange-rate iframe body {
-	width: 220px;
+.layout .left .exchange-rate .header-title  td {
+	color: #1e323f;
+	font-family: '맑은 고딕', AppleGothic;
+	font-weight: bold;
+}
+
+.layout .left .exchange-rate  tr td.exchange-date > span {
+	float: left;
+}
+
+.layout .left .exchange-rate  tr td .bottom-title {
+	color: #ffffff;
+	background-color: #0e5565;
+	display: inline-block;
+	height: 17px;
+	line-height: 15px;
+	padding: 0 7px;
+	border-radius: 2px;
+	font-family: '맑은 고딕', AppleGothic;
 }

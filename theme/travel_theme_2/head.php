@@ -83,8 +83,11 @@
 		if ( ms::meta('travel2banner'.$i.'_floating') ) {
 			$img = "<a href='".ms::meta('travel2banner'.$i.'_floating_text'.$i)."'><img src='".ms::meta('img_url').ms::meta('travel2banner'.$i.'_floating')."'/></a>";	
 		}
-		else $img = null;
-		
+		else {
+			if ( $i ==  1 ) $img = "<a href='javascript:void(0)'><img style='width: 100%; height: 100%;' src='".x::url_theme()."/img/agoda.gif'/></a>";
+			else if ( $i ==  2 ) $img = "<a href='javascript:void(0)'><img style='width: 100%; height: 100%;' src='".x::url_theme()."/img/cebu.gif'/></a>";
+			else if ( $i ==  3 ) $img = "<a href='javascript:void(0)'><img style='width: 100%; height: 100%;' src='".x::url_theme()."/img/crown.gif'/></a>";			
+		}
 		if( $i == 3 ) $no_margin = 'no-margin';
 	?>
 		<div class='float-image <?=$no_margin?>'><?=$img?></div>
@@ -93,8 +96,6 @@
 	</div>
 <div class='back-to-top'><img src='<?=x::url_theme()?>/img/up-arrow.png'/><br>TOP</div>
 </div>
-
-
     <div class="left">
 		<div class='login-sidebar'>
 			<?php echo outlogin('x-outlogin-travel_3'); // 외부 로그인  ?>

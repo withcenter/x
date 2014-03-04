@@ -7,8 +7,12 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 <!-- <?php echo $bo_subject; ?> 최신글 시작 { -->
 <div class="travel_lower_post">
     <div class='travel_lower_post_title'>
+		
+		<span class='board_subject'>
 		<?if( $options ) echo "<img class='icon' src='".$options."'/>";?>
-		<span class='board_subject'><?php echo cut_str( $bo_subject, 20, "..." );?></span>
+		<?php echo cut_str( $bo_subject, 20, "..." );?>
+		
+		</span>
 		<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=<?php echo $bo_table ?>">자세히</a>
 	</div>
 	<div class='travel_lower_items'>

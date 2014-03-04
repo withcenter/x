@@ -6,14 +6,14 @@ for ( $i = 1 ; $i <= 10; $i++ ) {
 ?>
 
 <div class='contact-wrapper'>
-	<div class='contact-title'><span class='contact-image'><img src='<?=x::url_theme()?>/img/contact-icon.png'></span><b>고객센터</b></div>
+	<div class='contact-title'><span class='contact-image'><img src='<?=x::url_theme()?>/img/telephone.png'></span><b>고객센터</b></div>
 	
 	<?
 	for( $i=1 ; $i<=2 ; $i++ ) { 
 	?>
 		<div class='contact-info'>
-			<?if($contact_num = ms::meta('travel2contact_num'.$i)) { ?><div class='contact-num'>전화번호<?=$i?>: <?=$contact_num?></div><?}?>
-			<?if($contact_hours = ms::meta('travel2contact_hours'.$i)) { ?><div class='contact-hours'>운영시간: <?=$contact_hours?></div><?}?>
+			<?if($contact_num = ms::meta('travel2contact_num'.$i)) { ?><div class='contact-num'><span>전화번호<?=$i?></span><?=$contact_num?></div><?}?>
+			<?if($contact_hours = ms::meta('travel2contact_hours'.$i)) { ?><div class='contact-hours'><span>운영시간</span><?=$contact_hours?></div><?}?>
 		</div>
 	<?}?>
 </div>
@@ -37,9 +37,9 @@ for ( $i = 1 ; $i <= 10; $i++ ) {
 
 <div class='exchange-rate-wrapper'>
 	<div class='title'>
-		<img src='<?=x::url_theme()?>/img/exchange-rate.png'><b>환율</b>
+		<img src='<?=x::url_theme()?>/img/exchange-rate.png'><b>환율 정보</b>
 	</div>
 	<div class='exchange-rate'>
-		<iframe src="http://community.fxkeb.com/fxportal/jsp/RS/DEPLOY_EXRATE/381_0.html" width="178" height="136" border="0" frameborder="no" scrolling="no" marginwidth="0" hspace="0" vspace="0"></iframe>
+		<?include "exchange_rate.php"?>
 	</div>
 </div>

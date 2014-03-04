@@ -38,3 +38,12 @@
 		else if( '<?=$in['module']?>' ) $(".comm3_menu[page='admin-menu']").addClass("selected");		
 	});
 </script>
+
+
+<!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->
