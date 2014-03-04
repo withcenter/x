@@ -76,6 +76,7 @@
 .main-menu-wrapper  {
 	height: 45px;
 	margin-bottom: 10px;
+	overflow: hidden;
 }
 .main-menu {
 	width: 970px;
@@ -110,9 +111,11 @@
 	font-size: 12pt;
 	font-family: '맑은 고딕', AppleGothic;
 	color: #ffffff;
+	line-height: 22px;
 	display: inline-block;
-	padding: 11px 22px;
+	padding: 10px 22px 11px 22px;
 	border-left: solid 1px #83cbd8;
+
 }
 
 .main-menu li.last-item {

@@ -38,7 +38,7 @@ ul#footer-menu{
 }
 
 ul#footer-menu li{	
-	display:inline-block;
+	display:inline-block;z
 	border-left:1px solid #afafaf;	
 	padding:3px 10px 4px 10px;
 	margin: 5px 0;
