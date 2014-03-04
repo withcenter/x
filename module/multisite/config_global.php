@@ -58,7 +58,7 @@
 							<?php
 							foreach ( $rows as $row ) {
 								if ( ms::meta('forum_no_'.$i) && ms::meta('forum_no_'.$i) == $row['bo_table'] ) {
-									$default_value =  '(forum no. '.$i.') '.$row['bo_subject'];
+									$default_value =  '(게시판 번호 '.$i.') '.$row['bo_subject'];
 									break;
 								}
 								else $default_value = null;
