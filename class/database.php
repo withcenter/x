@@ -144,9 +144,11 @@ class database {
 	 *  @return string
 	 *  
 	 *  @details adds quotes into the SQL statement.
+	 *  @warning G5 does quoting by itself in common.php. Do not quote here again. It produces error.
 	 */
 	static function addquotes($data) {
-		return addslashes($data);
+		return $data;
+		// return addslashes($data);
 	}
 	
 	static function table_exist($table)

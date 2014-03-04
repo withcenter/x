@@ -119,6 +119,7 @@ class x {
 	 *  @details 
 	 *  if the input $name ends with '.php' extension, then it assumes as a hook script loading.
 	 *  or else it assumes it calls a hook.
+	 * @note first register, first called.
 	 *  @code
 	 *  	di( x::hook(__FILE__) );
 	 *  	// returns path like "D:/work/www/g5-5.0b18/x/theme/default/head.php"
@@ -248,14 +249,29 @@ class x {
 		return self::dir() . '/etc/null.php';
 	}
 	
+	/**
+	 * @short set/get config value.
+	 * @note it saves key/value pair into a table.
+	 * @note use this function when you need to save simple key/value pair informaton.
+	 *
+	 *
+	 * @code
+			if ( $submit ) {
+				x::config("bo_table.$code", $bo_table);
+			}
+		@endcode
+		@code
+			<input type='text' name='bo_table' value="<?=x::config("bo_table.$code")?>">
+		@endcode
+	 */
 	static function config($code,$value=null)
 	{
 		if ( $value === null ) {
 			return db::result("SELECT `value` FROM x_config WHERE code='$code'");
 		}
 		else {
-			$e = db::result("SELECT `value` FROM x_config WHERE code='$code'");
-			if ( $e ) {
+			$row = db::row("SELECT * FROM x_config WHERE code='$code'");
+			if ( $row['code'] ) {
 				db::update( 'x_config', array('value'=>$value), array('code'=>$code) );
 			}
 			else db::insert( 'x_config', array('code'=>$code, 'value'=>$value) );
@@ -276,6 +292,8 @@ class x {
 		else self::$config['global'] = string::unscalar( $v );
 	}
 	
-	
+	static function skin_code( $skin_folder, $bo_table ) {
+		return "{$skin_folder}-{$bo_table}";
+	}
 	
 }
