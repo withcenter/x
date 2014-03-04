@@ -62,8 +62,7 @@
 		</div>
 	</div>
 	<div class='header'>
-		<div class='header_and_logo'>
-			<table width='100%' cellpadding=0 cellspacing=0><tr valign='top'>
+			<table cellpadding=0 cellspacing=0><tr valign='top'>
 				<td width=400>
 					<div id="comm3_logo">
 						<a href="<?php echo G5_URL ?>">
@@ -122,7 +121,6 @@
 					</fieldset>
 				</td>		
 			</tr></table>
-		</div><!--logo and search-->
 	</div><!--header-->
 	
 <!--[if IE 7]>
@@ -131,10 +129,10 @@
 			width:970px;
 		}			
 		
-		.header .header_and_logo #comm3_logo{
+		.header #comm3_logo{
 			width: 400px;
 			margin-top:7px;
-		}				
+		}		
 	</style>
 <![endif]-->	
 
