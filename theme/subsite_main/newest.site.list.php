@@ -8,6 +8,7 @@ echo "<div class='newest-site-list'>
 	";
 foreach ( $rows as $row ) {
 	$domain_url = ms::url_site( $row['domain'] );
+	$domain_url = str_replace("\\", '', $domain_url);
 	$domain_title = cut_str( $row['title'], 21, "..." );
 	$dot = $image_url.'/dot.gif';
 	
