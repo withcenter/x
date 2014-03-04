@@ -9,11 +9,11 @@
 				<div class='image-upload'>
 				<?if( ms::meta('blog_profile_photo') ) {
 					echo "<img src=".ms::meta('img_url').ms::meta('blog_profile_photo').">"; 
-				} else echo "<div class='setting-no-image'>NO-IMAGE: [190px-width by 140px-height]</div>"; ?>
+				} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 190px X 세로 140px]</div>"; ?>
 				<input type='file' name='blog_profile_photo'>
 				<?if( ms::meta('blog_profile_photo') != '' ) { ?>
 					<input type='hidden' name='blog_profile_photo_remove' value='n'>
-					<input type='checkbox' name='blog_profile_photo_remove' value='y'><span class='title-small'>Remove Image</span>
+					<input type='checkbox' name='blog_profile_photo_remove' value='y'><span class='title-small'>이미지 제거</span>
 				<?}?>
 				</div>
 			</td>

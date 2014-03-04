@@ -8,7 +8,7 @@
 			<div class='image-upload'>
 			<?if( ms::meta('header_logo') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('header_logo').">"; 
-			} else echo "<div class='setting-no-image'>NO-IMAGE: [310px-width by 60px-height]</div>"; ?>
+			} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 310px X 세로 60px]</div>"; ?>
 				<input type='file' name='header_logo'>
 				<?if( ms::meta('header_logo') != '' ) { ?>
 					<input type='hidden' name='header_logo_remove' value='n'>
@@ -21,7 +21,7 @@
 			<div class='image-upload'>
 			<?if( ms::meta('companybanner_1') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('companybanner_1').">"; 
-			} else echo "<div class='setting-no-image'>NO-IMAGE: [210px-width by 90px-height]</div>"; ?>
+			} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 210px X 세로 90px]</div>"; ?>
 				<input type='file' name='companybanner_1'>
 				<?if( ms::meta('companybanner_1') != '' ) { ?>
 					<input type='hidden' name='companybanner_1_remove' value='n'>
@@ -43,7 +43,7 @@
 			<div class='image-upload'>
 				<?if( ms::meta('combanner_1') ) {
 					echo "<img src=".ms::meta('img_url').ms::meta('combanner_1').">"; 
-				} else echo "<div class='setting-no-image'>NO-IMAGE: [750px-width by 230px-height]</div>"; ?>
+				} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 750px X 세로 230px]</div>"; ?>
 				<input type='file' name='combanner_1'><br>
 				<?if( ms::meta('combanner_1') != '' ) { ?>
 					<input type='hidden' name='combanner_1_remove' value='n'>
@@ -63,7 +63,7 @@
 			<div class='image-upload'>
 				<?if( ms::meta('combanner_2') ) {
 					echo "<img src=".ms::meta('img_url').ms::meta('combanner_2').">"; 
-				} else echo "<div class='setting-no-image'>NO-IMAGE: [750px-width by 230px-height]</div>"; ?>
+				} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 750px X 세로 230px]</div>"; ?>
 				<input type='file' name='combanner_2'><br>
 				<?if( ms::meta('combanner_2') != '' ) { ?>
 					<input type='hidden' name='combanner_2_remove' value='n'>
@@ -82,7 +82,7 @@
 			<div class='image-upload'>
 				<?if( ms::meta('combanner_3') ) {
 					echo "<img src=".ms::meta('img_url').ms::meta('combanner_3').">"; 
-				} else echo "<div class='setting-no-image'>NO-IMAGE: [750px-width by 230px-height]</div>"; ?>
+				} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 750px X 세로 230px]</div>"; ?>
 				<input type='file' name='combanner_3'><br>
 				<?if( ms::meta('combanner_3') != '' ) { ?>
 					<input type='hidden' name='combanner_3_remove' value='n'>
@@ -103,7 +103,7 @@
 			<div class='image-upload'>
 				<?if( ms::meta('combanner_4') ) {
 					echo "<img src=".ms::meta('img_url').ms::meta('combanner_4').">"; 
-				} else echo "<div class='setting-no-image'>NO-IMAGE: [750px-width by 230px-height]</div>"; ?>
+				} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 750px X 세로 230px]</div>"; ?>
 				<input type='file' name='combanner_4'><br>
 				<?if( ms::meta('combanner_4') != '' ) { ?>
 					<input type='hidden' name='combanner_4_remove' value='n'>
@@ -122,7 +122,7 @@
 			<div class='image-upload'>
 				<?if( ms::meta('combanner_5') ) {
 					echo "<img src=".ms::meta('img_url').ms::meta('combanner_5').">"; 
-				} else echo "<div class='setting-no-image'>NO-IMAGE: [750px-width by 230px-height]</div>"; ?>
+				} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 750px X 세로 230px]</div>"; ?>
 				<input type='file' name='combanner_5'><br>
 				<?if( ms::meta('combanner_5') != '' ) { ?>
 					<input type='hidden' name='combanner_5_remove' value='n'>
@@ -150,7 +150,7 @@
 			<div class='image-upload'>
 				<?if( ms::meta('combanner_middle') ) {
 					echo "<img src=".ms::meta('img_url').ms::meta('combanner_middle').">"; 
-				} else echo "<div class='setting-no-image'>NO-IMAGE: [750px-width by 110px-height]</div>"; ?>
+				} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 750px X 세로 110px]</div>"; ?>
 				<input type='file' name='combanner_middle'><br>
 				<?if( ms::meta('combanner_middle') != '' ) { ?>
 					<input type='hidden' name='combanner_middle_remove' value='n'>
@@ -164,7 +164,7 @@
 			<div class='image-upload'>
 				<?if( ms::meta('combanner_bottom') ) {
 					echo "<img src=".ms::meta('img_url').ms::meta('combanner_bottom').">"; 
-				} else echo "<div class='setting-no-image'>NO-IMAGE: [750px-width by 110px-height]</div>"; ?>
+				} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 750px X 세로 110px]</div>"; ?>
 				<input type='file' name='combanner_bottom'><br>
 				<?if( ms::meta('combanner_bottom') != '' ) { ?>
 					<input type='hidden' name='combanner_bottom_remove' value='n'>
@@ -177,7 +177,7 @@
 			<div class='image-upload'>
 				<?if( ms::meta('combanner_sidebar') ) {
 					echo "<img src=".ms::meta('img_url').ms::meta('combanner_sidebar').">"; 
-				} else echo "<div class='setting-no-image'>NO-IMAGE: [190px-width by 160px-height]</div>"; ?>
+				} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 190px X 세로 160px]</div>"; ?>
 				<input type='file' name='combanner_sidebar'><br>
 				<?if( ms::meta('combanner_sidebar') != '' ) { ?>
 					<input type='hidden' name='combanner_sidebar_remove' value='n'>

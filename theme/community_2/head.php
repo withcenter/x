@@ -20,7 +20,7 @@
 				<input type="hidden" name="sfl" value="wr_subject||wr_content">
 				<input type="hidden" name="sop" value="and">
 				<div class='wrapper'><div class='s_inner'><div class='s_inner_inner'>
-					<input type="text" name="stx" id="sch_stx" maxlength="20" placeholder='검색' value='<?=$in['stx']?>' />
+					<input type="text" name="stx" id="sch_stx" maxlength="20" placeholder='검색어를 입력해 주세요.' value='<?=$in['stx']?>' />
 					<input type="image" src='<?=$image_dir?>/submit_button.png'>  
 				</div></div></div>
             </form>

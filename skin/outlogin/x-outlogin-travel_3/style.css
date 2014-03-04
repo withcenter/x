@@ -63,10 +63,10 @@
 	border-radius: 10px;
 	display: inline-block;
 	width: 11px;
-	height: 15px;
+	height: 14px;
 	background-color: #444444;
 	color: #ffffff;
-	padding-left: 4px;
+	padding: 1px 0 0 4px;
 }
 
 .logout-community3 #ol_after_logout {

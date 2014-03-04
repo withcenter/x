@@ -46,7 +46,7 @@
 						<input type="hidden" name="sfl" value="wr_subject||wr_content">
 						<input type="hidden" name="sop" value="and">
 						<label for="sch_stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
-						<input type="text" name="stx" id="search-input" placeholder='검색'>
+						<input type="text" name="stx" id="search-input" placeholder='검색어를 입력해 주세요.'>
 						<input type="submit" id="search-submit" value='' style="background: url('<?=x::url_theme()?>/img/search.png') no-repeat">
 						</form>
 

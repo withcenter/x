@@ -14,7 +14,7 @@
 		?>
 	<link rel='stylesheet' type='text/css' href='<?=x::url()?>/module/multisite/subsite.css' />
 	<div class='config config_forum'>
-	<div class='config-main-title'><div class='inner'><img src='<?=x::url().'/module/multisite/img/direction.png'?>'>게시판은 게시판 제목을 입력하시면 생성이 됩니디.</div></div>
+	<div class='config-main-title'><div class='inner'><img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 게시판은 게시판 제목을 입력하시면 생성이 됩니디.</div></div>
 		<div class='config-wrapper'>
 			<div class='config-title'><span class='config-title-info'>게시판 목록 | 게시판 수 : <b><?=count($rows)?></span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>	
 			<div class='config-container'>

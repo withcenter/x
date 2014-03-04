@@ -8,7 +8,7 @@
 			<div class='image-upload'>
 			<?if( ms::meta('header_logo') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('header_logo').">"; 
-			} else echo "<div class='setting-no-image'>NO-IMAGE: [360px-width by 60px-height]</div>"; ?>
+			} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 360px X 세로 60px]</div>"; ?>
 				<input type='file' name='header_logo'><br>
 				<?if( ms::meta('header_logo') != '' ) { ?>
 					<input type='hidden' name='header_logo_remove' value='n'>
@@ -25,7 +25,7 @@
 			<div class='image-upload'>
 				<?if( ms::meta('travelbanner_1') ) {
 					echo "<img src=".ms::meta('img_url').ms::meta('travelbanner_1').">"; 
-				} else echo "<div class='setting-no-image'>NO-IMAGE: [650px-width by 350px-height]</div>"; ?>
+				} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 650px X 세로 350px]</div>"; ?>
 				<input type='file' name='travelbanner_1'>
 				<?if( ms::meta('travelbanner_1') != '' ) { ?>
 					<input type='hidden' name='travelbanner_1_remove' value='n'>
@@ -41,7 +41,7 @@
 			<div class='image-upload'>
 				<?if( ms::meta('travelbanner_2') ) {
 					echo "<img src=".ms::meta('img_url').ms::meta('travelbanner_2').">"; 
-				} else echo "<div class='setting-no-image'>NO-IMAGE: [650px-width by 350px-height]</div>"; ?>
+				} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 650px X 세로 350px]</div>"; ?>
 			<input type='file' name='travelbanner_2'>
 			<?if( ms::meta('travelbanner_2') != '' ) { ?>
 				<input type='hidden' name='travelbanner_2_remove' value='n'>
@@ -58,7 +58,7 @@
 			<div class='image-upload'>
 				<?if( ms::meta('travelbanner_3') ) {
 					echo "<img src=".ms::meta('img_url').ms::meta('travelbanner_3').">"; 
-				} else echo "<div class='setting-no-image'>NO-IMAGE: [650px-width by 350px-height]</div>"; ?>
+				} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 650px X 세로 350px]</div>"; ?>
 			<input type='file' name='travelbanner_3'>
 			<?if( ms::meta('travelbanner_3') != '' ) { ?>
 				<input type='hidden' name='travelbanner_3_remove' value='n'>
@@ -74,7 +74,7 @@
 			<div class='image-upload'>
 				<?if( ms::meta('travelbanner_4') ) {
 					echo "<img src=".ms::meta('img_url').ms::meta('travelbanner_4').">"; 
-				} else echo "<div class='setting-no-image'>NO-IMAGE: [650px-width by 350px-height]</div>"; ?>
+				} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 650px X 세로 350px]</div>"; ?>
 			<input type='file' name='travelbanner_4'>
 			<?if( ms::meta('travelbanner_4') != '' ) { ?>
 				<input type='hidden' name='travelbanner_4_remove' value='n'>
@@ -91,7 +91,7 @@
 			<div class='image-upload'>
 				<?if( ms::meta('travelbanner_5') ) {
 					echo "<img src=".ms::meta('img_url').ms::meta('travelbanner_5').">"; 
-				} else echo "<div class='setting-no-image'>NO-IMAGE: [650px-width by 350px-height]</div>"; ?>
+				} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 650px X 세로 350px]</div>"; ?>
 			<input type='file' name='travelbanner_5'>
 			<?if( ms::meta('travelbanner_5') != '' ) { ?>
 				<input type='hidden' name='travelbanner_5_remove' value='n'>
