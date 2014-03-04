@@ -10,7 +10,7 @@
 	
 <ul id="footer-menu">		
 	
-	<?		
+	<?			
 		if( ms::admin() ) {
 			$max_menus = 6;			
 		}
@@ -54,17 +54,23 @@
 			</div>
 		</div><!--footer-->
 </div><!--layout-->
-
 <!--[if IE 7]>
+<?
+$footer_width = $total_menus * 105;
+if( ms::admin() ) {	
+	$footer_width = $footer_width + 105;
+}
+?>
 	<style>
 		ul#footer-menu li{	
-			width:100px;
+			width:80px;
 			overflow:hidden;
 			white-space:nowrap;			
 			float:left;
 		}
 		ul#footer-menu{					
 			margin-bottom:5px;
+			width:<?=$footer_width?>px;			
 		}
 	</style>
 <![endif]-->
