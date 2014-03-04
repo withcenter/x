@@ -8,7 +8,11 @@
 	$outlogin_skin_url=null;
 	$latest_skin_path = null;
 	$latest_skin_url  = null;
-	$global_bo_table = null;
+	$global_bo_table = null;			// $bo_table
+	
+	$error_hook_latest = null;
+	
+	
 	
 	
 // -----------------------------------------------------------------------------
@@ -152,6 +156,18 @@ function hook_latest_path()
 	//dlog("latest_skin_path: $latest_skin_path");
 	//dlog("latest_skin_url: $latest_skin_url");
 }
+
+
+x::hook_register( 'latest', 'hook_latest_check' );
+function hook_latest_check()
+{
+	global $error_hook_latest, $global_bo_table;
+	if ( g::forum_exist( $global_bo_table ) ) return;
+	else $error_hook_latest = FORUM_NOT_EXIST;
+}
+
+
+
 
 
 
