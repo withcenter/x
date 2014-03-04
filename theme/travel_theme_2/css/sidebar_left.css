@@ -65,11 +65,12 @@
 /**EXCHANGE RATE*/
 .layout .left .exchange-rate-wrapper {	
 	height:168px;
+	border: 1px solid #bbbbbb;
 }
 
 .layout .left .exchange-rate-wrapper .title {
-	background: #fcfcfc;
-	border: solid 1px #d1d1d1;
+	background: #fafafa;
+	border-bottom: 1px solid #bbbbbb;
 	padding: 7px 9px;
 	color:#333333;
 }
@@ -79,11 +80,8 @@
 	position:relative;
 	top:-2px;
 }
-
-.layout .left .exchange-rate table{
-	border-bottom:1px dashed #bbbbbb;
-	padding:10px 10px 0;
-	margin-bottom: 6px;
+.layout .left .exchange-rate  .exchange-info {
+	padding: 5px 8px;
 }
 
 .layout .left .exchange-rate td{
@@ -96,7 +94,19 @@
 	top:-2px;
 }
 
-.layout .left .exchange-rate .last-update{
-	font-size:.9em;
-	text-align:center;
+.layout .left .exchange-rate .header-title  td {
+	color: #1e323f;
+	font-family: '맑은 고딕', AppleGothic;
+	font-weight: bold;
+}
+
+.layout .left .exchange-rate  tr td .bottom-title {
+	color: #ffffff;
+	background-color: #0e5565;
+	display: inline-block;
+	height: 17px;
+	line-height: 15px;
+	padding: 0 10px;
+	border-radius: 2px;
+	font-family: '맑은 고딕', AppleGothic;
 }

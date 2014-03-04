@@ -29,7 +29,7 @@
 		foreach ( $usd_tmp2 as $u ) {
 			 $u = trim($u);
 			 $u = str_replace(',', '', $u );
-			 if ( $u ) $currency['usd'][] = $u;
+			 if ( $u ) $currency['usd'][] = round($u);
 		}
 		
 		// THB //
@@ -43,26 +43,34 @@
 			 if ( $u ) $currency['thb'][] = $u;
 		}
 				
-		$currency['last_update'] = date("M d Y H:i A");
+		$currency['last_update'] = time();
 		etc::cache_write( $id, $currency );
 	}	
 ?>
+<div class='exchange-info'>
 <table cellspacing=0 cellpadding=0 width='100%'>
-	<td>CURRENCY</td><td>BUYING</td><td>SELLING</td>
+	<tr class='header-title'>
+		<td>국가</td><td align='right'>기준</td><td align='right'>살때</td><td align='right'>팔때</td>
+	</tr>
 	<?
 		$count = 0;
 		foreach( $currency as $curr_by_country => $curr_values ){
-		if( $count == 3 ) break;
+			if ( $count == 3 ) break;
 		?>
 		<tr valign='top'>
 			<td><?echo $curr_values['country'];?></td>
-			<?for( $i = 1; $i < 3; $i++ ){?>
-			<td><?=$curr_values[$i]?></td>
+			<?for( $i = 0; $i < 3; $i++ ){?>
+			<td align='right'><?=$curr_values[$i]?></td>
 			<?}?>
 		</tr>
 		<?
 			$count++;
 			}
-		?>		
+		?>
+	<tr>
+		<td colspan=4 align='right'>
+			<span class='bottom-title'>환율 업데이트</span> <?=date('Y-m-d H:i', $currency['last_update'])?>
+		</td>
+	</tr>
 </table>
-<div class='last-update'>Last Update: <?=$currency['last_update']?></div>
+</div>

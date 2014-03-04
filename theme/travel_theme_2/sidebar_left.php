@@ -37,7 +37,7 @@ for ( $i = 1 ; $i <= 10; $i++ ) {
 
 <div class='exchange-rate-wrapper'>
 	<div class='title'>
-		<img src='<?=x::url_theme()?>/img/exchange-rate.png'><b>EXCHANGE RATE</b>
+		<img src='<?=x::url_theme()?>/img/exchange-rate.png'><b>환율 정보</b>
 	</div>
 	<div class='exchange-rate'>
 		<?include "exchange_rate.php"?>
