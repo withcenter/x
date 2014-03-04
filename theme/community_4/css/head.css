@@ -28,9 +28,9 @@
 	margin:0 6px;
 }
 
-.top .inner > div{
-	display:inline-block;
+.top .inner > div{	
 	width:49.5%;
+	float:left;
 }
 
 .top .right{
@@ -45,7 +45,7 @@
 
 .header #comm3_logo{
 /* bug fix: should be margined here intead of padding image for 7 px */
-	margin-top: 7px;
+	margin-top: 4px;
 	height:60px;
 	max-width:400px;
 	overflow:hidden;	
@@ -56,9 +56,10 @@
 	height:100%;	
 }
 
-.header > table{
+.header .header_and_logo{
 	max-width:970px;
 	margin:auto;
+	clear:both;
 }
 
 .header #search_table_holder{
@@ -68,17 +69,19 @@
 }
 
 .header #search_table_holder #comm3_search_text{
-	padding: 13px 13px 14px 13px;
+	padding: 12px 13px 12px 13px;
+	height:20px;
 	width:315px;
 	border:1px solid #808080;
-	box-shadow: -1px 2px 3px #d3d3d3 inset;
+	box-shadow: -1px 2px 3px #d3d3d3 inset;		
 }
 
 .header #search_table_holder #comm3_search_submit{
-	padding: 12px 13px 12px 14px;	
+	padding: 12px 13px 12px 13px;
+	height:20px;
 	border:1px solid #808080;
 	border-left:none;
-	background-color: #ffffff;
+	background-color: #ffffff;	
 }
 
 .main-menu{

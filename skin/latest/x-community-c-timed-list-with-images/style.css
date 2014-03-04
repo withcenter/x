@@ -1,6 +1,5 @@
 .comm3_timed_list_with_image {
-	width:368px;
-	display:inline-block;
+	width:368px;	
 	height: 210px;
 	overflow: hidden;
 }
@@ -13,7 +12,7 @@
 	line-height: 28px;
 	border:1px solid #d9d9d9;
 	background-color: #fcfcfc;
-	
+	position:relative;
 }
 
 .comm3_timed_list_with_image .timed_list_title img{
@@ -29,7 +28,10 @@
 }
 .comm3_timed_list_with_image .timed_list_title .more-button a {
 	color:#808080;
-	font-size: 9pt
+	font-size: 9pt;
+	position:absolute;
+	top:0;
+	right:10px;
 }
 
 .comm3_timed_list_with_image .comment_and_time{
@@ -45,8 +47,6 @@
 	background-color:#e5e5e5;
 } 
 
-.comm3_timed_list_with_image .timed_list_image img {	
-}
 
 .comm3_timed_list_with_image .comment_and_time .time{	
 	width:35px;
@@ -94,5 +94,5 @@
 }
 
 .comm3_timed_list_with_image table{
-	padding:0 10px 10px 10px;	
+	padding:0 10px 10px 10px;
 }
