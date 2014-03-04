@@ -9,7 +9,7 @@ if ( $in['done'] ) {
 }
 ?>
 <div class='config config-write'>
-<div class='config-main-title'><div class='inner'><img src='<?=x::url().'/module/multisite/img/direction.png'?>'> Add blog API's here</div></div>
+<div class='config-main-title'><div class='inner'><img src='<?=x::url().'/module/multisite/img/direction.png'?>'>블로그 API 정보를 입력해 주세요.</div></div>
 	<div class='config-wrapper'>
 	<div class='config-container'>
 	<form method='get'> 
