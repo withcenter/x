@@ -30,7 +30,7 @@
 	<div class='config-container'>
 <table cellspacing='0' cellpadding='3' class='image-config' width='100%'>
 	<tr valign='top' >
-		<td width='50%'>
+		<td width='50%'> 
 			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>사이트 상단 로고</div>
 			<div class='image-upload'>
 			<?if( ms::meta('header_logo') ) {
