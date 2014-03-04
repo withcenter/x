@@ -27,7 +27,7 @@
 	  <form name="fsearchbox" method="get" action="<?php echo G5_BBS_URL ?>/search.php" onsubmit="return fsearchbox_submit(this);">
 		<input type="hidden" name="sfl" value="wr_subject||wr_content">
 		<input type="hidden" name="sop" value="and">
-		<input type="text" name="stx" id="sch_stx" maxlength="20" placeholder='검색' />
+		<input type="text" name="stx" id="sch_stx" maxlength="20" placeholder='검색어를 입력해 주세요.' />
 		<input type="image" id="sch_submit" src='<?=x::url_theme()?>/img/search-icon.png' />
       </form>
 
