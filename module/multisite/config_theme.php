@@ -14,13 +14,24 @@
 		<table cellspacing='0' cellpadding='5'>
 			<tr>
 				<td>
-					
-			<?if ( ms::meta('theme') ) { ?>
+				<?
+				$active_theme = ms::meta('theme');
+				$dirs = file::getDirs(X_DIR_THEME);
+				foreach ( $dirs as $dir ){
+					if ( $dir == $active_theme ) {
+						$theme_config = array();
+						include X_DIR_THEME . "/$dir/config.php";
+						$active_theme = $theme_config['name'];
+						break;
+					}
+				}
+				?>
+			<?if ( $active_theme ) { ?>
 				<button type='submit' name='theme' disabled="disabled">
 					<div class='theme-thumb'>
 						<img src='theme/<?=ms::meta('theme')?>/preview.jpg' >
 						<p><b>선택 되었습니다.</b></p>
-						<table cellpadding='10px'><tr><td><?=ms::meta('theme')?></td></table>
+						<table cellpadding='10px'><tr><td><?=$active_theme?></td></table>
 					</div>
 				</button>
 			<?}?>
@@ -28,7 +39,7 @@
 			<td>
 		<?php
 			$theme_ctr = 2;
-			$dirs = file::getDirs(X_DIR_THEME);
+			
 			foreach ( $dirs as $dir ) {
 				$path = X_DIR_THEME . "/$dir/config.php";
 				if ( ! file_exists($path) ) continue;				
