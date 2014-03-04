@@ -28,7 +28,9 @@
 		<li class='menu-list'><a class='my-site-setting' href='<?=ms::url_config()?>'>사이트 설정</a></li>
 	<? }?>
 	
-	<li class="menu-list"><a class='my-sites' href='<?=x::url()?>/?module=multisite&action=my_sites'>내 사이트</a></li>
+	<? if ( $member['mb_id'] ) {?>
+		<li class="menu-list"><a class='my-sites' href='<?=x::url()?>/?module=multisite&action=my_sites'>내 사이트</a></li>
+	<? }?>
 	
 	<? /*
 	<? for ( $i = 1; $i <= 10; $i++ ) { ?>
