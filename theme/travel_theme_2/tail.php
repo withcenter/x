@@ -42,12 +42,12 @@
 				<table>
 					<tr>
 						<td width='250'>
-							<?if($footer_contact_num = ms::meta('travel2contact_num1')) { ?><div class='contact-num'><b>전화번호</b> <?=$footer_contact_num ?></div><?}?>
+							<?if($footer_contact_num = ms::meta('travel2contact_num1')) { ?><div class='contact-num'>전화번호 <?=$footer_contact_num ?></div><?}?>
 						</td>
 						<td>
 							<?if($footer_contact_num = ms::meta('travel2contact_num2')) { ?>
 								<div class='contact-num'>
-									<? if ( !ms::meta('travel2contact_num1') ) echo "<b>전화번호</b>";?>
+									<? if ( !ms::meta('travel2contact_num1') ) echo "전화번호";?>
 									<?=$footer_contact_num ?>
 								</div>
 							<?}?>
@@ -55,12 +55,12 @@
 					</tr>
 					<tr>
 						<td width='250'>
-							<?if($footer_email = ms::meta('travel2email_num1')) { ?><div class='contact-num'><b>이메일</b> <?=$footer_email?></div><?}?>
+							<?if($footer_email = ms::meta('travel2email_num1')) { ?><div class='contact-num'>이메일 <?=$footer_email?></div><?}?>
 						</td>
 						<td>
 							<?if($footer_email = ms::meta('travel2email_num2')) { ?>
 								<div class='contact-num'>
-									<? if ( ms::meta('travel2email_num2') ) echo "<b>이메일</b>";?>
+									<? if ( ms::meta('travel2email_num2') ) echo "이메일";?>
 									<?=$footer_email?>
 								</div>
 							<?}?>
@@ -68,10 +68,10 @@
 					</tr>
 					<tr>
 						<td width='250'>
-							<?if($footer_business_no = ms::meta('travel2permit_1')) { ?><div class='contact-num'><b>사업자 등록번호</b> <?=$footer_business_no?></div><?}?>
+							<?if($footer_business_no = ms::meta('travel2permit_1')) { ?><div class='contact-num'>사업자 등록번호 <?=$footer_business_no?></div><?}?>
 						</td>
 						<td>
-							<?if($footer_business_plate = ms::meta('travel2plate_1')) { ?><div class='contact-num'><b>회사명</b> <?=$footer_business_plate?></div><?}?>
+							<?if($footer_business_plate = ms::meta('travel2plate_1')) { ?><div class='contact-num'>회사명 <?=$footer_business_plate?></div><?}?>
 						</td>
 					</tr>
 				</table>
