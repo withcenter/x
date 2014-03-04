@@ -37,9 +37,9 @@ for ( $i = 1 ; $i <= 10; $i++ ) {
 
 <div class='exchange-rate-wrapper'>
 	<div class='title'>
-		<img src='<?=x::url_theme()?>/img/exchange-rate.png'><b>환율</b>
+		<img src='<?=x::url_theme()?>/img/exchange-rate.png'><b>EXCHANGE RATE</b>
 	</div>
 	<div class='exchange-rate'>
-		<iframe src="http://community.fxkeb.com/fxportal/jsp/RS/DEPLOY_EXRATE/381_0.html" width="178" height="136" border="0" frameborder="no" scrolling="no" marginwidth="0" hspace="0" vspace="0"></iframe>
+		<?include "exchange_rate.php"?>
 	</div>
 </div>
