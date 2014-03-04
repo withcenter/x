@@ -111,15 +111,6 @@
 				}
 				?>
 			</div>
+			
+				<div style='clear:both;'></div>
 		</div>
-	</div> <!-- container -->
-	<div style='clear:both;'></div>
-	<div class='foot_banner'>
-		<?
-			if( ms::meta('travel2banner_bottom') ) $img = "<a href='".ms::meta('travel2banner_bottom_text1')."'><img src = '".ms::meta('img_url').ms::meta('travel2banner_bottom')."'/></a>";
-			else {
-				$img = "<a href='javascript:void(0)'><img src='".x::url_theme()."/img/no_bottom_banner.png' /></a>";
-			}
-		?>
-		<?=$img?>
-	</div>

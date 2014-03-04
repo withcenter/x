@@ -73,7 +73,7 @@
 
 <!-- 콘텐츠 시작 { -->
 
-<div>
+
 <div class="layout"><div class='inner'>
 
 <div class='floating-bar'>
