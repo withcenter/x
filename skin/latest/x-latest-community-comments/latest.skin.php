@@ -9,8 +9,8 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			<table width='100%'>
 				<tr valign='top'>
 					<td align='left' class='title-left'>
-						<div><img src="<?=$latest_skin_url?>/img/my-posts.png"></div>
-						<div class='label'>내 글</div>
+						<img src="<?=$latest_skin_url?>/img/my-posts.png">
+						<span class='label'>내 글</div>
 					</td>
 					<td align='right'>
 						<div class='posts-more'><a href="<?=g::url()?>/bbs/board.php?bo_table=<?=$bo_table?>">자세히 <img src="<?=$latest_skin_url?>/img/more-icon.png"></a></div>
@@ -35,7 +35,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			<li>
 				<a href='<?=$url?>'>					
 				<?
-					echo "<div class='subject'>$subject</div> <div class='no-of-comments ".$no_comment."'>($comment_count)</div>";
+					echo "<span class='subject'>$subject</span> <span class='no-of-comments ".$no_comment."'>($comment_count)</span>";
 				?>
 				</a>
 			</li>		
