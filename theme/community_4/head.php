@@ -132,7 +132,7 @@
 		
 				
 		.top .inner a{
-				height:19px;
+				
 		}			
 		
 		.header .header_and_logo #comm3_logo{

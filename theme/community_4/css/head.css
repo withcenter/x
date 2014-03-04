@@ -18,6 +18,7 @@
 	max-width:100px;
 	white-space:nowrap;
 	overflow:hidden;
+	height:14px;
 }
 
 .top .inner a.selected{
