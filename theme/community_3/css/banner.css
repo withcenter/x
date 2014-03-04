@@ -3,7 +3,6 @@
 	height: 238px;
 	overflow: hidden;	
 	position: relative;	
-	height: 238px;
 	font-family: dotum;
 	margin-bottom: 10px;
 	border: solid 1px #bbbbbb;
@@ -23,7 +22,6 @@
 
 .layout .body-wrapper .main-content .banner img {
 	width: 100%;
-	height: 238px;
 }
 
 .layout .body-wrapper .main-content .banner p {
