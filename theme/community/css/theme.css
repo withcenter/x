@@ -198,7 +198,7 @@ body, body a {
 	font-size: .9em;	
 }
 
-#top-menu .inner a {
+#top-menu .inner a, #top-menu .inner span{
 	display:inline-block;
 	float:left;
 	margin: 8px 4px 8px 4px;
