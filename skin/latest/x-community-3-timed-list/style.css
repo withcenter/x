@@ -12,7 +12,11 @@
 	line-height: 25px;
 	height: 25px;
 	background-color: #fcfcfc;
-	position:relative;
+	position:relative;	
+}
+
+.comm3_timed_list .timed_list_title a{
+	color:#444444;
 }
 
 .comm3_timed_list .timed_list_title img{
@@ -78,7 +82,7 @@
 	overflow:hidden;
 	line-height: 19px;
 	height: 19px;
-	float:left;
+	float:left;	
 }
 
 .comm3_timed_list .subject .dot {

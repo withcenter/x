@@ -12,6 +12,10 @@
 	position:relative;
 }
 
+.community_images_with_captions  .title a{
+	color:#444444;
+}
+
 .community_images_with_captions  .title a:hover {
 	text-decoration: none;
 }

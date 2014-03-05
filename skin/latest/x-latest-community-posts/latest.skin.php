@@ -24,9 +24,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			$i = 1;
 			$no_of_posts = count($list);
 			foreach ( $list as $li ) {
-				$subject = $li['wr_subject'];
+				$subject = $li['subject'];
 				$subject .= ":";
-				$content = cut_str(strip_tags($li['wr_content']),30,'...');
+				$content = cut_str(strip_tags($li['wr_content']),19,'...');
 				$url = $li['href'];
 				$comment_count = $li['wr_comment'];
 				$no_comment = '';
@@ -37,7 +37,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		?>	
 			<li <? if( $i == $no_of_posts ) echo "class='last-item'"; ?> >				
 				<?
-					echo "<div class='post-content'><a href='$url' > $subject $content <span class='no-of-comments $no_comment'>($comment_count)</span></a></div>";
+					echo "<div class='post-content'><img src='".$latest_skin_url."/img/bullet.png'/><a href='$url' > $subject $content <span class='no-of-comments $no_comment'>[".strip_tags($comment_count)."]</span></a></div>";
 				?>
 				<?$i++;?>
 			</li>		
