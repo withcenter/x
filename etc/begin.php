@@ -142,6 +142,7 @@ function hook_outlogin_path()
 x::hook_register( 'latest', 'hook_latest_path' );
 function hook_latest_path()
 {
+	dlog("hook_latest_path() begin");
 	global $skin_folder, $latest_skin_path, $latest_skin_url;
 	
 	
@@ -252,6 +253,7 @@ function hook_latest_before_return()
 	if ( ms::admin() ) {
 		dlog("ms::admin() true");
 		global $content, $skin_folder, $global_bo_table;
-		$content = "<div class='skin-update'><div class='skin-update-button' code='{$skin_folder}-{$global_bo_table}'>admin</div>$content</div>";
+		$code = x::skin_code( $skin_folder, $global_bo_table );
+		$content = "<div class='skin-update'><div class='skin-update-button' code='$code'>admin</div>$content</div>";
 	}
 }

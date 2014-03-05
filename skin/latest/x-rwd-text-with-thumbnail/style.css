@@ -28,9 +28,10 @@
 	font-size: 9pt
 }
 
-.x-rwd-text-with-thumbnail .comment_and_time{
+.x-rwd-text-with-thumbnail .comment-time{
 	float:right;
 	text-align: right;
+	width:3em;
 }
 
 .x-rwd-text-with-thumbnail  .photo {
@@ -40,10 +41,9 @@
 
 
 
-.x-rwd-text-with-thumbnail .comment_and_time .time{	
-	width:2.2em;
-	text-align:center;
-	margin-left:0.65em;
+.x-rwd-text-with-thumbnail .comment-time .time{
+	margin-top:0.45em;
+	margin-left:0.25em;
 }
 
 .x-rwd-text-with-thumbnail a{
@@ -87,4 +87,10 @@
 
 .x-rwd-text-with-thumbnail table{
 	padding:0 0.7em 0.7em 0.7em;	
+}
+
+
+.x-rwd-text-with-thumbnail .breaker {
+	margin: 0.2em 0.3em;
+	border-bottom: 1px dotted #e3e3e3;
 }

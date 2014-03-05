@@ -15,7 +15,7 @@
 		$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('menu_'.$i)."'");
 		if ( !$menu = $row['bo_subject'] ) $menu = null;
 	?>
-		<li class="comm3_menu <?=$no_margin?>" page = "<?=ms::meta('menu_'.$i)?>"><a href='<?=g::url()?>/bbs/board.php?bo_table=<?=ms::meta('menu_'.$i)?>'><?=$menu?></a></li>
+		<li class="comm3_menu <?=$no_margin?>"><a href='<?=g::url()?>/bbs/board.php?bo_table=<?=ms::meta('menu_'.$i)?>'><?=$menu?></a></li>
 	<?}}?>
 
 	<?
@@ -29,15 +29,18 @@
 	
 	
 </ul>
-
-
-
+<style>
+#comm3_main_menu a[href*="<?=$bo_table?>"] {
+	background-color: black;
+}
+</style>
 <script>
-	$(function(){				
-		if( '<?=$in['bo_table']?>' != '' ) $(".comm3_menu[page='<?=$in['bo_table']?>']").addClass("selected");
-		else if( '<?=$in['module']?>' ) $(".comm3_menu[page='admin-menu']").addClass("selected");		
+	$(function(){
+		if( '<?=$in['module']?>' ) $(".comm3_menu[page='admin-menu']").addClass("comm3-menu-selected");
 	});
 </script>
+
+
 
 
 <!--[if gte IE 9]>

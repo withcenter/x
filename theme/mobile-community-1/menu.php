@@ -12,4 +12,7 @@
 				}
 			}
 		?>
+		<? if ( ms::admin() ) { ?>
+			<li><a href='<?=ms::url_config()?>'>사이트관리</a></li>
+		<? } ?>
 	</ul>
