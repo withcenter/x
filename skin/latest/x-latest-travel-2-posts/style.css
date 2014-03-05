@@ -11,6 +11,7 @@
 	overflow: hidden;
 	vertical-align: middle;
 	white-space:nowrap;
+	margin-top: -2px;
 }
  .travel-2-posts a {
 	text-decoration: none;
@@ -47,7 +48,7 @@
 }
 
  .travel-2-posts .title img {
-	margin-right: 7px;
+	margin-right: 5px;
 	position: relative;
 	top: -1px;
 }
