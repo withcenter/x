@@ -10,12 +10,13 @@
     <div id="travel-hd-wrapper">
 		<div id="top-menu">
 			<div class='inner'>
-					<a href='<?=g::url()?>'>홈</a><a>&#8226;</a>
+					<a href='<?=g::url()?>'>홈</a>
 					<? if ( ms::meta('comheader_contact_number') ) {?>
-						<a href='javascript:void(0);'>전화번호: <?=ms::meta('comheader_contact_number')?></a><a>&#8226;</a>
+						<span>&#8226;</span><a href='javascript:void(0);'>전화번호: <?=ms::meta('comheader_contact_number')?></a>
 					<? }?>
-					
-					<a href='<?=G5_BBS_URL?>/board.php?bo_table=<?=ms::meta('menu_5')?>'><?=$row['bo_subject']?></a>
+					<?if( $row['bo_subject'] ){?>
+						<span>&#8226;</span><a href='<?=G5_BBS_URL?>/board.php?bo_table=<?=ms::meta('menu_5')?>'><?=$row['bo_subject']?></a>
+					<?}?>
 					<div class='customer-support'>
 						<? if ( !login() ) { ?>
 							<a href='<?=G5_BBS_URL?>/login.php'>로그인</a><a>&#8226;</a>
