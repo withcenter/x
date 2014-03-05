@@ -7,6 +7,11 @@
 	height:139px;
 }
 
+.my-posts .icon{
+	position:relative;
+	top:-1px;
+}
+
 .my-posts .title {	
 	height: 14px;
 	border-top: solid 2px #51b6ce;

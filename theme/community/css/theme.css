@@ -394,6 +394,11 @@ body, body a {
 	font-family: '맑은 고딕', AppleGothic;
 }
 
+.posts-recent .icon{
+	position:relative;
+	top:-1px;
+}
+
 .posts-recent .title {
 	height: 14px;
 	border-top: solid 2px #51b6ce;

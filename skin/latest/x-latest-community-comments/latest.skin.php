@@ -9,7 +9,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			<table width='100%'>
 				<tr valign='top'>
 					<td align='left' class='title-left'>
-						<img src="<?=$latest_skin_url?>/img/my-posts.png">
+						<img class='icon' src="<?=$latest_skin_url?>/img/my-posts.png">
 						<span class='label'>내 글</div>
 					</td>
 					<td align='right'>

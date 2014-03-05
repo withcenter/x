@@ -29,7 +29,7 @@ if( $recent_rows ) {
 			<table width='100%'>
 				<tr valign='top'>
 					<td align='left' class='title-left'>
-					<img src="<?=x::url_theme()?>/img/recent-posts.png">
+					<img class='icon' src="<?=x::url_theme()?>/img/recent-posts.png">
 						<span class='label'>최근 등록글</span>
 					</td>
 				</tr>
@@ -80,7 +80,7 @@ if( $recent_comments ) {
 			<table width='100%'>
 				<tr valign='top'>
 					<td align='left' class='title-left'>
-						<img src="<?=x::url_theme()?>/img/recent-posts.png">
+						<img class='icon' src="<?=x::url_theme()?>/img/recent-posts.png">
 						<span class='label'>최근 댓글</span>
 					</td>
 				</tr>
@@ -129,7 +129,7 @@ if( $post_comments ) {
 				<table width='100%'>
 					<tr valign='top'>
 						<td align='left' class='title-left'>
-							<img src="<?=x::url_theme()?>/img/recent-posts.png">
+							<img class='icon' src="<?=x::url_theme()?>/img/recent-posts.png">
 							<span class='label'><?=$board_title?> 댓글</span>
 						</td>
 						<td align='right'>

@@ -11,6 +11,10 @@
 	
 }
 
+.community-posts .icon{
+	position:relative;
+	top:-1px;
+}
 .community-posts .title {	
 	height: 14px;
 	border-top: solid 2px #51b6ce;
