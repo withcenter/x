@@ -254,6 +254,7 @@ table > .header td:first-child {
 .config-theme .theme-thumb table {
 	position: absolute;
 	bottom: 0;
+	left: 0;
 	background: #333333;
 	width: 100%;
 }
@@ -261,13 +262,13 @@ table > .header td:first-child {
 .config-theme .theme-thumb p {
 	position: absolute;
 	top: 0;
+	left: 0;
 	padding: 0.5em;
 	background: #F03000;
 	width: 100%;
 }
 
 .config-theme .theme-thumb {
-
 	display: inline-block;
 	width: 320px;
 	height: 240px;
