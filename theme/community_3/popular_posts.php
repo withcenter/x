@@ -13,7 +13,7 @@ if ( $posts ) { ?>
 			<tr valign='top'>
 				<td align='left' class='title-left'>
 					<img src="<?=x::url_theme()?>/img/popular-posts.png">
-					<span class='label'>POPULAR POSTS</span>
+					<span class='label'>조회수가 많은 글</span>
 				</td>
 			</tr>
 		</table>

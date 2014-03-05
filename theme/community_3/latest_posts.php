@@ -19,7 +19,7 @@ if( $latest_rows ) {
 				<tr valign='top'>
 					<td align='left' class='title-left'>
 						<img src="<?=x::url_theme()?>/img/latest-posts.png">
-						<span class='label'>LATEST  POSTS</span>
+						<span class='label'>최근 작성글</span>
 					</td>
 				</tr>
 			</table>
