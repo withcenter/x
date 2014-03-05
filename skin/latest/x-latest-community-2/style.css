@@ -27,7 +27,9 @@
 	font-size: 1.250em;
 	font-weight: bold;	
 }
-
+.withcenter_latest .title .top-title {
+	float: left;
+}
 .withcenter_latest .title .more_btn {
 	float: right;
 	position: relative;

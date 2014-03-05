@@ -7,10 +7,8 @@ function hook_multisite_tail_begin() {
 
 	if($theme_sidebar == 'right') {
 	?><style>
-		.layout .main-content .layout-divider {	display: none; }
-		.layout .main-content .left { float:right; }
+		.layout .main-content .left { float:right; width: 190px; }
 		.layout .main-content .content { float: left; width: 760px; }
-		
 	</style><?}?>
 
 <? }

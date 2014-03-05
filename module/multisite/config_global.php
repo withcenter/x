@@ -23,23 +23,23 @@
 			<div class='config-container'>
 				<table cellpadding=0 cellspacing=0 width='100%'>
 					<tr valign='top'>
-						<td >
-							<span>메인 타이틀</span><input type='text' name='title' value='<?=ms::meta('title')?>'>
+						<td width='100'>
+							<span>메인 타이틀</span></td><td><input type='text' name='title' value='<?=ms::meta('title')?>'>
 						</td>
 					</tr>
 					<tr valign='top'>
 						<td>
-							<span>서브 타이틀</span><input type='text' name='secondary_title' value='<?=ms::meta('secondary_title')?>'>
+							<span>서브 타이틀</span></td><td><input type='text' name='secondary_title' value='<?=ms::meta('secondary_title')?>'>
 						</td>
 					</tr>
 					<tr valign='top'>
 						<td>
-							하단 문구<textarea name='footer_text' ><?=stripslashes(ms::meta('footer_text'))?></textarea>
+							<span>하단 문구</span></td><td><textarea name='footer_text' ><?=stripslashes(ms::meta('footer_text'))?></textarea>
 						</td>
 					</tr>
 					<tr valign='top'>
-						<td>						
-							<div><span class='title-small'>사이드 바 위치:</span>
+						<td>		<span class='title-small'>사이드 바 위치:</span></td><td>				
+							<div>
 								<input type="radio" name="theme_sidebar" value="left"  <?if(!ms::meta('theme_sidebar') || ms::meta('theme_sidebar') == 'left') echo "checked"?>><span class='radio-left'>왼쪽</span> 
 								<input type="radio" name="theme_sidebar" value="right" <?if(ms::meta('theme_sidebar') =='right') echo "checked"?>><span class='radio-right'>오른쪽</span>
 							</div>

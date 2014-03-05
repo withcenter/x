@@ -70,12 +70,10 @@
 </div></div> 
 
 <div class='layout'>
-	<table class='main-content' cellpadding=0 cellspacing=0 width='100%' border=0>
-		<tr valign='top'>
-			<td class='left' width='200'>	
+	<div class='main-content'>
+			<div class='left'>	
 				<? include x::theme('left') ?>				
-			</td>
-			<td class='layout-divider'></td>
-			<td class='content'>
+			</div><!--left-->
+			<div class='content'>
 				<?if ( preg_match('/^config/', $action) ) include ms::site_menu();?>
 				<?php if ((!$bo_table || $w == 's' ) && !defined("_INDEX_")) { ?><div id="container_title"><?php echo $g5['title'] ?></div><?php } ?>
