@@ -29,6 +29,7 @@
 	
 	
 </ul>
+<!-- This css does not work on IE 7 and 8 when there is no "$bo_table" present (it highlights all menus)...-->
 <style>
 #comm3_main_menu a[href*="<?=$bo_table?>"] {
 	background-color: black;
@@ -36,7 +37,7 @@
 </style>
 <script>
 	$(function(){
-		if( '<?=$in['module']?>' ) $(".comm3_menu[page='admin-menu']").addClass("comm3-menu-selected");
+		if( '<?=$in['module']?>' ) $(".comm3_menu[page='admin-menu']").addClass("comm3-menu-selected");		
 	});
 </script>
 
