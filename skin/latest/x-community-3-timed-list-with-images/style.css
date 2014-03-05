@@ -16,6 +16,10 @@
 	position:relative;
 }
 
+.comm3_timed_list_with_image .timed_list_title a:hover {
+	text-decoration: none;
+}
+
 .comm3_timed_list_with_image .timed_list_title img{
 	position:relative;
 	top:-2px;

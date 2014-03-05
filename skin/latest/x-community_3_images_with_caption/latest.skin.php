@@ -6,7 +6,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 <div class='community_images_with_captions'>
 		<div class='title'>
 			<span class='com-subject'>
-			<img src='<?=$latest_skin_url?>/img/icon.png'/> <?=$bo_subject?>
+			<img src='<?=$latest_skin_url?>/img/icon.png'/> <a href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$bo_table?>'><?=$bo_subject?></a>
 			
 			<a class='more-button' href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$bo_table?>'>자세히</a>
 			<div style='clear:both;'></div>

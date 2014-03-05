@@ -40,7 +40,7 @@ echo $latest_1_output;
 </div>
 
 <div class='timed_list'>
-	<table width='100%' cellspacing=0 cellpadding=0><tr valign='top'>
+	<table cellspacing=0 cellpadding=0><tr valign='top'>
 	<td class='left' width='50%'>
 		<?
 		$latest_bo_table = ms::board_id(etc::domain()).'_2';
@@ -63,7 +63,7 @@ echo $latest_1_output;
 </div>
 
 <div class='timed_list_with_images'>
-	<table width='100%' cellspacing=0 cellpadding=0><tr valign='top'>
+	<table cellspacing=0 cellpadding=0><tr valign='top'>
 	<td width='50%'>
 		<?
 		$latest_bo_table = ms::board_id(etc::domain()).'_4';

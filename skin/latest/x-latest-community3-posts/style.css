@@ -1,6 +1,5 @@
  .community3-posts {
 	border: solid 1px #bbbbbb;
-	white-space: nowrap;
 	margin-bottom: 10px;
 	height: 158px;
 }
@@ -14,11 +13,18 @@
 	width:120px;
 	overflow:hidden;
 }
-
+ .community3-posts .title-left .label a:hover {
+	text-decoration: none;
+ }
+ 
  .community3-posts .content-community-3 {
 	display: inline-block;
 	width: 130px;
 	overflow: hidden;
+	height: 18px;
+	line-height: 18px;
+	position: relative;
+	left: -4px;
 }
 
  .community3-posts .title {
@@ -50,9 +56,11 @@
  .community3-posts .community3-posts-items .posts-square img{
 	position:absolute;
 	left:-3px;
-	top:-5px;
+	top: -3px;
 }
-
+ .community3-posts .community3-posts-items .no-of-comments {
+	
+ }
  .community3-posts .community3-posts-items .no-of-comments  a{
 	color: #ff0000;
 	font-size: 11px;
