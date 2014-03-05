@@ -20,7 +20,15 @@
 	float: left;
 }
 
-.travel_lower_post_title  a{
+.travel_lower_post_title .board_subject a {
+	color: #444444;
+}
+
+.travel_lower_post_title .board_subject a:hover {
+	text-decoration: none;
+}
+
+.travel_lower_post_title  .more_button{
 	font-weight:normal;
 	color:#808080;
 	font-size: 9pt;
@@ -30,7 +38,9 @@
 }
 
 .travel_lower_post_title .icon{
-
+	position: relative;
+	top: -1px;
+	margin-right: 5px;
 }
 
 .travel_lower_items{

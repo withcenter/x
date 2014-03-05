@@ -16,6 +16,13 @@
 	text-decoration: none;
 }
 
+.travel-2-posts span.label  > a {
+	color: #444444;
+}
+.travel-2-posts span.label  > a:hover {
+	text-decoration: none;
+}
+
  .travel-2-posts .content-community-3 {
 	display: inline-block;
 	width: 130px;
@@ -23,7 +30,7 @@
 }
 
  .travel-2-posts .title {
-	background: #f7f7f7;
+	background: #fcfcfc;
 	border-bottom: solid 1px #bbbbbb;
 	font-weight: bold;
 	font-size: 9pt;

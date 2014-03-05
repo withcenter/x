@@ -9,7 +9,9 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 <div class="travel_2_timed_list_with_image">
     <div class="title">
 		<?if( $options ) echo "<img class='icon' src='".$options."'/>";?>
-		<?php echo $bo_subject; ?>		
+		<a href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$bo_table?>'><?php echo $bo_subject; ?></a>
+		<a class='more_button' href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$bo_table?>'>자세히</a>
+		<div style='clear:right;'></div>
 	</div>
 		<div class='travel_images_2_container'>
     <table cellpadding=0 cellspacing=0 >

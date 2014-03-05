@@ -7,10 +7,10 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 		<div class='title'>
 		<span class='travel-subject'>
 		<img src='<?=$latest_skin_url?>/img/2paperswhite.png'/>
-		<?=$bo_subject?>
+		<a href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$bo_table?>'><?=$bo_subject?></a>
 		</span>
 		
-		<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=<?php echo $bo_table ?>">자세히</a>
+		<a class='more_button' href="<?php echo G5_BBS_URL ?>/board.php?bo_table=<?php echo $bo_table ?>">자세히</a>
 		<div style='clear: both'></div>
 		</div>
 
