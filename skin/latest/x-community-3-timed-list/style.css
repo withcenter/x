@@ -20,8 +20,11 @@
 	top:-2px;
 	margin-right:5px;
 }
+.comm3_timed_list .timed_list_title a:hover {
+	text-decoration: none;
+}
 
-.comm3_timed_list .timed_list_title a{
+.comm3_timed_list .timed_list_title .more_button{
 	position:absolute;
 	right:10px;
 	top:0;
@@ -72,9 +75,8 @@
 .comm3_timed_list .subject{
 	width:250px;
 	overflow:hidden;
-	white-space:nowrap;
-	line-height: 14px;
-	height: 14px;
+	line-height: 19px;
+	height: 19px;
 	float:left;
 }
 

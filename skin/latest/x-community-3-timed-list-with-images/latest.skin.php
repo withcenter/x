@@ -8,7 +8,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 <div class="comm3_timed_list_with_image">
     <div class="timed_list_title">
 		<?if( $options ) echo "<img class='icon' src='".$options."'/>";?>
-		<?php echo $bo_subject; ?>
+		<a href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$bo_table?>'><?php echo $bo_subject; ?></a>
 		
 		<span class='more-button'><a href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$bo_table?>'>자세히</a></span>
 		<div style='clear:right;'></div>
