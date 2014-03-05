@@ -64,7 +64,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 					<div class='posts-info'>
 						<a href='<?=$url?>'>
 							<span class='subject'><?=$subject?>: </span>
-							<span class='content'><?=$content?><span class='no-of-comments <?=$no_comment?>'><?='['.strip_tags($comment_count).']'?></span></span>
+							<span class='content'><?=$content?><span class='no-of-comments <?=$no_comment?>'> <?='['.strip_tags($comment_count).']'?></span></span>
 						</a>
 					</div>
 				</td>
