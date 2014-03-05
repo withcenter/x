@@ -80,8 +80,7 @@
 		</td>
 		</tr>
 	</table>
-
-
+	</div><!--header-->
 
 	<div class='main-menu'>	
 			<?include x::theme('main-menu')?>
