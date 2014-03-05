@@ -42,7 +42,7 @@
 			
 			<div class='right'>
 				<? if ( !$com3_contact_number = ms::meta('com3contact_num') ) $com3_contact_number = '+82 070 7529 1749'?>
-				<a href='javascript:void(0)'>전화번호: <?=$com3_contact_number?></a>
+				<a href='javascript:void(0)' class='contact-num'>전화번호: <?=$com3_contact_number?></a>
 				
 				<a href='<?=g::url()?>?device=mobile'>모바일</a>
 			</div>
