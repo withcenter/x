@@ -8,7 +8,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 				<tr valign='top'>
 					<td align='left' class='title-left'>
 						<img src="<?=$latest_skin_url?>/img/my-posts.png">
-						<span class='label'><?=cut_str($bo_subject,15,'...')?></span>
+						<span class='label'>
+							<a href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$bo_table?>'><?=cut_str($bo_subject,15,'...')?></a>
+						</span>
 					</td>
 					<td align='right'>
 						<div class='posts-more'><a href="<?=g::url()?>/bbs/board.php?bo_table=<?=$bo_table?>" >자세히</a></div>

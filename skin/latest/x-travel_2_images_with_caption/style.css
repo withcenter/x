@@ -16,11 +16,18 @@
 .travel_images_with_captions .title .travel-subject {
 	float: left;
 }
+.travel_images_with_captions .title a {
+	color: #444444;
+}
 
-.ttravel_image_with_captions .title a {
+.travel_images_with_captions .title a:hover {
+	text-decoration: none;
+}
+
+.ttravel_image_with_captions .title .more_button {
 	float: right;
 }
-.travel_images_with_captions .title a{
+.travel_images_with_captions .title .more_button{
 	font-weight:normal;
 	color:#808080;
 	font-size: 9pt;

@@ -8,12 +8,33 @@
 .travel_2_timed_list_with_image .title{
 	font-weight:bold;	
 	font-family:Dotum;
-	background-color:#f7f7f7;
+	background-color:#fcfcfc;
 	padding:0 6px 0 10px;
 	height: 28px;
 	line-height: 28px;
 	border-bottom:1px solid #bbbbbb;
 }
+
+.travel_2_timed_list_with_image .title a {
+	color: #444444;
+}
+
+.travel_2_timed_list_with_image .title a:hover {
+	text-decoration:none;
+}
+
+.travel_2_timed_list_with_image .title .more_button {
+	float: right;
+}
+.travel_2_timed_list_with_image .title .more_button{
+	font-weight:normal;
+	color:#808080;
+	font-size: 9pt;
+	float:right;
+	margin: 2px 10px 0 0;
+	text-decoration:none;
+}
+
 
 .travel_2_timed_list_with_image table {
 
