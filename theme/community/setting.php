@@ -8,7 +8,7 @@
 			<div class='image-upload'>
 			<?if( ms::meta('header_logo') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('header_logo').">"; 
-			} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 310px X 세로 60px]</div>"; ?>
+			} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 325px X 세로 60px]</div>"; ?>
 				<input type='file' name='header_logo'>
 				<?if( ms::meta('header_logo') != '' ) { ?>
 					<input type='hidden' name='header_logo_remove' value='n'>

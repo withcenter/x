@@ -59,7 +59,7 @@
 	height: 22px;
 	line-height: 22px;
 	width: 238px;
-	padding: 0;
+	padding: 2px;
 	margin-bottom: 6px;
 }
 
@@ -75,7 +75,7 @@
 .config_general .select-wrapper, .config_general .select-button {
 	border: 1px solid #d3d3d3;
 	background-color: #efefef;
-	display: inline-block;
+	float: left;
 	margin-bottom: 10px;
 }
 .config_general .select-wrapper {
@@ -102,9 +102,7 @@
 	text-align: center;
 }
 .config_general .select-button {
-	position: relative;
-	top: 0;
-	left: -4px;
+
 }
 /*
 @media screen and (-webkit-min-device-pixel-ratio:0) { 
@@ -126,7 +124,7 @@
 	overflow: auto;
 	margin-bottom: 3px;
 	background-color: #f4f4f4;
-	border: 1px solid #b0b0b0;
+	border: 1px solid #d8d8d8;
 	border-top: 0;
 	position: relative;
 	top: -10px;
@@ -472,3 +470,13 @@
 	background: #fafafa;
 	margin-bottom: 10px;
 } 
+.config_general input[name='title'], .config_general input[name='secondary_title'] {
+	width: 600px !important;
+}
+
+.config_general textarea[name='footer_text'] {
+	width: 600px;
+	margin-left: 49px;
+	height: 100px;
+	padding: 2px;
+}
