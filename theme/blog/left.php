@@ -10,7 +10,7 @@
 
 <div class='post-forum'>
 	<?php
-		$ids = ms::forum();
+		$ids = ms::forum_ids();
 		
 	?>
 	<? if ( ms::admin() ) {?>

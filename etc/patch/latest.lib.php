@@ -26,7 +26,9 @@
 	
 	
 	$src = 'return $content;';
-	$dst = "x::hook( 'latest_before_return' );\n\t$src";
+	$dst = "x::hook( 'latest_before_return' );
+	include x::dir() . '/etc/hook/latest.lib.before-return.php';
+	$src";
 	$data = patch_string( $data, $src, $dst );
 	
 	

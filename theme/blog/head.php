@@ -45,7 +45,7 @@
 		
 		<?php
 			if ( write_page() ) {
-				$ids = ms::forum();
+				$ids = ms::forum_ids();
 				$str = "<div class='forum-write-title'>글을 쓰려는 게시판을 선택해 주세요.</div>";
 				foreach ( $ids as $id ) {
 					

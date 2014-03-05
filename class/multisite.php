@@ -43,13 +43,16 @@ class multisite {
 	 *  true if the sub-site exists, otherwise false.
 	 *  
 	 *  @details Use this function to check if a sub-site exist or not. You can use it when a user creates a site.
+	 * You can also use this function if the accessed site is a subsite or not.
 	 */
-	static function exist($domain)
+	static function exist($domain=null)
 	{
+		if ( $domain === null ) $domain = etc::domain();
 		$info = self::get( $domain );
 		if ( $info ) return true;
 		else return false;
 	}
+	
 	
 	/**
 	 *  @brief returns the record of the site(subsite).
@@ -417,17 +420,15 @@ class multisite {
 	}
 	
 	/**
-	 *  @brief returns all the forum id(s).
+	 *  @brief returns all the forum id(s) and ID only.
 	 *  
 	 *  @return array of forum id(bo_table)
 	 *  
 	 *  @details use this function to get all the forum id.
 	 */
-	static function forum()
+	static function forum_ids()
 	{
-		global $g5;
-		$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "\_%'";	
-		$rows = db::rows( "SELECT bo_table FROM $g5[board_table] WHERE $qb");
+		$rows = self::forums();
 		$ret = array();
 		if ( $rows ) {
 			foreach ( $rows as $row ) {
@@ -436,6 +437,21 @@ class multisite {
 		}
 		return $ret;
 	}
+	
+	/** @short returns all the forum record(information) of the domain( subsite )
+	 *
+	 * @param $domain if omitted, then it uses current accessed domain.
+	 * @return array all the board table record of the domain.
+	 */
+	static function forums($domain=null)
+	{
+		global $g5;
+		if ( $domain === null ) $domain = etc::domain();
+		$qb = "bo_table LIKE '" . self::board_id( $domain ) . "\_%'";	
+		$rows = db::rows( "SELECT * FROM $g5[board_table] WHERE $qb");
+		return $rows;
+	}
+	
 	
 	
 	
