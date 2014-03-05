@@ -58,12 +58,12 @@
 	left:-3px;
 	top: -3px;
 }
- .community3-posts .community3-posts-items .no-of-comments {
-	
- }
+
  .community3-posts .community3-posts-items .no-of-comments  a{
 	color: #ff0000;
 	font-size: 11px;
+	display:block;
+	width:40px;
 }
 .community3-posts .posts-more {
 	font-weight: normal;
