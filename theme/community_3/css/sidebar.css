@@ -43,9 +43,9 @@
 }
 
 .sidebar .popular-posts .title {
-	padding-left: 5px;
-	height: 28px;
-	line-height: 24px;
+	padding:0 0 4px 5px;
+	height: 25px;
+	line-height: 25px;
 	background: #f7f7f7;
 	border-bottom: solid 1px #bbbbbb;
 	font-weight: bold;
@@ -56,6 +56,7 @@
 	margin: 0 2px 0 0;
 	position: relative;
 	top: -2px;
+	margin-right:4px;
 }
 
 .sidebar .popular-posts .popular-posts-items {
@@ -143,6 +144,7 @@
 	margin: 0 2px 0 0;
 	position: relative;
 	top: -2px;
+	margin-right:4px;
 }
 
 .sidebar .com3-latest-posts .com3-latest-posts-items {

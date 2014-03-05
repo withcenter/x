@@ -8,9 +8,9 @@
 	font-weight:bold;	
 	font-family:Dotum;
 	border-bottom: 1px solid #d9d9d9;
-	padding:0 10px;
-	line-height: 28px;
-	height: 28px;
+	padding: 2px 10px 1px 10px;
+	line-height: 25px;
+	height: 25px;
 	background-color: #fcfcfc;
 	position:relative;
 }
@@ -18,7 +18,8 @@
 .comm3_timed_list .timed_list_title img{
 	position:relative;
 	top:-2px;
-	margin-right:5px;
+	left:-2px;
+	margin-right:2px;
 }
 .comm3_timed_list .timed_list_title a:hover {
 	text-decoration: none;
