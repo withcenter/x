@@ -6,7 +6,7 @@
 	</div>
 <?} else echo "<a href='http://www.philgo.com' target='_blank'><img src='".x::url_theme()."/img/philgo_banner.gif' style='border:0;'/></a>";?>
 
-<?=latest( 'x-latest-community-comments' , ms::board_id(etc::domain()).'_1' , 5, 15)?>
+<?=latest( 'x-latest-community-comments' , ms::board_id(etc::domain()).'_1' , 5, 15, $cache_time=1, x::url_theme()."/img/my-posts.png")?>
 
 
 <?

@@ -8,7 +8,11 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			<table width='100%'>
 				<tr valign='top'>
 					<td align='left' class='title-left'>
-						<img class='icon' src="<?=$latest_skin_url?>/img/recent-posts.png">
+					<?
+					if( $options ) $img_src = $options;
+					else $img_src = $latest_skin_url."/img/recent-posts.png";
+					?>
+						<img class='icon' src='<?=$img_src?>'/>
 						<span class='label'><?=$bo_subject?></span>
 					</td>
 					<td align='right'>
