@@ -36,13 +36,20 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 			</table>
 			
 			<div class='register_autologin'>
-				<a href='<?=G5_URL?>/<?=G5_BBS_DIR?>/register.php' class='login-reg'><b>회원가입</b></a>
+				<a href='<?=G5_URL?>/<?=G5_BBS_DIR?>/register.php' class='login-reg'>
+					<img class='dot' src='<?=$outlogin_skin_url?>/square-icon.png' />
+					<b>회원가입</b>
+				</a>
+				
 				<span class='auto_login'><input type="checkbox" name="auto_login" value="1" id="auto_login">자동 로그인</span>
 				<div style='clear:both;'></div>
 			</div>
 				
-			<a href="<?php echo G5_BBS_URL ?>/password_lost.php" id="ol_password_lost">아이디/비번 찾기</a>
-			<div style='clear: both'></div>
+			<a href="<?php echo G5_BBS_URL ?>/password_lost.php" id="ol_password_lost">
+				<img class='dot' src='<?=$outlogin_skin_url?>/square-icon.png' />
+				아이디/비번 찾기
+			</a>
+				
 		</form>
 	</div>
 </div>

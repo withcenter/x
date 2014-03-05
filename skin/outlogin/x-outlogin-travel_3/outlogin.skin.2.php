@@ -17,13 +17,8 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 		</tr>
 	</table>
 
-	<?php if ($is_admin == 'super' || $is_auth) {  ?>
-		<div class='admin-mode'><a href="<?php echo G5_ADMIN_URL ?>">ADMIN</a> <a href="<?=x::url_admin()?>">X ADMIN</a></div>
-		
-	<?php }  ?>
-
 		<div class='user-info'><b><?php echo $nick ?></b>님 로그인&nbsp;&nbsp;&nbsp;	
-			<a href="<?php echo G5_BBS_URL ?>/memo.php" target="_blank" id="ol_after_memo" class="win_memo">쪽지<span class='no_of_unreaded_message' <?php if ( $memo_not_read ) echo "style='background-color: #602525;'"?> ><?php echo $memo_not_read ?></span>
+			<a href="<?php echo G5_BBS_URL ?>/memo.php" target="_blank" id="ol_after_memo" class="win_memo">쪽지<span class='no_of_unreaded_message'><?php echo $memo_not_read ?></span>
 			</a>
 		</div>
 			
@@ -35,8 +30,12 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 		</div>
 		
 		
-		<a href="<?php echo G5_BBS_URL ?>/logout.php" id="ol_after_logout" class='logout-button'>로그아웃</a>
+		<?php if ($is_admin == 'super' || $is_auth) {  ?>
+		<div class='admin-mode'><a href="<?php echo G5_ADMIN_URL ?>">ADMIN</a> <a href="<?=x::url_admin()?>">X ADMIN</a></div>
 		
+		<?php }  ?>
+		
+		<a href="<?php echo G5_BBS_URL ?>/logout.php" id="ol_after_logout" class='logout-button'>로그아웃</a>
 </div> 
 
 <script>

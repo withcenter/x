@@ -71,6 +71,8 @@
  
 .travel-2-posts .travel-2-posts-items .subject .dot {
 	margin-right: 7px;
+	position: relative;
+	top: -1px;
  }
  
  .travel-2-posts .travel-2-posts-items tr td ul {
@@ -81,6 +83,7 @@
 .travel-2-posts .travel-2-posts-items .posts-square  img{
 	position:relative;
 	top:-4px;
+	margin-right: 10px;
 }
 
  .travel-2-posts .travel-2-posts-items .no-of-comments {
