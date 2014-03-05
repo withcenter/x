@@ -26,11 +26,14 @@
 .login-box  .dot {
 	position: relative;
 	top: -2px;
+
 }
 
 .login-box .register_autologin .login-reg {
 	float: left;
 	color: #ffffff;
+	position: relative;
+	left: 1px;
 }
 .login-box .register_autologin .auto_login {
 	float: right;
