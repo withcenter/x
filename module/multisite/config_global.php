@@ -48,76 +48,7 @@
 				</table>
 			</div>
 		</div>
-		<div class='config-wrapper'>
-			<div class='config-title'><span class='config-title-info'>첫 페이지에 나타날 글의 게시판을 선택하십시오.</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
-			<div class='config-container'>
-				<div class='select-box-left'>
-				<? for ( $i = 1; $i <= 5; $i++ ) { ?>
-					<div>
-						<span class='select-wrapper'><span class='inner'>
-							<?php
-							foreach ( $rows as $row ) {
-								if ( ms::meta('forum_no_'.$i) && ms::meta('forum_no_'.$i) == $row['bo_table'] ) {
-									$default_value =  '(게시판 번호 '.$i.') '.$row['bo_subject'];
-									break;
-								}
-								else $default_value = null;
-							}
-							
-							echo $default_value ? $default_value : '(게시판 번호 '.$i.') 게시판 선택';
-							?>
-						</span></span>
-						<span class='select-button'><span class='inner'>
-							<img src='<?=x::url()?>/module/multisite/img/select_arrow.gif' />
-						</span></span>
-						<div style='clear: left'></div>
-						<div class='drop-down-menu'>
-							<div class='row' bo_table='' bo_subject='게시판 선택'>게시판 선택</div>
-							<?php
-								foreach ( $rows as $row ) {
-									echo "<div class='row' bo_table='$row[bo_table]' bo_subject='$row[bo_subject]'>$row[bo_subject]</div>";
-								}
-							?>
-						</div>
-						<input class='hidden-value' type='hidden' name='forum_no_<?=$i?>' value='<?=ms::meta('forum_no_'.$i)?>' />
-					</div>
-				<? } ?>
-				</div>
-				<div class='select-box-right'>
-				<? for ( $i = 6; $i <= 10; $i++ ) { ?>
-					<div>
-						<span class='select-wrapper'><span class='inner'>
-							<?php
-							foreach ( $rows as $row ) {
-								if ( ms::meta('forum_no_'.$i) && ms::meta('forum_no_'.$i) == $row['bo_table'] ) {
-									$default_value =  '(게시판 번호 '.$i.') '.$row['bo_subject'];
-									break;
-								}
-								else $default_value = null;
-							}
-							
-							echo $default_value ? $default_value : '(게시판 번호 '.$i.') 게시판 선택';
-							?>
-						</span></span>
-						<span class='select-button'><span class='inner'>
-							<img src='<?=x::url()?>/module/multisite/img/select_arrow.gif' />
-						</span></span>
-						<div style='clear: left'></div>
-						<div class='drop-down-menu'>
-							<div class='row' bo_table='' bo_subject='게시판 선택'>게시판 선택</div>
-							<?php
-								foreach ( $rows as $row ) {
-									echo "<div class='row' bo_table='$row[bo_table]' bo_subject='$row[bo_subject]'>$row[bo_subject]</div>";
-								}
-							?>
-						</div>
-						<input class='hidden-value' type='hidden' name='forum_no_<?=$i?>' value='<?=ms::meta('forum_no_'.$i)?>' />
-					</div>
-				<? } ?>
-				</div>
-				<div style='clear: both'></div>
-			</div>
-		</div>
+
 
 		
 		<? if ( ms::meta('theme') ) { ?>

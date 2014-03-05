@@ -1,1 +1,0 @@
-﻿<?=ms::meta('comfooter_privacy')?>
