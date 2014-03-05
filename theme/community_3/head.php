@@ -54,7 +54,7 @@
 	</div>
 	<div class='header'>
 
-	<table width='100%' cellpadding=0 cellspacing=0><tr valign='top'>
+	<table cellpadding=0 cellspacing=0><tr valign='top'>
 		<td width=400>
 			<div id="comm3_logo">
 				<a href="<?php echo G5_URL ?>">

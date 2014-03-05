@@ -153,7 +153,13 @@
 	padding: 10px 20px;
 	border-radius: 3px;
 }
-
+/***Temporarily added***/
+.config-container input[type='submit'] {
+	cursor: pointer;
+	border-radius: 4px;
+}
+/***Not used anymore?***
+****commented due to css conflict on other submit buttons****
 input[type='submit'] {
 	border: 1px solid #blue;
 	background-color: #f9f9f9;
@@ -168,6 +174,7 @@ input[type='submit']:hover {
 	background-color: orange;
 	color: #ffffff;
 }
+*/
 
 .item {
 	display: inline-block;

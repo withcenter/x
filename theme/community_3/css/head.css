@@ -48,7 +48,7 @@
 /* bug fix: should be margined here intead of padding image for 7 px */
 	margin-top: 4px;
 	height:60px;
-	max-width:400px;
+	width:325px;
 	overflow:hidden;	
 }
 
@@ -77,18 +77,26 @@ form[name='comm3_search_form'] {
 	margin-top: 1em;
 	font-family: Gulim,GulimChe,Dotum;
 	font-size: 1em;
+	padding:0 10px;
+	/***HAS IE7 BUG***
 	padding: 10px;
 	border: 2px solid black;
+	*/
 }
 
 #comm3_search_text {
 	box-shadow: -1px 2px 3px #d3d3d3 inset;
-	width: 20em;
+	width: 20em;	
+	border: 2px solid black;
+	height:35px;
 }
 
 #comm3_search_submit {
 	background-color: black;
-	color:white;
+	color:white;	
+	border:0;
+	height:39px;
+	cursor: pointer;	
 }
 
 
