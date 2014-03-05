@@ -1,30 +1,18 @@
 <link rel="stylesheet" href="<?=x::theme_url()?>/css/forum_tab.css">
 <div class='forum-tab'>
 <?php
-	echo forum_tab('a', 'ms_test6_1');
-	echo forum_tab('b', 'ms_test6_2');
-	echo forum_tab('c', 'freetalk');
-	echo forum_tab('d', 'ms_test6_6');
+
+	echo forum_tab('a', ms::board_id() . '_1');
+	echo forum_tab('b', ms::board_id() . '_2');
+	echo forum_tab('c', ms::board_id() . '_3');
+	echo forum_tab('d', ms::board_id() . '_9');
 	
 function forum_tab( $cls, $id ) {
 	
 	
-	if ( g::forum_exist( $id ) ) {
-		$posts = g::posts( array( 'bo_table' => $id, 'limit'=>5 ) );
-	}
-	else {
-		$posts = array(
-			array('wr_subject' => 'Forum does not exists'),
-			array('wr_subject' => 'Forum does not exists'),
-			array('wr_subject' => 'Forum does not exists'),
-		);
-	}
-	
-	
+	if ( ! g::forum_exist( $id ) ) $id = 'default';
 	$ret .= "<div class='$cls'><div class='forum-tab-inner'>";
-	foreach ( $posts as $p ) {
-		$ret .= "<div class='subject'><a href='$p[href]'>$p[wr_subject]</a></div>";
-	}
+	$ret .= latest( 'x-rwd-basic', $id);
 	$ret .= "</div></div>";
 	return $ret;
 }

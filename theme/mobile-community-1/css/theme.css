@@ -1,9 +1,12 @@
-
 body {
 	margin:0 auto;
 	padding:0;
 	font-size: 9pt;
-	font-family: Gulim,GulimChe,Dotum;
+	font-family: Malgun Gothic,맑은고딕,Gulim,GulimChe,Dotum;
+	background-color: #e9e9e9;
+}
+a {
+	font-family: Malgun Gothic,맑은고딕,Gulim,GulimChe,Dotum;
 }
 img {
 	border: 0;
@@ -28,8 +31,9 @@ a {
 	background-color: #909090;
 }
 #footer {
+	margin: 2em 0 0;
+	padding: 2.4em;
 	background-color:#345184;
-	padding: 10px;
 	text-align: center;
 }
 
@@ -155,11 +159,15 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 
 #content .gallery {
 	margin-bottom: 1em;
-	border: 1px solid #cdcdcd;
-	border-radius: 2px;
 }
 #content .gallery .post {
-	margin: 0.4em;
+	margin: 0 0.2em;
+}
+#content .gallery .post[no='1'] {
+	margin-left: 0;
+}
+#content .gallery .post[no='4'] {
+	margin-right: 0;
 }
 
 /* latest */
@@ -191,7 +199,14 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 /* #data */
 #data {
 	width: 100%;
-	background-color: #f9f9f9;
+	background-color: #ededed;
+}
+
+/* below 640 px */
+@media all and ( max-width: 60em ) {
+	#content {
+		padding: 0.4em;
+	}
 }
 
 
@@ -222,8 +237,8 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 	}
 	#header .top-below-500-px { display:block; }
 }
-/* below 400 px */
-@media all and ( max-width: 25em ) {
+/* below 480 px */
+@media all and ( max-width: 30em ) {
 	
 	/* latest */
 	.latest-thumbnail > .left {

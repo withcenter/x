@@ -117,8 +117,8 @@ class gnuboard {
 	 *  
 	 *  @details 게시판 그룹 생성은 gnuboard5 의 쿼리 부분을 echo 해서 필요한 부분을 추가한 것이다.
 	 *  @code
-	 *  	if ( $error_code = ms::create( array('domain'=>$domain, 'title'=>$title) ) ) include module( 'create_fail' );
-	 *  	else include module( 'create_success' );
+			if ( ! g::group_exist('multisite') ) g::group_create(array('id'=>'multisite', 'subject'=>'multisite'));
+
 	 *  @endcode
 	 *  
 	 */
@@ -142,6 +142,10 @@ class gnuboard {
 	 *  @return boolean
 	 *  
 	 *  @details 게시판 그룹이 존재하면 참을 리턴한다.
+	 
+	 *	 @code
+			if ( ! g::group_exist('multisite') ) g::group_create(array('id'=>'multisite', 'subject'=>'multisite'));
+		  @endcode
 	 */
 	static function group_exist($id)
 	{
@@ -180,6 +184,10 @@ class gnuboard {
 		);
 		g::board_create($o);
 	 *  
+	 *  @endcode
+	 *  @code
+			if ( ! g::group_exist('multisite') ) g::group_create( array('id'=>'multisite', 'subject'=>'multisite') );
+			if ( ! g::forum_exist( 'default' ) ) g::board_create( array('id'=>'default', 'subject'=>'Default Forum', 'group_id'=>'multisite') );
 	 *  @endcode
 	 */
 	static function board_create( $o )
@@ -807,6 +815,11 @@ class gnuboard {
 				0,9
 				10,20
 	 *
+	 * @code
+			if ( g::forum_exist( $id ) ) {
+				$posts = g::posts( array( 'bo_table' => $id, 'limit'=>5 ) );
+			}
+		@code
 	 * @return array. the return value is the same as that of latest.lib.php
 	 */
 	static function posts( $option )

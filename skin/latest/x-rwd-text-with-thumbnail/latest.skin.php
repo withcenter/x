@@ -26,17 +26,16 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
     <?php
 		$trs = array();
 		for ($i=0; $i<count($list); $i++) {
+			
+			$imgsrc = get_list_thumbnail( $bo_table , $list[$i]['wr_id'], 70, 46 );
+			if( $imgsrc ) $img = $imgsrc['src'];
+			else continue;
+			
 			ob_start();
 	?>
 	<tr valign='top'>
 		
-            <?php			
-			$imgsrc = get_list_thumbnail( $bo_table , $list[$i]['wr_id'], 70, 46 );
-			
-			//if ( !$imgsrc ) $img = $latest_skin_url.'/img/no-image.png';
-			//else $img = $imgsrc['src'];
-			if( $imgsrc ) $img = $imgsrc['src'];
-			else $img = $latest_skin_url.'/img/no-image.png';
+            <?php		
 			
 			
 			echo "<td><div class='photo'><a href='".$list[$i]['href']."'><img src='$img'/></a></div></td>";

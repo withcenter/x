@@ -1,19 +1,27 @@
 .forum-tab {
-	border: 1px solid #cdcdcd;
-	border-radius: 2px;
-	margin-bottom: 1em;
+	
 }
 
 
 .forum-tab .a, .forum-tab .b, .forum-tab .c, .forum-tab .d {
 	float: left;
+	width: 25%;
 }
 
+
+
 .forum-tab-inner {
-	margin: 0.4em;
-	padding: 0.5em;
+	margin: 0 0.2em;
 	border: 1px solid #cdcdcd;
 }
+
+.forum-tab .a .forum-tab-inner {
+	margin-left: 0;
+}
+.forum-tab .d .forum-tab-inner {
+	margin-right: 0;
+}
+
 
 .forum-tab-inner .subject {
 	margin: 0.8em 0;

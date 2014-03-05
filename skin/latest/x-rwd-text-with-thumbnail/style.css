@@ -3,12 +3,10 @@
 }
 
 .x-rwd-text-with-thumbnail > .title {
-	font-weight:bold;	
-	font-family:Dotum;
+	font-weight:bold;
 	padding: 0.4em 0.7em;
 	height: 1.4em;
 	border-bottom:1px solid #bbbbbb;
-	background-color: #fcfcfc;
 	
 }
 
@@ -48,7 +46,6 @@
 
 .x-rwd-text-with-thumbnail a{
 	text-decoration:none;
-	font-family:Dotum;
 }
 
 .x-rwd-text-with-thumbnail .comment_count.no-comment{

@@ -46,7 +46,7 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
                         }
 ?>	
 	<li>
-		<div class='post'>
+		<div class='post' no="<?=$count_image?>">
 			<div class='photo'><a href="<?=$list[$i]['href']?>"><?=$img?></a></div>
 			<div class='text'>
 				<div class='title'><a href="<?=$list[$i]['href']?>"><?php echo cut_str($list[$i]['subject'], 20, "..") ?></a></div>
