@@ -24,8 +24,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	</div>
     <table width='100%' cellpadding=0 cellspacing=0>
     <?php
+		$trs = array();
 		for ($i=0; $i<count($list); $i++) {
-		
+			ob_start();
 	?>
 	<tr valign='top'>
 		
@@ -46,13 +47,17 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			
 				</td>";
 			
-			if( !$list[$i]['comment_cnt'] ) $comment_count = "<span class='comment_count no-comment'>0</span>";
-			else $comment_count = "<span class='comment_count'>".strip_tags($list[$i]['comment_cnt'])."</span>";
+			if( !$list[$i]['comment_cnt'] ) $comment_count = "<div class='comment_count no-comment'>0</div>";
+			else $comment_count = "<div class='comment_count'>".strip_tags($list[$i]['comment_cnt'])."</div>";
 			
-			echo "<td><div class='comment_and_time'>".$comment_count."<br><span class='time'>".$list[$i]['datetime2']."</span></div></td>";
+			echo "<td><div class='comment-time'>".$comment_count."<div class='time'>".$list[$i]['datetime2']."</div></div></td>";
              ?>	
 	</tr>	
-    <?php }  ?>
+    <?php
+			$trs[] = ob_get_clean();
+		}
+		echo implode( "<tr><td colspan='10'><div class='breaker'></div></td></tr>", $trs );
+		?>
     <?php if(count($list) == 0) { //게시물이 없을 때  ?>
 		<tr>
 			<td width=40><div class='timed_list_image'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=5'><img src='<?=$latest_skin_url?>/img/no-image.png'/></a></div></td>
@@ -86,6 +91,12 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			</td>	
 			<td><div class='comment_and_time'>10<br><span class='time'><?=date('H:i', time())?></span></div></td>
 		</tr>
-    <?php }  ?>
+    <?php
+			
+		}
+		
+		
+		
+	?>
     </table>    
 </div>

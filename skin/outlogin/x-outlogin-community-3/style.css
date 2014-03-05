@@ -1,9 +1,10 @@
 .login-box {
 	background: #cccccc;
 	color: #ffffff;
-	height: 100px;
-	padding: 7px;
+	height: 102px;
+	padding: 5px 7px;
 	overflow: hidden;
+	border: 1px solid #bbbbbb;
 }
 .login-box  input[type='text'], .login-box input[type='password'] {
 	width: 96px;
@@ -16,15 +17,24 @@
 }
 
 .login-box .register_autologin {
-	margin-top: 5px;
+	margin-top: 3px;
 	padding: 0 5px;
-	height:18px;
+	height:16px;
 }
+
+
+.login-box  .dot {
+	position: relative;
+	top: -2px;
+}
+
 .login-box .register_autologin .login-reg {
 	float: left;
+	color: #444444;
 }
 .login-box .register_autologin .auto_login {
 	float: right;
+	color: #444444;
 }
 .login-box #ol_password_lost {
 	margin-left: 6px;
@@ -33,9 +43,9 @@
 
 /* outlogin.skin.2.php */
 .logout-community3 {
-	padding: 10px;
+	padding: 5px 7px;
 	position: relative;
-	height: 94px;
+	height: 102px;
 }
 
 .logout-community3  #ol_after_info {
@@ -43,11 +53,13 @@
 	color: #ffffff;
 	display: inline-block;
 	padding: 0 10px;
-	height: 20px;
-	line-height: 20px;
-	margin-right: 2px;
+	height: 22px;
+	line-height: 23px;
 }
 .logout-community3 .admin-mode {
+	position: absolute;
+	bottom: 15px;
+	right: 3px;
 }
 
 .logout-community3  .admin-mode a{
@@ -55,7 +67,7 @@
 }
 
 .logout-community3  .user-info {
-	margin:2px 0;
+	margin: 7px 0 3px 0;
 }
 .logout-community3 .no_of_unreaded_message {
 	border-radius: 10px;

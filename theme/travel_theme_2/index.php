@@ -54,7 +54,7 @@
 				?>
 				</div>
 				<div class='travel_2_timezone'>
-					<div class='header'><img src='<?=x::url_theme()?>/img/earth.png'/><span class='title'>현재 시간</span></div>
+					<div class='header'><img src='<?=x::url_theme()?>/img/earth.png'/><span class='title'><b>현재 시간</b></span></div>
 					<div class='timezones'>
 						<?
 						$old_timezone = date_default_timezone_get();

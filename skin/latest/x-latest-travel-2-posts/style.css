@@ -11,8 +11,16 @@
 	overflow: hidden;
 	vertical-align: middle;
 	white-space:nowrap;
+	margin-top: -2px;
 }
  .travel-2-posts a {
+	text-decoration: none;
+}
+
+.travel-2-posts span.label  > a {
+	color: #444444;
+}
+.travel-2-posts span.label  > a:hover {
 	text-decoration: none;
 }
 
@@ -23,7 +31,7 @@
 }
 
  .travel-2-posts .title {
-	background: #f7f7f7;
+	background: #fcfcfc;
 	border-bottom: solid 1px #bbbbbb;
 	font-weight: bold;
 	font-size: 9pt;
@@ -40,7 +48,7 @@
 }
 
  .travel-2-posts .title img {
-	margin-right: 7px;
+	margin-right: 5px;
 	position: relative;
 	top: -1px;
 }
@@ -64,6 +72,8 @@
  
 .travel-2-posts .travel-2-posts-items .subject .dot {
 	margin-right: 7px;
+	position: relative;
+	top: -1px;
  }
  
  .travel-2-posts .travel-2-posts-items tr td ul {
@@ -74,6 +84,7 @@
 .travel-2-posts .travel-2-posts-items .posts-square  img{
 	position:relative;
 	top:-4px;
+	margin-right: 10px;
 }
 
  .travel-2-posts .travel-2-posts-items .no-of-comments {

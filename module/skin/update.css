@@ -1,0 +1,63 @@
+body {
+	background-color: #e3e3e3;
+	font-size: 9pt;
+}
+.layout {
+	margin: 1em;
+}
+.page-title {
+	font-size: 1.6em;
+	font-weight: bold;
+	color: darkblue;
+}
+
+.content {
+	margin: 1em 0;
+	padding: 1em;
+	border-radius: 4px;
+	background-color: white;
+}
+
+
+.caption {
+	margin: 0.6em 0;
+	display: inline-block;
+	width: 100px;
+	color: #494949;
+	font-weight: bold;
+}
+
+hr {
+	margin: 1em 2em;
+	border: 0;
+	border-bottom: 1px solid grey;
+}
+
+.submitted {
+	border: 1px solid darkred;
+	border-radius: 2px;
+	background-color: darkred;
+	color: white;
+	font-weight: bold;
+	padding: 0.6em;
+	margin: 0.2em;
+}
+.css {
+	margin: 0 0 1em 0;
+	width: 100%;
+	height: 120px;
+}
+
+input[name='bo_subject'] {
+	width: 313px;
+	margin: 0;
+}
+input[name='bo_table'] {
+	width: 180px;
+	margin: 0;
+}
+select[name='select_bo_table'] {
+	margin: 0;
+	padding: 1px;
+	width: 130px;
+}

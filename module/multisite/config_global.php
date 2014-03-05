@@ -34,7 +34,7 @@
 					</tr>
 					<tr valign='top'>
 						<td>
-							하단 문구<textarea name='footer_text' style='margin-left: 49px; height: 50px; width: 233px;'><?=stripslashes(ms::meta('footer_text'))?></textarea>
+							하단 문구<textarea name='footer_text' ><?=stripslashes(ms::meta('footer_text'))?></textarea>
 						</td>
 					</tr>
 					<tr valign='top'>
@@ -70,6 +70,7 @@
 						<span class='select-button'><span class='inner'>
 							<img src='<?=x::url()?>/module/multisite/img/select_arrow.gif' />
 						</span></span>
+						<div style='clear: left'></div>
 						<div class='drop-down-menu'>
 							<div class='row' bo_table='' bo_subject='게시판 선택'>게시판 선택</div>
 							<?php
@@ -101,6 +102,7 @@
 						<span class='select-button'><span class='inner'>
 							<img src='<?=x::url()?>/module/multisite/img/select_arrow.gif' />
 						</span></span>
+						<div style='clear: left'></div>
 						<div class='drop-down-menu'>
 							<div class='row' bo_table='' bo_subject='게시판 선택'>게시판 선택</div>
 							<?php

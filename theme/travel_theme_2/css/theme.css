@@ -172,12 +172,12 @@
 .floating-bar .float-image-wrapper{
 	border:1px solid #bbbbbb;
 	background-color:#e6e6e6;
-	padding:9px;
+	padding:10px 9px;
 }
 
 .floating-bar .float-image-wrapper .float-image{
 	width:70px;
-	height:70px;
+	height:66px;
 	overflow:hidden;
 	background-color:#bbbbbb;
 	margin-bottom:10px;

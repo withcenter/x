@@ -1,6 +1,5 @@
  .community3-posts {
 	border: solid 1px #bbbbbb;
-	white-space: nowrap;
 	margin-bottom: 10px;
 	height: 158px;
 }
@@ -8,28 +7,30 @@
  .community3-posts a {
 	text-decoration: none;
 }
-
- .community3-posts .title-left .label{
-	display:inline-block;
-	width:120px;
-	overflow:hidden;
-}
-
+ 
  .community3-posts .content-community-3 {
 	display: inline-block;
-	width: 130px;
+	width: 120px;
 	overflow: hidden;
+	height: 18px;
+	line-height: 18px;
+	position: relative;
+	left: -4px;
 }
 
  .community3-posts .title {
-	padding: 0 5px;
-	height: 28px;
-	line-height: 24px;
+	padding: 0 5px 5px 5px;
+	height: 23px;
+	line-height: 23px;
 	background: #f7f7f7;
 	border-bottom: solid 1px #bbbbbb;
-	font-weight: bold;
-	font-size: 12px;
+	font-weight: bold;	
 }
+
+.community3-posts .title a{
+	color:444444;
+}
+
  .community3-posts .title .posts-more a {
 	color: #808080;
 }
@@ -37,6 +38,8 @@
  .community3-posts .title img {
 	margin: 0 2px 0 0;
 	position: relative;
+	top:-2px;
+	margin-right:5px;
 }
 
  .community3-posts .community3-posts-items {
@@ -44,18 +47,22 @@
 }
 
  .community3-posts .community3-posts-items .posts-square {	
-	position:relative;	
+	position:relative;
+	top:-2px;
+	margin-right:4px;
 }
 
  .community3-posts .community3-posts-items .posts-square img{
 	position:absolute;
 	left:-3px;
-	top:-5px;
+	top: -3px;
 }
 
  .community3-posts .community3-posts-items .no-of-comments  a{
 	color: #ff0000;
 	font-size: 11px;
+	display:block;
+	width:40px;
 }
 .community3-posts .posts-more {
 	font-weight: normal;

@@ -72,7 +72,14 @@
 	background: #fafafa;
 	border-bottom: 1px solid #bbbbbb;
 	padding: 7px 9px;
-	color:#333333;
+}
+
+.layout .left .exchange-rate-wrapper .title a {
+	color:#444444;
+}
+
+.layout .left .exchange-rate-wrapper .title a:hover {
+	text-decoration: none;
 }
 
 .layout .left .exchange-rate-wrapper .title img {	
@@ -96,8 +103,8 @@
 
 .layout .left .exchange-rate .header-title  td {
 	color: #1e323f;
-	font-family: '맑은 고딕', AppleGothic;
-	font-weight: bold;
+	font-size: 9pt;
+	padding-top: 2px;
 }
 
 .layout .left .exchange-rate  tr td.exchange-date > span {
@@ -105,12 +112,8 @@
 }
 
 .layout .left .exchange-rate  tr td .bottom-title {
-	color: #ffffff;
-	background-color: #0e5565;
 	display: inline-block;
-	height: 17px;
-	line-height: 15px;
 	padding: 0 7px;
-	border-radius: 2px;
-	font-family: '맑은 고딕', AppleGothic;
+	margin-right: 4px;
+	color: #1d3543;
 }

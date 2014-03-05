@@ -12,17 +12,18 @@
 
 /**FOOTER */
 .layout .footer-wrapper {
-	margin-top: 50px;
+	margin-top: 10px;
 	border-top: 1px solid #d1d1d1;
 	background: #fafafa;
 	font-family: '맑은 고딕', AppleGothic;
 	color: #444444;
+	padding: 20px 0;
 }
 
 .layout .footer {
 	width: 970px;
 	margin: auto;
-	padding: 20px 0;
+	position: relative;
 }
 
 .layout .footer .footer-logo {
@@ -41,7 +42,10 @@
 	float: left;
 	vertical-align: top;
 }
-
+.layout .footer  .footer-info {
+	position: relative;
+	top: -2px;
+}
 .layout .footer .footer-tagline {
 	font-size: 16px;
 	padding-bottom: 5px;

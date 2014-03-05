@@ -16,11 +16,19 @@
 .travel_images_with_captions .title .travel-subject {
 	float: left;
 }
+.travel_images_with_captions .title a {
+	color: #444444;
+	margin-left: 5px;
+}
 
-.ttravel_image_with_captions .title a {
+.travel_images_with_captions .title a:hover {
+	text-decoration: none;
+}
+
+.ttravel_image_with_captions .title .more_button {
 	float: right;
 }
-.travel_images_with_captions .title a{
+.travel_images_with_captions .title .more_button{
 	font-weight:normal;
 	color:#808080;
 	font-size: 9pt;
@@ -32,7 +40,7 @@
 .travel_images_with_captions  .title img{
 	position:absolute;
 	top:10px;
-	left:7px;
+	left: 9px;
 }
 
 .travel_images_with_captions_container {

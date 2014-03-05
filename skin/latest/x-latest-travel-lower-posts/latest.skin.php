@@ -10,10 +10,10 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		
 		<span class='board_subject'>
 		<?if( $options ) echo "<img class='icon' src='".$options."'/>";?>
-		<?php echo cut_str( $bo_subject, 20, "..." );?>
+		<a href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$bo_table?>'><?php echo cut_str( $bo_subject, 20, "..." );?></a>
 		
 		</span>
-		<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=<?php echo $bo_table ?>">자세히</a>
+		<a class='more_button' href="<?php echo G5_BBS_URL ?>/board.php?bo_table=<?php echo $bo_table ?>">자세히</a>
 	</div>
 	<div class='travel_lower_items'>
     <?php for ($i=0; $i<count($list); $i++) { 
