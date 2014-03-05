@@ -158,9 +158,8 @@
 	cursor: pointer;
 	border-radius: 4px;
 }
-/***Not used anymore?***
-****commented due to css conflict on other submit buttons****
-input[type='submit'] {
+
+.forum_setting input[type='submit'] {
 	border: 1px solid #blue;
 	background-color: #f9f9f9;
 	color: blue;
@@ -169,12 +168,12 @@ input[type='submit'] {
 	padding: 0 15px;
 	cursor: pointer;
 }
-input[type='submit']:hover {
+.forum_setting input[type='submit']:hover {
 	border: 1px solid orange;
 	background-color: orange;
 	color: #ffffff;
 }
-*/
+
 
 .item {
 	display: inline-block;
