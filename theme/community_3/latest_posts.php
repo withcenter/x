@@ -5,7 +5,6 @@ $qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";
 $current_date = date('Y-m-d').' 23:59:59';
 $previous_date = date('Y-m-d', strtotime("-7 day", strtotime($current_date))).' 00:00:00';
 $latest_rows = db::rows( "SELECT bo_table, wr_id FROM $g5[board_new_table] WHERE $qb AND bn_datetime BETWEEN '$previous_date' AND '$current_date' AND wr_id=wr_parent ORDER BY bn_datetime DESC LIMIT 3" );	
-
 if( $latest_rows ) {
 	$i = 0;
 	foreach ( $latest_rows as $latest_row ) {
@@ -13,7 +12,7 @@ if( $latest_rows ) {
 		$latest_list[$i]['bo_table'] = $latest_row['bo_table'];
 		$i++;
 	}
-?>
+ }?>
 <div class="com3-latest-posts" >
 		<div class='title'>
 			<table width='100%'>
@@ -29,6 +28,7 @@ if( $latest_rows ) {
 	<div class='com3-latest-posts-items'>
 		<table cellpadding=0 cellspacing=0>
 		<?php
+			if ( $latest_list ) {
 			$i = 1;
 			$ctr = count($latest_list);
 			foreach ( $latest_list as $latest_li ) {
@@ -55,8 +55,11 @@ if( $latest_rows ) {
 						<span class='num_comments'><?=$latest_comment_count?></span>
 					</td>
 				</tr>
-		<? $i++; }?>
+		<? $i++; 
+			}
+		}
+		else echo "<tr valign='top'><td>최신글이 없습니다.</td></tr>";
+	?>
 		</table>
 	</div>
 </div> <!--posts--recent-->
-<? } ?>
