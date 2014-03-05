@@ -31,7 +31,7 @@
 				<div class='theme-thumb'>
 					<img src='theme/<?=ms::meta('theme')?>/preview.jpg' >
 					<p><b>선택 되었습니다.</b></p>
-					<table cellpadding='10px'><tr><td><?=$active_theme?></td></table>
+					<span class='theme-name'><?=$active_theme?></span>
 				</div>
 			<?}?>
 			</td>
@@ -56,7 +56,7 @@
 				if( preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower(ms::meta('theme'))) != preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower($dir)) ) { ?>
 					<div class='theme-thumb inactive' theme_value='<?=$dir?>'>
 					<img src='<?=$url?>' >
-					<table cellpadding='10px'><tr><td><?=$name?></td></table>
+					<span class='theme-name'><?=$name?></span>
 					</div>
 				<?if($theme_ctr==2) { 
 					echo "</td></tr><tr><td>"; $theme_ctr = 1;

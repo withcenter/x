@@ -246,17 +246,26 @@ table > .header td:first-child {
 }
 
 .config-theme .theme-thumb {
+	padding: 10px;
+	background: #e6e6e6;
 	position: relative;
-
+	cursor: pointer;
 	overflow: hidden;
 }
 
-.config-theme .theme-thumb table {
+.config-theme .theme-thumb span.theme-name {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	background: #333333;
-	width: 100%;
+	background: #f9f9f9;
+	width: 318px;
+	padding: 10px;
+	font-family: '맑은 고딕', AppleGothic;
+	color: #585858;
+	font-weight: bold;
+	font-size: 9pt;
+	border: solid 1px #e6e6e6;
+
 }
 
 .config-theme .theme-thumb p {
