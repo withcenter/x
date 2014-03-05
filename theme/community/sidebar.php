@@ -6,8 +6,7 @@
 	</div>
 <?} else echo "<a href='http://www.philgo.com' target='_blank'><img src='".x::url_theme()."/img/philgo_banner.gif' style='border:0;'/></a>";?>
 
-
-<?=latest( 'x-latest-community-comments' , ms::board_id(etc::domain()).'_1' , 5, 25)?>
+<?=latest( 'x-latest-community-comments' , ms::board_id(etc::domain()).'_1' , 5, 15)?>
 
 
 <?
@@ -41,9 +40,9 @@ if( $recent_rows ) {
 		<ul>
 		<?php
 			foreach ( $recent_list as $recent_li ) {
-				$recent_subject = $recent_li['wr_subject'];
+				$recent_subject = cut_str($recent_li['wr_subject'],15,'...');
 				$recent_subject .= ":";
-				$recent_content = cut_str(strip_tags($recent_li['wr_content']),30,'...');
+				$recent_content = cut_str(strip_tags($recent_li['wr_content']),50,'...');
 				$recent_url = g::url().'/bbs/board.php?bo_table='.$recent_li['bo_table'].'&wr_id='.$recent_li['wr_id'];
 				$recent_comment_count = $recent_li['wr_comment'];
 				if ( $recent_comment_count == 0 ) $no_comment = 'no-comment';
@@ -51,7 +50,7 @@ if( $recent_rows ) {
 		?>	
 			<li>				
 				<?
-					echo "<div class='post-content'><a href='$recent_url'>$recent_subject $recent_content <span class='no-of-recent-comments $no_comment'>($recent_comment_count)</span></a></div>";
+					echo "<img src='".x::url_theme()."/img/bullet.png'/><div class='post-content'><a href='$recent_url'>$recent_subject $recent_content <span class='no-of-recent-comments $no_comment'>[$recent_comment_count]</span></a></div>";
 				?>
 			</li>		
 		<?}?>
@@ -93,12 +92,13 @@ if( $recent_comments ) {
 		$i = 1;
 		$no_of_comments = count($comments_list);
 		foreach ( $comments_list as $comments_li ) {
-			$comments_content = cut_str(strip_tags($comments_li['wr_content']),30,'...');
+			$comments_content = cut_str(strip_tags($comments_li['wr_content']),50,'...');
 			$comments_url = g::url().'/bbs/board.php?bo_table='.$comments_li['bo_table'].'&wr_id='.$comments_li['wr_id'];
 			$comments_author = $comments_li['mb_id'];
 			$timeago = getTimeDuration(strtotime($comments_li['wr_datetime']));	
 	?>	
-		<div  class='recent-items <?if($i==$no_of_comments) echo "last-item" ?>' >
+		<div class='comment-image'><img src='<?=x::url_theme()?>/img/comments-pic.png'/></div>
+		<div  class='comment-items <?if($i==$no_of_comments) echo "last-item" ?>' >
 			<a href='<?=$comments_url?>'>	
 				<span class='post-content'>
 						<?=$comments_author?>: <?=$comments_content?>
@@ -106,6 +106,7 @@ if( $recent_comments ) {
 				</span>
 			</a>
 		</div>
+		<div style='clear:both'></div>
 		<?
 			$i++;
 		}?>
@@ -137,7 +138,7 @@ if( $post_comments ) {
 					</tr>
 				</table>
 			</div>
-		<div class='recent-comments-items'>
+		<div class='recent-comments-items-small'>
 			<ul>
 		<?php
 			$i = 1;
@@ -147,6 +148,7 @@ if( $post_comments ) {
 				$comment_url = g::url().'/bbs/board.php?bo_table='.$latest_bo_table.'&wr_id='.$post_comment['wr_id'];
 				$timeago = getTimeDuration(strtotime($post_comment['wr_datetime'])); ?>	
 				<li <?if($i==$no_of_comments) echo "class='last-comment'" ?>>
+					<img src='<?=x::url_theme()?>/img/bullet.png'/>
 					<a href='<?=$comment_url?>'>	
 						<?=$comment_content?>
 					</a>

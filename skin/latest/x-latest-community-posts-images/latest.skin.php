@@ -37,8 +37,8 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 					else $has_image = null;
 				}
 		
-		$subject = conv_subject($li['wr_subject'], 18, "...");
-		$content = cut_str( strip_tags($li['wr_content']) ,30,'...');
+		$subject = $li['subject'];
+		$content = cut_str( strip_tags($li['wr_content']) ,80,'...');
 		$url = $li['href'];
 		$no_comment = '';
 		if ( !$comment_count = $li['comment_cnt'] ) {
@@ -46,7 +46,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			$no_comment = 'no-comment';
 		}
 	?>	
-		<table width='100%'>
+		<table width='100%' cellspacing=0 cellpadding=0>
 			<tr valign='top'>
 				<td width='60px'>
 					<div class='posts-image'>					
@@ -64,7 +64,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 					<div class='posts-info'>
 						<a href='<?=$url?>'>
 							<span class='subject'><?=$subject?>: </span>
-							<span class='content'><?=$content?><span class='no-of-comments <?=$no_comment?>'><?='('.$comment_count.')'?></span></span>
+							<span class='content'><?=$content?><span class='no-of-comments <?=$no_comment?>'><?='['.strip_tags($comment_count).']'?></span></span>
 						</a>
 					</div>
 				</td>
