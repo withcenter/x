@@ -6,36 +6,45 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 <link rel="stylesheet" href="<?php echo $outlogin_skin_url ?>/style.css">
 
 <div class='login-box logout-community3'>
-	<table cellpadding=0 cellspacing=0 width=190>
-		<tr>
-			<td>
-				<div class='my_profile'>내 프로필 </div>
-			</td>
-			<td align='right'>
-				<a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=register_form.php" id="ol_after_info">정보 수정</a>
-			</td>
-		</tr>
-	</table>
+	<div style='border-bottom: solid 1px #0e5565; padding-bottom: 4px;'>
+	<div class='user-info'>
+		<?php 
+		if ($is_admin == 'super' || $is_auth) {  ?>
+			<div class='user-admin'>
+				<span class='edit_profile'><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=register_form.php">내 프로필 정보 수정</a></span>
+				<span class='admin_link'><a href="<?=x::url_admin()?>">X ADMIN</a><br><a href="<?php echo G5_ADMIN_URL ?>">ADMIN</a></span>
 
-		<div class='user-info'><b><?php echo $nick ?></b>님 로그인&nbsp;&nbsp;&nbsp;	
-			<a href="<?php echo G5_BBS_URL ?>/memo.php" target="_blank" id="ol_after_memo" class="win_memo">쪽지<span class='no_of_unreaded_message'><?php echo $memo_not_read ?></span>
-			</a>
-		</div>
+				<div style='clear: both'></div>
+			</div>
+		<? } ?>
+		<div class='user-meta'>
+			<span class='user-icon-points'>
+				<span class='user-message'>
+					<img src='<?=$outlogin_skin_url?>/msg-icon.png'/>
+					<a href="<?php echo G5_BBS_URL ?>/memo.php" target="_blank" class='user_memo'>쪽지 <span class='memo-not-read'>[<?=$memo_not_read?>] </span></a>
 			
-		<div class='point-scrap'>
-			<a href="<?php echo G5_BBS_URL ?>/point.php" target="_blank" id="ol_after_pt" class="win_point">
-			   포인트 <?php echo $point ?>
-			</a>&nbsp;&nbsp;&nbsp;
-			<a href="<?php echo G5_BBS_URL ?>/scrap.php" target="_blank" id="ol_after_scrap" class="win_scrap">스크랩</a>
+				</span>
+				<br>
+				<span class='user-points'>
+					<img src='<?=$outlogin_skin_url?>/star-icon.png'/>
+					<a href="<?php echo G5_BBS_URL ?>/point.php" target="_blank" class='user-win'>포인트</a> <?=$point?>
+				</span>
+			</span>
+			<span class='user-scrap'>
+				<a href="<?php echo G5_BBS_URL ?>/scrap.php" target="_blank" class='user-scrap'>스크랩 님<br>로그인</a>
+			</span>
 		</div>
-		
-		
-		<?php if ($is_admin == 'super' || $is_auth) {  ?>
-		<div class='admin-mode'><a href="<?php echo G5_ADMIN_URL ?>">ADMIN</a> <a href="<?=x::url_admin()?>">X ADMIN</a></div>
-		
-		<?php }  ?>
-		
-		<a href="<?php echo G5_BBS_URL ?>/logout.php" id="ol_after_logout" class='logout-button'>로그아웃</a>
+		</div>
+
+	<div class='log_out'>
+		<a href="<?php echo G5_BBS_URL ?>/logout.php"><img src='<?=$outlogin_skin_url?>/signout_button.png'/></a>
+	</div>
+
+	<div style='clear: both'></div>
+		</div>
+	<div class='user-logged-name'>
+		<?=$nick?> IS LOGGED IN
+	</div>
 </div> 
 
 <script>
