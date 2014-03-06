@@ -115,9 +115,9 @@
 
 .main-menu span.menu-divider {
  display: block;
- margin: 13px 10px;
+ margin: 9px 10px 0 10px;
  width: 0;
- height: 1em;
+ height: 20px;
  border-right: 1px solid #86aab2;
 }
 
