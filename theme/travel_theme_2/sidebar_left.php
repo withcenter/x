@@ -1,9 +1,4 @@
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/sidebar_left.css' />
-<?php
-for ( $i = 1 ; $i <= 10; $i++ ) {
-	${'forum_'.$i} = ms::meta('forum_no_'.$i);
-}
-?>
 
 <div class='travel2-company-banner'>
 	<a href='http://www.philgo.com' target='_blank'><img src='<?=x::url_theme().'/img/no_company_banner.png'?>' style='border:0;' /></a>
@@ -11,7 +6,7 @@ for ( $i = 1 ; $i <= 10; $i++ ) {
 
 <div class='posts-left-1'>
 	<? $option = array('no' => 14 ); ?>
-	<?=latest('x-latest-travel-2-posts', $forum_1 , 14 , 20, 1, $option)?>
+	<?=latest('x-latest-travel-2-posts', ms::board_id(etc::domain()).'_1' , 14 , 20, 1, $option)?>
 </div>
 
 <div class='banner-left'>
