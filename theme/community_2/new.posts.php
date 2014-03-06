@@ -20,6 +20,7 @@ foreach ( $q_tmp as $key => $value ) {
 		 </div>
 		 <?php
 		 $dot_url = x::url_theme().'/img/dot.gif';
+		 
 		 if ( $posts ) {
 			  foreach ( $posts as $board_id => $post ) {
 				foreach ( $post as $p ) {
