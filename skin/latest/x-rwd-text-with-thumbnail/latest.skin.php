@@ -4,6 +4,8 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	$url_forum = g::url_forum( $bo_table );
 	$url_icon = g::url_skin('img/icon.png');
 	global $done_x_rwd_text_with_thumbnail;
+	
+	
 ?>
 <? if ( ! $done_x_rwd_text_with_thumbnail ) { $done_x_rwd_text_with_thumbnail = 1; ?>
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
@@ -12,11 +14,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 <!-- <?php echo $bo_subject; ?> 최신글 시작 { -->
 <div class="skin-update x-rwd-text-with-thumbnail">
     <div class="title">
-		<?
-			if( $options ) {
-				echo "<a href='$url_forum'><img class='icon' src='$url_icon'/></a>";
-			}
-		?>
+		<a href='<?=$url_forum?>'><img class='icon' src='<?=$url_icon?>'></a>
 		<a href='<?=g::url_forum($bo_table)?>'><?php echo $bo_subject; ?></a>
 		
 		<span class='more-button'><a href='<?=g::url_forum($bo_table)?>'>자세히</a></span>
@@ -25,12 +23,14 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
     <table width='100%' cellpadding=0 cellspacing=0>
     <?php
 		$trs = array();
+		$count_post = 0;
 		for ($i=0; $i<count($list); $i++) {
-			
+			if ( $count_post >= $options['no'] ) break;
 			$imgsrc = get_list_thumbnail( $bo_table , $list[$i]['wr_id'], 70, 46 );
 			if( $imgsrc ) $img = $imgsrc['src'];
 			else continue;
 			
+			$count_post ++;
 			ob_start();
 	?>
 	<tr valign='top'>

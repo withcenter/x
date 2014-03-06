@@ -5,7 +5,8 @@
 		x::config("bo_subject.$code", $bo_subject);
 		x::config("no.$code", $no);
 		x::config("skin.$code", $skin);
-		x::config("css.$code", $_POST['css'] );
+		x::config("css.$code", $css );
+		x::config("option.$code", $option);
 		if ( $submit_value == 'Submit & Close' ) {
 			echo "<script>parent.location.reload();</script>";
 			exit;
@@ -97,7 +98,16 @@ $(function(){
 <br>
 
 
-<span class='caption'><?=ln("Skin", "스킨")?></span> : <input type='text' name='skin' value="<?=x::config("skin.$code")?>" placeholder=" Input Skin Folder Name"><br>
+<span class='caption'><?=ln("Option", "옵션")?></span> : <input type='text' name='option' value="<?=htmlspecialchars(x::config("option.$code"))?>" placeholder=" Input Option as in JSON . ex) {'a':'b', 'c':4}">
+ JSON ( wrap-in " )<br>
+
+
+<span class='caption'><?=ln("Skin", "스킨")?></span> : <input type='text' name='skin' value="<?=x::config("skin.$code")?>" placeholder=" Input Skin Folder Name">
+
+<span class='skin-open'><?=ln("Open Skin List", "스킨 목록 열기")?></span>
+<span class='skin-close'><?=ln("Close Skin List", "스킨 목록 닫기")?></span>
+
+
 <div class='skin-list'>
 <?php
 	$dirs = file::getDirs( x::dir() . '/skin/latest' );
@@ -116,8 +126,20 @@ $(function(){
 </div>
 <script>
 $(function(){
+	$(".skin-close").click(function(){
+		$('.skin-list').slideUp('fast');
+		$(".skin-close").hide();
+		$(".skin-open").show();
+	});
+	
+	$(".skin-open").click(function(){
+		$("[name='skin']").click();
+	});
+	
 	$("[name='skin']").click(function(){
 		$('.skin-list').slideDown('fast');
+		$(".skin-open").hide();
+		$(".skin-close").show();
 	});
 	$('.skin').click(function(){
 		var text = $(this).find('.folder').text();
@@ -126,6 +148,8 @@ $(function(){
 	});
 });
 </script>
+<br>
+
 
 <hr>
 <span class='caption'><?=ln('STYLE', '스타일')?> ( CSS )</span><br>

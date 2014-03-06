@@ -3,7 +3,7 @@
  * https://docs.google.com/a/withcenter.com/document/d/1Q3cunvTGTmGTathp_Jx4LTVn8tdsNzqsZmmpE8kLsvg/edit#heading=h.1zkefc3j0po6
  */
 	
-	$skin_folder = null;				// this is used in all the skin(widget)
+	$global_skin_dir = null;				// this is used in all the skin(widget)
 	$outlogin_skin_path=null;
 	$outlogin_skin_url=null;
 	$latest_skin_path = null;
@@ -122,44 +122,30 @@ function hook_blog_push( $hook )
 x::hook_register( 'outlogin', 'hook_outlogin_path' );
 function hook_outlogin_path()
 {
-	global $skin_folder, $outlogin_skin_path, $outlogin_skin_url;
+	global $global_skin_dir, $outlogin_skin_path, $outlogin_skin_url;
 	
 	if ( G5_IS_MOBILE ) $mobile_path = "/mobile";
 	
-	$path = x::dir() . "/skin$mobile_path/outlogin/" . $skin_folder;
+	$path = x::dir() . "/skin$mobile_path/outlogin/" . $global_skin_dir;
 	if ( file_exists( $path ) ) {
 		$outlogin_skin_path = $path;
-		$outlogin_skin_url = x::url() . "/skin$mobile_path/outlogin/" . $skin_folder;
+		$outlogin_skin_url = x::url() . "/skin$mobile_path/outlogin/" . $global_skin_dir;
 	}
 	
-	//dlog("skin_folder: $skin_folder");
+	//dlog("global_skin_dir: $global_skin_dir");
 	//dlog("outlogin_skin_path: $outlogin_skin_path");
 	//dlog("outlogin_skin_url: $outlogin_skin_url");
 	
 	
 }
-
-x::hook_register( 'latest', 'hook_latest_path' );
+/*
+x::hook_register( 'latest_after_skin_info', 'hook_latest_path' );
 function hook_latest_path()
 {
-	dlog("hook_latest_path() begin");
-	global $skin_folder, $latest_skin_path, $latest_skin_url;
-	
-	
-	
-	$path = x::dir() . "/skin/latest/" . $skin_folder;
-	if ( file_exists( $path ) ) {
-		$latest_skin_path = $path;
-		$latest_skin_url = x::url() . "/skin/latest/" . $skin_folder;
-	}
-	
-	//dlog("skin_folder: $skin_folder");
-	//dlog("latest_skin_path: $latest_skin_path");
-	//dlog("latest_skin_url: $latest_skin_url");
 }
+*/
 
-
-x::hook_register( 'latest', 'hook_latest_check' );
+x::hook_register( 'latest_after_skin_info', 'hook_latest_check' );
 function hook_latest_check()
 {
 	global $error_hook_latest, $global_bo_table;
@@ -252,8 +238,8 @@ function hook_latest_before_return()
 	dlog("hook_latest_before_return begin:");
 	if ( ms::admin() ) {
 		dlog("ms::admin() true");
-		global $content, $skin_folder, $global_bo_table;
-		$code = x::skin_code( $skin_folder, $global_bo_table );
+		global $content, $global_skin_dir, $global_bo_table;
+		$code = x::skin_code( $global_skin_dir, $global_bo_table );
 		$content = "<div class='skin-update'><div class='skin-update-button' code='$code'>admin</div>$content</div>";
 	}
 }
