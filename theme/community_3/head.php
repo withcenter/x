@@ -1,12 +1,3 @@
-<? 
-	if ( ms::meta('forum_no_6') ) {
-		$menu_row1 = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('forum_no_6')."'");
-	}
-	if ( ms::meta('forum_no_7') ) {
-		$menu_row2 = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('forum_no_7')."'");
-	}
-	
-?>
 
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/theme.css' />
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/head.css' />
@@ -30,17 +21,42 @@
 			?>
 			<div class='left'>
 				<a href='<?=g::url()?>'>홈</a><?=$do_log?><?=$profile?>
-				<? if ( $menu_row1['bo_subject'] ) {?>
-					
-					<a page = '<?=ms::meta('forum_no_6')?>' href='<?=G5_BBS_URL?>/board.php?bo_table=<?=ms::meta('forum_no_6')?>'><?=cut_str($menu_row1['bo_subject'],15,'...')?></a>
-				<? }?>
-				<? if ( $menu_row2['bo_subject'] ) {?>
-					
-					<a page = '<?=ms::meta('forum_no_7')?>' href='<?=G5_BBS_URL?>/board.php?bo_table=<?=ms::meta('forum_no_7')?>'><?=cut_str($menu_row2['bo_subject'],15,'...')?></a>
-				<? }?>
+				
+				<? 
+					for ( $i=1; $i <=3; $i++ ) {
+						$menu_row = 'menu_row'.$i;
+						if ( ms::meta('forum_no_'.$i) ) {
+							$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('forum_no_'.$i)."'");
+							
+						
+						if ( $row['bo_subject'] ) {?>
+						
+						<a page = '<?=ms::meta('forum_no_'.$i)?>' href='<?=G5_BBS_URL?>/board.php?bo_table=<?=ms::meta('forum_no_'.$i)?>'><?=cut_str($row['bo_subject'],15,'...')?></a>
+						
+					<?	}
+					} 
+				}
+				?>
+				
 			</div>
 			
 			<div class='right'>
+				<? 
+					for ( $i=6; $i <=9; $i++ ) {
+						$menu_row = 'menu_row'.$i;
+						if ( ms::meta('forum_no_'.$i) ) {
+							$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('forum_no_'.$i)."'");
+							
+						
+						if ( $row['bo_subject'] ) {?>
+						
+						<a page = '<?=ms::meta('forum_no_'.$i)?>' href='<?=G5_BBS_URL?>/board.php?bo_table=<?=ms::meta('forum_no_'.$i)?>'><?=cut_str($row['bo_subject'],15,'...')?></a>
+						
+					<?	}
+					} 
+				}
+				?>
+			
 				<? if ( !$com3_contact_number = ms::meta('com3contact_num') ) $com3_contact_number = '+82 070 7529 1749'?>
 				<a href='javascript:void(0)' class='contact-num'>전화번호: <?=$com3_contact_number?></a>
 				

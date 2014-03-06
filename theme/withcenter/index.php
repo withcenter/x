@@ -11,18 +11,18 @@
 		</table>
 		<table cellpadding=0 cellspacing=0 width='100%'>
 			<tr valign='top'>
-				<td width='33%' class='latest_1'><?=latest('x-latest-withcenter','withcenter1', 6, 60, 1, $option=array('no'=>6, 'icon'=>x::url_theme().'/img/icon1.gif'))?></td>
-				<td width='34%' class='latest_2'><?=latest('x-latest-withcenter','withcenter2', 6, 60, 1, $option=array('no'=>6, 'icon'=>x::url_theme().'/img/icon2.gif'))?></td>
-				<td width='33%' class='latest_3'><?=latest('x-latest-withcenter','withcenter3', 6, 60, 1, $option=array('no'=>6, 'icon'=>x::url_theme().'/img/icon3.gif'))?></td>
+				<td width='33%' class='latest_1'><?=latest('x-latest-withcenter','withcenter1', 6, 60, 1, $option=array('icon'=>x::url_theme().'/img/icon1.gif'))?></td>
+				<td width='34%' class='latest_2'><?=latest('x-latest-withcenter','withcenter2', 6, 60, 1, $option=array('icon'=>x::url_theme().'/img/icon2.gif'))?></td>
+				<td width='33%' class='latest_3'><?=latest('x-latest-withcenter','withcenter3', 6, 60, 1, $option=array('icon'=>x::url_theme().'/img/icon3.gif'))?></td>
 			</tr>
 		</table>
 		<div class='bottom-banner'><img src='<?=x::url()?>/theme/withcenter/img/bottom_banner.png' /></div>
 		
 		<table cellpadding=0 cellspacing=0 width='100%'>
 			<tr valign='top'>
-				<td width='33%' class='latest_1'><?=latest('x-latest-withcenter','withcenter4', 6, 60, 1, x::url_theme().'/img/icon1.gif')?></td>
-				<td width='34%' class='latest_2'><?=latest('x-latest-withcenter','withcenter_solution', 6, 60, 1, x::url_theme().'/img/icon3.gif')?></td>
-				<td width='33%' class='latest_3'><?=latest('x-latest-withcenter','withcenter_qna', 6, 60, 1, x::url_theme().'/img/icon3.gif')?></td>
+				<td width='33%' class='latest_1'><?=latest('x-latest-withcenter','withcenter4', 6, 60, 1, $option=array('icon'=>x::url_theme().'/img/icon1.gif')?></td>
+				<td width='34%' class='latest_2'><?=latest('x-latest-withcenter','withcenter_solution', 6, 60, 1, $option=array('icon'=>x::url_theme().'/img/icon3.gif')?></td>
+				<td width='33%' class='latest_3'><?=latest('x-latest-withcenter','withcenter_qna', 6, 60, 1, $option=array('icon'=>x::url_theme().'/img/icon3.gif')?></td>
 			</tr>
 		</table>
 		
