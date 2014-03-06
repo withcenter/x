@@ -28,7 +28,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			<div class = 'latest-items'>				
 				<div class='item-subject'>
 					<img src='<?=$latest_skin_url?>/img/square-icon.png'>
-					<a href='$url' class='content-community-3'><?=$content?></a>
+					<a href='<?=$url?>' class='content-community-3'><?=$content?></a>
 				</div>				
 				<div class='no-of-comments <?=$no_comment?>'>[<?=$comment_count?>]</div>				
 				<div style='clear:both'></div>
