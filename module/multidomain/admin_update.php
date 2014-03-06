@@ -51,18 +51,18 @@ if ( empty($cfg['priority']) ) $cfg['priority'] = 9;
 				$option = array();
 				foreach ( $dirs as $dir ) {
 					$path = X_DIR_THEME . "/$dir/config.php";
-					if ( file_exists($path) ) {
-						$theme_config = array();
-						include $path;
-						if ( empty($theme_config['name']) ) continue;
+					if ( ! file_exists($path) ) continue;
+					$theme_config = array();
+					include $path;
+					if ( empty($theme_config['name']) ) continue;
+						
+					$type = explode(',', $theme_config['type']);
+					if ( in_array( 'mobile', $type ) ) continue;
+					if ( in_array( 'subsite', $type ) ) continue;
 						
 						echo "<option value='$dir'";
 						if ( $cfg['theme'] == $dir ) echo " selected='1'";
 						echo ">$theme_config[name]</value>";
-					}
-					else {
-						// echo "<div class='error'>ERROR: $dir has no theme configuration file(config.php)</div>";
-					}
 				}
 			?>
 			</select>
