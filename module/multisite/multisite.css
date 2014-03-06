@@ -258,7 +258,7 @@ table > .header td:first-child {
 	bottom: 0;
 	left: 0;
 	background: #f9f9f9;
-	width: 318px;
+	width: 298px;
 	padding: 10px;
 	font-family: '맑은 고딕', AppleGothic;
 	color: #585858;
@@ -266,6 +266,11 @@ table > .header td:first-child {
 	font-size: 9pt;
 	border: solid 1px #e6e6e6;
 
+}
+
+.config-theme .theme-thumb span.theme-name.active-theme {
+	background: #474747;
+	color: #ffffff;
 }
 
 .config-theme .theme-thumb p {

@@ -24,7 +24,7 @@ $(function() {
 var iframe_visible = false;	
 var page;
 	$('span.user-google-guide-button').click(function(){
-		
+	
 		page = $(this).attr('page');			
 		$(".hidden-google-doc."+page).slideToggle( 500 );		
 	});	
