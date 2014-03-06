@@ -3,14 +3,6 @@
 	<div class='config-container' cellspacing='0' cellpadding='3' >
 		<table>
 			<tr>
-				<td><span class='title-small'>전화번호1</span><input type='text' name='travel2contact_num1' value='<?=ms::meta('travel2contact_num1')?>' placeholder="고객 센터 전화 번호를 입력하세요."></td>
-				<td><span class='title-small'>운영시간1</span><input type='text' name='travel2contact_hours1' value='<?=ms::meta('travel2contact_hours1')?>'></td>
-			</tr>
-			<tr>
-				<td><span class='title-small'>전화번호2</span><input type='text' name='travel2contact_num2' value='<?=ms::meta('travel2contact_num2')?>'></td>
-				<td><span class='title-small'>운영시간2</span><input type='text' name='travel2contact_hours2' value='<?=ms::meta('travel2contact_hours2')?>'>	</td>	
-			</tr>
-			<tr>
 				<td colspan='2'><span class='title-small'>하단문구제목</span><input type='text' name='travel2footer_tagline' value='<?=ms::meta('travel2footer_tagline')?>' /></td>
 			<tr>
 		</table>
@@ -35,6 +27,21 @@
 				<?}?>
 			</div>
 		</td>
+		<td width='50%'> 
+			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>COMPANY BANNER (Sidebar)</div>
+			<div class='image-upload'>
+			<?if( ms::meta('travel2banner_company') ) {
+				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner_company').">"; 
+			} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 230px X 세로 130px]</div>"; ?>
+				<input type='file' name='travel2banner_company'>
+				<?if( ms::meta('travel2banner_company') != '' ) { ?>
+					<input type='hidden' name='travel2banner_company_remove' value='n'>
+					<input type='checkbox' name='travel2banner_company_remove' value='y'><span class='title-small'>이미지 제거</span>
+				<?}?>
+			</div>
+		</td>
+	</tr>
+	<tr valign='top' >
 		<td width='50%'>
 			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>사이트 하단 로고</div>
 			<div class='image-upload'>

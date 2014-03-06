@@ -5,17 +5,12 @@ for ( $i = 1 ; $i <= 10; $i++ ) {
 }
 ?>
 
-<div class='contact-wrapper'>
-	<div class='contact-title'><span class='contact-image'><img src='<?=x::url_theme()?>/img/telephone.png'></span><b>고객센터</b></div>
-	
+<div class='travel2-company-banner'>
 	<?
-	for( $i=1 ; $i<=2 ; $i++ ) { 
+	if( $company_banner = ms::meta('travel2banner_company') ) $imgsrc = ms::meta('img_url').$company_banner;
+	else $imgsrc = x::url_theme().'/img/no_company_banner.png';
 	?>
-		<div class='contact-info'>
-			<?if($contact_num = ms::meta('travel2contact_num'.$i)) { ?><div class='contact-num'><span>전화번호<?=$i?></span><?=$contact_num?></div><?}?>
-			<?if($contact_hours = ms::meta('travel2contact_hours'.$i)) { ?><div class='contact-hours'><span>운영시간</span><?=$contact_hours?></div><?}?>
-		</div>
-	<?}?>
+	<img src='<?=$imgsrc?>'/>
 </div>
 
 <div class='posts-left-1'>

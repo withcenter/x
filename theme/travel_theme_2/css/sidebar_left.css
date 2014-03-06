@@ -8,42 +8,18 @@
 	margin-bottom: 10px;
 }
 
-/** Contact Information **/
-.layout .left .contact-wrapper {
+/** COMPANY BANNNER */
+.layout .left .travel2-company-banner {
+	height: 116px;
 	border: solid 1px #bbbbbb;
-	padding: 10px;
 	margin-bottom: 10px;
-	height: 95px;
-	background-color: #1a9fbd;
-	color: #ffffff;
-	position: relative;
-}
-.layout .left .contact-wrapper .contact-title {
-	margin: 6px 0 12px 0;
+	overflow: hidden;
 }
 
-.layout .left .contact-wrapper .contact-info {
-	margin-top: 2px;
+.layout .left .travel2-company-banner img {
+	width: 100%;
 }
 
-.layout .left .contact-wrapper .contact-info .contact-num, .layout .left .contact-wrapper .contact-info .contact-hours {
-	margin: 0 0 3px 5px;
-}
-
-.layout .left .contact-wrapper .contact-info .contact-num span, .layout .left .contact-wrapper .contact-info .contact-hours span {
-	display: inline-block;
-	width: 70px;
-	font-weight: bold;
-}
-.layout .left .contact-wrapper img {
-	position: absolute;
-	top: 9px;
-	left: 9px;
-}
-.layout .left .contact-wrapper b {
-	margin-left: 50px;
-	font-size: 10pt;
-}
 /**POSTS LEFT 1 */
 .layout .left .posts-left-1 {
 	margin-bottom: 10px;
