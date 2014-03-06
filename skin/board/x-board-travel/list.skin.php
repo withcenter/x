@@ -215,6 +215,5 @@ foreach( $list as $l ){
 		
 		</form>
 	</fieldset>	
-</div>
 
 <!-- } 게시판 목록 끝 -->

@@ -22,7 +22,7 @@
 	padding: 0 5px 5px 5px;
 	height: 23px;
 	line-height: 23px;
-	background: #f7f7f7;
+	background: #fcfcfc;
 	border-bottom: solid 1px #bbbbbb;
 	font-weight: bold;	
 }
@@ -38,7 +38,7 @@
  .community3-posts .title img {
 	margin: 0 2px 0 0;
 	position: relative;
-	top:-2px;
+	top: -1px;
 	margin-right:5px;
 }
 

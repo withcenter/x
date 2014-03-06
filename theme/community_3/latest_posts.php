@@ -18,7 +18,7 @@ if( $latest_rows ) {
 			<table width='100%'>
 				<tr valign='top'>
 					<td align='left' class='title-left'>
-						<img src="<?=x::url_theme()?>/img/latest-posts.png">
+						<img src="<?=x::url_theme()?>/img/3line.png">
 						<span class='label'>최근 작성글</span>
 					</td>
 				</tr>
