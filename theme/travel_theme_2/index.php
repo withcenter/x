@@ -48,7 +48,11 @@
 				<?
 				$latest_bo_table = ms::board_id(etc::domain()).'_3';
 				if(g::forum_exist($latest_bo_table)){	
-					$latest_2_output = latest("x-travel_2_posts_with_image_right", $latest_bo_table, 3, 50, $cache_time=1, x::url_theme()."/img/chat_icon2.png");
+					$option = array(
+									'no' => 3,
+									'icon' => x::url_theme()."/img/chat_icon2.png"
+					);
+					$latest_2_output = latest("x-travel_2_posts_with_image_right", $latest_bo_table, 3, 50, $cache_time=1, $option );
 					echo $latest_2_output;
 				}
 				?>

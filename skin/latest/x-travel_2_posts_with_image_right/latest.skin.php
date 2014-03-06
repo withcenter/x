@@ -8,7 +8,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 <!-- <?php echo $bo_subject; ?> 최신글 시작 { -->
 <div class="travel_2_timed_list_with_image">
     <div class="title">
-		<?if( $options ) echo "<img class='icon' src='".$options."'/>";?>
+		<?if( $options ) echo "<img class='icon' src='".$options['icon']."'/>";?>
 		<a href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$bo_table?>'><?php echo $bo_subject; ?></a>
 		<a class='more_button' href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$bo_table?>'>자세히</a>
 		<div style='clear:right;'></div>
