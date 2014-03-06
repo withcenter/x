@@ -18,9 +18,13 @@ class multidomain {
 	 *  @endcode
 	 *  @warning if you want to give a default record that matches all the domain, just put "." in domain with priority of 0.
 	 *  @see https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.jz5yn0cooc3s
+	 *  @note it memoery caches
 	 */
 	function config($idx=null)
 	{
+	
+		global $_md_config;
+		if ( isset($_md_config[$idx]) ) return $_md_config[$idx];
 		if ( empty($idx) ) {
 			$row = db::rows("SELECT * FROM ".MD_CONFIG." ORDER BY priority DESC");
 		}
@@ -46,9 +50,29 @@ class multidomain {
 				$row = $theme;
 			}
 		}
-		if ( empty($row) ) return array('theme'=>'default');
-		return $row;
+		if ( empty($row) ) $row = array('theme'=>'default');
+		$_md_config[$idx] = $row;
+		return $_md_config[$idx];
 	}
+	
+	/**
+	 *  @brief sets the site title in browser title bar.
+	 *  
+	 *  @return empty
+	 *  
+	 *  @details changes the site title by setting g5 variable.
+	 *  @refer https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.qpasfs154v7y
+	 */
+	static function set_title( ) {
+		global $g5, $config;
+		
+		$cfg = md::config( etc::domain() );
+		$title = $cfg['title'];
+		
+		unset($g5['title']);
+		$config['cf_title'] = $title;
+	}
+	
 	
 	/**
 	 *  @brief updates domain configuration
@@ -85,12 +109,13 @@ class multidomain {
 	 */
 	function config_update( )
 	{
-		global $idx, $domain, $priority, $theme;
+		global $idx, $domain, $priority, $theme, $title;
 		
 		$up = array();
 		$up['domain'] = $domain;
 		$up['theme'] = $theme;
 		$up['priority'] = $priority;
+		$up['title'] = $title;
 		
 		
 		/** if $idx is not set, it checks if the domain exists.

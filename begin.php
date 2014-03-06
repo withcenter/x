@@ -8,15 +8,6 @@ if ( etc::test_server() ) debug::mode(1);
 include_once 'etc/service.php';
 include_once 'etc/language/default.php';
 
-if ( admin_page() ) {
-	
-}
-else {
-	/**
-	 * @bug check what if the site is not multisite? still it hsa to set title?
-	 */
-	ms::set_title();
-}
 
 
 if ( x::installed() && etc::web() ) {

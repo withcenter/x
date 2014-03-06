@@ -21,7 +21,7 @@ isset($options['width'])		? $width = $options['width'] : $width = 300;
 isset($options['radius'])	? $height = $options['height'] : $height = 180;
 isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 ?>
-<link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
+<? if ( ! $GLOBALS[$latest_skin_url] ++ ) { ?><link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css"><?}?>
 <style>
 			.x-gallery .photo img {
 				border-radius: <?=$radius?>px;

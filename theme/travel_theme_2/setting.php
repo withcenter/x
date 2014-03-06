@@ -3,7 +3,7 @@
 	<div class='config-container' cellspacing='0' cellpadding='3' >
 		<table>
 			<tr>
-				<td><span class='title-small'>전화번호1</span><input type='text' name='travel2contact_num1' value='<?=ms::meta('travel2contact_num1')?>'></td>
+				<td><span class='title-small'>전화번호1</span><input type='text' name='travel2contact_num1' value='<?=ms::meta('travel2contact_num1')?>' placeholder="고객 센터 전화 번호를 입력하세요."></td>
 				<td><span class='title-small'>운영시간1</span><input type='text' name='travel2contact_hours1' value='<?=ms::meta('travel2contact_hours1')?>'></td>
 			</tr>
 			<tr>

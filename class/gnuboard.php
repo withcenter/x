@@ -436,7 +436,7 @@ class gnuboard {
 		db::query($sql);
 		$wr_id = db::insert_id();
 		
-		$count = self::count_write( $write_table );
+		$count = self::count_write( $o['bo_table'] );
 		
 		
 		db::update( $g5['board_table'], array('bo_count_write' => $count), array('bo_table'=>$o['bo_table']) );
@@ -455,17 +455,37 @@ class gnuboard {
 		//
 		return $wr_id;
 	}
-	
-	
-	/** @short returns the number of post (excluding comment) in a forum.
-	 *
+		/**
+	 *  @brief returns the number of post.
+	 *  
+	 *  @param [in] $bo_table bo_table
+	 *  
+	 *  @param [in] $type string. default 'parent'.
+	 *  if it is null, then it count all the record(parent & comemnt) of the forums.
+	 *  if it is 'parent', then it only count the parent post.
+	 *  if it is passed as 'comment', it only count 'comment'.
+	 *  @return int
+	 *  
+	 *  @details use this function to count posts or comemnt.
 	 */
-	static function count_write($write_table)
+	static function count_write($bo_table, $type='parent')
 	{
-		$q = "SELECT COUNT(*) FROM $write_table WHERE wr_parent=0";
-		return db::result( $q );
+		$cfg = self::config( $bo_table );
+		if ( $type == 'parent' ) return $cfg['bo_count_write'];
+		else if ( $type == 'comment' ) return $cfg['bo_count_comment'];
+		else return $cfg['bo_count_write'] + $cfg['bo_count_comment'];
+	
+		/** @deprecated
+			$q = "SELECT COUNT(*) FROM $write_table WHERE wr_parent=0";
+			return db::result( $q );
+		*/
 	}
 	
+	/** @short alias of count_write() */
+	static function count_post($bo_table, $type='parent')
+	{
+		return self::count_write( $bo_table, $type );
+	}
 	
 	/**
 	 *  @brief attach(upload) or update a file to/for a post.
@@ -752,7 +772,16 @@ class gnuboard {
 	}
 	
 	
+
 	
+	/**
+	 *  @brief return true if the forum exists.
+	 *  
+	 *  @param [in] $bo_table forum id
+	 *  @return boolean
+	 *  
+	 *  @details use this function to check if the board(forum) exists or not.
+	 */
 	static function forum_exist($bo_table)
 	{
 		return db::table_exist( self::board_table($bo_table) );

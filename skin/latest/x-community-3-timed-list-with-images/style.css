@@ -6,8 +6,7 @@
 }
 
 .comm3_timed_list_with_image .timed_list_title{
-	font-weight:bold;	
-	font-family:Dotum;
+	font-weight:bold;
 	padding: 2px 10px 1px 10px;
 	height: 25px;
 	line-height: 25px;
@@ -66,7 +65,6 @@
 
 .comm3_timed_list_with_image a{
 	text-decoration:none;
-	font-family:Dotum;
 }
 
 .comm3_timed_list_with_image .comment_count.no-comment{

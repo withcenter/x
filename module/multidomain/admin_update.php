@@ -68,6 +68,15 @@ if ( empty($cfg['priority']) ) $cfg['priority'] = 9;
 			</select>
 		</td>
 	</tr>
+	
+	<tr>
+		<td>Title</td>
+		<td>
+			<input type='text' name='title' value="<?=$cfg['title']?>">
+			
+		</td>
+	</tr>
+	
 	<tr>
 		<td></td>
 		<td>

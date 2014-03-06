@@ -410,25 +410,53 @@ class multisite {
 	 *  
 	 *  @details Use this function to count the number of forums of a sub-site.
 	 */
-	static function count_forum()
+	static function count_forum($domain=null)
 	{
 		global $g5;
-		
-		$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "\_%'";
+		if ( empty($domain) ) $domain = etc::domain();
+		$qb = "bo_table LIKE '" . ms::board_id( $domain ) . "\_%'";
 		$q = "SELECT COUNT(*) FROM $g5[board_table] WHERE $qb";
 		return db::result($q);
 	}
 	
 	/**
+	 *  @brief returns the total number of one or more forums.
+	 *  
+	 *  @param [in] $ids mixed. if an array is passed, then it counts all the post of the forums.
+	 *  	or else it only counts that forum.
+	 *  @param [in] $type string. default null.
+	 *  if it is null, then it count all the record(parent & comemnt) of the forums.
+	 *  if it is 'parent', then it only count the parent post.
+	 *  if it is passed as 'comment', it only count 'comment'.
+	 *  @return int
+	 *  
+	 *  @details use this function to count post or comment.
+	 *  @code
+	 *  echo "<td align='center'>".ms::count_post(ms::forum_ids( $site['domain'] ), null )."</td>";
+	 *  @endcode
+	 */
+	static function count_post( $ids, $type=null)
+	{
+		if ( ! is_array($ids) ) $ids = array($ids);
+		$count = 0;
+		foreach ( $ids as $id ) {
+			$count += g::count_post( $id, $type );
+		}
+		return $count;
+	}
+	
+	
+	/**
 	 *  @brief returns all the forum id(s) and ID only.
 	 *  
+	 *  @param [in] $domain is the domain (or subdomain of subsite)
 	 *  @return array of forum id(bo_table)
 	 *  
 	 *  @details use this function to get all the forum id.
 	 */
-	static function forum_ids()
+	static function forum_ids( $domain=null )
 	{
-		$rows = self::forums();
+		$rows = self::forums($domain);
 		$ret = array();
 		if ( $rows ) {
 			foreach ( $rows as $row ) {
@@ -447,7 +475,8 @@ class multisite {
 	{
 		global $g5;
 		if ( $domain === null ) $domain = etc::domain();
-		$qb = "bo_table LIKE '" . self::board_id( $domain ) . "\_%'";	
+		$bo_table = self::board_id( $domain );
+		$qb = "bo_table LIKE '$bo_table\_%'";	
 		$rows = db::rows( "SELECT * FROM $g5[board_table] WHERE $qb");
 		return $rows;
 	}
