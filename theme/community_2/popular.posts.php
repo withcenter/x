@@ -9,8 +9,6 @@ for ( $i = 1 ; $i <= 5 ; $i++ ) {
 	if ( !(${'forum_' . $i}) ) continue;
 		$posts[${'forum_' . $i}] = db::rows("SELECT wr_id, wr_subject, wr_datetime FROM ".$g5['write_prefix'].${'forum_' . $i}." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 3");
 }
-
-if ( $posts ) {
 ?>
 
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/new.posts.css' />
