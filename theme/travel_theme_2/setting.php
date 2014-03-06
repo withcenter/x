@@ -49,6 +49,7 @@
 				<?}?>
 			</div>
 		</td>
+		<? /*
 		<td width='50%'> 
 			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>COMPANY BANNER (Sidebar)</div>
 			<div class='image-upload'>
@@ -61,9 +62,7 @@
 					<input type='checkbox' name='travel2banner_company_remove' value='y'><span class='title-small'>이미지 제거</span>
 				<?}?>
 			</div>
-		</td>
-	</tr>
-	<tr valign='top' >
+		</td> */?>
 		<td width='50%'>
 			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>사이트 하단 로고</div>
 			<div class='image-upload'>
