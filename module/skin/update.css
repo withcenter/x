@@ -51,7 +51,7 @@ input, select {
 	margin: 0;
 }
 
-input[name='bo_subject'], input[name='skin'] {
+input[name='bo_subject'], input[name='skin'], input[name='option'] {
 	width: 313px;
 }
 input[name='bo_table'] {
@@ -76,12 +76,22 @@ select[name='select_bo_table'] {
 	width: 20em;
 	border: 1px solid grey;
 	cursor:pointer;
+	text-align:center;
 }
 .skin-list > .skin > .preview {
+	margin-bottom: 0.4em;
 	font-size: 1.4em;
 	font-weight: bold;
 }
 
 .skin-list > .skin > .preview > img {
 	width: 100%;
+}
+
+.skin-close, .skin-open {
+	cursor:pointer;
+	font-weight: bold;
+}
+.skin-close {
+	display:none;
 }

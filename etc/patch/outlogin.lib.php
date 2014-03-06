@@ -21,7 +21,7 @@
 	
 	
 	$src = " if (array_key_exists('mb_nick', ";
-	$dst = '/* x patch */ global $skin_folder, $outlogin_skin_path, $outlogin_skin_url; $skin_folder=$skin_dir;' . "\n" . $src;
+	$dst = '/* x patch */ global $global_skin_dir, $outlogin_skin_path, $outlogin_skin_url; $global_skin_dir=$skin_dir;' . "\n" . $src;
 	
 	if ( pattern_exist($data, $dst) ) {
 		patch_message('already patched');
