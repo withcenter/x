@@ -36,7 +36,7 @@
 				<div class='theme-thumb'>
 					<img src='theme/<?=ms::meta('theme')?>/preview.jpg' >
 					<p><b>선택 되었습니다.</b></p>
-					<span class='theme-name'><?=$active_theme?></span>
+					<span class='theme-name active-theme'><?=$active_theme?></span>
 				</div>
 			<?}?>
 			</td>

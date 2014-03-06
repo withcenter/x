@@ -23,6 +23,7 @@ $(function() {
 	
 	$('span.user-google-guide-button').click(function(){
 		var page = $(this).attr('page');				
-		$(".hidden-google-doc."+page).slideToggle( 500 );		
+		$(".hidden-google-doc."+page).slideToggle( 500 );
+		$(".hidden-google-doc iframe").contents().scrollTop( 0 );
 	});	
 });
