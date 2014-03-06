@@ -1,20 +1,16 @@
 <?php
 $begin_date = date('Y-m-d H:i:s', time() - ( 60 * 60 * 24 * 30));
-$forum_1 = ms::meta('forum_no_1');
-$forum_2 = ms::meta('forum_no_2');
-$forum_3 = ms::meta('forum_no_3');
-$forum_4 = ms::meta('forum_no_4');
-$forum_5 = ms::meta('forum_no_5');
-$forum_6 = ms::meta('forum_no_6');
 
-if ( g::forum_exist($forum_1) ) $row1[$forum_1] = db::rows("SELECT wr_id, wr_subject, wr_datetime FROM ".$g5['write_prefix'].$forum_1." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 3");
-if ( g::forum_exist($forum_2) ) $row2[$forum_2] = db::rows("SELECT wr_id, wr_subject, wr_datetime FROM ".$g5['write_prefix'].$forum_2." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 3");
-if ( g::forum_exist($forum_3) ) $row3[$forum_3] = db::rows("SELECT wr_id, wr_subject, wr_datetime FROM ".$g5['write_prefix'].$forum_3." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 3");
-if ( g::forum_exist($forum_4) ) $row4[$forum_4] = db::rows("SELECT wr_id, wr_subject, wr_datetime FROM ".$g5['write_prefix'].$forum_4." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 3");
-if ( g::forum_exist($forum_5) ) $row5[$forum_5] = db::rows("SELECT wr_id, wr_subject, wr_datetime FROM ".$g5['write_prefix'].$forum_5." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 3");
+for ( $i = 1 ; $i <= 10; $i++ ) {
+	${'forum_'.$i} = ms::meta('forum_no_'.$i);
+}
 
-if ( g::forum_exist($forum_1) && g::forum_exist($forum_2) && g::forum_exist($forum_3) && g::forum_exist($forum_4) && g::forum_exist($forum_5)) { 
-	$posts = array_merge ( $row1, $row2, $row3, $row4, $row5 );		;
+for ( $i = 1 ; $i <= 5 ; $i++ ) {
+	if ( !(${'forum_' . $i}) ) continue;
+		$posts[${'forum_' . $i}] = db::rows("SELECT wr_id, wr_subject, wr_datetime FROM ".$g5['write_prefix'].${'forum_' . $i}." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 3");
+}
+
+if ( $posts ) {
 ?>
 
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/new.posts.css' />
