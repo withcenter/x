@@ -271,6 +271,7 @@ table > .header td:first-child {
 .config-theme .theme-thumb span.theme-name.active-theme {
 	background: #474747;
 	color: #ffffff;
+	border: solid 1px #474747;
 }
 
 .config-theme .theme-thumb p {

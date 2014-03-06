@@ -20,6 +20,18 @@ body{
 	margin-right: 23px;
 }
 
+.site_top .inner  a.top-menu-mobile {
+	margin: 0;
+}
+.site_top .inner .top-menu-left {
+	float: left;
+}
+
+.site_top .inner .top-menu-right {
+	float: right;
+}
+
+
 /* logo search */
 .logo_search {
 	width: 100%;

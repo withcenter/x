@@ -28,8 +28,8 @@
 			<? if ( $menu_info[3]['url'] ) {?>
 				<li class='menu-contact'><a href='<?=$menu_info[3]['url']?>'><?=$menu_info[3]['bo_subject']?></a></li>
 			<? }?>
-			
 			<?if( ms::admin() ) { ?><li class='menu-admin'><a href='<?=ms::url_config()?>'>사이트관리</a></li><?}?>
+			<li class='menu-mobile'><a href='<?=g::url()?>?device=mobile'>모바일</a></li>
         </ul>	
     </div>
 </div>

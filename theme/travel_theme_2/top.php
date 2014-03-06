@@ -30,6 +30,7 @@
 			?>
 				<li  <?if($i==9) echo "class='first-item'"?>><div class='inner'><a href='<?=g::url()?>/bbs/board.php?bo_table=<?=ms::meta('forum_no_'.$i)?>'><?=$menu?></a></div></li>
 			<?}}?>
+			<li><a href='<?=g::url()?>?device=mobile'>모바일</a></li>
 		</ul>
 		<div style='clear:left;'></div>
 	</div></div>
