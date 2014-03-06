@@ -10,6 +10,8 @@
 	
 	
 	
+	if ( empty($options) ) $options = array();
+	else if ( ! is_array( $options ) ) $options = array('options'=>$options);
 	$options['no'] = x::config( "no.$code" );
 	if ( empty($options['no']) ) $options['no'] = $rows;
 	$json = json_decode( x::config( "option.$code"), true );
