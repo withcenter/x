@@ -6,7 +6,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 <div class='withcenter_latest'>
 	<div class='title'>
 		<div  class='top-title'>
-		<? if ( $options ) echo "<img class='x-latest-withcenter-icon' src='$options'/>"; ?>
+		<? if ( $options ) echo "<img class='x-latest-withcenter-icon' src='$options[icon]'/>"; ?>
 		<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=<?php echo $bo_table ?>"><?php echo $bo_subject; ?></a>
 		</div>
 		<a class='more_btn' href="<?php echo G5_BBS_URL ?>/board.php?bo_table=<?php echo $bo_table ?>"><img src='<?=$latest_skin_url?>/img/more_btn.gif' /></a>
