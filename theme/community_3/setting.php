@@ -1,3 +1,34 @@
+ <div class='config-wrapper'>
+	<div class='config-title'>
+		<span class='config-title-info'>탑 메뉴 설정</span>
+		<span class='user-google-guide-button' page = 'google_doc_community_3_1'>[도움말]</span>
+		<span class='config-title-notice'>
+			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
+		</span>
+	</div>
+	
+	
+	<div class='config-container'>
+	
+	
+	왼쪽 1 : <?include 'setting.top_menu.php'?><br>
+	왼쪽 2 : <?include 'setting.top_menu.php'?><br>
+	왼쪽 3 : <?include 'setting.top_menu.php'?><br>
+	
+	
+	오른쪽 1<br>
+	오른쪽 2<br>
+	오른쪽 3<br>
+	
+	
+	
+	
+		
+	</div>
+		<input type='submit' value='업데이트'>
+		<div style='clear:right;'></div>
+</div>
+
   <div class='config-wrapper'>
 	<div class='config-title'>
 		<span class='config-title-info'>추가 사이트 정보</span>
