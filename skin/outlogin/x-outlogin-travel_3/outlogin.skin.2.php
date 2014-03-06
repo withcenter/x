@@ -6,18 +6,24 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 <link rel="stylesheet" href="<?php echo $outlogin_skin_url ?>/style.css">
 
 <div class='login-box logout-community3'>
-	<div style='border-bottom: solid 1px #0e5565; padding-bottom: 4px;'>
+	<div style='border-bottom: solid 1px #444444; padding-bottom: 8px;'>
 	<div class='user-info'>
-		<?php 
-		if ($is_admin == 'super' || $is_auth) {  ?>
+	
 			<div class='user-admin'>
-				<span class='edit_profile'><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=register_form.php">내 프로필 정보 수정</a></span>
-				<span class='admin_link'><a href="<?=x::url_admin()?>">X ADMIN</a><br><a href="<?php echo G5_ADMIN_URL ?>">ADMIN</a></span>
-
+				<span class='edit_profile'><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=register_form.php">내 프로필</a></span>
+				<? if ($is_admin == 'super' || $is_auth) {  ?>
+					<span class='admin_link'><a href="<?=x::url_admin()?>">X ADMIN</a><br><a href="<?php echo G5_ADMIN_URL ?>">ADMIN</a></span>
+				<? } 
+					else {?>
+					<span class='user-scrap'>
+							<a href="<?php echo G5_BBS_URL ?>/scrap.php" target="_blank" class='user-scrap'>스크랩</a>
+					</span>
+				<?}
+				?>
 				<div style='clear: both'></div>
 			</div>
-		<? } ?>
-		<div class='user-meta' <? if (!$is_admin == 'super') { echo "style='line-height: 20pt'"; }  ?>>
+		
+		<div class='user-meta'>
 			<span class='user-icon-points'>
 				<span class='user-message'>
 					<img src='<?=$outlogin_skin_url?>/msg-icon.png'/>
@@ -30,9 +36,7 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 					<a href="<?php echo G5_BBS_URL ?>/point.php" target="_blank" class='user-win'>포인트</a> <?=$point?>
 				</span>
 			</span>
-			<span class='user-scrap'>
-				<a href="<?php echo G5_BBS_URL ?>/scrap.php" target="_blank" class='user-scrap'>스크랩 님 로그인</a>
-			</span>
+			
 		</div>
 		</div>
 
@@ -43,7 +47,7 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 	<div style='clear: both'></div>
 		</div>
 	<div class='user-logged-name'>
-		<?=$nick?> IS LOGGED IN
+		<?=$nick?>님 로그인
 	</div>
 </div> 
 
