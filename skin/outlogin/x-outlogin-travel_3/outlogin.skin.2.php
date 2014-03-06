@@ -17,7 +17,7 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 				<div style='clear: both'></div>
 			</div>
 		<? } ?>
-		<div class='user-meta'>
+		<div class='user-meta' <? if (!$is_admin == 'super') { echo "style='line-height: 20pt'"; }  ?>>
 			<span class='user-icon-points'>
 				<span class='user-message'>
 					<img src='<?=$outlogin_skin_url?>/msg-icon.png'/>
@@ -31,7 +31,7 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 				</span>
 			</span>
 			<span class='user-scrap'>
-				<a href="<?php echo G5_BBS_URL ?>/scrap.php" target="_blank" class='user-scrap'>스크랩 님<br>로그인</a>
+				<a href="<?php echo G5_BBS_URL ?>/scrap.php" target="_blank" class='user-scrap'>스크랩 님 로그인</a>
 			</span>
 		</div>
 		</div>

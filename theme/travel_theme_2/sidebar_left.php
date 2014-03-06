@@ -14,7 +14,8 @@ for ( $i = 1 ; $i <= 10; $i++ ) {
 </div>
 
 <div class='posts-left-1'>
-	<?=latest('x-latest-travel-2-posts', $forum_1 , 14 , 20)?>
+	<? $option = array('no' => 14 ); ?>
+	<?=latest('x-latest-travel-2-posts', $forum_1 , 14 , 20, 1, $option)?>
 </div>
 
 <div class='banner-left'>

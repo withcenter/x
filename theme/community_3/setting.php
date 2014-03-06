@@ -12,9 +12,12 @@
 	</div>
 		<span class='title-small'>전화번호: </span><input type='text' name='com3contact_num' value='<?=ms::meta('com3contact_num')?>'>	
 	</div>
+		<input type='submit' value='업데이트'>
+		<div style='clear:right;'></div>
 </div>
 
  <div class='config-wrapper'>
+
 	<div class='config-title'>
 		<span class='config-title-info'>사이트 로고 및 배너</span>
 		<span class='user-google-guide-button' page = 'google_doc_community_3_2'>[도움말]</span>
@@ -28,7 +31,8 @@
 	<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
 </div>
 
-<table cellspacing='0' cellpadding='3' class='image-config' width='100%'>
+<table cellspacing='0' cellpadding='10' class='image-config' width='100%'>
+
 	<tr valign='top' >
 		<td width='50%'>
 			<div class='image-title'>

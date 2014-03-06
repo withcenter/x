@@ -1,7 +1,8 @@
-<?php
+﻿<?php
 
 class html {
 	/**
+	 *  @deprecated. Do not use this function.
 	 *  @brief 기존 그누보드의 메뉴를 없애고 새로 작성한다.
 	 *  
 	 *  @param [in] $html Parameter_Description
@@ -30,4 +31,5 @@ class html {
 		*/
 	}
 }
+
 

@@ -29,11 +29,13 @@
 				<span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span>
 			</div>	
 			<div class='config-container'>
+
 			<div class='hidden-google-doc google_doc_1'>	
 				<div>필고 사이트 서비스 설명서:</div>
 				<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
 			</div>
-				<table cellpadding=0 cellspacing=0 width='100%'>
+				<table cellpadding='5' cellspacing='0' width='100%'>
+
 					<tr valign='top'>
 						<td width='100'>
 							<span>메인 타이틀</span></td><td><input type='text' name='title' value='<?=ms::meta('title')?>'>
@@ -58,6 +60,9 @@
 						</td>
 					</tr>
 				</table>
+				<input type='submit' value='업데이트'>
+				<div style='clear:right;'></div>
+
 			</div>
 		</div>
 

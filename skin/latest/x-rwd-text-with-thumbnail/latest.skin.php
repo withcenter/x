@@ -1,6 +1,6 @@
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
-
+include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 	$url_forum = g::url_forum( $bo_table );
 	$url_icon = g::url_skin('img/icon.png');
 	global $done_x_rwd_text_with_thumbnail;
