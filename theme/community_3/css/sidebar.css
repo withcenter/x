@@ -64,20 +64,28 @@
 	padding: 5px;
 }
 
-.sidebar .popular-posts .popular-posts-items table td {
+.sidebar .popular-posts .popular-posts-items > .row {
 	border-bottom: dashed 1px #bebebe;
+	height: 25px;
+	line-height: 25px;
+	overflow: hidden;
+	word-break:break-all;
 }
 
-.sidebar .popular-posts .popular-posts-items table tr.last-post td {
-	border: 0;
+.sidebar .popular-posts .popular-posts-items .last-post {
+	border-bottom: 0;
 }
 
 .sidebar .popular-posts .post-num {
-	padding: 1px;
+	display: inline-block;
+	width: 14px;
+	height: 15px;
+	line-height: 15px;
 	font-size: 8pt;
 	background: #1a1a1a;
 	color: #ffffff;
 	text-align: center;
+	margin-right: 5px;
 }
 .sidebar .popular-posts .popular-posts-items table td .num_views {
 	font-size: 11px;
