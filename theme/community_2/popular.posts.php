@@ -5,12 +5,11 @@ for ( $i = 1 ; $i <= 10; $i++ ) {
 	${'forum_'.$i} = ms::meta('forum_no_'.$i);
 }
 
-for ( $i = 1 ; $i <= 5 ; $i++ ) {
+for ( $i = 1 ; $i <= 10 ; $i++ ) {
 	if ( !(${'forum_' . $i}) ) continue;
 		$posts[${'forum_' . $i}] = db::rows("SELECT wr_id, wr_subject, wr_datetime FROM ".$g5['write_prefix'].${'forum_' . $i}." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 3");
 }
-
-if ( $posts ) {
+	$posts = array_filter( $posts );
 ?>
 
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/new.posts.css' />
@@ -20,12 +19,12 @@ if ( $posts ) {
 		조회수가 많은 글
 	</div>
 	<?php
+	$dot_url = x::url_theme().'/img/dot.gif';
 	if ( $posts ) {
 		foreach ( $posts as $key => $post ) {
 			foreach ( $post as $p ) {
 				$url = G5_BBS_URL."/board.php?bo_table=$key&wr_id=$p[wr_id]";
 				$popular_subject = conv_subject( $p['wr_subject'], 14, '...');
-				$dot_url = x::url_theme().'/img/dot.gif';
 				echo "
 						<div class='row'>
 							<img class='dot-icon' src='$dot_url'/><a href='$url'>$popular_subject</a>
@@ -57,4 +56,3 @@ if ( $posts ) {
 				</div>
 	<?}?>
 	</div>
-<?}?>
