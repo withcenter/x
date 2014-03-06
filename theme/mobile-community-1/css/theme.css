@@ -72,9 +72,11 @@ a {
 #header .menu ul li a {
 	display:inline-block;
 	padding: 1em;
-	text-align:center;
+	width: 100%;
 }
-
+#header .menu ul li.all-menu {
+	display:none;
+}
 
 
 /* mobile-menu */
@@ -259,6 +261,14 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 	}
 	#header .mobile-menu {
 		display:block;
+	}
+}
+@media all and ( min-width: 40em ) {
+	#header .menu {
+		display: block;
+	}
+	#header .menu ul li.all-menu {
+		display:none !important;
 	}
 }
 /* below 600 px */

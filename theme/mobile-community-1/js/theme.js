@@ -8,5 +8,14 @@ $(function(){
 
 function open_menu()
 {
-	$('.menu').show();
+	$('.menu').slideDown('fast');
+	$('.all-menu').show();
+}
+
+function close_menu()
+{
+	$('.menu').slideUp('fast', function(){
+		$(".menu").css('display','');
+	});
+	$('.all-hide').show();
 }

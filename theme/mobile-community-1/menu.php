@@ -15,4 +15,7 @@
 		<? if ( ms::admin() ) { ?>
 			<li><a href='<?=ms::url_config()?>'>사이트관리</a></li>
 		<? } ?>
+		
+		<li class='all-menu'><a href='javascript:close_menu();'>전체 메뉴 닫기</a></li>
+		
 	</ul>
