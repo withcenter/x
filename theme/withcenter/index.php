@@ -29,8 +29,9 @@
 		
 		<div class='latest_4'>
 			<? 
-			
-				$option = array('bo_table' => 'withcenter1');
+				if ( g::forum_exist( 'withcenter1' ) ) $bo_table = 'withcenter1';
+				else $bo_table = 'default';
+				$option = array('bo_table' => $bo_table);
 				include x::dir().'/theme/withcenter/bottom_latest.php';
 			?>
 		</div>
