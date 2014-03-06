@@ -47,3 +47,10 @@
 	text-decoration:none;
 	color: #ffffff;	
 }
+
+.travel2-company-banner {
+	height: 116px;
+}
+.travel2-company-banner img {
+	height: 100%;
+}
