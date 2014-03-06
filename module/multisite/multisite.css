@@ -767,9 +767,13 @@ table > .header td:first-child {
 	margin-bottom:10px;
 }
 
-.user-google-guide-button{
+span.user-google-guide-button, a.user-google-guide-button{
 	color:orange;
 	cursor:pointer;
 	margin-left:10px;
 	font-weight:bold;	
+}
+
+a.user-google-guide-button{
+	text-decoration:none;
 }

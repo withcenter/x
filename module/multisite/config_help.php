@@ -2,7 +2,7 @@
 	<div class='title'>
 		<div class='inner'>
 		<img src='<?=x::url()?>/module/multisite/img/direction.png' />필고 무료 홈페이지 사용방법 안내
-		<a href='#googledoc'>도움말</a>
+		<a class='user-google-guide-button' href='#googledoc'>[도움말]</a>
 		</div>
 	</div>
 	

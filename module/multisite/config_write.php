@@ -12,7 +12,7 @@ if ( $in['done'] ) {
 <div class='config-main-title'>
 	<div class='inner'>
 		<img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 블로그 API 정보를 입력해 주세요.
-		<a href='#googledoc'>도움말</a>
+		<a class='user-google-guide-button' href='#googledoc'>[도움말]</a>
 	</div>
 </div>
 	<div class='config-wrapper'>

@@ -17,7 +17,7 @@
 	<div class='config-main-title'>
 		<div class='inner'>
 			<img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 게시판은 게시판 제목을 입력하시면 생성이 됩니디.
-			<a href='#googledoc'>도움말</a>
+			<a class='user-google-guide-button' href='#googledoc'>[도움말]</a>
 		</div>
 	</div>
 		<div class='config-wrapper'>

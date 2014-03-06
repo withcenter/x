@@ -1,6 +1,16 @@
   <div class='config-wrapper'>
-	<div class='config-title'><span class='config-title-info'>사이트 추가 설정</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
+	<div class='config-title'>
+		<span class='config-title-info'>사이트 추가 설정</span>
+		<span class='user-google-guide-button' page = 'google_doc_travel_2_1'>[도움말]</span>
+		<span class='config-title-notice'>
+			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
+		</span>
+	</div>
 	<div class='config-container' cellspacing='0' cellpadding='10' >
+	<div class='hidden-google-doc google_doc_travel_2_1'>	
+		<div>필고 사이트 서비스 설명서:</div>
+		<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
+	</div>
 		<table>
 			<tr>
 				<td colspan='2'><span class='title-small'>하단문구제목</span><input type='text' name='travel2footer_tagline' value='<?=ms::meta('travel2footer_tagline')?>' /></td>
@@ -12,8 +22,18 @@
 </div>
 
 <div class='config-wrapper'>
-	<div class='config-title'><span class='config-title-info'>사이트 상하단 로고 & 로고 문구</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
-	<div class='config-container'>
+	<div class='config-title'>
+		<span class='config-title-info'>사이트 상하단 로고 & 로고 문구</span>
+		<span class='user-google-guide-button' page = 'google_doc_travel_2_2'>[도움말]</span>
+		<span class='config-title-notice'>
+			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
+		</span>
+	</div>
+<div class='config-container'>
+<div class='hidden-google-doc google_doc_travel_2_2'>	
+	<div>필고 사이트 서비스 설명서:</div>
+	<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
+</div>
 <table cellspacing='0' cellpadding='10' class='image-config' width='100%'>
 	<tr valign='top' >
 		<td width='50%'> 
@@ -64,8 +84,18 @@
 </div>
 </div>
  <div class='config-wrapper'>
-	<div class='config-title'><span class='config-title-info'>메인 롤링 배너</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
+	<div class='config-title'>
+		<span class='config-title-info'>메인 롤링 배너</span>
+		<span class='user-google-guide-button' page = 'google_doc_travel_2_3'>[도움말]</span>
+		<span class='config-title-notice'>
+			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
+		</span>
+		</div>
 	<div class='config-container'>
+	<div class='hidden-google-doc google_doc_travel_2_3'>	
+		<div>필고 사이트 서비스 설명서:</div>
+		<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
+	</div>
 	<table cellspacing='0' cellpadding='10' class='image-config' width='100%'>
 	<tr valign='top'>
 		<td>
@@ -166,8 +196,18 @@
 </div>
 </div>
  <div class='config-wrapper'>
-	<div class='config-title'><span class='config-title-info'>오른쪽 날개 배너</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
+	<div class='config-title'>
+		<span class='config-title-info'>오른쪽 날개 배너</span>
+		<span class='user-google-guide-button' page = 'google_doc_travel_2_4'>[도움말]</span>
+		<span class='config-title-notice'>
+			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
+		</span>
+		</div>
 	<div class='config-container'>
+	<div class='hidden-google-doc google_doc_travel_2_4'>	
+		<div>필고 사이트 서비스 설명서:</div>
+		<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
+	</div>
 	<table cellspacing='0' cellpadding='10' class='image-config' width='100%'>	
 		<tr valign='top'>
 		<td>
@@ -183,6 +223,7 @@
 			<?}?>
 			<div class='title'>오른쪽 날개 배너1 URL</div>
 			<input type='text' name='travel2banner1_floating_text1' value='<?=ms::meta('travel2banner1_floating_text1')?>'>
+			</div>
 		</td>
 		<td>
 			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>오른쪽 날개 배너2</div>
@@ -197,6 +238,7 @@
 			<?}?>
 			<div class='title'>오른쪽 날개 배너2 URL</div>
 			<input type='text' name='travel2banner2_floating_text1' value='<?=ms::meta('travel2banner2_floating_text1')?>'>
+			</div>
 		</td>
 	</tr>
 	<tr valign='top'>
@@ -213,16 +255,28 @@
 			<?}?>
 			<div class='title'>오른쪽 날개 배너3 URL</div>
 			<input type='text' name='travel2banner3_floating_text1' value='<?=ms::meta('travel2banner3_floating_text1')?>'>
+			</div>
 		</td>
 	</tr>
 </table>
 		<input type='submit' value='업데이트'>
 		<div style='clear:right;'></div>
-</div>
-</div>
+	</div><!--/config-container-->
+</div><!--config-wrapper-->
+
  <div class='config-wrapper'>
-	<div class='config-title'><span class='config-title-info'>중앙 사이드 배너, 하단 배너</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
+	<div class='config-title'>
+		<span class='config-title-info'>중앙 사이드 배너, 하단 배너</span>
+		<span class='user-google-guide-button' page = 'google_doc_travel_2_5'>[도움말]</span>
+		<span class='config-title-notice'>
+			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
+		</span>
+		</div>
 	<div class='config-container'>
+	<div class='hidden-google-doc google_doc_travel_2_5'>	
+		<div>필고 사이트 서비스 설명서:</div>
+		<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
+	</div>
 	<table cellspacing='0' cellpadding='10' class='image-config' width='100%'>	
 		<tr valign='top'>
 		<td>

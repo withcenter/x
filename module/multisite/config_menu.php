@@ -27,7 +27,7 @@
 		<div class='config-main-title'>
 			<div class='inner'>
 				<img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 메뉴 선택
-				<a href='#googledoc'>도움말</a>
+				<a class='user-google-guide-button' href='#googledoc'>[도움말]</a>
 			</div>
 		</div>
 	

@@ -3,7 +3,8 @@
 		<span class='config-title-info'>추가 사이트 정보</span>
 		<span class='user-google-guide-button' page = 'google_doc_community_3_1'>[도움말]</span>
 		<span class='config-title-notice'>
-		<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span>
+			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
+		</span>
 	</div>
 	<div class='config-container'>
 	<div class='hidden-google-doc google_doc_community_3_1'>	
@@ -22,7 +23,8 @@
 		<span class='config-title-info'>사이트 로고 및 배너</span>
 		<span class='user-google-guide-button' page = 'google_doc_community_3_2'>[도움말]</span>
 		<span class='config-title-notice'>		
-		<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span>
+			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
+		</span>
 	</div>
 <div class='config-container'>
 

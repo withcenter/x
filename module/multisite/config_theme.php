@@ -13,7 +13,7 @@
 		<div class='config-main-title'>
 			<div class='inner'>
 				<img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 원하시는 테마를 선택하신 후 클릭하시면 반영이 됩니다.
-				<a href='#googledoc'>도움말</a>
+				<a class='user-google-guide-button' href='#googledoc'>[도움말]</a>
 			</div>
 		</div>
 		<div class='config-container'>
