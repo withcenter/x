@@ -396,7 +396,17 @@ table > .header td:first-child {
 	background-color: #efefef;
 	color: #7a7a7a;
 }
-
+.admin_multisite_paging  {
+	text-align: center;
+	margin-top: 20px;
+}
+.admin_multisite_paging .page_no{
+	margin: 0 2px;
+}
+.admin_multisite_paging .selected {
+	background-color: #666666;
+	color: #ffffff;
+}
 /*view sites*/
 .view-site {
 	font-family: '맑은 고딕', AppleGothic;
@@ -772,8 +782,10 @@ span.user-google-guide-button, a.user-google-guide-button{
 	cursor:pointer;
 	margin-left:10px;
 	font-weight:bold;	
+
 }
 
 a.user-google-guide-button{
 	text-decoration:none;
 }
+

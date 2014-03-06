@@ -53,15 +53,23 @@
 		<td width='33.3%'>
 			<div><?
 					if ( g::forum_exist('qna') ) {
-						echo latest('x-latest-withcenter-blue','qna', 15, 21, $cache_time=1, x::url_theme().'/img/bag-blue.png');
+						$option = array(
+										'no'=>15,
+										'icon'=>  x::url_theme().'/img/bag-blue.png'
+						);
+						echo latest('x-latest-withcenter-blue','qna', 15, 21, 1, $option);
 					}
 					else {
 						echo "NO Post";
 					}
 				?></div>
 			<div><?
-				if ( g::forum_exist('qna') ) {
-					echo latest('x-latest-withcenter-blue','help', 15, 21, $cache_time=1, x::url_theme().'/img/bag-blue.png');
+				if ( g::forum_exist('help') ) {
+					$option = array(
+										'no'=>15,
+										'icon'=>  x::url_theme().'/img/bag-blue.png'
+					);
+					echo latest('x-latest-withcenter-blue','help', 15, 21, 1, $option);
 				}
 				else {
 					echo "No Post";
