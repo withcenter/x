@@ -43,7 +43,6 @@ body{
 }
 
 .logo_search .inner  img {
-	max-width: 200px;
 	max-height: 50px;
 }
 .logo_search .inner .no-logo {
@@ -180,7 +179,7 @@ body{
 	width: 100%;
 }
 .layout .main-content .bottom_latest {
-	margin-bottom: 96px;
+	margin-bottom: 0;
 }
 
 .footer {
@@ -188,8 +187,8 @@ body{
 	width: 100%;
 	border-top: 1px solid #dddddd;
 	min-height: 39px;
-	line-height: 39px;
-	margin-top: 50px;
+	padding: 20px;
+	margin-top: 40px;
 }
 
 .footer .inner {
@@ -201,38 +200,14 @@ body{
 .no-image-banner {
 	border: 1px solid #d5d5d5;
 	height: 248px;
-	line-height: 248px;
-	font-weight: bold;
-	font-size: 15pt;
-	color: #25535a;
-	text-align: center;
-	background-color: #ebebeb;
 }
 
 .no-image-banner {
 	height: 250px;
-	position: relative;
 }
 
-.no-image-banner .button {
-	font-size: 10pt;
-	font-weight: normal;
-	background-color: #666666;
-	color: #ffffff;
-	display: inline-block;
-	height: 25px;
-	line-height: 25px;
-	padding: 0 10px;
-	border-radius: 3px;
-	position: absolute;
-	bottom: 20px;
-	right: 20px;
-}
-.no-image-banner .button:hover {
-	text-decoration: none;
-}
+
 
 .bottom-no-image-banner {
 	height: 130px;
-	line-height: 130px;
 }
