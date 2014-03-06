@@ -229,8 +229,13 @@ class x {
 			$cfg = md::config( etc::domain_name() );
 			if ( $cfg['theme'] ) $theme = $cfg['theme'];
 			else $theme = 'default';
+			$type = 'multidomain';
+		}
+		else {
+			$type = 'multisite';
 		}
 		self::$config['site']['theme'] = $theme;
+		self::$config['site']['type'] = $type;
 	}
 	
 	
@@ -266,6 +271,7 @@ class x {
 	 */
 	static function config($code,$value=null)
 	{
+		
 		if ( $value === null ) {
 			return db::result("SELECT `value` FROM x_config WHERE code='$code'");
 		}

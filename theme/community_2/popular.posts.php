@@ -7,11 +7,11 @@ $forum_4 = ms::meta('forum_no_4');
 $forum_5 = ms::meta('forum_no_5');
 $forum_6 = ms::meta('forum_no_6');
 
-if ( g::forum_exist($forum_1) ) $row1[$forum_1] = db::rows("SELECT wr_id, wr_subject, wr_datetime FROM ".$g5['write_prefix'].$forum_1." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 2");
-if ( g::forum_exist($forum_2) ) $row2[$forum_2] = db::rows("SELECT wr_id, wr_subject, wr_datetime FROM ".$g5['write_prefix'].$forum_2." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 2");
-if ( g::forum_exist($forum_3) ) $row3[$forum_3] = db::rows("SELECT wr_id, wr_subject, wr_datetime FROM ".$g5['write_prefix'].$forum_3." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 2");
-if ( g::forum_exist($forum_4) ) $row4[$forum_4] = db::rows("SELECT wr_id, wr_subject, wr_datetime FROM ".$g5['write_prefix'].$forum_4." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 2");
-if ( g::forum_exist($forum_5) ) $row5[$forum_5] = db::rows("SELECT wr_id, wr_subject, wr_datetime FROM ".$g5['write_prefix'].$forum_5." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 2");
+if ( g::forum_exist($forum_1) ) $row1[$forum_1] = db::rows("SELECT wr_id, wr_subject, wr_datetime FROM ".$g5['write_prefix'].$forum_1." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 3");
+if ( g::forum_exist($forum_2) ) $row2[$forum_2] = db::rows("SELECT wr_id, wr_subject, wr_datetime FROM ".$g5['write_prefix'].$forum_2." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 3");
+if ( g::forum_exist($forum_3) ) $row3[$forum_3] = db::rows("SELECT wr_id, wr_subject, wr_datetime FROM ".$g5['write_prefix'].$forum_3." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 3");
+if ( g::forum_exist($forum_4) ) $row4[$forum_4] = db::rows("SELECT wr_id, wr_subject, wr_datetime FROM ".$g5['write_prefix'].$forum_4." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 3");
+if ( g::forum_exist($forum_5) ) $row5[$forum_5] = db::rows("SELECT wr_id, wr_subject, wr_datetime FROM ".$g5['write_prefix'].$forum_5." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 3");
 
 if ( g::forum_exist($forum_1) && g::forum_exist($forum_2) && g::forum_exist($forum_3) && g::forum_exist($forum_4) && g::forum_exist($forum_5)) { 
 	$posts = array_merge ( $row1, $row2, $row3, $row4, $row5 );

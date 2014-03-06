@@ -6,8 +6,7 @@
 						}
 						else {?>
 							<div class='no-image-banner'>
-								배너 이미지를 어드민 페이지에서 등록해 주세요.
-								<a class='button' href='<?=ms::url_config()?>#banner_description'>사이트 관리 바로가기</a>
+								<img src='<?=x::url_theme()?>/img/no_main_banner.png' />
 							</div>
 						<?}
 					?>
@@ -26,8 +25,7 @@
 				<img src="<?=ms::meta('img_url').ms::meta('com2banner_bottom')?>" />
 			<?} else {?>
 					<div class='no-image-banner bottom-no-image-banner'>
-						배너 이미지를 어드민 페이지에서 등록해 주세요.
-							<a class='button' href='<?=ms::url_config()?>#banner_description'>사이트 관리 바로가기</a>
+						<img src='<?=x::url_theme()?>/img/no_bottom_banner.png' />
 					</div>
 			<?}?>
 		</div>
@@ -44,7 +42,7 @@
 				<? 
 				
 					$option = array('bo_table' => $forum_1);
-					include x::dir().'/theme/withcenter/bottom_latest.php';
+					include x::dir().'/theme/community_2/bottom_latest.php';
 				?>
 			</div>
 		<? }?>

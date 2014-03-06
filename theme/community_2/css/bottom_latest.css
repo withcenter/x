@@ -1,5 +1,5 @@
 .bottom_latest {
-	border: 1px solid #95cfb7;
+	border: 1px solid #d5d5d5;
 	padding: 12px 9px 9px 9px;
 	background-color: #f5f5f5;
 }
@@ -9,11 +9,11 @@
 }
 
 .bottom_latest .photo {
-	width: 95px;
-	height: 95px;
+	width: 112px;
+	height: 112px;
 	overflow: hidden;
 	display: inline-block;
-	margin-left: 7.5px;
+	margin-left: 8.5px;
 	position: relative;
 }
 .bottom_latest .photo img {
@@ -25,15 +25,21 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 55px;
-	height: 55px;
+	width: 112px;
+	height: 112px;
 	background-color: #307b79;
 	color: #ffffff;
 	opacity: 0.8;
 	display: inline-block;
-	font-size: 1.250em;
-	padding: 23px 20px 20px 20px;
+	font-size: 9pt;
 	display: none;
+}
+.bottom_latest .photo .subject b {
+	display: inline-block;
+	height: 90px;
+	margin: 10px;
+	overflow: hidden;
+	line-height: 18px;
 }
 
 .bottom_latest .photo .subject:hover  {

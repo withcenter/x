@@ -1,0 +1,135 @@
+<link rel="stylesheet" type="text/css" href="jbutton.css">
+<style>
+body, div, a { font-size: 9pt; }
+</style>
+<ul>
+	<li> You must use it with <b>A</b> tags or <b>SPAN, DIV</b> tags only for IE7 compatibility view reason.</li>
+	<li> If you use it with INPUT tags, it still look good with IE9 and above<li>
+	<li> INPUT tags use with IE 7 will still work but may look urgly.
+	</li>
+	<li>
+		To clear the float, jbutton.css has something below...<br>
+		overflow:auto;<br>
+		
+	</li>
+	<li> add "&nbsp;" to adjust some button strign </li>
+	<li>
+		Do not use it inside nested A tag. LIke...
+		.. A tag...
+		...Div tag...
+		... .jbutton-gorup....
+		
+	</li>
+</ul>
+<xmp>
+		<span class='jbutton-group'>
+			<span class='jbutton orange cancel' idx_book='<?=$book['idx']?>'>Cancel</span>
+		</span>
+</xmp>
+<xmp>
+		<span class='jbutton-group'>
+			<a class='jbutton orange cancel' href='?module=lms&action=cancel&idx_book=<?=$book['idx']?>'><?="Cancel"?></a>
+		</span>
+</xmp>
+<xmp>
+<div class="jbutton-group">
+	<a href="#" class="jbutton orange plus" style='font-weight:bold;'>POAST A THREAD</a>
+	<div style='clear:left;'></div>
+</div>
+</xmp>
+
+				<div class="jbutton-group">
+					<a href="#" class="jbutton orange plus" style='font-weight:bold;'>POAST A THREAD</a>
+					<div style='clear:left;'></div>
+				</div>
+				<p>
+				
+<xmp>
+	<form>
+		<div class='jbutton-group'>
+			<input type='submit' class='jbutton plus' value="Submit">
+			<a class='jbutton home' href='./'>Cancel</a>
+			<div style='clear:left;'></div>
+		</div>
+	</form>
+</xmp>
+	
+	<form>
+		<div class='jbutton-group'>
+			<input type='submit' class='jbutton plus' value="Submit">
+			<a class='jbutton home' href='./'>Cancel</a>
+			<div style='clear:left;'></div>
+		</div>
+	</form>
+	
+<xmp>
+@example 1
+				<div style='float:right; padding: 6px;'>
+					<div class="jbutton-group">
+						<a class='jbutton  setting' href="$file[url]">Setting</a>
+						<a class='jbutton red download' href="$file[url]">DOWNLOAD</a>
+						<a class='jbutton orange plus' href="$file[url]">Plus</a>
+						<a class='jbutton blue edit' href="$file[url]">Edit</a>
+						<a class='jbutton red-active key' href="$file[url]">Key</a>
+						<a class='jbutton orange-active list' href="$file[url]">List</a>
+						<a class='jbutton blue-active plus' href="$file[url]">Plus</a>
+						<a class='jbutton blue-active copy' href="$file[url]">Copy</a>
+						<a class='jbutton blue-active lock' href="$file[url]">Lock</a>
+						<a class='jbutton blue-active reload' href="$file[url]">reload</a>
+						<a class='jbutton blue-active trash' href="$file[url]">trash or Delete</a>
+						<a class='jbutton blue-active up' href="$file[url]">up</a>
+						<a class='jbutton blue-active down' href="$file[url]">down</a>
+						<a class='jbutton blue-active report' href="$file[url]">report</a>
+						<a class='jbutton blue-active category' href="$file[url]">category</a>
+						<a class='jbutton blue-active temp' href="$file[url]">temp</a>
+						<a class='jbutton blue-active check' href="$file[url]">check</a>
+						<a class='jbutton blue-active link' href="$file[url]">link</a>
+						<div style='clear:left;'></div>
+					</div>
+				</div>
+</xmp>
+
+				<div style='padding: 6px;'>
+					<div class="jbutton-group">
+						<a class='jbutton  setting' href="$file[url]">Setting</a>
+						<a class='jbutton red download' href="$file[url]">DOWNLOAD</a>
+						<a class='jbutton orange plus' href="$file[url]">Plus</a>
+						<a class='jbutton blue edit' href="$file[url]">Edit</a>
+						<a class='jbutton red-active key' href="$file[url]">Key</a>
+						<a class='jbutton orange-active list' href="$file[url]">List</a>
+						<a class='jbutton blue-active plus' href="$file[url]">Plus</a>
+						<a class='jbutton blue-active copy' href="$file[url]">Copy</a>
+						<a class='jbutton blue-active lock' href="$file[url]">Lock</a>
+						<a class='jbutton blue-active reload' href="$file[url]">Cancel or Reload</a>
+						<a class='jbutton blue-active trash' href="$file[url]">trash</a>
+						<a class='jbutton blue-active up' href="$file[url]">up</a>
+						<a class='jbutton blue-active down' href="$file[url]">down</a>
+						<a class='jbutton blue-active report' href="$file[url]">report</a>
+						<a class='jbutton blue-active category' href="$file[url]">category</a>
+						<a class='jbutton blue-active temp' href="$file[url]">temp</a>
+						<a class='jbutton blue-active check' href="$file[url]">Submit or Check</a>
+						<a class='jbutton blue-active link' href="$file[url]">link</a>
+						<a class='jbutton blue-active home' href="$file[url]">Home</a>
+						<div style='clear:left;'></div>
+					</div>
+				</div>
+				
+More Icons<br>
+
+				<div class="jbutton-group">
+					<a class='jbutton blue credit' href="#">Create</a>
+					<a class='jbutton red donate' href="#">Donate</a>
+					<a class='jbutton orange email' href="#">Email</a>
+					<a class='jbutton blue heart' href="#">Heart</a>
+					<a class='jbutton red-active login' href="#">Login</a>
+					<a class='jbutton orange-active logout' href="#">Logout</a>
+					<a class='jbutton blue-active card' href="#">Card</a>
+					<a class='jbutton blue star' href="#">Star</a>
+					<a class='jbutton blue statistics' href="#">Statistics</a>
+					<a class='jbutton blue tool' href="#">Tool</a>
+					<a class='jbutton blue help' href="#">Light, Help</a>
+				</div>
+				
+
+<br>&nbsp;
+<br>&nbsp;

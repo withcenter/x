@@ -12,12 +12,12 @@
 	echo "
 		<tr valign='top' class='header'>
 			<td></td>
-			<td>DOMAIN</td>
-			<td>USER ID</td>
-			<td>TITLE</td>
-			<td align='center'>HEADER</td>
-			<td align='center'>FOOTER</td>
-			<td align='center'>PRIORITY</td>
+			<td>Domain</td>
+			<td>Owner</td>
+			<td>Site Name</td>
+			<td align='center'>Status</td>
+			<td align='center'>No. Forum</td>
+			<td align='center'>No. Post</td>
 		</tr>
 	";
 	$i = 0;
@@ -27,19 +27,22 @@
 		$i++;
 		
 		echo "<tr class='row $background'>";
-			echo "<td><a href='?module=multisite&action=admin_update&idx=$site[idx]'>Edit =></a></td>";
+			echo "<td><div class='jbutton-group'><a class='jbutton orange edit' href='?module=multisite&action=admin_update&idx=$site[idx]'>Edit</a></div></td>";
 			echo "<td><a href='http://$site[domain]'>$site[domain]</a></td>";
 			echo "<td>$site[mb_id]</td>";
 			echo "<td><span class='site-title'>$site[title]</span></td>";
-			if ( !empty($site['header']) ) $header = 'O';
-			else $header = 'X';
-			echo "<td align='center'>$header</td>";
 			
-			if ( !empty($site['footer']) ) $footer = 'O';
-			else $footer = 'X';
-			echo "<td align='center'>$footer</td>";
 			
-			echo "<td align='center'>$site[priority]</td>";
+			
+			
+			
+			echo "<td align='center'>".ms::meta_get($site['domain'], 'status')."</td>";
+			
+			
+			
+			echo "<td align='center'>".ms::count_forum($site['domain'])."</td>";
+			
+			echo "<td align='center'>".ms::count_post(ms::forum_ids( $site['domain'] ), null )."</td>";
 			
 
 		echo '</tr>';

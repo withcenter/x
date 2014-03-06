@@ -3,15 +3,18 @@
 -- Table structure for table `x_multidomain_config`
 --
 
+
+
 CREATE TABLE IF NOT EXISTS `x_multidomain_config` (
   `idx` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `domain` varchar(32) NOT NULL DEFAULT '',
   `priority` tinyint(4) NOT NULL DEFAULT '0',
   `theme` varchar(64) NOT NULL DEFAULT '',
+  `title` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`idx`),
   UNIQUE KEY `domain` (`domain`),
   KEY `priority` (`priority`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 -- --------------------------------------------------------
 

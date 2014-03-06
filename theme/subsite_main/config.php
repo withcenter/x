@@ -1,2 +1,2 @@
 <?php
-	$theme_config['name'] = "subsite_main";
+	$theme_config['name'] = "Subsite Main Theme";

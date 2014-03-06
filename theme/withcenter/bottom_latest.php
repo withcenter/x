@@ -12,7 +12,7 @@ $board = sql_fetch($sql);
 $bo_subject = get_text($board['bo_subject']);
 
 $tmp_write_table = $g5['write_prefix'] . $bo_table; // 게시판 테이블 전체이름
-$sql = " select * from {$tmp_write_table} where wr_is_comment = 0 AND wr_file <> 0 order by wr_id DESC limit 0, 7 ";
+$sql = " select * from {$tmp_write_table} where wr_is_comment = 0 AND wr_file <> 0 order by wr_id DESC limit 0, 6 ";
 $result = sql_query($sql);
 
 for ($i=0; $row = sql_fetch_array($result); $i++) {
@@ -22,9 +22,9 @@ for ($i=0; $row = sql_fetch_array($result); $i++) {
 if ( $list ) {
 echo "<div class='bottom_latest'>";
 	foreach ( $list as $li ) {
-		$thumb = get_list_thumbnail($bo_table, $li['wr_id'], 95, 95);
+		$thumb = get_list_thumbnail($bo_table, $li['wr_id'], 110, 110);
 		$url = $li['href'];
-		$subject = conv_subject($li['wr_subject'], 20, "..." );
+		$subject = conv_subject($li['wr_subject'], 60, "..." );
 		if ( $thumb['src'] ) {
 			echo "
 					<span class='photo'>

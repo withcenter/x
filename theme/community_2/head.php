@@ -11,8 +11,9 @@
 			<?if( ms::meta('header_logo') ) { ?>
 				<img src="<?=ms::meta('img_url').ms::meta('header_logo')?>">
 			<?}
-				else echo "<span class='no-logo'>어드민 페이지에서 로고를 업로드 해 주세요.</span>";
-			?>
+				else {?>
+				<img src="<?=x::url_theme()?>/img/banner.png" />	
+			<?}?>
 		</a>
 		
 		<div class='search-bar'>

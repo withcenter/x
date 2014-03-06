@@ -13,6 +13,15 @@
 	$error_hook_latest = null;
 	
 	
+
+if ( admin_page() ) {
+}
+else {
+	if ( x::$config['site']['type'] == 'multisite' ) ms::set_title();
+	else if ( x::$config['site']['type'] == 'multidomain' ) md::set_title();
+}
+
+	
 	
 	
 // -----------------------------------------------------------------------------
@@ -221,6 +230,13 @@ function hook_body_begin()
 	global $done_head_begin_skin_update;
 	if ( $done_head_begin_skin_update ) return;
 	else $done_head_begin_skin_update = 1;
+	
+	
+	
+	$url = x::url() . '/css/jbutton/jbutton.css';
+	echo "<link rel='stylesheet' href='$url'>\n";
+	
+	
 	$url = x::url() . '/css/skin-update.css';
 	echo "<link rel='stylesheet' href='$url'>\n";
 	

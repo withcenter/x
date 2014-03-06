@@ -12,12 +12,11 @@
 
 /**FOOTER */
 .layout .footer-wrapper {
-	margin-top: 10px;
+	margin-top:40px;
 	border-top: 1px solid #d1d1d1;
 	background: #fafafa;
-	font-family: '맑은 고딕', AppleGothic;
 	color: #444444;
-	padding: 20px 0;
+	padding: 30px 0;
 }
 
 .layout .footer {
@@ -52,6 +51,7 @@
 	margin-bottom: 10px;
 	border-bottom: solid 1px #bbbbbb;
 	width: 850px;
+	font-family: '맑은 고딕', AppleGothic;
 }
 
 .layout .footer .footer-text {

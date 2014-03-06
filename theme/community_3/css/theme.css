@@ -1,3 +1,6 @@
+body {
+}
+
 button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="reset"]::-moz-focus-inner {
 	padding: 0 !important;
 	border: 0 none !important;
@@ -6,10 +9,9 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 
 .layout {
 	width: 100%;
-	font-size: 10pt;
 }
 .layout, .layout a {
-	font-family: Dotum, '맑은 고딕', AppleGothic;
+	font-family: Dotum,'맑은 고딕', AppleGothic;
 }
 .layout .body-wrapper {
 	width: 100%;

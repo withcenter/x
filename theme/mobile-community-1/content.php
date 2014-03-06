@@ -1,6 +1,6 @@
 <div class='gallery'>
 <?php
-	echo latest( 'x-rwd-gallery', 'ms_test6_1', 40, 40, 1,
+	echo latest( 'x-rwd-gallery', 'ms_test7_1', 40, 40, 1,
 		array(
 			'width'		=>300,
 			'height'	=>180,
