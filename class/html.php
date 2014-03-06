@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 class html {
 	/**
@@ -31,5 +31,6 @@ class html {
 		*/
 	}
 }
+
 
 

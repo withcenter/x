@@ -55,29 +55,48 @@ a {
 /* menu */
 #header .menu {
 	background-color:#345184;
-	overflow:hidden;
+}
+#header .menu .inner {
+	margin:0 auto;
+	max-width: 970px;
 }
 #header .menu ul {
 	list-style:none;
 	margin:0 auto;
 	padding:0;
-	width: 970px;
-	height: 2.8em;
-	overflow:hidden;
+	width: 100%;
 }
 #header .menu ul li {
 	display:inline-block;
 }
 #header .menu ul li a {
 	display:inline-block;
-	padding: 10px;
+	padding: 1em;
 	text-align:center;
 }
-#header .menu ul li {
-	border-left: 1px solid white;
+
+
+
+/* mobile-menu */
+#header .mobile-menu {
+	display:none;
+	padding: 0.4em;
+	background-color: black;
 }
-#header .menu ul li:first-child{
-	border-left: 0;
+#header .mobile-menu ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+#header .mobile-menu ul li {
+	display:inline-block;
+}
+
+#header .mobile-menu ul li a {
+	display:inline-block;
+	padding: 1em;
+	background-color: white;
+	color: black;
 }
 
 /* #header .top */
@@ -126,14 +145,17 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 
 /* #header .submenu */
 #header .submenu {
-	display:none;
+	margin: 0 auto;
+	max-width: 970px;
 }
 #header .submenu ul {
 	list-style:none;
 	margin: 0;
 	padding: 0;
-	background-color: #ecf0f7;
+	background-color: #d8d8d8;
 	text-align:center;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
 }
 #header .submenu li {
 	display: inline;
@@ -202,23 +224,41 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 	background-color: #ededed;
 }
 
-/* below 640 px */
+/* below 960 px */
 @media all and ( max-width: 60em ) {
 	#content {
 		padding: 0.4em;
+	}
+	.submenu {
+		margin-right: 1em !important;
+		margin-left: 1em !important;
 	}
 }
 
 
 /* below 640 px */
 @media all and ( max-width: 40em ) {
-	#header .submenu { display: block; }
 	#header .top .search .key{ width: 16em; }
 	#sidebar {
 		display:none;
 	}
 	#data {
 		margin-left: 0;
+	}
+	
+	#header .menu {
+		display:none;
+		padding: 0.8em 0;
+	}
+	#header .menu ul li {
+		display:block;
+		margin: 0.4em;
+		border: 1px solid white;
+		border-radius: 4px;
+		background-color: #385c9c;
+	}
+	#header .mobile-menu {
+		display:block;
 	}
 }
 /* below 600 px */

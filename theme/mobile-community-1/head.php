@@ -17,8 +17,9 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
 		<div class='logo'><a href='<?=g::url()?>'><img src="<?=x::theme_url('img/logo-below-500-px.png')?>"></a></div>
 	</div>
 	
-	<div class='menu'><?include 'menu.php'?></div>
-	<div class='submenu'><?include 'submenu.php'?></div>
+	<div class='mobile-menu'><div class='inner'><?include 'mobile-menu.php'?></div></div>
+	<div class='menu'><div class='inner'><?include 'menu.php'?></div></div>
+	<div class='submenu'><div class='inner'><?include 'submenu.php'?></div></div>
 	
 </div>
 

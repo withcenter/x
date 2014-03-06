@@ -5,3 +5,8 @@ $(function(){
 	});
 });
 
+
+function open_menu()
+{
+	$('.menu').show();
+}
