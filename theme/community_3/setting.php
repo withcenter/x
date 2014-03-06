@@ -107,7 +107,7 @@ function setTopMenu( $name ) {
 <table cellspacing='0' cellpadding='10' class='image-config' width='100%'>
 
 	<tr valign='top' >
-		<td width='50%'>
+		<td colspan=2>
 			<div class='image-title'>
 				<img src='<?=x::url()?>/module/multisite/img/img-icon.png'>사이트 로고				
 			</div>
@@ -122,6 +122,7 @@ function setTopMenu( $name ) {
 				<?}?>
 			</div>
 		</td>
+		<? /*
 		<td width='50%'>
 			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>회사로고</div>
 			<div class='image-upload'>
@@ -134,7 +135,7 @@ function setTopMenu( $name ) {
 					<input type='checkbox' name='com3banner_company_remove' value='y'><span class='title-small'>이미지 제거</span>
 				<?}?>
 			</div>
-		</td>
+		</td> */?>
 	</tr>
 	<tr valign='top'>
 		<td>		
