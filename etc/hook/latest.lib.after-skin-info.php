@@ -1,7 +1,10 @@
 <?php
 
 	///
-	 x::hook( "latest_after_skin_info" ); if ( $error_hook_latest < 0 ) return "No post on $bo_table";
+	 x::hook( "latest_after_skin_info" );
+	 
+	 
+	 
 	 
 	/// https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.2jz9ybhuk887
 	$code = x::skin_code( $global_skin_dir, $bo_table );
@@ -9,6 +12,11 @@
 	
 	
 	
+	 /** @short This code is part of 'X' and when it is run by'X', 'default' forum exists.
+	  *
+	  */
+	 if ( ! g::forum_exist( $bo_table ) ) $bo_table = 'default';
+	 
 	
 	
 	

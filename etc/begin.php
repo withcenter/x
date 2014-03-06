@@ -13,15 +13,6 @@
 	$error_hook_latest = null;
 	
 	
-
-if ( admin_page() ) {
-}
-else {
-	if ( x::$config['site']['type'] == 'multisite' ) ms::set_title();
-	else if ( x::$config['site']['type'] == 'multidomain' ) md::set_title();
-}
-
-	
 	
 	
 // -----------------------------------------------------------------------------
@@ -153,7 +144,7 @@ function hook_latest_path()
 {
 }
 */
-
+/*
 x::hook_register( 'latest_after_skin_info', 'hook_latest_check' );
 function hook_latest_check()
 {
@@ -161,7 +152,7 @@ function hook_latest_check()
 	if ( g::forum_exist( $global_bo_table ) ) return;
 	else $error_hook_latest = FORUM_NOT_EXIST;
 }
-
+*/
 
 
 
@@ -230,13 +221,6 @@ function hook_body_begin()
 	global $done_head_begin_skin_update;
 	if ( $done_head_begin_skin_update ) return;
 	else $done_head_begin_skin_update = 1;
-	
-	
-	
-	$url = x::url() . '/css/jbutton/jbutton.css';
-	echo "<link rel='stylesheet' href='$url'>\n";
-	
-	
 	$url = x::url() . '/css/skin-update.css';
 	echo "<link rel='stylesheet' href='$url'>\n";
 	
