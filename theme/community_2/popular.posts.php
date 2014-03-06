@@ -7,7 +7,7 @@ for ( $i = 1 ; $i <= 10; $i++ ) {
 
 for ( $i = 1 ; $i <= 10 ; $i++ ) {
 	if ( !(${'forum_' . $i}) ) continue;
-		$posts[${'forum_' . $i}] = db::rows("SELECT wr_id, wr_subject, wr_datetime FROM ".$g5['write_prefix'].${'forum_' . $i}." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 3");
+		$posts[${'forum_' . $i}] = db::rows("SELECT * FROM ".$g5['write_prefix'].${'forum_' . $i}." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 3");
 }
 $posts = array_filter( $posts );
 
@@ -26,7 +26,8 @@ $posts = array_filter( $posts );
 	if ( $posts ) {
 		foreach ( $posts as $key => $post ) {		
 			foreach ( $post as $p ) {
-
+				$p_id = $p['wr_id'];
+				$url = g::url()."/bbs/board.php?bo_table=$key&wr_id=$p_id";
 				$popular_subject = conv_subject( $p['wr_subject'], 14, '...');				
 				echo "
 						<div class='row'>
