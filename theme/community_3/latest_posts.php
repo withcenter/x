@@ -49,7 +49,7 @@ if( $latest_rows ) {
 						<div class='post-image'><a href='<?=$img?>' target='_blank'><img src='<?=$img?>'></a></div>
 					</td>
 					<td width='110'>
-						<div class='subject'><a href='<?=$url?>'><?=$latest_subject?></a></div>
+						<div class='subject'><a href='<?=$latest_url?>'><?=$latest_subject?></a></div>
 					</td>
 					<td width='40' align='right'>
 						<span class='num_comments'><?=$latest_comment_count?></span>
