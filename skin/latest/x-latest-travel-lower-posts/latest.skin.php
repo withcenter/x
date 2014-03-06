@@ -9,7 +9,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
     <div class='travel_lower_post_title'>
 		
 		<span class='board_subject'>
-		<?if( $options ) echo "<img class='icon' src='".$options."'/>";?>
+		<?if( $options ) echo "<img class='icon' src='".$options['icon']."'/>";?>
 		<a href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$bo_table?>'><?php echo cut_str( $bo_subject, 20, "..." );?></a>
 		
 		</span>

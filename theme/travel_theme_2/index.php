@@ -88,7 +88,11 @@
 				<?
 				$latest_bo_table = ms::board_id(etc::domain()).'_4';
 				if(g::forum_exist($latest_bo_table)){	
-					$latest_1_output = latest("x-latest-travel-lower-posts", $latest_bo_table, 4, 20, $cache_time=1, x::url_theme()."/img/folded-paper.png");
+					$option = array( 
+									'no' => 4,
+									'icon'=> x::url_theme()."/img/folded-paper.png"
+								);
+					$latest_1_output = latest("x-latest-travel-lower-posts", $latest_bo_table, 4, 20, $cache_time=1, $option );
 					echo $latest_1_output;
 				}
 				?>
@@ -97,7 +101,12 @@
 				<?
 				$latest_bo_table = ms::board_id(etc::domain()).'_5';
 				if(g::forum_exist($latest_bo_table)){	
-					$latest_1_output = latest("x-latest-travel-lower-posts", $latest_bo_table, 4, 20, $cache_time=1, x::url_theme()."/img/folded-paper.png");
+					$option = array( 
+									'no' => 4,
+									'icon'=> x::url_theme()."/img/folded-paper.png"
+								);
+				
+					$latest_1_output = latest("x-latest-travel-lower-posts", $latest_bo_table, 4, 20, $cache_time=1, $option );
 					echo $latest_1_output;
 				}
 				?>
@@ -106,7 +115,11 @@
 				<?
 				$latest_bo_table = ms::board_id(etc::domain()).'_6';
 				if(g::forum_exist($latest_bo_table)){	
-					$latest_1_output = latest("x-latest-travel-lower-posts", $latest_bo_table, 4, 20, $cache_time=1, x::url_theme()."/img/folded-paper.png");
+					$option = array( 
+									'no' => 4,
+									'icon'=> x::url_theme()."/img/folded-paper.png"
+								);
+					$latest_1_output = latest("x-latest-travel-lower-posts", $latest_bo_table, 4, 20, $cache_time=1, $option);
 					echo $latest_1_output;
 				}
 				?>
