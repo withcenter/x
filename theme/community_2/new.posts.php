@@ -1,5 +1,5 @@
 <?php
-$rows = db::rows("SELECT wr_id, bo_table FROM $g5[board_new_table] WHERE wr_id = wr_parent AND bo_table LIKE '".ms::board_id( etc::domain() )."%' ORDER BY bn_datetime DESC LIMIT 0, 10");
+$rows = db::rows("SELECT wr_id, bo_table FROM $g5[board_new_table] WHERE wr_id = wr_parent AND bo_table LIKE '".ms::board_id( etc::domain() )."%' ORDER BY bn_datetime DESC LIMIT 0, 15");
 
 $q_tmp = array();
 foreach ( $rows as $row ) {
