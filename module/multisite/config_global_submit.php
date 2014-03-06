@@ -1,9 +1,12 @@
 <?php
 /**remove tags*/
 foreach ( $in as $key => $value) {
-	$in[$key] = strip_tags($value);
+	if( $key == 'footer_text' ){
+		$in[$key] = preg_replace("/\<.*script/", "<", $value);
+	}else{
+		$in[$key] = strip_tags($value);		
+	}		
 }
-
 /** new config meta update method */
 ms::meta( 'title' , $in['title'] );
 ms::meta( 'secondary_title' , $in['secondary_title'] );

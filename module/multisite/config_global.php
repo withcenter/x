@@ -17,10 +17,22 @@
 		<input type='hidden' name='module' value='multisite'>
 		<input type='hidden' name='action' value='config_global_submit'>
 <div class='config site-global'>
-	<div class='config-main-title'><div class='inner'><img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 사이트 정보</div></div>
-		<div class='config-wrapper'>
-			<div class='config-title'><span class='config-title-info'>기본 사이트 설정</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>	
+	<div class='config-main-title'>
+		<div class='inner'>
+			<img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 사이트 정보
+		</div>				
+	</div>
+		<div class='config-wrapper'>						
+			<div class='config-title'>
+				<span class='config-title-info'>기본 사이트 설정</span>
+				<span class='user-google-guide-button' page = 'google_doc_1'>[도움말]</span>
+				<span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span>
+			</div>	
 			<div class='config-container'>
+			<div class='hidden-google-doc google_doc_1'>	
+				<div>필고 사이트 서비스 설명서:</div>
+				<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
+			</div>
 				<table cellpadding=0 cellspacing=0 width='100%'>
 					<tr valign='top'>
 						<td width='100'>
