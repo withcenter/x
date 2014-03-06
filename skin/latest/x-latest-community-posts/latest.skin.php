@@ -8,7 +8,11 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			<table width='100%'>
 				<tr valign='top'>
 					<td align='left' class='title-left'>
-						<img src="<?=$latest_skin_url?>/img/recent-posts.png">
+					<?
+					if( $options ) $img_src = $options;
+					else $img_src = $latest_skin_url."/img/recent-posts.png";
+					?>
+						<img class='icon' src='<?=$img_src?>'/>
 						<span class='label'><?=$bo_subject?></span>
 					</td>
 					<td align='right'>
@@ -37,7 +41,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		?>	
 			<li <? if( $i == $no_of_posts ) echo "class='last-item'"; ?> >				
 				<?
-					echo "<div class='post-content'><img src='".$latest_skin_url."/img/bullet.png'/><a href='$url' > $subject $content <span class='no-of-comments $no_comment'>[".strip_tags($comment_count)."]</span></a></div>";
+					echo "<img src='".$latest_skin_url."/img/bullet.png'/><div class='post-content'><a href='$url' > $subject $content <span class='no-of-comments $no_comment'>[".strip_tags($comment_count)."]</span></a></div>";
 				?>
 				<?$i++;?>
 			</li>		

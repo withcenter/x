@@ -9,7 +9,11 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			<table width='100%'>
 				<tr valign='top'>
 					<td align='left' class='title-left'>
-						<img src="<?=$latest_skin_url?>/img/my-posts.png">
+					<?
+					if( $options ) $img_src = $options;
+					else $img_src = $latest_skin_url."/img/my-posts.png";
+					?>
+						<img class='icon' src='<?=$img_src?>'/>
 						<span class='label'>내 글</div>
 					</td>
 					<td align='right'>
@@ -23,8 +27,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		<?php
 			
 			foreach ( $list as $li ) {
-				$subject = conv_subject($li['wr_subject'], 18, "...");				
-				$subject .= ":";
+				$subject = $li['subject'];				
 				$url = $li['href'];
 				$no_comment = '';
 				if ( !$comment_count = strip_tags($li['comment_cnt'])) {
@@ -35,7 +38,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			<li>
 				<a href='<?=$url?>'>					
 				<?
-					echo "<span class='subject'>$subject</span> <span class='no-of-comments ".$no_comment."'>($comment_count)</span>";
+					echo "<img src='".$latest_skin_url."/img/bullet.png'/><div class='comments-info'><span class='subject'>$subject</span> <span class='no-of-comments ".$no_comment."'>[$comment_count]</span></div>";
 				?>
 				</a>
 			</li>		

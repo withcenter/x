@@ -314,8 +314,9 @@ class multisite {
 	 *  <?=g::url_board(ms::board_id(etc::domain()))?>
 	 *  @endcode
 	 */
-	static function board_id( $domain )
+	static function board_id( $domain=null )
 	{
+		if ( empty($domain) ) $domain = etc::domain();
 		return 'ms_' . etc::last_domain($domain);
 	}
 	

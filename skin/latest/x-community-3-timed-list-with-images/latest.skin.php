@@ -25,9 +25,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			else $img = $latest_skin_url.'/img/no-image.png';
 			
 			
-			echo "<td width=40><div class='timed_list_image'><a href='".$list[$i]['href']."'><img src='$img'/></a></div></td>";
+			echo "<td width='40'><div class='timed_list_image'><a href='".$list[$i]['href']."'><img src='$img'/></a></div></td>";
 			        
-            echo "<td width=240>
+            echo "<td>
 					<div class='subject'><a href='".$list[$i]['href']."'>".conv_subject($list[$i]['subject'], 15, '...')."</a></div>
 					<div class='contents_wrapper'><a href='".$list[$i]['href']."'>".cut_str(strip_tags($list[$i]['wr_content']), 35, '...')."</a></div>
 			
@@ -36,7 +36,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			if( !$list[$i]['comment_cnt'] ) $comment_count = "<span class='comment_count no-comment'>0</span>";
 			else $comment_count = "<span class='comment_count'>".strip_tags($list[$i]['comment_cnt'])."</span>";
 			
-			echo "<td><div class='comment_and_time'>".$comment_count."<br><span class='time'>".$list[$i]['datetime2']."</span></div></td>";
+			echo "<td width='50'><div class='comment_and_time'>".$comment_count."<br><span class='time'>".$list[$i]['datetime2']."</span></div></td>";
              ?>	
 	</tr>	
     <?php }  ?>

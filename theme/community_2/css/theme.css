@@ -142,6 +142,8 @@ body{
 	width: 970px;
 	margin: 20px auto 0 auto;
 }
+.layout .main-content .left { float: left; width: 200px; }
+.layout .main-content .content { float: right; width: 760px; }
 
 .layout .main-content .main-top{
 	margin-bottom: 27px;

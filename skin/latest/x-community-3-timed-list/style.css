@@ -32,7 +32,7 @@
 .comm3_timed_list .timed_list_title .more_button{
 	position:absolute;
 	right:10px;
-	top:0;
+	top:4px;
 	font-weight:normal;
 	color:#808080;
 	font-size: 9pt;
@@ -83,6 +83,7 @@
 	line-height: 19px;
 	height: 19px;
 	float:left;	
+	word-break:break-all;
 }
 
 .comm3_timed_list .subject .dot {

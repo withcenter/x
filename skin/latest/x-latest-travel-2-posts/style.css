@@ -50,7 +50,7 @@
  .travel-2-posts .title img {
 	margin-right: 5px;
 	position: relative;
-	top: -1px;
+	top: -2px;
 }
 
  .travel-2-posts .travel-2-posts-items {
@@ -62,11 +62,11 @@
 }
 
  .travel-2-posts .travel-2-posts-items .subject {
-	height: 17px;
-	line-height: 17px;
+	height: 16px;
+	line-height: 16px;
 	overflow: hidden;
 	display: inline-block;
-	width: 150px;
+	width: 130px;
 	color: #444444;
  }
  

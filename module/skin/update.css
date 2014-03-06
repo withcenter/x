@@ -47,17 +47,41 @@ hr {
 	width: 100%;
 	height: 120px;
 }
-
-input[name='bo_subject'] {
-	width: 313px;
+input, select {
 	margin: 0;
+}
+
+input[name='bo_subject'], input[name='skin'] {
+	width: 313px;
 }
 input[name='bo_table'] {
 	width: 180px;
-	margin: 0;
 }
 select[name='select_bo_table'] {
-	margin: 0;
 	padding: 1px;
 	width: 130px;
+}
+
+
+
+.skin-list {
+	display: none;
+	padding: 0.4em;
+	background-color: #ccbbee;
+}
+.skin-list > .skin {
+	float: left;
+	margin: 0.8em;
+	padding: 0.4em;
+	width: 20em;
+	border: 1px solid grey;
+	cursor:pointer;
+}
+.skin-list > .skin > .preview {
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+.skin-list > .skin > .preview > img {
+	width: 100%;
 }

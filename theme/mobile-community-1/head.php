@@ -26,11 +26,6 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
 <div id="content">
 	
     <div class="inner">
-		<?/* G5 의 모바일 게시판 스킨을 DIV 으로 반응형 처리가 어려워서 table 로 한다. */?>
-		<table cellpadding='0' cellspacing='0' border='0' width='100%'>
-			<tr valign='top'>
-				<td><div id='sidebar'><?include 'sidebar.php'?></div></td>
-				<td width='100%'>
 					<div id='data'>
 					<?if ( preg_match('/^config/', $action) ) include ms::site_menu();?>
 					<div id="login-box">

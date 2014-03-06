@@ -471,13 +471,15 @@
 	margin-bottom: 10px;
 } 
 .config_general input[name='title'], .config_general input[name='secondary_title'] {
-	width: 600px !important;
+	width: 98% !important;
 }
 
 .config_general textarea[name='footer_text'] {
-	width: 600px;
-	margin-left: 49px;
-	height: 100px;
+	width: 98%;
+	height: 125px;
 	padding: 2px;
 }
 
+.config {
+	font-family: '맑은 고딕', AppleGothic;
+}

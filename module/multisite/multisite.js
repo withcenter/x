@@ -10,4 +10,14 @@ $(function() {
 		var menu_name = $(this).attr('menu_name');
 		$(".support-content ."+menu_name ).show();
 	});
+	
+	/*config_theme.php*/
+	$(".theme-thumb.inactive").click(function() {
+		$confirm = confirm('Do you really want to change Theme?');
+		if( $confirm == true ) {
+			var theme_val = $(this).attr('theme_value');
+			$("#theme_value").val(theme_val);
+			$(".config_theme").submit();
+		}
+	});
 });

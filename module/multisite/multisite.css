@@ -158,9 +158,8 @@
 	cursor: pointer;
 	border-radius: 4px;
 }
-/***Not used anymore?***
-****commented due to css conflict on other submit buttons****
-input[type='submit'] {
+
+.forum_setting input[type='submit'] {
 	border: 1px solid #blue;
 	background-color: #f9f9f9;
 	color: blue;
@@ -169,12 +168,12 @@ input[type='submit'] {
 	padding: 0 15px;
 	cursor: pointer;
 }
-input[type='submit']:hover {
+.forum_setting input[type='submit']:hover {
 	border: 1px solid orange;
 	background-color: orange;
 	color: #ffffff;
 }
-*/
+
 
 .item {
 	display: inline-block;
@@ -247,28 +246,38 @@ table > .header td:first-child {
 }
 
 .config-theme .theme-thumb {
+	padding: 10px;
+	background: #e6e6e6;
 	position: relative;
-
+	cursor: pointer;
 	overflow: hidden;
 }
 
-.config-theme .theme-thumb table {
+.config-theme .theme-thumb span.theme-name {
 	position: absolute;
 	bottom: 0;
-	background: #333333;
-	width: 100%;
+	left: 0;
+	background: #f9f9f9;
+	width: 318px;
+	padding: 10px;
+	font-family: '맑은 고딕', AppleGothic;
+	color: #585858;
+	font-weight: bold;
+	font-size: 9pt;
+	border: solid 1px #e6e6e6;
+
 }
 
 .config-theme .theme-thumb p {
 	position: absolute;
 	top: 0;
+	left: 0;
 	padding: 0.5em;
 	background: #F03000;
 	width: 100%;
 }
 
 .config-theme .theme-thumb {
-
 	display: inline-block;
 	width: 320px;
 	height: 240px;

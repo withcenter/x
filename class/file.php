@@ -104,6 +104,11 @@ class file {
 			$files = file::getFiles(DIR_MODULE, true, "/admin\.menu\.php/");
 		@endcode
 		
+		@code
+			$files = file::getFiles( x::dir() . '/skin/latest', true, "/preview\.png/");
+			di($files);
+		@code
+		
 
 	 */
  
@@ -149,12 +154,16 @@ class file {
  *  @brief returns directories (of a directory)
  *  
  *  @param [in] $directory is a path(folder) to get directory list inside of it.
- *  @return Return_Description
+ *  @return array.
  *  
- *  @details returns directoris.
+ *  @details returns directoris. It does not search recursively.
  *  @code
  *  	$dirs = file::getDirs(DIR_THEME);
  *  @endcode
+ *  @code
+		$dirs = file::getDirs( x::dir() . '/skin/latest' );
+		di( $dirs );
+ *	 @endcode
  */
 static function getDirs($directory) {
 

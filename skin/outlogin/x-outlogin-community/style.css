@@ -4,13 +4,13 @@
 	background-color: #fafafa;
 	margin-bottom: 10px;
 	font-family: "Arial";
-	height: 132px;
+	height: 128px;
 }
 .login-box .inner {
 	margin: 1px;
 	border-radius: 3px;
 	border: 1px solid #ffffff;
-	padding: 7px 9px;
+	padding: 5px 9px;
 	color: #7e7e7e;
 	min-height: 60px;
 	position: relative;
