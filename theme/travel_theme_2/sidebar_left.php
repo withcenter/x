@@ -6,11 +6,7 @@ for ( $i = 1 ; $i <= 10; $i++ ) {
 ?>
 
 <div class='travel2-company-banner'>
-	<?
-	if( $company_banner = ms::meta('travel2banner_company') ) $imgsrc = ms::meta('img_url').$company_banner;
-	else $imgsrc = x::url_theme().'/img/no_company_banner.png';
-	?>
-	<img src='<?=$imgsrc?>'/>
+	<a href='http://www.philgo.com' target='_blank'><img src='<?=x::url_theme().'/img/no_company_banner.png'?>' style='border:0;' /></a>
 </div>
 
 <div class='posts-left-1'>
