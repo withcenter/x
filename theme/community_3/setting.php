@@ -1,6 +1,16 @@
   <div class='config-wrapper'>
-	<div class='config-title'><span class='config-title-info'>추가 사이트 정보</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
+	<div class='config-title'>
+		<span class='config-title-info'>추가 사이트 정보</span>
+		<span class='user-google-guide-button' page = 'google_doc_community_3_1'>[도움말]</span>
+		<span class='config-title-notice'>
+			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
+		</span>
+	</div>
 	<div class='config-container'>
+	<div class='hidden-google-doc google_doc_community_3_1'>	
+		<div>필고 사이트 서비스 설명서:</div>
+		<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
+	</div>
 		<span class='title-small'>전화번호: </span><input type='text' name='com3contact_num' value='<?=ms::meta('com3contact_num')?>'>	
 	</div>
 		<input type='submit' value='업데이트'>
@@ -8,12 +18,28 @@
 </div>
 
  <div class='config-wrapper'>
-	<div class='config-title'><span class='config-title-info'>사이트 로고 및 배너</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
-	<div class='config-container'>
+
+	<div class='config-title'>
+		<span class='config-title-info'>사이트 로고 및 배너</span>
+		<span class='user-google-guide-button' page = 'google_doc_community_3_2'>[도움말]</span>
+		<span class='config-title-notice'>		
+			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
+		</span>
+	</div>
+<div class='config-container'>
+
+<div class='hidden-google-doc google_doc_community_3_2'>	
+	<div>필고 사이트 서비스 설명서:</div>
+	<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
+</div>
+
 <table cellspacing='0' cellpadding='10' class='image-config' width='100%'>
+
 	<tr valign='top' >
 		<td width='50%'>
-			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>사이트 로고</div>
+			<div class='image-title'>
+				<img src='<?=x::url()?>/module/multisite/img/img-icon.png'>사이트 로고				
+			</div>
 			<div class='image-upload'>
 			<?if( ms::meta('header_logo') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('header_logo').">"; 
@@ -40,7 +66,7 @@
 		</td>
 	</tr>
 	<tr valign='top'>
-		<td>
+		<td>		
 			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지1</div>
 			<div class='image-upload'>
 			<?if( ms::meta('com3banner_1') ) {

@@ -27,7 +27,7 @@
 		<div class='config-main-title'>
 			<div class='inner'>
 				<img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 메뉴 선택
-				<a href='#googledoc'>도움말</a>
+				<a class='user-google-guide-button' href='#googledoc'>[도움말]</a>
 			</div>
 		</div>
 	
@@ -75,10 +75,11 @@
 			<td colspan=2><input type='submit' value='업데이트'></td>
 		</tr>
 	</table>
-
-	<a name='googledoc'></a>
-	<div>필고 사이트 서비스 설명서:</div>
-	<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:100%; height: 400px;'></iframe>
+		<div class='google-doc-wrapper'>
+			<a name='googledoc'></a>
+			<div>필고 사이트 서비스 설명서:</div>
+			<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:100%; height: 400px;'></iframe>	
+		</div>
 	</div></div>
 </div>
 </form>

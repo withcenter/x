@@ -9,7 +9,12 @@ if ( $in['done'] ) {
 }
 ?>
 <div class='config config-write'>
-<div class='config-main-title'><div class='inner'><img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 블로그 API 정보를 입력해 주세요.</div></div>
+<div class='config-main-title'>
+	<div class='inner'>
+		<img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 블로그 API 정보를 입력해 주세요.
+		<a class='user-google-guide-button' href='#googledoc'>[도움말]</a>
+	</div>
+</div>
 	<div class='config-wrapper'>
 	<div class='config-container'>
 	<form method='get'> 
@@ -39,5 +44,10 @@ if ( $in['done'] ) {
 		<input type='submit' value='업데이트' />
 		<div style='clear:right;'></div>
 	</form>
+		<div class='google-doc-wrapper'>
+			<a name='googledoc'></a>
+			<div>필고 사이트 서비스 설명서:</div>
+			<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:100%; height: 400px;'></iframe>	
+		</div>
 </div></div>
 </div>

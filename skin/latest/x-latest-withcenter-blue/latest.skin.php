@@ -1,7 +1,7 @@
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
-if ( $options ) $icon_image = "<img class='icon-image' src='$options' />";
+if ( $options ) $icon_image = "<img class='icon-image' src='".$options['icon']."' />";
 else $icon_image = null;
 ?>
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">

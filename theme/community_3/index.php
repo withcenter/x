@@ -45,7 +45,11 @@ echo $latest_1_output;
 		<?
 		$latest_bo_table = ms::board_id(etc::domain()).'_2';
 		if ( g::forum_exist( $latest_bo_table ) ) {
-			$latest_1_output = latest("x-community-3-timed-list", $latest_bo_table, 5, 23, $cache_time=1, x::url_theme()."/img/notes.png");
+			$option = array(
+				'no' => 4,
+				'icon' => x::url_theme()."/img/notes.png"
+			);
+			$latest_1_output = latest("x-community-3-timed-list", $latest_bo_table, 5, 23, $cache_time=1, $option);
 			echo $latest_1_output;
 		}
 		?>
@@ -54,7 +58,11 @@ echo $latest_1_output;
 		<?
 		$latest_bo_table = ms::board_id(etc::domain()).'_3';
 		if ( g::forum_exist( $latest_bo_table ) ) {
-			$latest_1_output = latest("x-community-3-timed-list", $latest_bo_table, 5, 23, $cache_time=1, x::url_theme()."/img/chat_icon.png");
+			$option = array(
+				'no' => 4,
+				'icon' => x::url_theme()."/img/chat_icon.png"
+			);
+			$latest_1_output = latest("x-community-3-timed-list", $latest_bo_table, 5, 23, $cache_time=1, $option);
 			echo $latest_1_output;
 		}
 		?>
@@ -68,7 +76,11 @@ echo $latest_1_output;
 		<?
 		$latest_bo_table = ms::board_id(etc::domain()).'_4';
 		if ( g::forum_exist( $latest_bo_table ) ) {
-			$latest_1_output = latest("x-community-3-timed-list-with-images", $latest_bo_table, 4, 50, $cache_time=1, x::url_theme()."/img/2papers.png");
+			$option = array(
+				'no' => 4,
+				'icon' => x::url_theme()."/img/2papers.png"
+			);
+			$latest_1_output = latest("x-community-3-timed-list-with-images", $latest_bo_table, 4, 50, $cache_time=1, $option);
 			echo $latest_1_output;
 		}
 		?>
@@ -77,7 +89,11 @@ echo $latest_1_output;
 		<?
 		$latest_bo_table = ms::board_id(etc::domain()).'_5';
 		if ( g::forum_exist( $latest_bo_table ) ) {
-			$latest_1_output = latest("x-community-3-timed-list-with-images", $latest_bo_table, 4, 50, $cache_time=1, x::url_theme()."/img/newspaper.png");
+			$option = array(
+				'no' => 4,
+				'icon' => x::url_theme()."/img/newspaper.png"
+			);
+			$latest_1_output = latest("x-community-3-timed-list-with-images", $latest_bo_table, 4, 50, $cache_time=1, $option);
 			echo $latest_1_output;
 		}
 		?>

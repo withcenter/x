@@ -1,8 +1,10 @@
 <div class='subsite-support'>
-	<div class='title'><div class='inner'>
-		<img src='<?=x::url()?>/module/multisite/img/direction.png' />
-		필고 무료 홈페이지 사용방법 안내
-	</div></div>
+	<div class='title'>
+		<div class='inner'>
+		<img src='<?=x::url()?>/module/multisite/img/direction.png' />필고 무료 홈페이지 사용방법 안내
+		<a class='user-google-guide-button' href='#googledoc'>[도움말]</a>
+		</div>
+	</div>
 	
 	<div class='support'>
 		<div class='tab-menu'>
@@ -76,6 +78,12 @@
 		<div class='inner theme-setting'>
 			<div class='sub-title'>사용하려는 사이트의 성격에 맞는 테마를 클릭 한번으로 변경하실 수 있습니다.</div>
 			<div class='support-image'><img src='<?=x::url()?>/module/multisite/support_img/t1.png' /></div>
+		</div>
+		
+		<div class='google-doc-wrapper'>
+			<a name='googledoc'></a>
+			<div>필고 사이트 서비스 설명서:</div>
+			<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:100%; height: 400px;'></iframe>	
 		</div>
 	</div>
 	

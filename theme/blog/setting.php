@@ -1,6 +1,16 @@
 <div class='config-wrapper'>
-	<div class='config-title'><span class='config-title-info'>Profile Picture and Information</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
+	<div class='config-title'>
+		<span class='config-title-info'>Profile Picture and Information</span>
+		<span class='user-google-guide-button' page = 'google_doc_blog_1'>[도움말]</span>
+		<span class='config-title-notice'>
+			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
+		</span>
+		</div>
 	<div class='config-container'>
+	<div class='hidden-google-doc google_doc_blog_1'>	
+		<div>필고 사이트 서비스 설명서:</div>
+		<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
+	</div>
 		<table cellpadding='10' cellspacing='0' class='image-config'>
 		<tr>
 			<td valign='top'>

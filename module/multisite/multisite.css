@@ -279,8 +279,8 @@ table > .header td:first-child {
 
 .config-theme .theme-thumb {
 	display: inline-block;
-	width: 320px;
-	height: 240px;
+	width: 300px;
+	height: 220px;
 }
 
 .config-theme .thumb-list {	
@@ -396,7 +396,17 @@ table > .header td:first-child {
 	background-color: #efefef;
 	color: #7a7a7a;
 }
-
+.admin_multisite_paging  {
+	text-align: center;
+	margin-top: 20px;
+}
+.admin_multisite_paging .page_no{
+	margin: 0 2px;
+}
+.admin_multisite_paging .selected {
+	background-color: #666666;
+	color: #ffffff;
+}
 /*view sites*/
 .view-site {
 	font-family: '맑은 고딕', AppleGothic;
@@ -755,3 +765,27 @@ table > .header td:first-child {
 .forum_setting .wrapper .tip {
 	color: #666666;
 }
+
+
+/**google-doc**/
+.google-doc-wrapper{
+	margin-top:10px;
+}
+
+.hidden-google-doc{
+	display:none;
+	margin-bottom:10px;
+}
+
+span.user-google-guide-button, a.user-google-guide-button{
+	color:orange;
+	cursor:pointer;
+	margin-left:10px;
+	font-weight:bold;	
+
+}
+
+a.user-google-guide-button{
+	text-decoration:none;
+}
+
