@@ -21,7 +21,7 @@
 		<div class='config-wrapper'>
 			<div class='config-title'><span class='config-title-info'>기본 사이트 설정</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>	
 			<div class='config-container'>
-				<table cellpadding=0 cellspacing=0 width='100%'>
+				<table cellpadding='5' cellspacing='0' width='100%'>
 					<tr valign='top'>
 						<td width='100'>
 							<span>메인 타이틀</span></td><td><input type='text' name='title' value='<?=ms::meta('title')?>'>
@@ -46,6 +46,9 @@
 						</td>
 					</tr>
 				</table>
+				<input type='submit' value='업데이트'>
+				<div style='clear:right;'></div>
+
 			</div>
 		</div>
 

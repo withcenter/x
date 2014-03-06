@@ -3,12 +3,14 @@
 	<div class='config-container'>
 		<span class='title-small'>전화번호: </span><input type='text' name='com3contact_num' value='<?=ms::meta('com3contact_num')?>'>	
 	</div>
+		<input type='submit' value='업데이트'>
+		<div style='clear:right;'></div>
 </div>
 
  <div class='config-wrapper'>
 	<div class='config-title'><span class='config-title-info'>사이트 로고 및 배너</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
 	<div class='config-container'>
-<table cellspacing='0' cellpadding='3' class='image-config' width='100%'>
+<table cellspacing='0' cellpadding='10' class='image-config' width='100%'>
 	<tr valign='top' >
 		<td width='50%'>
 			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>사이트 로고</div>

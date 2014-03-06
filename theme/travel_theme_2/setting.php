@@ -1,18 +1,20 @@
   <div class='config-wrapper'>
 	<div class='config-title'><span class='config-title-info'>사이트 추가 설정</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
-	<div class='config-container' cellspacing='0' cellpadding='3' >
+	<div class='config-container' cellspacing='0' cellpadding='10' >
 		<table>
 			<tr>
 				<td colspan='2'><span class='title-small'>하단문구제목</span><input type='text' name='travel2footer_tagline' value='<?=ms::meta('travel2footer_tagline')?>' /></td>
 			<tr>
 		</table>
+		<input type='submit' value='업데이트'>
+		<div style='clear:right;'></div>
 	</div>
 </div>
 
 <div class='config-wrapper'>
 	<div class='config-title'><span class='config-title-info'>사이트 상하단 로고 & 로고 문구</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
 	<div class='config-container'>
-<table cellspacing='0' cellpadding='3' class='image-config' width='100%'>
+<table cellspacing='0' cellpadding='10' class='image-config' width='100%'>
 	<tr valign='top' >
 		<td width='50%'> 
 			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>사이트 상단 로고</div>
@@ -57,12 +59,14 @@
 		</td>
 	</tr>
 </table>
+		<input type='submit' value='업데이트'>
+		<div style='clear:right;'></div>
 </div>
 </div>
  <div class='config-wrapper'>
 	<div class='config-title'><span class='config-title-info'>메인 롤링 배너</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
 	<div class='config-container'>
-	<table cellspacing='0' cellpadding='3' class='image-config' width='100%'>
+	<table cellspacing='0' cellpadding='10' class='image-config' width='100%'>
 	<tr valign='top'>
 		<td>
 			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지1</div>
@@ -157,12 +161,14 @@
 		</td>
 	</tr>
 </table>
+		<input type='submit' value='업데이트'>
+		<div style='clear:right;'></div>
 </div>
 </div>
  <div class='config-wrapper'>
 	<div class='config-title'><span class='config-title-info'>오른쪽 날개 배너</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
 	<div class='config-container'>
-	<table cellspacing='0' cellpadding='3' class='image-config' width='100%'>	
+	<table cellspacing='0' cellpadding='10' class='image-config' width='100%'>	
 		<tr valign='top'>
 		<td>
 			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>오른쪽 날개 배너1</div>
@@ -210,12 +216,14 @@
 		</td>
 	</tr>
 </table>
+		<input type='submit' value='업데이트'>
+		<div style='clear:right;'></div>
 </div>
 </div>
  <div class='config-wrapper'>
 	<div class='config-title'><span class='config-title-info'>중앙 사이드 배너, 하단 배너</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
 	<div class='config-container'>
-	<table cellspacing='0' cellpadding='3' class='image-config' width='100%'>	
+	<table cellspacing='0' cellpadding='10' class='image-config' width='100%'>	
 		<tr valign='top'>
 		<td>
 			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>왼쪽 사이드 배너</div>
