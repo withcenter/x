@@ -1,5 +1,5 @@
-<link rel='stylesheet' type='text/css' href='<?=x::url()?>/theme/withcenter/css/bottom_latest.css' />
-<script src='<?=x::url()?>/theme/withcenter/js/bottom_latest.js'></script>
+<link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/bottom_latest.css' />
+<script src='<?=x::url_theme()?>/js/bottom_latest.js'></script>
 <?php
 include_once(G5_LIB_PATH.'/thumbnail.lib.php'); 
 
@@ -22,9 +22,9 @@ for ($i=0; $row = sql_fetch_array($result); $i++) {
 if ( $list ) {
 echo "<div class='bottom_latest'>";
 	foreach ( $list as $li ) {
-		$thumb = get_list_thumbnail($bo_table, $li['wr_id'], 95, 95);
+		$thumb = get_list_thumbnail($bo_table, $li['wr_id'], 112, 112);
 		$url = $li['href'];
-		$subject = conv_subject($li['wr_subject'], 20, "..." );
+		$subject = conv_subject($li['wr_subject'], 60, "..." );
 		if ( $thumb['src'] ) {
 			echo "
 					<span class='photo'>

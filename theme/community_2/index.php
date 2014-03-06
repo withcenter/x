@@ -44,7 +44,7 @@
 				<? 
 				
 					$option = array('bo_table' => $forum_1);
-					include x::dir().'/theme/withcenter/bottom_latest.php';
+					include x::dir().'/theme/community_2/bottom_latest.php';
 				?>
 			</div>
 		<? }?>
