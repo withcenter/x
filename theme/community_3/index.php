@@ -60,7 +60,7 @@ echo $latest_1_output;
 		if ( g::forum_exist( $latest_bo_table ) ) {
 			$option = array(
 				'no' => 4,
-				'icon' => x::url_theme()."/img/chat_icon.png"
+				'icon' => x::url_theme()."/img/notes.png"
 			);
 			$latest_1_output = latest("x-community-3-timed-list", $latest_bo_table, 5, 23, $cache_time=1, $option);
 			echo $latest_1_output;
@@ -78,7 +78,7 @@ echo $latest_1_output;
 		if ( g::forum_exist( $latest_bo_table ) ) {
 			$option = array(
 				'no' => 4,
-				'icon' => x::url_theme()."/img/2papers.png"
+				'icon' => x::url_theme()."/img/newspaper2.png"
 			);
 			$latest_1_output = latest("x-community-3-timed-list-with-images", $latest_bo_table, 4, 50, $cache_time=1, $option);
 			echo $latest_1_output;
@@ -91,7 +91,7 @@ echo $latest_1_output;
 		if ( g::forum_exist( $latest_bo_table ) ) {
 			$option = array(
 				'no' => 4,
-				'icon' => x::url_theme()."/img/newspaper.png"
+				'icon' => x::url_theme()."/img/newspaper2.png"
 			);
 			$latest_1_output = latest("x-community-3-timed-list-with-images", $latest_bo_table, 4, 50, $cache_time=1, $option);
 			echo $latest_1_output;
