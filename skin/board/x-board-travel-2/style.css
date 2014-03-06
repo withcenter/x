@@ -311,6 +311,7 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 	line-height:14px;
 	height: 30px;
 	overflow:hidden;
+	word-break:break-all;
 }
 
 #travel_theme_board_2 .travel_posts .post-availability{
