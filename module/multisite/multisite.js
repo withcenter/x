@@ -22,18 +22,10 @@ $(function() {
 	});
 	
 var iframe_visible = false;	
-
+var page;
 	$('span.user-google-guide-button').click(function(){
-		var page = $(this).attr('page');		
-		$(".hidden-google-doc."+page).slideToggle( 500 );
 		
-		if( iframe_visible == false ){
-			iframe_visible = true;
-			$(window).scrollTop($(".hidden-google-doc."+page).offset().top - 100 );
-		}
-		else {
-			iframe_visible = false;
-		}
-				
+		page = $(this).attr('page');			
+		$(".hidden-google-doc."+page).slideToggle( 500 );		
 	});	
 });
