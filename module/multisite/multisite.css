@@ -789,6 +789,6 @@ a.user-google-guide-button{
 	text-decoration:none;
 }
 
-.hidden-google-doc iframe, .googledoc iframe{
+.hidden-google-doc iframe, .google-doc-wrapper iframe{
 	border:1px solid #bbbbbb;
 }
