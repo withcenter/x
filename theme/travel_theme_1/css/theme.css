@@ -97,20 +97,7 @@
 
 .main-menu li.first-item {
 	border: 0;
-	margin-left: 10px;
-}
-
-.main-menu li:hover {
-		
-}
-
-.main-menu li.first-item .inner {
-
-}
-
-.main-menu li .inner {
-
-	border-left: 0;
+	margin-left: 20px;
 }
 
 .main-menu span.menu-divider {
