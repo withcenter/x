@@ -60,18 +60,3 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		
 	</div>
 </div>
-
-<!--[if IE 7]>
-	<style>
-		a.content-community-3{
-			display:block;			
-			white-space:nowrap;
-			overflow:hidden;			
-		}
-		
-		.no-of-comments a{
-			display:block;
-			width:35px;			
-		}
-	</style>
-<![endif]-->
