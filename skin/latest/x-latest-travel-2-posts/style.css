@@ -5,16 +5,20 @@
 	overflow: hidden;
 }
 
-.travel-2-posts span.label {
-	display: inline-block;
+.travel-2-posts .label {	
 	width: 120px;
-	overflow: hidden;
-	vertical-align: middle;
-	white-space:nowrap;
-	margin-top: -2px;
+	overflow: hidden;	
+	white-space:nowrap;	
+	font-size:1em;	
+	padding-left:23px;
 }
- .travel-2-posts a {
-	text-decoration: none;
+
+.travel-2-posts .label a{	
+	color:#444444;		
+}
+
+.travel-2-posts a {
+	text-decoration: none;	
 }
 
 .travel-2-posts span.label  > a {
@@ -24,70 +28,66 @@
 	text-decoration: none;
 }
 
- .travel-2-posts .content-community-3 {
-	display: inline-block;
-	width: 130px;
-	overflow: hidden;
-}
-
  .travel-2-posts .title {
 	background: #fcfcfc;
 	border-bottom: solid 1px #bbbbbb;
-	font-weight: bold;
-	font-size: 9pt;
-	height: 28px;
-	line-height: 24px;
-	padding: 0 5px;
+	font-weight: bold;	
+	padding: 8px 10px 6px 10px;
+	position:relative;		
 }
- .travel-2-posts .title .posts-more a {
+
+ .travel-2-posts .title .posts-more{	
+	position:absolute;
+	right:10px;
+	top:9px;
+}
+
+ .travel-2-posts .title .posts-more a{
 	color: #808080;
 	font-weight: normal;
 	font-size: 9pt;
-	display: inline-block;
-	
-}
+ }
 
- .travel-2-posts .title img {
-	margin-right: 5px;
-	position: relative;
-	top: -2px;
+ .travel-2-posts .title img {	
+	position: absolute;
+	left:8px;
+	top:8px;
 }
 
  .travel-2-posts .travel-2-posts-items {
 	padding: 5px 10px 10px 10px;	
 }
 
- .travel-2-posts .travel-2-posts-items .posts-square {
-	font-size: 10px;
+.travel-2-posts .travel-2-posts-items .item-subject  img{
+	position:absolute;
+	top:4px;
+	left:0;	
 }
 
- .travel-2-posts .travel-2-posts-items .subject {
-	height: 16px;
-	line-height: 16px;
-	overflow: hidden;
-	display: inline-block;
-	width: 130px;
-	color: #444444;
- }
- 
-.travel-2-posts .travel-2-posts-items .subject .dot {
-	margin-right: 7px;
-	position: relative;
-	top: -1px;
- }
- 
- .travel-2-posts .travel-2-posts-items tr td ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
- }
-.travel-2-posts .travel-2-posts-items .posts-square  img{
+/*********/
+.latest-items{
+	position:relative;	
+	margin-bottom:6px;
+}
+
+.latest-items .posts-square{
+	position:absolute;
+}
+
+.latest-items .item-subject{
 	position:relative;
-	top:-4px;
-	margin-right: 10px;
+	width:130px;	
+	overflow:hidden;
+	float:left;
+	margin-right:10px;
+	padding-left:13px;
+	height:14px;
 }
 
- .travel-2-posts .travel-2-posts-items .no-of-comments {
-	color: #ff0000;
-	font-size: 11px;
+.latest-items .no-of-comments{
+	width:35px;	
+	float:left;	
+	height:14px;
+	color:red;
+	text-align:right;	
 }

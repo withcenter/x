@@ -1,6 +1,5 @@
 .travel_2_timed_list_with_image {	
-	width:208px;
-	display:inline-block;
+	width:208px;	
 	overflow: hidden;
 	height:100%;	
 }
@@ -13,6 +12,7 @@
 	height: 28px;
 	line-height: 28px;
 	border-bottom:1px solid #bbbbbb;
+	position:relative;
 }
 
 .travel_2_timed_list_with_image .title a {
@@ -24,7 +24,9 @@
 }
 
 .travel_2_timed_list_with_image .title .more_button {
-	float: right;
+	position:absolute;
+	right:0;
+	top:0;
 }
 .travel_2_timed_list_with_image .title .more_button{
 	font-weight:normal;
