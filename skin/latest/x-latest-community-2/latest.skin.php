@@ -16,41 +16,41 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
     <?php for ($i=0; $i<count($list); $i++) {  ?>
         <li>
 			<img class='dot' src='<?=$latest_skin_url?>/img/dot.gif' />
-            <?php
-            echo "<a href=\"".$list[$i]['href']."\">";
-            if ($list[$i]['is_notice'])
-                echo "<strong>".$list[$i]['subject']."</strong>";
-            else
-                echo $list[$i]['subject'];
-
-            if ($list[$i]['comment_cnt'])
-                echo $list[$i]['comment_cnt'];
-
-            echo "</a>";
-			
-             ?>
+			<div class='subject'>
+				<a href='<?=$list[$i]['href']?>'><?=$list[$i]['subject']?></a>			
+			</div>
         </li>
     <?php }  ?>
     <?php if (count($list) == 0) { //게시물이 없을 때  ?>
 			<li>
 				<img class='dot' src='<?=$latest_skin_url?>/img/dot.gif' />
-				<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=5'>사이트 만들기 안내</a>
+				<div class='subject'>
+					<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=5'>사이트 만들기 안내</a>
+				</div>
 			</li>
 			<li>
 				<img class='dot' src='<?=$latest_skin_url?>/img/dot.gif' />
-				<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=4'>블로그 만들기</a>
+				<div class='subject'>
+					<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=4'>블로그 만들기</a>
+				</div>
 			</li>
 			<li>
 				<img class='dot' src='<?=$latest_skin_url?>/img/dot.gif' />
-				<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=3'>커뮤니티 사이트 만들기</a>
+				<div class='subject'>
+					<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=3'>커뮤니티 사이트 만들기</a>
+				</div>
 			</li>
 			<li>
 				<img class='dot' src='<?=$latest_skin_url?>/img/dot.gif' />
-				<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=2'>여행사 사이트 만들기</a>
+				<div class='subject'>
+					<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=2'>여행사 사이트 만들기</a>
+				</div>
 			</li>
 			<li>
 				<img class='dot' src='<?=$latest_skin_url?>/img/dot.gif' />
-				<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=1'>(모바일)홈페이지, 스마트폰 앱</a>
+				<div class='subject'>
+					<a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=1'>(모바일)홈페이지, 스마트폰 앱</a>
+				</div>
 			</li>
     <?php }  ?>
     </ul>

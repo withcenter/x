@@ -24,13 +24,14 @@
 	padding: 0 15px 0 10px;
 	overflow: hidden;
 	position: relative;
-	font-size: 10pt;
+	font-size: 10pt;	
 }
 .new-posts .row > .dot-icon, .popular-posts .row > .dot-icon {
-	position: relative;
-	left: -8px;
-	top: -2px;
+	position: absolute;
+	left: 0;
+	top: 5px;
 }
 .new-posts .row  a, .popular-posts .row  a {
 	color: #7a7a7a;
+	margin-left:5px;
 }

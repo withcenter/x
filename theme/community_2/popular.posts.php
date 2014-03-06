@@ -14,7 +14,7 @@ if ( g::forum_exist($forum_4) ) $row4[$forum_4] = db::rows("SELECT wr_id, wr_sub
 if ( g::forum_exist($forum_5) ) $row5[$forum_5] = db::rows("SELECT wr_id, wr_subject, wr_datetime FROM ".$g5['write_prefix'].$forum_5." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 3");
 
 if ( g::forum_exist($forum_1) && g::forum_exist($forum_2) && g::forum_exist($forum_3) && g::forum_exist($forum_4) && g::forum_exist($forum_5)) { 
-	$posts = array_merge ( $row1, $row2, $row3, $row4, $row5 );
+	$posts = array_merge ( $row1, $row2, $row3, $row4, $row5 );		;
 ?>
 
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/new.posts.css' />
@@ -24,12 +24,12 @@ if ( g::forum_exist($forum_1) && g::forum_exist($forum_2) && g::forum_exist($for
 		조회수가 많은 글
 	</div>
 	<?php
+	$dot_url = x::url_theme().'/img/dot.gif';	
 	if ( $posts ) {
-		foreach ( $posts as $key => $post ) {
+		foreach ( $posts as $key => $post ) {		
 			foreach ( $post as $p ) {
 				$url = G5_BBS_URL."/board.php?bo_table=$key&wr_id=$p[wr_id]";
-				$popular_subject = conv_subject( $p['wr_subject'], 14, '...');
-				$dot_url = x::url_theme().'/img/dot.gif';
+				$popular_subject = conv_subject( $p['wr_subject'], 14, '...');				
 				echo "
 						<div class='row'>
 							<img class='dot-icon' src='$dot_url'/><a href='$url'>$popular_subject</a>
