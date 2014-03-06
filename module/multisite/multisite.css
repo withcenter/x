@@ -279,8 +279,8 @@ table > .header td:first-child {
 
 .config-theme .theme-thumb {
 	display: inline-block;
-	width: 320px;
-	height: 240px;
+	width: 300px;
+	height: 220px;
 }
 
 .config-theme .thumb-list {	
@@ -764,4 +764,22 @@ table > .header td:first-child {
 
 .forum_setting .wrapper .tip {
 	color: #666666;
+}
+
+
+/**google-doc**/
+.google-doc-wrapper{
+	margin-top:10px;
+}
+
+.hidden-google-doc{
+	display:none;
+	margin-bottom:10px;
+}
+
+.user-google-guide-button{
+	color:orange;
+	cursor:pointer;
+	margin-left:10px;
+	font-weight:bold;	
 }

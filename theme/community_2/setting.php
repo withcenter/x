@@ -1,7 +1,7 @@
 <div class='config-wrapper'>
 	<div class='config-title'><span class='config-global-info'>사이트로고 배너</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>	
 	<div class='config-container'>
-<table cellspacing='0' cellpadding='3' width='100%' class='image-config'>
+<table cellspacing='0' cellpadding='10' width='100%' class='image-config'>
 	<tr valign='top'>
 		<td>
 			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>사이트 로고</div>

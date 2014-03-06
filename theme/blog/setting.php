@@ -1,7 +1,7 @@
 <div class='config-wrapper'>
 	<div class='config-title'><span class='config-title-info'>Profile Picture and Information</span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>
 	<div class='config-container'>
-		<table cellpadding='5' cellspacing='5' class='image-config'>
+		<table cellpadding='10' cellspacing='0' class='image-config'>
 		<tr>
 			<td valign='top'>
 				<div class='image-title'>프로필 사진등록</div>

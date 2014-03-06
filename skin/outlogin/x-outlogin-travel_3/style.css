@@ -1,5 +1,5 @@
 .login-box {
-	font-family: '맑은 고딕', AppleGothic;
+	font-family: Dotum;
 	background: #137c96;
 	color: #ffffff;
 	height: 101px;
@@ -89,7 +89,6 @@
 
 .logout-community3 .user-meta {
 	padding-top: 4px;
-
 	padding-bottom: 4px;	
 	position: relative;
 }

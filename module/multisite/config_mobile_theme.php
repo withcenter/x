@@ -9,7 +9,12 @@
 	<input type='hidden' name='action' value='config_mobile_theme_submit'>
 
 	<div class='config config-theme'>
-		<div class='config-main-title'><div class='inner'><img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 원하시는 테마를 선택하신 후 클릭하시면 반영이 됩니다.</div></div>
+		<div class='config-main-title'>
+			<div class='inner'>
+				<img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 원하시는 테마를 선택하신 후 클릭하시면 반영이 됩니다.
+				<a href='#googledoc'>도움말</a>
+			</div>
+		</div>
 		<div class='config-container'>
 		<table cellspacing='0' cellpadding='5'>
 			<tr>
@@ -55,7 +60,12 @@
 					$theme_ctr++;
 				}}
 				} ?>
-		</table>
+		</table>		
+			<div class='google-doc-wrapper'>
+				<a name='googledoc'></a>
+				<div>필고 사이트 서비스 설명서:</div>
+				<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:100%; height: 400px;'></iframe>	
+			</div>
 		</div>
 	</div> <!--config--theme-->
 </form>
