@@ -1,4 +1,5 @@
 <?php
+
 	/** display 5 posts from each forum that is selected by the user on Config_Global */
 	if ( ms::meta('forum_no_1') == '' ) ms::meta('forum_no_1', ms::board_id(etc::domain()).'_1');
 	for ( $i = 1; $i <= 10; $i++ ) {
