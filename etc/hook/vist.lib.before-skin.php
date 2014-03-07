@@ -5,6 +5,7 @@
 	
 	$value = x::config( "visit." . etc::domain() );
 	$visit = unserialize( $value );
+	array_unshift( $visit, 0 );
 	
 	
 	
