@@ -24,6 +24,7 @@
 		<input type='hidden' name='action' value='config_menu_submit' />
 <div class='config site-global'>
 	<?include ms::site_menu();?>
+<div class='config-wrapper'>
 		<div class='config-main-title'>
 			<div class='inner'>
 				<span class='config-title-info'><img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 메뉴 선택</span>
@@ -122,6 +123,11 @@
 			<?}?>
 		</table>
 	</td></tr></table>
+	
+	
 	</div></div>
+</div>
+				<input type='submit' value='업데이트' class='per-config-submit'>
+				<div style='clear:right;'></div>
 </div>
 </form>

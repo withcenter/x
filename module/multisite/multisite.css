@@ -825,6 +825,10 @@ span.config-name {
 	border: 0 !important;
 	border-radius: 0 !important;
 	color: #ffffff;
+	background: #616161;
+	height: 30px;
+	width: 80px;
+	float: right;
 }
 
 .config .image-config .image-upload-container {
