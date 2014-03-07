@@ -20,7 +20,7 @@
 			<div>필고 사이트 서비스 설명서:</div>
 			<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
 		</div>
-		<div class='config-container theme_config'>				
+		<div class='theme_config'>				
 			<?if ( ms::meta('mobile_theme') ) { ?>	
 					<div class='theme-thumb'>
 						<img src='theme/<?=ms::meta('mobile_theme')?>/preview.jpg' >						
