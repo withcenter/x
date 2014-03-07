@@ -11,7 +11,7 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 	
 			<div class='user-admin'>
 				<span class='edit_profile'><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=register_form.php">내 프로필</a></span>
-				<? if ($is_admin == 'super' || $is_auth) {  ?>
+				<? if ($is_admin == 'super') {  ?>
 					<span class='admin_link'><a href="<?=x::url_admin()?>">X ADMIN</a><br><a href="<?php echo G5_ADMIN_URL ?>">ADMIN</a></span>
 				<? } 
 					else {?>
@@ -46,9 +46,9 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 
 	<div style='clear: both'></div>
 		</div>
-	<div class='user-logged-name'>
-		<?=$nick?>님 로그인
-	</div>
+	<? if ($is_admin != 'super') {  ?>
+			<div class='user-logged-name'><?=$nick?>님 로그인</div>
+	<? }?>
 </div> 
 
 <script>
