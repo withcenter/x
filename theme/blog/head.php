@@ -39,7 +39,6 @@
 		<span class='back-to-top'><img src='<?=x::url_theme()?>/img/upicon.png'>상단으로</span>
 	</div>
     <div id="container">
-		<?if ( (preg_match('/^config/', $action)) ) include ms::site_menu();?>
         <?php if ((!$bo_table || $w == 's' ) && !defined("_INDEX_")) { ?><div id="container_title"><?php echo $g5['title'] ?></div><?php } ?>
 
 		

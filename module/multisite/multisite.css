@@ -862,7 +862,7 @@ a.user-google-guide-button{
 }
 
 .site-global .config-wrapper {
-	margin-bottom: 100px;
+	margin-bottom: 28px;
 }
 
 .site-global .config-wrapper:last-child {
@@ -870,26 +870,102 @@ a.user-google-guide-button{
 }
 
 .setting-no-image {
-	width: 100%;
-	background: #ffffff;
+
 	text-align: center;
-	font-size: 10pt;
-	font-weight: bold;
-	padding: 10px 0;
-	border: solid 1px #f3f3f3;
-	background: #fafafa;
+	font-size: 12px;
+	color: #999999;
 	margin-bottom: 10px;
-} 
-.config_general input[name='title'], .config_general input[name='secondary_title'] {
+}
+
+.setting-no-image img.no-image{
+	width: 200px !important;
+	height: 80px !important;
+}
+
+
+.config input[type='text'], .config textarea {
+	margin-bottom: 6px !important;
 	width: 98% !important;
 }
 
-.config_general textarea[name='footer_text'] {
-	width: 98%;
-	height: 125px;
-	padding: 2px;
+span.config-name {
+	color: #666666 !important;
 }
 
-.config {
-	font-family: '맑은 고딕', AppleGothic;
+.per-config-submit {
+	border: 0 !important;
+	border-radius: 0 !important;
+	color: #ffffff;
 }
+
+.config .image-config .image-upload-container {
+	margin-right: 10px;
+	float: left;
+	width: 224px;
+}
+
+.config .image-config .image-upload-container.last-container {
+	margin: 0;
+}
+
+.config .image-config  .title {
+	color: #565656;
+	font-family: '맑은 고딕', AppleGothic;
+	margin: 20px 0 9px 0;
+	font-size: 1em;
+}
+
+.config .image-config input[type='file'] {
+	color: #565656;
+}
+
+.config .image-config .image-upload {
+	border: solid 1px #d8d8d8;
+	border-top: 0;
+	padding: 10px;
+}
+
+.config .image-config .image-upload .title {
+	margin: 0;
+	padding: 0;
+}
+
+.config .image-config {
+	table-layout: fixed;
+}
+
+.config .image-config .image-upload input[type='text'] {
+	width: 100%;
+	border: solid 1px #d8d8d8;
+}
+
+.config .image-config .image-upload input[type='file'], .config_general .image-config .image-upload input[type='checkbox']  {
+	margin-bottom: 5px;
+	
+}
+
+.config .image-config .image-upload textarea {
+	width: 98%;
+	height: 50px;
+	border: solid 1px #d8d8d8;
+}
+
+.config .image-config .image-upload img{
+	width: 100%;
+	height: 100px;
+	margin-bottom: 5px;
+	border-radius: 3px;
+}
+
+.config .image-config .image-title {
+	margin: 0;
+	background: #fafafa;
+	border: solid 1px #d8d8d8;
+	padding: 5px 5px;
+
+}
+
+.config .image-config .image-title img {
+	margin: 0 5px;
+}
+
