@@ -30,23 +30,51 @@
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/blog_main.css' />
 <div class='blog_main'>
 	<table cellpadding=0 cellspacing=0 width='100%'>
-		<tr valign='top'>
-			<? if ( $thumb['src'] ) {?>
-				<td width=450><div class='main-photo'><a href='<?=$url?>'><?=$image?></a></div></td>
-				<td width=10></td>
-			<? }?>
-			<td>
-				<div class='main-content'>
-					<div class='title'><a href='<?=$url?>'><?=$subject?></a></div>
-					<div class='content'><a href='<?=$url?>'><?=$content?></a></div>
-					<div class='more-button'>
-						<a href='<?=$url?>'>상세보기</a>
+		<? if ( $row ) {?>
+			<tr valign='top'>
+				<? if ( $thumb['src'] ) {?>
+					<td width=450><div class='main-photo'><a href='<?=$url?>'><?=$image?></a></div></td>
+					<td width=10></td>
+				<? }?>
+				<td>
+					<div class='main-content'>
+						<div class='title'><a href='<?=$url?>'><?=$subject?></a></div>
+						<div class='content'><a href='<?=$url?>'><?=$content?></a></div>
+						<div class='more-button'>
+							<a href='<?=$url?>'>상세보기</a>
+						</div>
 					</div>
-				</div>
-			</td>
-		</tr>
+				</td>
+			</tr>
+		<? }
+			else {?>
+			<tr valign='top'>
+				<td width=450>
+					<div class='main-photo'>
+						<a href='<?=ms::url_config()?>'>
+							<img src='<?=x::url_theme()?>/img/default_main_image.png' />
+						</a>
+					</div>
+				</td>
+				<td width=10></td>
+				<td>
+					<div class='main-content'>
+						<div class='title'><a href='<?=$url?>'><span class='first-word'>필고</span> 블로그 테마를 이용중 입니다.</a></div>
+						<div class='content'>
+							<a href='<?=ms::url_config()?>'>
+								필고 <b>블로그 테마</b>를 선택 해 주셔서 감사합니다.<br /><br />
+								현재는 등록된 글이 없으며, 사이트는 <b>기본 설정</b>으로 되어 있습니다.
+							</a>
+						</div>
+						<div class='more-button'>
+							<a href='<?=ms::url_config()?>'>사이트 설정</a>
+						</div>
+					</div>
+				</td>
+			</tr>
+		<?}?>
 	</table>
-	<div class='date'><b>작성일</b> <?=$row['wr_datetime']?></div>
+	<div class='date'><b>작성일</b> <?=date('Y-m-d H:i:s')?></div>
 	<div class='pagination'>
 	<?php
 		/* 페이징 */

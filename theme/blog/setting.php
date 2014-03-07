@@ -83,7 +83,7 @@ function setTopMenu( $name ) {
 	</div>
 	<input type='submit' value='업데이트' />
 </div>
-
+<br /><br />
 <div class='config-wrapper'>
 	<div class='config-title'>
 		<span class='config-title-info'>사이드 배너 이미지</span>
@@ -155,6 +155,7 @@ function setTopMenu( $name ) {
 				</td>
 			</tr>
 		</table>
-		<input type='submit' value='업데이트' />
 	</div>
+	<input type='submit' value='업데이트' />
+	<br /><br />
 </div>

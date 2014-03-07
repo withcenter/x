@@ -16,7 +16,7 @@
     <div id="hd_wrapper">
         <div id="logo">
 			<a href="<?php echo G5_URL ?>">
-				<?=ms::meta('title');?>
+				<?=ms::meta('title')?ms::meta('title') : '제목을 입력하세요';?>
 			</a>
         </div>
         <ul id="tnb">
