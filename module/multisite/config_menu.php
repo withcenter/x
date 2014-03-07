@@ -49,11 +49,11 @@
 			<div class='config-container'>
 
 	<table width='100%' cellspacing='0' cellpadding='0' class='config-menu-table'>
-	<tr valign='top'><td>
+	<tr valign='top'><td width='50%'>
 		<table width='100%' cellspacing='0' cellpadding='0'>
 			<? for ( $i = 1; $i <= 5; $i++ ) { ?>
 			<tr valign='top'>
-				<td class='menu-no' valign='top'><?=$i?></td>
+				<td class='menu-no' valign='top' width='40' align='left'><?=$i?></td>
 				<td>
 					<span class='select-wrapper'><span class='inner'>
 						<?php
@@ -89,7 +89,7 @@
 		<table width='100%' cellspacing='0' cellpadding='0' class='config-menu-table'>
 			<? for ( $i = 6; $i <= 10; $i++ ) { ?>
 			<tr valign='top'>
-				<td class='menu-no' valign='top'><?=$i?></td>
+				<td class='menu-no' valign='top' width='40' align='left'><?=$i?></td>
 				<td>
 					<span class='select-wrapper'><span class='inner'>
 						<?php
