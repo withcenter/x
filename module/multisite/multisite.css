@@ -216,7 +216,7 @@ table > .header td:first-child {
 }
 
 .config-container.theme_config{
-	margin-left:2px;	
+	margin-left:5px;	
 }
 
 .config-container .theme-thumb {	
@@ -225,7 +225,7 @@ table > .header td:first-child {
 	cursor: pointer;
 	overflow: hidden;
 	border:1px solid #999999;
-	margin:0 0 10px 10px;
+	margin:0 0 9px 10px;
 }
 
 .config-container .theme-thumb .theme-name {
@@ -233,7 +233,7 @@ table > .header td:first-child {
 	bottom: 0;
 	left: 0;
 	background: #cccccc;
-	width: 330px;
+	width: 328px;
 	padding: 10px;
 	font-family: '맑은 고딕', AppleGothic;
 	color: #000000;	
@@ -260,8 +260,8 @@ table > .header td:first-child {
 }
 
 .config-container .theme-thumb {	
-	width: 350px;
-	height: 220px;
+	width: 348px;
+	height: 222px;
 	float:left;
 }
 
