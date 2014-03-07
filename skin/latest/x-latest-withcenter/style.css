@@ -30,7 +30,7 @@
 .withcenter_latest .title .more_btn {
 	float: right;
 	position: relative;
-	top: 3px;
+	top: -1px;
 }
 .withcenter_latest ul  li  {
 	line-height: 20px;
