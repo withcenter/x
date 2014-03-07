@@ -12,7 +12,7 @@ function forum_tab( $cls, $id ) {
 	
 	if ( ! g::forum_exist( $id ) ) $id = 'default';
 	$ret .= "<div class='$cls'><div class='forum-tab-inner'>";
-	$ret .= latest( 'x-rwd-basic', $id);
+	$ret .= latest( 'x-rwd-basic', $id, 5);
 	$ret .= "</div></div>";
 	return $ret;
 }

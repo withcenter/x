@@ -244,6 +244,9 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 }
 
 
+
+
+
 /* below 640 px */
 @media all and ( max-width: 40em ) {
 	#header .top .search .key{ width: 16em; }
@@ -273,6 +276,10 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 		display:none;
 	}
 	#header .top-below-500-px { display:block; }
+	
+	.lt_more {
+		display:none;
+	}
 	
 }
 @media all and ( min-width: 40em ) {
@@ -313,7 +320,4 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 	.latest-thumbnail > .right {
 		display:none;
 	}
-
-
-
 }

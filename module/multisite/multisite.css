@@ -212,42 +212,43 @@ table > .header td:first-child {
 /* theme config */
 
 
-.config-container.theme_config{
-	margin-left:2px;	
+.theme_config{
+	margin-left:5px;
+	padding-bottom:16px;
 }
 
-.config-container .theme-thumb {	
+.theme_config .theme-thumb {	
 	background: #e6e6e6;
 	position: relative;
 	cursor: pointer;
 	overflow: hidden;
 	border:1px solid #999999;
-	margin:0 0 10px 10px;
+	margin:0 0 9px 10px;	
 }
 
-.config-container .theme-thumb .theme-name {
+.theme_config .theme-thumb .theme-name {
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	background: #cccccc;
-	width: 330px;
+	width: 328px;
 	padding: 10px;
 	font-family: '맑은 고딕', AppleGothic;
 	color: #000000;	
 	font-size: 9pt;	
 }
 
-.config-container .theme-thumb .theme-name.active-theme {	
+.theme_config .theme-thumb .theme-name.active-theme {	
 	color: #ffffff;
 	background-color: #999999;
 }
 
-.config-container .theme-thumb .active-note {	
+.theme_config .theme-thumb .active-note {	
 	color: #e6e6e6;	
 	float:right;
 }
 
-.config-container .theme-thumb p {
+.theme_config .theme-thumb p {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -256,27 +257,27 @@ table > .header td:first-child {
 	width: 100%;
 }
 
-.config-container .theme-thumb {	
-	width: 350px;
-	height: 220px;
+.theme_config .theme-thumb {	
+	width: 348px;
+	height: 222px;
 	float:left;
 }
 
-.config-container .thumb-list {	
+.theme_config .thumb-list {	
 	margin-top: 0.5em;
 	text-align: center;
 }
 
-.config-container .theme-thumb img {
+.theme_config .theme-thumb img {
 	width: 100%;
 }
 
-.config-container .theme-thumb table, .config-container .theme-thumb a {
+.theme_config .theme-thumb table, .theme_config .theme-thumb a {
 	color: #ffffff;
 	text-decoration: none;
 }
 
-.config-container button[name='theme'] {
+.theme_configbutton[name='theme'] {
 	border: none;
 	background: transparent;
 	color: #ffffff;
@@ -284,19 +285,7 @@ table > .header td:first-child {
 	height: 240px;
 }
 
-.config-container button[name='theme']:focus {
-	outline: none;
-}
-
-.config-container button[name='theme']:active {
-	outline: none;
-}
-
-.config-container button[name='theme']:hover {
-	outline: none;
-}
-
-.config-container > .title {
+.theme_config > .title {
 	font-size: 1.250em;
 	color: #004475;
 	border: 1px solid #d5d5d5;

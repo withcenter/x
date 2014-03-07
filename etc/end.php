@@ -1,4 +1,13 @@
 <?php
+
+/** @short Records member registered domain
+ *
+ */
+if ( strpos($_SERVER['PHP_SELF'], 'register_result.php') !== false ) {
+	g::update_member( $mb['mb_id'], REGISTERED_DOMAIN, etc::domain() );
+}
+
+
 x::hook_register('end_before_html', 'hook_rsd_patch');
 x::hook_register('end_before_html', 'hook_metaweblogapi');
 x::hook_register('end_before_html', 'hook_html_symbol');
