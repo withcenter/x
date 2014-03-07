@@ -13,6 +13,7 @@
 	$error_hook_latest = null;
 	
 	
+	if ( etc::web() ) include x::dir() . '/etc/rewrite/bbs/visit_insert.inc.php';
 	
 	
 // -----------------------------------------------------------------------------
