@@ -588,7 +588,7 @@ table > .header td:first-child {
 }
 .subsite-support  .support .tab-menu .tab-button {
 	display: inline-block;
-	padding: 10px 10px;
+	padding: 13px 10px 7px 10px;
 }
 
 .subsite-support  .support .tab-menu .tab-button:hover {
