@@ -20,47 +20,38 @@
 						<img src='<?=x::url_theme()?>/img/default-logo.png'>
 					<?}?>
 					</a>
-				</div>
-				
-				
-			<div class='search-bar'>
-	  <form name="fsearchbox" method="get" action="<?php echo G5_BBS_URL ?>/search.php" onsubmit="return fsearchbox_submit(this);">
-		<input type="hidden" name="sfl" value="wr_subject||wr_content">
-		<input type="hidden" name="sop" value="and">
-		<input type="text" name="stx" id="sch_stx" maxlength="20" placeholder='검색어를 입력해 주세요.' />
-		<input type="image" id="sch_submit" src='<?=x::url_theme()?>/img/search-icon.png' />
-      </form>
-
-		  <script>
-				function fsearchbox_submit(f)
-				{
-					if (f.stx.value.length < 2) {
-						alert("검색어는 두글자 이상 입력하십시오.");
-						f.stx.select();
-						f.stx.focus();
-						return false;
-					}
-
-					// 검색에 많은 부하가 걸리는 경우 이 주석을 제거하세요.
-					var cnt = 0;
-					for (var i=0; i<f.stx.value.length; i++) {
-						if (f.stx.value.charAt(i) == ' ')
-							cnt++;
-					}
-
-					if (cnt > 1) {
-						alert("빠른 검색을 위하여 검색어에 공백은 한개만 입력할 수 있습니다.");
-						f.stx.select();
-						f.stx.focus();
-						return false;
-					}
-
-					return true;
-				}
-		 </script>
-	</div>
+			</div>
+	<?
+		global $cfgs;
+		$cfgs = ms::forums();
+	?>
+	<div class='extra-menu-items'>
+		<div class='extra-top'>
+			<?for( $i = 0; $i < 3; $i ++){
+				if( $i == 2 ) $no_border = 'no-border';
+				else $no_border = null;
+			?>
+				<a class='<?=$no_border?>' href = '<?=G5_BBS_URL?>/board.php?bo_table=<?=$cfgs[$i]['bo_table']?>'>
+					<?=cut_str($cfgs[$i]['bo_subject'],10,'...')?>
+				</a>
+			<?}?>
+			<div style='clear:both'></div>
+		</div>
+		<div class='extra-bottom'>
+			<?for( $i = 3; $i < 7; $i ++){
+				if( $i == 6 ) $no_border = 'no-border';
+				else $no_border = null;
+			?>
+				<a class='<?=$no_border?>' href = '<?=G5_BBS_URL?>/board.php?bo_table=<?=$cfgs[$i]['bo_table']?>'>
+					<?=cut_str($cfgs[$i]['bo_subject'],10,'...')?>
+				</a>
+			<?}?>
+			<div style='clear:both'></div>
+		</div>
+	</div>			
+	
 	<div style='clear:both;'></div>
-        </div>
+    </div>
 	<?php include 'menu.php';?>
 	<div style='clear: both'>
     </div>
