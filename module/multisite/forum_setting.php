@@ -97,6 +97,15 @@ include_once(G5_EDITOR_LIB);
 		<input type='hidden' name='mode' value='forum_setting' />
 		<input type='hidden' name='bo_table' value='<?=$in['bo_table']?>' />
 		<input type='hidden' name='done' value=1 />
+						
+		<div class='wrapper'>
+			<div class='title'>일반 설정</div>
+			<div><span class='item'>게시판 아이디</span><?=$row['bo_table']?></div>
+			<div><span class='item'>제목</span><?=text('bo_subject')?></div>
+			<div><span class='item'>스킨</span><?=load_skin()?></div>
+			<div><span class='item'>관리자</span><?=text('bo_admin')?></div>
+			<input type='submit' value='업데이트' />
+		</div>
 		
 		<div class='wrapper editor'>
 			<div class='title'>BO CONTENT HEAD</div>
@@ -118,15 +127,6 @@ include_once(G5_EDITOR_LIB);
 			<?php echo editor_html("bo_mobile_content_tail", $row['bo_mobile_content_tail']); ?>	
 			<input type='submit' value='업데이트' />
 		</div>		
-		
-		<div class='wrapper'>
-			<div class='title'>일반 설정</div>
-			<div><span class='item'>게시판 아이디</span><?=$row['bo_table']?></div>
-			<div><span class='item'>제목</span><?=text('bo_subject')?></div>
-			<div><span class='item'>스킨</span><?=load_skin()?></div>
-			<div><span class='item'>관리자</span><?=text('bo_admin')?></div>
-			<input type='submit' value='업데이트' />
-		</div>
 		
 		<div class='wrapper'>
 			<div class='title'>분류</div>
