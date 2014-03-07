@@ -67,7 +67,7 @@ function setTopMenu( $name ) {
 			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
 		</span>
 	</div>
-	<div class='config-container' cellspacing='0' cellpadding='10' >
+	<div class='config-container' cellspacing='0' cellpadding='5' >
 	<div class='hidden-google-doc google_doc_travel_2_1'>	
 		<div>필고 사이트 서비스 설명서:</div>
 		<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
@@ -95,7 +95,7 @@ function setTopMenu( $name ) {
 	<div>필고 사이트 서비스 설명서:</div>
 	<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
 </div>
-<table cellspacing='0' cellpadding='10' class='image-config' width='100%'>
+<table cellspacing='0' cellpadding='5' class='image-config' width='100%'>
 	<tr valign='top' >
 		<td width='50%'> 
 			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>사이트 상단 로고</div>
@@ -160,7 +160,7 @@ function setTopMenu( $name ) {
 		<div>필고 사이트 서비스 설명서:</div>
 		<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
 	</div>
-	<table cellspacing='0' cellpadding='10' class='image-config' width='100%'>
+	<table cellspacing='0' cellpadding='5' class='image-config' width='100%'>
 	<tr valign='top'>
 		<td>
 			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지1</div>
@@ -282,7 +282,7 @@ function setTopMenu( $name ) {
 		<div>필고 사이트 서비스 설명서:</div>
 		<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
 	</div>
-	<table cellspacing='0' cellpadding='10' class='image-config' width='100%'>	
+	<table cellspacing='0' cellpadding='5' class='image-config' width='100%'>	
 		<tr valign='top'>
 		<td>
 			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>오른쪽 날개 배너1</div>
@@ -357,7 +357,7 @@ function setTopMenu( $name ) {
 		<div>필고 사이트 서비스 설명서:</div>
 		<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
 	</div>
-	<table cellspacing='0' cellpadding='10' class='image-config' width='100%'>	
+	<table cellspacing='0' cellpadding='5' class='image-config' width='100%'>	
 		<tr valign='top'>
 		<td>
 			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>왼쪽 사이드 배너</div>
