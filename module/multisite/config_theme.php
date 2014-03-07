@@ -39,9 +39,8 @@
 				?>
 			<?if ( $active_theme ) { ?>
 				<div class='theme-thumb'>
-					<img src='theme/<?=ms::meta('theme')?>/preview.jpg' >
-					<p><b>선택 되었습니다.</b></p>
-					<span class='theme-name active-theme'><?=$active_theme?></span>
+					<img src='theme/<?=ms::meta('theme')?>/preview.jpg' >					
+					<div class='theme-name active-theme'><?=$active_theme?><span class='active-note'>선택 되었습니다</span></div>
 				</div>
 			<?}?>
 			</td>
