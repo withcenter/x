@@ -801,8 +801,13 @@ a.user-google-guide-button{
 
 .config input[type='text'], .config textarea {
 	margin-bottom: 6px !important;
+	
+}
+
+.config input[name='title'], .config input[name='secondary_title'], .config textarea[name='footer_text'] {
 	width: 98% !important;
 }
+
 
 span.config-name {
 	color: #666666 !important;
@@ -907,7 +912,7 @@ span.config-name {
 }
 
 .config_menu .config .select-wrapper {
-	width: 240px;
+	width: 80%;
 	background: #fafafa !important;
 	padding: 2px 0;
 }
@@ -928,8 +933,8 @@ span.config-name {
 	width: 110px;
 }
 
-.config_forum input[name='subject'] {
-	width: 618px !important;
+.config_forum input.create-forum-input {
+	width: 88%;
 	height: 28px;
 	margin-bottom: 10px !important;
 }

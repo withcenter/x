@@ -85,9 +85,9 @@ function setTopMenu( $name ) {
 				<td colspan='2'><span class='title-small'>하단문구제목</span><input type='text' name='travel2footer_tagline' value='<?=ms::meta('travel2footer_tagline')?>' /></td>
 			<tr>
 		</table>
-		<input type='submit' value='업데이트'>
-		<div style='clear:right;'></div>
 	</div>
+	<input type='submit' value='업데이트'>
+	<div style='clear:right;'></div>
 </div>
 
 <div class='config-wrapper'>
@@ -148,9 +148,10 @@ function setTopMenu( $name ) {
 		</td>
 	</tr>
 </table>
+
+</div>
 		<input type='submit' value='업데이트'>
 		<div style='clear:right;'></div>
-</div>
 </div>
  <div class='config-wrapper'>
 	<div class='config-title'>
@@ -260,9 +261,10 @@ function setTopMenu( $name ) {
 		</td>
 	</tr>
 </table>
+
+</div>
 		<input type='submit' value='업데이트'>
 		<div style='clear:right;'></div>
-</div>
 </div>
  <div class='config-wrapper'>
 	<div class='config-title'>
@@ -328,9 +330,10 @@ function setTopMenu( $name ) {
 		</td>
 	</tr>
 </table>
-		<input type='submit' value='업데이트'>
-		<div style='clear:right;'></div>
+
 	</div><!--/config-container-->
+			<input type='submit' value='업데이트'>
+		<div style='clear:right;'></div>
 </div><!--config-wrapper-->
 
  <div class='config-wrapper'>
@@ -398,4 +401,6 @@ function setTopMenu( $name ) {
 	</tr>
 </table>
 </div>
+		<input type='submit' value='업데이트'>
+		<div style='clear:right;'></div>
 </div>
