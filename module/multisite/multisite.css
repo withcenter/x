@@ -773,7 +773,9 @@ a.user-google-guide-button{
 .config  .config-title .config-title-info {
 
 }
-
+.config  .config-title img {
+	margin-left: 10px;
+}
 .config  .config-title .config-title-notice {
 	float: right;
 }

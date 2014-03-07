@@ -1,8 +1,8 @@
 <div class='config-wrapper'>
 	<div class='config-title'>
-		<span class='config-global-info'>사이트로고 배너</span>
-		<span class='user-google-guide-button' page = 'google_doc_community_2_1'>[도움말]</span>
+		<span class='config-title-info'>사이트로고 배너</span>
 		<span class='config-title-notice'>
+		<span class='user-google-guide-button' page = 'google_doc_community_2_1'>[도움말]</span>
 			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
 		</span>
 		</div>	
