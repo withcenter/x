@@ -23,10 +23,9 @@ function admin_menu_display()
 	foreach( $admin_menu as $menu ) {
 		$name = $menu['name'];
 		$name = preg_replace("/^[0-9] /", '', $name);
-		unset($menu['name']);
-		if ( $name == 'System' ) $href = "href = '".x::url()."/?module=multidomain&action=admin_list'";
-		else if ( $name == 'Multi-Site' ) $href = "href = '".x::url()."/?module=multisite&action=admin_multisite'";
-		echo "<li class='name'><a $href class='menu-name'>$name</a>";
+		echo "<li class='name'><a href='$menu[default_url]' class='menu-name'>$name</a>";
+		unset($menu['name'], $menu['default_url']);
+		
 		echo "<ul class='submenu'>";
 		foreach ( $menu as $name => $url ) {
 			$tmp = str_replace('?', '', $url);

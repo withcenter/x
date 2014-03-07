@@ -7,6 +7,8 @@
 	include_once('../common.php');
 	include_once(G5_PATH.'/head.php');
 	
+	
+	/** @short Display menu on admin page */
 	if ( preg_match('/^admin_/', $action) ) include x::admin_menu();
 	if ( ! empty( $module ) ) {
 		include module( 'init' );
