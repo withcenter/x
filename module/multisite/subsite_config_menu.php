@@ -45,6 +45,6 @@
 <link rel="stylesheet" href="module/multisite/multisite.css">
 <style>
 .multisite-menu a[href*='<?=$action?>'] {
-	background-color: #616161;
+	background-color: #6e6e6e;
 }
 </style>

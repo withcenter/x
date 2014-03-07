@@ -4,12 +4,13 @@
 		return;
 	}
 ?>
-<form action='?' class='config_theme' method='post'>
+<form action='?' class='config config-theme' method='post'>
 	<input type='hidden' name='module' value='multisite'>
 	<input type='hidden' name='action' value='config_theme_submit'>
 	<input type="hidden" name="theme" id="theme_value" value="" />
 
-	<div class='config config-theme'>
+	<div>
+<?include ms::site_menu();?>
 		<div class='config-main-title'>
 			<div class='inner'>
 				<img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 원하시는 테마를 선택하신 후 클릭하시면 반영이 됩니다.
@@ -20,10 +21,7 @@
 			<div>필고 사이트 서비스 설명서:</div>
 			<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
 		</div>
-		<div class='config-container'>
-		<table cellspacing='0' cellpadding='5'>
-			<tr>
-				<td>
+		<div class='config-container theme_config'>
 				<?
 				$active_theme = ms::meta('theme');
 				$dirs = file::getDirs(X_DIR_THEME);
@@ -38,13 +36,10 @@
 				?>
 			<?if ( $active_theme ) { ?>
 				<div class='theme-thumb'>
-					<img src='theme/<?=ms::meta('theme')?>/preview.jpg' >
-					<p><b>선택 되었습니다.</b></p>
-					<span class='theme-name active-theme'><?=$active_theme?></span>
+					<img src='theme/<?=ms::meta('theme')?>/preview.jpg' >					
+					<div class='theme-name active-theme'><?=$active_theme?><span class='active-note'>선택 되었습니다</span></div>
 				</div>
 			<?}?>
-			</td>
-			<td>
 		<?php
 			$theme_ctr = 2;
 			
@@ -67,15 +62,11 @@
 					<img src='<?=$url?>' >
 					<span class='theme-name'><?=$name?></span>
 					</div>
-				<?if($theme_ctr==2) { 
-					echo "</td></tr><tr><td>"; $theme_ctr = 1;
-				} else { 
-					echo "</td><td>"; 
-					$theme_ctr++;
-				}}
-				} ?>
-		</table>
+				<?}
+				
+				}?>
 		
-				</div>		
+			</div>	
+		<div style='clear:both'></div>
 	</div> <!--config--theme-->
 </form>

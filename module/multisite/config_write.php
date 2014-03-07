@@ -9,10 +9,11 @@ if ( $in['done'] ) {
 }
 ?>
 <div class='config config-write'>
+<?include ms::site_menu();?>
 <div class='config-main-title'>
 	<div class='inner'>
-		<img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 블로그 API 정보를 입력해 주세요.
-		<span class='user-google-guide-button' page = 'google_doc_1'>[도움말]</span>
+		<span class='config-title-info'><img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 블로그 API 정보를 입력해 주세요.</span>
+		<span class='config-title-notice'><span class='user-google-guide-button inner-title' page = 'google_doc_1'>[도움말]</span></span>
 	</div>
 </div>
 		<div class='hidden-google-doc google_doc_1'>	
@@ -20,15 +21,15 @@ if ( $in['done'] ) {
 			<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
 		</div>
 	<div class='config-wrapper'>
-	<div class='config-container'>
 	<form method='get'> 
 		<input type='hidden' name='module' value='multisite' />
 		<input type='hidden' name='action' value='config_write' />
 		<input type='hidden' name='done' value=1 />
 <?php 
 	for ( $i = 1; $i <=3; $i++ ) {?>
-		<fieldset class='api-info'>
 			<div class='config-title'>API 정보 <?=$i?></div>
+		<fieldset class='api-info'>
+	
 			<div class='row'>
 				<span class='item4'>API연결 URL</span>
 				<input type='text' name='api-end-point<?=$i?>' value='<?=ms::meta('api-end-point'.$i)?>' />
@@ -48,5 +49,5 @@ if ( $in['done'] ) {
 		<input type='submit' value='업데이트' />
 		<div style='clear:right;'></div>
 	</form>
-</div></div>
+</div>
 </div>

@@ -89,7 +89,7 @@
 
 .main-menu li.first-item a{
 	border-left:none;
-	padding-left:10px;
+	padding-left:4px;
 }
 
 .main-menu li.first-item .inner {
@@ -199,6 +199,7 @@
 	text-align:center;
 	font-size:.8em;
 	cursor:pointer;
+	line-height:12px;
 }
 /***********************************/
 .layout {
@@ -236,8 +237,9 @@
 
 .travel_theme2_header > .header_wrapper #header-logo {
 	float: left;
-	height: 59px;
+	height: 53px;
 	width:600px;
+	margin-top:7px;
 }
 
 .travel_theme2_header > .header_wrapper #header-logo img {
@@ -270,39 +272,50 @@
 /****top****/
 .extra-menu-items{
 	width:370px;
-	padding-top:14px;
 	float:left;
-	text-align:right;			
-}
+	text-align:right;
+	font-size:.9em;	
+	position:relative;	
+}	
 
 .extra-menu-items .extra-top{
 	margin-bottom:3px;
+	position:absolute;
+	right:0;
+	top:14px;	
 }
 
 .extra-menu-items .extra-top a{
 	color:#808080;
 	border-right:1px solid #808080;
 	text-decoration:none;
-	display:inline-block;
+	display:block;
 	width:85px;
 	white-space:nowrap;
 	overflow:hidden;
 	text-align:center;	
+	float:left;
 }
 
 .extra-menu-items .extra-top a.no-border{	
 	border-right:none;
 }
 
+.extra-menu-items .extra-bottom{	
+	position:absolute;
+	right:0;
+	top:35px;
+}
 .extra-menu-items .extra-bottom a{
 	color:#000000;
 	border-right:1px solid #000000;
 	text-decoration:none;
-	display:inline-block;
+	display:block;
 	width:85px;
 	white-space:nowrap;
 	overflow:hidden;
 	text-align:center;
+	float:left;	
 }
 
 

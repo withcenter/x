@@ -48,14 +48,14 @@ function setTopMenu( $name ) {
 	<table cellpadding=0 cellspacing=0 width='100%'>
 		<tr>
 			<td>
-				<? for ( $i = 1; $i <=3; $i++ ) {?>
-					<div>왼쪽 <?=$i?> : <?=setTopMenu('forum_no_'.$i)?></div>
+				<? for ( $i = 1; $i <=2; $i++ ) {?>
+					<div>상단1-<?=$i?> : <?=setTopMenu('forum_no_'.$i)?></div>
 				<? }?>
 			</td>
 			<td width=10></td>
 			<td>
-				<? for ( $i = 4; $i <=7; $i++ ) {?>
-					<div>오른쪽 <?=$i-3?> : <?=setTopMenu('forum_no_'.$i)?></div>
+				<? for ( $i = 3; $i <=6; $i++ ) {?>
+					<div>상단2-<?=$i-3?> : <?=setTopMenu('forum_no_'.$i)?></div>
 				<? }?>
 			</td>
 		</tr>
