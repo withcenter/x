@@ -717,7 +717,7 @@ a.user-google-guide-button{
 .config {
 	background: #fafafa;
 	border: solid 1px #e6e6e6;
-	padding: 9px;
+	padding: 9px 9px 22px 9px;
 }
 .config .config-main-container {
 	padding-left: 20px;
