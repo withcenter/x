@@ -555,7 +555,7 @@ table > .header td:first-child {
 
 /* config.php */
 .subsite-support {
-	font-family: '맑은 고딕', AppleGothic;
+
 }
 
 .subsite-support .title {
@@ -580,39 +580,43 @@ table > .header td:first-child {
 	height: 20px;
 	margin-right: 5px;
 }
-.subsite-support  .support .tab-menu {
+.subsite-support  .support {
+	background: #bfbfbf;
+	padding: 10px 0;
 	margin-bottom: 10px;
+	color: #ffffff;
+}
+.subsite-support  .support .tab-menu {
+
 }
 .subsite-support  .support .tab-menu .tab-button {
 	display: inline-block;
-	height: 30px;
-	line-height: 30px;
-	padding: 0 10px;
-	background-color: #53749c;
-	color: #ffffff;
-	border-radius: 3px;
-	cursor: pointer;
+
 }
 
 .subsite-support  .support .tab-menu .tab-button:hover, .subsite-support  .support .tab-menu .tab-button:first-child {
-	background-color: #314258;
+	
 }
 
 .tab-button-selected {
 	background-color: #314258
 }
 .subsite-support  .support-content {
-	border: 1px solid #d5d5d5;
+
 	border-radius: 3px;
 	background-color: #f9f9f9;
 }
 
 .subsite-support  .support-content .inner{
-	border: 1px solid #ffffff;
+
 	border-radius: 3px;
 	padding: 10px;
 	display: none;
 	min-height: 300px;
+}
+
+.subsite-support  .support-content .inner img {
+	width: 100%;
 }
 
 .subsite-support  .support-content .general-setting {
@@ -964,6 +968,12 @@ span.config-name {
 	padding: 9px;
 	color: #000000;
 	border: 0;
+}
+.subsite-support .config-wrapper {
+	margin-left: 20px;
+}
+.subsite-support .support {
+	margin-left: 10px;
 }
 
 .config_forum .config-wrapper {

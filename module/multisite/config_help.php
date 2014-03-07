@@ -1,9 +1,9 @@
 <div class='config subsite-support'>
 	<?include ms::site_menu();?>
-	<div class='title'>
+	<div class='config-main-title'>
 		<div class='inner'>
-		<img src='<?=x::url()?>/module/multisite/img/direction.png' />필고 무료 홈페이지 사용방법 안내
-		<span class='user-google-guide-button' page = 'google_doc_1'>[도움말]</span>
+		<span class='config-title-info'><img src='<?=x::url()?>/module/multisite/img/direction.png' />필고 무료 홈페이지 사용방법 안내</span>
+		<span class='config-title-notice'><span class='user-google-guide-button inner-title' page = 'google_doc_1'>[도움말]</span>
 		</div>
 	</div>
 	<div class='hidden-google-doc google_doc_1'>	
@@ -19,6 +19,7 @@
 			<span class='tab-button' menu_name='theme-setting'>테마 선택</span>
 		</div>
 	</div>
+	<div class='config-wrapper'>
 	<div class='support-content'>
 		<div class='inner general-setting'>
 			
@@ -84,7 +85,7 @@
 			<div class='support-image'><img src='<?=x::url()?>/module/multisite/support_img/t1.png' /></div>
 		</div>
 		
-		
+		</div>
 	</div>
 	
 </div>
