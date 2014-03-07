@@ -107,17 +107,19 @@ function setTopMenu( $name ) {
 	<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
 </div>
 
-<table cellspacing='0' cellpadding='10' class='image-config' width='100%'>
+<table cellspacing='0' cellpadding='5' class='image-config' width='100%'>
 
 	<tr valign='top' >
-		<td colspan=2>
+		<td colspan='3'>
 			<div class='image-title'>
 				<img src='<?=x::url()?>/module/multisite/img/img-icon.png'>사이트 로고				
 			</div>
 			<div class='image-upload'>
 			<?if( ms::meta('header_logo') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('header_logo').">"; 
-			} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 325px X 세로 60px]</div>"; ?>
+			} else {?>
+					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 325px X 세로 60px]</div>
+				<?}?>
 				<input type='file' name='header_logo'>
 				<?if( ms::meta('header_logo') != '' ) { ?>
 					<input type='hidden' name='header_logo_remove' value='n'>
@@ -146,7 +148,9 @@ function setTopMenu( $name ) {
 			<div class='image-upload'>
 			<?if( ms::meta('com3banner_1') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('com3banner_1').">"; 
-			} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 750px X 세로 240px]</div>"; ?>
+			} else {?>
+					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 750px X 세로 240px]</div>
+				<?}?>
 				<input type='file' name='com3banner_1'>
 				<?if( ms::meta('com3banner_1') != '' ) { ?>
 					<input type='hidden' name='com3banner_1_remove' value='n'>
@@ -164,7 +168,9 @@ function setTopMenu( $name ) {
 			<div class='image-upload'>
 			<?if( ms::meta('com3banner_2') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('com3banner_2').">"; 
-			} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 750px X 세로 240px]</div>"; ?>
+			} else {?>
+					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 750px X 세로 240px]</div>
+				<?}?>
 			<input type='file' name='com3banner_2'>
 			<?if( ms::meta('com3banner_2') != '' ) { ?>
 				<input type='hidden' name='com3banner_2_remove' value='n'>
@@ -176,14 +182,15 @@ function setTopMenu( $name ) {
 				<input type='text' name='com3banner_2_text2' value='<?=ms::meta('com3banner_2_text2')?>'>
 			</div>
 		</td>
-	</tr>
-	<tr valign='top'>
+
 		<td>
 			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지3</div>
 			<div class='image-upload'>
 			<?if( ms::meta('com3banner_3') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('com3banner_3').">"; 
-			} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 750px X 세로 240px]</div>"; ?>
+			} else {?>
+					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 750px X 세로 240px]</div>
+				<?}?>
 			<input type='file' name='com3banner_3'>
 			<?if( ms::meta('com3banner_3') != '' ) { ?>
 				<input type='hidden' name='com3banner_3_remove' value='n'>
@@ -195,13 +202,16 @@ function setTopMenu( $name ) {
 				<input type='text' name='com3banner_3_text2' value='<?=ms::meta('com3banner_3_text2')?>'>
 			</div>
 		</td>
-
+	</tr>
+	<tr valign='top'>
 		<td>
 			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지4</div>
 			<div class='image-upload'>
 			<?if( ms::meta('com3banner_4') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('com3banner_4').">"; 
-			} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 750px X 세로 240px]</div>"; ?>
+			} else {?>
+					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 750px X 세로 240px]</div>
+				<?}?>
 			<input type='file' name='com3banner_4'>
 			<?if( ms::meta('com3banner_4') != '' ) { ?>
 				<input type='hidden' name='com3banner_4_remove' value='n'>
@@ -213,14 +223,15 @@ function setTopMenu( $name ) {
 				<input type='text' name='com3banner_4_text2' value='<?=ms::meta('com3banner_4_text2')?>'>
 			</div>
 		</td>
-	</tr>
-		<tr valign='top'>
+
 		<td>
 			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지5</div>
 			<div class='image-upload'>
 			<?if( ms::meta('com3banner_5') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('com3banner_5').">"; 
-			} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 750px X 세로 240px]</div>"; ?>
+			} else {?>
+					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 750px X 세로 240px]</div>
+				<?}?>
 			<input type='file' name='com3banner_5'>
 			<?if( ms::meta('com3banner_5') != '' ) { ?>
 				<input type='hidden' name='com3banner_5_remove' value='n'>
@@ -235,4 +246,6 @@ function setTopMenu( $name ) {
 	</tr>
 </table>
 </div>
+		<input type='submit' value='업데이트'>
+		<div style='clear:right;'></div>
 </div>

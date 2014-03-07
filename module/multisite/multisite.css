@@ -801,7 +801,7 @@ a.user-google-guide-button{
 }
 
 .setting-no-image img.no-image{
-	width: 200px !important;
+	max-width: 200px !important;
 	height: 80px !important;
 }
 
@@ -882,7 +882,7 @@ span.config-name {
 	width: 100%;
 	height: 100px;
 	margin-bottom: 5px;
-	border-radius: 3px;
+
 }
 
 .config .image-config .image-title {
