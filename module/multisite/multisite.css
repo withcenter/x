@@ -236,8 +236,13 @@ table > .header td:first-child {
 
 /* theme config */
 .config-theme {
+<<<<<<< HEAD
 
 	width: 100%;
+=======
+	font-family: '맑은 고딕', AppleGothic;
+	width: 730px;
+>>>>>>> 9625eec3162c3156f6ee773fb1ccf2818a72ef64
 }
 .config-theme table {
 	margin: 0;
@@ -249,33 +254,34 @@ table > .header td:first-child {
 
 }
 
-.config-theme .theme-thumb {
-	padding: 10px;
+.config-theme .theme-thumb {	
 	background: #e6e6e6;
 	position: relative;
 	cursor: pointer;
 	overflow: hidden;
+	border:1px solid #999999;
 }
 
-.config-theme .theme-thumb span.theme-name {
+.config-theme .theme-thumb .theme-name {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	background: #f9f9f9;
-	width: 298px;
+	background: #cccccc;
+	width: 280px;
 	padding: 10px;
 	font-family: '맑은 고딕', AppleGothic;
-	color: #585858;
-	font-weight: bold;
+	color: #000000;	
 	font-size: 9pt;
-	border: solid 1px #e6e6e6;
-
 }
 
-.config-theme .theme-thumb span.theme-name.active-theme {
-	background: #474747;
+.config-theme .theme-thumb .theme-name.active-theme {	
 	color: #ffffff;
-	border: solid 1px #474747;
+	background-color: #999999;
+}
+
+.config-theme .theme-thumb .active-note {	
+	color: #e6e6e6;	
+	float:right;
 }
 
 .config-theme .theme-thumb p {
@@ -794,9 +800,14 @@ table > .header td:first-child {
 span.user-google-guide-button, a.user-google-guide-button{
 	color: #999999;
 	cursor: pointer;
-	margin-right: 10px;
+	margin: 4px 0 0 0;
 	font-weight: bold;	
-	font-size: 11px;
+	font-size: 11px;	
+}
+
+.inner > .user-google-guide-button{
+	color:#cccccc;
+	float:right;
 }
 
 span.user-google-guide-button.inner-title {
@@ -826,11 +837,12 @@ a.user-google-guide-button{
 .config .config-main-title  {
 	padding: 10px;
 	margin: 10px 0 10px 10px;
-	background: #808080;
+	background: #808080;	
 }
 .config .config-main-title .inner  {
 	color: #ffffff;
 	font-size: 14px;
+	height:16px;
 }
 .config .config-main-title .inner .config-title-info {
 	float: left;
@@ -870,7 +882,7 @@ a.user-google-guide-button{
 } 
 
 .config_menu.create-forum {
-	margin: 0 0 5px 0; 
+	margin: 0 0 5px 0;
 }
 
 .site-global .config-wrapper {
@@ -1037,6 +1049,24 @@ span.config-name {
 	top: -3px;
 }
 
-.config_forum .setting-icon {
-	margin-left: -10px;
+.config_forum .board_list {
+	font-family: Dotum;
+	font-weight: normal;
+	font-size: 12px;
+	color: #000000;
+}
+
+.config_forum tr td {
+	padding: 7px;
+	border-bottom: solid 1px #e6e6e6;
+}
+.config_forum tr.header1 {
+	background: #fafafa;
+	border: solid 1px #cccccc;
+}
+
+.config_forum tr.header1 td {
+	padding: 9px;
+	color: #000000;
+	border: 0;
 }
