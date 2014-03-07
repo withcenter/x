@@ -41,7 +41,7 @@
 			
 			<div class='right'>
 				<? 
-					for ( $i=6; $i <=9; $i++ ) {
+					for ( $i=6; $i <=8; $i++ ) {
 						if ( ms::meta('forum_no_'.$i) ) {
 							$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('forum_no_'.$i)."'");
 							
@@ -106,4 +106,3 @@
 				<? include x::theme('sidebar'); ?>
 			</div>
 			<div class='content'>
-				<?if (preg_match('/^config/', $action ) ) include ms::site_menu();?>

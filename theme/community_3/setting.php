@@ -37,8 +37,8 @@ function setTopMenu( $name ) {
  <div class='config-wrapper'>
 	<div class='config-title'>
 		<span class='config-title-info'>탑 메뉴 설정</span>
-		<span class='user-google-guide-button' page = 'google_doc_community_3_1'>[도움말]</span>
 		<span class='config-title-notice'>
+			<span class='user-google-guide-button' page = 'google_doc_community_3_1'>[도움말]</span>
 			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
 		</span>
 	</div>
@@ -72,8 +72,8 @@ function setTopMenu( $name ) {
   <div class='config-wrapper'>
 	<div class='config-title'>
 		<span class='config-title-info'>추가 사이트 정보</span>
-		<span class='user-google-guide-button' page = 'google_doc_community_3_1'>[도움말]</span>
 		<span class='config-title-notice'>
+			<span class='user-google-guide-button' page = 'google_doc_community_3_1'>[도움말]</span>
 			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
 		</span>
 	</div>
@@ -92,8 +92,8 @@ function setTopMenu( $name ) {
 
 	<div class='config-title'>
 		<span class='config-title-info'>사이트 로고 및 배너</span>
-		<span class='user-google-guide-button' page = 'google_doc_community_3_2'>[도움말]</span>
 		<span class='config-title-notice'>		
+			<span class='user-google-guide-button' page = 'google_doc_community_3_2'>[도움말]</span>
 			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
 		</span>
 	</div>
