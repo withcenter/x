@@ -236,8 +236,9 @@
 
 .travel_theme2_header > .header_wrapper #header-logo {
 	float: left;
-	height: 59px;
+	height: 53px;
 	width:600px;
+	margin-top:7px;
 }
 
 .travel_theme2_header > .header_wrapper #header-logo img {
@@ -302,7 +303,7 @@
 .extra-menu-items .extra-bottom{	
 	position:absolute;
 	right:0;
-	top:32px;
+	top:35px;
 }
 .extra-menu-items .extra-bottom a{
 	color:#000000;
