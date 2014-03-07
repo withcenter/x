@@ -1,7 +1,5 @@
 <?php
-define('X_DIR_ETC', g::dir() . '/x/etc');
-define('X_DIR_THEME', g::dir() . '/x/theme');
-define('MAX_BLOG_WRITER', 3);
+
 
 
 /**

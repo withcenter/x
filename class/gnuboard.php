@@ -919,5 +919,17 @@ class gnuboard {
 	}
 	
 	
+	
+	/** @short updates member field
+	 *
+	 */
+	static function update_member( $id, $field, $value )
+	{
+		global $g5;
+		$q = "UPDATE {$g5['member_table']} SET $field='$value' WHERE mb_id='$id'";
+		db::query( $q );
+	}
+	
+	
 } // eo class
 
