@@ -911,6 +911,10 @@ span.config-name {
 	width: 60px;
 }
 
+.config_menu .config .menu-num.sec {
+	margin: 0 5px 0 10px;
+}
+
 .config_menu .config .menu-select-name {
 	display: inline-block;
 	width: 270px;
@@ -1029,7 +1033,7 @@ span.config-name {
 }
 
 .config-write .row input[type='text'] {
-	width: 81.5%c;
+	width: 81.5%;
 	padding: 0 10px;
 	height: 20px;
 	line-height: 20px;

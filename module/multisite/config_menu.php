@@ -41,8 +41,8 @@
 				<span class='config-title-info'>
 					<span class='menu-num'>번호</span>
 					<span class='menu-select-name'>메뉴 선택</span>
-					<span class='menu-num'>번호</span>
-					<span class='menu-select-name'>메뉴 선택</span>
+					<span class='menu-num sec'>번호</span>
+					메뉴 선택
 				</span>
 		
 			</div>	
