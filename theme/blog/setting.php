@@ -1,6 +1,41 @@
+<?php
+function setTopMenu( $name ) {
+	global $cfgs;
+	
+	ob_start();
+	if ( ms::exist() ) {
+		$cfgs = ms::forums();
+		if ( ! empty( $cfgs ) ) {
+	?>
+	<select name='<?=$name?>'>
+		<option value=''>게시판을 선택하세요</option>
+		<option value=''></option>
+		<? foreach ( $cfgs as $c ) { 
+			if ( $c['bo_table'] == ms::meta($name) ) $selected = 'selected';
+			else $selected = null;
+		?>
+			<option value="<?=$c['bo_table']?>" <?=$selected?>><?=$c['bo_subject']?></option>
+		<? } ?>
+	</select>
+	<script>
+	$(function(){
+		$("[name='<?=$name?>']").change(function(){
+			$("[name='<?=$name?>_bo_table']").val($(this).val());
+		});
+	});
+	</script>
+	<?
+		}
+	}?>
+	<input type='text' name='<?=$name?>_bo_table' value="" placeholder=" 게시판 아이디 직접 입력" style='height: 23px; width: 100px; line-height: 23px; padding: 0 10px;' />
+<?
+	return $content = ob_get_clean();
+}
+?>
+
 <div class='config-wrapper'>
 	<div class='config-title'>
-		<span class='config-title-info'>Profile Picture and Information</span>
+		<span class='config-title-info'>프로필 사진 및 문구</span>
 		<span class='user-google-guide-button' page = 'google_doc_blog_1'>[도움말]</span>
 		<span class='config-title-notice'>
 			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
@@ -35,4 +70,16 @@
 		</tr>
 	</table>
 </div>
+</div>
+<div class='config-wrapper'>
+	<div class='config-title'>
+		<span class='config-title-info'>첫 페이지 본문 게시판</span>
+	</div>
+	<div class='config-container'>
+		<div>메인 게시판 <?=setTopMenu('forum_no_1')?></div>
+		<? for ( $i=2; $i <= 10; $i++ ) {?>
+			<div>게시판<?=$i?> <?=setTopMenu('forum_no_'.$i)?></div>
+		<?}?>
+	</div>
+	<input type='submit' value='업데이트' />
 </div>
