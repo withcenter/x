@@ -250,3 +250,11 @@
 	float: right;
 	margin-top: 5px;
 }
+
+
+/**THEME SPECIFIC CONFIG CSS */
+.config .forum-config select {
+	width: 100px;
+	position: relative;
+	
+}

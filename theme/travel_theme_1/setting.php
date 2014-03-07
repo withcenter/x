@@ -36,16 +36,16 @@ function setTopMenu( $name ) {
 
  <div class='config-wrapper'>
 	<div class='config-title'>
-		<span class='config-title-info'>탑 메뉴 설정</span>
-		<span class='user-google-guide-button' page = 'google_doc_community_3_1'>[도움말]</span>
+		<span class='config-title-info'><span class='config-title-info'>탑 메뉴 설정</span></span>
 		<span class='config-title-notice'>
+			<span class='user-google-guide-button' page = 'google_doc_community_3_1'>[도움말]</span>
 			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
 		</span>
 	</div>
 	
 	
 	<div class='config-container'>
-	<table cellpadding=0 cellspacing=0 width='100%'>
+	<table cellpadding=0 cellspacing=0 width='100%' class='forum-config'>
 		<tr valign='top'>
 			<td>
 				<? for ( $i = 1; $i <=3; $i++ ) {?>
@@ -70,8 +70,8 @@ function setTopMenu( $name ) {
 <div class='config-wrapper'>
 	<div class='config-title'>
 		<span class='config-title-info'>사이트 추가 설정</span>
-		<span class='user-google-guide-button' page = 'google_doc_travel_2_1'>[도움말]</span>
 		<span class='config-title-notice'>
+			<span class='user-google-guide-button' page = 'google_doc_travel_2_1'>[도움말]</span>
 			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
 		</span>
 	</div>
@@ -93,8 +93,8 @@ function setTopMenu( $name ) {
 <div class='config-wrapper'>
 	<div class='config-title'>
 		<span class='config-title-info'>사이트 상하단 로고 & 로고 문구</span>
-		<span class='user-google-guide-button' page = 'google_doc_travel_2_2'>[도움말]</span>
 		<span class='config-title-notice'>
+			<span class='user-google-guide-button' page = 'google_doc_travel_2_2'>[도움말]</span>
 			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
 		</span>
 	</div>
@@ -156,8 +156,8 @@ function setTopMenu( $name ) {
  <div class='config-wrapper'>
 	<div class='config-title'>
 		<span class='config-title-info'>메인 롤링 배너</span>
-		<span class='user-google-guide-button' page = 'google_doc_travel_2_3'>[도움말]</span>
 		<span class='config-title-notice'>
+			<span class='user-google-guide-button' page = 'google_doc_travel_2_3'>[도움말]</span>
 			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
 		</span>
 		</div>
@@ -269,8 +269,8 @@ function setTopMenu( $name ) {
  <div class='config-wrapper'>
 	<div class='config-title'>
 		<span class='config-title-info'>오른쪽 날개 배너</span>
-		<span class='user-google-guide-button' page = 'google_doc_travel_2_4'>[도움말]</span>
 		<span class='config-title-notice'>
+			<span class='user-google-guide-button' page = 'google_doc_travel_2_4'>[도움말]</span>
 			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
 		</span>
 		</div>
@@ -339,8 +339,8 @@ function setTopMenu( $name ) {
  <div class='config-wrapper'>
 	<div class='config-title'>
 		<span class='config-title-info'>중앙 사이드 배너, 하단 배너</span>
-		<span class='user-google-guide-button' page = 'google_doc_travel_2_5'>[도움말]</span>
 		<span class='config-title-notice'>
+			<span class='user-google-guide-button' page = 'google_doc_travel_2_5'>[도움말]</span>
 			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
 		</span>
 		</div>
