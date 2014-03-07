@@ -131,32 +131,7 @@
 	margin-bottom:10px;
 }
 
-.config fieldset {
-	border: 1px solid #d5d5d5;
-	border-radius: 3px;
-	padding: 10px;
-	margin-bottom: 10px;
-}
-.config fieldset legend {
-	color: #555555;
-	font-size: 10pt;
-	text-indent: 0;
-	position: relative;
-	line-height: 100%;
-	padding: 0 10px;
-	font-weight: bold;
-}
 
-.message {
-	border: 2px solid #555555;
-	color: blue;
-	font-weight: bold;
-	background-color: #d5d5d5;
-	text-align: center;
-	margin: 10px 0;
-	padding: 10px 20px;
-	border-radius: 3px;
-}
 /***Temporarily added***/
 .config-container input[type='submit'] {
 	cursor: pointer;
@@ -239,10 +214,7 @@ table > .header td:first-child {
 <<<<<<< HEAD
 
 	width: 100%;
-=======
-	font-family: '맑은 고딕', AppleGothic;
 	width: 730px;
->>>>>>> 9625eec3162c3156f6ee773fb1ccf2818a72ef64
 }
 .config-theme table {
 	margin: 0;
@@ -600,67 +572,6 @@ table > .header td:first-child {
 	border-radius: 3px;	
 }
 
-/* config_write.php */
-.config-write {
-
-}
-
-.config-write .api-info {
-	margin-bottom: 10px;
-	border: 1px solid #d5d5d5;
-	padding: 10px;
-	border-radius: 4px;
-}
-.config-write .api-info  > .title {
-	font-size: 9pt;
-	font-weight: bold;
-	color: #666666;
-	margin-bottom: 10px;
-	font-family: '맑은 고딕', AppleGothic;
-}
-
-.config-write .row {
-	margin-bottom: 5px;
-}
-.config-write  .item4 {
-	display: inline-block;
-	width: 100px;
-	font-family: '맑은 고딕', AppleGothic;
-	height: 30px;
-	line-height: 30px;
-	color: #ffffff;
-	padding: 0 10px;
-	background-color: #666666;
-	margin-right: 10px;
-}
-
-.config-write .row input[type='text'] {
-	width: 250px;
-	padding: 0 10px;
-	height: 30px;
-	line-height: 30px;
-	color: #555555;
-}
-
-.config-write  input[type='submit'] {
-	width: 80px;
-	height: 30px;
-	background-color: #616161;
-	color: #ffffff;
-	line-height: 30px;
-	text-align: center;
-	border: 0;
-	border-radius: 0;
-	float: right;
-	margin-right: 10px;
-}
-	
-}
-.config-write input[type='submit']:hover {
-	background-color: #616161;
-	color: #ffffff;
-	border: 0;
-}
 
 /* config.php */
 .subsite-support {
@@ -1075,4 +986,91 @@ span.config-name {
 
 .config_forum .config-wrapper {
 	margin-left: 20px;
+}
+
+
+
+.config-write .config-wrapper {
+	margin-left: 20px;
+}
+
+
+
+/* config_write.php */
+.config-write {
+
+}
+
+.config-write .api-info {
+	margin-bottom: 10px;
+	border: 1px solid #d5d5d5;
+	padding: 10px;
+	border-top: 0;
+	background: #ffffff;
+}
+.config-write .api-info  > .title {
+	font-size: 9pt;
+	font-weight: bold;
+	color: #666666;
+	margin-bottom: 10px;
+	font-family: '맑은 고딕', AppleGothic;
+}
+
+.config-write .row {
+	margin-bottom: 5px;
+}
+.config-write  .item4 {
+	display: inline-block;
+	width: 100px;
+	font-family: '맑은 고딕', AppleGothic;
+	color: #666666;
+	font-size: 12px;
+}
+
+.config-write .row input[type='text'] {
+	width: 570px !important;
+	padding: 0 10px;
+	height: 20px !important;
+	line-height: 20px !important;
+	color: #555555;
+}
+
+.config-write  input[type='submit'] {
+	width: 80px;
+	height: 30px;
+	background-color: #616161;
+	color: #ffffff;
+	line-height: 30px;
+	text-align: center;
+	border: 0;
+	border-radius: 0;
+	float: right;
+	margin-right: 10px;
+}
+	
+}
+.config-write input[type='submit']:hover {
+	background-color: #616161;
+	color: #ffffff;
+	border: 0;
+}
+.config fieldset legend {
+	color: #555555;
+	font-size: 10pt;
+	text-indent: 0;
+	position: relative;
+	line-height: 100%;
+	padding: 0 10px;
+	font-weight: bold;
+}
+
+.message {
+	border: 2px solid #555555;
+	color: blue;
+	font-weight: bold;
+	background-color: #d5d5d5;
+	text-align: center;
+	margin: 10px 0;
+	padding: 10px 20px;
+	border-radius: 3px;
 }
