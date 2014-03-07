@@ -10,7 +10,8 @@
 
 /** COMPANY BANNNER */
 .layout .left .travel2-company-banner {
-	height: 118px;
+	border: 1px solid #bbbbbb;
+	height: 116px;
 	margin-bottom: 10px;
 	overflow: hidden;
 }
