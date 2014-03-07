@@ -9,7 +9,7 @@
 	<input type='hidden' name='action' value='config_theme_submit'>
 	<input type="hidden" name="theme" id="theme_value" value="" />
 
-	<div>
+<div>
 <?include ms::site_menu();?>
 		<div class='config-main-title'>
 			<div class='inner'>
@@ -67,5 +67,5 @@
 				}?>
 				<div style='clear:both'></div>
 			</div>			
-	</div> <!--config--theme-->
+</div> <!--config--theme-->
 </form>
