@@ -4,7 +4,7 @@
 		return;
 	}
 ?>
-<form action='?' class='config config-theme' method='post'>
+<form action='?' class='config config_theme' method='post'>
 	<input type='hidden' name='module' value='multisite'>
 	<input type='hidden' name='action' value='config_theme_submit'>
 	<input type="hidden" name="theme" id="theme_value" value="" />
