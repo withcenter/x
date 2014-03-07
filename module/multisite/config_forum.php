@@ -64,7 +64,8 @@
 			";
 		}
 		?>
-		</table>	
+		</table>
+		<iframe src='javascript:void(0);' name='hidden_iframe' style='width: 100%; height: 300px; display:none;'></iframe>
 		</div></div>
 	</div>
 <?}?>
