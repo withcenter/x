@@ -188,9 +188,7 @@
 
 /* config_menu */
 
-.config_menu .config {
-	font-family: '맑은 고딕', AppleGothic;
-}
+
 .config_menu .config table .line-header td{
 	border-bottom: 1px solid #c3c3c3;
 	
