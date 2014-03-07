@@ -48,6 +48,8 @@ if ( $argv[1] == 'language' ) {
 	include x::dir() . "/etc/patch/head.sub.php";
 	include x::dir() . "/etc/patch/create_default_forum.php";
 	include x::dir() . "/etc/patch/visit_insert.inc.php";
+	include x::dir() . "/etc/patch/visit.lib.php";
+	
 	
 	echo "\n-- PATCH SUCCESS --\n";
 	

@@ -78,7 +78,12 @@ if (get_cookie('ck_visit_ip') != $_SERVER['REMOTE_ADDR'])
         // 기본설정 테이블에 방문자수를 기록한 후
         // 방문자수 테이블을 읽지 않고 출력한다.
         // 쿼리의 수를 상당부분 줄임
-        sql_query(" update {$g5['config_table']} set cf_visit = '{$visit}' ");
+        // sql_query(" update {$g5['config_table']} set cf_visit = '{$visit}' ");
+		
+		$value = serialize(array( $vi_today, $vi_yesterday, $vi_max, $vi_sum));
+		x::config( "visit.$domain", $value );
+		
+
     }
 }
 ?>
