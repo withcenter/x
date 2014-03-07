@@ -17,16 +17,20 @@
 		<input type='hidden' name='module' value='multisite'>
 		<input type='hidden' name='action' value='config_global_submit'>
 <div class='config site-global'>
+	<?include ms::site_menu();?>
+	
 	<div class='config-main-title'>
 		<div class='inner'>
 			<img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 사이트 정보
 		</div>				
 	</div>
+	
+	<div class='config-main-container'>
+
 		<div class='config-wrapper'>						
 			<div class='config-title'>
 				<span class='config-title-info'>기본 사이트 설정</span>
-				<span class='user-google-guide-button' page = 'google_doc_1'>[도움말]</span>
-				<span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span>
+				<span class='config-title-notice'><span class='user-google-guide-button' page = 'google_doc_1'>[도움말]</span><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span>
 			</div>	
 			<div class='config-container'>
 
@@ -80,6 +84,6 @@
 		
 		<input type='submit' value='업데이트'>
 		<div style='clear:right;'></div>
-
+	</div><!--config-main-container-->
 </div>
 </form>

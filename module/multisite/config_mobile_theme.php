@@ -7,7 +7,7 @@
 <form action='?' class='config_theme' method='post'>
 	<input type='hidden' name='module' value='multisite'>
 	<input type='hidden' name='action' value='config_mobile_theme_submit'>
-
+<?include ms::site_menu();?>
 	<div class='config config-theme'>
 		<div class='config-main-title'>
 			<div class='inner'>

@@ -14,6 +14,7 @@
 		?>
 	<link rel='stylesheet' type='text/css' href='<?=x::url()?>/module/multisite/subsite.css' />
 	<div class='config config_forum'>
+	<?include ms::site_menu();?>
 	<div class='config-main-title'>
 		<div class='inner'>
 			<img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 게시판은 게시판 제목을 입력하시면 생성이 됩니디.

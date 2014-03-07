@@ -2,7 +2,7 @@
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	background-color: #474747;
+	background-color: #4d4d4d;
 	height: 40px;
 }
 .multisite-menu li {
@@ -21,7 +21,7 @@
 }
 .multisite-menu li a:hover {
 	text-decoration: none;
-	background-color: #616161;
+	background-color: #6e6e6e;
 }
 
 
@@ -406,80 +406,3 @@
 }
 
 /**new design*/
-.config .config-main-title  {
-	border: 1px solid #d5d5d5;
-	background-color: #f9f9f9;
-	border-radius: 3px;
-	margin: 10px 0;
-}
-.config .config-main-title .inner  {
-	border: 1px solid #ffffff;
-	border-radius: 3px;
-	padding: 0 10px;
-	height: 30px;
-	line-height: 30px;
-	font-size: 10pt;
-	font-weight: bold;
-	color: #2c5991;
-}
-
-.config .config-main-title .inner  img {
-	width: 19px;
-}
-
-.config  .config-title {
-	margin: 0;
-	background: #474747;
-	padding: 7px;
-	color: #ffffff;
-	margin-bottom: 5px;
-}
-
-
-
-.config  .config-title .config-title-notice {
-	float: right;
-}
-
- 
-.config  .config-container {
-	padding: 5px 10px;
-	margin-bottom: 10px;
-} 
-
-.config_menu.create-forum {
-	margin: 0 0 5px 0; 
-}
-
-.site-global .config-wrapper {
-	margin-bottom: 100px;
-}
-
-.site-global .config-wrapper:last-child {
-	margin-bottom: 0;
-}
-
-.setting-no-image {
-	width: 100%;
-	background: #ffffff;
-	text-align: center;
-	font-size: 10pt;
-	font-weight: bold;
-	padding: 10px 0;
-	border: solid 1px #f3f3f3;
-	background: #fafafa;
-	margin-bottom: 10px;
-} 
-.config_general input[name='title'], .config_general input[name='secondary_title'] {
-	width: 98% !important;
-}
-
-.config_general textarea[name='footer_text'] {
-	width: 98%;
-	height: 125px;
-	padding: 2px;
-}
-
-.config {
-	font-family: '맑은 고딕', AppleGothic;
-}

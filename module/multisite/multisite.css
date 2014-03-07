@@ -784,11 +784,11 @@ table > .header td:first-child {
 }
 
 span.user-google-guide-button, a.user-google-guide-button{
-	color:orange;
-	cursor:pointer;
-	margin-left:10px;
-	font-weight:bold;	
-
+	color: #999999;
+	cursor: pointer;
+	margin-right: 10px;
+	font-weight: bold;	
+	font-size: 11px;
 }
 
 a.user-google-guide-button{
@@ -797,4 +797,91 @@ a.user-google-guide-button{
 
 .hidden-google-doc iframe, .google-doc-wrapper iframe{
 	border:1px solid #bbbbbb;
+}
+
+
+
+/** New Layout **/
+.config {
+	background: #fafafa;
+	border: solid 1px #e6e6e6;
+	padding: 9px;
+}
+.config .config-main-container {
+	padding-left: 20px;
+}
+
+.config .config-main-title  {
+	padding: 10px;
+	margin: 10px 0 10px 10px;
+	background: #808080;
+}
+.config .config-main-title .inner  {
+	color: #ffffff;
+	font-size: 14px;
+}
+
+.config .config-main-title .inner  img {
+	position: relative;
+	top: -2px;
+	margin-right: 7px;
+}
+
+.config  .config-title {
+	padding: 5px 10px 6px 10px;
+	background: #fafafa;
+	border: solid 1px #cccccc;
+	color: #000000;
+	font-size: 13px
+}
+
+
+
+.config  .config-title .config-title-notice {
+	float: right;
+}
+
+ 
+.config  .config-container {
+	padding: 14px 9px;
+	background: #ffffff;
+	border: solid 1px #cccccc;
+	border-top: 0;
+} 
+
+.config_menu.create-forum {
+	margin: 0 0 5px 0; 
+}
+
+.site-global .config-wrapper {
+	margin-bottom: 100px;
+}
+
+.site-global .config-wrapper:last-child {
+	margin-bottom: 0;
+}
+
+.setting-no-image {
+	width: 100%;
+	background: #ffffff;
+	text-align: center;
+	font-size: 10pt;
+	font-weight: bold;
+	padding: 10px 0;
+	border: solid 1px #f3f3f3;
+	background: #fafafa;
+	margin-bottom: 10px;
+} 
+.config_general input[name='title'], .config_general input[name='secondary_title'] {
+	width: 98% !important;
+}
+
+.config_general textarea[name='footer_text'] {
+	width: 98%;
+	height: 125px;
+	padding: 2px;
+}
+
+.config {
+	font-family: '맑은 고딕', AppleGothic;
 }

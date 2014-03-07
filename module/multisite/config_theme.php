@@ -8,7 +8,7 @@
 	<input type='hidden' name='module' value='multisite'>
 	<input type='hidden' name='action' value='config_theme_submit'>
 	<input type="hidden" name="theme" id="theme_value" value="" />
-
+<?include ms::site_menu();?>
 	<div class='config config-theme'>
 		<div class='config-main-title'>
 			<div class='inner'>
