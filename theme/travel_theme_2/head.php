@@ -28,30 +28,34 @@
 	<div class='extra-menu-items'>
 		<div class='extra-top'>
 			<?for( $i = 1; $i <= 3; $i ++){
-				if( $i == 3 ) $no_border = 'no-border';
-				else $no_border = null;
+				if( $i == 3 ) {?>
+					<a class='no-border' href = '<?=g::url()?>?device=mobile'>모바일</a>
+				<?}
+				else {
 				if ( ms::meta('forum_no_'.$i) ) {
 					$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('forum_no_'.$i)."'");
 				
 					  if ( $row['bo_subject'] ) {?>
-						<a class='<?=$no_border?>' href = '<?=G5_BBS_URL?>/board.php?bo_table=<?=ms::meta('forum_no_'.$i)?>'>
-							<?=cut_str($row['bo_subject'],15,'...')?></a>		
-						</a>
+						<a href = '<?=G5_BBS_URL?>/board.php?bo_table=<?=ms::meta('forum_no_'.$i)?>'>
+							<?=cut_str($row['bo_subject'],10,'...')?>
+						</a>								
 					<?}?>
 				<?}?>
-			<?}?>
+			<?}
+			
+			}?>
 			<div style='clear:both'></div>
 		</div>
 		<div class='extra-bottom'>
-			<?for( $i = 4; $i <= 7; $i ++){
-				if( $i == 7 ) $no_border = 'no-border';
+			<?for( $i = 3; $i <= 6; $i ++){
+				if( $i == 6 ) $no_border = 'no-border';
 				else $no_border = null;
 				if ( ms::meta('forum_no_'.$i) ) { 
 					$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('forum_no_'.$i)."'");
 				
 					 if ( $row['bo_subject'] ) {?>
 						<a class='<?=$no_border?>' href = '<?=G5_BBS_URL?>/board.php?bo_table=<?=ms::meta('forum_no_'.$i)?>'>
-							<?=cut_str($row['bo_subject'],15,'...')?></a>		
+							<?=cut_str($row['bo_subject'],10,'...')?>
 						</a>
 					<?}?>
 				<?}?>
