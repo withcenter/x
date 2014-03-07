@@ -235,51 +235,47 @@ table > .header td:first-child {
 }
 
 /* theme config */
-.config-theme {
+.config-container {
 	font-family: '맑은 고딕', AppleGothic;
 	width: 730px;
 }
-.config-theme table {
-	margin: 0;
+
+.config-container.theme_config{
+	margin-left:2px;	
 }
 
-.config-theme td {
-
-	color: #ffffff;
-
-}
-
-.config-theme .theme-thumb {	
+.config-container .theme-thumb {	
 	background: #e6e6e6;
 	position: relative;
 	cursor: pointer;
 	overflow: hidden;
 	border:1px solid #999999;
+	margin:0 0 10px 10px;
 }
 
-.config-theme .theme-thumb .theme-name {
+.config-container .theme-thumb .theme-name {
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	background: #cccccc;
-	width: 280px;
+	width: 330px;
 	padding: 10px;
 	font-family: '맑은 고딕', AppleGothic;
 	color: #000000;	
-	font-size: 9pt;
+	font-size: 9pt;	
 }
 
-.config-theme .theme-thumb .theme-name.active-theme {	
+.config-container .theme-thumb .theme-name.active-theme {	
 	color: #ffffff;
 	background-color: #999999;
 }
 
-.config-theme .theme-thumb .active-note {	
+.config-container .theme-thumb .active-note {	
 	color: #e6e6e6;	
 	float:right;
 }
 
-.config-theme .theme-thumb p {
+.config-container .theme-thumb p {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -288,27 +284,27 @@ table > .header td:first-child {
 	width: 100%;
 }
 
-.config-theme .theme-thumb {
-	display: inline-block;
-	width: 300px;
+.config-container .theme-thumb {	
+	width: 350px;
 	height: 220px;
+	float:left;
 }
 
-.config-theme .thumb-list {	
+.config-container .thumb-list {	
 	margin-top: 0.5em;
 	text-align: center;
 }
 
-.config-theme .theme-thumb img {
+.config-container .theme-thumb img {
 	width: 100%;
 }
 
-.config-theme .theme-thumb table, .config-theme .theme-thumb a {
+.config-container .theme-thumb table, .config-container .theme-thumb a {
 	color: #ffffff;
 	text-decoration: none;
 }
 
-.config-theme button[name='theme'] {
+.config-container button[name='theme'] {
 	border: none;
 	background: transparent;
 	color: #ffffff;
@@ -316,19 +312,19 @@ table > .header td:first-child {
 	height: 240px;
 }
 
-.config-theme button[name='theme']:focus {
+.config-container button[name='theme']:focus {
 	outline: none;
 }
 
-.config-theme button[name='theme']:active {
+.config-container button[name='theme']:active {
 	outline: none;
 }
 
-.config-theme button[name='theme']:hover {
+.config-container button[name='theme']:hover {
 	outline: none;
 }
 
-.config-theme > .title {
+.config-container > .title {
 	font-size: 1.250em;
 	color: #004475;
 	border: 1px solid #d5d5d5;
@@ -870,9 +866,7 @@ a.user-google-guide-button{
 
  
 .config  .config-container {
-	padding: 14px 9px;
-	background: #ffffff;
-	border: solid 1px #cccccc;
+	padding: 0 0 0 5px;
 	border-top: 0;
 } 
 
