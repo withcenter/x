@@ -21,11 +21,13 @@
 			<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
 		</div>
 		<div class='theme_config'>				
-			<?if ( ms::meta('mobile_theme') ) { ?>	
+			<?			
+			if ( ms::meta('mobile_theme') ) { 
+			?>	
 					<div class='theme-thumb'>
 						<img src='theme/<?=ms::meta('mobile_theme')?>/preview.jpg'/>						
-						<div class='theme-name active-theme'><?=ms::meta('mobile_theme')?><span class='active-note'>선택 되었습니다</span></div>
-					</div>					
+						<div class='theme-name active-theme'><?=ms::meta('mobile_theme')?><span class='active-note'>선택 되었습니다</span></div>						
+					</div>
 			<?
 			}
 						
@@ -50,8 +52,8 @@
 				<?
 					}
 				}
-				?>	
-			<div style='clear:both'></div>	
+				?>
+			<div style='clear:both'></div>
 		</div>				
 	</div> <!--config--theme-->
 </form>

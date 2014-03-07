@@ -731,7 +731,8 @@ a.user-google-guide-button{
 .config .config-main-title  {
 	padding: 10px;
 	margin: 10px 0 10px 10px;
-	background: #808080;	
+	background: #808080;		
+	height:16px;
 }
 .config .config-main-title .inner  {
 	color: #ffffff;
@@ -739,9 +740,7 @@ a.user-google-guide-button{
 	height:16px;
 	position: relative;
 }
-.config .config-main-title .inner .config-title-info {
-	float: left;
-}
+
 .config .config-main-title .inner .config-title-notice   {
 	position: absolute;
 	right: 0; 
