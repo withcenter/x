@@ -23,9 +23,9 @@
 		<div class='theme_config'>				
 			<?if ( ms::meta('mobile_theme') ) { ?>	
 					<div class='theme-thumb'>
-						<img src='theme/<?=ms::meta('mobile_theme')?>/preview.jpg' >						
+						<img src='theme/<?=ms::meta('mobile_theme')?>/preview.jpg'/>						
 						<div class='theme-name active-theme'><?=ms::meta('mobile_theme')?><span class='active-note'>선택 되었습니다</span></div>
-					</div>				
+					</div>					
 			<?
 			}
 			
