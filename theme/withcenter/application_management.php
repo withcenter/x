@@ -57,7 +57,7 @@ echo "</div>";
 /* 페이징 */
 $navigator_option = array ( 
 							'total_post'=> $total_post,
-							'page_no'=>$sy['post']->$page_no,
+							'page_no'=>$page_no,
 							'no_of_post'=>$no_of_post,
 							'no_of_page'=>10
 );

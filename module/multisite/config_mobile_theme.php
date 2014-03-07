@@ -29,7 +29,7 @@
 			<?
 			}
 			
-			$theme_ctr = 2;
+			$theme_ctr = 2;			
 			$dirs = file::getDirs(X_DIR_THEME);
 			foreach ( $dirs as $dir ) {
 				$path = X_DIR_THEME . "/$dir/config.php";
@@ -51,10 +51,9 @@
 				<?
 					}
 				}
-				?>
-
-		</div><div style='clear:both'></div>					
+				?>	
+			<div style='clear:both'></div>
+		</div>				
 	</div> <!--config--theme-->
-</div>
 </form>
 	
