@@ -107,6 +107,16 @@ include_once(G5_EDITOR_LIB);
 			<div class='title'>BO CONTENT TAIL</div>
 			<?php echo editor_html("bo_content_tail", $row['bo_content_tail']); ?>	
 			<input type='submit' value='업데이트' />
+		</div>	
+		<div class='wrapper editor'>
+			<div class='title'>BO MOBILE CONTENT HEAD</div>
+			<?php echo editor_html("bo_mobile_content_head", $row['bo_mobile_content_head']); ?>
+			<input type='submit' value='업데이트' />
+		</div>
+		<div class='wrapper editor'>
+			<div class='title'>BO MOBILE CONTENT TAIL</div>
+			<?php echo editor_html("bo_mobile_content_tail", $row['bo_mobile_content_tail']); ?>	
+			<input type='submit' value='업데이트' />
 		</div>		
 		
 		<div class='wrapper'>
