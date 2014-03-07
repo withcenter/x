@@ -7,6 +7,8 @@ function setTopMenu( $name ) {
 		$cfgs = ms::forums();
 		if ( ! empty( $cfgs ) ) {
 	?>
+	<table><tr valign='top'>
+	<td width=100>
 	<select name='<?=$name?>'>
 		<option value=''>게시판을 선택하세요</option>
 		<option value=''></option>
@@ -17,6 +19,7 @@ function setTopMenu( $name ) {
 			<option value="<?=$c['bo_table']?>" <?=$selected?>><?=$c['bo_subject']?></option>
 		<? } ?>
 	</select>
+	</td>
 	<script>
 	$(function(){
 		$("[name='<?=$name?>']").change(function(){
@@ -27,7 +30,10 @@ function setTopMenu( $name ) {
 	<?
 		}
 	}?>
-	<input type='text' name='<?=$name?>_bo_table' value="" placeholder=" 게시판 아이디 직접 입력" style='height: 23px; width: 140px; line-height: 23px; padding: 0 10px;' />
+	<td width='200'>
+		<input type='text' name='<?=$name?>_bo_table' value="" placeholder=" 게시판 아이디 직접 입력"/>
+	</td>
+	</tr></table>
 <?
 	return $content = ob_get_clean();
 }
@@ -43,24 +49,27 @@ function setTopMenu( $name ) {
 		</span>
 	</div>
 	
-	
-	<div class='config-container'>
-	<table cellpadding=0 cellspacing=0 width='100%'>
-		<tr>
-			<td>
-				<? for ( $i = 1; $i <=2; $i++ ) {?>
-					<div>상단1-<?=$i?> : <?=setTopMenu('forum_no_'.$i)?></div>
-				<? }?>
-			</td>
-			<td width=10></td>
-			<td>
-				<? for ( $i = 3; $i <=6; $i++ ) {?>
-					<div>상단2-<?=$i-3?> : <?=setTopMenu('forum_no_'.$i)?></div>
-				<? }?>
-			</td>
-		</tr>
-	</table>
-
+	<div class='config-wrapper'>
+		<div class='config-container'>
+			<table cellpadding=0 cellspacing=0 width='100%'>
+				<tr valign='top'>
+					<td width='50%'>
+						<? for ( $i = 1; $i <=2; $i++ ) {?>
+							<div class='menu-config-list'><div class='label'>상단1-<?=$i?> : </div><?=setTopMenu('forum_no_'.$i)?></div>
+						<? }?>
+					</td>
+					<td width=10></td>
+					<td>
+						<? for ( $i = 3; $i <=6; $i++ ) {?>
+							<div class='menu-config-list' ><div class='label'>상단2-<?=$i-2?> : </div><?=setTopMenu('forum_no_'.$i)?></div>
+						<? }?>
+					</td>
+				</tr>				
+			</table>				
+			<input type='submit' value='업데이트'>
+			<div style='clear:both;'></div>
+		</div>		
+	</div>
   <div class='config-wrapper'>
 	<div class='config-title'>
 		<span class='config-title-info'>사이트 추가 설정</span>
