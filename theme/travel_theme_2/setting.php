@@ -6,9 +6,7 @@ function setTopMenu( $name ) {
 	if ( ms::exist() ) {
 		$cfgs = ms::forums();
 		if ( ! empty( $cfgs ) ) {
-	?>
-	<table><tr valign='top'>
-	<td width=100>
+	?>	
 	<select name='<?=$name?>'>
 		<option value=''>게시판을 선택하세요</option>
 		<option value=''></option>
@@ -19,7 +17,6 @@ function setTopMenu( $name ) {
 			<option value="<?=$c['bo_table']?>" <?=$selected?>><?=$c['bo_subject']?></option>
 		<? } ?>
 	</select>
-	</td>
 	<script>
 	$(function(){
 		$("[name='<?=$name?>']").change(function(){
@@ -30,44 +27,37 @@ function setTopMenu( $name ) {
 	<?
 		}
 	}?>
-	<td width='200'>
-		<input type='text' name='<?=$name?>_bo_table' value="" placeholder=" 게시판 아이디 직접 입력"/>
-	</td>
-	</tr></table>
+	<input type='text' name='<?=$name?>_bo_table' value="" placeholder=" 게시판 아이디 직접 입력"/>
 <?
 	return $content = ob_get_clean();
 }
 ?>
 
-
- <div class='config-wrapper'>
-	<div class='config-title'>
-		<span class='config-title-info'>탑 메뉴 설정</span>
-		<span class='user-google-guide-button' page = 'google_doc_community_3_1'>[도움말]</span>
-		<span class='config-title-notice'>
+	<div class='config-wrapper'>
+		<div class='config-title'>
+			<span class='config-title-info'>탑 메뉴 설정</span>
+			<span class='user-google-guide-button' page = 'google_doc_community_3_1'>[도움말]</span>
+			<span class='config-title-notice'>
 			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
 		</span>
 	</div>
-	
-	<div class='config-wrapper'>
-		<div class='config-container global'>
+		<div class='config-container'>
 			<table cellpadding=0 cellspacing=0 width='100%'>
 				<tr valign='top'>
-					<td width='50%'>
+					<td>
 						<? for ( $i = 1; $i <=2; $i++ ) {?>
-							<div class='menu-config-list'><div class='label'>상단1-<?=$i?> : </div><?=setTopMenu('forum_no_'.$i)?></div>
+							<div class='menu-item-list'>상단1-<?=$i?> : <?=setTopMenu('forum_no_'.$i)?></div>
 						<? }?>
 					</td>
 					<td width=10></td>
 					<td>
 						<? for ( $i = 3; $i <=6; $i++ ) {?>
-							<div class='menu-config-list' ><div class='label'>상단2-<?=$i-2?> : </div><?=setTopMenu('forum_no_'.$i)?></div>
+							<div class ='menu-item-list'>상단2-<?=$i-3?> : <?=setTopMenu('forum_no_'.$i)?></div>
 						<? }?>
 					</td>
-				</tr>				
-			</table>
-			<input type='submit' value='업데이트'>			
-		</div>		
+				</tr>
+			</table>	
+		</div>
 	</div>
   <div class='config-wrapper'>
 	<div class='config-title'>
@@ -77,18 +67,19 @@ function setTopMenu( $name ) {
 			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
 		</span>
 	</div>
-	<div class='config-container global' cellspacing='0' cellpadding='10' >
+	<div class='config-container' cellspacing='0' cellpadding='10' >
 	<div class='hidden-google-doc google_doc_travel_2_1'>	
 		<div>필고 사이트 서비스 설명서:</div>
 		<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
 	</div>
-		<div class='travel-footer-tagline'>
-			<span class='title-small'>하단문구제목</span>
-			<input type='text' name='travel2footer_tagline' value='<?=ms::meta('travel2footer_tagline')?>' />
-		</div>
-		<input type='submit' value='업데이트'>
-		
+		<table>
+			<tr>
+				<td colspan='2'><span class='title-small'>하단문구제목</span><input type='text' name='travel2footer_tagline' value='<?=ms::meta('travel2footer_tagline')?>' /></td>
+			<tr>
+		</table>		
 	</div>
+	<input type='submit' value='업데이트'>
+	<div style='clear:right;'></div>
 </div>
 
 <div class='config-wrapper'>
@@ -99,7 +90,7 @@ function setTopMenu( $name ) {
 			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
 		</span>
 	</div>
-<div class='config-container global'>
+<div class='config-container'>
 <div class='hidden-google-doc google_doc_travel_2_2'>	
 	<div>필고 사이트 서비스 설명서:</div>
 	<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
@@ -147,10 +138,10 @@ function setTopMenu( $name ) {
 			</div>
 		</td>
 	</tr>
-</table>
-		<input type='submit' value='업데이트'>
-		
+</table>		
 </div>
+<input type='submit' value='업데이트'>
+<div style='clear:right;'></div>
 </div>
  <div class='config-wrapper'>
 	<div class='config-title'>
@@ -160,7 +151,7 @@ function setTopMenu( $name ) {
 			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
 		</span>
 		</div>
-	<div class='config-container global'>
+	<div class='config-container'>
 	<div class='hidden-google-doc google_doc_travel_2_3'>	
 		<div>필고 사이트 서비스 설명서:</div>
 		<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
@@ -260,9 +251,9 @@ function setTopMenu( $name ) {
 		</td>
 	</tr>
 </table>
-		<input type='submit' value='업데이트'>
-		
 </div>
+<input type='submit' value='업데이트'>
+<div style='clear:right;'></div>
 </div>
  <div class='config-wrapper'>
 	<div class='config-title'>
@@ -272,7 +263,7 @@ function setTopMenu( $name ) {
 			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
 		</span>
 		</div>
-	<div class='config-container global'>
+	<div class='config-container'>
 	<div class='hidden-google-doc google_doc_travel_2_4'>	
 		<div>필고 사이트 서비스 설명서:</div>
 		<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
@@ -328,9 +319,9 @@ function setTopMenu( $name ) {
 		</td>
 	</tr>
 </table>
-		<input type='submit' value='업데이트'>
-		
-	</div><!--/config-container global-->
+	</div><!--/config-container-->
+	<input type='submit' value='업데이트'>
+	<div style='clear:right;'></div>
 </div><!--config-wrapper-->
 
  <div class='config-wrapper'>
@@ -341,7 +332,7 @@ function setTopMenu( $name ) {
 			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
 		</span>
 		</div>
-	<div class='config-container global'>
+	<div class='config-container'>
 	<div class='hidden-google-doc google_doc_travel_2_5'>	
 		<div>필고 사이트 서비스 설명서:</div>
 		<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	

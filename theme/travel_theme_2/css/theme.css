@@ -351,3 +351,13 @@
 .travel-footer-tagline input{
 	padding:5px;
 }
+
+.menu-item-list select{
+	width:100px;
+}
+
+.menu-item-list input{
+	margin-top:8px;
+	width:170px!important;
+	height:20px!important;
+}

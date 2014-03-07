@@ -734,12 +734,14 @@ a.user-google-guide-button{
 	color: #ffffff;
 	font-size: 14px;
 	height:16px;
+	position: relative;
 }
 .config .config-main-title .inner .config-title-info {
 	float: left;
 }
 .config .config-main-title .inner .config-title-notice   {
-	float: right;
+	position: absolute;
+	right: 0; 
 }
 
 .config .config-main-title .inner  img {
@@ -753,7 +755,8 @@ a.user-google-guide-button{
 	background: #fafafa;
 	border: solid 1px #cccccc;
 	color: #000000;
-	font-size: 13px
+	font-size: 13px;
+	position: relative;
 }
 
 .config  .config-title .config-title-info {
@@ -763,7 +766,8 @@ a.user-google-guide-button{
 	margin-left: 10px;
 }
 .config  .config-title .config-title-notice {
-	float: right;
+	position: absolute;
+	right: 10px;
 }
 
  
@@ -972,6 +976,7 @@ span.config-name {
 }
 .subsite-support .config-wrapper {
 	margin-left: 20px;
+	
 }
 .subsite-support .support {
 	margin-left: 10px;
