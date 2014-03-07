@@ -27,8 +27,10 @@
 							<option value=''></option>
 							<option value='travel'>여행</option>
 							<option value='community'>커뮤니티</option>
+							<? /*
 							<option value='shopping'>쇼핑</option>
 							<option value='academy'>어학원</option>
+							*/?>
 							<option value='blog'>블로그</option>
 						</select>	
 					</div>
