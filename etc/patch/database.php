@@ -72,6 +72,9 @@
 		patch_message("already patched: adding domain field and key for visit_sum table");
 	}
 	else {
+	
+		db::query("ALTER TABLE {$g5['visit_sum_table']} DROP PRIMARY KEY");
+		db::query("ALTER TABLE {$g5['visit_sum_table']} ADD INDEX vs_date (`vs_date`)");
 		db::query("ALTER TABLE {$g5['visit_sum_table']} ADD `domain` VARCHAR( 64 ) NOT NULL FIRST ");
 		db::query("ALTER TABLE {$g5['visit_sum_table']} ADD UNIQUE domain ( `domain`, `vs_date` ) ");
 		patch_message("patched: ADD domain field and key for visit_sum table");
