@@ -322,3 +322,20 @@
 .extra-menu-items .extra-bottom a.no-border{	
 	border-right:none;
 }
+
+/****setting.php*****/
+.menu-config-list .label{
+	width:50px;
+	float:left;
+	margin-top:5px;
+}
+
+.menu-config-list select{
+	margin-right:10px;	
+	width:100px;
+}
+
+.menu-config-list input{	
+	padding:0!important;
+	
+}
