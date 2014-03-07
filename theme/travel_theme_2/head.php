@@ -22,29 +22,43 @@
 					</a>
 			</div>
 	<?
-		global $cfgs;
-		$cfgs = ms::forums();
+		//global $cfgs;
+		//$cfgs = ms::forums();
 	?>
 	<div class='extra-menu-items'>
 		<div class='extra-top'>
-			<?for( $i = 0; $i < 3; $i ++){
-				if( $i == 2 ) $no_border = 'no-border';
-				else $no_border = null;
-			?>
-				<a class='<?=$no_border?>' href = '<?=G5_BBS_URL?>/board.php?bo_table=<?=$cfgs[$i]['bo_table']?>'>
-					<?=cut_str($cfgs[$i]['bo_subject'],10,'...')?>
-				</a>
-			<?}?>
+			<?for( $i = 1; $i <= 3; $i ++){
+				if( $i == 3 ) {?>
+					<a class='no-border' href = '<?=g::url()?>?device=mobile'>모바일</a>
+				<?}
+				else {
+				if ( ms::meta('forum_no_'.$i) ) {
+					$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('forum_no_'.$i)."'");
+				
+					  if ( $row['bo_subject'] ) {?>
+						<a href = '<?=G5_BBS_URL?>/board.php?bo_table=<?=ms::meta('forum_no_'.$i)?>'>
+							<?=cut_str($row['bo_subject'],10,'...')?>
+						</a>								
+					<?}?>
+				<?}?>
+			<?}
+			
+			}?>
 			<div style='clear:both'></div>
 		</div>
 		<div class='extra-bottom'>
-			<?for( $i = 3; $i < 7; $i ++){
+			<?for( $i = 3; $i <= 6; $i ++){
 				if( $i == 6 ) $no_border = 'no-border';
 				else $no_border = null;
-			?>
-				<a class='<?=$no_border?>' href = '<?=G5_BBS_URL?>/board.php?bo_table=<?=$cfgs[$i]['bo_table']?>'>
-					<?=cut_str($cfgs[$i]['bo_subject'],10,'...')?>
-				</a>
+				if ( ms::meta('forum_no_'.$i) ) { 
+					$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('forum_no_'.$i)."'");
+				
+					 if ( $row['bo_subject'] ) {?>
+						<a class='<?=$no_border?>' href = '<?=G5_BBS_URL?>/board.php?bo_table=<?=ms::meta('forum_no_'.$i)?>'>
+							<?=cut_str($row['bo_subject'],10,'...')?>
+						</a>
+					<?}?>
+				<?}?>
 			<?}?>
 			<div style='clear:both'></div>
 		</div>

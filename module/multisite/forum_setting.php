@@ -1,4 +1,6 @@
 <?php
+//for editor_html
+include_once(G5_EDITOR_LIB);
 	if ( ! ms::admin() ) {
 		echo "You are not admin";
 		return;
@@ -41,7 +43,7 @@
 	
 	
 	$row = db::row("SELECT * FROM $g5[board_table] WHERE bo_table='$in[bo_table]'");
-	
+
 	/* 함수 모음 적절한 클래스에 적절한 함수를 생성할 필요가 있음 */
 	function text( $name ) {
 		global $row;
@@ -89,13 +91,25 @@
 ?>
 <div class='forum_setting'>
 	<form method='get'>
+		
 		<input type='hidden' name='module' value='multisite' />
 		<input type='hidden' name='action' value='config_forum' />
 		<input type='hidden' name='mode' value='forum_setting' />
 		<input type='hidden' name='bo_table' value='<?=$in['bo_table']?>' />
 		<input type='hidden' name='done' value=1 />
 		
-		<div class='wrapper' style='margin-top: 10px;'>
+		<div class='wrapper editor'>
+			<div class='title'>BO CONTENT HEAD</div>
+			<?php echo editor_html("bo_content_head", $row['bo_content_head']); ?>
+			<input type='submit' value='업데이트' />
+		</div>
+		<div class='wrapper editor'>
+			<div class='title'>BO CONTENT TAIL</div>
+			<?php echo editor_html("bo_content_tail", $row['bo_content_tail']); ?>	
+			<input type='submit' value='업데이트' />
+		</div>		
+		
+		<div class='wrapper'>
 			<div class='title'>일반 설정</div>
 			<div><span class='item'>게시판 아이디</span><?=$row['bo_table']?></div>
 			<div><span class='item'>제목</span><?=text('bo_subject')?></div>
