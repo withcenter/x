@@ -304,39 +304,6 @@
 	color: #565656;
 }
 
-.config_forum .board_list {
-	padding: 0 10px;
-	font-family: '맑은 고딕', AppleGothic;
-}
-
-.config_forum .board_list .header, .config_forum .board_list .header1 {
-	background-color: #8f8f8f;
-}
-.config_forum .board_list  .header td, .config_forum .board_list  .header1 td  {
-	border-left: 0;
-	color: #ffffff;
-}
-
-.config_forum .board_list .background{
-	background-color: #efefef;
-}
-
-.config_forum .board_list tr td {
-	height: 30px;
-	line-height: 30px;
-	padding: 0 10px;
-}
-.config_forum .board_list .row  td{
-	color: #696969;
-}
-
-.config_forum .board_list tr .padding-extra1 {
-	padding-left: 78px;
-}
-.config_forum .board_list tr .padding-extra2 {
-	padding-left: 93px;
-}
-
 
 /**new design*/
  

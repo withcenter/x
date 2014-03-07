@@ -41,10 +41,10 @@
 		
 		<table class='board_list' cellpadding=0 cellspacing=0 width='100%'>
 			<tr class='header1'>
-				<td width=25%>게시판 아이디</td>
-				<td width=25%>게시판 제목</td>
-				<td width=25% align='center'>글 수</td>
-				<td width=25% class='padding-extra1'>설정</td>
+				<td width=30%><strong>게시판 아이디</strong></td>
+				<td width=30%><strong>게시판 제목</strong></td>
+				<td width=25%><strong>글 수</strong></td>
+				<td width=15% class='padding-extra1'><strong>설정</strong></td>
 			</tr>
 		<?php
 		$i = 0;
@@ -54,10 +54,10 @@
 			$i++;
 			echo "
 				<tr  class='row $background' >
-					<td width=20%>$row[bo_table]</td>
-					<td width=20%>$row[bo_subject]</td>
-					<td width=20% align='center'>".number_format($row['bo_count_write'])."</td>
-					<td width=25% class='padding-extra2' align='left'>
+					<td width=3%>$row[bo_table]</td>
+					<td width=30%>$row[bo_subject]</td>
+					<td width=25% >".number_format($row['bo_count_write'])."</td>
+					<td width=15% class='padding-extra2'>
 						<a href='?module=multisite&action=config_forum&mode=forum_setting&bo_table=$row[bo_table]'><img class='setting-icon' src='".x::url()."/module/multisite/img/setting.png' /></a>
 					</td>
 				</tr>
