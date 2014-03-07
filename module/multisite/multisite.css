@@ -1036,8 +1036,9 @@ span.config-name {
 }
 
 .config_forum input[name='subject'] {
-	width: 638px !important;
+	width: 618px !important;
 	height: 28px;
+	margin-bottom: 10px !important;
 }
 
 .config_forum .config-forum-submit {
@@ -1046,7 +1047,8 @@ span.config-name {
 	border: solid 1px transparent;
 	border-radius: 0 !important;
 	position: relative;
-	top: -3px;
+	top: -5px;
+	background: #cccccc;
 }
 
 .config_forum .board_list {
@@ -1069,4 +1071,8 @@ span.config-name {
 	padding: 9px;
 	color: #000000;
 	border: 0;
+}
+
+.config_forum .config-wrapper {
+	margin-left: 20px;
 }
