@@ -339,3 +339,15 @@
 	padding:0!important;
 	
 }
+
+.config-container.global{
+	padding-bottom:50px!important;	
+}
+
+.travel-footer-tagline{
+	width:30%;
+}
+
+.travel-footer-tagline input{
+	padding:5px;
+}
