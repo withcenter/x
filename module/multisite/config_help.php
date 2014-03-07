@@ -12,7 +12,7 @@
 	</div>	
 	<div class='support'>
 		<div class='tab-menu'>
-			<span class='tab-button' menu_name='general-setting'>일반 설정</span>
+			<span class='tab-button tab-button-selected' menu_name='general-setting'>일반 설정</span>
 			<span class='tab-button' menu_name='menu-setting'>메뉴 설정</span>
 			<span class='tab-button' menu_name='forum-setting'>게시판 설정</span>
 			<span class='tab-button' menu_name='write-setting'>글쓰기 설정</span>

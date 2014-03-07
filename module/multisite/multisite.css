@@ -580,7 +580,6 @@ table > .header td:first-child {
 }
 .subsite-support  .support {
 	background: #bfbfbf;
-	padding: 10px 0;
 	margin-bottom: 10px;
 	color: #ffffff;
 }
@@ -589,18 +588,17 @@ table > .header td:first-child {
 }
 .subsite-support  .support .tab-menu .tab-button {
 	display: inline-block;
-
+	padding: 10px 10px;
 }
 
-.subsite-support  .support .tab-menu .tab-button:hover, .subsite-support  .support .tab-menu .tab-button:first-child {
-	
+.subsite-support  .support .tab-menu .tab-button:hover {
+	border-bottom: solid 4px #808080;	
 }
 
 .tab-button-selected {
-	background-color: #314258
+	border-bottom: solid 4px #808080;
 }
 .subsite-support  .support-content {
-
 	border-radius: 3px;
 	background-color: #f9f9f9;
 }

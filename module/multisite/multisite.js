@@ -2,13 +2,15 @@ $(function() {
 	/* config.php */
 	$(".support .tab-menu .tab-button").click(function() {
 		//$(".support .tab-menu .tab-button").removeClass('tab-button-selected'); --> 적용이 안 되는 듯 함.
-		$(".support .tab-menu .tab-button").css("background-color", "#53749c");
+		//$(".support .tab-menu .tab-button").css("background-color", "#53749c");
 		$(".support-content .inner").hide();
 		//$(this).addClass('tab-button-selected'); --> 적용이 안 되는 듯함
-		$(this).css("background-color", "#314258");
+		//$(this).css("background-color", "#314258");
 		
 		var menu_name = $(this).attr('menu_name');
 		$(".support-content ."+menu_name ).show();
+		$(".support span").removeClass('tab-button-selected');
+		$("span[menu_name='"+menu_name+"']").addClass('tab-button-selected');
 	});
 	
 	/*config_theme.php*/
