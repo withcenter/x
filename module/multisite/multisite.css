@@ -211,9 +211,6 @@ table > .header td:first-child {
 
 /* theme config */
 
-.config-container {
-	width: 730px;
-}
 
 .config-container.theme_config{
 	margin-left:5px;	
@@ -792,6 +789,7 @@ a.user-google-guide-button{
 
 .site-global .config-wrapper {
 	margin-bottom: 28px;
+
 }
 
 .site-global .config-wrapper:last-child {
@@ -911,12 +909,12 @@ span.config-name {
 
 .config_menu .config .menu-num {
 	display: inline-block;
-	width: 50px;
+	width: 60px;
 }
 
 .config_menu .config .menu-select-name {
 	display: inline-block;
-	width: 300px;
+	width: 280px;
 }
 
 .config_menu .config .select-wrapper {
@@ -928,6 +926,7 @@ span.config-name {
 .config_menu .config  .select-button {
 	background: #fafafa !important;
 	padding: 2px 0;
+	top: 0 !important;
 }
 
 .config_menu .config .drop-down-menu {
@@ -982,7 +981,9 @@ span.config-name {
 	margin-left: 20px;
 }
 
-
+.config_menu .config-wrapper {
+	margin-left: 20px;
+}
 
 .config-write .config-wrapper {
 	margin-left: 20px;
@@ -1068,3 +1069,13 @@ span.config-name {
 	padding: 10px 20px;
 	border-radius: 3px;
 }
+
+ 
+.config  .config-container {
+	padding: 14px 9px;
+	background: #ffffff;
+	border: solid 1px #cccccc;
+	border-top: 0;
+} 
+
+
