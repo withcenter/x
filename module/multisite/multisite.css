@@ -589,6 +589,7 @@ table > .header td:first-child {
 .subsite-support  .support .tab-menu .tab-button {
 	display: inline-block;
 	padding: 13px 10px 7px 10px;
+	border-bottom: solid 4px transparent;
 }
 
 .subsite-support  .support .tab-menu .tab-button:hover {
@@ -1028,7 +1029,7 @@ span.config-name {
 }
 
 .config-write .row input[type='text'] {
-	width: 81.5%;
+	width: 81.5%c;
 	padding: 0 10px;
 	height: 20px;
 	line-height: 20px;
