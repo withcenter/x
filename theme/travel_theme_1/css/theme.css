@@ -256,5 +256,6 @@
 .config .forum-config select {
 	width: 100px;
 	position: relative;
-	
+	height: 25px;
+	top: -3px;
 }
