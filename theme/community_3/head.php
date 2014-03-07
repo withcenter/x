@@ -24,7 +24,6 @@
 				
 				<? 
 					for ( $i=1; $i <=3; $i++ ) {
-						$menu_row = 'menu_row'.$i;
 						if ( ms::meta('forum_no_'.$i) ) {
 							$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('forum_no_'.$i)."'");
 							
@@ -43,7 +42,6 @@
 			<div class='right'>
 				<? 
 					for ( $i=6; $i <=9; $i++ ) {
-						$menu_row = 'menu_row'.$i;
 						if ( ms::meta('forum_no_'.$i) ) {
 							$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('forum_no_'.$i)."'");
 							
