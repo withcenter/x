@@ -249,7 +249,9 @@ table > .header td:first-child {
 
 .theme_config .theme-thumb .active-note {	
 	color: #e6e6e6;	
-	float:right;
+	position:absolute;
+	right:10px;
+	top:10px;
 }
 
 .theme_config .theme-thumb p {
