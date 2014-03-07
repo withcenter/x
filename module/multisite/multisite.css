@@ -597,7 +597,7 @@ table > .header td:first-child {
 
 /* config_write.php */
 .config-write {
-	margin-top: 10px;
+
 }
 
 .config-write .api-info {
@@ -1023,4 +1023,27 @@ span.config-name {
 .config_menu .config .drop-down-menu {
 	width: 268px;
 	background: #fafafa !important;
+}
+
+.config_forum .title-forum {
+	display: inline-block;
+	width: 110px;
+}
+
+.config_forum input[name='subject'] {
+	width: 638px !important;
+	height: 28px;
+}
+
+.config_forum .config-forum-submit {
+	width: 55px;
+	height: 30px;
+	border: solid 1px transparent;
+	border-radius: 0 !important;
+	position: relative;
+	top: -3px;
+}
+
+.config_forum .setting-icon {
+	margin-left: -10px;
 }

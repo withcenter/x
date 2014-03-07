@@ -44,6 +44,7 @@
 					<span class='menu-num'>번호</span>
 					<span class='menu-select-name'>메뉴 선택</span>
 				</span>
+		
 			</div>	
 			<div class='config-container'>
 
