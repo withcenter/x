@@ -799,6 +799,10 @@ span.user-google-guide-button, a.user-google-guide-button{
 	font-size: 11px;
 }
 
+span.user-google-guide-button.inner-title {
+	color: #cccccc;
+}
+
 a.user-google-guide-button{
 	text-decoration:none;
 }
@@ -828,6 +832,12 @@ a.user-google-guide-button{
 	color: #ffffff;
 	font-size: 14px;
 }
+.config .config-main-title .inner .config-title-info {
+	float: left;
+}
+.config .config-main-title .inner .config-title-notice   {
+	float: right;
+}
 
 .config .config-main-title .inner  img {
 	position: relative;
@@ -843,7 +853,9 @@ a.user-google-guide-button{
 	font-size: 13px
 }
 
+.config  .config-title .config-title-info {
 
+}
 
 .config  .config-title .config-title-notice {
 	float: right;
@@ -969,3 +981,39 @@ span.config-name {
 	margin: 0 5px;
 }
 
+.config_menu .config table tr .menu-no {
+	padding-top: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #1a1a1a;
+}
+
+.config_menu .config table tr td{
+	padding-bottom: 10px;
+}
+
+.config_menu .config .menu-num {
+	display: inline-block;
+	width: 50px;
+}
+
+.config_menu .config .menu-select-name {
+	display: inline-block;
+	width: 300px;
+}
+
+.config_menu .config .select-wrapper {
+	width: 240px;
+	background: #fafafa !important;
+	padding: 2px 0;
+}
+
+.config_menu .config  .select-button {
+	background: #fafafa !important;
+	padding: 2px 0;
+}
+
+.config_menu .config .drop-down-menu {
+	width: 268px;
+	background: #fafafa !important;
+}

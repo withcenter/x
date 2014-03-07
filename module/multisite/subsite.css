@@ -196,10 +196,7 @@
 	
 	font-size: 1.125em;
 }
-.config_menu .config table tr .menu-no {
-	padding-left: 36px;
-	color: #1a1a1a;
-}
+
 
 .config_menu .config table tr .select-wrapper, .config_menu .config table tr .select-button {
 	border: 1px solid #d3d3d3;
