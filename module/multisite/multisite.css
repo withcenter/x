@@ -912,7 +912,7 @@ span.config-name {
 
 .config_menu .config .menu-select-name {
 	display: inline-block;
-	width: 280px;
+	width: 270px;
 }
 
 .config_menu .config .select-wrapper {
@@ -1028,10 +1028,10 @@ span.config-name {
 }
 
 .config-write .row input[type='text'] {
-	width: 570px !important;
+	width: 81.5%;
 	padding: 0 10px;
-	height: 20px !important;
-	line-height: 20px !important;
+	height: 20px;
+	line-height: 20px;
 	color: #555555;
 }
 
