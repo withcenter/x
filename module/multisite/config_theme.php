@@ -14,7 +14,7 @@
 		<div class='config-main-title'>
 			<div class='inner'>
 				<span class='config-title-info'><img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 원하시는 테마를 선택하신 후 클릭하시면 반영이 됩니다.</span>
-				<span class='config-title-notice'><span class='user-google-guide-button' page = 'google_doc_1'>[도움말]</span></span>
+				<span class='config-title-notice'><span class='user-google-guide-button inner-title' page = 'google_doc_1'>[도움말]</span></span>
 			</div>
 		</div>
 		<div class='hidden-google-doc google_doc_1'>	
