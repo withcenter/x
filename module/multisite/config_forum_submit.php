@@ -23,7 +23,7 @@
 	
 	if ( ms::meta('theme') == 'blog' ) $option['bo_skin'] = 'x/skin/board/x-board-blog';
 	
-	@g::board_create($option);
+	g::board_create($option);
 	jsAlert( "게시판 ".$board_id . "(".$in['subject'].")이 생성 되었습니다." );
 
 	echo "
