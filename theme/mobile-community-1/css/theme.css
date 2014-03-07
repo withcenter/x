@@ -92,6 +92,8 @@ a {
 }
 #header .mobile-menu ul li {
 	display:inline-block;
+	margin: 0.2em 0;
+	text-align:center;
 }
 
 #header .mobile-menu ul li a {
@@ -100,6 +102,10 @@ a {
 	background-color: white;
 	color: black;
 }
+#header .mobile-menu .icon {
+	margin-bottom: 0.4em;
+}
+
 
 /* #header .top */
 
@@ -262,10 +268,16 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 	#header .mobile-menu {
 		display:block;
 	}
+	
+	#header .top {
+		display:none;
+	}
+	#header .top-below-500-px { display:block; }
+	
 }
 @media all and ( min-width: 40em ) {
 	#header .menu {
-		display: block;
+		display: block !important;
 	}
 	#header .menu ul li.all-menu {
 		display:none !important;
@@ -282,14 +294,13 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 }
 /* below 500 px */
 @media all and ( max-width: 31.25em ) {
-	#header .top {
-		display:none;
-	}
-	#header .top-below-500-px { display:block; }
+
 }
 /* below 480 px */
 @media all and ( max-width: 30em ) {
-	
+	.submenu .visitor , .submenu .new{
+		display: none !important;
+	}
 	/* latest */
 	.latest-thumbnail > .left {
 		width: 100%;

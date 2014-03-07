@@ -1,18 +1,20 @@
 <ul>
 	<li>
 		<a href='javascript:open_menu();'>
-			<img src="<?=x::theme_url()?>/img/menu.png">
-			전체 메뉴
+			<div class='icon'><img src="<?=x::theme_url()?>/img/menu.png"></div>
+			<div class='text'>메뉴</div>
 		</a>
 	</li>
 	<li>
 		<a href='#'>
-		글쓰기
+			<div class='icon'><img src="<?=x::theme_url()?>/img/new.png"></div>
+			<div class='text'>글쓰기</div>
 		</a>
 	</li>
 	<li>
 		<a href='#'>
-		검색
+			<div class='icon'><img src="<?=x::theme_url()?>/img/search.png"></div>
+			<div class='text'>검색</div>
 		</a>
 	</li>
 </ul>

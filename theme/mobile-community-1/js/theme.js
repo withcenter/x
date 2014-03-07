@@ -14,8 +14,6 @@ function open_menu()
 
 function close_menu()
 {
-	$('.menu').slideUp('fast', function(){
-		$(".menu").css('display','');
-	});
+	$('.menu').slideUp('fast');
 	$('.all-hide').show();
 }
