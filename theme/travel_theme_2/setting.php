@@ -1,3 +1,66 @@
+<?php
+function setTopMenu( $name ) {
+	global $cfgs;
+	
+	ob_start();
+	if ( ms::exist() ) {
+		$cfgs = ms::forums();
+		if ( ! empty( $cfgs ) ) {
+	?>
+	<select name='<?=$name?>'>
+		<option value=''>게시판을 선택하세요</option>
+		<option value=''></option>
+		<? foreach ( $cfgs as $c ) { 
+			if ( $c['bo_table'] == ms::meta($name) ) $selected = 'selected';
+			else $selected = null;
+		?>
+			<option value="<?=$c['bo_table']?>" <?=$selected?>><?=$c['bo_subject']?></option>
+		<? } ?>
+	</select>
+	<script>
+	$(function(){
+		$("[name='<?=$name?>']").change(function(){
+			$("[name='<?=$name?>_bo_table']").val($(this).val());
+		});
+	});
+	</script>
+	<?
+		}
+	}?>
+	<input type='text' name='<?=$name?>_bo_table' value="" placeholder=" 게시판 아이디 직접 입력" style='height: 23px; width: 140px; line-height: 23px; padding: 0 10px;' />
+<?
+	return $content = ob_get_clean();
+}
+?>
+
+
+ <div class='config-wrapper'>
+	<div class='config-title'>
+		<span class='config-title-info'>탑 메뉴 설정</span>
+		<span class='user-google-guide-button' page = 'google_doc_community_3_1'>[도움말]</span>
+		<span class='config-title-notice'>
+			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
+		</span>
+	</div>
+	
+	
+	<div class='config-container'>
+	<table cellpadding=0 cellspacing=0 width='100%'>
+		<tr>
+			<td>
+				<? for ( $i = 1; $i <=3; $i++ ) {?>
+					<div>왼쪽 <?=$i?> : <?=setTopMenu('forum_no_'.$i)?></div>
+				<? }?>
+			</td>
+			<td width=10></td>
+			<td>
+				<? for ( $i = 4; $i <=7; $i++ ) {?>
+					<div>오른쪽 <?=$i-3?> : <?=setTopMenu('forum_no_'.$i)?></div>
+				<? }?>
+			</td>
+		</tr>
+	</table>
+
   <div class='config-wrapper'>
 	<div class='config-title'>
 		<span class='config-title-info'>사이트 추가 설정</span>
