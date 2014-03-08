@@ -69,13 +69,15 @@ include_once(G5_EDITOR_LIB);
 					  <option value=''>Select Skin</option>
 					  <option value=''></option>
 		";
-					
+		
+		/* 기본 스킨은 반응형이 아니기 때문에 뺀다.
 		foreach ( $dirs as $d ) {	
 			if ( $d == $row['bo_skin'] ) $selected = 'selected';
 			else $selected = null;
 			
 			$select .= "<option value='$d' $selected>$d</option>";
 		}
+		*/
 		
 		foreach( $x_dirs  as $xd ) {
 			$skin_dir = 'x/skin/board/'.$xd;
@@ -102,7 +104,13 @@ include_once(G5_EDITOR_LIB);
 			<div class='title'>일반 설정</div>
 			<div><span class='item'>게시판 아이디</span><?=$row['bo_table']?></div>
 			<div><span class='item'>제목</span><?=text('bo_subject')?></div>
-			<div><span class='item'>스킨</span><?=load_skin()?></div>
+			
+			<div>
+				<span class='item'><?=ln("Skin", "스킨")?></span>
+				<?=load_skin()?>
+				<? include 'forum_setting_skin_list.php' ?>
+			</div>
+			
 			<div><span class='item'>관리자</span><?=text('bo_admin')?></div>
 			<input type='submit' value='업데이트' />
 		</div>

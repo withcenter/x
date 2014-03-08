@@ -14,6 +14,7 @@ x::hook_register('end_before_html', 'hook_html_symbol');
 x::hook_register('end_before_html', 'hook_css_js_version');
 x::hook_register('end_before_html', 'hook_html_meta');
 
+
 function hook_html_meta()
 {
 	global $html;
@@ -21,6 +22,7 @@ function hook_html_meta()
 	$dst = '<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1,maximum-scale=1,user-scalable=no">';
 	$html = str_replace($src, $dst, $html);
 }
+
 
 
 

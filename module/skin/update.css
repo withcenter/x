@@ -64,34 +64,50 @@ select[name='select_bo_table'] {
 
 
 
-.skin-list {
-	display: none;
-	padding: 0.4em;
-	background-color: #ccbbee;
-}
-.skin-list > .skin {
-	float: left;
-	margin: 0.8em;
-	padding: 0.4em;
-	width: 20em;
-	border: 1px solid grey;
-	cursor:pointer;
-	text-align:center;
-}
-.skin-list > .skin > .preview {
-	margin-bottom: 0.4em;
-	font-size: 1.4em;
-	font-weight: bold;
-}
 
-.skin-list > .skin > .preview > img {
-	width: 100%;
-}
 
-.skin-close, .skin-open {
-	cursor:pointer;
-	font-weight: bold;
-}
-.skin-close {
-	display:none;
-}
+
+
+
+
+
+
+						.skin-list {
+							display: none;
+							margin: 1em 0;
+							padding: 0.4em;
+							background-color: grey;
+						}
+						.skin-list > .skin {
+							float: left;
+							margin: 1em;
+							padding: 1em;
+							width: 20em;
+							background-color: #f0f0f0;
+							border: 1px solid grey;
+							border-radius: 4px;
+							cursor:pointer;
+							text-align:center;
+						}
+						.skin-list > .skin > .preview {
+							margin-bottom: 0.4em;
+							font-size: 1.6em;
+							font-weight: bold;
+							color: grey;
+						}
+						.skin-list > .skin > .folder {
+							font-size: 1.2em;
+							font-weight: bold;
+							color: #0b1f76;
+						}
+						.skin-list > .skin > .preview > img {
+							width: 100%;
+						}
+
+						.skin-close, .skin-open {
+							cursor:pointer;
+							font-weight: bold;
+						}
+						.skin-close {
+							display:none;
+						}
