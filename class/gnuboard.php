@@ -930,6 +930,20 @@ class gnuboard {
 		db::query( $q );
 	}
 	
+	/**
+		* @brief returns the member count per each domain.
+		* Use this function when you need to know how many members are in each domain.
+		*
+		*/
+	static function member_count_by_domain()
+	{
+		global $g5;
+		$q = "SELECT ".REGISTERED_DOMAIN.",count(*) as cnt FROM $g5[member_table] GROUP BY ".REGISTERED_DOMAIN." ORDER BY cnt DESC";
+		return db::rows( $q );
+	}
+	
+	
+	
 	
 } // eo class
 
