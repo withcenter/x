@@ -8,6 +8,7 @@ include_once G5_PATH . '/x/class/x.php';
 include_once x::dir() . '/etc/constant.php';
 include_once x::dir() . '/class/debug.php';
 include_once x::dir() . '/class/etc.php';
+include_once x::dir() . '/class/util.php';
 include_once x::dir() . '/class/file.php';
 include_once x::dir() . '/class/data.php';
 include_once x::dir() . '/class/html.php';
