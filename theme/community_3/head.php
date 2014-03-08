@@ -1,7 +1,28 @@
-
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/theme.css' />
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/head.css' />
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/tail.css' />
+
+
+<?
+	$theme_sidebar = ms::meta('theme_sidebar');
+	if ( empty($theme_sidebar) || $theme_sidebar == 'left') {
+		$sidebar = "left";
+		$content = "right";
+	}
+	else {
+		$sidebar = "right";
+		$content = "left";
+	}
+?>
+<style>
+	.layout .body-wrapper .main-content .sidebar {
+		float: <?=$sidebar?>;
+	}
+	.layout .body-wrapper .main-content .content {
+		float: <?=$content?>;
+	}
+</style>
+	
 <div class='layout'>
 	<div class='top'>
 		<div class='inner'>
