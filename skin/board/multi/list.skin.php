@@ -60,7 +60,6 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
     <input type="hidden" name="sw" value="">
 
     <div class="tbl_head01 tbl_wrap">
-		
 		<div class="list-menu">
 			<div class="caption"><?php echo $board['bo_subject'] ?></div>
 			<div class="category"><?php include 'list.category.php'; ?></div>

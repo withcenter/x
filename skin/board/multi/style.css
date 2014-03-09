@@ -33,16 +33,7 @@
 
 /* 기본 테이블 */
 /* 목록 테이블 */
-#bo_list .tbl_head01 {}
-#bo_list .tbl_head01 thead th {}
-#bo_list .tbl_head01 thead a {}
-#bo_list .tbl_head01 thead th input {} /* middle 로 하면 게시판 읽기에서 목록 사용시 체크박스 라인 깨짐 */
-#bo_list .tbl_head01 tfoot th {}
-#bo_list .tbl_head01 tfoot td {}
-#bo_list .tbl_head01 tbody th {}
-#bo_list .tbl_head01 td {}
-#bo_list .tbl_head01 a {}
-#bo_list td.empty_table {}
+
 
 /* 읽기 내 테이블 */
 #bo_v .tbl_head01 {}
@@ -108,6 +99,8 @@
 
 .list-menu {
 	margin: 0 0 1em 0;
+	padding: 0.4em;
+	border: 1px solid grey;
 }
 .list-menu .caption {
 	float: left;
@@ -301,35 +294,60 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 .post {
 	
 }
-.post .inner {
-	padding: 1em;
+.post > .inner {
+	padding: 1.6em 1em;
 	border: 2px solid transparent;
 }
 
-.post .inner:hover {
-	padding: 1em;
+.post > .inner:hover {
 	border-color: black;
 }
+
+.post > .inner:hover .photo  {
+	-webkit-transform:rotate(6deg); /* Chrome & Safari */
+	transform:rotate(6deg);
+}
+
 .post .photo  {
 	float:left;
-	margin-right: 1em;
+	width: 20%;
+	transition:0.4s ease;
 }
+
+
+
 .post .photo img {
 	padding: 1px;
 	border: 1px solid grey;
 	border-radius: 2px;
-}
-.post .photo .no-photo {
-	
+	width: 100%;
+	height: auto;
 }
 
-.post .subject {
+.list-photo-style .post .text {
+	width: 80%;
 	float: left;
+	margin-top: 0.2em;
+	font-size: 1.2em;
+}
+
+.list-photo-style .text > .inner {
+	padding-left: 1em;
 }
 
 
+.list-photo-style .text .list-subject {
+	font-weight: bold;
+}
+.list-photo-style .text .list-content {
+	font-size: 0.84em;
+}
 
-
+@media all and ( min-width: 800px ) {
+	.tbl_wrap {
+		margin: 0 !important;
+	}
+}
 @media all and ( max-width: 800px ) {
 	.list-good, .list-bad {
 		display:none;
