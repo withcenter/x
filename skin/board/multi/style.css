@@ -298,6 +298,37 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 #bo_vc_sns input {margin:0 0 0 5px}
 
 
+.post {
+	
+}
+.post .inner {
+	padding: 1em;
+	border: 2px solid transparent;
+}
+
+.post .inner:hover {
+	padding: 1em;
+	border-color: black;
+}
+.post .photo  {
+	float:left;
+	margin-right: 1em;
+}
+.post .photo img {
+	padding: 1px;
+	border: 1px solid grey;
+	border-radius: 2px;
+}
+.post .photo .no-photo {
+	
+}
+
+.post .subject {
+	float: left;
+}
+
+
+
 
 @media all and ( max-width: 800px ) {
 	.list-good, .list-bad {
