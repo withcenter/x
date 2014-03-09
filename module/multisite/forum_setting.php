@@ -14,8 +14,9 @@ include_once(G5_EDITOR_LIB);
 			unset($up['done']);
 			unset($up['bo_table']);
 			
-			
+			/// https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.hthvy4o49hmo
 			$up['bo_mobile_skin']				= $in['bo_skin']; /** for multisite, bo_skin and bo_mobile_skin will have same value which means PC version and Mobile version uses same skin. */ /// https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.hthvy4o49hmo
+			$up['bo_mobile_page_rows']	= $bo_page_rows;
 			$up['bo_admin']						= $in['bo_admin']?$in['bo_admin'] : $member['mb_id'];
 			$up['bo_use_category']			= $in['bo_use_category']?$in['bo_use_category'] : 0;
 			$up['bo_use_list_view'] = $in['bo_use_list_view']?$in['bo_use_list_view'] : 0;
@@ -176,7 +177,7 @@ include_once(G5_EDITOR_LIB);
 			<div><span class='item'>목록 보임</span><?=checkbox('bo_use_list_view')?></div>
 			<div><span class='item'>파일 목록 보임</span><?=checkbox('bo_use_list_file')?></div>
 			<div><span class='item'>제목 길이</span><?=text('bo_subject_len')?></div>
-			<div><span class='item'>페이지 갯수</span><?=text('bo_page_rows')?></div>
+			<div><span class='item'>페이지 당 글 수</span><?=text('bo_page_rows')?></div>
 			<input type='submit' value='업데이트' />
 		</div>
 		

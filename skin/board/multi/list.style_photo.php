@@ -22,11 +22,19 @@
 		<div class="list-subject">
 			<a href="<?php echo $list[$i]['href'] ?>">
 				<?php echo $list[$i]['subject'] ?>
-			  <?php if ($list[$i]['comment_cnt']) { ?><span class="sound_only">댓글</span><?php echo $list[$i]['comment_cnt']; ?><span class="sound_only">개</span><?php } ?>
+			  <?php if ($list[$i]['comment_cnt']) { ?><span class="sound_only">댓글</span> ... (<?php echo $list[$i]['comment_cnt']; ?> )<span class="sound_only">개</span><?php } ?>
 			</a>
 		</div>
 		<div class='list-content'>
-			<?=$list[$i]['wr_content']?>
+			<?=string::cutstr($list[$i]['wr_content'], 100)?>
+		</div>
+		<div class='list-info'>
+			<span class='caption name'>글쓴이:</span> <span class='value name'><?php echo $list[$i]['name'] ?></span>
+			<span class='bar'>|</span>
+			<span class='caption date'>날짜:</span> <span class='value date'><?php echo $list[$i]['datetime2'] ?></span>
+			<span class='bar'>|</span>
+			<span class='caption hit'>조회:</span> <span class='value hit'><?php echo $list[$i]['wr_hit'] ?></span>
+			
 		</div>
 	</div></div>
 	<div style="clear:left;"></div>

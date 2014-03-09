@@ -295,12 +295,13 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 	
 }
 .post > .inner {
-	padding: 1.6em 1em;
+	padding: 1.6em 1em 1.6em 1.4em;
 	border: 2px solid transparent;
+	border-radius: 2px;
 }
 
 .post > .inner:hover {
-	border-color: black;
+	border-color: #f54500;
 }
 
 .post > .inner:hover .photo  {
@@ -324,6 +325,11 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 	height: auto;
 }
 
+
+.list-photo-style {
+	margin-bottom: 1em;
+}
+
 .list-photo-style .post .text {
 	width: 80%;
 	float: left;
@@ -332,15 +338,37 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 }
 
 .list-photo-style .text > .inner {
-	padding-left: 1em;
+	padding-left: 1.4em;
 }
 
 
 .list-photo-style .text .list-subject {
+	margin-bottom: 1em;
 	font-weight: bold;
 }
 .list-photo-style .text .list-content {
-	font-size: 0.84em;
+	margin-bottom: 1.4em;
+	font-size: 0.9em;
+}
+
+.list-info > .caption {
+	font-size: 0.9em;
+}
+
+.list-info > .value {
+	font-weight: bold;
+	color: #000ec3;
+}
+
+.value.name {
+	color: #d30000;
+}
+
+
+
+.list-info > .bar {
+	margin: 0 0.4em;
+	color: #b9b9b9;
 }
 
 @media all and ( min-width: 800px ) {
@@ -357,9 +385,60 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 	.list-no {
 		display:none;
 	}
+	.post .photo  {
+		width:25%;
+	}
+	.list-photo-style .post .text {
+		width:75%;
+	}
 }
 @media all and ( max-width: 600px ) {
 	.list-name, .list-hit {
 		display:none;
 	}
+	.post .photo  {
+		width:30%;
+	}
+	.list-photo-style .post .text {
+		width:70%;
+	}
+}
+
+@media all and ( max-width: 500px ) {
+	.post .photo  {
+		width:40%;
+	}
+	.list-photo-style .post .text {
+		width:60%;
+	}
+}
+
+
+@media all and ( max-width: 400px ) {
+	.post > .inner {
+		padding: 1em;
+	}
+	.post .photo  {
+		float:none;
+		width:100%;
+	}
+	.post .photo img {
+		border: 0;
+		padding: 0;
+	}
+	.list-photo-style .post .text {
+		width:100%;
+	}
+	.list-photo-style .text > .inner {
+		padding: 0;
+	}
+	.post > .inner:hover {
+		border-color: #4d5433;
+	}
+
+	.post > .inner:hover .photo  {
+		-webkit-transform:rotate(0deg); /* Chrome & Safari */
+		transform:rotate(0deg);
+	}
+
 }
