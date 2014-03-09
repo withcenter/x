@@ -229,7 +229,6 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 /* #data */
 #data {
 	width: 100%;
-	background-color: #ededed;
 }
 
 /* below 960 px */
@@ -247,8 +246,7 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 
 
 
-/* below 640 px */
-@media all and ( max-width: 40em ) {
+@media all and ( max-width: 640px ) {
 	#header .top .search .key{ width: 16em; }
 	#sidebar {
 		display:none;
@@ -282,7 +280,7 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 	}
 	
 }
-@media all and ( min-width: 40em ) {
+@media all and ( min-width: 641px ) {
 	#header .menu {
 		display: block !important;
 	}
@@ -291,7 +289,7 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 	}
 }
 /* below 600 px */
-@media all and ( max-width: 37.5em ) {
+@media all and ( max-width: 600px ) {
 	#header .top {
 		height: 60px;
 		padding: 0;
@@ -300,11 +298,11 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 	#header .top .search .key{ width: 14em; }
 }
 /* below 500 px */
-@media all and ( max-width: 31.25em ) {
+@media all and ( max-width: 500px ) {
 
 }
 /* below 480 px */
-@media all and ( max-width: 30em ) {
+@media all and ( max-width: 480px ) {
 	.submenu .visitor , .submenu .new{
 		display: none !important;
 	}

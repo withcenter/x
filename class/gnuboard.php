@@ -60,11 +60,16 @@ class gnuboard {
 			<?=g::url_board('qna')?>
 	 *	@endcode
 	 */
-	static function url_board($id)
+	static function url_board($id=null)
 	{
+		if ( empty($id) ) $id = $GLOBALS['bo_table'];
 		return self::url() . "/bbs/board.php?bo_table=$id";
 	}
-	static function url_forum($id)
+	static function url_forum($id=null)
+	{
+		return self::url_board($id);
+	}
+	static function url_forum_list($id=null)
 	{
 		return self::url_board($id);
 	}

@@ -13,8 +13,11 @@ include_once(G5_EDITOR_LIB);
 			unset($up['mode']);
 			unset($up['done']);
 			unset($up['bo_table']);
-			$up['bo_admin'] = $in['bo_admin']?$in['bo_admin'] : $member['mb_id'];
-			$up['bo_use_category'] = $in['bo_use_category']?$in['bo_use_category'] : 0;
+			
+			
+			$up['bo_mobile_skin']				= $in['bo_skin']; /** for multisite, bo_skin and bo_mobile_skin will have same value which means PC version and Mobile version uses same skin. */ /// https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.hthvy4o49hmo
+			$up['bo_admin']						= $in['bo_admin']?$in['bo_admin'] : $member['mb_id'];
+			$up['bo_use_category']			= $in['bo_use_category']?$in['bo_use_category'] : 0;
 			$up['bo_use_list_view'] = $in['bo_use_list_view']?$in['bo_use_list_view'] : 0;
 			$up['bo_use_list_file'] = $in['bo_use_list_file']?$in['bo_use_list_file'] : 0;
 			$up['bo_use_secret'] = $in['bo_use_secret']?$in['bo_use_secret'] : 0;
@@ -43,6 +46,8 @@ include_once(G5_EDITOR_LIB);
 	
 	
 	$row = db::row("SELECT * FROM $g5[board_table] WHERE bo_table='$in[bo_table]'");
+	$board = &$row;
+	
 
 	/* 함수 모음 적절한 클래스에 적절한 함수를 생성할 필요가 있음 */
 	function text( $name ) {
@@ -191,5 +196,23 @@ include_once(G5_EDITOR_LIB);
 			<div><span class='item'>Thumbnail세로</span><?=text('bo_gallery_height')?></div>		
 			<input type='submit' value='업데이트'/>
 		</div>
+		
+		
+		
+		<div class='wrapper'>
+			<div class='title'>여분 필드 설정</div>	
+			 <?php for ($i=1; $i<=10; $i++) { ?>
+				<div>
+					<span class='item'>여분필드 <?php echo $i ?> 제목</span>
+						<input type="text" name="bo_<?php echo $i ?>_subj" id="bo_<?php echo $i ?>_subj" value="<?php echo get_text($board['bo_'.$i.'_subj']) ?>" class="frm_input">
+					<span class='item'>여분필드 <?php echo $i ?> 값</span>
+						<input type="text" name="bo_<?php echo $i ?>" value="<?php echo get_text($board['bo_'.$i]) ?>" id="bo_<?php echo $i ?>" class="frm_input">
+				</div>
+			<?php } ?>
+		
+			<input type='submit' value='업데이트'/>
+		</div>
+		
+		
 	</form>
 </div>

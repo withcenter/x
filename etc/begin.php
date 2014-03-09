@@ -181,17 +181,14 @@ if ( strpos($_SERVER['PHP_SELF'], 'login.php') !== false ) {
  *  @note if there is board skin under x/skin/board folder, G5, then, can use it as its board skin.
  *  All the codes between G5/skin/board folder and x/skin/board folder are compatible.
  *  @see etc/end.php for re-setting the folders of x/skin/board folder.
+ * https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.hthvy4o49hmo
  */
-if ( G5_IS_MOBILE ) {
-	/** @todo for mobile, it must be redone. */
-    // $board_skin_path    = G5_MOBILE_PATH.'/'.G5_SKIN_DIR.'/board/'.$board['bo_mobile_skin'];
-    // $board_skin_url     = G5_MOBILE_URL .'/'.G5_SKIN_DIR.'/board/'.$board['bo_mobile_skin'];
-}
-else {
-	$board_skin_path = str_replace('skin/board/x/', 'x/', $board_skin_path);
-	$board_skin_url = str_replace('skin/board/x/', 'x/', $board_skin_url);
-}
+if ( G5_IS_MOBILE ) $mobile = "mobile/";
+$p = "{$mobile}skin/board/x/";
+$board_skin_path = str_replace($p, 'x/', $board_skin_path);
+$board_skin_url = str_replace("{$mobile}skin/board/x/", 'x/', $board_skin_url);
 
+	
 
 
 /// https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.an2o30375xzf

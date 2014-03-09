@@ -489,7 +489,13 @@ class multisite {
 	}
 	
 	
-	
+	static function members()
+	{
+		global $g5;
+		$domain = etc::domain();
+		$q = "SELECT * FROM $g5[member_table] WHERE ".REGISTERED_DOMAIN."='$domain'";
+		return db::rows( $q );
+	}
 	
 
 }

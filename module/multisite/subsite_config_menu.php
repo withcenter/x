@@ -13,6 +13,11 @@
 		<a href='?module=multisite&action=config_global'>일반 설정</a>
 	</li>
 	
+	
+	<li class='sub-menu'>
+		<a href='?module=multisite&action=config_member'>회원</a>
+	</li>
+	
 	<li class='sub-menu'>
 		<a href='?module=multisite&action=config_menu'>메뉴</a>
 	</li>

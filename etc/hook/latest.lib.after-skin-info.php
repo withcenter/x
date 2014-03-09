@@ -22,8 +22,6 @@
 	
 	// global $global_skin_dir, $latest_skin_path, $latest_skin_url;
 	
-	
-	
 	$path = x::dir() . "/skin/latest/" . $skin_dir;
 	if ( file_exists( $path ) ) {
 		$latest_skin_path = $path;
