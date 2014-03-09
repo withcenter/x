@@ -64,10 +64,18 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 			<div class="caption"><?php echo $board['bo_subject'] ?></div>
 			<div class="category"><?php include 'list.category.php'; ?></div>
 			<div class="list-type">
-				<ul>
-					<li><a href='<?=g::url_forum_list()?>&list_style=text'>텍스트</a></li>
-					<li><a href='<?=g::url_forum_list()?>&list_style=photo'>포토</a></li>
-				</ul>
+						<table cellpadding=0 cellspacing=0>
+							<tr>
+								<td><a href='<?=g::url_forum_list()?>&list_style=text'><img src="<?=$board_skin_url?>/img/text.png"></a></td>
+								<td width='6'>&nbsp;</td>
+								<td><a href='<?=g::url_forum_list()?>&list_style=text'><?=ln("Text<br>View", "텍스트<br>보기")?></a></td>
+								<td width='12'>&nbsp;</td>
+								<td><a href='<?=g::url_forum_list()?>&list_style=photo'><img src="<?=$board_skin_url?>/img/photo.png"></a></td>
+								<td width='6'>&nbsp;</td>
+								<td><a href='<?=g::url_forum_list()?>&list_style=photo'><?=ln("Photo<br>View", "사진<br>보기")?></a></td>
+							</tr>
+						</table>
+						
 			</div>
 			<div style="clear:both;"></div>
 		</div>

@@ -99,8 +99,12 @@
 
 .list-menu {
 	margin: 0 0 1em 0;
-	padding: 0.4em;
-	border: 1px solid grey;
+	padding: 0.8em;
+	border: 1px solid #cdcdcd;
+	border-radius: 2px;
+}
+.list-menu:hover {
+	border-color: #a5a9bc;
 }
 .list-menu .caption {
 	float: left;
@@ -110,18 +114,12 @@
 .list-menu .list-type {
 	float:right;
 }
-.list-menu .list-type ul {
-	list-style:none;
-	margin:0;
-	padding: 0;
+.list-type table td {
+	padding: 0 !important;
+	line-height: normal !important;
+	font-size: 0.9em;
 }
-.list-menu .list-type ul li {
-	display:inline;
-}
-.list-menu .list-type ul li a {
-	display:inline-block;
-	padding: 6px 0 5px;
-}
+
 
 
 #bo_cate h2 {position:absolute;font-size:0;line-height:0;overflow:hidden}
