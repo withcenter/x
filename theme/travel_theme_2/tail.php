@@ -45,3 +45,9 @@
 </div> <!-- layout -->
 
 
+<style>
+ .travel-2-posts {
+	height: 317px;
+}
+</style>
+
