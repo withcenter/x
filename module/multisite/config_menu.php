@@ -41,57 +41,16 @@
 				<span class='config-title-info'>
 					<span class='menu-num'>번호</span>
 					<span class='menu-select-name'>메뉴 선택</span>
-					<span class='menu-num sec'>번호</span>
-					메뉴 선택
+					MENU NAME
 				</span>
 		
 			</div>	
 			<div class='config-container'>
-
-	<table width='100%' cellspacing='0' cellpadding='0' class='config-menu-table'>
-	<tr valign='top'><td width='50%'>
-		<table width='100%' cellspacing='0' cellpadding='0'>
-			<? for ( $i = 1; $i <= 5; $i++ ) { ?>
+		<table width='100%' cellspacing='0' cellpadding='0' class='menu-table'>
+			<? for ( $i = 1; $i <= 10; $i++ ) { ?>
 			<tr valign='top'>
-				<td class='menu-no' valign='top' width='40' align='left'><?=$i?></td>
-				<td>
-					<span class='select-wrapper'><span class='inner'>
-						<?php
-						foreach ( $rows as $row ) {
-							if ( ms::meta('menu_'.$i) && ms::meta('menu_'.$i) == $row['bo_table'] ) {
-								$default_value =  $row['bo_subject'];
-								break;
-							}
-							else $default_value = null;
-						}
-						
-						echo $default_value ? $default_value : '메뉴 선택';
-						?>
-					</span></span>
-					<span class='select-button'><span class='inner'>
-						<img src='<?=x::url()?>/module/multisite/img/select_arrow.gif' />
-					</span></span>
-					<div class='drop-down-menu'>
-						<div class='row' bo_table='' bo_subject='메뉴 선택'><b>메뉴 선택</b></div>
-						<div style='height: 15px;' class='row' bo_table='' bo_subject='메뉴 선택'></div>
-						<?php
-							foreach ( $rows as $row ) {
-								echo "<div class='row' bo_table='$row[bo_table]' bo_subject='$row[bo_subject]'>$row[bo_subject]</div>";
-							}
-						?>
-					</div>
-					<input class='hidden-value' type='hidden' name='menu_<?=$i?>' value='<?=ms::meta('menu_'.$i)?>' />
-					<input type='text' class='menu-name'name='menu_name_<?=$i?>' value="<?=ms::meta('menu_name_'.$i)?>">
-				</td>
-			</tr>
-			<?}?>
-		</table>
-	</td><td>
-		<table width='100%' cellspacing='0' cellpadding='0' class='config-menu-table'>
-			<? for ( $i = 6; $i <= 10; $i++ ) { ?>
-			<tr valign='top'>
-				<td class='menu-no' valign='top' width='40' align='left'><?=$i?></td>
-				<td>
+				<td class='menu-no' width='40' align='left'><?=$i?></td>
+				<td width='280'>
 					<span class='select-wrapper'><span class='inner'>
 						<?php
 						foreach ( $rows as $row ) {
@@ -119,10 +78,10 @@
 					</div>
 					<input class='hidden-value' type='hidden' name='menu_<?=$i?>' value='<?=ms::meta('menu_'.$i)?>' />
 				</td>
+				<td align='left'><input type='text' class='menu-name' placeholder='메뉴 <?=$i?>' name='menu_name_<?=$i?>' value="<?=ms::meta('menu_name_'.$i)?>"></td>
 			</tr>
 			<?}?>
 		</table>
-	</td></tr></table>
 	
 	
 	</div></div>

@@ -888,11 +888,11 @@ span.config-name {
 
 .config_menu .config .menu-select-name {
 	display: inline-block;
-	width: 270px;
+	width: 320px;
 }
 
 .config_menu .config .select-wrapper {
-	width: 80%;
+	width: 242px;
 	background: #fafafa !important;
 	padding: 2px 0;
 }
@@ -1059,4 +1059,11 @@ span.config-name {
 	border-top: 0;
 } 
 
-
+.config_menu input.menu-name {
+	width: 95%;
+	height: 16px;
+	line-height: 16px;
+	padding: 2px;
+	border: solid 1px #d8d8d8;
+	background: #fafafa;
+}
