@@ -27,7 +27,6 @@ if ($is_nogood) $colspan++;
 add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
 ?>
 
-<h2 id="container_title"><?php echo $board['bo_subject'] ?><span class="sound_only"> 목록</span></h2>
 
 <!-- 게시판 목록 시작 { -->
 <div id="bo_list" style="width:<?php echo $width; ?>">
@@ -61,7 +60,9 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 
     <div class="tbl_head01 tbl_wrap">
 		<div class="list-menu">
-			<div class="caption"><?php echo $board['bo_subject'] ?></div>
+			<div class="caption">
+				<?php echo $board['bo_subject'] ?><span class="sound_only"> 목록</span>
+			</div>
 			<div class="category"><?php include 'list.category.php'; ?></div>
 			<div class="list-type">
 						<table cellpadding=0 cellspacing=0>

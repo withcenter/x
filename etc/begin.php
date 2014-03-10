@@ -209,6 +209,7 @@ function hook_theme_change()
 {
 	if ( G5_IS_MOBILE ) {
 		x::$config['site']['theme'] = ms::meta('mobile_theme');
+		if ( empty(x::$config['site']['theme']) ) x::$config['site']['theme'] = "mobile-community-1";
 	}
 }
 /// https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.2jz9ybhuk887

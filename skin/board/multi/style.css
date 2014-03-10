@@ -106,9 +106,11 @@
 .list-menu:hover {
 	border-color: #a5a9bc;
 }
-.list-menu .caption {
+.list-menu > .caption {
 	float: left;
-	padding:6px 1em 5px 1em;
+	padding:0.2em 1.8em 0.5em 1em;
+	font-size: 1.2em;
+	font-weight: bold;
 }
 .list-menu .category { float: left; }
 .list-menu .list-type {
@@ -116,6 +118,7 @@
 }
 .list-type table td {
 	padding: 0 !important;
+	border: 0 !important;
 	line-height: normal !important;
 	font-size: 0.9em;
 }
@@ -135,13 +138,13 @@
 	display:block;
 	position:relative;
 	margin-left:-1px;
-	padding:6px 0 5px;
-	width:90px;
-	border:1px solid #ddd;
-	background:#f7f7f7;
+	padding:6px 1.4em 5px;
+	/*width:90px;*/
+	/*border:1px solid #ddd;
+	background:#f7f7f7;*/
 	color:#888;
 	text-align:center;
-	letter-spacing:-0.1em;
+	/*letter-spacing:-0.1em;*/
 	line-height:1.2em;
 	cursor:pointer;
 }

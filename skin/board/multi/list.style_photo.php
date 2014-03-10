@@ -15,7 +15,7 @@
 
 <div class="post"><div class='inner'>
 	<div class='photo'>
-		<?=$img_content?>
+		<a href="<?php echo $list[$i]['href'] ?>"><?=$img_content?></a>
 	</div>
 
 	<div class='text'><div class='inner'>
@@ -26,7 +26,7 @@
 			</a>
 		</div>
 		<div class='list-content'>
-			<?=string::cutstr($list[$i]['wr_content'], 100)?>
+			<a href="<?php echo $list[$i]['href'] ?>"><?=string::cutstr($list[$i]['wr_content'], 100)?></a>
 		</div>
 		<div class='list-info'>
 			<span class='caption name'>글쓴이:</span> <span class='value name'><?php echo $list[$i]['name'] ?></span>
