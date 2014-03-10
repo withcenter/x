@@ -3,6 +3,8 @@
 	background-color: #eda23e;
 	margin-bottom: 10px;
 }
+
+
 .login-box .inner {
 	margin: 1px;
 
@@ -143,4 +145,51 @@
 
 .login-box .inner .login-box-info .profile img, .login-box .inner .login-box-info .setting img {
 
+}
+
+/** LOGGED IN */
+.login-box.logged-in {
+	height: 175px;
+}
+
+.login-box.logged-in .logged-in-name {
+	color: #ffffff;
+	margin-bottom: 6px;
+	font-size: 12px;'
+	font-weight: bolder !important;
+	text-align: center;
+}
+
+.login-box.logged-in a {
+	color: #ffffff;
+}
+
+.login-box.logged-in .logged-in-messages, .login-box.logged-in .logged-in-change-password {
+	padding: 7px 9px 8px 9px;
+	background: #db5e31;
+	margin-bottom: 10px;
+}
+
+.login-box.logged-in .logged-in-messages img, .login-box.logged-in .logged-in-change-password img {
+	margin-right: 7px;
+}
+
+.login-box.logged-in .logout-button {
+	background: #f2cb67;
+	width: 120px;
+	padding: 9px 0;
+	text-align: center;
+	margin: 0 auto 9px auto;
+}
+
+.login-box.logged-in .logout-button a {
+	padding: 9px 36px;
+}
+
+.login-box.logged-in .logout-button a {
+	color: #565656;
+}
+
+.login-box.logged-in .account-settings {
+	text-align: center;
 }
