@@ -3,12 +3,11 @@
 	word-break: break-all;
 }
 .sidebar > .login {
-	margin-bottom: 10px;
+	margin-bottom: 9.5px;
 }
 /**COMPANY BANNER*/
 .sidebar .company-banner {
-	width: 208px;
-	height: 114px;
+	height: 115px;
 	overflow: hidden;
 	border: solid 1px #bbbbbb;
 	margin-bottom: 10px;
