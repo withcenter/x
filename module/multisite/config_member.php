@@ -1,7 +1,7 @@
 <?php
 	if ( $in['option'] == 'mb_edit' ) include_once 'config_member_edit.php';
 	else {
-		$rows = ms::members();
+		$rows = db::rows("SELECT * FROM ".$g5['member_table']." ORDER BY mb_no DESC");
 ?>
 	<table class='config-member-table' cellpadding=0 cellspacing=0 width='100%' border=1>
 		<tr class='table-header' valign='top'>
