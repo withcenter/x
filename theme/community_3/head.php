@@ -33,7 +33,7 @@
 						<a page = '<?=ms::meta('forum_no_'.$i)?>' href='<?=G5_BBS_URL?>/board.php?bo_table=<?=ms::meta('forum_no_'.$i)?>'><?=cut_str($row['bo_subject'],15,'...')?></a>
 						
 					<?	}
-					} 
+					}
 				}
 				?>
 				
