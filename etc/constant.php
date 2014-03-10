@@ -8,3 +8,4 @@ define( 'FORUM_NOT_EXIST', -40010 );
 
 define('REGISTERED_DOMAIN', 'mb_10');
 
+define("ONEDAY", 86400);

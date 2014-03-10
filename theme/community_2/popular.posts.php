@@ -1,6 +1,7 @@
 <?php
+/** old code. Delete this comment and code whenever wanted. */
+/*
 $begin_date = date('Y-m-d H:i:s', time() - ( 60 * 60 * 24 * 30));
-
 for ( $i = 1 ; $i <= 10; $i++ ) {
 	${'forum_'.$i} = ms::meta('forum_no_'.$i);
 }
@@ -10,6 +11,18 @@ for ( $i = 1 ; $i <= 10 ; $i++ ) {
 		$posts[${'forum_' . $i}] = db::rows("SELECT * FROM ".$g5['write_prefix'].${'forum_' . $i}." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 3");
 }
 $posts = array_filter( $posts );
+*/
+exit;
+
+$posts = g::posts(
+	array(
+		'domain'=>etc::domain(),
+		'wr_datetime'=> '>' . g::datetime( time() - ONEDAY ),
+		'order by'=>'wr_hit DESC',
+		'limit'=>10
+	)
+);
+DATE_SUB('".G5_TIME_YMD."', INTERVAL 1 DAY) 
 
 ?>
 
