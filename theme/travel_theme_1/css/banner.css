@@ -28,7 +28,7 @@
 	position: absolute;
 	top: 189px;
 	left: 0;
-	padding: 16px;
+	padding: 18px 16px;
 	color: #ffffff;
 	font-size: 15px;
 	background: #bbbbbb;
@@ -49,7 +49,7 @@
 	right: 0;
 	background: #bbbbbb;
 	height: 50px;
-	padding: 16px;
+	padding: 18px 16px;
 }
 
 .layout .container .banner .banner-more a{
