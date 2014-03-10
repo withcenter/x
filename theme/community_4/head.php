@@ -149,4 +149,4 @@
 				<? include x::theme('sidebar'); ?>
 			</div>
 			<div class='content'>
-				<?if (preg_match('/^config/', $action ) ) include ms::site_menu();?>
+

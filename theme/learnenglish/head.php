@@ -19,5 +19,4 @@
         <?php echo poll('basic'); // 설문조사  ?>
 	</div>
     <div id="container">
-		<?if ( (preg_match('/^config/', $action)) || (preg_match('/^config_/', $action)) ) include ms::site_menu();?>
         <?php if ((!$bo_table || $w == 's' ) && !defined("_INDEX_")) { ?><div id="container_title"><?php echo $g5['title'] ?></div><?php } ?>

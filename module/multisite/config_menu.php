@@ -23,7 +23,6 @@
 		<input type='hidden' name='module' value='multisite' />
 		<input type='hidden' name='action' value='config_menu_submit' />
 <div class='config site-global'>
-	<?include ms::site_menu();?>
 <div class='config-wrapper'>
 		<div class='config-main-title'>
 			<div class='inner'>

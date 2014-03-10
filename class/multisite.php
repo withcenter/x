@@ -368,8 +368,10 @@ class multisite {
 	}
 	
 	
+	/** @deprecated
+	 */
 	static function site_menu() {
-		return x::dir() .'/module/multisite/subsite_config_menu.php';
+		return x::dir() .'/module/multisite/config_header.php';
 	}
 
 

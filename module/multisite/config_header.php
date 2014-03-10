@@ -1,11 +1,10 @@
 <link rel='stylesheet' type='text/css' href='<?=x::url()?>/module/multisite/subsite.css' />
 <?php
-
-		if ( ! ms::admin() ) {
+	if ( ! ms::admin() ) {
 		echo "You are not admin";
 		return;
 	}
-
+	global $action;
 ?>
 <ul class='multisite-menu'>
 	

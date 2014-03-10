@@ -28,7 +28,7 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
 	
     <div class="inner">
 					<div id='data'>
-					<?if ( preg_match('/^config/', $action) ) include ms::site_menu();?>
+					
 					<div id="login-box">
 					   <?php
 								if ( ! login() ) {

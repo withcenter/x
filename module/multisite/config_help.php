@@ -1,5 +1,4 @@
 <div class='config subsite-support'>
-	<?include ms::site_menu();?>
 	<div class='config-main-title'>
 		<div class='inner'>
 		<span class='config-title-info'><img src='<?=x::url()?>/module/multisite/img/direction.png' />필고 무료 홈페이지 사용방법 안내</span>

@@ -187,6 +187,7 @@ if ( G5_IS_MOBILE ) $mobile = "mobile/";
 $p = "{$mobile}skin/board/x/";
 $board_skin_path = str_replace($p, 'x/', $board_skin_path);
 $board_skin_url = str_replace("{$mobile}skin/board/x/", 'x/', $board_skin_url);
+/** @short if 'skin/board/basic' was chosen by default, it will be reset to /x/skin/board/multi' here. */
 if ( strpos( $board_skin_path, "board/basic" ) ) {
 	$board_skin_path = x::dir() . "/skin/board/multi";
 	$board_skin_url = x::url() . "/skin/board/multi";
@@ -232,7 +233,15 @@ function hook_body_begin()
 	$url = x::url() . '/js/skin-update.js';
 	echo "<script src='$url'></script>\n";
 	
+	
 }
+x::hook_register( 'module_begin' , 'hook_module_begin');
+function hook_module_begin() {
+	global $module, $action;
+	if ( preg_match('/^config/', $action) ) include x::dir() . "/module/$module/config_header.php";
+}
+
+
 x::hook_register('latest_before_return', 'hook_latest_before_return');
 function hook_latest_before_return()
 {
