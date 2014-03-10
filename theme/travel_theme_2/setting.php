@@ -113,7 +113,7 @@ function setTopMenu( $name ) {
 			</div>
 		</td>
 		<td width='50%'> 
-			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>사이트 상단 로고</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>COMPANY BANNER</div>
 			<div class='image-upload'>
 			<?if( ms::meta('travelbanner_company') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('travelbanner_company').">"; 
