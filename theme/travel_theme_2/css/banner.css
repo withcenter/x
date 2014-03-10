@@ -16,6 +16,10 @@
 	width:100%;
 }
 
+.layout .container .banner-image img{
+	width:100%;
+}
+
 .layout .container .banner-image.selected {
 	display: block;
 }

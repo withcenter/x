@@ -15,7 +15,7 @@
 	<?}?>
 </div> <!-- inner -->
 <div class='footer-wrapper'>	
-	<div class='footer'>
+	<div class='footer'>z
 		<div class='footer-logo'>		
 		<?php
 			if( ms::meta('footer_logo') ) $img = "<img src='".ms::meta('img_url').ms::meta('footer_logo')."' />";

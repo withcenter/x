@@ -89,7 +89,6 @@
 
 .main-menu li.first-item a{
 	border-left:none;
-	padding-left:4px;
 }
 
 .main-menu li.first-item .inner {
@@ -100,13 +99,12 @@
 	border-left: 0;
 }
 
-.main-menu li  a {	
-	width:98px;
+.main-menu li  a {		
 	font-family: '맑은 고딕', AppleGothic;
 	color: #4d4d4d;	
 	display: block;
 	float:left;	
-	padding: 11px 0 11px 0;	
+	padding: 11px 10px;	
 	text-align:center;
 	position:relative;
 }
