@@ -24,8 +24,8 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			$i = 1;
 			$no_of_posts = count($list);
 			foreach ( $list as $li ) {
-
-				$subject = cut_str($subject, 20,'...');
+				
+				$subject = cut_str($li['wr_subject'], 20,'...');
 				$url = $li['href'];
 				$no_comment = '';
 				if ( !$comment_count = strip_tags($li['comment_cnt']) ) {
