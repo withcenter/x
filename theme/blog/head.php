@@ -4,9 +4,15 @@
 	for ( $i = 1; $i <= 3; $i++ ) {
 		if ( $menu_item = ms::meta('menu_'.$i) ) { 
 			
-			$menu_info[$i]['url'] = stripslashes(ms::url_site(etc::domain()))."/bbs/board.php?bo_table=$menu_item";
-			$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table ='$menu_item'");
-			$menu_info[$i]['bo_subject'] = $row['bo_subject'];
+			$menu_info[$i]['title'] = ms::meta("menu_name_$i");
+			$menu_info[$i]['url'] = G5_BBS_URL.'/board.php?bo_table='.$menu_item;
+			
+			if ( empty($menu_info[$i]['title']) ) {
+				$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='$menu_item'");
+				if ( empty($row['bo_subject']) )$menu_info[$i]['title'] = ln("No Subject", "제목없음");
+				else $menu_info[$i]['title'] = $row['bo_subject'];
+			}
+			
 		}
 	}
 ?>
@@ -21,12 +27,12 @@
         </div>
         <ul id="tnb">
 			<li class='menu-home'><a href='<?=ms::url_site(etc::domain())?>'>홈</a></li>
-			<li class='menu-about'><a href='<?=$menu_info[1]['url']?>'><?=$menu_info[1]['bo_subject']?></a></li>
+			<li class='menu-about'><a href='<?=$menu_info[1]['url']?>'><?=$menu_info[1]['title']?></a></li>
 			<? if ( $menu_info[2]['url'] ) {?>
-				<li class='menu-faqs'><a href='<?=$menu_info[2]['url']?>'><?=$menu_info[2]['bo_subject']?></a></li>
+				<li class='menu-faqs'><a href='<?=$menu_info[2]['url']?>'><?=$menu_info[2]['title']?></a></li>
 			<? }?> 
 			<? if ( $menu_info[3]['url'] ) {?>
-				<li class='menu-contact'><a href='<?=$menu_info[3]['url']?>'><?=$menu_info[3]['bo_subject']?></a></li>
+				<li class='menu-contact'><a href='<?=$menu_info[3]['url']?>'><?=$menu_info[3]['title']?></a></li>
 			<? }?>
 			<?if( ms::admin() ) { ?><li class='menu-admin'><a href='<?=ms::url_config()?>'>사이트관리</a></li><?}?>
 			<li class='menu-mobile'><a href='<?=g::url()?>?device=mobile'>모바일</a></li>

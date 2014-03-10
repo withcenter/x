@@ -11,12 +11,17 @@
 	}
 		for ( $i=1; $i <=$max_menus; $i++ ) {
 			if ( $board_id = ms::meta('menu_'.$i) ) {
-				$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='$board_id'");
+				$menu_name = ms::meta("menu_name_$i");
+				if ( empty($menu_name) ) {
+					$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('menu_'.$i)."'");
+					if ( empty($row['bo_subject']) ) $menu_name = ln("No Subject", "제목없음");
+					else $menu_name = $row['bo_subject'];
+				}
 				?>
 					<li page='<?=ms::meta('menu_'.$i)?>'>
 						<div class='inner'>
 							<a  href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$board_id?>'>
-								<?=cut_str($row['bo_subject'],10,'...')?>
+								<?=$menu_name?>
 								<div class='border_left'></div>
 							</a>
 						</div>

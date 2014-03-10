@@ -4,12 +4,29 @@
 	<li class='first-item home'><div class='inner'><a href='<?=g::url()?>'>홈</a></div></li>
 	<?php
 		for ( $i=1; $i <=6; $i++ ) {
+			
+			/*
 			if ( $board_id = ms::meta('menu_'.$i) ) {
+				
 				$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='$board_id'");
-				if($i==7 && !ms::admin()) $last_item = "last-item";
+				if($i==6 && !ms::admin()) $last_item = "last-item";
 				else $last_item ='';
+				*/
+				
+			if ( $board_id = ms::meta('menu_'.$i) ) {	
+				
+				$menu_name = ms::meta("menu_name_$i");
+				if ( empty($menu_name) ) {
+					$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('menu_'.$i)."'");
+					if ( empty($row['bo_subject']) ) $menu_name = ln("No Subject", "제목없음");
+					else $menu_name = $row['bo_subject'];
+				}
+				
+				if($i==6 && !ms::admin()) $last_item = "last-item";
+				else $last_item ='';
+				
 				echo "<li><span class='menu-divider'></span></li>";
-				echo "<li class='$last_item' page='".ms::meta('menu_'.$i)."'><div class='inner'><a  href='".G5_BBS_URL."/board.php?bo_table=".$board_id."'>".$row['bo_subject']."</a></div></li>";
+				echo "<li class='$last_item' page='".ms::meta('menu_'.$i)."'><div class='inner'><a  href='".G5_BBS_URL."/board.php?bo_table=".$board_id."'>".$menu_name."</a></div></li>";
 			}
 		}
 	?>
