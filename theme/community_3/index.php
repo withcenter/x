@@ -21,7 +21,7 @@
 						echo "<div class='banner-image image_num_$banner_num $first_image'>";
 						if ( !$url = ms::meta('com3banner_'.$i.'_text2') )  $url = "javascript:void(0)";
 						echo "<a href='$url' target='_blank'><img src='".$banner_url.$banner_image."'></a>";
-						echo "<p class='banner-text'><span class='banner-content'>".cut_str(strip_tags(ms::meta('com3banner_'.$i.'_text1')),54,'...')."</span></p>";
+						echo "<p class='banner-text'><span class='banner-content'>".cut_str(strip_tags(ms::meta('com3banner_'.$i.'_text1')),50,'...')."</span></p>";
 						echo "<div class='banner-more'><a href='$url' target='_blank'>자세히 &gt;</a></div>";
 						echo "</div>";
 						$banner_num++;
