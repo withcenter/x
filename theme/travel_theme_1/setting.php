@@ -120,23 +120,7 @@ function setTopMenu( $name ) {
 				<?}?>
 			</div>
 		</td>
-		<td width='50%'> 
-			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>COMPANY BANNER (Sidebar)</div>
-			<div class='image-upload'>
-			<?if( ms::meta('travel2banner_company') ) {
-				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner_company').">"; 
-			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 230px X 세로 130px]</div>
-				<?}?>
-				<input type='file' name='travel2banner_company'>
-				<?if( ms::meta('travel2banner_company') != '' ) { ?>
-					<input type='hidden' name='travel2banner_company_remove' value='n'>
-					<input type='checkbox' name='travel2banner_company_remove' value='y'><span class='title-small'>이미지 제거</span>
-				<?}?>
-			</div>
-		</td>
-	</tr>
-	<tr valign='top' >
+
 		<td width='50%'>
 			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>사이트 하단 로고</div>
 			<div class='image-upload'>
@@ -180,7 +164,7 @@ function setTopMenu( $name ) {
 				<?if( ms::meta('travel2banner_1') ) {
 					echo "<img src=".ms::meta('img_url').ms::meta('travel2banner_1').">"; 
 			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 750px X 세로 240px]</div>
+					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 748px X 세로 238px]</div>
 				<?}?>
 				<input type='file' name='travel2banner_1'>
 				<?if( ms::meta('travel2banner_1') != '' ) { ?>
@@ -200,7 +184,7 @@ function setTopMenu( $name ) {
 			<?if( ms::meta('travel2banner_2') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner_2').">"; 
 			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 750px X 세로 240px]</div>
+					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 748px X 세로 238px]</div>
 				<?}?>
 			<input type='file' name='travel2banner_2'>
 			<?if( ms::meta('travel2banner_2') != '' ) { ?>
@@ -221,7 +205,7 @@ function setTopMenu( $name ) {
 			<?if( ms::meta('travel2banner_3') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner_3').">"; 
 			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 750px X 세로 240px]</div>
+					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 748px X 세로 238px]</div>
 				<?}?>
 			<input type='file' name='travel2banner_3'>
 			<?if( ms::meta('travel2banner_3') != '' ) { ?>
@@ -241,7 +225,7 @@ function setTopMenu( $name ) {
 			<?if( ms::meta('travel2banner_4') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner_4').">"; 
 			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 750px X 세로 240px]</div>
+					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 748px X 세로 238px]</div>
 				<?}?>
 			<input type='file' name='travel2banner_4'>
 			<?if( ms::meta('travel2banner_4') != '' ) { ?>
@@ -262,7 +246,7 @@ function setTopMenu( $name ) {
 			<?if( ms::meta('travel2banner_5') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner_5').">"; 
 			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 750px X 세로 240px]</div>
+					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 748px X 세로 238px]</div>
 				<?}?>
 			<input type='file' name='travel2banner_5'>
 			<?if( ms::meta('travel2banner_5') != '' ) { ?>
@@ -379,7 +363,7 @@ function setTopMenu( $name ) {
 			<?if( ms::meta('travel2banner1_sidebar') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner1_sidebar').">"; 
 			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 210px X 세로 90px]</div>
+					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 208px X 세로 88px]</div>
 				<?}?>
 			<input type='file' name='travel2banner1_sidebar'>
 			<?if( ms::meta('travel2banner1_sidebar') != '' ) { ?>
@@ -396,7 +380,7 @@ function setTopMenu( $name ) {
 			<?if( ms::meta('travel2banner_right') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner_right').">"; 
 			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 210px X 세로 90px]</div>
+					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 208px X 세로 88px]</div>
 				<?}?>
 			<input type='file' name='travel2banner_right'>
 			<?if( ms::meta('travel2banner_right') != '' ) { ?>
@@ -415,7 +399,7 @@ function setTopMenu( $name ) {
 			<?if( ms::meta('travel2banner_bottom') ) {
 				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner_bottom').">"; 
 			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 970px X 세로 170px]</div>
+					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 968px X 세로 168px]</div>
 				<?}?>
 			<input type='file' name='travel2banner_bottom'>
 			<?if( ms::meta('travel2banner_bottom') != '' ) { ?>
