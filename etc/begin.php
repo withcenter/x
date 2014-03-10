@@ -187,8 +187,11 @@ if ( G5_IS_MOBILE ) $mobile = "mobile/";
 $p = "{$mobile}skin/board/x/";
 $board_skin_path = str_replace($p, 'x/', $board_skin_path);
 $board_skin_url = str_replace("{$mobile}skin/board/x/", 'x/', $board_skin_url);
+if ( strpos( $board_skin_path, "board/basic" ) ) {
+	$board_skin_path = x::dir() . "/skin/board/multi";
+	$board_skin_url = x::url() . "/skin/board/multi";
+}
 
-	
 
 
 /// https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.an2o30375xzf
