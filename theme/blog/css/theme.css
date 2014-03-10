@@ -390,3 +390,13 @@ section#ol_before h2, section#ol_after h2, section#ol_after #ol_after_private{
 	width: 100%;
 	display: block;
 }
+
+
+.left-company-banner {
+	border: 1px solid #d5d5d5;
+	margin-bottom: 10px;
+}
+
+.left-company-banner img {
+	border: 0;
+}

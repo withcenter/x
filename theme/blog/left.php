@@ -22,7 +22,9 @@
 <?php 
 	echo outlogin('x-outlogin-blog');?>
 </div>
-
+<div class='left-company-banner'>
+	<a href='http://www.philgo.com' target='_blank'><img src='<?=x::url_theme()?>/img/company_banner.png' /></a>
+</div>
 <div class='categories'>
 	<div class='small-title'>메뉴</div>
 	<ul>
