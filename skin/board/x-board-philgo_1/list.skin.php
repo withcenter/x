@@ -61,20 +61,27 @@ foreach( $list as $l ){
 		</div>
 	<?}?>	
         <table width='750px;' cellpadding=0 cellspacing=0>           
-        <?php
-        for ($i=0; $i<count($list); $i++) {				
+        <?php		
+        for ($i=0; $i<count($list); $i++) {			
 		if( $i+1 == count($list) ) $no_padding = "class = 'no-padding'";
 		else $no_padding = null;
+		
+		$count_images = count($images[$i]);
+		if( $count_images > 5 ){
+			$count_images = 5;
+		}
         ?>
 			<tr class = 'post_list' valign='top'>
 			<?if( $images[$i][0]['src'] ) {?>
 				<td width ='76' <?=$no_padding?>>					
 					<div class='post-image' number="<?=$i?>">
 						<a href ='<?=$list[$i]['href']?>'><img src = '<?=$images[$i][0]['src']?>' /></a>
-						<div class='num_of_pics'><a href ='<?=$list[$i]['href']?>'><span class='plus'>+</span><?=count($images[$i])?></a></div>						
-						<div class='other-images <?=$i?>'>						
+						<?if( $count_images > 1 ){?>
+							<div class='num_of_pics'><a href ='<?=$list[$i]['href']?>'><span class='plus'>+</span><?=$count_images?></a></div>						
+						<?}?>
+						<div class='other-images <?=$i?>'>											
 							<?						
-							for($i2 = 1; $i2 < count($images[$i]); $i2++ ){?>							
+							for( $i2 = 1; $i2 < $count_images; $i2++ ){?>							
 								<a href ='<?=$list[$i]['href']?>'><img src = '<?=$images[$i][$i2]['src']?>' /></a>
 							<?						
 								}
