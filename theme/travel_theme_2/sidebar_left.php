@@ -1,7 +1,12 @@
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/sidebar_left.css' />
 
 <div class='travel2-company-banner'>
-	<a href='http://www.philgo.com' target='_blank'><img src='<?=x::url_theme().'/img/no_company_banner.png'?>' style='border:0;' /></a>
+	<a href='http://www.philgo.com' target='_blank'>
+	<?	if ( !ms::meta('travelbanner_company') ) $banner_company = x::url_theme().'/img/no_company_banner.png';
+		else $banner_company = ms::meta('img_url').ms::meta('travelbanner_company');
+	?>
+		<img src="<?=$banner_company?>" style='border:0;' />
+	</a>
 </div>
 
 <div class='posts-left-1'>
