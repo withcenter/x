@@ -120,23 +120,7 @@ function setTopMenu( $name ) {
 				<?}?>
 			</div>
 		</td>
-		<td width='50%'> 
-			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>COMPANY BANNER</div>
-			<div class='image-upload'>
-			<?if( ms::meta('travelbanner_company') ) {
-				echo "<img src=".ms::meta('img_url').ms::meta('travelbanner_company').">"; 
-			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 210px X 세로 116px]</div>
-				<?}?>
-				<input type='file' name='travelbanner_company'>
-				<?if( ms::meta('travelbanner_company') != '' ) { ?>
-					<input type='hidden' name='travelbanner_company_remove' value='n'>
-					<input type='checkbox' name='travelbanner_company_remove' value='y'><span class='title-small'>이미지 제거</span>
-				<?}?>
-			</div>
-		</td>	
-	</tr>
-	<tr valign='top'>
+
 		<td width='50%'>
 			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>사이트 하단 로고</div>
 			<div class='image-upload'>

@@ -60,21 +60,6 @@
 				<?}?>
 			</div>
 		</div>
-		<div class='image-upload-container last-container' style='margin-top: 10px'>
-			<div class='image-title'>하단 배너</div>
-			<div class='image-upload'>
-			<?if( ms::meta('com2banner_company') ) {
-				echo "<img src=".ms::meta('img_url').ms::meta('com2banner_company').">"; 
-			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 210px X 세로 120px]</div>
-				<?}?>
-				<input type='file' name='com2banner_company'><br>
-				<?if( ms::meta('com2banner_company') != '' ) { ?>
-					<input type='hidden' name='com2banner_company_remove' value='n'>
-					<input type='checkbox' name='com2banner_company_remove' value='y'><span class='title-small'>이미지 제거</span>
-				<?}?>
-			</div>
-		</div>
 		<div style='clear: left'></div>
 </div><!--image container-->
 </div>
