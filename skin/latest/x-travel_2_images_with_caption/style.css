@@ -88,8 +88,11 @@
 	height: 34px;
 	overflow: hidden;
 	margin-top: 2px;
+	text-align:center;
+	word-break:break-all;
 }
 .travel_images_with_captions_container .product_subject a {
 	color: #555555;
 	margin-top: 5px;
+	text-decoration:none;
 }
