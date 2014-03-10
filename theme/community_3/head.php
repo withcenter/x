@@ -1,7 +1,28 @@
-
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/theme.css' />
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/head.css' />
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/tail.css' />
+
+
+<?
+	$theme_sidebar = ms::meta('theme_sidebar');
+	if ( empty($theme_sidebar) || $theme_sidebar == 'left') {
+		$sidebar = "left";
+		$content = "right";
+	}
+	else {
+		$sidebar = "right";
+		$content = "left";
+	}
+?>
+<style>
+	.layout .body-wrapper .main-content .sidebar {
+		float: <?=$sidebar?>;
+	}
+	.layout .body-wrapper .main-content .content {
+		float: <?=$content?>;
+	}
+</style>
+	
 <div class='layout'>
 	<div class='top'>
 		<div class='inner'>
@@ -41,7 +62,7 @@
 			
 			<div class='right'>
 				<? 
-					for ( $i=6; $i <=9; $i++ ) {
+					for ( $i=6; $i <=8; $i++ ) {
 						if ( ms::meta('forum_no_'.$i) ) {
 							$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('forum_no_'.$i)."'");
 							
@@ -106,4 +127,3 @@
 				<? include x::theme('sidebar'); ?>
 			</div>
 			<div class='content'>
-				<?if (preg_match('/^config/', $action ) ) include ms::site_menu();?>

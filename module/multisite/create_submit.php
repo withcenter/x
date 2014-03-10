@@ -42,8 +42,8 @@
 	if ( $in['site-type'] ) {
 		if ( $in['site-type'] == 'community' ) $site_type = 'community_3';
 		else if ( $in['site-type'] == 'travel' ) 	$site_type = 'travel_theme_2';
-		else if ( $in['site-type'] == 'shopping' ) $site_type = 'community_3';
-		else if ( $in['site-type'] == 'academy' ) $site_type = 'community_3';
+		//else if ( $in['site-type'] == 'shopping' ) $site_type = 'community_3';
+		//else if ( $in['site-type'] == 'academy' ) $site_type = 'community_3';
 		else if ( $in['site-type'] == 'blog' ) $site_type = 'blog';
 		else $site_type = 'blog';
 	}
@@ -65,11 +65,10 @@
 			else if ( $site_type == 'travel_theme_1' )  $o['bo_skin'] = 'x/skin/board/x-board-travel-3';
 			g::board_create($o);
 			
-			// 사이트 생성시 처음 메뉴 저장
-			//db::insert('x_multisite_meta', array('domain'=>$domain, 'code'=>'menu_1', 'value'=>ms::board_id ( $domain ).'_1' ) );
-			//db::insert('x_multisite_meta', array('domain'=>$domain, 'code'=>'forum_no_1', 'value'=>ms::board_id ( $domain ).'_1' ) ); 
+			
 			ms::meta( $domain, 'menu_1', ms::board_id ( $domain ).'_1' );
 			ms::meta( $domain, 'forum_no_1', ms::board_id ( $domain ).'_1' );
+			if ( $site_type == 'blog' ) ms::meta( $domain, 'forum_no_2', ms::board_id ( $domain ).'_1' );
 			
 			// 모바일 테마 Default로 mobile-community-1를 선택 되도록 한다.
 			ms::meta( $domain, 'mobile_theme', 'mobile-community-1');

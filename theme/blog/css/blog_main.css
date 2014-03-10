@@ -1,0 +1,98 @@
+.blog_main {
+	border-bottom: 2px solid #bedaea;
+	height: 385px;
+	position: relative;
+}
+.blog_main a:hover {
+	text-decoration: none;
+}
+
+.blog_main img {
+	border: 0;
+}
+
+.blog_main .main-content .title {
+	font-family: '맑은 고딕', AppleGothic;
+	font-size: 15pt;
+	border-bottom: 1px solid #e7e7e8;
+	position: relative;
+	top: -5px;
+}
+.blog_main .main-content .title  a {
+	color: #797b84;
+	display: inline-block;
+	border-bottom: 1px solid #f2f2f2;
+	width:94%;
+	padding-bottom: 8px;
+	padding: 0 3% 8px 3%;
+}
+
+.blog_main .main-content .title  .first-word {
+	color: #6c99be;
+}
+.blog_main .main-content .content {
+	line-height: 18px;
+	text-indent: 10px;
+	padding: 8px 5px;
+}
+.blog_main .main-content .content a{
+	color: #929293;
+}
+
+.blog_main .main-content .more-button {
+	border: 1px solid #98cbe7;
+	width: 121px;
+	
+	margin: 5px 0 0 5px;
+}
+.blog_main .main-content .more-button a {
+	display: inline-block;
+	height: 21px;
+	line-height: 21px;
+	width: 119px;
+	border: 1px solid #3290cd;
+	background-color: #3197d5;
+	color: #ffffff;
+	text-align: center;
+}
+.blog_main .date {
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	color: #929293;
+}
+.blog_main .date  b {
+	color: #3290cd;
+}
+.blog_main .pagination {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
+.blog_main .pagination  .page_no {
+	border: 1px solid #6c99be;
+	padding: 4px 4px;
+	display: inline-block;
+	margin: 0 2px;
+	border-radius: 4px;
+	color: #6c99be;
+}
+.blog_main .pagination  .page_no:hover,.blog_main .pagination .selected  {
+	background-color: #6c99be;
+	color: #ffffff;
+}
+
+.blog_main .pagination .first_page_no {
+	padding-right: 8px;
+	letter-spacing: -4px;
+	position: relative;
+	left: 4px;
+}
+
+.blog_main .pagination .last_page_no {
+	padding: 4px 7px 4px 5px;
+	letter-spacing: -4px;
+	position: relative;
+	right: 4px;
+}

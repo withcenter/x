@@ -3,17 +3,18 @@ class db extends database { }
 class database {
 
 	/**
-	 *  @brief 쿼리를 하고 결과 셋을 리턴한다.
+	 *  @brief returns the result set after query.
+	 *		쿼리를 하고 결과 셋을 리턴한다.
 	 *  
 	 *  @param [in] $q SQL Query
-	 *  @return 
+	 *  @return result set
 	 *  
-	 *  @details Details
+	 *  @details It is just a alias of G5 'sql_query()'
 	 */
-	static function query( $q )
+	static function query( $q, $error=TRUE)
 	{
 		dlog("QUERY: $q");
-		return sql_query( $q );
+		return sql_query( $q, $error );
 	}
 	
 
@@ -151,8 +152,22 @@ class database {
 		// return addslashes($data);
 	}
 	
+	/** @short returns true if the table is exists.
+	  *
+	  */
 	static function table_exist($table)
 	{
 		return db::result("SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE table_schema = '".G5_MYSQL_DB."' AND table_name ='$table'");
 	}
+	
+	/** @short returns true if the key of the table exists.
+	 *
+	 * @note use this function to check if a key is exists in that table.
+	 *
+	 */
+	static function key_exist( $table, $key )
+	{
+		return db::row("SHOW INDEX FROM $table WHERE KEY_NAME = '$key'");
+	}
+	
 }

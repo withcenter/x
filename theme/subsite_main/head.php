@@ -11,14 +11,14 @@
 					<img src='<?=x::url_theme()?>/img/logo1.png'>
 				</a>
 			</div>
-			<?include x::theme('website.com-menu')?>
+			<?include x::theme('menu.top')?>
 		</div>
 	</div>
 	
 	<div id='search-wrapper'>
 		<div class='inner'>
 			<div class='sub-menu'>
-				<?include x::theme('website.com-submenu')?>
+				<?include x::theme('menu.main')?>
 			</div>
 			<div id='search-box'>
 				<fieldset id="search-fieldset">
@@ -76,5 +76,6 @@
 			</td>
 			<td>
 				<div id="container">
-					<?if ( (preg_match('/^config/', $action)) || (preg_match('/^config_/', $action)) ) include ms::site_menu();?>
+				
+					
 					<?php if ((!$bo_table || $w == 's' ) && !defined("_INDEX_")) { ?><div id="container_title"><?php echo $g5['title'] ?></div><?php } ?>

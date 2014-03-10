@@ -115,6 +115,7 @@
 	color: #0e5565;
 	display: inline-block;
 	padding: 9px 20px 7px 20px;
+	border-bottom: solid 2px transparent;
 }
 
 .main-menu li.last-item {
@@ -249,4 +250,13 @@
 .travel_theme2_header > .header_wrapper .search-bar {
 	float: right;
 	margin-top: 5px;
+}
+
+
+/**THEME SPECIFIC CONFIG CSS */
+.config .forum-config select {
+	width: 100px;
+	position: relative;
+	height: 25px;
+	top: -3px;
 }

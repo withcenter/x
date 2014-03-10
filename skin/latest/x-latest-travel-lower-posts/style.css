@@ -67,7 +67,7 @@
 
 .travel_lower_items .item .subject a{
 	display:inline-block;
-	white-space:nowrap;
+	vertical-align: middle;
 	max-width:75%;
 	text-decoration:none;	
 	overflow:hidden;

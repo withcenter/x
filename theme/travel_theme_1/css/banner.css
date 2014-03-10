@@ -28,24 +28,37 @@
 	position: absolute;
 	top: 189px;
 	left: 0;
-	padding: 16px;
+	padding: 18px 16px;
 	color: #ffffff;
 	font-size: 15px;
 	background: #bbbbbb;
 	width: 100%;
 	height: 50px;
+	overflow: hidden;
+	width: 636px;
+	opacity: 0.9;
+}
+
+.layout .container .banner .banner-content {
+	height: 10px;
+	white-space: nowrap;
 }
 
 .layout .container .banner .banner-more {
 	position: absolute;
-	top: 209px;
-	right: 10px;	
-	font-size:.8em;
+	top: 189px;
+	right: 0;
+	background: #bbbbbb;
+	height: 50px;
+	padding: 18px 16px;
+	opacity: 0.9;
 }
 
 .layout .container .banner .banner-more a{
 	text-decoration:none;
 	color: #ffffff;	
+	font-size: 15px;
+	font-weight: bold;
 }
 
 .travel2-company-banner {

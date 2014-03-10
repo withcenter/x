@@ -1,3 +1,54 @@
+.blog-latest {
+	margin: 0 0 10px 0;
+}
+.blog-latest .blog-post-container td{
+	border-bottom: 1px solid #d5d5d5;
+}
+
+.blog-latest .blog-post-container a:hover {
+	text-decoration: none;
+}
+
+.blog-latest .blog-post-container .photo {
+	padding: 15px 0;
+}
+.blog-latest .blog-post-container .photo img {
+	width: 150px;
+	height: 100px;
+}
+.blog-latest .blog-post-container .right {
+	padding: 15px 0;
+}
+
+.blog-latest .blog-post-container .right .date {
+	color: #929293;
+}
+.blog-latest .blog-post-container .right .date b {
+	color: #3290cd;
+	margin-right: 5px;
+}
+.blog-latest .blog-post-container .right .subject  {
+	line-height: 20px;
+	height: 20px;
+	overflow: hidden;
+	margin: 3px 0;
+}
+
+.blog-latest .blog-post-container .right .subject a {
+	font-size: 11pt;
+	color: #555555;
+}
+
+.blog-latest .blog-post-container .right .content {
+	line-height: 15px;
+	height: 60px;
+	overflow: hidden;
+}
+
+.blog-latest .blog-post-container .right .content  a {
+	color: #929293;
+}
+/*
 #container .post-container {
 	padding-top: 1em;
 	border-bottom: solid 1px #959595;
@@ -13,11 +64,11 @@
 
 #container .post-container .post-content .post-images {
 	float: left;
-	margin: 0 0.5em 0 0;
+	margin-right: 10px;
 }
 
 #container .post-container .post-content img {
-	max-width: 200px;
+	width: 150px;
 	display: inline-block;
 	margin: 0.1em;
 	padding: 0;
@@ -37,17 +88,15 @@
 }
 
 #container .date-author-container {
-	background: #bfb840;
 	font-size: 9pt;
-	display: inline-block;
-	padding: 0 10px;
 	height: 23px;
 	line-height: 23px;
-	color: #ffffff;
-	border-radius: 3px;
+	color: #929293;
+	position: relative;
+	top: -3px;
 }
 #container .date-author-container b {
-	color: #746f24;
+	color: #3290cd;
 	margin-right: 5px;
 }
 #container .date-author-container span {
@@ -68,3 +117,5 @@
 	padding: 0 10px;
 	margin-top: 10px;
 }
+
+*/

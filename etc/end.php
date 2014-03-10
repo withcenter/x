@@ -1,9 +1,19 @@
 <?php
+
+/** @short Records member registered domain
+ *
+ */
+if ( strpos($_SERVER['PHP_SELF'], 'register_result.php') !== false ) {
+	g::update_member( $mb['mb_id'], REGISTERED_DOMAIN, etc::domain() );
+}
+
+
 x::hook_register('end_before_html', 'hook_rsd_patch');
 x::hook_register('end_before_html', 'hook_metaweblogapi');
 x::hook_register('end_before_html', 'hook_html_symbol');
 x::hook_register('end_before_html', 'hook_css_js_version');
 x::hook_register('end_before_html', 'hook_html_meta');
+
 
 function hook_html_meta()
 {
@@ -12,6 +22,7 @@ function hook_html_meta()
 	$dst = '<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1,maximum-scale=1,user-scalable=no">';
 	$html = str_replace($src, $dst, $html);
 }
+
 
 
 

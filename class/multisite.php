@@ -259,6 +259,12 @@ class multisite {
 	}
 	
 	
+	static function url_config_forum( $id=null ) {
+		if ( empty($id) ) $id = $GLOBALS['bo_table'];
+		return x::url() . "?module=multisite&action=config_forum&mode=forum_setting&bo_table=$id";
+	}
+	
+	
 	/**
 	 *  @brief returns the url of a site. 사이트 URL 주소를 리턴한다.
 	 *  
@@ -362,8 +368,10 @@ class multisite {
 	}
 	
 	
+	/** @deprecated
+	 */
 	static function site_menu() {
-		return x::dir() .'/module/multisite/subsite_config_menu.php';
+		return x::dir() .'/module/multisite/config_header.php';
 	}
 
 
@@ -483,7 +491,13 @@ class multisite {
 	}
 	
 	
-	
+	static function members()
+	{
+		global $g5;
+		$domain = etc::domain();
+		$q = "SELECT * FROM $g5[member_table] WHERE ".REGISTERED_DOMAIN."='$domain'";
+		return db::rows( $q );
+	}
 	
 
 }

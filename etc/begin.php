@@ -13,6 +13,7 @@
 	$error_hook_latest = null;
 	
 	
+	if ( etc::web() ) include x::dir() . '/etc/rewrite/bbs/visit_insert.inc.php';
 	
 	
 // -----------------------------------------------------------------------------
@@ -32,7 +33,6 @@
 
 //Multisite Config Options
 // $extra = ms::get_extra( );
-
 /** @short load 'register_result.skin.php' in the 'x/theme/xxxx/' folder instead of 'skin/' folder.
  *  
  */
@@ -181,15 +181,16 @@ if ( strpos($_SERVER['PHP_SELF'], 'login.php') !== false ) {
  *  @note if there is board skin under x/skin/board folder, G5, then, can use it as its board skin.
  *  All the codes between G5/skin/board folder and x/skin/board folder are compatible.
  *  @see etc/end.php for re-setting the folders of x/skin/board folder.
+ * https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.hthvy4o49hmo
  */
-if ( G5_IS_MOBILE ) {
-	/** @todo for mobile, it must be redone. */
-    // $board_skin_path    = G5_MOBILE_PATH.'/'.G5_SKIN_DIR.'/board/'.$board['bo_mobile_skin'];
-    // $board_skin_url     = G5_MOBILE_URL .'/'.G5_SKIN_DIR.'/board/'.$board['bo_mobile_skin'];
-}
-else {
-	$board_skin_path = str_replace('skin/board/x/', 'x/', $board_skin_path);
-	$board_skin_url = str_replace('skin/board/x/', 'x/', $board_skin_url);
+if ( G5_IS_MOBILE ) $mobile = "mobile/";
+$p = "{$mobile}skin/board/x/";
+$board_skin_path = str_replace($p, 'x/', $board_skin_path);
+$board_skin_url = str_replace("{$mobile}skin/board/x/", 'x/', $board_skin_url);
+/** @short if 'skin/board/basic' was chosen by default, it will be reset to /x/skin/board/multi' here. */
+if ( strpos( $board_skin_path, "board/basic" ) ) {
+	$board_skin_path = x::dir() . "/skin/board/multi";
+	$board_skin_url = x::url() . "/skin/board/multi";
 }
 
 
@@ -212,6 +213,7 @@ function hook_theme_change()
 {
 	if ( G5_IS_MOBILE ) {
 		x::$config['site']['theme'] = ms::meta('mobile_theme');
+		if ( empty(x::$config['site']['theme']) ) x::$config['site']['theme'] = "mobile-community-1";
 	}
 }
 /// https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.2jz9ybhuk887
@@ -231,7 +233,15 @@ function hook_body_begin()
 	$url = x::url() . '/js/skin-update.js';
 	echo "<script src='$url'></script>\n";
 	
+	
 }
+x::hook_register( 'module_begin' , 'hook_module_begin');
+function hook_module_begin() {
+	global $module, $action;
+	if ( preg_match('/^config/', $action) ) include x::dir() . "/module/$module/config_header.php";
+}
+
+
 x::hook_register('latest_before_return', 'hook_latest_before_return');
 function hook_latest_before_return()
 {

@@ -89,7 +89,7 @@
 
 .main-menu li.first-item a{
 	border-left:none;
-	padding-left:10px;
+	padding-left:4px;
 }
 
 .main-menu li.first-item .inner {
@@ -199,6 +199,7 @@
 	text-align:center;
 	font-size:.8em;
 	cursor:pointer;
+	line-height:12px;
 }
 /***********************************/
 .layout {
@@ -236,8 +237,9 @@
 
 .travel_theme2_header > .header_wrapper #header-logo {
 	float: left;
-	height: 59px;
+	height: 53px;
 	width:600px;
+	margin-top:7px;
 }
 
 .travel_theme2_header > .header_wrapper #header-logo img {
@@ -302,7 +304,7 @@
 .extra-menu-items .extra-bottom{	
 	position:absolute;
 	right:0;
-	top:32px;
+	top:35px;
 }
 .extra-menu-items .extra-bottom a{
 	color:#000000;
@@ -319,4 +321,47 @@
 
 .extra-menu-items .extra-bottom a.no-border{	
 	border-right:none;
+}
+
+/****setting.php*****/
+.menu-config-list .label{
+	width:50px;
+	float:left;
+	margin-top:5px;
+}
+
+.menu-config-list select{
+	margin-right:10px;	
+	width:100px;
+}
+
+.menu-config-list input{	
+	padding:0!important;
+	
+}
+
+.config-container.global{
+	padding-bottom:50px!important;	
+}
+
+.travel-footer-tagline{
+	width:30%;
+}
+
+.travel-footer-tagline input{
+	padding:5px;
+}
+
+.menu-item-list select{
+	width:100px;
+}
+
+.menu-item-list input{
+	margin-top:8px;
+	width:170px!important;
+	height:20px!important;
+}
+
+.user-google-guide-button{
+	
 }

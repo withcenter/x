@@ -1,16 +1,20 @@
 <link rel='stylesheet' type='text/css' href='<?=x::url()?>/module/multisite/subsite.css' />
 <?php
-
-		if ( ! ms::admin() ) {
+	if ( ! ms::admin() ) {
 		echo "You are not admin";
 		return;
 	}
-
+	global $action;
 ?>
 <ul class='multisite-menu'>
 	
 	<li class='sub-menu'>
 		<a href='?module=multisite&action=config_global'>일반 설정</a>
+	</li>
+	
+	
+	<li class='sub-menu'>
+		<a href='?module=multisite&action=config_member'>회원</a>
 	</li>
 	
 	<li class='sub-menu'>

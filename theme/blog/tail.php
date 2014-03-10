@@ -1,9 +1,10 @@
 </div><!--#wrapper-->
-<div class='footer-text'><p><? if( ms::meta('footer_text') == '' ) {?>
-COPYRIGHT @ 2014 &nbsp&nbsp ALL RIGHTS RESERVED &nbsp&nbsp WITHCENTER.COM
+<div class='footer-text'>
+	<? if( ms::meta('footer_text') == '' ) {?>
+	<div>회원님께서는 현재 필고 <b style='color: #3290cd'>블로그 테마</b>를 선택 하셨습니다.</div> 
+	<div>하단 문구는 사이트 설정에서 수정하실 수 있습니다.</div>
+	
 <?} else echo nl2br(ms::meta('footer_text'));?>
-</p>
-
 </div>
 
 <!--  하단 끝 -->

@@ -317,14 +317,9 @@ body {
 .footer-text {
 	text-align: center;
 	clear:both;
-}
-
-.footer-text p, .footer-text p a {
-	font-family: Gulim;
-	color: #acacac;
-	text-transform: uppercase;
-	padding: 1em;
-	text-decoration: none;
+	border-top: 1px solid #d5d5d5;
+	padding: 20px 0 30px 0;
+	color: #666666;
 }
 
 .back-to-top img {
@@ -374,4 +369,24 @@ body {
 /*Login tweaking*/
 section#ol_before h2, section#ol_after h2, section#ol_after #ol_after_private{
 	display: none;
+}
+
+
+/** Theme specific config forum size */
+.config_forum input.create-forum-input { 
+	width: 87% !important;
+}
+
+.main-bottom .first-banner {
+	margin-top: 15px;
+}
+
+.main-bottom .company-banner {
+	border: 1px solid #d5d5d5;
+	margin-bottom: 10px;
+	width: 178px;
+}
+.main-bottom .company-banner img {
+	width: 100%;
+	display: block;
 }

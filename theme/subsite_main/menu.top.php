@@ -1,16 +1,9 @@
-<link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/menu.css' />
-
 <?php
 
 	$main = array();
 
-?>	
-<style>
-	#website-com-menu  {
-		font-family: '맑은 고딕', AppleGothic;
-	}
-</style>
-<ul id="website-com-menu">		
+?>
+<ul id="top-menu">		
 	<?php
 		$i = 0;
 		foreach ( $main as $row ) {
@@ -20,7 +13,7 @@
 		if ( $is_admin == 'super' ){
 	?>
 	<li class="menu-list">
-		<a href="<?=x::url()?>/?module=admin&action=index" class="admin">어드민패널</a>
+		<a href="<?=x::url()?>/?module=multidomain&action=config" class="admin">사이트관리</a>
 	</li>
 	<?}?>
 	

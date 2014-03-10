@@ -17,6 +17,7 @@ if ( x::installed() && etc::web() ) {
 }
 
 include 'etc/begin.php';
+ms::set_title();
 x::hook('begin');
 
 x::hook('before_theme_init');

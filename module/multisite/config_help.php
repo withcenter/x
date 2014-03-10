@@ -1,8 +1,8 @@
-<div class='subsite-support'>
-	<div class='title'>
+<div class='config subsite-support'>
+	<div class='config-main-title'>
 		<div class='inner'>
-		<img src='<?=x::url()?>/module/multisite/img/direction.png' />필고 무료 홈페이지 사용방법 안내
-		<span class='user-google-guide-button' page = 'google_doc_1'>[도움말]</span>
+		<span class='config-title-info'><img src='<?=x::url()?>/module/multisite/img/direction.png' />필고 무료 홈페이지 사용방법 안내</span>
+		<span class='config-title-notice'><span class='user-google-guide-button inner-title' page = 'google_doc_1'>[도움말]</span></span>
 		</div>
 	</div>
 	<div class='hidden-google-doc google_doc_1'>	
@@ -11,13 +11,14 @@
 	</div>	
 	<div class='support'>
 		<div class='tab-menu'>
-			<span class='tab-button' menu_name='general-setting'>일반 설정</span>
+			<span class='tab-button tab-button-selected' menu_name='general-setting'>일반 설정</span>
 			<span class='tab-button' menu_name='menu-setting'>메뉴 설정</span>
 			<span class='tab-button' menu_name='forum-setting'>게시판 설정</span>
 			<span class='tab-button' menu_name='write-setting'>글쓰기 설정</span>
 			<span class='tab-button' menu_name='theme-setting'>테마 선택</span>
 		</div>
 	</div>
+	<div class='config-wrapper'>
 	<div class='support-content'>
 		<div class='inner general-setting'>
 			
@@ -83,7 +84,7 @@
 			<div class='support-image'><img src='<?=x::url()?>/module/multisite/support_img/t1.png' /></div>
 		</div>
 		
-		
+		</div>
 	</div>
 	
 </div>

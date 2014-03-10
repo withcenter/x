@@ -5,3 +5,5 @@ echo outlogin('x-outlogin-withcenter');
 include 'popular.posts.php';
 
 include 'new.posts.php';
+
+echo visit();

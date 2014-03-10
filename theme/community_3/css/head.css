@@ -33,6 +33,11 @@
 	float:left;
 }
 
+.top .inner  .left{	
+	white-space:nowrap;
+	overflow:hidden;
+}
+
 .top .right{
 	text-align:right;
 }

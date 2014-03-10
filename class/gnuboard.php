@@ -60,11 +60,16 @@ class gnuboard {
 			<?=g::url_board('qna')?>
 	 *	@endcode
 	 */
-	static function url_board($id)
+	static function url_board($id=null)
 	{
+		if ( empty($id) ) $id = $GLOBALS['bo_table'];
 		return self::url() . "/bbs/board.php?bo_table=$id";
 	}
-	static function url_forum($id)
+	static function url_forum($id=null)
+	{
+		return self::url_board($id);
+	}
+	static function url_forum_list($id=null)
 	{
 		return self::url_board($id);
 	}
@@ -917,6 +922,32 @@ class gnuboard {
 		
 		return $rows;
 	}
+	
+	
+	
+	/** @short updates member field
+	 *
+	 */
+	static function update_member( $id, $field, $value )
+	{
+		global $g5;
+		$q = "UPDATE {$g5['member_table']} SET $field='$value' WHERE mb_id='$id'";
+		db::query( $q );
+	}
+	
+	/**
+		* @brief returns the member count per each domain.
+		* Use this function when you need to know how many members are in each domain.
+		*
+		*/
+	static function member_count_by_domain()
+	{
+		global $g5;
+		$q = "SELECT ".REGISTERED_DOMAIN.",count(*) as cnt FROM $g5[member_table] GROUP BY ".REGISTERED_DOMAIN." ORDER BY cnt DESC";
+		return db::rows( $q );
+	}
+	
+	
 	
 	
 } // eo class
