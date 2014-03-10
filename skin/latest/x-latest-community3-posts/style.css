@@ -2,6 +2,8 @@
 	border: solid 1px #bbbbbb;
 	margin-bottom: 10px;
 	height: 157px;
+	position: relative;
+	top: -0.5px;
 }
 
  .community3-posts a {
