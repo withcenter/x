@@ -24,30 +24,30 @@
 	width: 100%;
 }
 
-.layout .body-wrapper .main-content .banner p {
+
+.layout .body-wrapper .main-content .banner .banner-content {
 	position: absolute;
 	top: 191px;
 	left: 0;
+	height: 50px;
+	width: 750px;
+	background: #898989;
+	opacity: 0.9;
+}
+
+.layout .body-wrapper .main-content .banner p {
 	padding: 16px;
 	color: #ffffff;
 	font-size: 15px;
 	height: 50px;
-	background: #898989;
 	width: 630px;
-	opacity: 0.9;
 	overflow: hidden;
-}
-
-.layout .body-wrapper .main-content .banner p .banner-content {
-	height: 10px;
-	white-space: nowrap;
+	white-space: no-wrap;
 }
 
 .layout .body-wrapper .main-content .banner .banner-more {
 	position: absolute;
 	top: 191px;
-	background: #898989;
-	height: 50px;
 	right: 0;
 	padding: 16px 6px 16px 16px;
 	opacity: 0.9;
