@@ -110,6 +110,7 @@ include_once(G5_EDITOR_LIB);
 			<div class='title'>일반 설정</div>
 			<div><span class='item'>게시판 아이디</span><?=$row['bo_table']?></div>
 			<div><span class='item'>제목</span><?=text('bo_subject')?></div>
+			<div><span class='item'>모바일 제목</span><?=text('bo_mobile_subject')?></div>
 			
 			<div>
 				<span class='item'><?=ln("Skin", "스킨")?></span>
@@ -122,22 +123,22 @@ include_once(G5_EDITOR_LIB);
 		</div>
 		
 		<div class='wrapper editor'>
-			<div class='title'>BO CONTENT HEAD</div>
+			<div class='title'>게시판 상단</div>
 			<?php echo editor_html("bo_content_head", $row['bo_content_head']); ?>
 			<input type='submit' value='업데이트' />
 		</div>
 		<div class='wrapper editor'>
-			<div class='title'>BO CONTENT TAIL</div>
+			<div class='title'>게시판 하단</div>
 			<?php echo editor_html("bo_content_tail", $row['bo_content_tail']); ?>	
 			<input type='submit' value='업데이트' />
 		</div>	
 		<div class='wrapper editor'>
-			<div class='title'>BO MOBILE CONTENT HEAD</div>
+			<div class='title'>모바일 게시판 상단</div>
 			<?php echo editor_html("bo_mobile_content_head", $row['bo_mobile_content_head']); ?>
 			<input type='submit' value='업데이트' />
 		</div>
 		<div class='wrapper editor'>
-			<div class='title'>BO MOBILE CONTENT TAIL</div>
+			<div class='title'>모바일 게시판 하단</div>
 			<?php echo editor_html("bo_mobile_content_tail", $row['bo_mobile_content_tail']); ?>	
 			<input type='submit' value='업데이트' />
 		</div>		
