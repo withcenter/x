@@ -12,7 +12,10 @@
 .blog-latest .blog-post-container .photo {
 	padding: 15px 0;
 }
-
+.blog-latest .blog-post-container .photo img {
+	width: 150px;
+	height: 100px;
+}
 .blog-latest .blog-post-container .right {
 	padding: 15px 0;
 }
