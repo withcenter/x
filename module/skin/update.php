@@ -24,10 +24,10 @@
 var g5_url       = "<?php echo G5_URL ?>";
 </script>
 	<!--[if lt IE 9]>
-		<script type='text/javascript' src='http://test8.work.org/g5-5.0b24/x/js/jquery-1.11.0.min.js'></script>
+		<script type='text/javascript' src='http://<?=x::url()?>/js/jquery-1.11.0.min.js'></script>
 	<![endif]-->
 	<!--[if gte IE 9]><!-->
-		<script type='text/javascript' src='http://test8.work.org/g5-5.0b24/x/js/jquery-2.1.0.min.js'></script>
+		<script type='text/javascript' src='http://<?=x::url()?>/js/jquery-2.1.0.min.js'></script>
 	<!--<![endif]-->
 </head>
 <body>
