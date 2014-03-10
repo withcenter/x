@@ -81,6 +81,7 @@
 						?>
 					</div>
 					<input class='hidden-value' type='hidden' name='menu_<?=$i?>' value='<?=ms::meta('menu_'.$i)?>' />
+					<input type='text' class='menu-name'name='menu_name_<?=$i?>' value="<?=ms::meta('menu_name_'.$i)?>">
 				</td>
 			</tr>
 			<?}?>

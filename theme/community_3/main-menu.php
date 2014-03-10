@@ -11,11 +11,17 @@
 		if( $i == $max_menus )$no_margin = 'no-margin';
 		else $no_margin = null;
 	?>
-	<? if ( ms::meta('menu_'.$i) ) { 
-		$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('menu_'.$i)."'");
-		if ( !$menu = $row['bo_subject'] ) $menu = null;
+	<?
+		if ( ms::meta('menu_'.$i) ) {
+			$menu_name = ms::meta("menu_name_$i");
+			if ( empty($menu_name) ) {
+				$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('menu_'.$i)."'");
+				if ( empty($row['bo_subject']) ) $menu_name = ln("No Subject", "제목없음");
+				else $menu_name = $row['bo_subject'];
+			}
+		
 	?>
-		<li class="comm3_menu <?=$no_margin?>"><a href='<?=g::url()?>/bbs/board.php?bo_table=<?=ms::meta('menu_'.$i)?>'><?=$menu?></a></li>
+		<li class="comm3_menu <?=$no_margin?>"><a href='<?=g::url()?>/bbs/board.php?bo_table=<?=ms::meta('menu_'.$i)?>'><?=$menu_name?></a></li>
 	<?}}?>
 
 	<?

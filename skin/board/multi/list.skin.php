@@ -8,12 +8,12 @@ if ( $list_style ) {
 }
 else {
 	$list_style = get_cookie("list_style_$bo_table");
+
 	if ( empty($list_style) ) {
-		if ( empty($board['mb_1']) ) $list_style = 'text';
-		else $list_style = $board['mb_1'];
+		if ( empty($board['bo_1_subj']) ) $list_style = 'text';
+		else $list_style = $board['bo_1_subj'];
 	}
 }
-
 
 
 // 선택옵션으로 인해 셀합치기가 가변적으로 변함

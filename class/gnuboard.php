@@ -200,7 +200,8 @@ class gnuboard {
 		if ( empty($o['device']) ) $o['device'] = 'both';
 		global $g5;
 		
-		if ( !$bo_skin = $o['bo_skin'] ) $bo_skin = 'basic';
+		if ( !$bo_skin = $o['bo_skin'] ) $bo_skin = 'multi';
+		
 		$q = "
 			insert into {$g5['board_table']}
 			set

@@ -10,7 +10,7 @@ $(function() {
 		var bo_subject = $(this).attr('bo_subject');
 		$(this).parent().parent().find(".hidden-value").val( bo_table );
 		$(this).parent().parent().find('.select-wrapper .inner').text( bo_subject );
-		
+		$(this).parent().parent().find('.menu-name').val( bo_subject );
 		$(this).parent().hide();
 	});	
 });
