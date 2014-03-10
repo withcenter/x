@@ -6,16 +6,16 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 <link rel="stylesheet" href="<?php echo $outlogin_skin_url ?>/style.css">
 <div class='login-box logged-in'><div class='inner'>
 	<div class='logged-in-name'>
-		[<?=$nick?>]<?=lang(' is logged in', '님 로그인')?>
+		[<?=$nick?>]님 로그인
 	</div>
 	<div class='logged-in-messages'>
 		<a href="<?php echo G5_BBS_URL ?>/memo.php" target="_blank">
-			<img src='<?=$outlogin_skin_url?>/message2.png'/> View Messages
+			<img src='<?=$outlogin_skin_url?>/message2.png'/> 쪽지 확인
 		</a>
 	</div>
 	<div class='logged-in-change-password'>
 		<a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=register_form.php">
-			<img src='<?=$outlogin_skin_url?>/lock2.png'/> Change Password
+			<img src='<?=$outlogin_skin_url?>/lock2.png'/> 비밀번호 변경
 		</a>
 	</div>
 	<div class='logout-button'>
@@ -23,7 +23,7 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 	</div>
 	<div class='account-settings'>
 		<a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=register_form.php">
-			<img src='<?=$outlogin_skin_url?>/setting.png'/> Account Settings
+			<img src='<?=$outlogin_skin_url?>/setting.png'/> 회원정보변경
 		</a>
 	</div>
 <!--		<div class='login-box-info'>
