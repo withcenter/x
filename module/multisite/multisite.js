@@ -25,9 +25,31 @@ $(function() {
 	
 var iframe_visible = false;	
 var page;
+var show_hide = 0;
+var document_name;
+
 	$('span.user-google-guide-button').click(function(){
 	
-		page = $(this).attr('page');			
-		$(".hidden-google-doc."+page).slideToggle( 500 );		
+		$(this).empty();
+		if( show_hide == 0 ) {
+			$(this).append("[hide]");
+			show_hide = 1;
+		}
+		else {
+			$(this).append("[show]");
+			show_hide = 0;
+		}
+		
+		page = $(this).attr('page');	
+		document_name = $(this).attr('document_name');
+		
+		if ( ($(".hidden-google-doc."+page).hasClass('has-iframe')) == false ) {
+			$(".hidden-google-doc."+page).append("<div>필고 사이트 서비스 설명서:</div><iframe src='"+document_name+"' style='width:99.5%; height: 400px;'></iframe>");
+			$(".hidden-google-doc."+page).addClass('has-iframe');
+		}
+		
+
+		
+		$(".hidden-google-doc."+page).toggle( 1 );		
 	});	
 });

@@ -26,15 +26,15 @@
 		<div class='config-main-title'>
 			<div class='inner'>
 				<span class='config-title-info'><img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 메뉴 선택</span>
-				<span class='config-title-notice'><span class='user-google-guide-button inner-title' page = 'google_doc_1'>[도움말]</span></span>
+				<span class='config-title-notice'>
+					<span class='user-google-guide-button inner-title' page = 'google_doc_menu' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
+				</span>
 				<div style='clear: both'></div>
 			</div>
 		</div>
 	
 		<div class='config-wrapper'>
-			<div class='hidden-google-doc google_doc_1'>	
-				<div>필고 사이트 서비스 설명서:</div>
-				<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
+			<div class='hidden-google-doc google_doc_menu'>	
 			</div>
 						<div class='config-title'>
 				<span class='config-title-info'>
