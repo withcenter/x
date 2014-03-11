@@ -45,8 +45,11 @@ $total_post = db::result ( "SELECT COUNT(*) FROM x_multisite_config ");
 			echo "<td><span class='site-title'>$site[title]</span></td>";
 			
 			
-			
-			$theme = x::meta( 'theme' );
+			$theme = ms::meta_get($site['domain'],'theme');
+			if ( empty($theme) ) {
+				$cfg = md::config( etc::domain_name() );
+				$theme = $cfg['theme'];
+			}
 			echo "<td>$theme</td>";
 			
 			
