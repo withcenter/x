@@ -22,16 +22,18 @@
 		$start = ( $page_no - 1 ) * $no_of_post;
 		
 		if ( empty($domain) ) $domain = etc::domain();
+		if ( $domain == 'NO DOMAIN' ) $domain_cond = " AND " .REGISTERED_DOMAIN." = ''";
+		else $domain_cond = " AND " .REGISTERED_DOMAIN."='$domain'";
 		
 		
-		$total_post = db::result ( "SELECT COUNT(*) FROM ".$g5['member_table']." WHERE ".REGISTERED_DOMAIN."='$domain' AND mb_id <> 'admin' $cond" );
-		$rows = db::rows("SELECT * FROM ".$g5['member_table']." WHERE ".REGISTERED_DOMAIN."='$domain' AND mb_id <> 'admin' $cond ORDER BY mb_no DESC LIMIT $start, $no_of_post");
+		$total_post = db::result ( "SELECT COUNT(*) FROM ".$g5['member_table']." WHERE ".REGISTERED_DOMAIN."='$domain' AND mb_id <> 'admin' $domain_cond $cond" );
+		$rows = db::rows("SELECT * FROM ".$g5['member_table']." WHERE mb_id <> 'admin' $domain_cond $cond ORDER BY mb_no DESC LIMIT $start, $no_of_post");
 ?>
 <div class='config config-member'>
 
 	<div class='config-main-title'>
 		<div class='inner'>
-			<img src='<?=x::url().'/module/multisite/img/direction.png'?>'> MEMBER CONFIGURATION
+			<img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 회원 관리
 		</div>				
 	</div>
 
@@ -39,7 +41,7 @@
 
 		<div class='config-wrapper'>						
 			<div class='config-title'>
-				<span class='config-title-info'>Member Configuration <span class='no-of-member'>검색 회원수 <?=$total_post?></span></span>
+				<span class='config-title-info'>회원관리 <span class='no-of-member'>검색 회원수 <?=$total_post?></span></span>
 				<span class='config-title-notice'><span class='user-google-guide-button' page = 'google_doc_1'>[도움말]</span><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span>
 			</div>	
 			<div class='config-container'>
