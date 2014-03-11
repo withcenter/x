@@ -1,5 +1,7 @@
 .travel_images_with_captions{
 	line-height:14px;
+	border:1px solid #bbbbbb;
+	height:100%;
 }
 
 .travel_images_with_captions  .title{
@@ -44,17 +46,20 @@
 }
 
 .travel_images_with_captions_container {
-	width:161px;		
+	width:30.49%;		
 	float:left;
-	margin: 0 0 10px 11px;
+	margin: 0 0 10px 2.09%;
 }
 
 .travel_images_with_captions_container .images_with_captions .img-wrapper{
-	width:161px;
-	height:108px;
+	width:100%;
 	border:1px solid #bbbbbb;
 	background-color:#e6e6e6;
 	overflow:hidden;
+}
+
+.travel_images_with_captions_container .images_with_captions .img-wrapper img{
+	width:100%;	
 }
 
 .travel_images_with_captions_container .images_with_captions .caption a{	
@@ -85,7 +90,7 @@
 .travel_images_with_captions_container .product_subject {
 	text-align: left;
 	line-height: 17px;
-	height: 34px;
+	height: 30px;
 	overflow: hidden;
 	margin-top: 2px;
 	text-align:center;

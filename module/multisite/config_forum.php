@@ -1,6 +1,5 @@
 <?
 	if ( ! ms::admin() ) {
-		echo "You are not admin";
 		return;
 	}
 	if ( $in['mode'] == 'forum_setting' ) include_once x::dir() . '/module/multisite/forum_setting.php';
@@ -17,13 +16,13 @@
 	<div class='config-main-title'>
 		<div class='inner'>
 			<span class='config-title-info'><img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 게시판은 게시판 제목을 입력하시면 생성이 됩니디.</span>
-			<span class='config-title-notice'><span class='user-google-guide-button inner-title' page = 'google_doc_1'>[도움말]</span></span>
+			<span class='config-title-notice'>
+				<span class='user-google-guide-button inner-title' page = 'google_doc_forum' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
+			</span>
 			<div style='clear: both'></div>
 		</div>
 	</div>
-		<div class='hidden-google-doc google_doc_1'>	
-			<div>필고 사이트 서비스 설명서:</div>
-			<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
+		<div class='hidden-google-doc google_doc_forum'>	
 		</div>
 		<div class='config-wrapper'>
 			<div class='config-title'><span class='config-title-info'><span class='title-forum'>게시판 목록</span>게시판 수 : <b><?=count($rows)?></span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>	

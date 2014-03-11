@@ -1,6 +1,7 @@
 .travel_lower_post{
 	border:1px solid #bbbbbb;
-	height: 168px;
+	height:91%;
+	padding-bottom:15px;
 }
 
 .travel_lower_post_title{
@@ -49,10 +50,11 @@
 
 .travel_lower_items .item{	
 	border-bottom:1px solid #bbbbbb;
-	padding:7px 0 8px 0;
+	padding:7px 0 8px 0;	
 }
 .travel_lower_items .item .subject{
 	position: relative;
+	white-space:nowrap;
 }
 .travel_lower_items .item .comments{
 	position: absolute;

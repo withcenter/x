@@ -79,7 +79,7 @@ foreach( $list as $l ){
 						<?if( $count_images > 1 ){?>
 							<div class='num_of_pics'><a href ='<?=$list[$i]['href']?>'><span class='plus'>+</span><?=$count_images?></a></div>						
 						<?}?>
-						<div class='other-images <?=$i?>'>											
+						<div class='other-images' number='<?=$i?>'>											
 							<?						
 							for( $i2 = 1; $i2 < $count_images; $i2++ ){?>							
 								<a href ='<?=$list[$i]['href']?>'><img src = '<?=$images[$i][$i2]['src']?>' /></a>

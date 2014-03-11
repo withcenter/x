@@ -14,15 +14,13 @@ function setTopMenu( $name ) {
 	<div class='config-title'>
 		<span class='config-title-info'>탑 메뉴 설정</span>
 		<span class='config-title-notice'>
-			<span class='user-google-guide-button' page = 'google_doc_community_3_1'>[도움말]</span>
+			<span class='user-google-guide-button' page = 'google_doc_community_2_1' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
 			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
 		</span>
 	</div>
 	
 	<div class='config-container'>
-	<div class='hidden-google-doc google_doc_community_3_1'>	
-		<div>필고 사이트 서비스 설명서:</div>
-		<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
+	<div class='hidden-google-doc google_doc_community_2_1'>	
 	</div>
 	<table cellpadding=0 cellspacing=0 width='100%' class='forum-config'>
 		<tr>
@@ -52,14 +50,12 @@ function setTopMenu( $name ) {
 	<div class='config-title'>
 		<span class='config-title-info'>추가 사이트 정보</span>
 		<span class='config-title-notice'>
-			<span class='user-google-guide-button' page = 'google_doc_community_3_2'>[도움말]</span>
+			<span class='user-google-guide-button' page = 'google_doc_community_2_2' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
 			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
 		</span>
 	</div>
 	<div class='config-container'>
-	<div class='hidden-google-doc google_doc_community_3_2'>	
-		<div>필고 사이트 서비스 설명서:</div>
-		<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
+	<div class='hidden-google-doc google_doc_community_2_2'>	
 	</div>
 		<span class='title-small'>전화번호: </span><input type='text' name='com3contact_num' value='<?=ms::meta('com3contact_num')?>'>	
 	</div>
@@ -72,15 +68,13 @@ function setTopMenu( $name ) {
 	<div class='config-title'>
 		<span class='config-title-info'>사이트 로고 및 배너</span>
 		<span class='config-title-notice'>		
-			<span class='user-google-guide-button' page = 'google_doc_community_3_3'>[도움말]</span>
+			<span class='user-google-guide-button' page = 'google_doc_community_2_3' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
 			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
 		</span>
 	</div>
 <div class='config-container'>
 
 <div class='hidden-google-doc google_doc_community_3_3'>	
-	<div>필고 사이트 서비스 설명서:</div>
-	<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
 </div>
 
 <table cellspacing='0' cellpadding='5' class='image-config' width='100%'>
