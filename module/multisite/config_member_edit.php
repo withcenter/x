@@ -117,7 +117,21 @@ $minfo = db::row("SELECT * FROM ".$g5['member_table']." WHERE mb_id='$mb_id'");
 			<div class='member-control'>
 				<div class='title'>회원 통제</div>
 				<div><span class='sub-title'>포인트</span> <input type='text' name='mb_hp' value='<?=$minfo['mb_point']?>' /></div>
-				<div><span class='sub-title'>레벨</span> <input type='text' name='mb_level' value='<?=$minfo['mb_level']?>' /></div>
+				<div><span class='sub-title'>레벨</span> 
+					<select name='mb_level'>
+						<option value=''>레벨 선택</option>
+						<option value=''></option>
+						<?php
+							for ( $i=1; $i <= 10; $i++ ) {
+								if ( $minfo['mb_level'] == $i ) $selected = "selected";
+								else $selected = null;
+							?>
+							<option value='<?=$i?>' <?=$selected?>><?=$i?></option>
+						<? }?>
+						
+					</select>
+					
+				</div>
 				<div><span class='sub-title'>비밀번호 변경</span> <input type='text' name='mb_password' /></div>
 				<div>
 					<? if ( $minfo['mb_intercept_date'] ) {?>
