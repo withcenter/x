@@ -150,8 +150,12 @@ function setTopMenu( $name ) {
 				<div class='image-title'><img src='<?=x::url()?>/module/<?=$module?>/img/img-icon.png'>배너이미지<?=$i?></div>
 				<div class='image-upload'>
 				<?						
-				
-					if( x::meta( "travel2banner_".$i ) ) echo "<img src='".x::url_file(  x::meta("travel2banner_".$i) )."'>";
+					if( x::meta( "travel2banner_".$i ) ) { 
+						$banner_path = x::path_file( x::meta( "travel2banner_".$i )  );
+					}
+					else $banner_path = null;
+					
+					if( $banner_path ) echo "<img src='".x::url_file(  x::meta("travel2banner_".$i) )."'>";
 					else {
 				?>				
 						<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/<?=$module?>/img/no-image.png'><br>[가로 750px X 세로 240px]</div>
