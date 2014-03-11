@@ -6,7 +6,8 @@ It does not show if the number of a domain member is less than 3.
 <br>
 
 <?php
-	$rows = g::member_count_by_domain();
+	$q = "SELECT ".REGISTERED_DOMAIN.",count(*) as cnt FROM $g5[member_table] GROUP BY ".REGISTERED_DOMAIN." ORDER BY cnt DESC";
+	$rows = db::rows( $q );
 ?>
 <table cellpadding=0 cellspacing=0 width='100%' border=1>
 	<tr class='table-header'>
