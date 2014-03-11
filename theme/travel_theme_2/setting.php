@@ -141,32 +141,36 @@ function setTopMenu( $name ) {
 		</div>
 <div class='config-container'>
 <div class='hidden-google-doc google_doc_travel_2_4'></div>
-	<?
-		for( $i = 1; $i <= 5; $i++ ){
-		if( $i % 2 == 0 ) $margin_left = 'margin-left';
-		else $margin_left = null;
-	?>
-	<div class='banner-config <?=$margin_left?>'>
-		<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지<?=$i?></div>
-		<div class='image-upload'>
-			<?if( x::meta('travel2banner_'.$i) ) {
-				echo "<img src=".x::meta('img_url').x::meta('travel2banner_'.$i).">"; 
-			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 748px X 세로 238px]</div>
-				<?}?>
-			<input type='file' name='travel2banner_<?=$i?>'>
-			<?if( x::meta('travel2banner_'.$i) != '' ) { ?>
-				<input type='hidden' name='travel2banner_<?=$i?>_remove' value='n'>
-				<input type='checkbox' name='travel2banner_<?=$i?>_remove' value='y'><span class='title-small'>이미지 제거</span>
-			<?}?>
-			<div class='title'>배너1의 문구</div>
-			<textarea name='travel2banner_<?=$i?>_text1'><?=stripslashes(x::meta('travel2banner_'.$i.'_text1'))?></textarea>
-			<div class='title'>배너1 링크</div>
-			<input type='text' name='travel2banner_<?=$i?>_text2' value='<?=x::meta('travel2banner_'.$i.'_text2')?>'>
-		</div>		
-	</div>
-	<?}?>
-	<div style='clear:both'></div>
+<table class='image-config'>
+		<?
+			for ( $i=1; $i<=5; $i ++ ) {
+				if ( $i == 1 || $i == 4 ) echo "<tr valign='top'>";
+		?>
+			<td>		
+				<div class='image-title'><img src='<?=x::url()?>/module/<?=$module?>/img/img-icon.png'>배너이미지<?=$i?></div>
+				<div class='image-upload'>
+				<?						
+				
+					if( x::meta( "travel2banner_".$i ) ) echo "<img src='".x::url_file(  x::meta("travel2banner_".$i) )."'>";
+					else {
+				?>				
+						<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/<?=$module?>/img/no-image.png'><br>[가로 750px X 세로 240px]</div>
+					<?}?>
+					<input type='file' name='travel2banner_<?=$i?>'>
+						<input type='checkbox' name='travel2banner_<?=$i?>_remove' value='y'><span class='title-small'>이미지 제거</span>
+					
+					<div class='title'>배너<?=$i?>의 문구</div>
+					<textarea name='travel2banner_<?=$i?>_text'><?=stripslashes(x::meta("travel2banner_{$i}_text"))?></textarea>
+					<div class='title'>배너<?=$i?> 링크</div>
+					<input type='text' name='travel2banner_<?=$i?>_url' value='<?=x::meta("travel2banner_{$i}_url")?>'>
+				</div>
+			</td>
+			
+		<?
+			}
+			if ( $i == 3 || $i == 5 ) echo "</tr>";
+		?>
+</table>
 </div>
 <input type='submit' value='업데이트'>
 <div style='clear:right;'></div>
