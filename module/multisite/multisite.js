@@ -23,11 +23,11 @@ $(function() {
 		}
 	});
 	
-var iframe_visible = false;	
 var page;
 var show_hide = 0;
 var document_name;
 
+	/* append/add the google doc iframe once if show span is clicked */
 	$('span.user-google-guide-button').click(function(){
 	
 		$(this).empty();
@@ -48,8 +48,6 @@ var document_name;
 			$(".hidden-google-doc."+page).addClass('has-iframe');
 		}
 		
-
-		
-		$(".hidden-google-doc."+page).toggle( 1 );		
+		$(".hidden-google-doc."+page).toggle();		
 	});	
 });

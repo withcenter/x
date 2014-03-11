@@ -2,15 +2,13 @@
 	<div class='config-title'>
 		<span class='config-title-info'>사이트로고 배너</span>
 		<span class='config-title-notice'>
-		<span class='user-google-guide-button' page = 'google_doc_community_2_1'>[도움말]</span>
+		<span class='user-google-guide-button' page = 'google_doc_community_1_1' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
 			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
 		</span>
 		</div>	
 <div class='config-container'>
-<div class='hidden-google-doc google_doc_community_2_1'>	
-		<div>필고 사이트 서비스 설명서:</div>
-		<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
-	</div>
+<div class='hidden-google-doc google_doc_community_1_1'>	
+</div>
 <div class='image-config'>
 
 		<div class='image-upload-container'>

@@ -36,15 +36,13 @@ function setTopMenu( $name ) {
 <div class='config-wrapper'>
 	<div class='config-title'>
 		<span class='config-title-info'>프로필 사진 및 문구</span>
-		<span class='user-google-guide-button' page = 'google_doc_blog_1'>[도움말]</span>
 		<span class='config-title-notice'>
+			<span class='user-google-guide-button' page = 'google_doc_blog_1_1' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
 			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
 		</span>
 		</div>
 	<div class='config-container'>
-	<div class='hidden-google-doc google_doc_blog_1'>	
-		<div>필고 사이트 서비스 설명서:</div>
-		<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
+	<div class='hidden-google-doc google_doc_blog_1_1'>	
 	</div>
 		<table cellpadding='10' cellspacing='0' class='image-config'>
 		<tr>
@@ -74,8 +72,14 @@ function setTopMenu( $name ) {
 <div class='config-wrapper'>
 	<div class='config-title'>
 		<span class='config-title-info'>첫 페이지 본문 게시판</span>
+		<span class='config-title-notice'>
+			<span class='user-google-guide-button' page = 'google_doc_blog_1_2' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
+			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
+		</span>
 	</div>
 	<div class='config-container'>
+	<div class='hidden-google-doc google_doc_blog_1_2'>	
+	</div>
 		<div>메인 게시판 <?=setTopMenu('forum_no_1')?></div>
 		<? for ( $i=2; $i <= 10; $i++ ) {?>
 			<div>게시판<?=$i?> <?=setTopMenu('forum_no_'.$i)?></div>
@@ -87,8 +91,14 @@ function setTopMenu( $name ) {
 <div class='config-wrapper'>
 	<div class='config-title'>
 		<span class='config-title-info'>사이드 배너 이미지</span>
+		<span class='config-title-notice'>
+			<span class='user-google-guide-button' page = 'google_doc_blog_1_3' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
+			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
+		</span>
 	</div>
 	<div class='config-container'>
+	<div class='hidden-google-doc google_doc_blog_1_3'>	
+	</div>
 		<table cellpadding='10' cellspacing='0' class='image-config'>
 			<tr valign='top'>
 				<td width='50%'>
