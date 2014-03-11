@@ -26,7 +26,7 @@
 						
 						echo "<div class='banner-image image_num_$banner_num $first_image'>";
 						echo "<a href='$banner[href]' target='_blank'><img src='$banner[src]'></a>";
-						echo "<span class='banner-content'><p class='banner-text'>".cut_str(strip_tags($banner['text']),50,'...')."</p></span>";
+						echo "<a href='$banner[href]' target='_blank'><span class='banner-content'><p class='banner-text'>".cut_str(strip_tags($banner['text']),50,'...')."</p></span></a>";
 						echo "<div class='banner-more'><a href='$banner[href]' target='_blank'>자세히 &gt;</a></div>";
 						echo "</div>";
 						$banner_num++;
