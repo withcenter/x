@@ -3,9 +3,9 @@
 }
 
 .travel_images_with_caption_wrapper{
-	border:1px solid #bbbbbb;	
-	height:417px;
-	width:528px;
+	/*border:1px solid #bbbbbb;*/
+	height:415px;
+	width:530px;
 	float:left;
 }
 
@@ -15,9 +15,9 @@
 }
 
 .right-widgets .travel_posts_with_image_right{
-	border:1px solid #bbbbbb;
-	margin:0 0 10px 10px;
-	height:208px;
+	/*border:1px solid #bbbbbb;*/
+	margin:0 0 21px 10px;
+	height:197px;
 	width:208px;
 }
 

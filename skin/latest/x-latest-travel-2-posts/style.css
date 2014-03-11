@@ -1,11 +1,11 @@
- .travel-2-posts {
+ .travel-2-posts2 {
 	border: solid 1px #bbbbbb;
-	height: 316px;
+	height: 100%;
 	line-height:14px;
-	overflow: hidden;
+	overflow: hidden;	
 }
 
-.travel-2-posts .label {	
+.travel-2-posts2 .label {	
 	width: 120px;
 	overflow: hidden;	
 	white-space:nowrap;	
@@ -13,22 +13,22 @@
 	padding-left:23px;
 }
 
-.travel-2-posts .label a{	
+.travel-2-posts2 .label a{	
 	color:#444444;		
 }
 
-.travel-2-posts a {
+.travel-2-posts2 a {
 	text-decoration: none;	
 }
 
-.travel-2-posts span.label  > a {
+.travel-2-posts2 span.label  > a {
 	color: #444444;
 }
-.travel-2-posts span.label  > a:hover {
+.travel-2-posts2 span.label  > a:hover {
 	text-decoration: none;
 }
 
- .travel-2-posts .title {
+ .travel-2-posts2 .title {
 	background: #fcfcfc;
 	border-bottom: solid 1px #bbbbbb;
 	font-weight: bold;	
@@ -36,29 +36,29 @@
 	position:relative;		
 }
 
- .travel-2-posts .title .posts-more{	
+ .travel-2-posts2 .title .posts-more{	
 	position:absolute;
 	right:10px;
 	top:9px;
 }
 
- .travel-2-posts .title .posts-more a{
+ .travel-2-posts2 .title .posts-more a{
 	color: #808080;
 	font-weight: normal;
 	font-size: 9pt;
  }
 
- .travel-2-posts .title img {	
+ .travel-2-posts2 .title img {	
 	position: absolute;
 	left:8px;
 	top:8px;
 }
 
- .travel-2-posts .travel-2-posts-items {
-	padding: 5px 10px 10px 10px;	
+ .travel-2-posts2 .travel-2-posts-items {
+	padding: 0 10px 6px 10px;	
 }
 
-.travel-2-posts .travel-2-posts-items .item-subject  img{
+.travel-2-posts2 .travel-2-posts-items .item-subject  img{
 	position:absolute;
 	top:4px;
 	left:0;	
@@ -67,7 +67,11 @@
 /*********/
 .latest-items{
 	position:relative;	
-	margin-bottom:6px;
+	margin-top:6px;
+}
+
+.latest-items .no-margin{
+	margin-bottom:0;
 }
 
 .latest-items .posts-square{
@@ -76,17 +80,17 @@
 
 .latest-items .item-subject{
 	position:relative;
-	width:130px;	
 	overflow:hidden;
 	float:left;
-	margin-right:10px;
 	padding-left:13px;
 	height:14px;
+	word-break:break-all;	
+	width:75%;	
 }
 
 .latest-items .no-of-comments{
-	width:35px;	
-	float:left;	
+	width:15%;
+	float:right;
 	height:14px;
 	color:red;
 	text-align:right;	

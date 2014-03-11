@@ -31,7 +31,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 			
 			echo "<td class='$nopadding' width=40><div class='travel_2_image'><a href='".$list[$i]['href']."'>$img</a></div></td>";
 			        
-            echo "<td class='$nopadding' width=170><div class='travel_2_subject'><a href='".$list[$i]['href']."'>".$list[$i]['subject']."</a></div></td>";
+            echo "<td class='$nopadding'><div class='travel_2_subject'><a href='".$list[$i]['href']."'>".$list[$i]['subject']."</a></div></td>";
 						
              ?>	
 	</tr>	

@@ -1,7 +1,12 @@
+.skin-update{
+	height:100%;
+}
+
 .travel_2_timed_list_with_image {	
-	width:208px;	
 	overflow: hidden;
 	height:100%;	
+	border:1px solid #bbbbbb;
+	padding-bottom:11px;
 }
 
 .travel_2_timed_list_with_image .title{
@@ -70,7 +75,7 @@
 
 /******************/
 .travel_2_timed_list_with_image .travel_2_subject{
-	width:138px;
+	min-width:138px;
 	word-break:break-all;
 	height:30px;
 	overflow:hidden;	
