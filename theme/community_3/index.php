@@ -49,29 +49,17 @@ echo $latest_1_output;
 <div class='timed_list'>
 		<div class='left'>
 			<?
-			$latest_bo_table = ms::board_id(etc::domain()).'_2';
-			if ( g::forum_exist( $latest_bo_table ) ) {
+			
 				$option = array(
 					'no' => 4,
 					'icon' => x::url_theme()."/img/notes.png"
 				);
-				$latest_1_output = latest("x-community-3-timed-list", bo_table(2), 5, 30, $cache_time=1, $option);
-				echo $latest_1_output;
-			}
+				echo latest("x-community-3-timed-list", bo_table(2), 5, 30, $cache_time=1, $option);
+			
 			?>
 		</div>
 		<div class='right'>
-			<?
-			$latest_bo_table = ms::board_id(etc::domain()).'_3';
-			if ( g::forum_exist( $latest_bo_table ) ) {
-				$option = array(
-					'no' => 4,
-					'icon' => x::url_theme()."/img/notes.png"
-				);
-				$latest_1_output = latest("x-community-3-timed-list", bo_table(3), 5, 30, $cache_time=1, $option);
-				echo $latest_1_output;
-			}
-			?>
+			<?=latest("x-community-3-timed-list", bo_table(3), 5, 30, $cache_time=1, $option);?>
 		</div>
 		<div style='clear:both'></div>
 </div>
@@ -88,16 +76,6 @@ echo $latest_1_output;
 		?>
 	</div>
 	<div class='right'>
-		<?
-		$latest_bo_table = ms::board_id(etc::domain()).'_5';
-		if ( g::forum_exist( $latest_bo_table ) ) {
-			$option = array(
-				'no' => 4,
-				'icon' => x::url_theme()."/img/newspaper2.png"
-			);
-			$latest_1_output = latest("x-community-3-timed-list-with-images", bo_table(5), 4, 50, $cache_time=1, $option);
-			echo $latest_1_output;
-		}
-		?>
+		<?=latest("x-community-3-timed-list-with-images", bo_table(5), 4, 50, $cache_time=1, $option);?>
 	</div>
 </div>
