@@ -9,12 +9,11 @@
 		jsBack("게시판 생성을 " . MAX_MAX_FORUM . " 개 이상 할 수 없습니다.");
 		return;
 	}
-	if ( !$no_of_board = $in['no_of_board'] ) $no_of_board = 1;
 	
-	$board_id = ms::board_id( etc::domain() ) . '_'.++$no_of_board;
+	
 	
 	$option = array(
-					'id'	=> $board_id,
+					'id'	=> bo_table( x::forum_count() + 1 ),
 					'subject'	=> db::addquotes($in['subject']),
 					'bo_admin' =>$member['mb_id'],
 					'group_id'	=> 'multisite',

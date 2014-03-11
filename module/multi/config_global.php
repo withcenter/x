@@ -1,16 +1,5 @@
 <?php
-	if ( ! admin() ) {
-		echo "You are not admin";
-		return; 
-	}
-	/* 생성된 게시판 정보를 가저온다 */
-	$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "\_%'";
 	
-	$q = "SELECT bo_table, bo_subject, bo_count_write FROM $g5[board_table] WHERE $qb";
-	
-	$rows = db::rows( $q );
-	
-	$no_of_board = count($rows);	
 ?>
 <script src='<?=x::url()?>/module/<?=$module?>/subsite.js'></script>
 <form action='?' class='config_general' method='POST' enctype='multipart/form-data'>

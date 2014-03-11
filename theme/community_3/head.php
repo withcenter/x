@@ -93,8 +93,8 @@
 		<td width=400>
 			<div id="comm3_logo">
 				<a href="<?php echo G5_URL ?>">
-				<?if( ms::meta('header_logo') ) { ?>
-					<img src="<?=ms::meta('img_url').ms::meta('header_logo')?>">
+				<?if( file_exists( path_logo() ) ) { ?>
+					<img src="<?=url_logo()?>">
 				<?} else {?>
 					<img src='<?=x::url_theme()?>/img/banner.png'>
 				<?}?>

@@ -439,6 +439,9 @@ class x {
 		$q = "SELECT COUNT(*) FROM $g5[board_table] WHERE $qb";
 		return db::result($q);
 	}
+	static function forum_count( $domain=null ) {
+		return self::count_forum($domain);
+	}
 	
 	
 	/** @short returns all the forum record(information) of the domain( subsite )
@@ -488,6 +491,55 @@ class x {
 
 		$q = "SELECT * FROM $g5[member_table] WHERE ".REGISTERED_DOMAIN."='$domain'";
 		return db::rows( $q );
+	}
+	
+	
+	static function path_multi_upload($dir=null)
+	{
+		if ( $dir ) $dir .= '/';
+		return G5_DATA_PATH . '/upload/multisite/' . $dir;
+	}
+	
+	static function url_multi_upload($dir=null)
+	{
+		if ( $dir ) $dir .= '/';
+		return G5_DATA_URL . '/upload/multisite/' . $dir;
+	}
+	
+	
+	
+	
+	
+	static function code_logo()
+	{
+		return "logo";
+	}
+
+	static function path_file($name, $folder=null)
+	{
+		if ( empty( $folder ) ) $folder = etc::last_domain( etc::domain() );
+		return self::path_multi_upload( $folder ) . $name;
+	}
+	
+	static function url_file($name, $folder=null)
+	{
+		if ( empty( $folder ) ) $folder = etc::last_domain( etc::domain() );
+		return self::url_multi_upload( $folder ) . $name;
+	}
+	
+	
+	
+	
+	static function path_logo( $domain=null )
+	{
+		if ( empty( $domain ) ) $domain = etc::domain();
+		return self::path_file( self::code_logo(), etc::last_domain( $domain ) );
+	}
+	
+	static function url_logo( $domain=null )
+	{
+		if ( empty( $domain ) ) $domain = etc::domain();
+		return self::url_file( self::code_logo(), etc::last_domain( $domain ) );
 	}
 	
 	

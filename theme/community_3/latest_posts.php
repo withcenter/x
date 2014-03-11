@@ -42,16 +42,20 @@ $posts = g::posts(
 			$ctr = count($posts);
 			foreach ( $posts as $p ) {
 				$latest_subject = conv_subject($p['wr_subject'],15, '...' );
-
-				$latest_url = g::url().'/bbs/board.php?bo_table='.$p['bo_table'].'&wr_id='.$p['wr_id'];
+	
+				$latest_url = url_forum_read( $p['bo_table'], $p['wr_id'] );
+				
+				
 				$latest_comment_count = '['.strip_tags($p['wr_comment']).']';
 				if ( $latest_comment_count == 0 ) $no_comment = 'no-comment';
 				else $no_comment = '';
 				$latest_img = get_list_thumbnail( $p['bo_table'] , $p['wr_id'], 38, 38);
+
 				if ( !$latest_img ) $img = x::url_theme().'/img/no-image.png';
 				else $img = $latest_img['src'];
 				if( $i == $ctr ) $last_post = "class='last-item'";
 				else $last_post = '';
+	
 		?>	
 				<tr <?=$last_post?> valign='top'>
 					<td width='40'>

@@ -15,7 +15,7 @@ function setTopMenu( $name ) {
 		<span class='config-title-info'>탑 메뉴 설정</span>
 		<span class='config-title-notice'>
 			<span class='user-google-guide-button' page = 'google_doc_community_2_1' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
-			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
+			<img src='<?=module('img/setting_2.png')?>'>
 		</span>
 	</div>
 	
@@ -51,13 +51,13 @@ function setTopMenu( $name ) {
 		<span class='config-title-info'>추가 사이트 정보</span>
 		<span class='config-title-notice'>
 			<span class='user-google-guide-button' page = 'google_doc_community_2_2' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
-			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
+			<img src='<?=module('img/setting_2.png')?>'>
 		</span>
 	</div>
 	<div class='config-container'>
 	<div class='hidden-google-doc google_doc_community_2_2'>	
 	</div>
-		<span class='title-small'>전화번호: </span><input type='text' name='com3contact_num' value='<?=ms::meta('com3contact_num')?>'>	
+		<span class='title-small'>전화번호: </span><input type='text' name='tel' value='<?=ms::meta('tel')?>'>	
 	</div>
 		<input type='submit' value='업데이트'>
 		<div style='clear:right;'></div>
@@ -69,7 +69,7 @@ function setTopMenu( $name ) {
 		<span class='config-title-info'>사이트 로고 및 배너</span>
 		<span class='config-title-notice'>		
 			<span class='user-google-guide-button' page = 'google_doc_community_2_3' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
-			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
+			<img src='<?=module('img/setting_2.png')?>'>
 		</span>
 	</div>
 <div class='config-container'>
@@ -82,19 +82,20 @@ function setTopMenu( $name ) {
 	<tr valign='top' >
 		<td colspan='3'>
 			<div class='image-title'>
-				<img src='<?=x::url()?>/module/multisite/img/img-icon.png'>사이트 로고				
+				<img src='<?=x::url()?>/module/<?=$module?>/img/img-icon.png'>사이트 로고				
 			</div>
 			<div class='image-upload'>
-			<?if( ms::meta('header_logo') ) {
-				echo "<img src=".ms::meta('img_url').ms::meta('header_logo').">"; 
-			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 325px X 세로 60px]</div>
-				<?}?>
-				<input type='file' name='header_logo'>
-				<?if( ms::meta('header_logo') != '' ) { ?>
-					<input type='hidden' name='header_logo_remove' value='n'>
-					<input type='checkbox' name='header_logo_remove' value='y'><span class='title-small'>이미지 제거</span>
-				<?}?>
+			<?
+				if( file_exists( path_logo() ) ) echo "<img src='".url_logo()."'>";
+				else {
+			?>
+				<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/<?=$module?>/img/no-image.png'><br>
+				[가로 325px X 세로 60px]</div>
+			<?
+				}
+			?>
+				<input type='file' name='<?=code_logo()?>'>
+				<input type='checkbox' name='<?=code_logo()?>_remove' value='y'><span class='title-small'>이미지 제거</span>
 			</div>
 		</td>
 		<? /*
@@ -112,108 +113,33 @@ function setTopMenu( $name ) {
 			</div>
 		</td> */?>
 	</tr>
-	<tr valign='top'>
-		<td>		
-			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지1</div>
-			<div class='image-upload'>
-			<?if( ms::meta('com3banner_1') ) {
-				echo "<img src=".ms::meta('img_url').ms::meta('com3banner_1').">"; 
-			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 750px X 세로 240px]</div>
-				<?}?>
-				<input type='file' name='com3banner_1'>
-				<?if( ms::meta('com3banner_1') != '' ) { ?>
-					<input type='hidden' name='com3banner_1_remove' value='n'>
-					<input type='checkbox' name='com3banner_1_remove' value='y'><span class='title-small'>이미지 제거</span>
-				<?}?>
-				<div class='title'>배너1의 문구</div>
-				<textarea name='com3banner_1_text1'><?=stripslashes(ms::meta('com3banner_1_text1'))?></textarea>
-				<div class='title'>배너1 링크</div>
-				<input type='text' name='com3banner_1_text2' value='<?=ms::meta('com3banner_1_text2')?>'>
-			</div>
-		</td>
- 
-		<td>
-			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지2</div>
-			<div class='image-upload'>
-			<?if( ms::meta('com3banner_2') ) {
-				echo "<img src=".ms::meta('img_url').ms::meta('com3banner_2').">"; 
-			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 750px X 세로 240px]</div>
-				<?}?>
-			<input type='file' name='com3banner_2'>
-			<?if( ms::meta('com3banner_2') != '' ) { ?>
-				<input type='hidden' name='com3banner_2_remove' value='n'>
-				<input type='checkbox' name='com3banner_2_remove' value='y'><span class='title-small'>이미지 제거</span>
-			<?}?>
-			<div class='title'>배너2의 문구</div>
-			<textarea name='com3banner_2_text1'><?=stripslashes(ms::meta('com3banner_2_text1'))?></textarea>
-				<div class='title'>배너2 링크</div>
-				<input type='text' name='com3banner_2_text2' value='<?=ms::meta('com3banner_2_text2')?>'>
-			</div>
-		</td>
-
-		<td>
-			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지3</div>
-			<div class='image-upload'>
-			<?if( ms::meta('com3banner_3') ) {
-				echo "<img src=".ms::meta('img_url').ms::meta('com3banner_3').">"; 
-			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 750px X 세로 240px]</div>
-				<?}?>
-			<input type='file' name='com3banner_3'>
-			<?if( ms::meta('com3banner_3') != '' ) { ?>
-				<input type='hidden' name='com3banner_3_remove' value='n'>
-				<input type='checkbox' name='com3banner_3_remove' value='y'><span class='title-small'>이미지 제거</span>
-			<?}?>
-			<div class='title'>배너3의 문구</div>
-			<textarea name='com3banner_3_text1'><?=stripslashes(ms::meta('com3banner_3_text1'))?></textarea>
-				<div class='title'>배너3 링크</div>
-				<input type='text' name='com3banner_3_text2' value='<?=ms::meta('com3banner_3_text2')?>'>
-			</div>
-		</td>
-	</tr>
-	<tr valign='top'>
-		<td>
-			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지4</div>
-			<div class='image-upload'>
-			<?if( ms::meta('com3banner_4') ) {
-				echo "<img src=".ms::meta('img_url').ms::meta('com3banner_4').">"; 
-			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 750px X 세로 240px]</div>
-				<?}?>
-			<input type='file' name='com3banner_4'>
-			<?if( ms::meta('com3banner_4') != '' ) { ?>
-				<input type='hidden' name='com3banner_4_remove' value='n'>
-				<input type='checkbox' name='com3banner_4_remove' value='y'><span class='title-small'>이미지 제거</span>
-			<?}?>
-			<div class='title'>배너4의 문구</div>
-			<textarea name='com3banner_4_text1'><?=stripslashes(ms::meta('com3banner_4_text1'))?></textarea>
-				<div class='title'>배너4 링크</div>
-				<input type='text' name='com3banner_4_text2' value='<?=ms::meta('com3banner_4_text2')?>'>
-			</div>
-		</td>
-
-		<td>
-			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지5</div>
-			<div class='image-upload'>
-			<?if( ms::meta('com3banner_5') ) {
-				echo "<img src=".ms::meta('img_url').ms::meta('com3banner_5').">"; 
-			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 750px X 세로 240px]</div>
-				<?}?>
-			<input type='file' name='com3banner_5'>
-			<?if( ms::meta('com3banner_5') != '' ) { ?>
-				<input type='hidden' name='com3banner_5_remove' value='n'>
-				<input type='checkbox' name='com3banner_5_remove' value='y'><span class='title-small'>이미지 제거</span>
-			<?}?>
-			<div class='title'>배너5의 문구</div>
-			<textarea name='com3banner_5_text1'><?=stripslashes(ms::meta('com3banner_5_text1'))?></textarea>
-				<div class='title'>배너5 링크</div>
-				<input type='text' name='com3banner_5_text2' value='<?=ms::meta('com3banner_5_text2')?>'>
-			</div>
-		</td>
-	</tr>
+		<?
+			for ( $i=1; $i<=5; $i ++ ) {
+				if ( $i == 1 || $i == 4 ) echo "<tr valign='top'>";
+		?>
+			<td>		
+				<div class='image-title'><img src='<?=x::url()?>/module/<?=$module?>/img/img-icon.png'>배너이미지<?=$i?></div>
+				<div class='image-upload'>
+				<?
+					if( file_exists( x::path_file( "banner$i" ) ) ) echo "<img src='".x::url_file( "banner$i" )."'>";
+					else {
+				?>
+						<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/<?=$module?>/img/no-image.png'><br>[가로 750px X 세로 240px]</div>
+					<?}?>
+					<input type='file' name='banner<?=$i?>'>
+						<input type='checkbox' name='banner<?=$i?>_remove' value='y'><span class='title-small'>이미지 제거</span>
+					
+					<div class='title'>배너<?=$i?>의 문구</div>
+					<textarea name='banner<?=$i?>_text'><?=stripslashes(x::meta("banner{$i}_text"))?></textarea>
+					<div class='title'>배너<?=$i?> 링크</div>
+					<input type='text' name='banner<?=$i?>_url' value='<?=x::meta("banner{$i}_url")?>'>
+				</div>
+			</td>
+			
+		<?
+			}
+		?>
+		
 </table>
 </div>
 		<input type='submit' value='업데이트'>

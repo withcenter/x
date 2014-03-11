@@ -1,13 +1,13 @@
 <?php
 include_once 'etc/class.php';
-x::load_global_config();
+
+if ( etc::web() ) x::load_global_config();
 
 
 if ( etc::test_server() ) debug::mode(1);
 									$dt = date("H:i:s"); dlog("x begins at $dt\t[module=$module][action=$action]\t : $_SERVER[PHP_SELF]?$_SERVER[QUERY_STRING]\t{{");
 include_once 'etc/service.php';
 include_once 'etc/language/default.php';
-
 
 
 if ( x::installed() && etc::web() ) {
@@ -17,8 +17,9 @@ if ( x::installed() && etc::web() ) {
 }
 
 include 'etc/begin.php';
-ms::set_title();
-x::hook('begin');
+if ( etc::web() ) ms::set_title();
+if ( etc::web() ) x::hook('begin');
+
 
 x::hook('before_theme_init');
 if ( file_exists(x::theme('init')) ) include_once x::theme('init');	

@@ -27,16 +27,17 @@
 			<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
 		</div>
 		<div class='config-wrapper'>
-			<div class='config-title'><span class='config-title-info'><span class='title-forum'>게시판 목록</span>게시판 수 : <b><?=count($rows)?></span><span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>	
+			<div class='config-title'><span class='config-title-info'><span class='title-forum'>게시판 목록</span>
+			게시판 수 : <b><?=count($rows)?></span>
+			<span class='config-title-notice'><img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'></span></div>	
 			<div class='config-container'>
 		<form class='create-forum' target='hidden_iframe' autocomplete='off'>
 			<input type='hidden' name='module' value='<?=$module?>' />
 			<input type='hidden' name='action' value='config_forum_submit' />
-			<input type='hidden' name='no_of_board' value=<?=$no_of_board?> />
 			<input class='create-forum-input' type='text' name='subject' placeholder='게시판 제목을 입력하세요.' />
 			<input type='submit' value='생성' class='config-forum-submit'/>
 		</form>
-		<!--<div class='no_of_board'>게시판 수 : <b><?=count($rows)?></b></div>-->
+		
 		<div style='clear:right;'></div>
 		
 		<table class='board_list' cellpadding=0 cellspacing=0 width='100%'>

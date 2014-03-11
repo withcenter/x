@@ -673,14 +673,13 @@ function board_form_page()
 
 /** @short return the bo_table of n'th menu
  *
- * @param [in] $n_domain number or domain
+ * @param [in] $n
  *
  * @return string bo_table
  */
-function bo_table($n_domain)
+function bo_table($n)
 {
-	if ( is_numeric( $n ) ) $bo_table = x::meta( "menu_$n_domain" );
-	else $bo_table = "ms_" . etc::last_domain($n_domain);
+	$bo_table = "ms_" . etc::last_domain(etc::domain()) . '_'.$n;
 	return $bo_table;
 }
 
@@ -757,7 +756,46 @@ function url_forum_list( $id )
 {
 	return g::url_forum_list($id);
 }
+function url_forum_read( $bo_id, $wr_id )
+{
+	return g::url()."/bbs/board.php?bo_table=$bo_id&wr_id=$wr_id";
+}
 
 
 
 
+
+
+
+
+function path_logo($domain=null)
+{
+	return x::path_logo($domain);
+}
+
+function url_logo($domain=null)
+{
+	return x::url_logo($domain);
+}
+function code_logo()
+{
+	return x::code_logo();
+}
+
+/**
+ *  @brief Brief
+ *  
+ *  @param [in] $dir Parameter_Description
+ *  @return string path of upload directory.
+ *  @code
+ *  	$folder = path_multi_upload( etc::last_domain(etc::domain()) );
+ *  	will return
+ *  	g5_path/data/upload/multisite/last-domain
+ *  @endcode
+ *  
+ *  @details Details
+ */
+function path_multi_upload($dir=null)
+{
+	return x::path_multi_upload($dir);
+}

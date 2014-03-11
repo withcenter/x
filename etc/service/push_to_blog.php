@@ -105,6 +105,8 @@ for ( $cb = 1; $cb <= 3; $cb++ ) {
 	
 }
 
+if ( ! function_exists( "push_to_blog" ) ) {
+
 function push_to_blog( $o, $cb )
 {
 	
@@ -169,3 +171,5 @@ function push_to_blog( $o, $cb )
 	$response = $$client->send($$f);
 	return $response;
 }
+}
+
