@@ -37,8 +37,8 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 							else $product_price = "상품가를 입력해 주세요";											
 						?>
 						</div>
-						<div class='caption product_name'><a href='<?=$li['href']?>'><?=$product_name?></a></div>
-						<div class='caption product_price'><a href='<?=$li['href']?>'><?=$product_price?></a></div>
+						<div class='travel2-caption product_name'><a href='<?=$li['href']?>'><?=$product_name?></a></div>
+						<div class='travel2-caption product_price'><a href='<?=$li['href']?>'><?=$product_price?></a></div>
 						<div class='product_subject'><a href='<?=$li['href']?>'><?=conv_subject( $li['wr_subject'], 70, '...' )?></a></div>
 					</div>
 				</div>		
@@ -53,8 +53,8 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 						<div class='caption_image'>					
 							<div class='img-wrapper'><a href='javascript:void(0)'><img src='<?=$latest_skin_url?>/img/no_image.png' /></a></div>
 						</div>
-						<div class='caption product_name'><a href='javascript:void(0)'>상품명 입력</a></div>
-						<div class='caption product_price'><a href='javascript:void(0)'>2,000페소</a></div>
+						<div class='travel2-caption product_name'><a href='javascript:void(0)'>상품명 입력</a></div>
+						<div class='travel2-caption product_price'><a href='javascript:void(0)'>2,000페소</a></div>
 						<div class='product_subject'><a href='javascript:void(0)'><center>글을 등록해 주세요</center></a></div>
 					</div>
 				</div>

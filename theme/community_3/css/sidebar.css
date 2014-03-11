@@ -185,3 +185,9 @@
 .sidebar .com3-latest-posts .com3-latest-posts-items .num_comments {
 	color: #cc4235;
 }
+
+/*****comm3-posts-wrapper******/
+.comm3-posts-wrapper{
+	height:158px;
+	margin-bottom:12px;
+}

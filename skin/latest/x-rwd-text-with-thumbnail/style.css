@@ -60,7 +60,7 @@
 .x-rwd-text-with-thumbnail .subject{
 	margin-left: 0.75em;
 	margin-bottom: 0.3em;
-	height:1.2em;
+	height:1.2em;	
 	overflow:hidden;
 	font-weight: bold;
 	word-break:break-all;
@@ -72,6 +72,7 @@
 .x-rwd-text-with-thumbnail .contents_wrapper {
 	margin-left: 0.75em;
 	height:2.4em;
+	line-height:1.2em;
 	overflow:hidden;	
 	word-break:break-all;
 }

@@ -35,8 +35,7 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 }
 /***index***/
 
-.layout .body-wrapper .main-content .images_with_caption_wrapper{
-	border:1px solid #bbbbbb;
+.layout .body-wrapper .main-content .images_with_caption_wrapper{	
 	margin-bottom:10px;
 }
 
@@ -46,16 +45,29 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 	padding:10px;
 }
 
-.layout .body-wrapper .main-content .timed_list{	
+.layout .body-wrapper .main-content .timed_list{
 	margin-bottom:10px;
+	height:142px;
 }
 
 .layout .body-wrapper .main-content .timed_list .right{	
-	padding-left:5px;
+	margin-left:10px
 }
 
-.layout .body-wrapper .main-content .timed_list_with_images .right{	
-	padding-left:5px;
+.layout .body-wrapper .main-content .timed_list .right, .layout .body-wrapper .main-content .timed_list .left{	
+	float:left;
+	width:370px;		
+	height:130px;
+}
+
+.layout .body-wrapper .main-content .timed_list_with_images .right{
+	margin-left:10px;
+}
+
+.layout .body-wrapper .main-content .timed_list_with_images .left, .layout .body-wrapper .main-content .timed_list_with_images .right{
+	float:left;
+	width:370px;	
+	height: 210px;
 }
 
 .layout .body-wrapper .main-content .images_with_caption_2{	

@@ -12,8 +12,8 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 			<div style='clear:both;'></div>
 		</div>
 <?php
-	if ( $list ) {
-		foreach( $list as $li ) {
+	if ( $list ) {	
+		foreach( $list as $li ) {			
 ?>
 				<div class='community_images_with_captions_container <?=$nomargin?>'>
 					<div class='images_with_captions'>
@@ -26,7 +26,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 							echo "<div class='img-wrapper'><a href='$li[href]'>".$img."</a></div>";
 						?>
 						</div>
-						<div class='caption'><a href='<?=$li['href']?>'><?=conv_subject( $li['wr_subject'], 20, '...' )?></a></div>						
+						<div class='caption'><a href='<?=$li['href']?>'><?=$li['subject']?></a></div>						
 					</div>
 					<div style='clear: left'></div>
 				</div>		
@@ -51,5 +51,5 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 		}
 	}	
 ?>
-
+	<div style='clear:both'></div>
 </div>

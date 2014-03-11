@@ -2,7 +2,7 @@
 	list-style:none;
 	padding: 0;
 	margin: 0;
-	margin-bottom: 10px;
+	margin-bottom: 10px;	
 }
 .withcenter_latest img {
 	border: 0;
@@ -14,7 +14,7 @@
 .withcenter_latest .title {
 	border-bottom: 1px solid #d5d5d5;
 	padding-bottom: 8px;
-	margin: 0 0 11px 8px; 
+	margin: 0 0 11px 8px; 	
 }
 .withcenter_latest .title .x-latest-withcenter-icon {
 	position: relative;
@@ -24,10 +24,13 @@
 .withcenter_latest .title  a{
 	color: #4d4d4d;
 	font-size: 1.250em;
-	font-weight: bold;	
+	font-weight: bold;
 }
 .withcenter_latest .title .top-title {
 	float: left;
+	white-space:nowrap;	
+	width:80%;
+	overflow:hidden;
 }
 .withcenter_latest .title .more_btn {
 	float: right;
@@ -41,12 +44,15 @@
 	position:relative;
 }
 
-.withcenter_latest ul  li  .subject{	
-	width: 200px;	
-	white-space:nowrap;
+.withcenter_latest ul  li  .subject{		
+	word-break:break-all;
 	margin-left:25px;
 	overflow: hidden;	
-}
+	line-height:20px;
+	height:20px;
+	width:80%;
+}	
+	
 .withcenter_latest ul  li a {
 	text-decoration: none;
 	color: #858585;

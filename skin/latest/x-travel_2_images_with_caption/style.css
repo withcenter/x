@@ -62,7 +62,7 @@
 	width:100%;	
 }
 
-.travel_images_with_captions_container .images_with_captions .caption a{	
+.travel_images_with_captions_container .images_with_captions .travel2-caption a{	
 	font-family:dotum;
 	text-decoration:none;
 }
@@ -89,7 +89,7 @@
 }
 .travel_images_with_captions_container .product_subject {
 	text-align: left;
-	line-height: 17px;
+	line-height: 15px;
 	height: 30px;
 	overflow: hidden;
 	margin-top: 2px;

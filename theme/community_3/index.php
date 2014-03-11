@@ -59,8 +59,7 @@ echo $latest_1_output;
 </div>
 
 <div class='timed_list_with_images'>
-	<table cellspacing=0 cellpadding=0><tr valign='top'>
-	<td width='50%'>
+	<div class='left'>
 		<?
 			$option = array(
 				'no' => 4,
