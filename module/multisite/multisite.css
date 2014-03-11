@@ -1067,3 +1067,61 @@ span.config-name {
 	border: solid 1px #d8d8d8;
 	background: #fafafa;
 }
+
+.config-member .search-form {
+	margin-bottom: 10px;
+}
+
+.config-member .no-of-member {
+	font-weight: bold;
+	font-size: 11px;
+	display: inline-block;
+	margin-left: 20px;
+}
+
+.config-member .config-member-table {
+	margin-bottom: 10px;
+}
+
+.config-member .config-member-table td {
+	padding: 7px;
+	border-bottom: solid 1px #e6e6e6;
+}
+
+.config-member .config-member-table td.member-no {
+	font-weight: bold;
+}
+
+.config-member .config-member-table .table-header {
+	border: solid 1px #cccccc;
+}
+
+.config-member .config-member-table .table-header td {
+	padding: 9px;
+	font-weight: bold;
+	font-size: 12px;
+	background: #fafafa;
+	border-bottom: 0;
+}
+
+.config-member .paging a {
+	
+}
+
+.config-member .paging a.selected {
+	font-weight: bold;
+}
+
+.config-member .config-member-submit {
+	background: #616161;
+	border: solid 1px #616161;
+	border-radius: 0 !important;
+	padding: 5px 20px;
+	color: #ffffff;
+}
+
+.config-member input[name='username'] {
+	padding: 5px;
+	border: solid 1px #cccccc;
+	width: 50%;
+}
