@@ -26,6 +26,7 @@ $total_post = db::result ( "SELECT COUNT(*) FROM x_multisite_config ");
 			<td>Domain</td>
 			<td>Owner</td>
 			<td>Site Name</td>
+			<td>Theme</td>
 			<td align='center'>Status</td>
 			<td align='center'>No. Forum</td>
 			<td align='center'>No. Post</td>
@@ -43,6 +44,10 @@ $total_post = db::result ( "SELECT COUNT(*) FROM x_multisite_config ");
 			echo "<td>$site[mb_id]</td>";
 			echo "<td><span class='site-title'>$site[title]</span></td>";
 			
+			
+			
+			$theme = x::meta( 'theme' );
+			echo "<td>$theme</td>";
 			
 			
 			
