@@ -16,11 +16,9 @@ else {
 	db::query("CREATE INDEX `code` on x_config(`code`)");
 }
 
-
-
 $rows = db::rows("SELECT * FROM x_multisite_meta");
 foreach ( $rows as $row ) {
-	x::meta_set( $row['domain'], $row['code'], $row['value'] );
+	x::meta_set( $row['domain'], $row['code'], addslashes($row['value']) );
 }
 echo "-- FINISHED --";
 

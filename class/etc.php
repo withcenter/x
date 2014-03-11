@@ -53,7 +53,8 @@ class etc {
 		if ( $url ) $up = x::url();
 		else $up = x::dir();
 		$path =  "$up/module/$module/$file";
-		if ( $file == 'init' ) {
+		
+		if ( $file == 'init.php' ) {
 			if ( file_exists( $path ) ) return $path;
 			else return x::path_null();
 		}
