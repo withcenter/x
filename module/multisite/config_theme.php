@@ -12,12 +12,12 @@
 		<div class='config-main-title'>
 			<div class='inner'>
 				<span class='config-title-info'><img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 원하시는 테마를 선택하신 후 클릭하시면 반영이 됩니다.</span>
-				<span class='config-title-notice'><span class='user-google-guide-button inner-title' page = 'google_doc_1'>[도움말]</span></span>
+				<span class='config-title-notice'>
+					<span class='user-google-guide-button inner-title' page = 'google_doc_theme' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
+					</span>
 			</div>
 		</div>
-		<div class='hidden-google-doc google_doc_1'>	
-			<div>필고 사이트 서비스 설명서:</div>
-			<iframe src="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep" style='width:99.5%; height: 400px;'></iframe>	
+		<div class='hidden-google-doc google_doc_theme'>	
 		</div>
 		<div class='theme_config'>
 				<?
