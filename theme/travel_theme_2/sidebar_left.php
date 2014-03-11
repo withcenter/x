@@ -6,7 +6,7 @@
 
 <div class='posts-left-1'>
 	<? $option = array('no' => 14 ); ?>
-	<?=latest('x-latest-travel-2-posts', ms::board_id(etc::domain()).'_1' , 14 , 20, 1, $option)?>
+	<?=latest('x-latest-travel-2-posts', ms::board_id(etc::domain()).'_1' , 14 , 10, 1, $option)?>
 </div>
 
 <div class='banner-left'>

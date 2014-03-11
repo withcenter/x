@@ -27,7 +27,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
             ?>
 			<div class='subject'>
 				<img class='bullet' src='<?=$latest_skin_url?>/img/arrow-bullet.png' />
-				<a href='<?=$list[$i]['href']?>'><?=cut_str($list[$i]['subject'],12,'...')?></a>
+				<a href='<?=$list[$i]['href']?>'><?=$list[$i]['subject']?></a>
 				<div class='comments'>[<?=$comments?>]</div>
 			</div>			
 		</div>

@@ -201,6 +201,10 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 }
 
 /* latest */
+.latest-thumbnail{
+	margin-bottom:10px;
+}
+
 .latest-thumbnail > .left {
 	width: 50%;
 	float:left;
