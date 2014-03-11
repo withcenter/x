@@ -1,10 +1,18 @@
 <?php
-
+/*
 for ( $i = 1 ; $i <= 5 ; $i++ ) {
 	if ( !(${'forum_' . $i}) ) continue;
 		$posts[${'forum_' . $i}] = db::rows("SELECT wr_id, wr_subject, wr_datetime, wr_comment, wr_hit FROM ".$g5['write_prefix'].${'forum_' . $i}." WHERE wr_datetime > '$begin_date' ORDER BY wr_hit DESC LIMIT 4");
 }
-
+*/
+$posts = g::posts(
+	array(
+		'domain'				=> etc::domain(),
+		'wr_datetime'=> '>=' . g::datetime( time() - ONEDAY * 7),
+		'order by'=>'wr_hit DESC',
+		'limit'=>4
+	)
+);
 if ( $posts ) { ?>
 
 <div class='popular-posts'>
@@ -22,18 +30,17 @@ if ( $posts ) { ?>
 	<div class='popular-posts-items'>
 		<?php
 		if ( $posts ) {
-			$i = 1;
 			$ctr = 4;
-			//foreach ( $posts as $key => $value ) {  $ctr = $ctr + count($value); }
-			foreach ( $posts as $key => $post ) { if($i >= 2) break;
-				foreach ( $post as $p ) {
-					$url = G5_BBS_URL."/board.php?bo_table=$key&wr_id=$p[wr_id]";
+			$i = 0;
+			foreach ( $posts as $p ) {
+					$url = G5_BBS_URL."/board.php?bo_table=$p[bo_table]&wr_id=$p[wr_id]";
 					$popular_subject = conv_subject( $p['wr_subject'], 15, '...');
 					$no_of_views = $p['wr_hit'];
 					$no_of_comments = $p['wr_comment'];
 					
 						if ( $i==$ctr ) $last_post = 'last-post';
 						else $last_post = null;
+						$i++;
 						echo "
 								<div class='row $last_post'>
 									<span class='post-num'>$i</span>
@@ -41,10 +48,6 @@ if ( $posts ) { ?>
 								</div>
 								
 						";
-					$i++;
-				
-				}
-		
 			 }
 		}
 		?>

@@ -1,6 +1,7 @@
 <?
 include_once(G5_LIB_PATH.'/thumbnail.lib.php'); 
 /** POSTS RECENT */
+/* old code. can be deleted whenever.
 $qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";
 $current_date = date('Y-m-d').' 23:59:59';
 $previous_date = date('Y-m-d', strtotime("-7 day", strtotime($current_date))).' 00:00:00';
@@ -8,11 +9,19 @@ $latest_rows = db::rows( "SELECT bo_table, wr_id FROM $g5[board_new_table] WHERE
 if( $latest_rows ) {
 	$i = 0;
 	foreach ( $latest_rows as $latest_row ) {
-		$latest_list[$i] = db::row( " SELECT * FROM $g5[write_prefix]".$latest_row['bo_table']." WHERE wr_id='".$latest_row['wr_id']."'" );
-		$latest_list[$i]['bo_table'] = $latest_row['bo_table'];
+		$pst[$i] = db::row( " SELECT * FROM $g5[write_prefix]".$latest_row['bo_table']." WHERE wr_id='".$latest_row['wr_id']."'" );
+		$pst[$i]['bo_table'] = $latest_row['bo_table'];
 		$i++;
 	}
- }?>
+ }
+ */
+$posts = g::posts(
+	array(
+		'domain'			=> etc::domain(),
+		'limit'				=> 3,
+	)
+);
+?>
 <div class="com3-latest-posts" >
 		<div class='title'>
 			<table width='100%'>
@@ -28,21 +37,25 @@ if( $latest_rows ) {
 	<div class='com3-latest-posts-items'>
 		<table cellpadding=0 cellspacing=0>
 		<?php
-			if ( $latest_list ) {
+			if ( $posts ) {
 			$i = 1;
-			$ctr = count($latest_list);
-			foreach ( $latest_list as $latest_li ) {
-				$latest_subject = conv_subject($latest_li['wr_subject'],15, '...' );
-
-				$latest_url = g::url().'/bbs/board.php?bo_table='.$latest_li['bo_table'].'&wr_id='.$latest_li['wr_id'];
-				$latest_comment_count = '['.strip_tags($latest_li['wr_comment']).']';
+			$ctr = count($posts);
+			foreach ( $posts as $p ) {
+				$latest_subject = conv_subject($p['wr_subject'],15, '...' );
+	
+				$latest_url = url_forum_read( $p['bo_table'], $p['wr_id'] );
+				
+				
+				$latest_comment_count = '['.strip_tags($p['wr_comment']).']';
 				if ( $latest_comment_count == 0 ) $no_comment = 'no-comment';
 				else $no_comment = '';
-				$latest_img = get_list_thumbnail( $latest_li['bo_table'] , $latest_li['wr_id'], 38, 38);
+				$latest_img = get_list_thumbnail( $p['bo_table'] , $p['wr_id'], 38, 38);
+
 				if ( !$latest_img ) $img = x::url_theme().'/img/no-image.png';
 				else $img = $latest_img['src'];
 				if( $i == $ctr ) $last_post = "class='last-item'";
 				else $last_post = '';
+	
 		?>	
 				<tr <?=$last_post?> valign='top'>
 					<td width='40'>

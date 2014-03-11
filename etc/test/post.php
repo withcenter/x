@@ -11,7 +11,7 @@
 				'mb_name'		=> "JaeHo Song",
 				'mb_email'		=> "thruthesky@email.com",
 				'ca_name'		=> 'ABC - CATEGORY',
-				'bo_table'		=> "help",
+				'bo_table'		=> "default",
 				'wr_subject'	=> "Art.: $i - Post Write... Test...",
 				'wr_content'	=> "Content: $i<hr>This is the content<br><h1>Hello there...</h1>How are you?<br>\n\r\nTTTTT\t....How are you?<br>Later..",
 				'wr_link_1'		=> "http://philgo.com",

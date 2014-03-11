@@ -1,16 +1,20 @@
 <?php
+/** @node old code. ready to be deleted */
+/*
 $rows = db::rows("SELECT wr_id, bo_table FROM $g5[board_new_table] WHERE wr_id = wr_parent AND bo_table LIKE '".ms::board_id( etc::domain() )."%' ORDER BY bn_datetime DESC LIMIT 0, 15");
-
 $q_tmp = array();
 foreach ( $rows as $row ) {
 	$q_tmp[$row['bo_table']][] = "wr_id = $row[wr_id]";
 }
-
 $posts = array();
 foreach ( $q_tmp as $key => $value ) {
 	$posts[$key] = db::rows("SELECT wr_id, wr_subject FROM ".$g5['write_prefix'].$key." WHERE ".implode ( ' OR ', $value ) );
-
 }
+*/
+
+$posts = g::posts( array( 'domain'=>etc::domain(), 'limit'=>15) );
+
+
 ?>
 	<link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/new.posts.css' />
 	<div class='new-posts'>

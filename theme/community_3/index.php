@@ -35,67 +35,42 @@
 
 <div class='images_with_caption_wrapper'>
 <?
-$latest_bo_table = ms::board_id(etc::domain()).'_1';
+$latest_bo_table = bo_table(1);
 $latest_1_output = latest("x-community_3_images_with_caption", $latest_bo_table, 4, 20);
 echo $latest_1_output;
 ?>
 </div>
 
 <div class='timed_list'>
-		<div class='left'>
-			<?
-			$latest_bo_table = ms::board_id(etc::domain()).'_2';
-			if ( g::forum_exist( $latest_bo_table ) ) {
-				$option = array(
-					'no' => 4,
-					'icon' => x::url_theme()."/img/notes.png"
-				);
-				$latest_1_output = latest("x-community-3-timed-list", $latest_bo_table, 5, 30, $cache_time=1, $option);
-				echo $latest_1_output;
-			}
-			?>
-		</div>
-		<div class='right'>
-			<?
-			$latest_bo_table = ms::board_id(etc::domain()).'_3';
-			if ( g::forum_exist( $latest_bo_table ) ) {
-				$option = array(
-					'no' => 4,
-					'icon' => x::url_theme()."/img/notes.png"
-				);
-				$latest_1_output = latest("x-community-3-timed-list", $latest_bo_table, 5, 30, $cache_time=1, $option);
-				echo $latest_1_output;
-			}
-			?>
-		</div>
-		<div style='clear:both'></div>
+	<table cellspacing=0 cellpadding=0><tr valign='top'>
+	<td class='left' width='50%'>
+		<?
+			$option = array(
+				'no' => 4,
+				'icon' => x::url_theme()."/img/notes.png"
+			);
+			echo latest("x-community-3-timed-list", bo_table(2), 5, 23, $cache_time=1, $option);
+		?>
+	</td>
+	<td class='right' width='50%'>
+		<?=latest("x-community-3-timed-list", bo_table(3), 5, 23, $cache_time=1, $option);?>
+	</td>
+	</tr></table>
 </div>
 
 <div class='timed_list_with_images'>
 	<div class='left'>
 		<?
-		$latest_bo_table = ms::board_id(etc::domain()).'_4';
-		if ( g::forum_exist( $latest_bo_table ) ) {
 			$option = array(
 				'no' => 4,
 				'icon' => x::url_theme()."/img/newspaper2.png"
 			);
-			$latest_1_output = latest("x-community-3-timed-list-with-images", $latest_bo_table, 4, 50, $cache_time=1, $option);
-			echo $latest_1_output;
-		}
+			echo latest("x-community-3-timed-list-with-images", bo_table(4), 4, 50, $cache_time=1, $option);
+			
 		?>
-	</div>
-	<div class='right'>
-		<?
-		$latest_bo_table = ms::board_id(etc::domain()).'_5';
-		if ( g::forum_exist( $latest_bo_table ) ) {
-			$option = array(
-				'no' => 4,
-				'icon' => x::url_theme()."/img/newspaper2.png"
-			);
-			$latest_1_output = latest("x-community-3-timed-list-with-images", $latest_bo_table, 4, 50, $cache_time=1, $option);
-			echo $latest_1_output;
-		}
-		?>
-	</div>
+	</td>
+	<td width='50%' class='right'>
+		<?= latest("x-community-3-timed-list-with-images", bo_table(5), 4, 50, $cache_time=1, $option);?>
+	</td>
+	</tr></table>
 </div>

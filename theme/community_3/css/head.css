@@ -134,9 +134,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444444', end
 	height:44px;
 }
 
-.main-menu #comm3_main_menu .comm3_menu.no-margin{
-	margin-right:0;	
-}
 
 .main-menu #comm3_main_menu .comm3_menu[page="admin-menu"]{
 	margin-right:0;	

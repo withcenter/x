@@ -1,0 +1,1381 @@
+.config-header {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	background-color: #4d4d4d;
+	height: 40px;
+}
+.config-header li {
+	display: block;
+	float: left;
+}
+.config-header li:first-child {
+	margin-left: 10px;
+}
+.config-header li a {
+	height: 40px;
+	line-height: 40px;
+	color: #ffffff;
+	padding: 0 12px;
+    display: inline-block;
+}
+.config-header li a:hover {
+	text-decoration: none;
+	background-color: #6e6e6e;
+}
+
+
+/* config_global.php */
+.config_general .site-global > .title {
+	font-family: '맑은 고딕', AppleGothic;
+	border-bottom: 1px solid #616161;
+	color: #565656;
+	font-size: 1.125em;
+	padding-bottom: 4px;
+	margin: 20px 0 13px 0;
+}
+
+.config_general .site-global .middle-title {
+	color: #565656;
+	margin-bottom: 9px;
+}
+
+.config_general .site-global .top-title {
+	color: #565656;
+	margin-bottom: 9px;
+}
+
+
+.config_general .site-global table tr td span {
+	width: 100px;
+	display: inline-block;
+	color: #565656;
+}
+.config_general .site-global table tr td {
+	border: 0;
+}
+
+.config_general .site-global table tr td input[type='text'] {
+	height: 22px;
+	line-height: 22px;
+	width: 238px;
+	padding: 2px;
+	margin-bottom: 6px;
+}
+
+.config_general .middle-title {
+	margin-top: 15px;
+}
+
+.config_general .select-box-left, .config_general .select-box-right {
+	float: left;
+	width: 50%;
+}
+
+.config_general .select-wrapper, .config_general .select-button {
+	border: 1px solid #d3d3d3;
+	background-color: #efefef;
+	float: left;
+	margin-bottom: 10px;
+}
+.config_general .select-wrapper {
+	border-right: 0;
+}
+.config_general .select-wrapper .inner {
+	border-top: 1px solid #ffffff;
+	height: 17px;
+	width: 289px;
+	display: inline-block;
+	color: #565656;
+	font-size: 0.875em;
+	line-height: 17px;
+	padding-left: 10px;
+}
+
+.config_general .select-button .inner {
+	border-top: 1px solid #ffffff;
+	height: 17px;
+	display: inline-block;
+	line-height: 17px;
+	width: 27px;
+	position: relative;
+	text-align: center;
+}
+.config_general .select-button {
+
+}
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+	.config_general .select-button {
+		top: 0;
+	}
+}
+*/
+@-moz-document url-prefix() { 
+	.config_general .select-button {
+		top: 0.5px;
+	}
+ }
+ 
+.config_general .drop-down-menu {
+	width: 326px;
+	min-height: 68px;
+	max-height: 150px;
+	overflow: auto;
+	margin-bottom: 3px;
+	background-color: #f4f4f4;
+	border: 1px solid #d8d8d8;
+	border-top: 0;
+	position: relative;
+	top: -10px;
+	display: none;
+}
+.config_general .drop-down-menu .row {
+	padding: 3px 10px;
+	color: #646464;
+}
+
+.config_general .drop-down-menu .row:hover {
+	cursor: pointer; 
+	background-color: #666666;
+	color: #ffffff;
+}
+
+.config_general .title-bottom {
+	font-family: '맑은 고딕', AppleGothic;
+	color: #565656;
+	font-size: 1em;
+	margin: 27px 0 5px 0;
+}
+
+.config_general .title-small {
+	color: #767676;
+	margin-right: 14px;
+}
+.config_general input[type='radio'] {
+	margin-right: 5px;
+}
+.config_general .radio-left, .config_general .radio-right {
+	color: #565656;
+}
+.config_general .radio-left{
+	margin-right: 16px;
+}
+.config_general input[type='submit'] {
+	width: 80px;
+	height: 30px;
+	background-color: #616161;
+	color: #ffffff;
+	line-height: 30px;
+	text-align: center;
+	border: 0;
+	border-radius: 0;
+	margin-top: 10px;
+	float: right;
+	margin-right: 10px;
+}
+.config_general input[type='submit']:hover {
+	background-color: #616161;
+	border: 0;
+}
+
+.config_general textarea {
+	border: solid 1px #c3c3c3;
+}
+
+
+
+
+/* config_menu */
+
+
+.config_menu .config table .line-header td{
+	border-bottom: 1px solid #c3c3c3;
+	
+	font-size: 1.125em;
+}
+
+
+.config_menu .config table tr .select-wrapper, .config_menu .config table tr .select-button {
+	border: 1px solid #d3d3d3;
+	background-color: #efefef;
+	display: inline-block;
+}
+.config_menu .config table tr .select-wrapper {
+	border-right: 0;
+}
+
+.config_menu .config table tr .select-wrapper .inner {
+	border-top: 1px solid #ffffff;
+	height: 17px;
+	width: 109px;
+	display: inline-block;
+	color: #565656;
+	font-size: 0.875em;
+	line-height: 17px;
+	padding-left: 10px;
+}
+
+.config_menu .config table tr .select-button {
+	position: relative;
+	top: 1px;
+	left: -4px;
+}
+
+ .config table tr .select-button .inner {
+	border-top: 1px solid #ffffff;
+	height: 17px;
+	display: inline-block;
+	line-height: 17px;
+	width: 27px;
+	position: relative;
+	text-align: center;
+	cursor: pointer;
+}
+
+
+
+.config_menu .select-wrapper, .config_menu .select-button {
+	cursor: pointer;
+}
+
+.config_menu .drop-down-menu {
+	width: 148px;
+	min-height: 62px;
+	max-height: 150px;
+	overflow: auto;
+	border: 1px solid #d1d1d1;
+	border-top: 0;
+	background-color: #f6f6f6;
+	display: none;
+	
+}
+.drop-down-menu .row {
+	padding: 3px 10px;
+}
+
+.drop-down-menu .row:hover {
+	cursor: pointer; 
+	background-color: #666666;
+	color: #ffffff;
+}
+
+.config-menu-table input[type='submit'] {
+	background-color: #616161;
+	color: #ffffff;
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border: 0;
+	border-radius: 0;
+	font-size: 1em;
+}
+
+.config-menu-table input[type='submit']:hover {
+	background-color: #616161;
+	border: 0;
+}
+
+/* config_forum.php */
+.config_forum .config_menu {
+	margin: 20px 0 6px 10px;
+}
+.config_forum .create-forum-input {
+	width: 158px;
+	height: 24px;
+	line-height: 24px;
+	padding: 0 10px;
+}
+.no_of_board {
+	float: right;
+	color: #535353;
+	position: relative;
+	top: -36px;
+	right: 10px;
+}
+
+.config_forum .config_menu input[type='submit'] {
+	width: 58px;
+	height: 28px;
+	cursor: pointer;
+	border: 1px solid #d4d4d4;
+	background-color: #efefef;
+	color: #565656;
+}
+
+
+/**new design*/
+ 
+ 
+/* config_member */
+.create-site .wrapper {
+	position: relative;
+}
+
+.create-site input[type='text'] {
+	border: solid 1px #e3e3e3;
+}
+
+.create-site div {
+	margin: 0.5em;
+}
+
+.create-site > div {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.create-site div input[name='title'] {
+	width: 19.5em;
+}
+
+.create-site input[type='submit'] {
+	border: none;
+	width: 70px;
+	height: 27px;
+	line-height: 27px;
+	text-align: center;
+	background: #333333;
+	color: #ffffff;
+	position: absolute;
+	bottom: 11px;
+	right: 5px;
+}
+
+.create-site h2 {
+	font-size: 1.2em;
+	margin: 1em;
+}
+
+.create-site ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+}
+
+.create-site ul li { 
+	border-bottom: solid 1px #c2c2c2;
+	padding: 0.5em;
+	border-left: solid 0.5em #c3c3c3;
+}
+
+.create-site ul li:last-child {
+	border-bottom: 0;
+} 
+
+.create-site ul li:hover {
+	background: #333333;
+	border-left: solid 0.5em #811717;
+}
+
+.create-site ul li:hover a {
+	color: #ffffff;
+}
+
+.create-site ul li a {
+	text-decoration: none;
+}
+.create-site select[name='site-type'] {
+	height: 27px;
+	width: 160px;
+	padding: 0 10px;
+	color: #555555;
+	font-family: '맑은 고딕', AppleGothic;
+}
+
+.config h1 {
+	font-size: 1.5em;
+	margin: 1em;
+}
+
+.config h2  {
+	font-size: 1.2em;
+	margin: 0.5em;
+}
+
+.config input[type='text']{
+	border: solid 1px #c3c3c3;
+}
+
+.config table {
+	border-collapse: collapse;
+
+}
+
+
+
+/***Temporarily added***/
+.config-container input[type='submit'] {
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+.forum_setting input[type='submit'] {
+	border: 1px solid #blue;
+	background-color: #f9f9f9;
+	color: blue;
+	border-radius: 4px;
+	height: 30px;
+	padding: 0 15px;
+	cursor: pointer;
+}
+.forum_setting input[type='submit']:hover {
+	border: 1px solid orange;
+	background-color: orange;
+	color: #ffffff;
+}
+
+
+.item {
+	display: inline-block;
+	background-color: #333333;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 5px;
+	border-radius: 3px;
+	color: #ffffff;
+	margin: 0 20px 4px 0;
+}
+
+/*
+table {
+	margin: 10px 0;
+}
+
+table tr td {
+	padding: 3px 10px;
+	border-bottom: 1px solid #333333;
+	color: #555555;
+}
+*/
+table > .header {
+	background-color: #333333;
+}
+
+table > .header td {
+	border-left: 1px solid #ffffff;
+	color: #ffffff;
+	padding: 5px 10px;
+	font-size: 10pt;
+}
+table > .header td:first-child {
+	border-left: 0;
+}
+
+.button {
+	background-color: #f9f9f9;
+	color: #333333;
+	border: 1px solid #333333;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 10px;
+	border-radius: 3px;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.button:hover {
+	background-color: #333333;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* theme config */
+
+
+.theme_config{
+	margin-left:8px;
+	padding-bottom:16px;
+}
+
+.theme_config .theme-thumb {	
+	background: #e6e6e6;
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+	border:1px solid #999999;
+	margin:0 0 9px 10px;	
+	
+	width: 48.2%;
+	height: 222px;
+	float:left;
+}
+
+.theme_config .theme-thumb .theme-name {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #cccccc;
+	width: 94.3%;
+	padding: 10px;
+	font-family: '맑은 고딕', AppleGothic;
+	color: #000000;	
+	font-size: 9pt;	
+}
+
+.theme_config .theme-thumb .theme-name.active-theme {	
+	color: #ffffff;
+	background-color: #999999;
+}
+
+.theme_config .theme-thumb .active-note {	
+	color: #e6e6e6;	
+	position:absolute;
+	right:10px;
+	top:10px;
+}
+
+.theme_config .theme-thumb p {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0.5em;
+	background: #F03000;
+	width: 100%;
+}
+
+.theme_config .thumb-list {	
+	margin-top: 0.5em;
+	text-align: center;
+}
+
+.theme_config .theme-thumb img {
+	width: 100%;
+}
+
+.theme_config .theme-thumb table, .theme_config .theme-thumb a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.theme_configbutton[name='theme'] {
+	border: none;
+	background: transparent;
+	color: #ffffff;
+	width: 320px;
+	height: 240px;
+}
+
+.theme_config > .title {
+	font-size: 1.250em;
+	color: #004475;
+	border: 1px solid #d5d5d5;
+	background-color: #f9f9f9;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.site-global select {
+	padding: 0.25em 0 0.25em 0;
+}
+.site-global textarea {
+	width: 25em;
+	height: 10em;
+}
+
+.site-global > label {
+	width: 100px;
+	display: inline-block;
+	margin-bottom: 2em;
+	vertical-align: top;
+}
+
+.site-global .config-img {
+	display: inline-block;
+	margin: 0 2em 2em 0;
+	vertical-align: top;
+}
+
+.site-global .config-img img {
+	margin: 0.5em 0 0.5em 0
+}
+
+
+/* admin_multisite.php */
+
+.add-new-site {
+	float: right;
+	display: inline-block;
+	width: 120px;
+	height: 20px;
+	background-color: #616161;
+	color: #ffffff;
+	line-height: 20px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.add-new-site:hover {
+	text-decoration: none;
+}
+
+.admin-multisite-table .header {
+	background-color: #8f8f8f;
+	color: #ffffff;
+}
+
+.admin-multisite-table tr td {
+	height: 30px;
+	line-height: 30px;
+	padding: 0; 
+	border-left: 0;
+	font-size: 1em;
+}
+.admin-multisite-table tr .site-title {
+	width: 200px;
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+	display: inline-block;
+	position: relative;
+	top: 5px;
+}
+.admin-multisite-table .background {
+	background-color: #efefef;
+	color: #7a7a7a;
+}
+.admin_multisite_paging  {
+	text-align: center;
+	margin-top: 20px;
+}
+.admin_multisite_paging .page_no{
+	margin: 0 2px;
+}
+.admin_multisite_paging .selected {
+	background-color: #666666;
+	color: #ffffff;
+}
+/*view sites*/
+.view-site {
+	font-family: '맑은 고딕', AppleGothic;
+}
+
+
+
+.view-site ul{
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+
+.view-site ul li{
+	font-size:1.3em;
+	display: inline-block;
+}
+
+.view-site ul li a{
+	display:inline-block;
+	color:#565656;
+	text-decoration:none;
+	border-bottom:1px solid #d5d5d5;
+	border-left:4px solid #d5d5d5;
+	width:100%;
+	padding: 4px;
+}
+
+.view-site ul li.last-count a{
+	border-bottom:none;
+}
+
+.view-site ul li a:hover{
+	color:#f7f7f7;
+	background-color:#000000;
+	border-left:4px solid orange;
+}
+
+.view-site .info{
+	padding:4px 0;
+	font-size: 9pt;
+}	
+.view-site .info .item2 {
+	width: 90px;
+	display: inline-block;
+	font-weight: bold;
+	padding-left: 10px;
+}
+/* create.php */
+.create-site {
+	width: 100%;
+	font-family: '맑은 고딕', AppleGothic;
+}
+.create-site .wrapper{
+	position: relative;
+}
+
+.create-site  .main-title, .create-site  .title, .view-site .title {
+	background-color: #f9f9f9;
+	color: #555555;
+	border: 1px solid #d5d5d5;
+	height: 30px;
+	text-align: center;
+	margin: 0;
+	margin-left: 10px;
+	font-weight: bold;
+	font-size: 10pt;
+}
+
+.create-site  .title, .view-site  .title  {
+	line-height: 30px;
+	margin-bottom: 10px;
+}
+.create-site  input[type='text'] {
+	height: 25px;
+	line-height: 25px;
+	width: 150px;
+	padding: 0 10px;
+}
+.create-site input[type='submit'] {
+	float: right;
+}
+
+.create-site .item {
+	margin-left: 5px;
+	padding-left: 10px;
+}
+
+/* create_success.php */
+.success-fail-message {
+	border: 1px solid #d5d5d5;
+	color: #555555;
+	background-color: #f9f9f9;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom : 10px;
+}
+.success-fail-message .inner {
+	border: 1px solid #ffffff;
+}
+ 
+/* site.list.php */
+.site-list, .forum-list {
+	border: 1px solid #d5d5d5;
+	background-color: #f9f9f9;
+	border-radius: 3px;
+	font-family: '맑은 고딕', AppleGothic;
+	font-size: 10pt;
+}
+.site-list .inner, .forum-list .inner {
+	margin: 1px solid #ffffff;
+	border-radius: 3px;
+	padding: 10px 20px;
+}
+.site-list .inner > .title, .forum-list .inner > .title {
+	background-color: #386b90;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 10px;
+	border-radius: 3px;
+	font-size: 1.125em;
+	font-weight: bold;
+	color: #fbfbfb;
+}
+.site-list .inner .item2, .site-list .inner .item3  {
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	padding: 0 10px;
+	font-weight: bold;
+	color: #594e2b;
+	width: 70px;
+	border: 1px solid #666666;
+	border-radius: 3px;
+	margin-right: 10px;
+}
+.site-list .inner .item3  {
+	width: 40px;
+	margin-left: 100px;
+}
+.site-list .inner  .sites {
+	border-bottom: 1px solid #b4b7b8;
+	padding: 10px;
+	position: relative;
+}
+
+.site-list .inner  a:hover {
+	text-decoration: none;
+}
+.site-list .inner  .sites:last-child {
+	border-bottom: 0;
+}
+.site-list .inner .sites div {
+	height: 25px;
+	overflow: hidde;
+}
+
+.site-list .inner .sites  .move-to-site {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
+/* forum.list.php */
+.forum-list .inner .site-title {
+	margin: 10px 0 5px 0;
+	font-weight: bold;
+	color: #535353;
+	font-size: 1.125em;
+	padding: 5px 10px;
+	border: 1px solid #535353;
+	display: inline-block;
+	border-radius: 3px;	
+}
+
+
+/* config.php */
+.subsite-support {
+
+}
+
+.subsite-support .title {
+	border: 1px solid #d5d5d5;
+	background-color: #f9f9f9;
+	border-radius: 3px;
+	margin: 10px 0;
+}
+
+.subsite-support .title .inner {
+	border: 1px solid #ffffff;
+	border-radius: 3px;
+	padding: 0 10px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #2c5991;
+}
+
+.subsite-support .title .inner  img {
+	height: 20px;
+	margin-right: 5px;
+}
+.subsite-support  .support {
+	background: #bfbfbf;
+	margin-bottom: 10px;
+	color: #ffffff;
+}
+.subsite-support  .support .tab-menu {
+
+}
+.subsite-support  .support .tab-menu .tab-button {
+	display: inline-block;
+	padding: 13px 10px 7px 10px;
+	border-bottom: solid 4px transparent;
+	cursor: pointer;
+}
+
+.subsite-support  .support .tab-menu .tab-button:hover {
+	border-bottom: solid 4px #808080;	
+}
+
+.tab-button-selected {
+	border-bottom: solid 4px #808080 !important;
+}
+
+.subsite-support  .support-content {
+	border-radius: 3px;
+	background-color: #f9f9f9;
+}
+
+.subsite-support  .support-content .inner{
+
+	border-radius: 3px;
+	padding: 10px;
+	display: none;
+	min-height: 300px;
+}
+
+.subsite-support  .support-content .inner img {
+	width: 100%;
+}
+
+.subsite-support  .support-content .general-setting {
+	display: block;
+}
+
+.subsite-support .support-content .inner .support-image img {
+	max-width: 670px;
+}
+.subsite-support .support-content .inner  .sub-title:first-child {
+	margin-top: 0;
+}
+.subsite-support .support-content .inner  .sub-title {
+	font-weight: bold;
+	margin: 60px 0 7px 0;
+	color: #434d5a;
+}
+
+
+/* forum_setting.php */
+.forum_setting .wrapper{
+	border: 1px solid #d5d5d5;
+	padding: 10px;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.forum_setting .wrapper.editor{
+	padding-bottom:50px;
+}
+
+.forum_setting .wrapper .title {
+	border: 1px solid #d5d5d5;
+	background-color: #f9f9f9;
+	color: #36567d;
+	font-family: '맑은 고딕', AppleGothic;
+	font-weight: bold;
+	height: 25px;
+	line-height: 23px;
+	padding: 0 10px;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	font-size: 10pt;
+}
+
+.forum_setting .wrapper input[type='text'] {
+	height: 25px;
+	line-height: 25px;
+}
+
+.forum_setting .wrapper input[type='submit'], .forum_setting .wrapper input[type='submit']:hover {
+	border: 0;
+	background-color: #555555;
+	color: #ffffff;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
+.forum_setting .wrapper .tip {
+	color: #666666;
+}
+
+
+/**google-doc**/
+.google-doc-wrapper{
+	margin-top:10px;
+}
+
+.hidden-google-doc{
+	display:none;
+	margin-bottom:10px;
+}
+
+span.user-google-guide-button, a.user-google-guide-button{
+	color: #999999;
+	cursor: pointer;
+	margin: 4px 0 0 0;
+	font-weight: bold;	
+	font-size: 11px;	
+}
+
+.inner > .user-google-guide-button{
+	color:#cccccc;
+	float:right;
+}
+
+span.user-google-guide-button.inner-title {
+	color: #cccccc;
+}
+
+a.user-google-guide-button{
+	text-decoration:none;
+}
+
+.hidden-google-doc iframe, .google-doc-wrapper iframe{
+	border:1px solid #bbbbbb;
+}
+
+
+
+/** New Layout **/
+.config {
+	background: #fafafa;
+	border: solid 1px #e6e6e6;
+	padding: 9px 9px 22px 9px;
+	margin-top: 10px;
+}
+.config .config-main-container {
+	padding-left: 20px;
+}
+
+.config .config-main-title  {
+	padding: 10px;
+	margin: 10px 0 10px 10px;
+	background: #808080;		
+	height:16px;
+}
+.config .config-main-title .inner  {
+	color: #ffffff;
+	font-size: 14px;
+	height:16px;
+	position: relative;
+}
+
+.config .config-main-title .inner .config-title-notice   {
+	position: absolute;
+	right: 0; 
+}
+
+.config .config-main-title .inner  img {
+	position: relative;
+	top: -2px;
+	margin-right: 7px;
+}
+
+.config  .config-title {
+	padding: 5px 10px 6px 10px;
+	background: #fafafa;
+	border: solid 1px #cccccc;
+	color: #000000;
+	font-size: 13px;
+	position: relative;
+}
+
+.config  .config-title .config-title-info {
+
+}
+.config  .config-title img {
+	margin-left: 10px;
+}
+.config  .config-title .config-title-notice {
+	position: absolute;
+	right: 10px;
+}
+
+ 
+.config  .config-container {
+	padding: 0 0 0 5px;
+	border-top: 0;
+} 
+
+.config_menu.create-forum {
+	margin: 0 0 5px 0;
+}
+
+.site-global .config-wrapper {
+	margin-bottom: 28px;
+
+}
+
+.site-global .config-wrapper:last-child {
+	margin-bottom: 0;
+}
+
+.setting-no-image {
+
+	text-align: center;
+	font-size: 12px;
+	color: #999999;
+	margin-bottom: 10px;
+}
+
+.setting-no-image img.no-image{
+	max-width: 200px !important;
+	height: 80px !important;
+}
+
+
+.config input[type='text'], .config textarea {
+	margin-bottom: 6px !important;
+	
+}
+
+.config input[name='title'], .config input[name='secondary_title'], .config textarea[name='footer_text'] {
+	width: 98% !important;
+}
+
+
+span.config-name {
+	color: #666666 !important;
+}
+
+.per-config-submit {
+	border: 0 !important;
+	border-radius: 0 !important;
+	color: #ffffff;
+	background: #616161;
+	height: 30px;
+	width: 80px;
+	float: right;
+}
+
+.config .image-config .image-upload-container {
+	margin-right: 10px;
+	float: left;
+	width: 224px;
+}
+
+.config .image-config .image-upload-container.last-container {
+	margin: 0;
+}
+
+.config .image-config  .title {
+	color: #565656;
+	font-family: '맑은 고딕', AppleGothic;
+	margin: 20px 0 9px 0;
+	font-size: 1em;
+}
+
+.config .image-config input[type='file'] {
+	color: #565656;
+}
+
+.config .image-config .image-upload {
+	border: solid 1px #d8d8d8;
+	border-top: 0;
+	padding: 10px;
+}
+
+.config .image-config .image-upload .title {
+	margin: 0;
+	padding: 0;
+}
+
+.config .image-config {
+	table-layout: fixed;
+}
+
+.config .image-config .image-upload input[type='text'] {
+	width: 100%;
+	border: solid 1px #d8d8d8;
+}
+
+.config .image-config .image-upload input[type='file'], .config_general .image-config .image-upload input[type='checkbox']  {
+	margin-bottom: 5px;
+	
+}
+
+.config .image-config .image-upload textarea {
+	width: 98%;
+	height: 50px;
+	border: solid 1px #d8d8d8;
+}
+
+.config .image-config .image-upload img{
+	width: 100%;
+	height: 100px;
+	margin-bottom: 5px;
+
+}
+
+.config .image-config .image-title {
+	margin: 0;
+	background: #fafafa;
+	border: solid 1px #d8d8d8;
+	padding: 5px 5px;
+
+}
+
+.config .image-config .image-title img {
+	margin: 0 5px;
+}
+
+.config_menu .config table tr .menu-no {
+	padding-top: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #1a1a1a;
+}
+
+.config_menu .config table tr td{
+	padding-bottom: 10px;
+}
+
+.config_menu .config .menu-num {
+	display: inline-block;
+	width: 60px;
+}
+
+.config_menu .config .menu-num.sec {
+	margin: 0 5px 0 10px;
+}
+
+.config_menu .config .menu-select-name {
+	display: inline-block;
+	width: 320px;
+}
+
+.config_menu .config .select-wrapper {
+	width: 242px;
+	background: #fafafa !important;
+	padding: 2px 0;
+}
+
+.config_menu .config  .select-button {
+	background: #fafafa !important;
+	padding: 2px 0;
+	top: 0 !important;
+}
+
+.config_menu .config .drop-down-menu {
+	width: 268px;
+	background: #fafafa !important;
+}
+
+.config_forum .title-forum {
+	display: inline-block;
+	width: 110px;
+}
+
+.config_forum input.create-forum-input {
+	width: 88% ;
+	height: 28px;
+	margin-bottom: 10px !important;
+}
+
+.config_forum .config-forum-submit {
+	width: 55px;
+	height: 30px;
+	border: solid 1px transparent;
+	border-radius: 0 !important;
+	position: relative;
+	top: -5px;
+	background: #cccccc;
+}
+
+.config_forum .board_list {
+	font-family: Dotum;
+	font-weight: normal;
+	font-size: 12px;
+	color: #000000;
+}
+
+.config_forum tr td {
+	padding: 7px;
+	border-bottom: solid 1px #e6e6e6;
+}
+.config_forum tr.header1 {
+	background: #fafafa;
+	border: solid 1px #cccccc;
+}
+
+.config_forum tr.header1 td {
+	padding: 9px;
+	color: #000000;
+	border: 0;
+}
+.subsite-support .config-wrapper {
+	margin-left: 20px;
+	
+}
+.subsite-support .support {
+	margin-left: 10px;
+}
+
+.config_forum .config-wrapper {
+	margin-left: 20px;
+}
+
+.config_menu .config-wrapper {
+	margin-left: 20px;
+}
+
+.config-write .config-wrapper {
+	margin-left: 20px;
+}
+
+
+
+/* config_write.php */
+.config-write {
+
+}
+
+.config-write .api-info {
+	margin-bottom: 10px;
+	border: 1px solid #d5d5d5;
+	padding: 10px;
+	border-top: 0;
+	background: #ffffff;
+}
+.config-write .api-info  > .title {
+	font-size: 9pt;
+	font-weight: bold;
+	color: #666666;
+	margin-bottom: 10px;
+	font-family: '맑은 고딕', AppleGothic;
+}
+
+.config-write .row {
+	margin-bottom: 5px;
+}
+.config-write  .item4 {
+	display: inline-block;
+	width: 100px;
+	font-family: '맑은 고딕', AppleGothic;
+	color: #666666;
+	font-size: 12px;
+}
+
+.config-write .row input[type='text'] {
+	width: 81.5%;
+	padding: 0 10px;
+	height: 20px;
+	line-height: 20px;
+	color: #555555;
+}
+
+.config-write  input[type='submit'] {
+	width: 80px;
+	height: 30px;
+	background-color: #616161;
+	color: #ffffff;
+	line-height: 30px;
+	text-align: center;
+	border: 0;
+	border-radius: 0;
+	float: right;
+	margin-right: 10px;
+}
+	
+}
+.config-write input[type='submit']:hover {
+	background-color: #616161;
+	color: #ffffff;
+	border: 0;
+}
+.config fieldset legend {
+	color: #555555;
+	font-size: 10pt;
+	text-indent: 0;
+	position: relative;
+	line-height: 100%;
+	padding: 0 10px;
+	font-weight: bold;
+}
+
+.message {
+	border: 2px solid #555555;
+	color: blue;
+	font-weight: bold;
+	background-color: #d5d5d5;
+	text-align: center;
+	margin: 10px 0;
+	padding: 10px 20px;
+	border-radius: 3px;
+}
+
+ 
+.config  .config-container {
+	padding: 14px 9px;
+	background: #ffffff;
+	border: solid 1px #cccccc;
+	border-top: 0;
+} 
+
+.config_menu input.menu-name {
+	width: 92%;
+	height: 16px;
+	line-height: 16px;
+	padding: 2px 2px 2px 10px;
+	border: solid 1px #d8d8d8;
+	background: #fafafa;
+}
+

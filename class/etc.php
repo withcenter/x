@@ -24,17 +24,35 @@ class etc {
 	/**
 	 *  @brief return the path of module script.
 	 *  
-	 *  @param [in] $file script file name under a module folder. it should not include '.php' extension.
+	 *  @param [in] $file path of file name under a module folder.
+		 @param [in] $url if it is true, then it returns HTTP URL ADDRESS, NOT PATH.
+		@note if there is no extension on the input $file, then it automatically adds '.php'
+		@NOTE if the extension is one of js, css, jpg, gif, png then it will return in HTTP URL ADDRESS.
 	 *  @return string file path
 	 *  
 	 *  @details global variable $module which is from HTTP INPUT will be used to determin which module folder to use.
 	 *  @note to include module/init.php just use "include module( 'init' );"
 	 *  especially for init.php script, it will return 'null.php' if the init.php does not exists under the module.
+	 *
+	 *  @code
+			echo module("img/direction.png", true);
+			<script src='<?=module("$module.js")?>'></script>
+			module('init');
+			module("$module.js");
+			
+		 @endcode
+		 
+	 *
 	 */
-	static function module($file)
+	static function module($file,$url=false)
 	{
 		global $module;
-		$path = x::dir() . "/module/$module/$file.php";
+		if ( strpos( $file, '.' ) === false ) $file .= '.php';
+		$pi = pathinfo($file);
+		if ( in_array( $pi['extension'], array('js', 'css', 'gif', 'jpg', 'png') ) ) $url = true;
+		if ( $url ) $up = x::url();
+		else $up = x::dir();
+		$path =  "$up/module/$module/$file";
 		if ( $file == 'init' ) {
 			if ( file_exists( $path ) ) return $path;
 			else return x::path_null();
@@ -74,6 +92,22 @@ class etc {
 		return $out;
 	}
 	
+	static function client_ip()
+	{
+		if ( isset($_SERVER['REMOTE_ADDR']) ) return $_SERVER['REMOTE_ADDR'];
+		else return NULL;
+	}
+
+	
+	/** @short returns (impossible to guess) uniqid
+	 *
+	 *	 @note use this function to name a file.
+	 */
+	static function uniqid()
+	{
+		$str = uniqid( rand(), true ) . etc::client_ip() . time() ;
+		return md5( $str );
+	}
 
 	
 	
@@ -543,9 +577,15 @@ static function utf8($string)
 
 
 
-function module($file)
+/**@short returns path a script under the current module folder
+ *
+ * @code
+		include_once module('forum_setting');
+	@endcode
+ */
+function module($file,$url=false)
 {
-	return etc::module($file);
+	return etc::module($file,$url);
 }
 
 
@@ -579,16 +619,21 @@ function ln($en, $ko=null)
 
 
 /**
- *  @brief 슈퍼 관리자이면 참을 리턴한다.
+ *  @brief checks admin permission
+ *
+ *  @return true if the user has admin permission.
  *  
- *  @return true if super admin, otherwise false.
- *  
- *  @details 슈퍼 관리자이면 참을 리턴한다.
+ *  @details it always return true if the login user is super admin.
+	it returns true if the user is a site admin and if the user is accessing his site.
+	
+	Use this function to check if the user is super admin or site admin.
  */
 function admin()
 {
 	global $is_admin;
-	return $is_admin == 'super';
+	if ( $is_admin == 'super' ) return true;
+	else if ( ms::admin() ) return true;
+	return false;
 }
 
 /**
@@ -611,6 +656,13 @@ function write_page()
 	return preg_match("/\/write.php/", $self);
 }
 
+/**@short return true if the accessed page is 'read' or 'view' page. */
+function read_page()
+{
+	global $wr_id;
+	return isset($wr_id) && $wr_id;
+}
+
 
 
 function board_form_page()
@@ -618,6 +670,19 @@ function board_form_page()
 	$self = $_SERVER['PHP_SELF'];
 	return preg_match("/\/board_form.php/", $self);
 }
+
+/** @short return the bo_table of n'th menu
+ *
+ * @param [in] $n
+ *
+ * @return string bo_table
+ */
+function bo_table($n)
+{
+	$bo_table = "ms_" . etc::last_domain(etc::domain()) . '_'.$n;
+	return $bo_table;
+}
+
 
 
 
@@ -676,4 +741,61 @@ function html_header()
 </head>
 EOH;
 
+}
+
+
+/**
+ *
+ */
+function url_site_config()
+{
+	return x::url() . "?module=multi&action=config_first_page";
+}
+
+function url_forum_list( $id )
+{
+	return g::url_forum_list($id);
+}
+function url_forum_read( $bo_id, $wr_id )
+{
+	return g::url()."/bbs/board.php?bo_table=$bo_id&wr_id=$wr_id";
+}
+
+
+
+
+
+
+
+
+function path_logo($domain=null)
+{
+	return x::path_logo($domain);
+}
+
+function url_logo($domain=null)
+{
+	return x::url_logo($domain);
+}
+function code_logo()
+{
+	return x::code_logo();
+}
+
+/**
+ *  @brief Brief
+ *  
+ *  @param [in] $dir Parameter_Description
+ *  @return string path of upload directory.
+ *  @code
+ *  	$folder = path_multi_upload( etc::last_domain(etc::domain()) );
+ *  	will return
+ *  	g5_path/data/upload/multisite/last-domain
+ *  @endcode
+ *  
+ *  @details Details
+ */
+function path_multi_upload($dir=null)
+{
+	return x::path_multi_upload($dir);
 }

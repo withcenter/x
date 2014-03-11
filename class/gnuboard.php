@@ -675,6 +675,24 @@ class gnuboard {
 	}
 	
 	
+	/**@short updates x_post_data table
+	 *
+	 */
+	static function post_data_update($bo_table, $wr_id, $field, $value, $raw=false)
+	{
+		if ( $raw == false ) $value = "'$value'";
+		db::query("
+			UPDATE x_post_data
+				SET
+					`$field`=$value
+			WHERE
+				bo_table='$bo_table'
+				AND
+				wr_id='$wr_id'
+		");
+	}
+	
+	
 	/**
 	 *  @brief Brief
 	 *  
@@ -844,16 +862,59 @@ class gnuboard {
 	/**
 	 *
 	 *
-	 * @param 'limit' limits the number of results.
+	 * @param $option mixed
+			if it's a string then, it is bo_table.
+			or it is an array for options.
+				when it is passed as array, you can ommit bo_table.
+	 *
+	 *
+	 
+	 * @param $option['limit'] limits the number of results.
 			examples of value
 				5
 				0,9
 				10,20
+	 * @param $option['select'] holds fields to extract.
+			The default is all the fields except 'wr_content']
+		
+		
+		
 	 *
+	 * @code normal usage
+			$rows = g::posts( $bo_table );
+			$rows = g::posts( array( 'domain'=>etc::domain(), 'limit'=>15) );
+	 * @endcode
+	 * @code LATEST POST
+					$posts = g::posts(
+					array(
+							'domain'			=> etc::domain(),
+							'limit'				=> 3,
+						)
+					);
+	 * @endcode
+	 * @code Latest post ORDER BY wr_hit		
+					$posts = g::posts(
+						array(
+							'domain'				=> etc::domain(),
+							//'bo_table'				=> 'qna',
+							//'wr_is_comment'	=> 0,
+							'wr_datetime'=> '>=' . g::datetime( time() - ONEDAY * 7),
+							'order by'=>'wr_hit DESC',
+							'limit'=>5
+						)
+					);
+	 @endcod
+	 
+	 
+	 
 	 * @code
 			if ( g::forum_exist( $id ) ) {
 				$posts = g::posts( array( 'bo_table' => $id, 'limit'=>5 ) );
 			}
+			
+			
+			
+
 		@code
 	 * @return array. the return value is the same as that of latest.lib.php
 	 */
@@ -863,41 +924,43 @@ class gnuboard {
 		
 		$o			= array();
 		$cond		= array();
-		$where	= null;
+		
 		
 		if ( is_array( $option ) ) $o = $option;
 		else $o['bo_table'] = $option;
 		
-		if ( ! isset( $o['wr_is_comment']  ) ) $cond[] = 'wr_is_comment=0';
+		db::option( $o );
+		if ( $o['domain'] ) $cond[] = db::cond('domain');
+		if ( $o['bo_table'] ) $cond[] = db::cond('bo_table');
+		if ( $o['wr_datetime'] ) $cond[] = db::cond('wr_datetime');
+		if ( ! isset( $o['wr_is_comment']  ) ) $cond[] = "wr_is_comment=0";
+		else $cond[] = db::cond('wr_is_comment');
+		if ( $cond ) $where = "WHERE " . implode( ' AND ', $cond );
+		else $where = null;
 		
-		if ( $cond ) {
-			$where = "WHERE " . implode( 'AND', $cond );
-		}
+		
+		if ( empty($o['select']) ) $o['select'] = "idx,domain,bo_table,wr_id,wr_parent,wr_is_comment,wr_comment,ca_name,wr_datetime,wr_hit,wr_good,wr_nogood,wr_name,mb_id,wr_subject";
 		
 		
 		if ( isset( $o['order by'] ) ) $order_by = $o['order by'];
-		else $order_by = "wr_num";
+		else $order_by = "wr_datetime DESC";
 		
 		if ( isset( $o['limit'] ) ) $limit = "$o[limit]";
 		else $limit = "0,10";
 		
-		$board				= self::config( $o['bo_table'] );
-        $bo_subject		= get_text($board['bo_subject']);
-		$board_table	= self::board_table( $o['bo_table'] );
+		
+		
+		
+		
 		$sql = "
-			SELECT *
-			FROM $board_table
+			SELECT $o[select]
+			FROM x_post_data
 			$where
 			ORDER BY $order_by
 			LIMIT $limit
 		";
 		$rows = db::rows( $sql );
-		$i = 0;
-		foreach ( $rows as $row ) {
-			$list[$i] = get_list($row, $board, $latest_skin_url, $subject_len);
-			$i++;
-		}
-		return $list;
+		return $rows;
 	}
 	
 	static function posts_old( $o )
@@ -948,6 +1011,14 @@ class gnuboard {
 		return db::rows( $q );
 	}
 	
+	
+	/** @short returns gnuboard5 datetime format
+	 *
+	 */
+	static function datetime($stamp=null) {
+		if ( empty($stamp) ) $stamp = time();
+		return date('Y-m-d H:i:s', $stamp);
+	}
 	
 	
 	

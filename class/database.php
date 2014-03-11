@@ -1,6 +1,54 @@
 <?php
 class db extends database { }
-class database {
+class sql {
+	static $option;
+	static function option( $o )
+	{
+		self::$option = $o;
+	}
+	
+	/**
+	 *
+	 * $v holds the expression and value.
+		@note
+			'wr_datetime'=> '>=' . g::datetime( time() - ONEDAY * 7),
+			will be parsed as wr_datetime >= 'YYYYMMDD HH:ii:ss'
+		@note
+			'domain'				=> etc::domain(),
+			will be parsed as domain='domain'
+		@note
+			'wr_is_comment'	=> 0,
+			will be parsed as "wr_is_comment='0'"
+		@code basic usage
+					db::option( $o );
+					if ( $o['domain'] ) $cond[] = db::cond('domain');
+					if ( $o['bo_table'] ) $cond[] = db::cond('bo_table');
+					if ( $o['wr_datetime'] ) $cond[] = db::cond('wr_datetime');
+					if ( ! isset( $o['wr_is_comment']  ) ) $cond[] = "wr_is_comment=0";
+					else $cond[] = db::cond('wr_is_comment');
+					if ( $cond ) $where = "WHERE " . implode( ' AND ', $cond );
+					else $where = null;
+		@endcode
+			
+	 */
+	static function cond( $k ) {
+		$v = self::$option[ $k ];
+		if ( $v[0] == '<'  || $v[0] == '>' ) {
+			if ( $v[1] == '=' ) {
+				$exp = substr( $v, 0, 2 );
+				$v = substr($v, 2);
+			}
+			else {
+				$exp = $v[0];
+				$v = substr($v, 1);
+			}
+		}
+		else $exp = '=';
+		$str = "`$k`$exp'$v'";
+		return $str;
+	}
+}
+class database extends sql{
 
 	/**
 	 *  @brief returns the result set after query.
