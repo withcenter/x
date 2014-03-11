@@ -818,6 +818,24 @@ class gnuboard {
 	{
 		return db::table_exist( self::board_table($bo_table) );
 	}
+	
+	/**
+	 *  @brief Brief
+	 *  
+	 *  @param [in] $html Parameter_Description
+	 *  @param [in] $bo_table Parameter_Description
+	 *  @param [in] $width Parameter_Description
+	 *  @param [in] $height Parameter_Description
+	 *  @return Return_Description
+	 *  
+	 *  @details Details
+	 *  
+	 *  @code
+	 *  	 $thumb = get_list_thumbnail($forum, $row['wr_id'], 450, 350);
+	 *  	 if ( empty($thumb['src']) )  $thumb['src'] = g::thumbnail_from_image_tag( $row['wr_content'], $forum, 450, 350 );
+	 *  @endcode
+	 *  @todo once it has thumbnail image, then do not repeat creating thumbnail.
+	 */
 	static function thumbnail_from_image_tag( $html, $bo_table, $width=200, $height=200 )
 	{
 		if ( empty($html) ) return null;

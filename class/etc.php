@@ -800,3 +800,8 @@ function path_multi_upload($dir=null)
 {
 	return x::path_multi_upload($dir);
 }
+
+function bo_table_name( $id ) {
+	return g::write_table( $id );
+}
+

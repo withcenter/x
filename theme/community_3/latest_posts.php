@@ -1,4 +1,5 @@
 <?
+
 include_once(G5_LIB_PATH.'/thumbnail.lib.php'); 
 /** POSTS RECENT */
 /* old code. can be deleted whenever.
@@ -49,6 +50,7 @@ $posts = g::posts(
 				$latest_comment_count = '['.strip_tags($p['wr_comment']).']';
 				if ( $latest_comment_count == 0 ) $no_comment = 'no-comment';
 				else $no_comment = '';
+				
 				$latest_img = get_list_thumbnail( $p['bo_table'] , $p['wr_id'], 38, 38);
 
 				if ( !$latest_img ) $img = x::url_theme().'/img/no-image.png';

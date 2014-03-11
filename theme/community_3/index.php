@@ -1,28 +1,33 @@
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/banner.css' />
 <script src='<?=x::url_theme()?>/js/banner.js' /></script>
-	<?	for ( $i = 1, $has_images = 0; $i <= 5 ; $i++) { 
-			if( $banner_image = ms::meta( 'com3banner_'.$i ) ) {
-				$has_images++;
-				break;
+
+	<?
+	
+		$banners = array();
+		for ( $i = 1; $i <= 5 ; $i++) { 
+			if ( file_exists( x::path_file( "banner$i" ) ) ) {
+				$banners[] = array(
+					'src' => x::url_file( "banner$i" ),
+					'href' => x::meta( "banner{$i}_url" ),
+					'text' => x::meta("banner{$i}_text")
+				);
 			}
 		}
+		
 	?>
 		<div class='banner'>
 			<?
-				if ( $has_images ) {
-					$banner_url = ms::meta('img_url');
-					$banner_num = 1;
-					for ( $i = 1; $i <= 5 ; $i++) {
-						if( !$banner_image = ms::meta( 'com3banner_'.$i ) ){
-							continue;
-						}
-						if ( $i == 1 ) $first_image = 'selected';
+				if ( $banners ) {
+					$selected = 0;
+					foreach ( $banners as $banner ) {
+
+						if ( ! $selected ++ ) $first_image = 'selected';
 						else $first_image = '';
+						
 						echo "<div class='banner-image image_num_$banner_num $first_image'>";
-						if ( !$url = ms::meta('com3banner_'.$i.'_text2') )  $url = "javascript:void(0)";
-						echo "<a href='$url' target='_blank'><img src='".$banner_url.$banner_image."'></a>";
-						echo "<span class='banner-content'><p class='banner-text'>".cut_str(strip_tags(ms::meta('com3banner_'.$i.'_text1')),50,'...')."</p></span>";
-						echo "<div class='banner-more'><a href='$url' target='_blank'>자세히 &gt;</a></div>";
+						echo "<a href='$banner[href]' target='_blank'><img src='$banner[src]'></a>";
+						echo "<span class='banner-content'><p class='banner-text'>".cut_str(strip_tags($banner['text']),50,'...')."</p></span>";
+						echo "<div class='banner-more'><a href='$banner[href]' target='_blank'>자세히 &gt;</a></div>";
 						echo "</div>";
 						$banner_num++;
 					}

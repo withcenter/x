@@ -424,6 +424,7 @@ class x {
 		return 'ms_' . etc::last_domain($domain);
 	}
 	
+	
 	/**
 	 *  @brief returns the number of forum of the site (multisite or multidomain).
 	 *  
@@ -542,5 +543,33 @@ class x {
 		return self::url_file( self::code_logo(), etc::last_domain( $domain ) );
 	}
 	
+	
+	/**
+	 *  @brief insert post into post_data
+	 *  
+	 *  @param [in] $o Parameter_Description
+	 *  @return Return_Description
+	 *  
+	 *  @details Details
+	 */
+	static function post_data_insert( $o ) {
+		$sql = "insert into x_post_data
+                set
+					domain					= '$o[domain]',
+					bo_table				= '$o[bo_table]',
+					wr_id					= '$o[wr_id]',
+					wr_comment				= 0,
+					ca_name					= '$o[ca_name]',
+					wr_subject				= '$o[wr_subject]',
+					wr_content				= '$o[wr_content]',
+					wr_hit = 0,
+					wr_good = 0,
+					wr_nogood = 0,
+					mb_id					= '$o[mb_id]',
+					wr_name					= '$o[wr_name]',
+					wr_datetime				= '$o[wr_datetime]'
+				";
+		db::query($sql);
+	}
 	
 }
