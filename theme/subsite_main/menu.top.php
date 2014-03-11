@@ -13,7 +13,7 @@
 		if ( $is_admin == 'super' ){
 	?>
 	<li class="menu-list">
-		<a href="<?=x::url()?>/?module=multidomain&action=config" class="admin">사이트관리</a>
+		<a href="<?=url_site_config()?>" class="admin">사이트관리</a>
 	</li>
 	<?}?>
 	

@@ -1,9 +1,10 @@
 <?php
 	
 for ( $i=1; $i <=6; $i++ ) {
-	if ( $in['forum_no_'.$i.'_bo_table'] ) ms::meta('forum_no_'.$i, $in['forum_no_'.$i.'_bo_table']);
-	else ms::meta('forum_no_'.$i, $in['forum_no_'.$i] );
-}	
+	$code = 'forum_no_'.$i.'_bo_table';
+	x::meta( $code, $in[ $code ] );
+}
+
 
 	
 	ms::meta('com3banner_1_text1',$in['com3banner_1_text1']);

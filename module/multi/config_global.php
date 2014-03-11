@@ -1,9 +1,5 @@
-<?
-	include x::dir() . '/module/multi/config_global.php';
-	return;
-?>
 <?php
-	if ( ! ms::admin() ) {
+	if ( ! admin() ) {
 		echo "You are not admin";
 		return; 
 	}
@@ -16,15 +12,15 @@
 	
 	$no_of_board = count($rows);	
 ?>
-<script src='<?=x::url()?>/module/multisite/subsite.js'></script>
+<script src='<?=x::url()?>/module/<?=$module?>/subsite.js'></script>
 <form action='?' class='config_general' method='POST' enctype='multipart/form-data'>
-		<input type='hidden' name='module' value='multisite'>
+		<input type='hidden' name='module' value='<?=$module?>'>
 		<input type='hidden' name='action' value='config_global_submit'>
 <div class='config site-global'>
 	
 	<div class='config-main-title'>
 		<div class='inner'>
-			<img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 사이트 정보
+			<img src='<?=x::url().'/module/<?=$module?>/img/direction.png'?>'> 통합 사이트 정보
 		</div>				
 	</div>
 	
@@ -75,9 +71,9 @@
 
 
 		
-		<? if ( ms::meta('theme') ) { ?>
+		<? if ( x::theme() ) { ?>
 			<?php
-				if ( file_exists( ms::theme('setting') ) ) include ms::theme('setting');
+				if ( file_exists( x::theme('setting') ) ) include x::theme('setting');
 			?>
 		<? } else { ?>
 			<h1>테마를 선택하십시오.</h1>

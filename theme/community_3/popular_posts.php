@@ -10,7 +10,7 @@ $posts = g::posts(
 		'domain'				=> etc::domain(),
 		'wr_datetime'=> '>=' . g::datetime( time() - ONEDAY * 7),
 		'order by'=>'wr_hit DESC',
-		'limit'=>5
+		'limit'=>4
 	)
 );
 if ( $posts ) { ?>
@@ -33,7 +33,7 @@ if ( $posts ) { ?>
 			$ctr = 4;
 			$i = 0;
 			foreach ( $posts as $p ) {
-					$url = G5_BBS_URL."/board.php?bo_table=$p[bo_table]&wr_id=$post[wr_id]";
+					$url = G5_BBS_URL."/board.php?bo_table=$p[bo_table]&wr_id=$p[wr_id]";
 					$popular_subject = conv_subject( $p['wr_subject'], 15, '...');
 					$no_of_views = $p['wr_hit'];
 					$no_of_comments = $p['wr_comment'];

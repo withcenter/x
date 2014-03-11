@@ -1,6 +1,4 @@
 <?php
-define('MS_EXIST', -9200);
-define('MS_MAX_FORUM', 20);
 class ms extends multisite { }
 class multisite {
 
@@ -85,7 +83,16 @@ class multisite {
 		return $multisite_get[ $domain ];
 	}
 
-	/**
+	static function meta( $key, $code='_NULL_CAN_BE_SAVED_', $value=null )
+	{
+		return x::meta( $key, $code, $value );
+	}
+	static function meta_get( $key, $code )
+	{
+		return x::meta_get($key,$code);
+	}
+	
+	/** @deprecated
 	 *  @brief get or set meata data.
 	 *  
 	 *  @param [in] $code 'code' or 'domain'
@@ -95,6 +102,7 @@ class multisite {
 	 *  @warning when you get data,  cannot use 'domain'. Use 'meta_get()' to use domain.
 	 *  @details This function does memory cache. So how many times you call this function, it will only access to data base one time in the first.
 	 */
+	/*
 	static function meta($code, $value=null, $third_value=null)
 	{
 		if ( $third_value ) {
@@ -119,7 +127,8 @@ class multisite {
 			}
 		}
 	}
-	
+	*/
+	/* @deprecated 
 	function meta_get($domain, $code)
 	{
 		global $_meta;
@@ -129,6 +138,7 @@ class multisite {
 		}
 		return $_meta[$k];
 	}
+	*/
 	
 	
 	
@@ -302,7 +312,8 @@ class multisite {
 	}
 	
 	
-	/**
+	/** @deprecated use the one in x.
+	 *
 	 *  @brief returns forum ID
 	 *  사이트의 게시판 아이디를 리턴한다.
 	 *  
@@ -412,7 +423,8 @@ class multisite {
 		return $path;
 	}
 	
-	/**
+	/** @DEPRECATED use the one in x
+	 *
 	 *  @brief returns the number of forum of the site.
 	 *  
 	 *  @return int
@@ -455,7 +467,7 @@ class multisite {
 	}
 	
 	
-	/**
+	/** @DEPRECATED
 	 *  @brief returns all the forum id(s) and ID only.
 	 *  
 	 *  @param [in] $domain is the domain (or subdomain of subsite)
@@ -475,7 +487,9 @@ class multisite {
 		return $ret;
 	}
 	
-	/** @short returns all the forum record(information) of the domain( subsite )
+	/** @DEPRECATED use the one in x
+	 *
+	 * @short returns all the forum record(information) of the domain( subsite )
 	 *
 	 * @param $domain if omitted, then it uses current accessed domain.
 	 * @return array all the board table record of the domain.
@@ -490,7 +504,10 @@ class multisite {
 		return $rows;
 	}
 	
-	
+	/** @deprecated use in x
+	 *
+	 *
+	 */
 	static function members()
 	{
 		global $g5;

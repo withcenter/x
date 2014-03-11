@@ -19,7 +19,16 @@ class sql {
 		@note
 			'wr_is_comment'	=> 0,
 			will be parsed as "wr_is_comment='0'"
-			
+		@code basic usage
+					db::option( $o );
+					if ( $o['domain'] ) $cond[] = db::cond('domain');
+					if ( $o['bo_table'] ) $cond[] = db::cond('bo_table');
+					if ( $o['wr_datetime'] ) $cond[] = db::cond('wr_datetime');
+					if ( ! isset( $o['wr_is_comment']  ) ) $cond[] = "wr_is_comment=0";
+					else $cond[] = db::cond('wr_is_comment');
+					if ( $cond ) $where = "WHERE " . implode( ' AND ', $cond );
+					else $where = null;
+		@endcode
 			
 	 */
 	static function cond( $k ) {

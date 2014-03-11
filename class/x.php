@@ -187,7 +187,10 @@ class x {
 	 *  @return string file path
 	 *  
 	 *  @details return the path of the file. if the file does not exists, then the caller function may print out error.
-	 * 	
+	 *  @code to get theme
+			x::theme();
+		 @endcode
+		 
 	 * 	@code
 			<?include x::theme('menu')?>
 	 * 	@endcode
@@ -212,6 +215,15 @@ class x {
 		if ( file_exists( $path ) ) return $path;
 		else return self::path_null();
 		*/
+	}
+	
+	static function site_type()
+	{
+		return self::$config['site']['type'];
+	}
+	static function multisite()
+	{
+		return self::site_type() == 'multisite';
 	}
 	
 	/** @short loads(finds) the site information of the domain.
@@ -282,6 +294,92 @@ class x {
 		}
 	}
 	
+	
+	/**
+	 *  @brief get or set meata data.
+	 *  
+	 *  @param [in] $code 'code' or 'key'
+	 *  @param [in] $value 'value' or 'code'
+	 *	 @param [in] $value
+	 *  @note null can be saved as in value.
+	 
+	 *  @return empty
+	 *  @warning when you get data,  cannot use 'key'. Use 'meta_get()' to use key.
+						to save using 'key', 'code' and 'value', you can use meta()
+						but to get 'value' using 'key' and 'code', you must use meta_get()
+	 *
+	 *  @waring use meta_get(), meta_set() for clear understand.
+	 *
+	 *  @details This function does memory cache. So how many times you call this function, it will only access to data base one time in the first.
+	 *  @note
+						if there are there parametas (which means if all parametas are passed), then it will INSERT/UPDATE value of 'key' and 'code'
+						If there are two parametas only ( code and value ), then it will INSERT/UPDATE the value of the 'code' with the KEY OF DOMAIN. DOMAIN is AUTOMTICALLY chosen
+						if there is only one parametas, then it gets 'value' of the code with the acccessed DOMAIN ( KEY )
+	 *  @code
+						/// simple usage
+						x::meta('code','value to save');					/// set
+						echo x::meta('code');									/// get
+
+						
+						x::meta('key','code','No. 2 : value to save');	/// set
+						echo x::meta_get('key', 'code');						/// get
+
+						x::meta_set('key3', 'code', '<br>No.3 : value to save');		/// set
+						echo x::meta_get( 'key3', 'code' );										/// get
+
+						/// use x::config() if you want to not use 'key'.
+						x::config('only code', 'without key');
+						echo x::config('only code');
+	 *  @endcode
+	 */
+	static function meta($code, $value='_NULL_CAN_BE_SAVED_', $third_value=null)
+	{
+		
+		
+		
+		
+		if ( $value == '_NULL_CAN_BE_SAVED_' ) {
+			return self::meta_get(etc::domain(), $code);
+		}
+		else {
+			return self::meta_set( $code, $value, $third_value );
+		}
+	}
+	/**
+	 *
+	 */
+	function meta_get($key, $code)
+	{
+		global $_meta;
+		$k = "$key.$code";
+		if ( ! isset($_meta[$k]) ) {
+			$_meta[$k] = db::result("SELECT `value` FROM x_config WHERE `key`='$key' AND code='$code'");
+		}
+		return $_meta[$k];
+	}
+	
+	function meta_set( $key, $code, $value )
+	{
+		if ( empty($value) ) {
+			$value			= $code;
+			$code			= $key;
+			$key				= etc::domain();
+		}
+		
+		
+			$q = "SELECT code FROM x_config WHERE `key`='$key' AND code='$code'";
+			$v = db::result($q);
+			if ( $v ) {
+				db::update('x_config', array('value'=>$value), array('key'=>$key, 'code'=>$code) );
+			}
+			else {
+				db::insert('x_config', array('key'=>$key, 'code'=>$code, 'value'=>$value) );
+			}
+			
+	}
+	
+	
+	
 	/**
 	 *  @brief stores the config values that are set in global setting page into self::$config['global']
 	 *  
@@ -299,5 +397,98 @@ class x {
 	static function skin_code( $skin_folder, $bo_table ) {
 		return "{$skin_folder}-{$bo_table}";
 	}
+	
+	
+	/** 
+	 *
+	 *  @brief returns forum ID
+	 *  사이트의 게시판 아이디를 리턴한다.
+	 *  
+	 *  @param [in] $domain
+	 *  sub-site domain
+	 *  사이트 도메인
+	 *  @return string
+	 *  forum ID
+	 *  게시판 아이디
+	 *  
+	 *  @details
+	 *  	returns forum id like "ms_[domain]"
+	 *  	게시판 아이디 형식은 "ms_[도메인]" 이다.
+	 *  @code
+	 *  <?=g::url_board(x::board_id(etc::domain()))?>
+	 *  @endcode
+	 */
+	static function board_id( $domain=null )
+	{
+		if ( empty($domain) ) $domain = etc::domain();
+		return 'ms_' . etc::last_domain($domain);
+	}
+	
+	/**
+	 *  @brief returns the number of forum of the site (multisite or multidomain).
+	 *  
+	 *  @return int
+	 *  
+	 *  @details Use this function to count the number of forums of a sub-site.
+	 */
+	static function count_forum($domain=null)
+	{
+		global $g5;
+		if ( empty($domain) ) $domain = etc::domain();
+		$qb = "bo_table LIKE '" . self::board_id( $domain ) . "\_%'";
+		$q = "SELECT COUNT(*) FROM $g5[board_table] WHERE $qb";
+		return db::result($q);
+	}
+	
+	
+	/** @short returns all the forum record(information) of the domain( subsite )
+	 *
+	 * @param $domain if omitted, then it uses current accessed domain.
+	 * @return array all the board table record of the domain.
+	 */
+	static function forums($domain=null)
+	{
+		global $g5;
+		if ( $domain === null ) $domain = etc::domain();
+		$bo_table = self::board_id( $domain );
+		$qb = "bo_table LIKE '$bo_table\_%'";	
+		$rows = db::rows( "SELECT * FROM $g5[board_table] WHERE $qb");
+		return $rows;
+	}
+	
+	
+	/**
+	 *  @brief returns all the forum id(s) and ID only.
+	 *  
+	 *  @param [in] $domain is the domain (or subdomain of subsite)
+	 *  @return array of forum id(bo_table)
+	 *  
+	 *  @details use this function to get all the forum id.
+	 */
+	static function forum_ids( $domain=null )
+	{
+		$rows = self::forums($domain);
+		$ret = array();
+		if ( $rows ) {
+			foreach ( $rows as $row ) {
+				$ret[] = $row['bo_table'];
+			}
+		}
+		return $ret;
+	}
+	
+	/**
+	 *
+	 * @short returns members of a domain.
+	 *
+	 */
+	static function members($domain)
+	{
+		global $g5;
+
+		$q = "SELECT * FROM $g5[member_table] WHERE ".REGISTERED_DOMAIN."='$domain'";
+		return db::rows( $q );
+	}
+	
 	
 }

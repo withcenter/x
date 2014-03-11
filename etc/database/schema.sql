@@ -40,11 +40,15 @@ CREATE TABLE IF NOT EXISTS `x_multisite_meta` (
   UNIQUE KEY `domain` (`domain`,`code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+
 CREATE TABLE IF NOT EXISTS `x_config` (
+  `key` varchar(64) NOT NULL DEFAULT '',
   `code` varchar(64) NOT NULL DEFAULT '',
   `value` text,
-  PRIMARY KEY (`code`)
+  UNIQUE KEY `key` (`key`,`code`),
+  KEY `code` (`code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 
 
@@ -68,5 +72,7 @@ CREATE TABLE IF NOT EXISTS `x_post_data` (
   PRIMARY KEY (`idx`),
   KEY `domain` (`domain`),
   KEY `ca_name` (`ca_name`),
-  KEY `bo_table` (`bo_table`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8  ;
+  KEY `bo_table` (`bo_table`),
+  KEY `wr_datetime` (`wr_datetime`),
+  KEY `bo_table_2` (`bo_table`,`wr_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;

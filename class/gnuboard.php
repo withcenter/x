@@ -675,6 +675,24 @@ class gnuboard {
 	}
 	
 	
+	/**@short updates x_post_data table
+	 *
+	 */
+	static function post_data_update($bo_table, $wr_id, $field, $value, $raw=false)
+	{
+		if ( $raw == false ) $value = "'$value'";
+		db::query("
+			UPDATE x_post_data
+				SET
+					`$field`=$value
+			WHERE
+				bo_table='$bo_table'
+				AND
+				wr_id='$wr_id'
+		");
+	}
+	
+	
 	/**
 	 *  @brief Brief
 	 *  
@@ -866,6 +884,14 @@ class gnuboard {
 			$rows = g::posts( $bo_table );
 			$rows = g::posts( array( 'domain'=>etc::domain(), 'limit'=>15) );
 	 * @endcode
+	 * @code LATEST POST
+					$posts = g::posts(
+					array(
+							'domain'			=> etc::domain(),
+							'limit'				=> 3,
+						)
+					);
+	 * @endcode
 	 * @code Latest post ORDER BY wr_hit		
 					$posts = g::posts(
 						array(
@@ -878,6 +904,8 @@ class gnuboard {
 						)
 					);
 	 @endcod
+	 
+	 
 	 
 	 * @code
 			if ( g::forum_exist( $id ) ) {
@@ -896,30 +924,26 @@ class gnuboard {
 		
 		$o			= array();
 		$cond		= array();
-		$where	= null;
+		
 		
 		if ( is_array( $option ) ) $o = $option;
 		else $o['bo_table'] = $option;
 		
 		db::option( $o );
-		
-		
 		if ( $o['domain'] ) $cond[] = db::cond('domain');
 		if ( $o['bo_table'] ) $cond[] = db::cond('bo_table');
 		if ( $o['wr_datetime'] ) $cond[] = db::cond('wr_datetime');
 		if ( ! isset( $o['wr_is_comment']  ) ) $cond[] = "wr_is_comment=0";
 		else $cond[] = db::cond('wr_is_comment');
-		
-		if ( $cond ) {
-			$where = "WHERE " . implode( ' AND ', $cond );
-		}
+		if ( $cond ) $where = "WHERE " . implode( ' AND ', $cond );
+		else $where = null;
 		
 		
 		if ( empty($o['select']) ) $o['select'] = "idx,domain,bo_table,wr_id,wr_parent,wr_is_comment,wr_comment,ca_name,wr_datetime,wr_hit,wr_good,wr_nogood,wr_name,mb_id,wr_subject";
 		
 		
 		if ( isset( $o['order by'] ) ) $order_by = $o['order by'];
-		else $order_by = "wr_num";
+		else $order_by = "wr_datetime DESC";
 		
 		if ( isset( $o['limit'] ) ) $limit = "$o[limit]";
 		else $limit = "0,10";

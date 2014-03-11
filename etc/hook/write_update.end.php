@@ -9,6 +9,7 @@
                 set 
 					domain					= '$domain',
 					bo_table					= '$bo_table',
+					wr_id						= '$wr_id',
 					wr_comment = 0,
                      ca_name = '$ca_name',
                      wr_subject = '$wr_subject',

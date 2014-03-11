@@ -1,33 +1,9 @@
 <?php
 function setTopMenu( $name ) {
-	global $cfgs;
 	
 	ob_start();
-	if ( ms::exist() ) {
-		$cfgs = ms::forums();
-		if ( ! empty( $cfgs ) ) {
-	?>
-	<select name='<?=$name?>'>
-		<option value=''>게시판을 선택하세요</option>
-		<option value=''></option>
-		<? foreach ( $cfgs as $c ) { 
-			if ( $c['bo_table'] == ms::meta($name) ) $selected = 'selected';
-			else $selected = null;
-		?>
-			<option value="<?=$c['bo_table']?>" <?=$selected?>><?=$c['bo_subject']?></option>
-		<? } ?>
-	</select>
-	<script>
-	$(function(){
-		$("[name='<?=$name?>']").change(function(){
-			$("[name='<?=$name?>_bo_table']").val($(this).val());
-		});
-	});
-	</script>
-	<?
-		}
-	}?>
-	<input type='text' name='<?=$name?>_bo_table' value="" placeholder=" 게시판 아이디 직접 입력" style='height: 23px; width: 140px; line-height: 23px; padding: 0 10px;' />
+?>
+	<input type='text' name='<?=$name?>' value="<?=x::meta( $name )?>" placeholder=" 게시판 아이디 직접 입력" style='height: 23px; width: 140px; line-height: 23px; padding: 0 10px;' />
 <?
 	return $content = ob_get_clean();
 }

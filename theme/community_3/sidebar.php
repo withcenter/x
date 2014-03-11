@@ -7,7 +7,7 @@
 	<a href='http://www.philgo.com' target='_blank'><img src='<?=x::url_theme().'/img/company_banner.png';?>' style='border:0;'></a>
 </div>
 
-<?=latest('x-latest-community3-posts',  ms::meta('forum_no_1') , 4 , 20)?>
+<?=latest('x-latest-community3-posts',  bo_table(1) , 4 , 20)?>
 <? include x::theme('popular_posts') ?>
 
 <?
