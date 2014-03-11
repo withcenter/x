@@ -1,7 +1,10 @@
+.skin-update{
+	height:100%;
+}
+
 .comm3_timed_list_with_image {
-	width:368px;	
-	height: 210px;
 	overflow: hidden;
+	height:100%;
 	border:1px solid #bbbbbb;
 }
 
@@ -80,7 +83,8 @@
 	height:15px;
 	overflow:hidden;	
 	line-height:15px;
-	font-weight: bold;
+	font-weight: bold;	
+	word-break:break-all;
 }
 .comm3_timed_list_with_image .subject a {
 	color: #494949;
@@ -90,7 +94,8 @@
 	height:15px;
 	overflow:hidden;	
 	line-height:15px;
-	max-width:250px;	
+	width:100%;	
+	word-break:break-all;
 }
 
 .comm3_timed_list_with_image .contents_wrapper a{

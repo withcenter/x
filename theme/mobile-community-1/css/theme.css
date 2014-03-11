@@ -235,6 +235,11 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 	width: 100%;
 }
 
+/* image caption (4 images) */
+.image-with-caption{
+	margin-bottom:10px;
+}
+
 /* below 960 px */
 @media all and ( max-width: 60em ) {
 	#content {

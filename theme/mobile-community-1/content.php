@@ -157,3 +157,87 @@
 	</div>
 	<div style='clear:both;'></div>			
 </div>
+
+<div class='image-with-caption'>
+	<div class='inner'>
+		<?
+		$latest_bo_table = ms::board_id(etc::domain()).'_1';
+		if ( g::forum_exist( $latest_bo_table ) ) {
+			echo  latest("x-community_3_images_with_caption", $latest_bo_table, 4, 20, $cache_time=1, array('icon'=>x::url_theme()."/img/2papers.png"));
+		}
+		?>
+	</div>
+</div>
+
+<div class='latest-thumbnail'>
+	<div class='left'>
+		<div class='inner'>
+		<?
+		$latest_bo_table = ms::board_id(etc::domain()).'_1';
+		if ( g::forum_exist( $latest_bo_table ) ) {
+			echo  latest("x-community-3-timed-list", $latest_bo_table, 5, 50, $cache_time=1, array('icon'=>x::url_theme()."/img/2papers.png"));
+		}
+		?>
+		</div>
+	</div>
+	<div class='right'>
+		<div class='inner'>
+		<?
+		$latest_bo_table = ms::board_id(etc::domain()).'_3';
+		if ( g::forum_exist( $latest_bo_table ) ) {
+			echo latest("x-community-3-timed-list", $latest_bo_table, 5, 50, $cache_time=1, array('icon'=>x::url_theme()."/img/newspaper.png"));
+		}
+		?>
+		</div>
+	</div>
+	<div style='clear:both;'></div>			
+</div>
+
+
+<div class='latest-thumbnail'>
+	<div class='left'>
+		<div class='inner'>
+		<?
+		$latest_bo_table = ms::board_id(etc::domain()).'_1';
+		if ( g::forum_exist( $latest_bo_table ) ) {
+			echo  latest("x-community-3-timed-list-with-images", $latest_bo_table, 5, 50, $cache_time=1, array('icon'=>x::url_theme()."/img/2papers.png"));
+		}
+		?>
+		</div>
+	</div>
+	<div class='right'>
+		<div class='inner'>
+		<?
+		$latest_bo_table = ms::board_id(etc::domain()).'_3';
+		if ( g::forum_exist( $latest_bo_table ) ) {
+			echo latest("x-community-3-timed-list-with-images", $latest_bo_table, 5, 50, $cache_time=1, array('icon'=>x::url_theme()."/img/newspaper.png"));
+		}
+		?>
+		</div>
+	</div>
+	<div style='clear:both;'></div>			
+</div>
+
+<div class='latest-thumbnail'>
+	<div class='left'>
+		<div class='inner'>
+		<?
+		$latest_bo_table = ms::board_id(etc::domain()).'_1';
+		if ( g::forum_exist( $latest_bo_table ) ) {
+			echo  latest("x-latest-community3-posts", $latest_bo_table, 5, 50, $cache_time=1, array('icon'=>x::url_theme()."/img/2papers.png"));
+		}
+		?>
+		</div>
+	</div>
+	<div class='right'>
+		<div class='inner'>
+		<?
+		$latest_bo_table = ms::board_id(etc::domain()).'_3';
+		if ( g::forum_exist( $latest_bo_table ) ) {
+			echo latest("x-latest-community3-posts", $latest_bo_table, 5, 50, $cache_time=1, array('icon'=>x::url_theme()."/img/newspaper.png"));
+		}
+		?>
+		</div>
+	</div>
+	<div style='clear:both;'></div>			
+</div>

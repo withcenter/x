@@ -46,9 +46,12 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			
 			if( !$list[$i]['comment_cnt'] ) $comment_count = "<span class='comment_count no-comment'>0</span>";
 			else $comment_count = "<span class='comment_count'>".$list[$i]['comment_cnt']."</span>";
-			
-			echo "<div class='comment_and_time'>".$comment_count."<span class='time'>".$list[$i]['datetime2']."</span></div>";
-             ?>
+			?>				
+				<div class='comment_and_time'>
+					<?=$comment_count?>
+					<span class='time'><?=$list[$i]['datetime2']?></span>
+				</div>
+			<div style='clear:both'></div>
         </li>
     <?php }  ?>
     <?php if (count($list) == 0) { //게시물이 없을 때  ?>
@@ -59,6 +62,6 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		<li><span class='subject'><img class='dot' src='<?=$latest_skin_url?>/img/square-icon.png' /><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=1'>(모바일)홈페이지, 스마트폰 앱</a></span></li>
     <?php }  ?>
     </ul>
-    <?/*<div class="lt_more"><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=<?php echo $bo_table ?>"><span class="sound_only"><?php echo $bo_subject ?></span>더보기</a></div>*/?>
+    <div style='clear:both'></div>
 </div>
 <!-- } <?php echo $bo_subject; ?> 최신글 끝 -->

@@ -70,13 +70,13 @@
 .travel_lower_items .item .subject a{
 	display:inline-block;
 	vertical-align: middle;
-	max-width:75%;
+	width:65%;
 	text-decoration:none;	
 	overflow:hidden;
 }
 
 .travel_lower_items .item .subject .bullet{
 	position:relative;
-	top:-2px;
+	top:-1px;
 	margin-right:8px;
 }

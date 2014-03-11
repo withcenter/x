@@ -1,5 +1,6 @@
 .community_images_with_captions  {
-	height: 158px;
+	padding-bottom:2px;
+	border:1px solid #bbbbbb;
 }
 .community_images_with_captions  .title{
 	border-bottom:1px solid #bbbbbb;
@@ -38,9 +39,11 @@
 }
 
 .community_images_with_captions_container {
-	width:172px;	
+	/*width:172px;	*/
+	width:23%;
 	float: left;
-	margin-left:11px;	
+	/*margin-left:11px;*/
+	margin-left:1.48%;
 	margin-bottom:10px;
 }
 
@@ -49,8 +52,8 @@
 }
 
 .images_with_captions .img-wrapper{
-	width:168px;
-	height:85px;
+	/*width:168px;
+	height:85px;*/
 	padding: 2px;
 	border:1px solid #bbbbbb;
 }
@@ -62,13 +65,14 @@
 
 
 .images_with_captions .caption {
-	width:160px;
+	width:90%;
 	text-align:center;
 	overflow:hidden;
 	margin: 0.4em auto 0;
 	line-height: 1.2em;
 	height: 1em;
 	word-break: break-all;
+	white-space:nowrap;
 }
 
 .images_with_captions .caption a{	
