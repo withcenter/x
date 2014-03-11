@@ -1,5 +1,5 @@
 <?php
-	if ( ! ms::admin() ) {
+	if ( ! ms::admin() && $is_admin != 'super' ) {
 		return; 
 	}
 	
@@ -146,3 +146,7 @@
 		</div>
 	</div>
 </div>
+<?php
+	if ( $is_admin == 'super' ) {
+		echo "<a href='".x::url()."/?module=statics&action=admin_member'>X Admin으로 이동</a>";
+	}
