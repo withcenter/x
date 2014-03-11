@@ -16,8 +16,10 @@
 		else $page_no = 1;
 		$no_of_post = 20;
 		$start = ( $page_no - 1 ) * $no_of_post;
-		$total_post = db::result ( "SELECT COUNT(*) FROM ".$g5['member_table']." WHERE mb_id <> 'admin' $cond" );
-		$rows = db::rows("SELECT * FROM ".$g5['member_table']." WHERE mb_id <> 'admin' $cond ORDER BY mb_no DESC LIMIT $start, $no_of_post");
+		$domain = etc::domain();
+		
+		$total_post = db::result ( "SELECT COUNT(*) FROM ".$g5['member_table']." WHERE ".REGISTERED_DOMAIN."='$domain' AND mb_id <> 'admin' $cond" );
+		$rows = db::rows("SELECT * FROM ".$g5['member_table']." WHERE ".REGISTERED_DOMAIN."='$domain' AND mb_id <> 'admin' $cond ORDER BY mb_no DESC LIMIT $start, $no_of_post");
 ?>
 <div class='config config-member'>
 
