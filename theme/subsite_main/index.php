@@ -1,3 +1,5 @@
+<h1 style='font-size: 2em; margin: 3em 1em; text-align: center; color: red;'>홈페이지 업데이트 중입니다. 약 24시간 정도 후, 홈페이지에 정상적으로 보일 것입니다.</h1>
+
 <div id='howto-steps'>
 	<table cellspacing=0 cellpadding=0 width='100%'><tr valign='top'>
 		<td>
