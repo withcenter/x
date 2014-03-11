@@ -1,6 +1,5 @@
 <?php
 	if ( ! ms::admin() ) {
-		echo "You are not admin";
 		return; 
 	}
 	/* 생성된 게시판 정보를 가저온다 */

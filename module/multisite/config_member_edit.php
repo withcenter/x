@@ -1,4 +1,8 @@
 <?php
+if ( ! ms::admin() ) {
+	return; 
+}
+
 if ( $in['done'] ) {
 	$up = array();
 	if ( $mb_password ) $in['mb_password'] = sql_password($mb_password);
@@ -58,56 +62,56 @@ $minfo = db::row("SELECT * FROM ".$g5['member_table']." WHERE mb_id='$mb_id'");
 			<div class='member-info-content-edit'>
 				<div class='title'>회원정보 수정</div>
 				<table cellpadding=0 cellspacing=0 width='100%'>
-					<tr>
+					<tr valign='top'>
 						<td width=120><span class='sub-title'>이름</span></td>
 						<td> <input type='text' name='mb_name' value='<?=$minfo['mb_name']?>' /></td>
 					</tr>
-					<tr>
+					<tr valign='top'>
 						<td width=120><span class='sub-title'>닉네임</span></td>
 						<td><input type='text' name='mb_nick' value='<?=$minfo['mb_nick']?>' /></td>
 					</tr>
-					<tr>
+					<tr valign='top'>
 						<td width=120><span class='sub-title'>이메일</span></td>
 						<td><input type='text' name='mb_email' value='<?=$minfo['mb_email']?>' /></td>
 					</tr>
-					<tr>
+					<tr valign='top'>
 						<td width=120><span class='sub-title'>홈페이지</span></td> 
 						<td><input type='text' name='mb_homepage' value='<?=$minfo['mb_homepage']?>' /></td>
 					</tr>
-					<tr>
+					<tr valign='top'>
 						<td width=120><span class='sub-title'>성별</span></td>
 						<td><input type='text' name='mb_sex' value='<?=$minfo['mb_sex']?>' /></td>
 					</tr>
 					
-					<tr>
+					<tr valign='top'>
 						<td width=120><span class='sub-title'>유선전화</span></td> 
 						<td><input type='text' name='mb_tel' value='<?=$minfo['mb_tel']?>' /></td>
 					</tr>
-					<tr>
+					<tr valign='top'>
 						<td width=120><span class='sub-title'>휴대전화</span></td> 
 						<td><input type='text' name='mb_hp' value='<?=$minfo['mb_hp']?>' /></td>
 					</tr>
-					<tr>
+					<tr valign='top'>
 						<td width=120><span class='sub-title'>우편번호</span></td>
-						<td>
+						<td class='member-zip'>
 							 <input type='text' name='mb_zip1' value='<?=$minfo['mb_zip1']?>' /> - <input type='text' name='mb_zip2' value='<?=$minfo['mb_zip2']?>' />
 						</td>
 					</tr>
-					<tr>
+					<tr valign='top'>
 						<td width=120>
 							<span class='sub-title'>주소</span> 
 						</td>
-						<td>
+						<td class='member-address'>
 							<input type='text' name='mb_addr1' value='<?=$minfo['mb_addr1']?>' /> <input type='text' name='mb_addr2' value='<?=$minfo['mb_addr2']?>' />
-							<div><input type='text' name='mb_addr3' value='<?=$minfo['mb_addr3']?>' /></div>
-							<div><input type='text' name='mb_addr_jibeon' value='<?=$minfo['mb_addr_jibeon']?>' /></div>
+							<input type='text' name='mb_addr3' value='<?=$minfo['mb_addr3']?>' />
+							<input type='text' name='mb_addr_jibeon' value='<?=$minfo['mb_addr_jibeon']?>' class='member-address-last'/>
 						</td>
 					</tr>
-					<tr>
+					<tr valign='top'>
 						<td width=120><span class='sub-title'>서명</span></td>
 						<td><textarea name='mb_name'><?=$minfo['mb_signature']?></textarea></td>
 					</tr>
-					<tr>
+					<tr valign='top'>
 						<td width=120><span class='sub-title'>자기소개</td> 
 						<td><textarea name='mb_name'><?=$minfo['mb_profile']?></textarea></td>
 					</tr>
@@ -153,6 +157,7 @@ $minfo = db::row("SELECT * FROM ".$g5['member_table']." WHERE mb_id='$mb_id'");
 				</div>
 			</div>
 		</div>
-		<input type='submit' value='업데이트' />
+
 	</div>
+			<input type='submit' value='업데이트' class='per-config-submit'/>
 </form>

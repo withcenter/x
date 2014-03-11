@@ -1,4 +1,8 @@
 <?php
+	if ( ! ms::admin() ) {
+		return; 
+	}
+	
 	if ( $in['option'] == 'mb_edit' ) include_once 'config_member_edit.php';
 	else {
 		$cond = null;

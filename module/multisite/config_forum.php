@@ -1,6 +1,5 @@
 <?
 	if ( ! ms::admin() ) {
-		echo "You are not admin";
 		return;
 	}
 	if ( $in['mode'] == 'forum_setting' ) include_once x::dir() . '/module/multisite/forum_setting.php';
