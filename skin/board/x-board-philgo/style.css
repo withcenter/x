@@ -303,7 +303,7 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 	background-color:#ffffff;
 	display:none;
 	white-space:nowrap;
-	padding-left:8px;
+	padding-left:4px;
 }
 
 #board_philgo_1 .post_list .other-images img{
@@ -314,12 +314,10 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 	border-radius:3px;
 }
 
-#board_philgo_1 .post_list .text-info{
-	position:relative;
+#board_philgo_1 .post_list .text-info{	
 	margin-top:1px;
 	padding-left:10px;
 	height:80px;
-	position:relative;
 }
 
 #board_philgo_1 .post_list .text-info:hover{
