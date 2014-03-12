@@ -58,19 +58,19 @@
 	</script>
 <div class='main-menu'><div class='inner'>
 	<? for ( $i = 1; $i <= 6; $i++ ) { ?>
-	<? if ( ms::meta('menu_'.$i) ) { 
+	<? if ( x::meta("menu{$i}bo_table") ) { 
 		/*
 		$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('menu_'.$i)."'");
 		if ( !$menu = $row['bo_subject'] ) $menu = null;
 		*/
-			$menu_name = ms::meta("menu_name_$i");
+			$menu_name = x::meta("menu{$i}name");
 			if ( empty($menu_name) ) {
-				$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('menu_'.$i)."'");
+				$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".x::meta('menu'.$i.'bo_table')."'");
 				if ( empty($row['bo_subject']) ) $menu_name = ln("No Subject", "제목없음");
 				else $menu_name = $row['bo_subject'];
 			}
 	?>
-		<a href='<?=g::url()?>/bbs/board.php?bo_table=<?=ms::meta('menu_'.$i)?>'><?=$menu_name?></a>
+		<a href='<?=g::url()?>/bbs/board.php?bo_table=<?=x::meta('menu'.$i.'bo_table')?>'><?=$menu_name?></a>
 	<?}}?>
 	<? if ( admin() ) { ?>
 		<a href="<?=url_site_config()?>">사이트 관리</a>
