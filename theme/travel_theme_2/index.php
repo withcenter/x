@@ -7,7 +7,7 @@
 				$banners[] = array(
 					'src' => x::url_file( "banner$i" ),
 					'href' => x::meta( "banner{$i}_url" ),
-					'text' => x::meta("banner{$i}_text")
+					'text' => x::meta( "banner{$i}_text")
 				);
 			}
 		}		
@@ -16,9 +16,8 @@
 			<?
 				if ( $banners ) {
 					$selected = 0;
-					$banner_num = 1;
 					foreach ( $banners as $banner ) {
-					//di($banner);
+					
 						if ( ! $selected ++ ) $first_image = 'selected';
 						else $first_image = '';
 						

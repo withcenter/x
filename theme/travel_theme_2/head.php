@@ -14,17 +14,12 @@
     <div class="header_wrapper">
 			<div id="header-logo">
 					<a href="<?php echo G5_URL ?>">
-					<?if(x::meta('header_logo') ) { ?>
-						<img src="<?=ms::meta('img_url').ms::meta('header_logo')?>">
-					<?} else {?>
-						<img src='<?=x::url_theme()?>/img/default-logo.png'>
-					<?}?>
+					<?if( file_exists( path_logo() ) ) echo "<img src='".url_logo()."'>";
+					else echo "<img src='".x::url_theme()."/img/default-logo.png'>";
+					?>
 					</a>
 			</div>
-	<?
-		//global $cfgs;
-		//$cfgs = ms::forums();
-	?>
+
 	<div class='extra-menu-items'>
 		<div class='extra-top'>
 			<?for( $i = 1; $i <= 3; $i ++){			
