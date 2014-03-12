@@ -35,12 +35,12 @@
 					</tr>
 					<tr valign='top'>
 						<td>
-							<span class='config-name'>서브 타이틀</span></td><td><input type='text' name='secondary_title' value='<?=ms::meta('secondary_title')?>'>
+							<span class='config-name'>서브 타이틀</span></td><td><input type='text' name='secondary_title' value='<?=x::meta('secondary_title')?>'>
 						</td>
 					</tr>
 					<tr valign='top'>
 						<td>
-							<span class='config-name'>하단 문구</span></td><td><textarea name='footer_text' ><?=stripslashes(ms::meta('footer_text'))?></textarea>
+							<span class='config-name'>하단 문구</span></td><td><textarea name='footer_text' ><?=stripslashes(x::meta('footer_text'))?></textarea>
 						</td>
 					</tr>
 					<tr valign='top'>

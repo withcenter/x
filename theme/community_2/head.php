@@ -8,10 +8,9 @@
 <div class='logo_search'>
 	<div class='inner'>
 		<a href='<?=g::url()?>'>
-			<?if( ms::meta('header_logo') ) { ?>
-				<img src="<?=ms::meta('img_url').ms::meta('header_logo')?>">
-			<?}
-				else {?>
+			<?if( file_exists( path_logo() ) ) { ?>
+					<img src="<?=url_logo()?>">
+			<?} else {?>
 				<img src="<?=x::url_theme()?>/img/banner.png" />	
 			<?}?>
 		</a>
@@ -73,8 +72,8 @@
 	?>
 		<a href='<?=g::url()?>/bbs/board.php?bo_table=<?=ms::meta('menu_'.$i)?>'><?=$menu_name?></a>
 	<?}}?>
-	<? if ( ms::admin() ) { ?>
-		<a href="<?=ms::url_config()?>">사이트 관리</a>
+	<? if ( admin() ) { ?>
+		<a href="<?=url_site_config()?>">사이트 관리</a>
 	<? } ?>
 </div></div> 
 

@@ -66,9 +66,9 @@
 			g::board_create($o);
 			
 			
-			ms::meta( $domain, 'menu_1', ms::board_id ( $domain ).'_1' );
-			ms::meta( $domain, 'forum_no_1', ms::board_id ( $domain ).'_1' );
-			if ( $site_type == 'blog' ) ms::meta( $domain, 'forum_no_2', ms::board_id ( $domain ).'_1' );
+			x::meta( $domain, 'menu_1', ms::board_id ( $domain ).'_1' );
+			x::meta( $domain, 'forum_no_1', ms::board_id ( $domain ).'_1' );
+			if ( $site_type == 'blog' ) x::meta( $domain, 'forum_no_2', ms::board_id ( $domain ).'_1' );
 			
 			// 모바일 테마 Default로 mobile-community-1를 선택 되도록 한다.
 			ms::meta( $domain, 'mobile_theme', 'mobile-community-1');
