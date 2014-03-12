@@ -57,7 +57,7 @@ function setTopMenu( $name ) {
 	<div class='config-container'>
 	<div class='hidden-google-doc google_doc_community_2_2'>	
 	</div>
-		<span class='title-small'>전화번호: </span><input type='text' name='tel' value='<?=ms::meta('tel')?>'>	
+		<span class='title-small'>전화번호: </span><input type='text' name='tel' value='<?=x::meta('tel')?>'>	
 	</div>
 		<input type='submit' value='업데이트'>
 		<div style='clear:right;'></div>
@@ -98,20 +98,7 @@ function setTopMenu( $name ) {
 				<input type='checkbox' name='<?=code_logo()?>_remove' value='y'><span class='title-small'>이미지 제거</span>
 			</div>
 		</td>
-		<? /*
-		<td width='50%'>
-			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>회사로고</div>
-			<div class='image-upload'>
-			<?if( ms::meta('com3banner_company') ) {
-				echo "<img src=".ms::meta('img_url').ms::meta('com3banner_company').">"; 
-			} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 210px X 세로 116px]</div>"; ?>
-				<input type='file' name='com3banner_company'>
-				<?if( ms::meta('com3banner_company') != '' ) { ?>
-					<input type='hidden' name='com3banner_company_remove' value='n'>
-					<input type='checkbox' name='com3banner_company_remove' value='y'><span class='title-small'>이미지 제거</span>
-				<?}?>
-			</div>
-		</td> */?>
+		
 	</tr>
 		<?
 			for ( $i=1; $i<=5; $i ++ ) {

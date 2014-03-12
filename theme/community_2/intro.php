@@ -1,1 +1,0 @@
-<?=ms::meta( 'com2_info' )?>

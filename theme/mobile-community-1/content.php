@@ -27,7 +27,7 @@
 	<div class='right'>
 		<div class='inner'>
 		<?
-		$latest_bo_table = ms::board_id(etc::domain()).'_3';
+		$latest_bo_table = ms::board_id(etc::domain()).'_5';
 		if ( g::forum_exist( $latest_bo_table ) ) {
 			echo latest("x-rwd-text-with-thumbnail", $latest_bo_table, 15, 50, $cache_time=1, array('icon'=>x::url_theme()."/img/newspaper.png"));
 		}
@@ -51,7 +51,7 @@
 	<div class='right'>
 		<div class='inner'>
 		<?
-		$latest_bo_table = ms::board_id(etc::domain()).'_3';
+		$latest_bo_table = ms::board_id(etc::domain()).'_5';
 		if ( g::forum_exist( $latest_bo_table ) ) {
 			echo latest("x-latest-travel-lower-posts", $latest_bo_table, 5, 50, $cache_time=1, array('icon'=>x::url_theme()."/img/newspaper.png"));
 		}
@@ -75,7 +75,7 @@
 	<div class='right'>
 		<div class='inner'>
 		<?
-		$latest_bo_table = ms::board_id(etc::domain()).'_3';
+		$latest_bo_table = ms::board_id(etc::domain()).'_5';
 		if ( g::forum_exist( $latest_bo_table ) ) {
 			echo latest("x-travel_2_posts_with_image_right", $latest_bo_table, 5, 50, $cache_time=1, array('icon'=>x::url_theme()."/img/newspaper.png"));
 		}
@@ -100,7 +100,7 @@
 	<div class='right'>
 		<div class='inner'>
 		<?
-		$latest_bo_table = ms::board_id(etc::domain()).'_3';
+		$latest_bo_table = ms::board_id(etc::domain()).'_5';
 		if ( g::forum_exist( $latest_bo_table ) ) {
 			echo latest("x-travel_2_images_with_caption", $latest_bo_table, 5, 50, $cache_time=1, array('icon'=>x::url_theme()."/img/newspaper.png"));
 		}
@@ -124,7 +124,7 @@
 	<div class='right'>
 		<div class='inner'>
 		<?
-		$latest_bo_table = ms::board_id(etc::domain()).'_3';
+		$latest_bo_table = ms::board_id(etc::domain()).'_5';
 		if ( g::forum_exist( $latest_bo_table ) ) {
 			echo latest("x-latest-travel-2-posts", $latest_bo_table, 5, 50, $cache_time=1, array('icon'=>x::url_theme()."/img/newspaper.png"));
 		}
@@ -148,7 +148,7 @@
 	<div class='right'>
 		<div class='inner'>
 		<?
-		$latest_bo_table = ms::board_id(etc::domain()).'_3';
+		$latest_bo_table = ms::board_id(etc::domain()).'_5';
 		if ( g::forum_exist( $latest_bo_table ) ) {
 			echo latest("x-latest-community-2", $latest_bo_table, 5, 50, $cache_time=1, array('icon'=>x::url_theme()."/img/newspaper.png"));
 		}
@@ -183,7 +183,7 @@
 	<div class='right'>
 		<div class='inner'>
 		<?
-		$latest_bo_table = ms::board_id(etc::domain()).'_3';
+		$latest_bo_table = ms::board_id(etc::domain()).'_5';
 		if ( g::forum_exist( $latest_bo_table ) ) {
 			echo latest("x-community-3-timed-list", $latest_bo_table, 5, 50, $cache_time=1, array('icon'=>x::url_theme()."/img/newspaper.png"));
 		}
@@ -208,7 +208,7 @@
 	<div class='right'>
 		<div class='inner'>
 		<?
-		$latest_bo_table = ms::board_id(etc::domain()).'_3';
+		$latest_bo_table = ms::board_id(etc::domain()).'_5';
 		if ( g::forum_exist( $latest_bo_table ) ) {
 			echo latest("x-community-3-timed-list-with-images", $latest_bo_table, 5, 50, $cache_time=1, array('icon'=>x::url_theme()."/img/newspaper.png"));
 		}
@@ -232,7 +232,7 @@
 	<div class='right'>
 		<div class='inner'>
 		<?
-		$latest_bo_table = ms::board_id(etc::domain()).'_3';
+		$latest_bo_table = ms::board_id(etc::domain()).'_5';
 		if ( g::forum_exist( $latest_bo_table ) ) {
 			echo latest("x-latest-community3-posts", $latest_bo_table, 5, 50, $cache_time=1, array('icon'=>x::url_theme()."/img/newspaper.png"));
 		}

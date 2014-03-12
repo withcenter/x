@@ -9,6 +9,7 @@ include_once('../common.php');
 
 
 echo "Converting Post Data...\n";
+db::query("TRUNCATE TABLE `x_post_data`"); 
 $sql = "SELECT bo_table FROM $g5[board_table]";
 $rows = db::rows($sql);
 

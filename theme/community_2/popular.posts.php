@@ -12,7 +12,6 @@ for ( $i = 1 ; $i <= 10 ; $i++ ) {
 }
 $posts = array_filter( $posts );
 */
-exit;
 
 $posts = g::posts(
 	array(
@@ -22,8 +21,6 @@ $posts = g::posts(
 		'limit'=>10
 	)
 );
-DATE_SUB('".G5_TIME_YMD."', INTERVAL 1 DAY) 
-
 ?>
 
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/new.posts.css' />
@@ -37,8 +34,7 @@ DATE_SUB('".G5_TIME_YMD."', INTERVAL 1 DAY)
 	$dot_url = x::url_theme().'/img/dot.gif';	
 
 	if ( $posts ) {
-		foreach ( $posts as $key => $post ) {		
-			foreach ( $post as $p ) {
+			foreach ( $posts as $p ) {
 				$p_id = $p['wr_id'];
 				$url = g::url()."/bbs/board.php?bo_table=$key&wr_id=$p_id";
 				$popular_subject = conv_subject( $p['wr_subject'], 14, '...');				
@@ -48,7 +44,6 @@ DATE_SUB('".G5_TIME_YMD."', INTERVAL 1 DAY)
 						</div>
 				";
 			}
-		 }
 	}
 	else {?>
 				<div class='row'>

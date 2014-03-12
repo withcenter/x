@@ -14,7 +14,7 @@
     <div class="header_wrapper">
 			<div id="header-logo">
 					<a href="<?php echo G5_URL ?>">
-					<?if( ms::meta('header_logo') ) { ?>
+					<?if(x::meta('header_logo') ) { ?>
 						<img src="<?=ms::meta('img_url').ms::meta('header_logo')?>">
 					<?} else {?>
 						<img src='<?=x::url_theme()?>/img/default-logo.png'>
@@ -32,7 +32,7 @@
 					<a class='no-border' href = '<?=g::url()?>?device=mobile'>모바일</a>
 				<?}
 				else {
-				if ( ms::meta('forum_no_'.$i) ) {
+				if ( x::meta('forum_no_'.$i ) ) {
 					$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('forum_no_'.$i)."'");
 				
 					  if ( $row['bo_subject'] ) {?>
@@ -50,7 +50,7 @@
 			<?for( $i = 3; $i <= 6; $i ++){
 				if( $i == 6 ) $no_border = 'no-border';
 				else $no_border = null;
-				if ( ms::meta('forum_no_'.$i) ) { 
+				if (x::meta('forum_no_'.$i) ) { 
 					$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('forum_no_'.$i)."'");
 				
 					 if ( $row['bo_subject'] ) {?>
@@ -85,7 +85,7 @@
 	<div class='float-image-wrapper'>
 	<?
 	for( $i = 1; $i <= 3; $i++ ){
-		if ( ms::meta('travel2banner'.$i.'_floating') ) {
+		if (x::meta('travel2banner'.$i.'_floating') ) {
 			$img = "<a href='".ms::meta('travel2banner'.$i.'_floating_text'.$i)."' target='_blank'><img style='width:100%; height: 100%;' src='".ms::meta('img_url').ms::meta('travel2banner'.$i.'_floating')."'/></a>";	
 		}
 		else {

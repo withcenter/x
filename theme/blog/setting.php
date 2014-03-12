@@ -11,7 +11,7 @@ function setTopMenu( $name ) {
 		<option value=''>게시판을 선택하세요</option>
 		<option value=''></option>
 		<? foreach ( $cfgs as $c ) { 
-			if ( $c['bo_table'] == ms::meta($name) ) $selected = 'selected';
+			if ( $c['bo_table'] == x::meta($name) ) $selected = 'selected';
 			else $selected = null;
 		?>
 			<option value="<?=$c['bo_table']?>" <?=$selected?>><?=$c['bo_subject']?></option>
@@ -50,20 +50,18 @@ function setTopMenu( $name ) {
 				<div class='image-title'>프로필 사진등록</div>
 
 				<div class='image-upload'>
-				<?if( ms::meta('blog_profile_photo') ) {
-					echo "<img src=".ms::meta('img_url').ms::meta('blog_profile_photo').">"; 
-				} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 190px X 세로 140px]</div>"; ?>
-				<input type='file' name='blog_profile_photo'>
-				<?if( ms::meta('blog_profile_photo') != '' ) { ?>
-					<input type='hidden' name='blog_profile_photo_remove' value='n'>
-					<input type='checkbox' name='blog_profile_photo_remove' value='y'><span class='title-small'>이미지 제거</span>
-				<?}?>
+					<?
+					if( file_exists( x::path_file( "profile_photo" ) ) ) echo "<img src='".x::url_file( "profile_photo" )."'>";
+					else  echo "<div class='setting-no-image'>이미지가 없습니다. [가로 190px X 세로 140px]</div>";?>
+					<input type='file' name='profile_photo'>
+					<input type='checkbox' name='profile_photo_remove' value='y'><span class='title-small'>이미지 제거</span>
+				
 				</div>
 			</td>
 			<td  valign='top'>
 				<div class='image-title'>프로필 하단 문구</div>
 			
-				<textarea name='blog_profile_message' style='border-top: 0; padding: 10px;'><?=stripslashes(ms::meta('blog_profile_message'))?></textarea>
+				<textarea name='profile_message' style='border-top: 0; padding: 10px;'><?=stripslashes(x::meta('profile_message'))?></textarea>
 			</td>
 		</tr>
 	</table>
@@ -101,68 +99,24 @@ function setTopMenu( $name ) {
 	</div>
 		<table cellpadding='10' cellspacing='0' class='image-config'>
 			<tr valign='top'>
+			<?php
+				for ( $i=1; $i <= 4; $i++) {
+					if ( $i == 3 ) echo "</tr><tr valign='top'>";
+			?>
 				<td width='50%'>
-					<div class='image-title'>배너1</div>
+					<div class='image-title'>배너<?=$i?></div>
 						<div class='image-upload'>
-						<?if( ms::meta('banner_1') ) {
-							echo "<img style='width:178px;' src=".ms::meta('img_url').ms::meta('banner_1').">"; 
+						<?if( file_exists( x::path_file( 'banner_'.$i ) ) ) {
+							echo "<img style='width:178px;' src='".x::url_file( 'banner_'.$i)."'>"; 
 						} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 178px]</div>"; ?>
-							<input type='file' name='banner_1'>
+							<input type='file' name='banner_<?=$i?>'>
 							<div class='title'>배너1 링크</div>
-							<input type='text' name='banner_1_url' value='<?=ms::meta('banner_1_url')?>'>
-						<?if( ms::meta('banner_1') != '' ) { ?>
-							<input type='hidden' name='banner_1_remove' value='n'>
-							<input type='checkbox' name='banner_1_remove' value='y'><span class='title-small'>이미지 제거</span>
-						<?}?>
-					</div>
+							<input type='text' name='banner_<?=$i?>_url' value='<?=ms::meta('banner_1_url')?>'>
+							<input type='checkbox' name='banner_<?=$i?>_remove' value='y'><span class='title-small'>이미지 제거</span>
+						</div>
 				</td>
-				<td width='50%'>
-					<div class='image-title'>배너2</div>
-						<div class='image-upload'>
-						<?if( ms::meta('banner_2') ) {
-							echo "<img style='width:178px;' src=".ms::meta('img_url').ms::meta('banner_2').">"; 
-						} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 178px]</div>"; ?>
-							<input type='file' name='banner_2'>
-							<div class='title'>배너2 링크</div>
-							<input type='text' name='banner_2_url' value='<?=ms::meta('banner_2_url')?>'>
-						<?if( ms::meta('banner_2') != '' ) { ?>
-							<input type='hidden' name='banner_2_remove' value='n'>
-							<input type='checkbox' name='banner_2_remove' value='y'><span class='title-small'>이미지 제거</span>
-						<?}?>
-					</div>
-				</td>
-			</tr>
-			<tr valign='top'>
-				<td width='50%'>
-					<div class='image-title'>배너3</div>
-						<div class='image-upload'>
-						<?if( ms::meta('banner_3') ) {
-							echo "<img style='width:178px;' src=".ms::meta('img_url').ms::meta('banner_3').">"; 
-						} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 178px]</div>"; ?>
-							<input type='file' name='banner_3'>
-							<div class='title'>배너3 링크</div>
-							<input type='text' name='banner_3_url' value='<?=ms::meta('banner_3_url')?>'>
-						<?if( ms::meta('banner_3') != '' ) { ?>
-							<input type='hidden' name='banner_3_remove' value='n'>
-							<input type='checkbox' name='banner_3_remove' value='y'><span class='title-small'>이미지 제거</span>
-						<?}?>
-					</div>
-				</td>
-				<td width='50%'>
-					<div class='image-title'>배너4</div>
-						<div class='image-upload'>
-						<?if( ms::meta('banner_4') ) {
-							echo "<img style='width:178px;' src=".ms::meta('img_url').ms::meta('banner_4').">"; 
-						} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 178px]</div>"; ?>
-							<input type='file' name='banner_4'>
-							<div class='title'>배너4 링크</div>
-							<input type='text' name='banner_4_url' value='<?=ms::meta('banner_4_url')?>'>
-						<?if( ms::meta('banner_1') != '' ) { ?>
-							<input type='hidden' name='banner_4_remove' value='n'>
-							<input type='checkbox' name='banner_4_remove' value='y'><span class='title-small'>이미지 제거</span>
-						<?}?>
-					</div>
-				</td>
+				
+			<?}?>
 			</tr>
 		</table>
 	</div>

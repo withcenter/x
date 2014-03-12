@@ -1379,3 +1379,71 @@ span.config-name {
 	background: #fafafa;
 }
 
+
+/* config_member */
+.member-info {
+	border: 1px solid #d5d5d5;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+.member-info .title {
+	border: 1px solid #808080;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 10px;
+	background-color: #808080;
+	color: #ffffff;
+	margin-bottom: 10px;
+}
+
+.member-info .sub-title {
+	display: inline-block;
+	width: 100px;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 10px;
+	margin-right: 10px;
+	background-color: #fafafa;
+	border: solid 1px #cccccc;
+	margin: 0 6px 6px 6px;
+}
+
+.member-info .member-info-content-edit {
+	margin: 10px 0;
+}
+
+.member-info tr td {
+	border-bottom: solid 1px #e6e6e6;
+	padding: 5px;
+}
+
+.member-info tr td .sub-title {
+	margin: 0;
+}
+
+.member-info input[type='text'], textarea {
+	padding: 6px;
+	border: solid 1px #cccccc;
+	width: 400px;
+	margin: 0;
+}
+
+.member-info input[type='checkbox'] {
+	margin: 6px;
+}
+
+
+.member-info tr td.member-zip input[type='text'] {
+	width: 50px;
+}
+
+.member-info tr td.member-address input[type='text'] {
+	margin-bottom: 5px;
+}
+
+.member-info tr td.member-address input.member-address-last {
+	margin: 0;
+}
+
+
