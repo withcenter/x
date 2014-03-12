@@ -259,7 +259,10 @@ class x {
 				array_shift( $parts );
 				$domain = '.' . implode('.', $parts);
 				$theme = meta_get( $domain, 'theme' );
-				if ( empty( $theme ) ) $theme = 'default';
+				if ( empty( $theme ) ) {
+					$theme = meta_get( '.' . etc::domain(), 'theme' );
+					if ( empty( $theme ) ) $theme = 'default';
+				}
 			}
 		}
 		self::$config['site']['theme'] = $theme;
