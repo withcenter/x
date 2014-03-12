@@ -162,18 +162,18 @@ function setTopMenu( $name ) {
 				<div class='image-title'><img src='<?=x::url()?>/module/<?=$module?>/img/img-icon.png'>배너이미지<?=$i?></div>
 				<div class='image-upload'>
 				<?
-					if( file_exists( x::path_file( "travel_banner$i" ) ) ) echo "<img src='".x::url_file( "travel_banner$i" )."'>";
+					if( file_exists( x::path_file( "banner$i" ) ) ) echo "<img src='".x::url_file( "banner$i" )."'>";
 					else {
 				?>
 						<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/<?=$module?>/img/no-image.png'><br>[가로 748px X 세로 238px]</div>
 					<?}?>
-					<input type='file' name='travel_banner<?=$i?>'>
-						<input type='checkbox' name='travel_banner<?=$i?>_remove' value='y'><span class='title-small'>이미지 제거</span>
+					<input type='file' name='banner<?=$i?>'>
+						<input type='checkbox' name='banner<?=$i?>_remove' value='y'><span class='title-small'>이미지 제거</span>
 					
 					<div class='title'>배너<?=$i?>의 문구</div>
-					<textarea name='travel_banner<?=$i?>_text'><?=stripslashes(x::meta("travel_banner{$i}_text"))?></textarea>
+					<textarea name='banner<?=$i?>_text'><?=stripslashes(x::meta("banner{$i}_text"))?></textarea>
 					<div class='title'>배너<?=$i?> 링크</div>
-					<input type='text' name='travelbanner_<?=$i?>_url' value='<?=x::meta("travel_banner{$i}_url")?>'>
+					<input type='text' name='banner<?=$i?>_url' value='<?=x::meta("banner{$i}_url")?>'>
 				</div>
 			</td>
 			

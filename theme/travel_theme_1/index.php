@@ -3,11 +3,11 @@
 	
 		$banners = array();
 		for ( $i = 1; $i <= 5 ; $i++) { 
-			if ( file_exists( x::path_file( "travel_banner$i" ) ) ) {
+			if ( file_exists( x::path_file( "banner$i" ) ) ) {
 				$banners[] = array(
-					'src' => x::url_file( "travel_banner_$i" ),
-					'href' => x::meta( "travel_banner{$i}_url" ),
-					'text' => x::meta("travel_banner{$i}_text")
+					'src' => x::url_file( "banner$i" ),
+					'href' => x::meta( "banner{$i}_url" ),
+					'text' => x::meta( "banner{$i}_text" )
 				);
 			}
 		}

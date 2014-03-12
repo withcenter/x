@@ -3,8 +3,8 @@ for ( $i=1; $i <=5; $i++ ) {
 	if ( $in['forum_no_'.$i.'_bo_table'] ) x::meta('forum_no_'.$i, $in['forum_no_'.$i.'_bo_table']);
 	else x::meta('forum_no_'.$i, $in['forum_no_'.$i] );
 	
-	x::meta("travel_banner{$i}_text", $in["travel_banner{$i}_text"]);
-	x::meta("travel_banner{$i}_url", $in["travel_banner{$i}_url"]);
+	x::meta("banner{$i}_text", $in["banner{$i}_text"]);
+	x::meta("banner{$i}_url", $in["banner{$i}_url"]);
 }	
 
 for ( $i=1; $i<=5; $i++ ) {
