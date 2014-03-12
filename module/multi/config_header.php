@@ -5,7 +5,7 @@
 	}
 	global $action;
 ?>
-<link rel='stylesheet' href='<?=x::url()?>/module/<?=$module?>/<?=$module?>.css' />
+<link rel='stylesheet' href='<?=module("$module.css")?>' />
 <script src='<?=module("$module.js")?>'></script>
 <style>
 .config-header a[href*='<?=$action?>'] {
