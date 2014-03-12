@@ -33,7 +33,7 @@ foreach ( $sites as $site ) {
 					'bo_table'					=> $forum,
 					'wr_id'						=> $p['wr_id'],
 					'ca_name'					=> $p['ca_name'],
-					'wr_subject'				=> $p['wr_subject'],
+					'wr_subject'				=> addslashes($p['wr_subject']),
 					'wr_content'				=> addslashes($content),
 					'mb_id'						=> $p['mb_id'],
 					'wr_name'					=> $p['wr_name'],
