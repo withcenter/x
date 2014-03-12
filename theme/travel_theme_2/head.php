@@ -93,8 +93,8 @@
 	<div class='float-image-wrapper'>
 	<?
 	for( $i = 1; $i <= 3; $i++ ){
-		if (x::meta('travel2banner'.$i.'_floating') ) {
-			$img = "<a href='".ms::meta('travel2banner'.$i.'_floating_text'.$i)."' target='_blank'><img style='width:100%; height: 100%;' src='".ms::meta('img_url').ms::meta('travel2banner'.$i.'_floating')."'/></a>";	
+		if ( file_exists( x::path_file( "travel_floating_banner$i" ) ) ) {
+			$img = "<a href='".x::meta("travel_floating_banner{$i}_url")."' target='_blank'><img style='width:100%; height: 100%;' src='".x::url_file( "travel_floating_banner$i" )."'/></a>";	
 		}
 		else {
 			if ( $i ==  1 ) $img = "<a href='javascript:void(0)'><img style='width: 100%; height: 100%;' src='".x::url_theme()."/img/agoda.gif'/></a>";

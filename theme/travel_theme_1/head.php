@@ -79,7 +79,7 @@
 	<?
 	for( $i = 1; $i <= 3; $i++ ){
 		if ( file_exists( x::path_file( "travel_floating_banner$i" ) ) ) {
-			$img = "<a href='".ms::meta("travel_floating_banner{$i}_url")."' target='_blank'><img style='width:100%; height: 100%;' src='".x::url_file( "travel_floating_banner$i" )."'/></a>";	
+			$img = "<a href='".x::meta("travel_floating_banner{$i}_url")."' target='_blank'><img style='width:100%; height: 100%;' src='".x::url_file( "travel_floating_banner$i" )."'/></a>";	
 		}
 		else {
 			if ( $i ==  1 ) $img = "<a href='javascript:void(0)'><img style='width: 100%; height: 100%;' src='".x::url_theme()."/img/agoda.gif'/></a>";

@@ -32,7 +32,7 @@
 					}
 				}
 				else {
-					echo "<img src='".x::url_theme()."/img/no_main_banner.png' />";
+					echo "<img src='".x::url_theme()."/img/no_image_banner1.png' />";
 				}
 			?>
 		</div>
