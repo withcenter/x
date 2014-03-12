@@ -10,8 +10,7 @@
 					'text' => x::meta("banner{$i}_text")
 				);
 			}
-		}
-		//di($banners);exit;
+		}		
 	?>
 		<div class='banner'>
 			<?
