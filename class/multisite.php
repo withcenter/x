@@ -440,7 +440,7 @@ class multisite {
 		return db::result($q);
 	}
 	
-	/**
+	/** @deprecated
 	 *  @brief returns the total number of one or more forums.
 	 *  
 	 *  @param [in] $ids mixed. if an array is passed, then it counts all the post of the forums.

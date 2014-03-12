@@ -55,7 +55,7 @@ if (get_cookie('ck_visit_ip') != $_SERVER['REMOTE_ADDR'])
         // 어제
         ////$sql = " select vs_count as cnt from {$g5['visit_sum_table']} where vs_date = DATE_SUB('".G5_TIME_YMD."', INTERVAL 1 DAY) ";
 		////$row = sql_fetch($sql);
-        $row = db::query(" select vs_count as cnt from {$g5['visit_sum_table']} where domain='$domain' AND vs_date = DATE_SUB('".G5_TIME_YMD."', INTERVAL 1 DAY) ");/// x patch
+        $row = db::row(" select vs_count as cnt from {$g5['visit_sum_table']} where domain='$domain' AND vs_date = DATE_SUB('".G5_TIME_YMD."', INTERVAL 1 DAY) ");/// x patch
         
         $vi_yesterday = $row['cnt'];
 
