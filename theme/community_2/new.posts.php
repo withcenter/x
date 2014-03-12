@@ -26,7 +26,7 @@ $posts = g::posts( array( 'domain'=>etc::domain(), 'limit'=>15) );
 		 
 		 if ( $posts ) {
 			foreach ( $posts as $p ) {
-				$url = G5_BBS_URL."/board.php?bo_table=$board_id&wr_id=$p[wr_id]";
+				$url = G5_BBS_URL."/board.php?bo_table=$p[bo_table]&wr_id=$p[wr_id]";
 				$new_subject = conv_subject( $p['wr_subject'], 14, '...');					
 				echo "
 						<div class='row'>

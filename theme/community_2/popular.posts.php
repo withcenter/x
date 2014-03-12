@@ -31,12 +31,10 @@ $posts = g::posts(
 	</div>
 	<?php
 
-	$dot_url = x::url_theme().'/img/dot.gif';	
-
+	$dot_url = x::url_theme().'/img/dot.gif';		
 	if ( $posts ) {
-			foreach ( $posts as $p ) {
-				$p_id = $p['wr_id'];
-				$url = g::url()."/bbs/board.php?bo_table=$key&wr_id=$p_id";
+			foreach ( $posts as $p ) {				
+				$url = g::url()."/bbs/board.php?bo_table=$p[bo_table]&wr_id=$p[wr_id]";
 				$popular_subject = conv_subject( $p['wr_subject'], 14, '...');				
 				echo "
 						<div class='row'>
