@@ -75,16 +75,15 @@
 					</div>
 				</div>
 				<div class='travel_2_right_banner'>
-						<?
-						$banner_url = ms::meta('img_url');
-						$url = ms::meta('travel2banner_right_text1');
-						$banner_image = ms::meta( 'travel2banner_right' );
-						if ( $banner_image ) {
-							echo "<a href='$url' target='_blank'><img src='".$banner_url.$banner_image."'></a>";
-						}
-						else {?>
-							<a href='javascript:void(0)' ><img src='<?=x::url_theme()?>/img/no_side_banner.png'></a>
-						<?}?>
+				<?php
+					if ( file_exists( x::path_file ( 'travel_right_banner' ) ) ) {
+						if ( !$url = x::meta('travel_right_banner_url') ) $url = 'javascript:void(0)';
+		
+						echo "<a href='$url' target='_blank'><img src='".x::url_file('travel_right_banner')."'></a>";
+					}
+					else {?>
+						<a href='javascript:void(0)' ><img src='<?=x::url_theme()?>/img/no_side_banner.png'></a>
+				<?}?>
 				</div>
 			</div>
 			<div style='clear:both;'></div>
