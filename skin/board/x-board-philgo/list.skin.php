@@ -21,13 +21,20 @@ foreach( $list as $l ){
 				$count++;
 			}			
 		}
-		$editor_images[] = g::thumbnail_from_image_tag($l['wr_content'], $bo_table, 74, 74);
-		if( $editor_images[$count2] ){
-			$images[$count2][]['src'] = $editor_images[$count2];
+		$images_list_in_content = get_editor_image($l['wr_content']);
+		
+		foreach( $images_list_in_content[0] as $images_src ){			
+			$editor_images[$count2][] = g::thumbnail_from_image_tag($images_src, $bo_table, 74, 74);
 		}
+			
+		if( $editor_images[$count2] ){
+			foreach( $editor_images[$count2] as $e_image ){
+				$images[$count2][]['src'] = $e_image;
+			}
+		}		
 		$count2++;
 }
-//di($images);exit;
+
 ?>
     <div id="board_philgo_1">
 	<!------------------------------------------------------->
