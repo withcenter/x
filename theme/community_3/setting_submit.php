@@ -1,7 +1,7 @@
 <?php
-	
+/* need to change forum_no_number_bo_table to forum_no_... for compatibility when creating site */	
 for ( $i=1; $i <=6; $i++ ) {
-	$code = 'forum_no_'.$i.'_bo_table';
+	$code = 'forum_no_'.$i;
 	x::meta( $code, $in[ $code ] );
 }
 

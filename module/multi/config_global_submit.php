@@ -17,10 +17,6 @@ ms::meta( 'secondary_title' , $in['secondary_title'] );
 ms::meta( 'footer_text' , $in['footer_text'] );
 
 
-/** @warning: is this a bug? when a user set for a community and changed to blog and set, finally back to the community then the old setting gone? */
-for( $i = 1; $i <= 10; $i++ ) {
-	ms::meta( 'forum_no_'.$i , $in['forum_no_'.$i] );
-}
 
 ms::meta( 'theme_sidebar' , $in['theme_sidebar'] );
 
