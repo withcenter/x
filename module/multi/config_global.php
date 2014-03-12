@@ -21,8 +21,9 @@
 				<span class='config-title-notice'>
 					<span class='user-google-guide-button' page = 'google_doc_global' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
 					<img src='<?=module('img/setting_2.png')?>'>
-					</span>
-			</div>	
+				</span>
+			</div>
+			
 			<div class='config-container'>
 
 			<div class='hidden-google-doc google_doc_global'>	

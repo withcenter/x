@@ -136,19 +136,27 @@ function meta_delete( $key, $code=null )
  *
  *
  * @code
-			 <ul id="menu">
-				<?
-					$menus = get_site_menu();
-					foreach ( $menus as $bo_id => $bo_name ) {
-						echo "<li class='comm3_menu'><a href='".url_forum_list($bo_id)."'>$bo_name</a></li>";
-					}
-					if ( admin() ) {
-				?>
-						<li class="comm3_menu" page = "admin-menu">
-							<a href="<?=url_site_config()?>">사이트 관리</a>
-						</li>
-				<? } ?>
-			</ul>
+	<?
+		$menus = get_site_menu();
+		foreach ( $menus as $menu ) {
+	?>
+			<a  href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$menu['bo_table']?>'><?=$menu['name']?></a>
+	<? } ?>
+ * @endcode
+ * @code
+		<ul id="menu">
+			<?
+				$menus = get_site_menu();
+				foreach ( $menus as $menu ) {
+					echo "<li class='comm3_menu'><a href='".url_forum_list($menu['bo_table'])."'>$menu[name]</a></li>";
+				}
+				if ( admin() ) {
+			?>
+					<li class="comm3_menu" page = "admin-menu">
+						<a href="<?=url_site_config()?>">사이트 관리</a>
+					</li>
+			<? } ?>
+		</ul>
  * @endcode
  */
 function get_site_menu()
@@ -164,7 +172,7 @@ function get_site_menu()
 			if ( empty($cfg['bo_subject']) ) $bo_name = ln("No Subject", "제목없음");
 			else $bo_name = $cfg['bo_subject'];
 		}
-		$menus[$bo_id] = $bo_name;
+		$menus[] = array('bo_table'=>$bo_id,'name'=>$bo_name);
 	}
 	if ( empty($menus) ) {
 		$menus['default'] = ln("Please", "관리자");

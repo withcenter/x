@@ -1,8 +1,8 @@
 <ul id="comm3_main_menu">		
 	<?
 		$menus = get_site_menu();
-		foreach ( $menus as $bo_id => $bo_name ) {
-			echo "<li class='comm3_menu'><a href='".url_forum_list($bo_id)."'>$bo_name</a></li>";
+		foreach ( $menus as $menu ) {
+			echo "<li class='comm3_menu'><a href='".url_forum_list($menu['bo_table'])."'>$menu[name]</a></li>";
 		}
 		if ( admin() ) {
 	?>
@@ -21,6 +21,7 @@
 */
 	if ( empty($bo_table) ) $_bo_table = 'empty_bo_table';
 	else $_bo_table = $bo_table;
+	
 ?>
 <style>
 #comm3_main_menu a[href*="<?=$_bo_table?>"] {

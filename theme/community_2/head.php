@@ -57,24 +57,12 @@
             }
 	</script>
 <div class='main-menu'><div class='inner'>
-	<?php
-		if( admin() ){
-		$max_menus = 5;
-	}
-	else {
-		$max_menus = 6;		
-	}
-	for ( $i = 1; $i <= $max_menus; $i++ ) {
-		if ( $board_id = x::meta("menu{$i}bo_table") ) {
-			$menu_name = x::meta("menu{$i}name");				
-			if ( empty($menu_name) ) {
-				$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".x::meta('menu'.$i.'bo_table')."'");
-				if ( empty($row['bo_subject']) ) $menu_name = ln("No Subject", "제목없음");
-				else $menu_name = $row['bo_subject'];
-			}			
+	<?
+		$menus = get_site_menu();
+		foreach ( $menus as $menu ) {
 	?>
-	<a  href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$board_id?>'><?=$menu_name?></a>
-	<?}}?>
+			<a  href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$menu['bo_table']?>'><?=$menu['name']?></a>
+	<? } ?>
 	<? if ( admin() ) { ?>
 		<a href="<?=url_site_config()?>">사이트 관리</a>
 	<? } ?>
