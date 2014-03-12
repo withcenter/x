@@ -82,7 +82,7 @@ function setTopMenu( $name ) {
 	</div>
 		<table>
 			<tr>
-				<td colspan='2'><span class='title-small'>하단문구제목</span><input type='text' name='travel2footer_tagline' value='<?=ms::meta('travel2footer_tagline')?>' /></td>
+				<td colspan='2'><span class='title-small'>하단문구제목</span><input type='text' name='travel_footer_tagline' value='<?=x::meta('travel_footer_tagline')?>' /></td>
 			<tr>
 		</table>
 	</div>
@@ -104,34 +104,35 @@ function setTopMenu( $name ) {
 <table cellspacing='0' cellpadding='10' class='image-config' width='100%'>
 	<tr valign='top' >
 		<td width='50%'> 
-			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>사이트 상단 로고</div>
+			<div class='image-title'>
+				<img src='<?=x::url()?>/module/<?=$module?>/img/img-icon.png'>사이트 로고				
+			</div>
 			<div class='image-upload'>
-			<?if( ms::meta('header_logo') ) {
-				echo "<img src=".ms::meta('img_url').ms::meta('header_logo').">"; 
-			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 310px X 세로 60px]</div>
-				<?}?>
-				<input type='file' name='header_logo'>
-				<?if( ms::meta('header_logo') != '' ) { ?>
-					<input type='hidden' name='header_logo_remove' value='n'>
-					<input type='checkbox' name='header_logo_remove' value='y'><span class='title-small'>이미지 제거</span>
-				<?}?>
+			<?
+				if( file_exists( path_logo() ) ) echo "<img src='".url_logo()."'>";
+				else {
+			?>
+				<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/<?=$module?>/img/no-image.png'><br>
+				[가로 310px X 세로 60px]</div>
+			<?
+				}
+			?>
+				<input type='file' name='<?=code_logo()?>'>
+				<input type='checkbox' name='<?=code_logo()?>_remove' value='y'><span class='title-small'>이미지 제거</span>
 			</div>
 		</td>
 
-		<td width='50%'>
-			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>사이트 하단 로고</div>
+		<td width='50%'>		
+			<div class='image-title'><img src='<?=x::url()?>/module/<?=$module?>/img/img-icon.png'>사이트 하단 로고</div>
 			<div class='image-upload'>
-			<?if( ms::meta('footer_logo') ) {
-				echo "<img src=".ms::meta('img_url').ms::meta('footer_logo').">"; 
-			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 100px X 세로 90px]</div>
+			<?
+				if( file_exists( x::path_file( "travel_footer_logo" ) ) ) echo "<img src='".x::url_file( "travel_footer_logo" )."'>";
+				else {
+			?>
+					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/<?=$module?>/img/no-image.png'><br>[가로 100px X 세로 90px]</div>
 				<?}?>
-				<input type='file' name='footer_logo'>
-				<?if( ms::meta('footer_logo') != '' ) { ?>
-					<input type='hidden' name='footer_logo_remove' value='n'>
-					<input type='checkbox' name='footer_logo_remove' value='y'><span class='title-small'>이미지 제거</span>
-				<?}?>
+				<input type='file' name='travel_footer_logo'>
+					<input type='checkbox' name='travel_footer_logo_remove' value='y'><span class='title-small'>이미지 제거</span>
 			</div>
 		</td>
 	</tr>
@@ -153,110 +154,33 @@ function setTopMenu( $name ) {
 	<div class='hidden-google-doc google_doc_travel_1_4'>	
 	</div>
 	<table cellspacing='0' cellpadding='10' class='image-config' width='100%'>
-	<tr valign='top'>
-		<td>
-			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지1</div>
-			<div class='image-upload'>
-				<?if( ms::meta('travel2banner_1') ) {
-					echo "<img src=".ms::meta('img_url').ms::meta('travel2banner_1').">"; 
-			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 748px X 세로 238px]</div>
-				<?}?>
-				<input type='file' name='travel2banner_1'>
-				<?if( ms::meta('travel2banner_1') != '' ) { ?>
-					<input type='hidden' name='travel2banner_1_remove' value='n'>
-					<input type='checkbox' name='travel2banner_1_remove' value='y'><span class='title-small'>이미지 제거</span>
-				<?}?>
-				<div class='title'>배너1의 문구</div>
-				<textarea name='travel2banner_1_text1'><?=stripslashes(ms::meta('travel2banner_1_text1'))?></textarea>
-				<div class='title'>배너1 링크</div>
-				<input type='text' name='travel2banner_1_text2' value='<?=ms::meta('travel2banner_1_text2')?>'>
-			</div>
-		</td>
- 
-		<td>
-			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지2</div>
-			<div class='image-upload'>
-			<?if( ms::meta('travel2banner_2') ) {
-				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner_2').">"; 
-			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 748px X 세로 238px]</div>
-				<?}?>
-			<input type='file' name='travel2banner_2'>
-			<?if( ms::meta('travel2banner_2') != '' ) { ?>
-				<input type='hidden' name='travel2banner_2_remove' value='n'>
-				<input type='checkbox' name='travel2banner_2_remove' value='y'><span class='title-small'>이미지 제거</span>
-			<?}?>
-			<div class='title'>배너2의 문구</div>
-			<textarea name='travel2banner_2_text1'><?=stripslashes(ms::meta('travel2banner_2_text1'))?></textarea>
-				<div class='title'>배너2 링크</div>
-				<input type='text' name='travel2banner_2_text2' value='<?=ms::meta('travel2banner_2_text2')?>'>
-			</div>
-		</td>
-	</tr>
-	<tr valign='top'>
-		<td>
-			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지3</div>
-			<div class='image-upload'>
-			<?if( ms::meta('travel2banner_3') ) {
-				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner_3').">"; 
-			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 748px X 세로 238px]</div>
-				<?}?>
-			<input type='file' name='travel2banner_3'>
-			<?if( ms::meta('travel2banner_3') != '' ) { ?>
-				<input type='hidden' name='travel2banner_3_remove' value='n'>
-				<input type='checkbox' name='travel2banner_3_remove' value='y'><span class='title-small'>이미지 제거</span>
-			<?}?>
-			<div class='title'>배너3의 문구</div>
-			<textarea name='travel2banner_3_text1'><?=stripslashes(ms::meta('travel2banner_3_text1'))?></textarea>
-				<div class='title'>배너3 링크</div>
-				<input type='text' name='travel2banner_3_text2' value='<?=ms::meta('travel2banner_3_text2')?>'>
-			</div>
-		</td>
-
-		<td>
-			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지4</div>
-			<div class='image-upload'>
-			<?if( ms::meta('travel2banner_4') ) {
-				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner_4').">"; 
-			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 748px X 세로 238px]</div>
-				<?}?>
-			<input type='file' name='travel2banner_4'>
-			<?if( ms::meta('travel2banner_4') != '' ) { ?>
-				<input type='hidden' name='travel2banner_4_remove' value='n'>
-				<input type='checkbox' name='travel2banner_4_remove' value='y'><span class='title-small'>이미지 제거</span>
-			<?}?>
-			<div class='title'>배너4의 문구</div>
-			<textarea name='travel2banner_4_text1'><?=stripslashes(ms::meta('travel2banner_4_text1'))?></textarea>
-				<div class='title'>배너4 링크</div>
-				<input type='text' name='travel2banner_4_text2' value='<?=ms::meta('travel2banner_4_text2')?>'>
-			</div>
-		</td>
-	</tr>
-		<tr valign='top'>
-		<td>
-			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>배너이미지5</div>
-			<div class='image-upload'>
-			<?if( ms::meta('travel2banner_5') ) {
-				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner_5').">"; 
-			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 748px X 세로 238px]</div>
-				<?}?>
-			<input type='file' name='travel2banner_5'>
-			<?if( ms::meta('travel2banner_5') != '' ) { ?>
-				<input type='hidden' name='travel2banner_5_remove' value='n'>
-				<input type='checkbox' name='travel2banner_5_remove' value='y'><span class='title-small'>이미지 제거</span>
-			<?}?>
-			<div class='title'>배너5의 문구</div>
-			<textarea name='travel2banner_5_text1'><?=stripslashes(ms::meta('travel2banner_5_text1'))?></textarea>
-				<div class='title'>배너5 링크</div>
-				<input type='text' name='travel2banner_5_text2' value='<?=ms::meta('travel2banner_5_text2')?>'>
-			</div>
-		</td>
-	</tr>
-</table>
+		<?
+			for ( $i=1; $i<=5; $i ++ ) {
+				if ( $i == 1 || $i == 4 ) echo "<tr valign='top'>";
+		?>
+			<td>		
+				<div class='image-title'><img src='<?=x::url()?>/module/<?=$module?>/img/img-icon.png'>배너이미지<?=$i?></div>
+				<div class='image-upload'>
+				<?
+					if( file_exists( x::path_file( "travel_banner$i" ) ) ) echo "<img src='".x::url_file( "travel_banner$i" )."'>";
+					else {
+				?>
+						<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/<?=$module?>/img/no-image.png'><br>[가로 748px X 세로 238px]</div>
+					<?}?>
+					<input type='file' name='travel_banner<?=$i?>'>
+						<input type='checkbox' name='travel_banner<?=$i?>_remove' value='y'><span class='title-small'>이미지 제거</span>
+					
+					<div class='title'>배너<?=$i?>의 문구</div>
+					<textarea name='travel_banner<?=$i?>_text'><?=stripslashes(x::meta("travel_banner{$i}_text"))?></textarea>
+					<div class='title'>배너<?=$i?> 링크</div>
+					<input type='text' name='travelbanner_<?=$i?>_url' value='<?=x::meta("travel_banner{$i}_url")?>'>
+				</div>
+			</td>
+			
+		<?
+			}
+		?>
+	</table>
 
 </div>
 		<input type='submit' value='업데이트'>
@@ -275,61 +199,30 @@ function setTopMenu( $name ) {
 	</div>
 	<table cellspacing='0' cellpadding='10' class='image-config' width='100%'>	
 		<tr valign='top'>
-		<td>
-			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>오른쪽 날개 배너1</div>
-			<div class='image-upload'>
-			<?if( ms::meta('travel2banner1_floating') ) {
-				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner1_floating').">"; 
-			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 70px X 세로 70px]</div>
-				<?}?>
-			<input type='file' name='travel2banner1_floating'>
-			<?if( ms::meta('travel2banner1_floating') != '' ) { ?>
-				<input type='hidden' name='travel2banner1_floating_remove' value='n'>
-				<input type='checkbox' name='travel2banner1_floating_remove' value='y'><span class='title-small'>이미지 제거</span>
-			<?}?>
-			<div class='title'>오른쪽 날개 배너1 URL</div>
-			<input type='text' name='travel2banner1_floating_text1' value='<?=ms::meta('travel2banner1_floating_text1')?>'>
-			</div>
-		</td>
-		<td>
-			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>오른쪽 날개 배너2</div>
-			<div class='image-upload'>
-			<?if( ms::meta('travel2banner2_floating') ) {
-				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner2_floating').">"; 
-			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 70px X 세로 70px]</div>
-				<?}?>
-			<input type='file' name='travel2banner2_floating'>
-			<?if( ms::meta('travel2banner2_floating') != '' ) { ?>
-				<input type='hidden' name='travel2banner2_floating_remove' value='n'>
-				<input type='checkbox' name='travel2banner2_floating_remove' value='y'><span class='title-small'>이미지 제거</span>
-			<?}?>
-			<div class='title'>오른쪽 날개 배너2 URL</div>
-			<input type='text' name='travel2banner2_floating_text1' value='<?=ms::meta('travel2banner2_floating_text1')?>'>
-			</div>
-		</td>
-	</tr>
-	<tr valign='top'>
-		<td>
-			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>오른쪽 날개 배너3</div>
-			<div class='image-upload'>
-			<?if( ms::meta('travel2banner3_floating') ) {
-				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner3_floating').">"; 
-			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 70px X 세로 70px]</div>
-				<?}?>
-			<input type='file' name='travel2banner3_floating'>
-			<?if( ms::meta('travel2banner3_floating') != '' ) { ?>
-				<input type='hidden' name='travel2banner3_floating_remove' value='n'>
-				<input type='checkbox' name='travel2banner3_floating_remove' value='y'><span class='title-small'>이미지 제거</span>
-			<?}?>
-			<div class='title'>오른쪽 날개 배너3 URL</div>
-			<input type='text' name='travel2banner3_floating_text1' value='<?=ms::meta('travel2banner3_floating_text1')?>'>
-			</div>
-		</td>
-	</tr>
-</table>
+		<?
+				for ( $i=1; $i<=3; $i ++ ) {
+			?>
+				<td>		
+					<div class='image-title'><img src='<?=x::url()?>/module/<?=$module?>/img/img-icon.png'>오른쪽 날개 배너<?=$i?></div>
+					<div class='image-upload'>
+					<?
+						if( file_exists( x::path_file( "travel_floating_banner$i" ) ) ) echo "<img src='".x::url_file( "travel_floating_banner$i" )."'>";
+						else {
+					?>
+							<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/<?=$module?>/img/no-image.png'><br>[가로 70px X 세로 70px]</div>
+						<?}?>
+						<input type='file' name='travel_floating_banner<?=$i?>'>
+							<input type='checkbox' name='travel_floating_banner<?=$i?>_remove' value='y'><span class='title-small'>이미지 제거</span>
+						<div class='title'>오른쪽 날개 배너<?=$i?> 링크</div>
+						<input type='text' name='travel_floating_banner<?=$i?>_url' value='<?=x::meta("travel_floating_banner{$i}_url")?>'>
+					</div>
+				</td>
+				
+			<?
+				}
+			?>
+		</tr>
+	</table>
 
 	</div><!--/config-container-->
 			<input type='submit' value='업데이트'>
@@ -349,57 +242,59 @@ function setTopMenu( $name ) {
 	</div>
 	<table cellspacing='0' cellpadding='10' class='image-config' width='100%'>	
 		<tr valign='top'>
-		<td>
-			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>왼쪽 사이드 배너</div>
-			<div class='image-upload'>
-			<?if( ms::meta('travel2banner1_sidebar') ) {
-				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner1_sidebar').">"; 
-			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 208px X 세로 88px]</div>
-				<?}?>
-			<input type='file' name='travel2banner1_sidebar'>
-			<?if( ms::meta('travel2banner1_sidebar') != '' ) { ?>
-				<input type='hidden' name='travel2banner1_sidebar_remove' value='n'>
-				<input type='checkbox' name='travel2banner1_sidebar_remove' value='y'><span class='title-small'>이미지 제거</span>
-			<?}?>
-			<div class='title'>왼쪽 사이드 배너 URL</div>
-			<input type='text' name='travel2banner1_sidebar_text1' value='<?=ms::meta('travel2banner1_sidebar_text1')?>'>
-		</td>
+		<td>		
+				<div class='image-title'><img src='<?=x::url()?>/module/<?=$module?>/img/img-icon.png'>왼쪽 사이드 배너</div>
+				<div class='image-upload'>
+				<?						
+
+					if( file_exists( x::path_file( "travel_left_banner" ) ) ) echo "<img src='".x::url_file(  "travel_left_banner" )."'>";
+					else {
+				?>				
+						<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/<?=$module?>/img/no-image.png'><br>[가로 208px X 세로 88px]</div>
+					<?}?>
+					<input type='file' name='travel_left_banner'>
+						<input type='checkbox' name='travel_left_banner_remove' value='y'><span class='title-small'>이미지 제거</span>
+
+					<div class='title'>왼쪽 사이드 배너 링크</div>
+					<input type='text' name='travel_left_banner_url' value='<?=x::meta("travel_left_banner_url")?>'>
+				</div>
+			</td>
 
 		<td>
 			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>오른쪽 사이드 배너</div>
 			<div class='image-upload'>
-			<?if( ms::meta('travel2banner_right') ) {
-				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner_right').">"; 
-			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 208px X 세로 88px]</div>
+			<?						
+
+				if( file_exists( x::path_file( "travel_right_banner" ) ) ) echo "<img src='".x::url_file(  "travel_right_banner" )."'>";
+				else {
+			?>				
+					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/<?=$module?>/img/no-image.png'><br>[가로 208px X 세로 88px]</div>
 				<?}?>
-			<input type='file' name='travel2banner_right'>
-			<?if( ms::meta('travel2banner_right') != '' ) { ?>
-				<input type='hidden' name='travel2banner_right_remove' value='n'>
-				<input type='checkbox' name='travel2banner_right_remove' value='y'><span class='title-small'>이미지 제거</span>
-			<?}?>
-			<div class='title'>오른쪽 사이드 배너 URL</div>
-			<input type='text' name='travel2banner_right_text1' value='<?=ms::meta('travel2banner_right_text1')?>'>
+				<input type='file' name='travel_right_banner'>
+					<input type='checkbox' name='travel_right_banner_remove' value='y'><span class='title-small'>이미지 제거</span>
+
+				<div class='title'>왼쪽 사이드 배너 링크</div>
+				<input type='text' name='travel_right_banner_url' value='<?=x::meta("travel_right_banner_url")?>'>
+			</div>
+		</td>
 		</td>
 
-	</tr>
-	<tr valign='top'>
 		<td>
 			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>하단 배너</div>
 			<div class='image-upload'>
-			<?if( ms::meta('travel2banner_bottom') ) {
-				echo "<img src=".ms::meta('img_url').ms::meta('travel2banner_bottom').">"; 
-			} else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 968px X 세로 168px]</div>
+			<?						
+
+				if( file_exists( x::path_file( "travel_bottom_banner" ) ) ) echo "<img src='".x::url_file(  "travel_bottom_banner" )."'>";
+				else {
+			?>				
+					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/<?=$module?>/img/no-image.png'><br>[가로 208px X 세로 88px]</div>
 				<?}?>
-			<input type='file' name='travel2banner_bottom'>
-			<?if( ms::meta('travel2banner_bottom') != '' ) { ?>
-				<input type='hidden' name='travel2banner_bottom_remove' value='n'>
-				<input type='checkbox' name='travel2banner_bottom_remove' value='y'><span class='title-small'>이미지 제거</span>
-			<?}?>
-			<div class='title'>하단 배너 URL</div>
-			<input type='text' name='travel2banner_bottom_text1' value='<?=ms::meta('travel2banner_bottom_text1')?>'>
+				<input type='file' name='travel_bottom_banner'>
+					<input type='checkbox' name='travel_bottom_banner_remove' value='y'><span class='title-small'>이미지 제거</span>
+
+				<div class='title'>하단 배너 링크</div>
+				<input type='text' name='travel_bottom_banner_url' value='<?=x::meta("travel_bottom_banner_url")?>'>
+			</div>
 		</td>
 		
 	</tr>
