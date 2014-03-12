@@ -97,6 +97,7 @@
 					g::board_create($o);
 					// 사이트 생성시 메뉴 저장
 					if ( $i <= 5 ) x::meta( $domain, "menu{$i}bo_table", ms::board_id ( $domain ).'_'.$i);
+					
 					x::meta( $domain, 'forum_no_'.$i, ms::board_id ( $domain ).'_'.$i);
 				}
 			}
