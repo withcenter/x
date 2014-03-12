@@ -18,7 +18,7 @@
 	<div class='footer'>
 		<div class='footer-logo'>		
 		<?php
-			if( ms::meta('footer_logo') ) $img = "<img src='".ms::meta('img_url').ms::meta('footer_logo')."' />";
+			if( file_exists( x::path_file( "travel_footer_logo" ) ) ) $img = "<img src='".x::url_file('travel_footer_logo')."' />";
 			else {
 				$img = "<img src='".x::url_theme()."/img/no_footer_logo.png' />";
 			}

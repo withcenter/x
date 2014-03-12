@@ -2,9 +2,9 @@
 /* 메뉴 정보  - 메뉴는 총 3개만 가져온다. */
 	$menu_info = array();
 	for ( $i = 1; $i <= 3; $i++ ) {
-		if ( $menu_item = ms::meta('menu_'.$i) ) { 
+		if ( $menu_item = x::meta('menu'.$i.'bo_table') ) { 
 			
-			$menu_info[$i]['title'] = ms::meta("menu_name_$i");
+			$menu_info[$i]['title'] = x::meta("menu{$i}name");
 			$menu_info[$i]['url'] = G5_BBS_URL.'/board.php?bo_table='.$menu_item;
 			
 			if ( empty($menu_info[$i]['title']) ) {
@@ -34,7 +34,7 @@
 			<? if ( $menu_info[3]['url'] ) {?>
 				<li class='menu-contact'><a href='<?=$menu_info[3]['url']?>'><?=$menu_info[3]['title']?></a></li>
 			<? }?>
-			<?if( ms::admin() ) { ?><li class='menu-admin'><a href='<?=ms::url_config()?>'>사이트관리</a></li><?}?>
+			<?if( ms::admin() ) { ?><li class='menu-admin'><a href='<?=url_site_config()?>'>사이트관리</a></li><?}?>
 			<li class='menu-mobile'><a href='<?=g::url()?>?device=mobile'>모바일</a></li>
         </ul>	
     </div>
