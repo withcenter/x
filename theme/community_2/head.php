@@ -57,9 +57,16 @@
             }
 	</script>
 <div class='main-menu'><div class='inner'>
-	<? for ( $i = 1; $i <= 6; $i++ ) {
-	if ( $board_id = x::meta("menu{$i}bo_table") ) {
-		$menu_name = x::meta("menu{$i}name");				
+	<?php
+		if( admin() ){
+		$max_menus = 5;
+	}
+	else {
+		$max_menus = 6;		
+	}
+	for ( $i = 1; $i <= $max_menus; $i++ ) {
+		if ( $board_id = x::meta("menu{$i}bo_table") ) {
+			$menu_name = x::meta("menu{$i}name");				
 			if ( empty($menu_name) ) {
 				$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".x::meta('menu'.$i.'bo_table')."'");
 				if ( empty($row['bo_subject']) ) $menu_name = ln("No Subject", "제목없음");
