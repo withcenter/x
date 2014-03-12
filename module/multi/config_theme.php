@@ -52,7 +52,7 @@
 				
 				
 				
-				if ( ! in_array( 'subsite', $type ) ) continue;
+				if ( ! in_array( 'pc', $type ) ) continue;
 				
 				
 				
