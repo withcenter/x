@@ -25,7 +25,6 @@ $folder = path_multi_upload( etc::last_domain(etc::domain()) );
 if( !is_dir( $folder ) ) mkdir( $folder, 0777, true );
 
 
-
 foreach( $_FILES as $name => $file ) {
 	if ( $in["{$name}_remove"] == 'y' ) @unlink( x::path_file( $name ) );
 	$pi = pathinfo( $file['name'] );
