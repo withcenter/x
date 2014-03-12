@@ -112,14 +112,16 @@ $(function(){
 <?php
 	$dirs = file::getDirs( x::dir() . '/skin/latest' );
 	foreach ( $dirs as $dir ) {
-		if ( file_exists( x::dir() . "/skin/latest/$dir/preview.png" ) ) $img = "<img src='".x::url()."/skin/latest/$dir/preview.png'>";
-		else $img = "No Preview";
-		echo "
+		if ( file_exists( x::dir() . "/skin/latest/$dir/preview.png" ) ) {		
+			$img = "<img src='".x::url()."/skin/latest/$dir/preview.png'>";
+			echo "
 			<div class='skin'>
 				<div class='preview'>$img</div>
 				<div class='folder'>$dir</div>
 			</div>
 		";
+		}
+		
 	}
 ?>
 <div style='clear:both;'></div>
