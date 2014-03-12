@@ -296,13 +296,14 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 }
 
 #board_philgo_1 .post_list  .other-images{
-	left:81px;
+	left:77px;
 	top:-1px;
 	z-index:99999;
 	position:absolute;
 	background-color:#ffffff;
 	display:none;
 	white-space:nowrap;
+	padding-left:8px;
 }
 
 #board_philgo_1 .post_list .other-images img{

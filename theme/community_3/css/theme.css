@@ -84,3 +84,9 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 	height: 25px;
 	top: -3px;
 }
+
+/**input contact num**/
+input[name='tel']{
+	padding:3px;
+	width:170px;
+}

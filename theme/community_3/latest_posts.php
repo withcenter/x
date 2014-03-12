@@ -36,7 +36,7 @@ $posts = g::posts(
 		</div>
 
 	<div class='com3-latest-posts-items'>
-		<table cellpadding=0 cellspacing=0>
+		<table width='100%' cellpadding=0 cellspacing=0>
 		<?php
 			if ( $posts ) {
 			$i = 1;
