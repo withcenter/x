@@ -1503,8 +1503,8 @@ span.config-name {
 }
 
 .config_menu .forum {
-	border-bottom: solid 1px #cccccc;
-	padding: 5px 0;
+	border-bottom: solid 1px #e6e6e6;
+	padding: 10px 0 5px 0;
 }
 
 .config_menu .forum.last-forum {
