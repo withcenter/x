@@ -7,7 +7,7 @@ for ( $i=1; $i <=5; $i++ ) {
 	x::meta("banner{$i}_url", $in["banner{$i}_url"]);
 }	
 
-for ( $i=1; $i<=5; $i++ ) {
+for ( $i=1; $i<=3; $i++ ) {
 	x::meta("travel_floating_banner{$i}_url", $in["travel_floating_banner{$i}_url"]);
 }
 	
