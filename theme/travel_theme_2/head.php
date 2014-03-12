@@ -14,8 +14,8 @@
     <div class="header_wrapper">
 			<div id="header-logo">
 					<a href="<?php echo G5_URL ?>">
-					<?if(x::meta('header_logo') ) { ?>
-						<img src="<?=ms::meta('img_url').ms::meta('header_logo')?>">
+					<?if(file_exists(x::path_file('header_logo')) ) { ?>
+						<img src="<?=x::url_file('header_logo')?>">
 					<?} else {?>
 						<img src='<?=x::url_theme()?>/img/default-logo.png'>
 					<?}?>
