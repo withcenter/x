@@ -33,7 +33,7 @@ if ( !admin() ) {
 
 	<div class='config-main-title'>
 		<div class='inner'>
-			<img src='<?=x::url().'/module/multisite/img/direction.png'?>'> 회원 관리
+			<img src='<?=x::url().'/module/'.$module.'/img/direction.png'?>'> 회원 관리
 		</div>				
 	</div>
 
@@ -44,7 +44,7 @@ if ( !admin() ) {
 				<span class='config-title-info'>Member Configuration <span class='no-of-member'>검색 회원수 <?=$total_post?></span></span>
 				<span class='config-title-notice'>
 					<span class='user-google-guide-button' page = 'google_doc_member' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
-					<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
+					<img src='<?=x::url().'/module/'.$module.'/img/setting_2.png'?>'>
 					</span>
 			</div>	
 			<div class='config-container'>
