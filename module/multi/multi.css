@@ -1190,7 +1190,7 @@ span.config-name {
 
 .config_menu .config .menu-num {
 	display: inline-block;
-	width: 60px;
+	width: 70px;
 }
 
 .config_menu .config .menu-num.sec {
@@ -1199,7 +1199,7 @@ span.config-name {
 
 .config_menu .config .menu-select-name {
 	display: inline-block;
-	width: 320px;
+	width: 350px;
 }
 
 .config_menu .config .select-wrapper {
@@ -1447,3 +1447,33 @@ span.config-name {
 }
 
 
+.config_menu .forum {
+	border-bottom: solid 1px #cccccc;
+	padding: 5px 0;
+}
+
+.config_menu .forum.last-forum {
+	border: 0;
+}
+
+.config_menu .forum .caption {
+	display: inline-block;
+	margin-top: 5px;
+	font-size: 13px;
+	font-weight: bold;
+	width: 60px;
+	text-align: center;
+}
+
+.config_menu select[name='select_bo_table'], .config_menu input.bo_table, .config_menu input.menu_name {
+	border: solid 1px #d8d8d8;
+	vertical-align: top;
+	padding: 5px;
+	width: 30%;
+}
+
+.config_menu select[name='select_bo_table'] {
+	height: 26px;
+	line-height: 26px;
+	width: 125px;
+}
