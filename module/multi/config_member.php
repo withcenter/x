@@ -41,7 +41,7 @@ if ( !admin() ) {
 
 		<div class='config-wrapper'>						
 			<div class='config-title'>
-				<span class='config-title-info'>Member Configuration <span class='no-of-member'>검색 회원수 <?=$total_post?></span></span>
+				<span class='config-title-info'>Member Configuration <span class='no-of-member'>검색 회원수: <strong><?=$total_post?></strong></span></span>
 				<span class='config-title-notice'>
 					<span class='user-google-guide-button' page = 'google_doc_member' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
 					<img src='<?=module('img/setting_2.png')?>'>

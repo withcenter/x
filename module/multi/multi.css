@@ -1451,8 +1451,6 @@ span.config-name {
 }
 
 .config-member .no-of-member {
-	font-weight: bold;
-	font-size: 11px;
 	display: inline-block;
 	margin-left: 20px;
 }
