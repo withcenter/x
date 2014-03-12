@@ -54,7 +54,8 @@
 }
 .travel_lower_items .item .subject{
 	position: relative;
-	white-space:nowrap;
+	overflow: hidden;
+	height: 15px;
 }
 .travel_lower_items .item .comments{
 	position: absolute;
