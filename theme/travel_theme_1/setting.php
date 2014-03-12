@@ -43,10 +43,9 @@ function setTopMenu( $name ) {
 		</span>
 	</div>
 	
+	<div class='config-container'>
 	<div class='hidden-google-doc google_doc_travel_1_1'>	
 	</div>	
-	
-	<div class='config-container'>
 	<table cellpadding=0 cellspacing=0 width='100%' class='forum-config'>
 		<tr valign='top'>
 			<td>
