@@ -42,11 +42,8 @@ $(function(){
 		}
 	}
 ?>
-
-<input type='text' class='bo_table' name='menu<?=$i?>bo_table' value="<?=x::meta("menu{$i}bo_table")?>" placeholder=" Input bo_table ex) qna">
-<input type='text' class='menu_name' name='menu<?=$i?>name' value="<?=x::meta("menu{$i}name")?>" placeholder=" Menu Name">
-
-
+	<input type='text' class='bo_table' name='menu<?=$i?>bo_table' value="<?=x::meta("menu{$i}bo_table")?>" placeholder=" Input bo_table ex) qna">
+	<input type='text' class='menu_name' name='menu<?=$i?>name' value="<?=x::meta("menu{$i}name")?>" placeholder=" Menu Name">
 </span>
 </div>
 <?
