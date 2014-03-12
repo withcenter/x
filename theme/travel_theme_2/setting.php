@@ -99,31 +99,26 @@ function setTopMenu( $name ) {
 		<td width='50%'> 
 			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>사이트 상단 로고</div>
 			<div class='image-upload'>
-			<?if( x::meta('header_logo') ) {
-				echo "<img src=".x::meta('img_url').x::meta('header_logo').">"; 
+			<?if( file_exists( x::path_file( 'header_logo' ) ) ) {
+				echo "<img src=".x::url_file('header_logo').">"; 
 			} else {?>
 					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 310px X 세로 60px]</div>
 				<?}?>
 				<input type='file' name='header_logo'>
-				<?if( x::meta('header_logo') != '' ) { ?>
-					<input type='hidden' name='header_logo_remove' value='n'>
-					<input type='checkbox' name='header_logo_remove' value='y'><span class='title-small'>이미지 제거</span>
-				<?}?>
+				<input type='checkbox' name='header_logo_remove' value='y'><span class='title-small'>이미지 제거</span>
 			</div>
 		</td>
 		<td width='50%'>
 			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>사이트 하단 로고</div>
 			<div class='image-upload'>
-			<?if( x::meta('footer_logo') ) {
-				echo "<img src=".x::meta('img_url').x::meta('footer_logo').">"; 
+			<?if( file_exists(x::path_file('footer_logo') ) ) {
+				echo "<img src=".x::url_file('footer_logo').">"; 
 			} else {?>
 					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 100px X 세로 90px]</div>
 				<?}?>
 				<input type='file' name='footer_logo'>
-				<?if( x::meta('footer_logo') != '' ) { ?>
-					<input type='hidden' name='footer_logo_remove' value='n'>
-					<input type='checkbox' name='footer_logo_remove' value='y'><span class='title-small'>이미지 제거</span>
-				<?}?>
+				<input type='file' name='footer_logo'>
+				<input type='checkbox' name='footer_logo_remove' value='y'><span class='title-small'>이미지 제거</span>
 			</div>
 		</td>
 	</tr>
