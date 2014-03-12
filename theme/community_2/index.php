@@ -1,7 +1,7 @@
 		<table class='main-top' cellpadding=0 cellspacing=0 width='100%'>
 			<tr valign='top'>
 				<td>
-					<?	if(  x::path_file('banner') ) {?>
+					<?	if(  file_exists(x::path_file('banner')) ) {?>
 							<img src="<?=x::url_file('banner')?>">
 					<?}
 						else {?>
@@ -36,7 +36,7 @@
 			</tr>
 		</table>
 		<div class='bottom-banner'>
-			<?if( x::path_file('banner_bottom') ) {?>
+			<?if( file_exists(x::path_file('banner_bottom')) ) {?>
 				<img src="<?=x::url_file('banner_bottom')?>" />
 			<?} else {?>
 					<div class='no-image-banner bottom-no-image-banner'>

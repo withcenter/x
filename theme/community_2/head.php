@@ -64,7 +64,7 @@
 				$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".x::meta('menu'.$i.'bo_table')."'");
 				if ( empty($row['bo_subject']) ) $menu_name = ln("No Subject", "제목없음");
 				else $menu_name = $row['bo_subject'];
-			}
+			}			
 	?>
 	<a  href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$board_id?>'><?=$menu_name?></a>
 	<?}}?>
