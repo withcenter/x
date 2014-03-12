@@ -1,21 +1,3 @@
-<?php
-/* 메뉴 정보  - 메뉴는 총 3개만 가져온다. */
-	$menu_info = array();
-	for ( $i = 1; $i <= 3; $i++ ) {
-		if ( $menu_item = x::meta('menu'.$i.'bo_table') ) { 
-			
-			$menu_info[$i]['title'] = x::meta("menu{$i}name");
-			$menu_info[$i]['url'] = G5_BBS_URL.'/board.php?bo_table='.$menu_item;
-			
-			if ( empty($menu_info[$i]['title']) ) {
-				$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='$menu_item'");
-				if ( empty($row['bo_subject']) )$menu_info[$i]['title'] = ln("No Subject", "제목없음");
-				else $menu_info[$i]['title'] = $row['bo_subject'];
-			}
-			
-		}
-	}
-?>
 <link rel="stylesheet" href="<?=x::url_theme()?>/css/theme.css">
 <script type='text/javascript' src='<?=x::url_theme()?>/js/theme.js'></script>
 <div id="hd">
@@ -27,14 +9,19 @@
         </div>
         <ul id="tnb">
 			<li class='menu-home'><a href='<?=ms::url_site(etc::domain())?>'>홈</a></li>
-			<li class='menu-about'><a href='<?=$menu_info[1]['url']?>'><?=$menu_info[1]['title']?></a></li>
-			<? if ( $menu_info[2]['url'] ) {?>
-				<li class='menu-faqs'><a href='<?=$menu_info[2]['url']?>'><?=$menu_info[2]['title']?></a></li>
-			<? }?> 
-			<? if ( $menu_info[3]['url'] ) {?>
-				<li class='menu-contact'><a href='<?=$menu_info[3]['url']?>'><?=$menu_info[3]['title']?></a></li>
-			<? }?>
-			<?if( admin() ) { ?><li class='menu-admin'><a href='<?=url_site_config()?>'>사이트관리</a></li><?}?>
+			<?php
+				$menu_class = array( 'menu-about' , 'menu-faqs' , 'menu-contact' );
+				$menus = get_site_menu();
+				$i = 0;
+				foreach ( $menus as $menu ) {
+					echo "<li class='".$menu_class[$i]."'><a href='".url_forum_list($menu['bo_table'])."'>$menu[name]</a></li>";
+					$i++;
+				}
+				if ( admin() ) {
+			?>		<li class='menu-admin'>
+						<a href="<?=url_site_config()?>">사이트 관리</a>
+					</li>
+			<? } ?>
 			<li class='menu-mobile'><a href='<?=g::url()?>?device=mobile'>모바일</a></li>
         </ul>	
     </div>
