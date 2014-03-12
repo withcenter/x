@@ -1,0 +1,66 @@
+.admin-member {
+	border: 1px solid #d5d5d5;
+	padding: 10px;
+	border-radius: 3px;
+}
+.admin-member > .msg {
+	border: 1px solid #666666;
+	background-color: #d5d5d5;
+	color: #436280;
+	font-size: 11pt;
+	padding: 0 10px;
+	height: 30px;
+	line-height: 30px;
+	margin-bottom: 10px;
+	border-radius: 3px;
+	font-family: '맑은 고딕', AppleGothic;
+}
+.admin-member .search-form {
+	border: 1px solid #666666;
+	padding: 10px;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	position: relative;
+}
+	
+.admin-member .search-form .title {
+	font-family: '맑은 고딕', AppleGothic;
+	margin-bottom: 5px;
+}
+
+.admin-member .search-form  .sub-item {
+	background-color: #666666;
+	color: #ffffff;
+	display: inline-block;
+	width: 80px;
+	height: 25px;
+	line-height: 25px;
+	margin-right: 5px;
+	text-align: center;
+	border-radius: 3px;
+}
+
+.admin-member .search-form  input[type='text'] {
+	height: 22px;
+	line-height: 22px;
+	width: 120px;
+	padding: 0 10px;
+	position: relative;
+	top: -1px;
+	margin-right: 20px;
+}
+
+.admin-member .search-form select[name='no_of_rows'] {
+	height: 26px;
+	line-height: 26px;
+	width: 120px;
+	padding: 0 10px;
+	position: relative;
+	top: -1px;
+}
+
+.admin-member .search-form input[type='submit'] {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
