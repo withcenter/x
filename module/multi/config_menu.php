@@ -25,7 +25,8 @@
 			<div class='config-container'>
 			<?
 				for ( $i=1; $i<=10; $i++ ) {
-					echo forum_select( $i );
+					//echo forum_select( $i );
+					echo temporary_forum_select( $i );
 				}
 			?>
 			</div>
@@ -46,7 +47,7 @@
 		<span class='caption'><?=$i?></span>
 		<span class='text'>
 		<?
-			if ( x::multisite() ) {
+			if ( !x::multisite() ) {
 				$cfgs = ms::forums();
 				if ( ! empty( $cfgs ) ) {
 		?>
@@ -65,6 +66,52 @@
 		</script>
 		<?
 				}
+			}
+		?>
+
+		<input type='text' class='bo_table' name='menu<?=$i?>bo_table' value="<?=x::meta("menu{$i}bo_table")?>" placeholder=" Input bo_table ex) qna">
+		<input type='text' class='menu_name' name='menu<?=$i?>name' value="<?=x::meta("menu{$i}name")?>" placeholder=" Menu Name">
+
+
+		</span>
+		</div>
+		<?
+			return ob_get_clean();
+		}
+		?>
+			
+<?/******THIS IS JUST TEMPORARY*******/			
+function temporary_forum_select($i)
+		{
+			ob_start();
+		?>
+		<div class="forum <? if ($i==10) echo 'last-forum'?>" >
+		<span class='caption'><?=$i?></span>
+		<span class='text'>
+		<?
+			$cfgs = ms::forums();			
+			if ( ! empty( $cfgs ) ) {
+		?>
+		<select name='select_bo_table'>
+			<option value=''>Select Forum ID</option>
+			<? foreach ( $cfgs as $c ) { 
+				if( x::meta("menu{$i}bo_table") == $c['bo_table'] ){
+					$is_selected = 'selected';
+				}
+				else $is_selected = null;
+			?>
+				
+				<option value="<?=$c['bo_table']?>" <?=$is_selected?>><?=$c['bo_subject']?></option>
+			<? } ?>
+		</select>
+		<script>
+		$(function(){
+			$("[name='select_bo_table']").change(function(){
+				$(this).parent().find(".bo_table").val($(this).val());
+			});
+		});
+		</script>
+		<?
 			}
 		?>
 
