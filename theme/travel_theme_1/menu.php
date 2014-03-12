@@ -16,7 +16,7 @@
 				if($i==6 && !ms::admin()) $last_item = "last-item";
 				else $last_item ='';
 			?>	
-				<li><span class='menu-divider'></span></li>";
+				<li><span class='menu-divider'></span></li>
 				<li class='<?=$last_item?>' page="<?=x::meta("menu{$i}bo_table")?>">
 				<div class='inner'>
 					<a  href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$board_id?>'><?=$menu_name?></a>
