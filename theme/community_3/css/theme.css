@@ -37,6 +37,7 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 
 .layout .body-wrapper .main-content .images_with_caption_wrapper{	
 	margin-bottom:10px;
+	height:160px;
 }
 
 .layout .body-wrapper .main-content .bulleted_list{

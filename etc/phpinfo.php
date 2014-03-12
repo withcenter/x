@@ -4,6 +4,10 @@
  */
 echo "<h1>PHPINFO()</h1>";
 
+// edited by ben
+echo "<hr>";
+
+
 // first edited by jaeho
 phpinfo();
 
