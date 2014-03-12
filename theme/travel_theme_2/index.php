@@ -22,10 +22,12 @@
 						if ( ! $selected ++ ) $first_image = 'selected';
 						else $first_image = '';
 						
+						if( !$url = $banner['href'] ) $url = 'javascript:void(0)';						
+						
 						echo "<div class='banner-image image_num_$selected $first_image'>";
-						echo "<a href='$banner[href]' target='_blank'><img src='$banner[src]'></a>";
-						echo "<a href='$banner[href]' target='_blank'><span class='banner-content'><p class='banner-text'>".cut_str(strip_tags($banner['text']),50,'...')."</p></span></a>";
-						echo "<div class='banner-more'><a href='$banner[href]' target='_blank'>자세히 &gt;</a></div>";
+						echo "<a href='$url' target='_blank'><img src='$banner[src]'></a>";
+						echo "<a href='$url' target='_blank'><span class='banner-content'><p class='banner-text'>".cut_str(strip_tags($banner['text']),50,'...')."</p></span></a>";
+						echo "<div class='banner-more'><a href='$url' target='_blank'>자세히 &gt;</a></div>";
 						echo "</div>";						
 					}
 				}
