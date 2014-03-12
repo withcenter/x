@@ -11,11 +11,10 @@
 
 <div class='banner-left'>
 	<?
-	$banner_url = ms::meta('img_url');
-	$url = ms::meta('travel2banner1_sidebar_text1');
-	$banner_image = ms::meta( 'travel2banner1_sidebar' );
-	if ( $banner_image ) {
-		echo "<a href='$url' target='_blank'><img src='".$banner_url.$banner_image."'></a>";
+	if ( file_exists( x::path_file ( 'travel_left_banner' ) ) ) {
+		if ( !$url = x::meta('travel_left_banner_url') ) $url = 'javascript:void(0)';
+		
+		echo "<a href='$url' target='_blank'><img src='".x::url_file('travel_left_banner')."'></a>";
 	}
 	else {?>
 		<a href='javascript:void(0)' ><img src='<?=x::url_theme()?>/img/no_side_banner.png'></a>
