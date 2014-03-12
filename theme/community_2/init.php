@@ -1,7 +1,7 @@
 <?php
 x::hook_register('tail_begin', 'hook_multisite_tail_begin');
 
-$theme_sidebar = ms::meta('theme_sidebar');
+$theme_sidebar = x::meta('theme_sidebar');
 function hook_multisite_tail_begin() {
 	global $theme_sidebar;
 

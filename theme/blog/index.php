@@ -34,22 +34,22 @@
 ?>
 <table class='main-bottom' cellpadding=0 cellspacing=0 width='100%'>
 	<tr valign='top'>
-		<? if (ms::meta('theme_sidebar') =='right' ) {
+		<? if (x::meta('theme_sidebar') =='right' ) {
 			echo $side_banner; 
 			echo "<td width=10></td>";
 		}?>
 		<td>
 			<?php
 				for ( $i = 2; $i <= 10; $i++ ) {
-					if ( ms::meta('forum_no_'.$i) ) {
-						$option = db::row( "SELECT bo_subject, bo_count_write FROM $g5[board_table] WHERE bo_table='".ms::meta('forum_no_'.$i)."'" );
-						echo latest( "x-latest-blog" , ms::meta('forum_no_'.$i) , 3 , 25 );
+					if ( x::meta('forum_no_'.$i) ) {
+						$option = db::row( "SELECT bo_subject, bo_count_write FROM $g5[board_table] WHERE bo_table='".x::meta('forum_no_'.$i)."'" );
+						echo latest( "x-latest-blog" , x::meta('forum_no_'.$i) , 3 , 25 );
 					}
 				}
 			?>
 		</td>
 		
-		<? if (ms::meta('theme_sidebar') !='right' ) {
+		<? if (x::meta('theme_sidebar') !='right' ) {
 			echo "<td width=10></td>";
 			echo $side_banner; 
 		}?>
