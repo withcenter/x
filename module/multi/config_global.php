@@ -9,7 +9,7 @@
 	
 	<div class='config-main-title'>
 		<div class='inner'>
-			<img src='<?=x::url().'/module/<?=$module?>/img/direction.png'?>'> 통합 사이트 정보
+			<img src='<?=x::url().'/module/'.$module.'/img/direction.png'?>'> 통합 사이트 정보
 		</div>				
 	</div>
 	
