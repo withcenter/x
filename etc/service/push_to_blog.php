@@ -66,6 +66,7 @@ for ( $cb = 1; $cb <= 3; $cb++ ) {
 	
 	
 	echo "STEP 0..\n";
+
 	$response = push_to_blog(
 		array(
 			'endpoint'	=> $blogs['naver']['endpoint'],
@@ -105,8 +106,7 @@ for ( $cb = 1; $cb <= 3; $cb++ ) {
 	
 }
 
-if ( ! function_exists( "push_to_blog" ) ) {
-
+if ( !function_exists( 'push_to_blog' ) ) {
 function push_to_blog( $o, $cb )
 {
 	
@@ -172,4 +172,3 @@ function push_to_blog( $o, $cb )
 	return $response;
 }
 }
-

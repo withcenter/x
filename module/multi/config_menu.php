@@ -124,5 +124,5 @@ function temporary_forum_select($i)
 		<?
 			return ob_get_clean();
 		}
-		?>
-
+/*******************************/
+?>
