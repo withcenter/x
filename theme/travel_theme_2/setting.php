@@ -61,6 +61,8 @@ function setTopMenu( $name ) {
 				</tr>
 			</table>	
 		</div>
+		<input type='submit' value='업데이트'>
+		<div style='clear:right;'></div>
 	</div>
 
 <div class='config-wrapper'>
