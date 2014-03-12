@@ -7,7 +7,7 @@
 				$banners[] = array(
 					'src' => x::url_file( "banner$i" ),
 					'href' => x::meta( "banner{$i}_url" ),
-					'text' => x::meta("banner{$i}_text")
+					'text' => x::meta( "banner{$i}_text")
 				);
 			}
 		}		
@@ -16,9 +16,8 @@
 			<?
 				if ( $banners ) {
 					$selected = 0;
-					$banner_num = 1;
 					foreach ( $banners as $banner ) {
-					//di($banner);
+					
 						if ( ! $selected ++ ) $first_image = 'selected';
 						else $first_image = '';
 						
@@ -32,7 +31,7 @@
 					}
 				}
 				else {
-					echo "<img src='".x::url_theme()."/img/no_main_banner.png' />";
+					echo "<img src='".x::url_theme()."/img/no_image_banner1.png' />";
 				}
 			?>
 		</div>

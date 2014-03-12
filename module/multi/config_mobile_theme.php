@@ -8,7 +8,7 @@
 <div>
 		<div class='config-main-title'>
 			<div class='inner'>
-				<span class='config-title-info'><img src='<?=x::url().'/module/'.$module.'/img/direction.png'?>'> 원하시는 테마를 선택하신 후 클릭하시면 반영이 됩니다.</span>
+				<span class='config-title-info'><img src='<?=module('img/direction.png')?>'> 원하시는 테마를 선택하신 후 클릭하시면 반영이 됩니다.</span>
 				<span class='config-title-notice'>
 					<span class='user-google-guide-button inner-title' page = 'google_doc_theme_mobile' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
 				</span>

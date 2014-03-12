@@ -39,7 +39,7 @@ function setTopMenu( $name ) {
 		<span class='config-title-info'><span class='config-title-info'>탑 메뉴 설정</span></span>
 		<span class='config-title-notice'>
 			<span class='user-google-guide-button' page = 'google_doc_travel_1_1' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
-			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
+			<img src='<?=module('img/setting_2.png')?>'>
 		</span>
 	</div>
 	
@@ -73,7 +73,7 @@ function setTopMenu( $name ) {
 		<span class='config-title-info'>사이트 추가 설정</span>
 		<span class='config-title-notice'>
 			<span class='user-google-guide-button' page = 'google_doc_travel_1_2' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
-			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
+			<img src='<?=module('img/setting_2.png')?>'>
 		</span>
 	</div>
 	<div class='config-container' cellspacing='0' cellpadding='10' >
@@ -94,7 +94,7 @@ function setTopMenu( $name ) {
 		<span class='config-title-info'>사이트 상하단 로고 & 로고 문구</span>
 		<span class='config-title-notice'>
 			<span class='user-google-guide-button' page = 'google_doc_travel_1_3' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
-			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
+			<img src='<?=module('img/setting_2.png')?>'>
 		</span>
 	</div>
 <div class='config-container'>
@@ -104,7 +104,7 @@ function setTopMenu( $name ) {
 	<tr valign='top' >
 		<td width='50%'> 
 			<div class='image-title'>
-				<img src='<?=x::url()?>/module/<?=$module?>/img/img-icon.png'>사이트 로고				
+				<img src='<?=module('img/img-icon.png')?>'>사이트 로고				
 			</div>
 			<div class='image-upload'>
 			<?
@@ -122,7 +122,7 @@ function setTopMenu( $name ) {
 		</td>
 
 		<td width='50%'>		
-			<div class='image-title'><img src='<?=x::url()?>/module/<?=$module?>/img/img-icon.png'>사이트 하단 로고</div>
+			<div class='image-title'><img src='<?=module('img/img-icon.png')?>'>사이트 하단 로고</div>
 			<div class='image-upload'>
 			<?
 				if( file_exists( x::path_file( "travel_footer_logo" ) ) ) echo "<img src='".x::url_file( "travel_footer_logo" )."'>";
@@ -146,7 +146,7 @@ function setTopMenu( $name ) {
 		<span class='config-title-info'>메인 롤링 배너</span>
 		<span class='config-title-notice'>
 			<span class='user-google-guide-button' page = 'google_doc_travel_1_4' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
-			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
+			<img src='<?=module('img/setting_2.png')?>'>
 		</span>
 		</div>
 	<div class='config-container'>
@@ -158,7 +158,7 @@ function setTopMenu( $name ) {
 				if ( $i == 1 || $i == 4 ) echo "<tr valign='top'>";
 		?>
 			<td>		
-				<div class='image-title'><img src='<?=x::url()?>/module/<?=$module?>/img/img-icon.png'>배너이미지<?=$i?></div>
+				<div class='image-title'><img src='<?=module('img/img-icon.png')?>'>배너이미지<?=$i?></div>
 				<div class='image-upload'>
 				<?
 					if( file_exists( x::path_file( "banner$i" ) ) ) echo "<img src='".x::url_file( "banner$i" )."'>";
@@ -190,7 +190,7 @@ function setTopMenu( $name ) {
 		<span class='config-title-info'>오른쪽 날개 배너</span>
 		<span class='config-title-notice'>
 			<span class='user-google-guide-button' page = 'google_doc_travel_1_5' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
-			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
+			<img src='<?=module('img/setting_2.png')?>'>
 		</span>
 		</div>
 	<div class='config-container'>
@@ -202,7 +202,7 @@ function setTopMenu( $name ) {
 				for ( $i=1; $i<=3; $i ++ ) {
 			?>
 				<td>		
-					<div class='image-title'><img src='<?=x::url()?>/module/<?=$module?>/img/img-icon.png'>오른쪽 날개 배너<?=$i?></div>
+					<div class='image-title'><img src='<?=module('img/img-icon.png')?>'>오른쪽 날개 배너<?=$i?></div>
 					<div class='image-upload'>
 					<?
 						if( file_exists( x::path_file( "travel_floating_banner$i" ) ) ) echo "<img src='".x::url_file( "travel_floating_banner$i" )."'>";
@@ -233,7 +233,7 @@ function setTopMenu( $name ) {
 		<span class='config-title-info'>중앙 사이드 배너, 하단 배너</span>
 		<span class='config-title-notice'>
 			<span class='user-google-guide-button' page = 'google_doc_travel_1_6' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
-			<img src='<?=x::url().'/module/multisite/img/setting_2.png'?>'>
+			<img src='<?=module('img/setting_2.png')?>'>
 		</span>
 		</div>
 	<div class='config-container'>
@@ -242,7 +242,7 @@ function setTopMenu( $name ) {
 	<table cellspacing='0' cellpadding='10' class='image-config' width='100%'>	
 		<tr valign='top'>
 		<td>		
-				<div class='image-title'><img src='<?=x::url()?>/module/<?=$module?>/img/img-icon.png'>왼쪽 사이드 배너</div>
+				<div class='image-title'><img src='<?=module('img/img-icon.png')?>'>왼쪽 사이드 배너</div>
 				<div class='image-upload'>
 				<?						
 
@@ -286,7 +286,7 @@ function setTopMenu( $name ) {
 				if( file_exists( x::path_file( "travel_bottom_banner" ) ) ) echo "<img src='".x::url_file(  "travel_bottom_banner" )."'>";
 				else {
 			?>				
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/<?=$module?>/img/no-image.png'><br>[가로 208px X 세로 88px]</div>
+					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/<?=$module?>/img/no-image.png'><br>[가로 968px X 세로 168px]</div>
 				<?}?>
 				<input type='file' name='travel_bottom_banner'>
 					<input type='checkbox' name='travel_bottom_banner_remove' value='y'><span class='title-small'>이미지 제거</span>

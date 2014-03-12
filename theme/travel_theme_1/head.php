@@ -14,7 +14,7 @@
     <div class="header_wrapper">
 			<div id="header-logo">
 					<a href="<?php echo G5_URL ?>">
-					<?	if( file_exists( path_logo() ) ) echo "<img src='".url_logo()."'>";
+					<?if( file_exists( path_logo() ) ) echo "<img src='".url_logo()."'>";
 					else echo "<img src='".x::url_theme()."/img/default-logo.png'>";
 					?>
 					</a>
@@ -79,7 +79,7 @@
 	<?
 	for( $i = 1; $i <= 3; $i++ ){
 		if ( file_exists( x::path_file( "travel_floating_banner$i" ) ) ) {
-			$img = "<a href='".ms::meta("travel_floating_banner{$i}_url")."' target='_blank'><img style='width:100%; height: 100%;' src='".x::url_file( "travel_floating_banner$i" )."'/></a>";	
+			$img = "<a href='".x::meta("travel_floating_banner{$i}_url")."' target='_blank'><img style='width:100%; height: 100%;' src='".x::url_file( "travel_floating_banner$i" )."'/></a>";	
 		}
 		else {
 			if ( $i ==  1 ) $img = "<a href='javascript:void(0)'><img style='width: 100%; height: 100%;' src='".x::url_theme()."/img/agoda.gif'/></a>";

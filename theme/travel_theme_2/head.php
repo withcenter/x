@@ -13,18 +13,13 @@
 
     <div class="header_wrapper">
 			<div id="header-logo">
-					<a href="<?php echo G5_URL ?>">
-					<?if(file_exists(x::path_file('header_logo')) ) { ?>
-						<img src="<?=x::url_file('header_logo')?>">
-					<?} else {?>
-						<img src='<?=x::url_theme()?>/img/default-logo.png'>
-					<?}?>
-					</a>
+				<a href="<?php echo G5_URL ?>">
+					<?if( file_exists( path_logo() ) ) echo "<img src='".url_logo()."'>";
+					else echo "<img src='".x::url_theme()."/img/default-logo.png'>";
+					?>
+				</a>
 			</div>
-	<?
-		//global $cfgs;
-		//$cfgs = ms::forums();
-	?>
+
 	<div class='extra-menu-items'>
 		<div class='extra-top'>
 			<?for( $i = 1; $i <= 3; $i ++){			
@@ -93,8 +88,8 @@
 	<div class='float-image-wrapper'>
 	<?
 	for( $i = 1; $i <= 3; $i++ ){
-		if (x::meta('travel2banner'.$i.'_floating') ) {
-			$img = "<a href='".ms::meta('travel2banner'.$i.'_floating_text'.$i)."' target='_blank'><img style='width:100%; height: 100%;' src='".ms::meta('img_url').ms::meta('travel2banner'.$i.'_floating')."'/></a>";	
+		if ( file_exists( x::path_file( "travel_floating_banner$i" ) ) ) {
+			$img = "<a href='".x::meta("travel_floating_banner{$i}_url")."' target='_blank'><img style='width:100%; height: 100%;' src='".x::url_file( "travel_floating_banner$i" )."'/></a>";	
 		}
 		else {
 			if ( $i ==  1 ) $img = "<a href='javascript:void(0)'><img style='width: 100%; height: 100%;' src='".x::url_theme()."/img/agoda.gif'/></a>";

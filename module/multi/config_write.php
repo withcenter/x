@@ -11,7 +11,7 @@ if ( $in['done'] ) {
 <div class='config config-write'>
 <div class='config-main-title'>
 	<div class='inner'>
-		<span class='config-title-info'><img src='<?=x::url().'/module/multi/img/direction.png'?>'> 블로그 API 정보를 입력해 주세요.</span>
+		<span class='config-title-info'><img src='<?=module('img/direction.png')?>'> 블로그 API 정보를 입력해 주세요.</span>
 		<span class='config-title-notice'>
 			<span class='user-google-guide-button inner-title' page = 'google_doc_blog_api' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
 		</span>
