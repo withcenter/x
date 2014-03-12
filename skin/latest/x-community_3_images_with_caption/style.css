@@ -1,6 +1,7 @@
 .community_images_with_captions  {
 	border:1px solid #bbbbbb;
 	height:100%;
+	
 }
 .community_images_with_captions  .title{
 	border-bottom:1px solid #bbbbbb;
@@ -43,8 +44,7 @@
 	width:23%;
 	float: left;
 	/*margin-left:11px;*/
-	margin-left:1.48%;
-	margin-bottom:10px;
+	margin-left:1.48%;	
 }
 
 .community_images_with_captions_container.no-margin {
@@ -72,7 +72,7 @@
 	line-height: 1.2em;
 	height: 1em;
 	word-break: break-all;
-	white-space:nowrap;
+	white-space:nowrap;	
 }
 
 .images_with_captions .caption a{	
