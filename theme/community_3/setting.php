@@ -1,9 +1,33 @@
 <?php
 function setTopMenu( $name ) {
+	global $cfgs;
 	
 	ob_start();
-?>
-	<input type='text' name='<?=$name?>' value="<?=x::meta( $name )?>" placeholder=" 게시판 아이디 직접 입력" style='height: 23px; width: 140px; line-height: 23px; padding: 0 10px;' />
+	if ( ms::exist() ) {
+		$cfgs = ms::forums();
+		if ( ! empty( $cfgs ) ) {
+	?>
+	<select name='<?=$name?>'>
+		<option value=''>게시판을 선택하세요</option>
+		<option value=''></option>
+		<? foreach ( $cfgs as $c ) { 
+			if ( $c['bo_table'] == x::meta($name) ) $selected = 'selected';
+			else $selected = null;
+		?>
+			<option value="<?=$c['bo_table']?>" <?=$selected?>><?=$c['bo_subject']?></option>
+		<? } ?>
+	</select>
+	<script>
+	$(function(){
+		$("[name='<?=$name?>']").change(function(){
+			$("[name='<?=$name?>_bo_table']").val($(this).val());
+		});
+	});
+	</script>
+	<?
+		}
+	}?>
+	<input type='text' name='<?=$name?>_bo_table' value="<?=x::meta($name."_name")?>" placeholder=" 게시판 아이디 직접 입력" style='height: 23px; width: 140px; line-height: 23px; padding: 0 10px;' />
 <?
 	return $content = ob_get_clean();
 }
@@ -57,7 +81,7 @@ function setTopMenu( $name ) {
 	<div class='config-container'>
 	<div class='hidden-google-doc google_doc_community_2_2'>	
 	</div>
-		<span class='title-small'>전화번호: </span><input type='text' name='tel' value='<?=ms::meta('tel')?>'>	
+		<span class='title-small'>전화번호: </span><input type='text' name='tel' value='<?=x::meta('tel')?>'>	
 	</div>
 		<input type='submit' value='업데이트'>
 		<div style='clear:right;'></div>
@@ -98,20 +122,7 @@ function setTopMenu( $name ) {
 				<input type='checkbox' name='<?=code_logo()?>_remove' value='y'><span class='title-small'>이미지 제거</span>
 			</div>
 		</td>
-		<? /*
-		<td width='50%'>
-			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>회사로고</div>
-			<div class='image-upload'>
-			<?if( ms::meta('com3banner_company') ) {
-				echo "<img src=".ms::meta('img_url').ms::meta('com3banner_company').">"; 
-			} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 210px X 세로 116px]</div>"; ?>
-				<input type='file' name='com3banner_company'>
-				<?if( ms::meta('com3banner_company') != '' ) { ?>
-					<input type='hidden' name='com3banner_company_remove' value='n'>
-					<input type='checkbox' name='com3banner_company_remove' value='y'><span class='title-small'>이미지 제거</span>
-				<?}?>
-			</div>
-		</td> */?>
+		
 	</tr>
 		<?
 			for ( $i=1; $i<=5; $i ++ ) {

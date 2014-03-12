@@ -33,11 +33,13 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	
 	
     <?php for ($i=0; $i<count($list); $i++) {
-			foreach ( $most_commented_wr_id as $key => $value ) {
-				if ( $key == $list[$i]['wr_id'] ) $add_color = "style='color: #cc4235; font-weight: bold;'";
-				else $add_color = null;
-				
+			if ( $list[$i]['comment_cnt'] ) {
+				foreach ( $most_commented_wr_id as $key => $value ) {
+					if ( $key == $list[$i]['wr_id'] ) $add_color = "style='color: #cc4235; font-weight: bold;'";
+					else $add_color = null;
+				}
 			}
+			else $add_color = null;
 	?>
         <li>
 		

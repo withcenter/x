@@ -1,5 +1,7 @@
 <?php
 include_once 'etc/class.php';
+include_once 'etc/procedural-function.php';
+
 
 if ( etc::web() ) x::load_global_config();
 

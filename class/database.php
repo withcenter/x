@@ -181,6 +181,13 @@ class database extends sql{
 		return self::query($q);
 	}
 	
+	/**
+	 *
+	 * @code
+			db::insert( 'x_site_config', array( 'domain'=>$domain, 'mb_id'=>$mb_id );
+			return db::insert_id();
+	 * @endcode
+	 */
 	static function insert_id()
 	{
 		return mysql_insert_id();

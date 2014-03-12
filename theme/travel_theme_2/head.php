@@ -13,33 +13,32 @@
 
     <div class="header_wrapper">
 			<div id="header-logo">
-					<a href="<?php echo G5_URL ?>">
-					<?if( ms::meta('header_logo') ) { ?>
-						<img src="<?=ms::meta('img_url').ms::meta('header_logo')?>">
-					<?} else {?>
-						<img src='<?=x::url_theme()?>/img/default-logo.png'>
-					<?}?>
-					</a>
+				<a href="<?php echo G5_URL ?>">
+					<?if( file_exists( path_logo() ) ) echo "<img src='".url_logo()."'>";
+					else echo "<img src='".x::url_theme()."/img/default-logo.png'>";
+					?>
+				</a>
 			</div>
-	<?
-		//global $cfgs;
-		//$cfgs = ms::forums();
-	?>
+
 	<div class='extra-menu-items'>
 		<div class='extra-top'>
-			<?for( $i = 1; $i <= 3; $i ++){
+			<?for( $i = 1; $i <= 3; $i ++){			
 				if( $i == 3 ) {?>
 					<a class='no-border' href = '<?=g::url()?>?device=mobile'>모바일</a>
 				<?}
 				else {
-				if ( ms::meta('forum_no_'.$i) ) {
-					$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('forum_no_'.$i)."'");
-				
-					  if ( $row['bo_subject'] ) {?>
+				if ( x::meta('forum_no_'.$i ) ) {				
+					  if ( x::meta('forum_no_'.$i.'_name') ) {
+						$top_menu = x::meta('forum_no_'.$i.'_name');				
+					  }
+					  else {
+						$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('forum_no_'.$i)."'");
+						$top_menu = $row['bo_subject'];
+					  }					  
+					  ?>
 						<a href = '<?=G5_BBS_URL?>/board.php?bo_table=<?=ms::meta('forum_no_'.$i)?>'>
-							<?=cut_str($row['bo_subject'],10,'...')?>
-						</a>								
-					<?}?>
+							<?=cut_str($top_menu,10,'...')?>
+						</a>													
 				<?}?>
 			<?}
 			
@@ -49,16 +48,20 @@
 		<div class='extra-bottom'>
 			<?for( $i = 3; $i <= 6; $i ++){
 				if( $i == 6 ) $no_border = 'no-border';
-				else $no_border = null;
-				if ( ms::meta('forum_no_'.$i) ) { 
-					$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('forum_no_'.$i)."'");
-				
-					 if ( $row['bo_subject'] ) {?>
-						<a class='<?=$no_border?>' href = '<?=G5_BBS_URL?>/board.php?bo_table=<?=ms::meta('forum_no_'.$i)?>'>
-							<?=cut_str($row['bo_subject'],10,'...')?>
-						</a>
-					<?}?>
-				<?}?>
+				else $no_border = null;				
+				if ( x::meta('forum_no_'.$i ) ) {				
+					  if ( x::meta('forum_no_'.$i.'_name') ) {
+						$top_menu = x::meta('forum_no_'.$i.'_name');				
+					  }
+					  else {
+						$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".x::meta('forum_no_'.$i)."'");
+						$top_menu = $row['bo_subject'];
+					  }
+					  ?>
+						<a class='<?=$no_border?> 'href = '<?=G5_BBS_URL?>/board.php?bo_table=<?=x::meta('forum_no_'.$i)?>'>
+							<?=cut_str($top_menu,10,'...')?>
+						</a>													
+				<?}?>			
 			<?}?>
 			<div style='clear:both'></div>
 		</div>
@@ -85,8 +88,8 @@
 	<div class='float-image-wrapper'>
 	<?
 	for( $i = 1; $i <= 3; $i++ ){
-		if ( ms::meta('travel2banner'.$i.'_floating') ) {
-			$img = "<a href='".ms::meta('travel2banner'.$i.'_floating_text'.$i)."' target='_blank'><img style='width:100%; height: 100%;' src='".ms::meta('img_url').ms::meta('travel2banner'.$i.'_floating')."'/></a>";	
+		if ( file_exists( x::path_file( "travel_2floating_banner$i" ) ) ) {
+			$img = "<a href='".x::meta("travel_2floating_banner{$i}_url")."' target='_blank'><img style='width:100%; height: 100%;' src='".x::url_file( "travel_2floating_banner$i" )."'/></a>";	
 		}
 		else {
 			if ( $i ==  1 ) $img = "<a href='javascript:void(0)'><img style='width: 100%; height: 100%;' src='".x::url_theme()."/img/agoda.gif'/></a>";
@@ -109,3 +112,5 @@
     </div>
     <div class="container">
         <?php if ((!$bo_table || $w == 's' ) && !defined("_INDEX_")) { ?><div id="container_title"><?php echo $g5['title'] ?></div><?php } ?>
+
+		

@@ -1,36 +1,42 @@
 		<script src='<?=x::url_theme()?>/js/banner.js' /></script>
-			<?	for ( $i = 1, $has_images = 0; $i <= 5 ; $i++) { 
-					if( $banner_image = ms::meta( 'travel2banner_'.$i ) ) {
-						$has_images++;
-						break;
+<?
+	
+		$banners = array();
+		for ( $i = 1; $i <= 5 ; $i++) { 
+			if ( file_exists( x::path_file( "banner$i" ) ) ) {
+				$banners[] = array(
+					'src' => x::url_file( "banner$i" ),
+					'href' => x::meta( "banner{$i}_url" ),
+					'text' => x::meta( "banner{$i}_text" )
+				);
+			}
+		}		
+	?>
+		<div class='banner'>
+			<?
+				if ( $banners ) {
+					$selected = 0;
+					foreach ( $banners as $banner ) {
+
+						if ( ! $selected ++ ) $first_image = 'selected';
+						else $first_image = '';
+						
+						if( !$url = $banner['href'] ) $url = 'javascript:void(0)';						
+						
+						echo "<div class='banner-image image_num_$selected $first_image'>";
+						echo "<a href='$url' target='_blank'><img src='$banner[src]'></a>";
+						echo "<a href='$url' target='_blank'><span class='banner-content'><p class='banner-text'>".cut_str(strip_tags($banner['text']),50,'...')."</p></span></a>";
+						echo "<div class='banner-more'><a href='$url' target='_blank'>자세히 &gt;</a></div>";
+						echo "</div>";
+
 					}
 				}
+				else {
+					echo "<img src='".x::url_theme()."/img/no_image_banner1.png' />";
+				}
 			?>
-				<div class='banner'>
-					<?
-						if ( $has_images ) {
-							$banner_url = ms::meta('img_url');
-							$banner_num = 1;
-							for ( $i = 1; $i <= 5 ; $i++) {
-								if( !$banner_image = ms::meta( 'travel2banner_'.$i ) ){
-									continue;
-								}
-								if ( $i == 1 ) $first_image = 'selected';
-								else $first_image = '';
-								echo "<div class='banner-image image_num_$banner_num $first_image'>";
-								if ( !$url = ms::meta('travel2banner_'.$i.'_text2') )  $url = "javascript:void(0)";
-								echo "<a href='$url' target='_blank'><img src='".$banner_url.$banner_image."'></a>";
-								echo "<span class='banner-content'><p class='banner-text'>".cut_str(strip_tags(ms::meta('travel2banner_'.$i.'_text1')),54,'...')."</p></span>";
-								echo "<div class='banner-more'><a href='$url' target='_blank'>자세히</a></div>";
-								echo "</div>";
-								$banner_num++;
-							}
-						}
-						else {
-							echo "<img src='".x::url_theme()."/img/no_main_banner.png' />";
-						}
-					?>
-				</div>
+		</div>
+		
 		<div class ='main-content'>
 			<div class='travel_images_with_caption_wrapper'>
 				<?
@@ -72,16 +78,15 @@
 					</div>
 				</div>
 				<div class='travel_2_right_banner'>
-						<?
-						$banner_url = ms::meta('img_url');
-						$url = ms::meta('travel2banner_right_text1');
-						$banner_image = ms::meta( 'travel2banner_right' );
-						if ( $banner_image ) {
-							echo "<a href='$url' target='_blank'><img src='".$banner_url.$banner_image."'></a>";
-						}
-						else {?>
-							<a href='javascript:void(0)' ><img src='<?=x::url_theme()?>/img/no_side_banner.png'></a>
-						<?}?>
+				<?php
+					if ( file_exists( x::path_file ( 'travel_right_banner' ) ) ) {
+						if ( !$url = x::meta('travel_right_banner_url') ) $url = 'javascript:void(0)';
+		
+						echo "<a href='$url' target='_blank'><img src='".x::url_file('travel_right_banner')."'></a>";
+					}
+					else {?>
+						<a href='javascript:void(0)' ><img src='<?=x::url_theme()?>/img/no_side_banner.png'></a>
+					<?}?>
 				</div>
 			</div>
 			<div style='clear:both;'></div>

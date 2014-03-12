@@ -4,7 +4,7 @@
 
 
 <?
-	$theme_sidebar = ms::meta('theme_sidebar');
+	$theme_sidebar = x::meta('theme_sidebar');
 	if ( empty($theme_sidebar) || $theme_sidebar == 'left') {
 		$sidebar = "left";
 		$content = "right";
@@ -45,38 +45,46 @@
 				
 				<? 
 					for ( $i=1; $i <=3; $i++ ) {
-						if ( ms::meta('forum_no_'.$i) ) {
+						 if ( x::meta('forum_no_'.$i.'_name') ) {
+							$top_menu = x::meta('forum_no_'.$i.'_name');				
+						  }
+						  else {
 							$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('forum_no_'.$i)."'");
+							$top_menu = $row['bo_subject'];
+						 }		
 							
 						
-						if ( $row['bo_subject'] ) {?>
+						if ( $top_menu ) {?>
 						
-						<a page = '<?=ms::meta('forum_no_'.$i)?>' href='<?=G5_BBS_URL?>/board.php?bo_table=<?=ms::meta('forum_no_'.$i)?>'><?=cut_str($row['bo_subject'],15,'...')?></a>
+						<a page = '<?=x::meta('forum_no_'.$i)?>' href='<?=G5_BBS_URL?>/board.php?bo_table=<?=x::meta('forum_no_'.$i)?>'><?=cut_str($top_menu,10,'...')?></a>
 						
 					<?	}
 					}
-				}
 				?>
 				
 			</div>
 			
 			<div class='right'>
 				<? 
-					for ( $i=6; $i <=8; $i++ ) {
-						if ( ms::meta('forum_no_'.$i) ) {
+					for ( $i=4; $i <=6; $i++ ) {
+						 if ( x::meta('forum_no_'.$i.'_name') ) {
+							$top_menu = x::meta('forum_no_'.$i.'_name');				
+						  }
+						  else {
 							$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('forum_no_'.$i)."'");
+							$top_menu = $row['bo_subject'];
+						 }	
 							
 						
-						if ( $row['bo_subject'] ) {?>
+						if ( $top_menu ) {?>
 						
-						<a page = '<?=ms::meta('forum_no_'.$i)?>' href='<?=G5_BBS_URL?>/board.php?bo_table=<?=ms::meta('forum_no_'.$i)?>'><?=cut_str($row['bo_subject'],15,'...')?></a>
+						<a page = '<?=x::meta('forum_no_'.$i)?>' href='<?=G5_BBS_URL?>/board.php?bo_table=<?=x::meta('forum_no_'.$i)?>'><?=cut_str($top_menu,10,'...')?></a>
 						
 					<?	}
 					} 
-				}
 				?>
 			
-				<? if ( !$com3_contact_number = ms::meta('com3contact_num') ) $com3_contact_number = '+82 070 7529 1749'?>
+				<? if ( !$com3_contact_number = x::meta('tel') ) $com3_contact_number = '+82 070 7529 1749'?>
 				<a href='javascript:void(0)' class='contact-num'>전화번호: <?=$com3_contact_number?></a>
 				
 				<a href='<?=g::url()?>?device=mobile'>모바일</a>

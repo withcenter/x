@@ -8,10 +8,9 @@
 <div class='logo_search'>
 	<div class='inner'>
 		<a href='<?=g::url()?>'>
-			<?if( ms::meta('header_logo') ) { ?>
-				<img src="<?=ms::meta('img_url').ms::meta('header_logo')?>">
-			<?}
-				else {?>
+			<?if( file_exists( path_logo() ) ) { ?>
+					<img src="<?=url_logo()?>">
+			<?} else {?>
 				<img src="<?=x::url_theme()?>/img/banner.png" />	
 			<?}?>
 		</a>
@@ -58,23 +57,26 @@
             }
 	</script>
 <div class='main-menu'><div class='inner'>
-	<? for ( $i = 1; $i <= 6; $i++ ) { ?>
-	<? if ( ms::meta('menu_'.$i) ) { 
-		/*
-		$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('menu_'.$i)."'");
-		if ( !$menu = $row['bo_subject'] ) $menu = null;
-		*/
-			$menu_name = ms::meta("menu_name_$i");
+	<?php
+		if( admin() ){
+		$max_menus = 5;
+	}
+	else {
+		$max_menus = 6;		
+	}
+	for ( $i = 1; $i <= $max_menus; $i++ ) {
+		if ( $board_id = x::meta("menu{$i}bo_table") ) {
+			$menu_name = x::meta("menu{$i}name");				
 			if ( empty($menu_name) ) {
-				$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('menu_'.$i)."'");
+				$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".x::meta('menu'.$i.'bo_table')."'");
 				if ( empty($row['bo_subject']) ) $menu_name = ln("No Subject", "제목없음");
 				else $menu_name = $row['bo_subject'];
-			}
+			}			
 	?>
-		<a href='<?=g::url()?>/bbs/board.php?bo_table=<?=ms::meta('menu_'.$i)?>'><?=$menu_name?></a>
+	<a  href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$board_id?>'><?=$menu_name?></a>
 	<?}}?>
-	<? if ( ms::admin() ) { ?>
-		<a href="<?=ms::url_config()?>">사이트 관리</a>
+	<? if ( admin() ) { ?>
+		<a href="<?=url_site_config()?>">사이트 관리</a>
 	<? } ?>
 </div></div> 
 

@@ -42,8 +42,6 @@
 	if ( $in['site-type'] ) {
 		if ( $in['site-type'] == 'community' ) $site_type = 'community_3';
 		else if ( $in['site-type'] == 'travel' ) 	$site_type = 'travel_theme_2';
-		//else if ( $in['site-type'] == 'shopping' ) $site_type = 'community_3';
-		//else if ( $in['site-type'] == 'academy' ) $site_type = 'community_3';
 		else if ( $in['site-type'] == 'blog' ) $site_type = 'blog';
 		else $site_type = 'blog';
 	}
@@ -58,47 +56,26 @@
 				'subject'	=> "메뉴1",
 				'group_id'	=> 'multisite',
 				'bo_admin' => $member['mb_id'],
-				'bo_use_dhtml_editor' => 1
+				'bo_use_dhtml_editor' => 1,
+				'bo_use_list_view' => 1
 			);
 			
 			if ( $site_type == 'blog' ) $o['bo_skin'] = 'x/skin/board/x-board-blog';
 			else if ( $site_type == 'travel_theme_1' )  $o['bo_skin'] = 'x/skin/board/x-board-travel-3';
+			else $o['bo_skin'] = 'x/skin/board/multi';
+			
 			g::board_create($o);
 			
 			
-			ms::meta( $domain, 'menu_1', ms::board_id ( $domain ).'_1' );
-			ms::meta( $domain, 'forum_no_1', ms::board_id ( $domain ).'_1' );
-			if ( $site_type == 'blog' ) ms::meta( $domain, 'forum_no_2', ms::board_id ( $domain ).'_1' );
+			x::meta( $domain, "menu1bo_table", ms::board_id ( $domain ).'_1' );
+			x::meta( $domain, 'forum_no_1', ms::board_id ( $domain ).'_1' );
+			if ( $site_type == 'blog' ) x::meta( $domain, 'forum_no_2', ms::board_id ( $domain ).'_1' );
 			
 			// 모바일 테마 Default로 mobile-community-1를 선택 되도록 한다.
-			ms::meta( $domain, 'mobile_theme', 'mobile-community-1');
+			x::meta( $domain, 'mobile_theme', 'mobile-community-1');
 			
 			// 테마에 따라 각각 더 추가 생성 되는 게시판 및 메뉴
-			if ( $site_type == 'travel_theme_1' || $site_type == 'community_2' || $site_type == 'community_3' ) {
-				
-				for ( $i = 2; $i <= 6; $i++ ) {
-					$o = array(
-						'id'	=> ms::board_id( $domain ) . '_'.$i,
-						'subject'	=> "메뉴".$i,
-						'group_id'	=> 'multisite',
-						'bo_admin' => $member['mb_id'],
-						'bo_use_dhtml_editor' => 1
-					);
-					
-					if ( $site_type == 'travel_theme_1'){
-						if ( $i == 2 || $i == 3 ) {
-							$o['bo_skin'] = 'x/skin/board/x-board-travel-3';
-						}
-					}
-					
-					g::board_create($o);
-					// 사이트 생성시 메뉴 저장
-					if ( $i <= 5 ) db::insert('x_multisite_meta', array('domain'=>$domain, 'code'=>'menu_'.$i, 'value'=>ms::board_id ( $domain ).'_'.$i ) );
-					db::insert('x_multisite_meta', array('domain'=>$domain, 'code'=>'forum_no_'.$i, 'value'=>ms::board_id ( $domain ).'_'.$i ) );
-				}
-			}
-			
-			if (  $site_type == 'travel_theme_2' || $site_type == 'community' ) {
+			if ( $site_type != 'blog' ) {
 				
 				for ( $i = 2; $i <= 10; $i++ ) {
 					$o = array(
@@ -106,15 +83,24 @@
 						'subject'	=> "메뉴".$i,
 						'group_id'	=> 'multisite',
 						'bo_admin' => $member['mb_id'],
-						'bo_use_dhtml_editor' => 1
+						'bo_use_dhtml_editor' => 1,
+						'bo_use_list_view' => 1
 					);
 					
-					if ( $site_type == 'travel_theme_2' )  $o['bo_skin'] = 'x/skin/board/x-board-travel-3';
-					
+					if ( $site_type == 'travel_theme_1'){
+						if ( $i == 2 || $i == 3 ) {
+							$o['bo_skin'] = 'x/skin/board/x-board-travel-3';
+						}
+						else $o['bo_skin'] = 'x/skin/board/multi';
+					}
+					else {
+						$o['bo_skin'] = 'x/skin/board/multi';
+					}
 					g::board_create($o);
 					// 사이트 생성시 메뉴 저장
-					if ( $i <= 5 ) db::insert('x_multisite_meta', array('domain'=>$domain, 'code'=>'menu_'.$i, 'value'=>ms::board_id ( $domain ).'_'.$i ) );
-					db::insert('x_multisite_meta', array('domain'=>$domain, 'code'=>'forum_no_'.$i, 'value'=>ms::board_id ( $domain ).'_'.$i ) );
+					if ( $i <= 5 ) x::meta( $domain, "menu{$i}bo_table", ms::board_id ( $domain ).'_'.$i);
+					
+					x::meta( $domain, 'forum_no_'.$i, ms::board_id ( $domain ).'_'.$i);
 				}
 			}
 			

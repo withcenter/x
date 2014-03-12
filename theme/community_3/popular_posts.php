@@ -13,8 +13,7 @@ $posts = g::posts(
 		'limit'=>4
 	)
 );
-if ( $posts ) { ?>
-
+?>
 <div class='popular-posts'>
 	<div class='title'>
 		<table width='100%'>
@@ -50,7 +49,22 @@ if ( $posts ) { ?>
 						";
 			 }
 		}
+		else {
+			echo "
+					<div class='row'>
+						<span class='post-num'>1</span>
+						<span><a href='javascript:void(0)'>회원님께서는 현재</a></span>
+					</div>
+					<div class='row'>
+						<span class='post-num'>2</span>
+						<span><a href='javascript:void(0)'>필고 커뮤니티 테마를</a></span>
+					</div>
+					<div class='row'>
+						<span class='post-num'>3</span>
+						<span><a href='javascript:void(0)'>사용 중 입니다.</a></span>
+					</div>						
+				";
+		}
 		?>
 	</div>
-	</div>
-<?}?>
+</div>

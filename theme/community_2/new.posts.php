@@ -14,7 +14,6 @@ foreach ( $q_tmp as $key => $value ) {
 
 $posts = g::posts( array( 'domain'=>etc::domain(), 'limit'=>15) );
 
-
 ?>
 	<link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/new.posts.css' />
 	<div class='new-posts'>
@@ -26,18 +25,16 @@ $posts = g::posts( array( 'domain'=>etc::domain(), 'limit'=>15) );
 		 $dot_url = x::url_theme().'/img/dot.gif';
 		 
 		 if ( $posts ) {
-			  foreach ( $posts as $board_id => $post ) {
-				foreach ( $post as $p ) {
-					$url = G5_BBS_URL."/board.php?bo_table=$board_id&wr_id=$p[wr_id]";
-					$new_subject = conv_subject( $p['wr_subject'], 14, '...');					
-					echo "
-							<div class='row'>
-								<img class='dot-icon' src='$dot_url'/><a href='$url'>$new_subject</a>
-							</div>
-					";
+			foreach ( $posts as $p ) {
+				$url = G5_BBS_URL."/board.php?bo_table=$board_id&wr_id=$p[wr_id]";
+				$new_subject = conv_subject( $p['wr_subject'], 14, '...');					
+				echo "
+						<div class='row'>
+							<img class='dot-icon' src='$dot_url'/><a href='$url'>$new_subject</a>
+						</div>
+				";
 
-				}
-			  }
+			}
 		  }
 		  else {?>
 			<div class='row'>

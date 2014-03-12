@@ -70,6 +70,9 @@
 	overflow: hidden;
 	word-break:break-all;
 }
+.sidebar .popular-posts .popular-posts-items > .row:last-child {
+	border: 0;
+}
 
 .sidebar .popular-posts .popular-posts-items .last-post {
 	border-bottom: 0;

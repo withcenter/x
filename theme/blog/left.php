@@ -1,10 +1,10 @@
 <div class='profile-photo'>
-	<?if( ms::meta('blog_profile_photo') ) {?>
-		<img src="<?=ms::meta('img_url').ms::meta('blog_profile_photo')?>"><br>
+	<?if( file_exists(x::path_file('profile_photo')) ) {?>
+		<img src="<?=x::url_file('profile_photo')?>"><br>
 	<?}	else {?>
 		<img src='<?=x::url_theme()?>/img/blank_profile.png'?>
 	<?}?>
-	<div class='profile-message'><?=ms::meta('blog_profile_message')?></div>
+	<div class='profile-message'><?=x::meta('profile_message')?></div>
 </div>
 <div class='profile-photo-bottom'></div>
 
@@ -13,7 +13,7 @@
 		$ids = ms::forum_ids();
 		
 	?>
-	<? if ( ms::admin() ) {?>
+	<? if ( admin() ) {?>
 		<div class='small-title'><a href='<?=g::url_write( $ids[0] )?>'>글쓰기</a></div>
 	<? }?>
 </div>

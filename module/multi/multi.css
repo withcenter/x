@@ -431,7 +431,7 @@
 .item {
 	display: inline-block;
 	background-color: #333333;
-	width: 100px;
+	width: 120px;
 	height: 30px;
 	line-height: 30px;
 	padding: 0 5px;
@@ -1190,7 +1190,7 @@ span.config-name {
 
 .config_menu .config .menu-num {
 	display: inline-block;
-	width: 60px;
+	width: 70px;
 }
 
 .config_menu .config .menu-num.sec {
@@ -1199,7 +1199,7 @@ span.config-name {
 
 .config_menu .config .menu-select-name {
 	display: inline-block;
-	width: 320px;
+	width: 350px;
 }
 
 .config_menu .config .select-wrapper {
@@ -1379,3 +1379,156 @@ span.config-name {
 	background: #fafafa;
 }
 
+
+/* config_member */
+.member-info {
+	border: 1px solid #d5d5d5;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+.member-info .title {
+	border: 1px solid #808080;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 10px;
+	background-color: #808080;
+	color: #ffffff;
+	margin-bottom: 10px;
+}
+
+.member-info .sub-title {
+	display: inline-block;
+	width: 100px;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 10px;
+	margin-right: 10px;
+	background-color: #fafafa;
+	border: solid 1px #cccccc;
+	margin: 0 6px 6px 6px;
+}
+
+.member-info .member-info-content-edit {
+	margin: 10px 0;
+}
+
+.member-info tr td {
+	border-bottom: solid 1px #e6e6e6;
+	padding: 5px;
+}
+
+.member-info tr td .sub-title {
+	margin: 0;
+}
+
+.member-info input[type='text'], textarea {
+	padding: 6px;
+	border: solid 1px #cccccc;
+	width: 400px;
+	margin: 0;
+}
+
+.member-info input[type='checkbox'] {
+	margin: 6px;
+}
+
+
+.member-info tr td.member-zip input[type='text'] {
+	width: 50px;
+}
+
+.member-info tr td.member-address input[type='text'] {
+	margin-bottom: 5px;
+}
+
+.member-info tr td.member-address input.member-address-last {
+	margin: 0;
+}
+
+.config-member .search-form {
+	margin-bottom: 10px;
+}
+
+.config-member .no-of-member {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+.config-member .config-member-table {
+	margin-bottom: 10px;
+}
+
+.config-member .config-member-table td {
+	padding: 7px;
+	border-bottom: solid 1px #e6e6e6;
+}
+
+.config-member .config-member-table td.member-no {
+	font-weight: bold;
+}
+
+.config-member .config-member-table .table-header {
+	border: solid 1px #cccccc;
+}
+
+.config-member .config-member-table .table-header td {
+	padding: 9px;
+	font-weight: bold;
+	font-size: 12px;
+	background: #fafafa;
+	border-bottom: 0;
+}
+
+.config-member .paging a {
+	
+}
+
+.config-member .paging a.selected {
+	font-weight: bold;
+}
+
+.config-member .config-member-submit {
+	background: #616161;
+	border: solid 1px #616161;
+	border-radius: 0 !important;
+	padding: 5px 20px;
+	color: #ffffff;
+}
+
+.config-member input[name='username'] {
+	padding: 5px;
+	border: solid 1px #cccccc;
+	width: 50%;
+}
+
+.config_menu .forum {
+	border-bottom: solid 1px #e6e6e6;
+	padding: 10px 0 5px 0;
+}
+
+.config_menu .forum.last-forum {
+	border: 0;
+}
+
+.config_menu .forum .caption {
+	display: inline-block;
+	margin-top: 5px;
+	font-size: 13px;
+	font-weight: bold;
+	width: 60px;
+	text-align: center;
+}
+
+.config_menu select[name='select_bo_table'], .config_menu input.bo_table, .config_menu input.menu_name {
+	border: solid 1px #d8d8d8;
+	vertical-align: top;
+	padding: 5px;
+	width: 30%;
+}
+
+.config_menu select[name='select_bo_table'] {
+	height: 26px;
+	line-height: 26px;
+	width: 125px;
+}

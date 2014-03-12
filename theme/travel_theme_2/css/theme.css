@@ -352,12 +352,11 @@
 
 .menu-item-list select{
 	width:100px;
+	height:25px;
 }
 
 .menu-item-list input{
-	margin-top:8px;
-	width:170px!important;
-	height:20px!important;
+	margin-top:6px;
 }
 
 /**travel 2 banner****/

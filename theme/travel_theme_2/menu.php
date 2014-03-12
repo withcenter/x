@@ -3,22 +3,22 @@
 <ul>
 	<li class='first-item home'><div class='inner'><a href='<?=g::url()?>'>홈</a></div></li>
 	<?php
-	if( ms::admin() ){
+	if( admin() ){
 		$max_menus = 5;
 	}
 	else {
 		$max_menus = 6;		
 	}
 		for ( $i=1; $i <=$max_menus; $i++ ) {
-			if ( $board_id = ms::meta('menu_'.$i) ) {
-				$menu_name = ms::meta("menu_name_$i");
+			if ( $board_id = x::meta("menu{$i}bo_table") ) {
+				$menu_name = x::meta("menu{$i}name");				
 				if ( empty($menu_name) ) {
-					$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('menu_'.$i)."'");
+					$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".x::meta('menu'.$i.'bo_table')."'");
 					if ( empty($row['bo_subject']) ) $menu_name = ln("No Subject", "제목없음");
 					else $menu_name = $row['bo_subject'];
 				}
 				?>
-					<li page='<?=ms::meta('menu_'.$i)?>'>
+					<li page='<?=x::meta('menu'.$i.'bo_table')?>'>
 						<div class='inner'>
 							<a  href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$board_id?>'>
 								<?=$menu_name?>
@@ -30,7 +30,7 @@
 			}
 		}
 	?>
-	<?if ( ms::admin() ) { ?><li class='last-item' page='admin-menu'><div class='inner'><a  href='<?=ms::url_config()?>'>사이트 관리<div class='border_left'></div></a></div></li><?}?>
+	<?if ( admin() ) { ?><li class='last-item' page='admin-menu'><div class='inner'><a  href='<?=url_site_config()?>'>사이트 관리<div class='border_left'></div></a></div></li><?}?>
 </ul>
 <div class='search-bar'>
 	  <form name="fsearchbox" method="get" action="<?php echo G5_BBS_URL ?>/search.php" onsubmit="return fsearchbox_submit(this);">

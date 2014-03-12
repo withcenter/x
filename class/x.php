@@ -229,11 +229,12 @@ class x {
 	/** @short loads(finds) the site information of the domain.
 	 * @note site information is like the theme name of the connected domain
 	 *
-	 * https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.hoh26aiibh8t
+	 * https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit?pli=1#heading=h.1upwyuqn84q1
 	 * @note theme will be available at this point.
 	 */
 	static function load_site()
 	{
+		/*
 		$theme = ms::meta('theme');
 		if ( empty($theme) ) {
 			$cfg = md::config( etc::domain_name() );
@@ -244,8 +245,26 @@ class x {
 		else {
 			$type = 'multisite';
 		}
+		*/
+
+		$theme = meta_get( 'theme' );
+		if ( empty( $theme ) ) {
+			$parts = explode('.', etc::domain());
+			array_shift( $parts );
+			$domain = '.' . implode('.', $parts);
+			$theme = meta_get( $domain, 'theme' );
+			if ( empty( $theme ) ) {
+				$parts = explode('.', etc::domain());
+				array_shift( $parts );
+				array_shift( $parts );
+				$domain = '.' . implode('.', $parts);
+				$theme = meta_get( $domain, 'theme' );
+				if ( empty( $theme ) ) $theme = 'default';
+			}
+		}
 		self::$config['site']['theme'] = $theme;
-		self::$config['site']['type'] = $type;
+		// @deprecated. no more site type is used.
+		self::$config['site']['type'] = null;
 	}
 	
 	
@@ -346,11 +365,16 @@ class x {
 		}
 	}
 	/**
+	 * @note if only one parameta is passed, then it automatically adds 'domain' as its key.
 	 *
 	 */
-	function meta_get($key, $code)
+	static function meta_get($key, $code=null)
 	{
 		global $_meta;
+		if ( empty($code) ) {
+			$code = $key;
+			$key = etc::domain();
+		}
 		$k = "$key.$code";
 		if ( ! isset($_meta[$k]) ) {
 			$_meta[$k] = db::result("SELECT `value` FROM x_config WHERE `key`='$key' AND code='$code'");
@@ -358,7 +382,28 @@ class x {
 		return $_meta[$k];
 	}
 	
-	function meta_set( $key, $code, $value )
+	/**
+	 *
+	 *
+	 * @short deletes a record in x_config.
+	 * @param [in] $key is the domain or code.
+	 * @param [in] $code is the code. if it is empty, the value of $key will be used as $code and the value of $key will be replaced into the access domain
+	 *
+	 */
+	 
+	static function meta_delete($key, $code=null)
+	{
+		if ( empty($code) ) {
+			$code = $key;
+			$key = etc::domain();
+		}
+		db::query("DELETE FROM x_config WHERE `key`='$key' AND code='$code'");
+	}
+	/**
+	 * @note if only two parametas are passed, then it automatically adds 'domain' as its key.
+	 *
+	 */
+	static function meta_set( $key, $code, $value=null )
 	{
 		if ( empty($value) ) {
 			$value			= $code;
@@ -572,4 +617,74 @@ class x {
 		db::query($sql);
 	}
 	
+	/** @short returns the record of site in array.
+	 *
+	 * @param [in] $mixed if it is numeric, then the value is 'idx' or else the value is domain. 
+	 * @code
+		if ( x::site( $site['domain'] ) ) x::site_delete( $site['domain'] );
+	 * @endcode
+	 */
+	static function site( $mixed )
+	{
+		if ( is_numeric($mixed) ) $qw = "idx=$mixed";
+		else $qw = "domain='$mixed'";
+		$q = "SELECT * FROM x_site_config WHERE $qw";
+		return db::row( $q );
+	}
+	/** @short delete a site
+	 *
+	 *
+	 * @code
+			if ( x::site( $site['domain'] ) ) x::site_delete( $site['domain'] );
+		@endcode
+	 */
+	static function site_delete ( $domain )
+	{
+		return db::query( "DELETE FROM x_site_config WHERE domain='$domain'");
+	}
+	
+	/**
+		@code
+			return x::site_set( $idx, $domain, $mb_id );
+			site_set( $in['idx'], $domain, $mb_id );
+		@endcod
+	 */
+	static function site_set( $idx, $domain, $mb_id ) {
+		if ( x::site( $idx ) ) {
+			db::update( 'x_site_config', array( 'domain'=>$domain, 'mb_id'=>$mb_id ), array('idx'=>$idx) );
+			return $idx;
+		}
+		else {
+			db::insert( 'x_site_config', array( 'domain'=>$domain, 'mb_id'=>$mb_id, 'stamp_created'=>time() ) );
+			return db::insert_id();
+		}
+	}
+	
+	
+	
+	/**
+	 *  @brief returns the total number of one or more forums.
+	 *  
+	 *  @param [in] $ids mixed. if an array is passed, then it counts all the post of the forums.
+	 *  	or else it only counts that forum.
+	 *  @param [in] $type string. default null.
+	 *  if it is null, then it count all the record(parent & comemnt) of the forums.
+	 *  if it is 'parent', then it only count the parent post.
+	 *  if it is passed as 'comment', it only count 'comment'.
+	 *  @return int
+	 *  
+	 *  @details use this function to count post or comment.
+	 *  @code
+	 *  echo "<td align='center'>".x::count_post(x::forum_ids( $site['domain'] ), null )."</td>";
+	 *  @endcode
+	 */
+	static function count_post( $ids, $type=null)
+	{
+		if ( ! is_array($ids) ) $ids = array($ids);
+		$count = 0;
+		foreach ( $ids as $id ) {
+			$count += g::count_post( $id, $type );
+		}
+		return $count;
+	}
 }

@@ -9,6 +9,7 @@ include_once('../common.php');
 
 
 echo "Converting Post Data...\n";
+db::query("TRUNCATE TABLE `x_post_data`"); 
 $sql = "SELECT bo_table FROM $g5[board_table]";
 $rows = db::rows($sql);
 
@@ -32,8 +33,8 @@ foreach ( $sites as $site ) {
 					'bo_table'					=> $forum,
 					'wr_id'						=> $p['wr_id'],
 					'ca_name'					=> $p['ca_name'],
-					'wr_subject'				=> $p['wr_subject'],
-					'wr_content'				=> $content,
+					'wr_subject'				=> addslashes($p['wr_subject']),
+					'wr_content'				=> addslashes($content),
 					'mb_id'						=> $p['mb_id'],
 					'wr_name'					=> $p['wr_name'],
 					'wr_datetime'				=> G5_TIME_YMDHIS

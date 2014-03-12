@@ -1,7 +1,7 @@
 <?php
 //for editor_html
 include_once(G5_EDITOR_LIB);
-	if ( ! ms::admin() ) {
+	if ( ! admin() ) {
 		echo "You are not admin";
 		return;
 	}
@@ -175,7 +175,7 @@ include_once(G5_EDITOR_LIB);
 
 		<div class='wrapper'>
 			<div class='title'>목록 설정</div>
-			<div><span class='item'>목록 보임</span><?=checkbox('bo_use_list_view')?></div>
+			<div><span class='item'>글을 볼때 목록보임</span><?=checkbox('bo_use_list_view')?></div>
 			<div><span class='item'>파일 목록 보임</span><?=checkbox('bo_use_list_file')?></div>
 			<div><span class='item'>제목 길이</span><?=text('bo_subject_len')?></div>
 			<div><span class='item'>페이지 당 글 수</span><?=text('bo_page_rows')?></div>

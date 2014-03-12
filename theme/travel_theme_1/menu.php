@@ -3,34 +3,36 @@
 <ul>
 	<li class='first-item home'><div class='inner'><a href='<?=g::url()?>'>홈</a></div></li>
 	<?php
-		for ( $i=1; $i <=6; $i++ ) {
-			
-			/*
-			if ( $board_id = ms::meta('menu_'.$i) ) {
+	if( admin() ){
+		$max_menus = 5;
+	}
+	else {
+		$max_menus = 6;		
+	}
+		for ( $i=1; $i <=$max_menus; $i++ ) {		
+			if ( $board_id = x::meta("menu{$i}bo_table") ) {
 				
-				$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='$board_id'");
-				if($i==6 && !ms::admin()) $last_item = "last-item";
-				else $last_item ='';
-				*/
-				
-			if ( $board_id = ms::meta('menu_'.$i) ) {	
-				
-				$menu_name = ms::meta("menu_name_$i");
-				if ( empty($menu_name) ) {
-					$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('menu_'.$i)."'");
-					if ( empty($row['bo_subject']) ) $menu_name = ln("No Subject", "제목없음");
-					else $menu_name = $row['bo_subject'];
-				}
+			$menu_name = x::meta("menu{$i}name");				
+			if ( empty($menu_name) ) {
+				$row = db::row( "SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".x::meta('menu'.$i.'bo_table')."'");
+				if ( empty($row['bo_subject']) ) $menu_name = ln("No Subject", "제목없음");
+				else $menu_name = $row['bo_subject'];
+			}
 				
 				if($i==6 && !ms::admin()) $last_item = "last-item";
 				else $last_item ='';
-				
-				echo "<li><span class='menu-divider'></span></li>";
-				echo "<li class='$last_item' page='".ms::meta('menu_'.$i)."'><div class='inner'><a  href='".G5_BBS_URL."/board.php?bo_table=".$board_id."'>".$menu_name."</a></div></li>";
+			?>	
+				<li><span class='menu-divider'></span></li>
+				<li class='<?=$last_item?>' page="<?=x::meta("menu{$i}bo_table")?>">
+				<div class='inner'>
+					<a  href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$board_id?>'><?=$menu_name?></a>
+				</div>
+				</li>
+			<?
 			}
 		}
 	?>
-	<?if ( ms::admin() ) { ?><li><span class='menu-divider'></span></li><li class='last-item' page='admin-menu'><div class='inner'><a  href='<?=ms::url_config()?>'>사이트 관리</a></div></li><?}?>
+	<?if ( ms::admin() ) { ?><li><span class='menu-divider'></span></li><li class='last-item' page='admin-menu'><div class='inner'><a  href='<?=url_site_config()?>'>사이트 관리</a></div></li><?}?>
 </ul>
 </div>
 <div style='clear:left;'></div>
