@@ -43,6 +43,7 @@
 	line-height: 15px;
 	height: 60px;
 	overflow: hidden;
+	word-break:break-all;
 }
 
 .blog-latest .blog-post-container .right .content  a {

@@ -34,6 +34,7 @@
 	line-height: 18px;
 	text-indent: 10px;
 	padding: 8px 5px;
+	word-break:break-all;
 }
 .blog_main .main-content .content a{
 	color: #929293;
