@@ -193,3 +193,12 @@
 .login-box.logged-in .account-settings {
 	text-align: center;
 }
+.login-box.logged-in .admin-mode {
+	float: left;
+	background: #db5e31;
+	padding: 2px 5px;
+}
+.login-box.logged-in .admin-mode a{
+	font-size: 10px;
+	font-weight: bold;
+}
