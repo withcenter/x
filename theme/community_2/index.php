@@ -2,7 +2,7 @@
 			<tr valign='top'>
 				<td>
 					<?	if(  x::path_file('banner') ) {?>
-							<img src="<?=x::url_file('banner_bottom')?>">
+							<img src="<?=x::url_file('banner')?>">
 					<?}
 						else {?>
 							<div class='no-image-banner'>
