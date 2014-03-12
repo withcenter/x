@@ -3,7 +3,13 @@
 <ul>
 	<li class='first-item home'><div class='inner'><a href='<?=g::url()?>'>홈</a></div></li>
 	<?php
-		for ( $i=1; $i <=6; $i++ ) {		
+	if( admin() ){
+		$max_menus = 5;
+	}
+	else {
+		$max_menus = 6;		
+	}
+		for ( $i=1; $i <=$max_menus; $i++ ) {		
 			if ( $board_id = x::meta("menu{$i}bo_table") ) {
 				
 			$menu_name = x::meta("menu{$i}name");				

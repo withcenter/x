@@ -92,8 +92,8 @@
 .comm3_timed_list .subject{
 	width:60%;
 	overflow:hidden;
-	line-height: 19px;
-	height: 19px;
+	line-height: 17px;
+	height: 17px;
 	float:left;	
 	word-break:break-all;
 }

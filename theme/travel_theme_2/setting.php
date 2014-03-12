@@ -11,7 +11,7 @@ function setTopMenu( $name ) {
 		<option value=''>게시판을 선택하세요</option>
 		<option value=''></option>
 		<? foreach ( $cfgs as $c ) { 
-			if ( $c['bo_table'] == ms::meta($name) ) $selected = 'selected';
+			if ( $c['bo_table'] == x::meta($name) ) $selected = 'selected';
 			else $selected = null;
 		?>
 			<option value="<?=$c['bo_table']?>" <?=$selected?>><?=$c['bo_subject']?></option>
@@ -76,7 +76,7 @@ function setTopMenu( $name ) {
 	</div>
 		<table>
 			<tr>
-				<td colspan='2'><span class='title-small'>하단문구제목</span><input type='text' name='travel_footer_tagline' value='<?=x::meta('travel_footer_tagline')?>' /></td>
+				<td colspan='2'><span class='title-small'>하단문구제목</span><input type='text' name='travel_2footer_tagline' value='<?=x::meta('travel_2footer_tagline')?>' /></td>
 			<tr>
 		</table>
 	</div>
@@ -200,15 +200,15 @@ function setTopMenu( $name ) {
 					<div class='image-title'><img src='<?=x::url()?>/module/<?=$module?>/img/img-icon.png'>오른쪽 날개 배너<?=$i?></div>
 					<div class='image-upload'>
 					<?
-						if( file_exists( x::path_file( "travel_floating_banner$i" ) ) ) echo "<img src='".x::url_file( "travel_floating_banner$i" )."'>";
+						if( file_exists( x::path_file( "travel_2floating_banner$i" ) ) ) echo "<img src='".x::url_file( "travel_2floating_banner$i" )."'>";
 						else {
 					?>
 							<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/<?=$module?>/img/no-image.png'><br>[가로 70px X 세로 70px]</div>
 						<?}?>
-						<input type='file' name='travel_floating_banner<?=$i?>'>
-							<input type='checkbox' name='travel_floating_banner<?=$i?>_remove' value='y'><span class='title-small'>이미지 제거</span>
+						<input type='file' name='travel_2floating_banner<?=$i?>'>
+							<input type='checkbox' name='travel_2floating_banner<?=$i?>_remove' value='y'><span class='title-small'>이미지 제거</span>
 						<div class='title'>오른쪽 날개 배너<?=$i?> 링크</div>
-						<input type='text' name='travel_floating_banner<?=$i?>_url' value='<?=x::meta("travel_floating_banner{$i}_url")?>'>
+						<input type='text' name='travel_2floating_banner<?=$i?>_url' value='<?=x::meta("travel_2floating_banner{$i}_url")?>'>
 					</div>
 				</td>
 				
@@ -250,7 +250,7 @@ function setTopMenu( $name ) {
 						<input type='checkbox' name='travel_left_banner_remove' value='y'><span class='title-small'>이미지 제거</span>
 
 					<div class='title'>왼쪽 사이드 배너 링크</div>
-					<input type='text' name='travel_left_banner_url' value='<?=x::meta("travel_left_banner_url")?>'>
+					<input type='text' name='travel_2left_banner_url' value='<?=x::meta("travel_2left_banner_url")?>'>
 				</div>
 			</td>
 
@@ -268,7 +268,7 @@ function setTopMenu( $name ) {
 					<input type='checkbox' name='travel_right_banner_remove' value='y'><span class='title-small'>이미지 제거</span>
 
 				<div class='title'>왼쪽 사이드 배너 링크</div>
-				<input type='text' name='travel_right_banner_url' value='<?=x::meta("travel_right_banner_url")?>'>
+				<input type='text' name='travel_2right_banner_url' value='<?=x::meta("travel_2right_banner_url")?>'>
 			</div>
 		</td>
 		</td>
@@ -287,7 +287,7 @@ function setTopMenu( $name ) {
 					<input type='checkbox' name='travel_bottom_banner_remove' value='y'><span class='title-small'>이미지 제거</span>
 
 				<div class='title'>하단 배너 링크</div>
-				<input type='text' name='travel_bottom_banner_url' value='<?=x::meta("travel_bottom_banner_url")?>'>
+				<input type='text' name='travel_2bottom_banner_url' value='<?=x::meta("travel_2bottom_banner_url")?>'>
 			</div>
 		</td>
 		
