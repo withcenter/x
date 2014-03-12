@@ -286,7 +286,7 @@ function setTopMenu( $name ) {
 				if( file_exists( x::path_file( "travel_bottom_banner" ) ) ) echo "<img src='".x::url_file(  "travel_bottom_banner" )."'>";
 				else {
 			?>				
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/<?=$module?>/img/no-image.png'><br>[가로 208px X 세로 88px]</div>
+					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/<?=$module?>/img/no-image.png'><br>[가로 968px X 세로 168px]</div>
 				<?}?>
 				<input type='file' name='travel_bottom_banner'>
 					<input type='checkbox' name='travel_bottom_banner_remove' value='y'><span class='title-small'>이미지 제거</span>

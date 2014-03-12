@@ -13,12 +13,4 @@
 
 <? include x::theme('popular_posts') ?>
 
-<?
-if ( $company_banner = ms::meta('com3banner_sidebar') ) { ?>
-<div class='sidebanner'>
-	<?$imgsrc = ms::meta('img_url').$company_banner?>
-	<img src='<?=$imgsrc?>'>
-</div>
-<?}?>
-
 <? include( x::theme('latest_posts') ) ?>

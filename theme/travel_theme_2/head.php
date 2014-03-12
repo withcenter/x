@@ -13,11 +13,11 @@
 
     <div class="header_wrapper">
 			<div id="header-logo">
-					<a href="<?php echo G5_URL ?>">
+				<a href="<?php echo G5_URL ?>">
 					<?if( file_exists( path_logo() ) ) echo "<img src='".url_logo()."'>";
 					else echo "<img src='".x::url_theme()."/img/default-logo.png'>";
 					?>
-					</a>
+				</a>
 			</div>
 
 	<div class='extra-menu-items'>
