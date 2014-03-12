@@ -34,7 +34,7 @@
 					  else {
 						$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('forum_no_'.$i)."'");
 						$top_menu = $row['bo_subject'];
-					  }
+					  }					  
 					  ?>
 						<a href = '<?=G5_BBS_URL?>/board.php?bo_table=<?=ms::meta('forum_no_'.$i)?>'>
 							<?=cut_str($top_menu,10,'...')?>
@@ -88,8 +88,8 @@
 	<div class='float-image-wrapper'>
 	<?
 	for( $i = 1; $i <= 3; $i++ ){
-		if ( file_exists( x::path_file( "travel_floating_banner$i" ) ) ) {
-			$img = "<a href='".x::meta("travel_floating_banner{$i}_url")."' target='_blank'><img style='width:100%; height: 100%;' src='".x::url_file( "travel_floating_banner$i" )."'/></a>";	
+		if ( file_exists( x::path_file( "travel_2floating_banner$i" ) ) ) {
+			$img = "<a href='".x::meta("travel_2floating_banner{$i}_url")."' target='_blank'><img style='width:100%; height: 100%;' src='".x::url_file( "travel_2floating_banner$i" )."'/></a>";	
 		}
 		else {
 			if ( $i ==  1 ) $img = "<a href='javascript:void(0)'><img style='width: 100%; height: 100%;' src='".x::url_theme()."/img/agoda.gif'/></a>";

@@ -28,7 +28,7 @@
 		<div class='footer-info'>
 			<div class='footer-tagline'>
 			<?
-				if ( $footer_tagline = x::meta('travel_footer_tagline') ) echo $footer_tagline;
+				if ( $footer_tagline = x::meta('travel_2footer_tagline') ) echo $footer_tagline;
 				else echo "하단 문구 제목을 입력하세요.";
 			?>
 			</div>
