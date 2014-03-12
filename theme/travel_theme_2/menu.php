@@ -30,7 +30,7 @@
 			}
 		}
 	?>
-	<?if ( ms::admin() ) { ?><li class='last-item' page='admin-menu'><div class='inner'><a  href='<?=url_site_config?>'>사이트 관리<div class='border_left'></div></a></div></li><?}?>
+	<?if ( ms::admin() ) { ?><li class='last-item' page='admin-menu'><div class='inner'><a  href='<?=url_site_config()?>'>사이트 관리<div class='border_left'></div></a></div></li><?}?>
 </ul>
 <div class='search-bar'>
 	  <form name="fsearchbox" method="get" action="<?php echo G5_BBS_URL ?>/search.php" onsubmit="return fsearchbox_submit(this);">
