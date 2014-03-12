@@ -19,17 +19,14 @@
 			<?
 				if ( $banners ) {
 					$selected = 0;
-					foreach ( $banners as $banner ) {
-
+					foreach ( $banners as $banner ) {					
 						if ( ! $selected ++ ) $first_image = 'selected';
-						else $first_image = '';
-						
-						echo "<div class='banner-image image_num_$banner_num $first_image'>";
+						else $first_image = '';						
+						echo "<div class='banner-image image_num_$selected $first_image'>";
 						echo "<a href='$banner[href]' target='_blank'><img src='$banner[src]'></a>";
 						echo "<a href='$banner[href]' target='_blank'><span class='banner-content'><p class='banner-text'>".cut_str(strip_tags($banner['text']),50,'...')."</p></span></a>";
 						echo "<div class='banner-more'><a href='$banner[href]' target='_blank'>자세히 &gt;</a></div>";
-						echo "</div>";
-						$banner_num++;
+						echo "</div>";						
 					}
 				}
 				else {
