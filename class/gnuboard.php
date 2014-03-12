@@ -240,7 +240,7 @@ class gnuboard {
 				bo_use_name = '',
 				bo_use_signature = '',
 				bo_use_ip_view = '',
-				bo_use_list_view = '',
+				bo_use_list_view = '$o[bo_use_list_view]',
 				bo_use_list_file = '',
 				bo_use_list_content = '',
 				bo_use_email = '',
