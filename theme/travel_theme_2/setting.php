@@ -1,7 +1,6 @@
 <?php
 function setTopMenu( $name ) {
-	global $cfgs;
-	
+	global $cfgs;	
 	ob_start();
 	if ( ms::exist() ) {
 		$cfgs = ms::forums();
@@ -27,7 +26,9 @@ function setTopMenu( $name ) {
 	<?
 		}
 	}?>
-	<input type='text' name='<?=$name?>_bo_table' value="" placeholder=" 게시판 아이디 직접 입력"/>
+	<?		
+	?>
+	<input type='text' name='<?=$name?>_bo_table' value="<?=x::meta($name."_name")?>" placeholder=" 게시판 아이디 직접 입력"/>
 <?
 	return $content = ob_get_clean();
 }
