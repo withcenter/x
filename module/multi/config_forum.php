@@ -17,7 +17,7 @@
 	<div class='config config_forum'>
 	<div class='config-main-title'>
 		<div class='inner'>
-			<span class='config-title-info'><img src='<?=x::url().'/module/'.$module.'/img/direction.png'?>'> 게시판은 게시판 제목을 입력하시면 생성이 됩니디.</span>
+			<span class='config-title-info'><img src='<?=module('img/direction.png')?>'> 게시판은 게시판 제목을 입력하시면 생성이 됩니디.</span>
 			<span class='config-title-notice'>
 				<span class='user-google-guide-button inner-title' page = 'google_doc_forum' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
 			</span>
@@ -29,7 +29,7 @@
 		<div class='config-wrapper'>
 			<div class='config-title'><span class='config-title-info'><span class='title-forum'>게시판 목록</span>
 			게시판 수 : <b><?=count($rows)?></span>
-			<span class='config-title-notice'><img src='<?=x::url().'/module/'.$module.'/img/setting_2.png'?>'></span></div>	
+			<span class='config-title-notice'><img src='<?=module('img/setting_2.png')?>'></span></div>	
 			<div class='config-container'>
 		<form class='create-forum' target='hidden_iframe' autocomplete='off'>
 			<input type='hidden' name='module' value='<?=$module?>' />
