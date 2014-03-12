@@ -56,7 +56,8 @@
 				'subject'	=> "메뉴1",
 				'group_id'	=> 'multisite',
 				'bo_admin' => $member['mb_id'],
-				'bo_use_dhtml_editor' => 1
+				'bo_use_dhtml_editor' => 1,
+				'bo_use_list_view' => 1
 			);
 			
 			if ( $site_type == 'blog' ) $o['bo_skin'] = 'x/skin/board/x-board-blog';
@@ -82,7 +83,8 @@
 						'subject'	=> "메뉴".$i,
 						'group_id'	=> 'multisite',
 						'bo_admin' => $member['mb_id'],
-						'bo_use_dhtml_editor' => 1
+						'bo_use_dhtml_editor' => 1,
+						'bo_use_list_view' => 1
 					);
 					
 					if ( $site_type == 'travel_theme_1'){
