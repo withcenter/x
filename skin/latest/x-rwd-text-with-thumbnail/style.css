@@ -1,10 +1,11 @@
 .x-rwd-text-with-thumbnail {
 	border:1px solid #bbbbbb;
+	background: #ffffff;
 }
 
 .x-rwd-text-with-thumbnail > .title {
 	font-weight:bold;
-	padding: 0.4em 0.7em;
+	padding: 0.5em 0.7em 0.4em 0.7em;
 	height: 1.4em;
 	border-bottom:1px solid #bbbbbb;
 	
@@ -22,14 +23,15 @@
 	margin-top: 2px;
 }
 .x-rwd-text-with-thumbnail > .title .more-button a {
-	color:#808080;
+	color:#8f8f8f;
 	font-size: 9pt
 }
 
 .x-rwd-text-with-thumbnail .comment-time{
 	float:right;
 	text-align: right;
-	width:3em;
+	width: 4.875em;
+	font-size: 11px;
 }
 
 .x-rwd-text-with-thumbnail  .photo {
@@ -37,10 +39,12 @@
 	height:auto;
 } 
 
+.x-rwd-text-with-thumbnail .x-rwd-content {
+
+}
 
 
 .x-rwd-text-with-thumbnail .comment-time .time{
-	margin-top:0.45em;
 	margin-left:0.25em;
 }
 
@@ -53,7 +57,7 @@
 }
 
 .x-rwd-text-with-thumbnail .comment_count{
-	color:#cc4235;
+	color: #ff9c00;
 }
 
 /******************/
@@ -80,9 +84,12 @@
 .x-rwd-text-with-thumbnail .contents_wrapper a{
 	color: #808080;
 }	
+.x-rwd-text-with-thumbnail table {
+	margin-top: 0.5em;
+}
 
 .x-rwd-text-with-thumbnail  td{
-	padding-top:0.65em;
+	padding-top: 0.30em;
 }
 
 .x-rwd-text-with-thumbnail table{
@@ -92,5 +99,4 @@
 
 .x-rwd-text-with-thumbnail .breaker {
 	margin: 0.2em 0.3em;
-	border-bottom: 1px dotted #e3e3e3;
 }
