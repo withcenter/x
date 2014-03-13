@@ -1,5 +1,6 @@
 <?php
-$query = "SELECT domain, title FROM x_multisite_config WHERE title <> '' ORDER BY stamp_create DESC LIMIT 0, 30";
+$query = "SELECT domain FROM x_site_config ORDER BY idx DESC LIMIT 0, 30";
+
 $rows = db::rows( $query );
 $image_url = x::url_theme().'/img';
 $title_icon1 = "<img src='$image_url/directions-blue.png' />";
@@ -9,7 +10,7 @@ echo "<div class='newest-site-list'>
 foreach ( $rows as $row ) {
 	$domain_url = ms::url_site( $row['domain'] );
 	$domain_url = str_replace("\\", '', $domain_url);
-	$domain_title = cut_str( $row['title'], 21, "..." );
+	$domain_title = cut_str( x::meta_get($row['domain'], 'title'), 21, "..." );
 	$dot = $image_url.'/dot.gif';
 	
 	echo "
