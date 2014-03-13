@@ -28,12 +28,7 @@
 	</div>
 	<div class='right'>
 		<div class='inner'>
-		<?
-		$latest_bo_table = bo_table(5);
-		if ( g::forum_exist( $latest_bo_table ) ) {
-			echo latest("x-rwd-text-with-thumbnail", $latest_bo_table, 4, 50, $cache_time=1, array('icon'=>x::url_theme()."/img/panel_2.png"));
-		}
-		?>
+		<?=latest("x-rwd-text-with-thumbnail", bo_table(2), 4, 50, $cache_time=1, array('icon'=>x::url_theme()."/img/panel_2.png"))?>
 		</div>
 	</div>
 	<div style='clear:both;'></div>			

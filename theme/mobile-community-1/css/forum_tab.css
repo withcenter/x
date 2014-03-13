@@ -5,21 +5,20 @@
 
 .forum-tab .a, .forum-tab .b, .forum-tab .c, .forum-tab .d {
 	float: left;
-	width: 25%;
 }
 
 
 
 .forum-tab-inner {
 	border: 1px solid #bbbbbb;
-
+	margin: 0 1.33%;
 }
 
 .forum-tab .a .forum-tab-inner {
-	margin-left: 0;
+	
 }
 .forum-tab .d .forum-tab-inner {
-	margin-right: 0;
+	
 }
 
 
@@ -29,22 +28,19 @@
 	overflow: hidden;
 }
 
-	.forum-tab .a {
-		margin-bottom: 0.625em;
-		width: 100%;
-		float: none;
-	}
-	.forum-tab .b, .forum-tab .c {
-		width: 48.5%;
-	}
-	
+.forum-tab .a {
+	margin-bottom: 0.625em;
+	width: 100%;
+	float: none;
+}
+.forum-tab .b, .forum-tab .c {
+	width: 50%;
+}
 
-	.forum-tab .c {
-		margin-left: 2.5%;
-	}
-	.forum-tab .d {
-		display: none;
-	}
+
+.forum-tab .d {
+	display: none;
+}
 
 .forum-tab-inner div.lt {
 	padding: 0 0.75em !important;
@@ -60,26 +56,17 @@ div.lt li {
 @media all and ( min-width: 25em ) {
 	.forum-tab .a, .forum-tab .b, .forum-tab .c {
 		float:left;
-		width: 32.88%;
-		margin-left: 0.6%;
+		width: 33.33%;
 	}
 	
-	.forum-tab .a {
-		margin: 0;
-	}
-	
-	.forum-tab-inner {
-		margin: 0 0.2em;
-	}
 }
 
 
 @media all and ( min-width: 50em ) {
 	.forum-tab .d {
 		display: block;
-		margin-left: 0.6%;
 	}
 	.forum-tab .a, .forum-tab .b, .forum-tab .c, .forum-tab .d {
-		width: 24.55%;
+		width: 25%;
 	}
 }

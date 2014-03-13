@@ -111,15 +111,13 @@ a {
 	margin-bottom: 0.625em;
 }
 
-.latest-thumbnail > .left {
-	width: 49.45%;
+.latest-thumbnail > .left, .latest-thumbnail > .right {
+	width: 50%;
 	float:left;
 }
 
-.latest-thumbnail > .right {
-	width: 49.45%;
-	float:left;
-	margin-left: 1.1%;
+.latest-thumbnail .inner {
+	margin: 0 0.655%;
 }
 
 
@@ -220,7 +218,7 @@ a {
 	/* latest */
 	.latest-thumbnail > .left {
 		width: 100%;
-		float:normal;
+		float:none;
 		margin-bottom: 1em;
 	}
 	.latest-thumbnail > .left > .inner {
@@ -229,4 +227,22 @@ a {
 	.latest-thumbnail > .right {
 		display:none;
 	}
+	
+	.forum-tab .a .forum-tab-inner{
+		margin: 0;
+	}
+
+	
+	.latest-thumbnail .inner {
+		margin: 0;
+	}
 }
+
+@media all and ( max-width: 400px ) {
+	
+	#content .gallery .post {
+		margin:0;
+	}
+
+}
+
