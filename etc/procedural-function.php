@@ -215,7 +215,7 @@ function site_title ( $domain )
  *  
  *  @details use this function to get the login user information
  */
-function my( $field ) {
+function my( $field = 'id' ) {
 	global $member;
 	switch ( $field ) {
 		case 'id'				: $field = 'mb_id';			break;

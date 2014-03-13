@@ -1,5 +1,7 @@
-<? if ( $member['mb_id'] ) {
-	$my_site = x::sites( $member['mb_id'] );
+<? if ( login() ) {
+
+	$my_site = sites( my() );
+	
 	if ( $my_site ) {
 ?>
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/user_site_list.css' />
@@ -10,8 +12,9 @@
 			$site_url	= site_url($s['domain']);
 			$title		= meta_get( $s['domain'], 'title' );
 			echo "
+				
 				<div class='row'>
-					<a href='$site_url'>$s[title]</a>
+					<a href='$site_url'>$title</a>
 				</div>
 			";
 		}
