@@ -36,11 +36,11 @@
 			<img src='<?=x::url_theme()?>/img/mobile_icon6.png'/>		
 			<span class='label'>Menu</span>
 		</a>
-		<?/*
+	
 		<div class='pop-up-login'>
 			<?=outlogin('x-mobile-1');?>
 		</div>
-		*/?>
+	
 	</li>
 	<li class='less-padding menu_item'>
 		<a href='javascrip:void(0)'>
