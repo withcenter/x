@@ -7,11 +7,7 @@
 		foreach ( $menus as $menu ) {
 			echo "	<li><span class='menu-divider'></span></li><li page=".$menu['bo_table']."><a href='".url_forum_list($menu['bo_table'])."'>$menu[name]</a></li>";
 		}
-		if ( admin() ) {
-	?>		<li><span class='menu-divider'></span></li><li class='last-item' page='admin-menu'>
-				<a href="<?=url_site_config()?>">사이트 관리</a>
-			</li>
-	<? } ?>
+	?>
 </ul>
 </div>
 <div style='clear:left;'></div>

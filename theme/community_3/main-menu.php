@@ -4,12 +4,7 @@
 		foreach ( $menus as $menu ) {
 			echo "<li class='comm3_menu'><a href='".url_forum_list($menu['bo_table'])."'>$menu[name]</a></li>";
 		}
-		if ( admin() ) {
-	?>
-			<li class="comm3_menu" page = "admin-menu">
-				<a href="<?=url_site_config()?>">사이트 관리</a>
-			</li>
-	<? } ?>
+?>
 </ul>
 
 <?

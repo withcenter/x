@@ -63,9 +63,7 @@
 	?>
 			<a  href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$menu['bo_table']?>'><?=$menu['name']?></a>
 	<? } ?>
-	<? if ( admin() ) { ?>
-		<a href="<?=url_site_config()?>">사이트 관리</a>
-	<? } ?>
+
 </div></div> 
 
 <div class='layout'>

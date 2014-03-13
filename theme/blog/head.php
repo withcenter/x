@@ -8,20 +8,24 @@
 			</a>
         </div>
         <ul id="tnb">
-			<li class='menu-home'><a href='<?=ms::url_site(etc::domain())?>'>홈</a></li>
+			<li class='menu-1'><a href='<?=ms::url_site(etc::domain())?>'>홈</a></li>
 			<?php
-				$menu_class = array( 'menu-about' , 'menu-faqs' , 'menu-contact' );
+				$menu_class = array( 'menu-2' , 'menu-3' , 'menu-4', 'menu-1' );
 				$menus = get_site_menu();
-				$i = 0;
+				$i = 1;
+				$color = 0; 
 				foreach ( $menus as $menu ) {
-					echo "<li class='".$menu_class[$i]."'><a href='".url_forum_list($menu['bo_table'])."'>$menu[name]</a></li>";
+				
+					if ( $i % 4 == 1 ) $color = 0;
+					elseif ( $i % 4 == 2 ) $color = 1;
+					elseif ( $i % 4 == 3 ) $color = 2;
+					elseif ( $i % 4 == 0 ) $color = 3;
+					
+					echo "<li class='".$menu_class[$color]."'><a href='".url_forum_list($menu['bo_table'])."'>$menu[name]</a></li>";
+					
 					$i++;
 				}
-				if ( admin() ) {
-			?>		<li class='menu-admin'>
-						<a href="<?=url_site_config()?>">사이트 관리</a>
-					</li>
-			<? } ?>
+			?>
 			<li class='menu-mobile'><a href='<?=g::url()?>?device=mobile'>모바일</a></li>
         </ul>	
     </div>

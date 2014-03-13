@@ -35,28 +35,24 @@
 	top: -2px;
 }
 
-#tnb .menu-home {
+#tnb .menu-1 {
 	background: #db5e31;
 }
 
-#tnb .menu-about {
+#tnb .menu-2 {
 	background: #eda23e;
 }
 
-#tnb .menu-faqs {
+#tnb .menu-3 {
 	background: #f2cb67;
 }
 
-#tnb .menu-contact {
+#tnb .menu-4 {
 	background: #bfb840;
 }
 
-#tnb .menu-admin {
-	background: #e4dc4b;
-}
-
 #tnb .menu-mobile {
-	background: #f0e855;
+	background: #e4dc4b;
 }
 
 #hd {
