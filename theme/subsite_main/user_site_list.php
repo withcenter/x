@@ -1,7 +1,8 @@
-<? if ( login() ) {
-
-	$my_site = sites( my() );
+<?
 	
+	
+	if ( login() ) {
+		$my_site = sites( my() );
 	if ( $my_site ) {
 ?>
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/user_site_list.css' />

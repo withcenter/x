@@ -672,18 +672,6 @@ function board_form_page()
 	return preg_match("/\/board_form.php/", $self);
 }
 
-/** @short return the bo_table of n'th menu
- *
- * @param [in] $n
- *
- * @return string bo_table
- */
-function bo_table($n)
-{
-	$bo_table = "ms_" . etc::last_domain(etc::domain()) . '_'.$n;
-	return $bo_table;
-}
-
 
 
 

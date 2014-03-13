@@ -224,3 +224,17 @@ function my( $field = 'id' ) {
 	}
 	return $member[ $field ];
 }
+
+
+/** @short return the bo_table of n'th menu
+ *
+ * @param [in] $n
+ *
+ * @return string bo_table
+ */
+function bo_table($n)
+{
+	$bo_table = "ms_" . etc::last_domain(etc::domain()) . '_'.$n;
+	return $bo_table;
+}
+
