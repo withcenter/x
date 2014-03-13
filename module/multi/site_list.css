@@ -47,6 +47,10 @@
 	padding: 5px 10px;
 }
 
+.site-list table tr td b {
+	color: #bb1d2c;
+}
+
 .site-list table tr td:last-child {
 	border-right: 1px solid #d5d5d5;
 }

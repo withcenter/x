@@ -7,7 +7,7 @@
 
 	$q = array();
 	$conds = null;
-	if ( $in ) {
+	if ( $domain_name || $title ) {
 		/* 우선 사이트 이름이 들어 왔을 때는 x_config의 code가 title인 것에서 검색 조건을 확인 하고, 해당 하는 도메인(key)를 가져온다 
 		 * 그런 후 그 도메인을 가지고 검색 조건을 만든다.
 		*/
@@ -35,7 +35,7 @@
 
 $total_post = db::result (  "SELECT COUNT(*) FROM x_site_config WHERE domain <> '.com' AND domain <> '.org' AND domain <> '.net' AND domain <> '.kr' $conds" );
 
- $sites = db::rows ( "SELECT * FROM x_site_config WHERE domain <> '.com' AND domain <> '.org' AND domain <> '.net' AND domain <> '.kr' $conds ORDER BY stamp_created DESC LIMIT $start, $no_of_post");
+ $sites = db::rows ( "SELECT * FROM x_site_config WHERE domain <> '.com' AND domain <> '.org' AND domain <> '.net' AND domain <> '.kr' $conds ORDER BY idx DESC LIMIT $start, $no_of_post");
 ?>	
 <link rel='stylesheet' type='text/css' href='<?=x::url()?>/module/<?=$module?>/site_list.css' />
 
