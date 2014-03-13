@@ -119,7 +119,8 @@ function hook_blog_push( $hook )
 	
 }
 // https://docs.google.com/a/withcenter.com/document/d/1Q3cunvTGTmGTathp_Jx4LTVn8tdsNzqsZmmpE8kLsvg/edit#heading=h.1zkefc3j0po6
-x::hook_register( 'outlogin', 'hook_outlogin_path' );
+//x::hook_register( 'outlogin', 'hook_outlogin_path' );
+/*
 function hook_outlogin_path()
 {
 	global $global_skin_dir, $outlogin_skin_path, $outlogin_skin_url;
@@ -138,6 +139,7 @@ function hook_outlogin_path()
 	
 	
 }
+*/
 /*
 x::hook_register( 'latest_after_skin_info', 'hook_latest_path' );
 function hook_latest_path()
