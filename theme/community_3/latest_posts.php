@@ -1,21 +1,7 @@
 <?
 
 include_once(G5_LIB_PATH.'/thumbnail.lib.php'); 
-/** POSTS RECENT */
-/* old code. can be deleted whenever.
-$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";
-$current_date = date('Y-m-d').' 23:59:59';
-$previous_date = date('Y-m-d', strtotime("-7 day", strtotime($current_date))).' 00:00:00';
-$latest_rows = db::rows( "SELECT bo_table, wr_id FROM $g5[board_new_table] WHERE $qb AND bn_datetime BETWEEN '$previous_date' AND '$current_date' AND wr_id=wr_parent ORDER BY bn_datetime DESC LIMIT 3" );	
-if( $latest_rows ) {
-	$i = 0;
-	foreach ( $latest_rows as $latest_row ) {
-		$pst[$i] = db::row( " SELECT * FROM $g5[write_prefix]".$latest_row['bo_table']." WHERE wr_id='".$latest_row['wr_id']."'" );
-		$pst[$i]['bo_table'] = $latest_row['bo_table'];
-		$i++;
-	}
- }
- */
+
 $posts = g::posts(
 	array(
 		'domain'				=> etc::domain(),

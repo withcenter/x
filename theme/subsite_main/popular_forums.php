@@ -21,5 +21,7 @@
 			</div>
 		<?}?>
 
+	<? /*
 	<div class='view-more'><a href="<?=x::url()?>/?module=multi&action=forum.list">자세히</a></div>
+	*/?>
 </div>
