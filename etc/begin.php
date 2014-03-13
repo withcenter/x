@@ -199,7 +199,7 @@ if ( strpos( $board_skin_path, "board/basic" ) ) {
 x::hook_register( 'begin', 'hook_begin_status' );
 function hook_begin_status()
 {
-	$status = ms::meta_get( etc::domain(), 'status' );
+	$status = meta_get( etc::domain(), 'status' );
 	if ( $status == 'close' ) {
 		jsGo( g::url_base(), "This site has been closed." );
 	}
@@ -207,12 +207,12 @@ function hook_begin_status()
 
 
 
-// Change mobile theme if MOBILE 
+// Set default mobile theme to 'mobile-commuity-1' if it has no MOBILE theme.
 x::hook_register('before_theme_init', 'hook_theme_change');
 function hook_theme_change()
 {
 	if ( G5_IS_MOBILE ) {
-		x::$config['site']['theme'] = ms::meta('mobile_theme');
+		x::$config['site']['theme'] = meta('mobile_theme');
 		if ( empty(x::$config['site']['theme']) ) x::$config['site']['theme'] = "mobile-community-1";
 	}
 }
@@ -246,8 +246,7 @@ x::hook_register('latest_before_return', 'hook_latest_before_return');
 function hook_latest_before_return()
 {
 	dlog("hook_latest_before_return begin:");
-	if ( admin() || ms::admin() ) {
-		dlog("ms::admin() true");
+	if ( admin() ) {
 		global $content, $global_skin_dir, $global_bo_table;
 		$code = x::skin_code( $global_skin_dir, $global_bo_table );
 		$content = "<div class='skin-update'><div class='skin-update-button' code='$code'>admin</div>$content</div>";

@@ -1,5 +1,8 @@
 <?php
 
+	
+	
+
 	if ( empty($sub_domain) ) {
 		jsBack("사이트 주소를 입력해 주세요");
 		exit;
@@ -33,7 +36,6 @@
 	
 	
 	
-	
 	if ( empty ( $title ) ) {
 		jsBack ( "사이트 제목을 입력해 주세요" );
 		exit;
@@ -48,8 +50,9 @@
 	else $site_type = 'blog';
 	
 	$domain = $sub_domain . '.' . etc::base_domain();
-		
-	if ( $error_code = ms::create( array('domain'=>$domain, 'title'=>$title) ) ) include module( 'create_fail' );
+	
+	
+	if ( $error_code = x::site_create( array('domain'=>$domain, 'title'=>addslashes($in['title'])) ) ) include module( 'create_fail' );
 	else {
 			$o = array(
 				'id'	=> ms::board_id( $domain ) . '_1',

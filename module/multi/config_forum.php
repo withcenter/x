@@ -2,13 +2,7 @@
 
 	if ( $in['mode'] == 'forum_setting' ) include_once module('forum_setting');
 	else {
-			/* 생성된 게시판 정보를 가저온다 */
-			/*
-			$board_id = ms::board_id( etc::domain() ).'\_';
-			$qb = "bo_table LIKE '{$board_id}%'";
-			$q = "SELECT bo_table, bo_subject, bo_count_write FROM $g5[board_table] WHERE $qb";
-			$rows = db::rows( $q );
-			*/
+		
 			$rows = x::forums();
 			$no_of_board = count($rows);
 			

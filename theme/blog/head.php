@@ -8,7 +8,7 @@
 			</a>
         </div>
         <ul id="tnb">
-			<li class='menu-1'><a href='<?=ms::url_site(etc::domain())?>'>홈</a></li>
+			<li class='menu-1'><a href='<?=site_url(etc::domain())?>'>홈</a></li>
 			<?php
 				$menu_class = array( 'menu-2' , 'menu-3' , 'menu-4', 'menu-1' );
 				$menus = get_site_menu();
@@ -41,7 +41,7 @@
 		
 		<?php
 			if ( write_page() ) {
-				$ids = ms::forum_ids();
+				$ids = x::forum_ids();
 				$str = "<div class='forum-write-title'>글을 쓰려는 게시판을 선택해 주세요.</div>";
 				foreach ( $ids as $id ) {
 					

@@ -14,6 +14,4 @@ include_once x::dir() . '/class/data.php';
 include_once x::dir() . '/class/html.php';
 include_once x::dir() . '/class/url.php';
 include_once x::dir() . '/class/string.php';
-include_once x::dir() . '/class/multidomain.php';
-include_once x::dir() . '/class/multisite.php';
 include_once x::dir() . '/class/database.php';

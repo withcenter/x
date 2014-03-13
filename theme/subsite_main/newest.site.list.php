@@ -8,7 +8,7 @@ echo "<div class='newest-site-list'>
 		<div class='title'>$title_icon1 <a href='".x::url()."/?module=multi&action=site_list'>최근 생성사이트</a></div>
 	";
 foreach ( $rows as $row ) {
-	$domain_url = ms::url_site( $row['domain'] );
+	$domain_url = site_url( $row['domain'] );
 	$domain_url = str_replace("\\", '', $domain_url);
 	$domain_title = cut_str( x::meta_get($row['domain'], 'title'), 21, "..." );
 	$dot = $image_url.'/dot.gif';
@@ -21,3 +21,4 @@ foreach ( $rows as $row ) {
 		";
 }
 echo "</div>";
+

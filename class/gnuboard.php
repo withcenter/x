@@ -453,11 +453,12 @@ class gnuboard {
 		$count = self::count_write( $o['bo_table'] );
 		
 		
-		db::update( $g5['board_table'], array('bo_count_write' => $count), array('bo_table'=>$o['bo_table']) );
+		db::update( $g5['board_table'], array('bo_count_write' => $count + 1), array('bo_table'=>$o['bo_table']) );
 		
 		
 		
-		self::write_file( array( 'bo_table'=>$o['bo_table'], 'wr_id'=>$wr_id, 'path'=>$o['file_1'] ) );
+		$re = self::write_file( array( 'bo_table'=>$o['bo_table'], 'wr_id'=>$wr_id, 'path'=>$o['file_1'] ) );
+		print_r($re);
 		self::write_file( array( 'bo_table'=>$o['bo_table'], 'wr_id'=>$wr_id, 'path'=>$o['file_2'] ) );
 		self::write_file( array( 'bo_table'=>$o['bo_table'], 'wr_id'=>$wr_id, 'path'=>$o['file_3'] ) );
 		
@@ -514,7 +515,8 @@ class gnuboard {
 	$o['filename']			= $filename;
 	$url = g::write_file( $o );
 	
-	 *  @return 0 if successful. otherwise non-zero.
+	 *  @return 0 if no file. otherwise int but non-zero.
+	 *  returns string if successful.
 	 *  
 	 *  @details 
 	 *  upload( or attach ) a file programatically.
@@ -536,7 +538,7 @@ class gnuboard {
 		$bo_table			= $o['bo_table'];
 		$wr_id				= $o['wr_id'];
 		$path				= $o['path'];
-		$bf_content		= $o['bf_content'];
+		$bf_content			= $o['bf_content'];
 		$filename			= $o['filename'];
 		
 		

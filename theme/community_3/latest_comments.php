@@ -1,6 +1,6 @@
 <?
 /** LATEST COMMENTS */
-$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "%'";
+$qb = "bo_table LIKE '" . x::board_id( etc::domain() ) . "%'";
 $current_date = date('Y-m-d').' 23:59:59';
 $previous_date = date('Y-m-d', strtotime("-7 day", strtotime($current_date))).' 00:00:00';
 $recent_comments = db::rows( "SELECT bo_table, wr_id FROM $g5[board_new_table] WHERE $qb AND bn_datetime BETWEEN '$previous_date' AND '$current_date' AND wr_id!=wr_parent ORDER BY bn_datetime DESC LIMIT 5" );	

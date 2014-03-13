@@ -17,8 +17,8 @@
 	</li>
 	<?}?>
 	
-	<? if ( ms::admin() ) {?>
-		<li class='menu-list'><a class='my-site-setting' href='<?=ms::url_config()?>'>사이트 설정</a></li>
+	<? if ( admin() ) {?>
+		<li class='menu-list'><a class='my-site-setting' href='<?=url_site_config()?>'>사이트 설정</a></li>
 	<? }?>
 	
 	<? if ( $member['mb_id'] ) {?>

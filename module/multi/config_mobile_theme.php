@@ -18,11 +18,11 @@
 		</div>
 		<div class='theme_config'>				
 			<?			
-			if ( ms::meta('mobile_theme') ) { 
+			if ( meta('mobile_theme') ) { 
 			?>	
 					<div class='theme-thumb'>
-						<img src='theme/<?=ms::meta('mobile_theme')?>/preview.jpg'/>						
-						<div class='theme-name active-theme'><?=ms::meta('mobile_theme')?><span class='active-note'>선택 되었습니다</span></div>						
+						<img src='theme/<?=meta('mobile_theme')?>/preview.jpg'/>						
+						<div class='theme-name active-theme'><?=meta('mobile_theme')?><span class='active-note'>선택 되었습니다</span></div>						
 					</div>
 			<?
 			}
@@ -40,7 +40,7 @@
 				if ( ! in_array( 'mobile', $type ) ) continue;
 				
 				$url = x::url().'/theme/'.$dir.'/preview.jpg';
-				if( preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower(ms::meta('mobile_theme'))) != preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower($dir)) ) { ?>					
+				if( preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower(meta('mobile_theme'))) != preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower($dir)) ) { ?>					
 						<div class='theme-thumb inactive' theme_value='<?=$dir?>'>
 						<img src='<?=$url?>' >
 						<span class='theme-name'><?=$name?></span>

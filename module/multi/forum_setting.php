@@ -30,14 +30,7 @@ include_once(G5_EDITOR_LIB);
 			$up['bo_use_signature'] = $in['bo_use_signature']?$in['bo_use_signature'] : 0;
 			$up['bo_use_ip_view'] = $in['bo_use_ip_view']?$in['bo_use_ip_view'] : 0;
 
-			if ( $in['bo_category_list'] ) {
-				for ( $i=1; $i <= 10; $i++ ) {
-					if ( ms::meta('menu_'.$i) == $in['bo_table'] ) {
-						$op['submenu_'.$i] = $in['bo_category_list'];
-						ms::update($op);
-					}
-				}
-			}
+			
 		
 		if ( db::update( $g5['board_table'], $up, array('bo_table' => $in['bo_table']) ) ) $message = '수정 되었습니다.';
 		else $message = '수정에 실패 하였습니다.';

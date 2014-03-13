@@ -2,9 +2,8 @@
 if ( $in['done'] ) {
 	foreach ( $in as $key => $value ) {
 		if ( $key == 'module' || $key == 'action' || $key == 'done' ) continue;
-		else ms::meta($key, $value );
+		else meta_set($key, $value );
 	}
-	
 	echo "<div class='message'>수정 되었습니다.</div>";
 }
 ?>
@@ -31,17 +30,17 @@ if ( $in['done'] ) {
 	
 			<div class='row'>
 				<span class='item4'>API연결 URL</span>
-				<input type='text' name='api-end-point<?=$i?>' value='<?=ms::meta('api-end-point'.$i)?>' />
+				<input type='text' name='api-end-point<?=$i?>' value='<?=meta('api-end-point'.$i)?>' />
 			</div>
 			
 			<div class='row'>
 				<span class='item4'>아이디</span>
-				<input type='text' name='api-username<?=$i?>' value='<?=ms::meta('api-username'.$i)?>' />
+				<input type='text' name='api-username<?=$i?>' value='<?=meta('api-username'.$i)?>' />
 			</div>
 			
 			<div class='row'>
 				<span class='item4'>API연결 암호</span>
-				<input type='text' name='api-password<?=$i?>' value='<?=ms::meta('api-password'.$i)?>' />
+				<input type='text' name='api-password<?=$i?>' value='<?=meta('api-password'.$i)?>' />
 			</div>
 		</fieldset>
 	<? }?>

@@ -118,6 +118,7 @@ function site_set( $idx, $domain, $mb_id=null )
 	return x::site_set( $idx, $domain, $mb_id );
 }
 
+/** @see x::meta_set() */
 function meta_set( $key, $code, $value=null )
 {
 	return x::meta_set( $key, $code, $value );
@@ -127,6 +128,12 @@ function meta_get( $key, $code=null )
 {
 	return x::meta_get( $key, $code );
 }
+
+function meta( $key, $code=null )
+{
+	return x::meta_get( $key, $code );
+}
+
 
 function meta_delete( $key, $code=null )
 {
@@ -188,4 +195,57 @@ function get_site_menu()
 	return $menus;
 }
 
+
+
+function sites( $mb_id )
+{
+	return x::sites( $mb_id );
+}
+
+
+function site_url( $domain )
+{
+	return x::site_url( $domain );
+}
+
+function site_title ( $domain )
+{
+	return meta_get( $domain, 'title' );
+}
+
+
+/**
+ *  @brief function layer for preparing different system.
+ *  
+ *  @param [in] $field field of a member table ( information )
+ *  @return value of the field
+ *  
+ *  @details use this function to get the login user information
+ */
+function my( $field = 'id' ) {
+	global $member;
+	switch ( $field ) {
+		case 'id'				: $field = 'mb_id';			break;
+		case 'name'				: $field = 'mb_nick';		break;
+		default				:							break;
+	}
+	return $member[ $field ];
+}
+
+
+/** @short return the bo_table of n'th menu
+ *
+ * @param [in] $n
+ *
+ * @return string bo_table
+ *
+ * @code
+	bo_table(1); // is same as meta('menu_1', ms::board_id(etc::domain()).'_1')
+ * @endcode
+ */
+function bo_table($n)
+{
+	$bo_table = "ms_" . etc::last_domain(etc::domain()) . '_'.$n;
+	return $bo_table;
+}
 

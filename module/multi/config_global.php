@@ -32,7 +32,7 @@
 
 					<tr valign='top'>
 						<td width='120'>
-							<span class='config-name'>메인 타이틀</span></td><td><input type='text' name='title' value='<?=ms::meta('title')?>'>
+							<span class='config-name'>메인 타이틀</span></td><td><input type='text' name='title' value='<?=meta('title')?>'>
 						</td>
 					</tr>
 					<tr valign='top'>
@@ -49,8 +49,8 @@
 						<td>
 						<span class='config-name'>사이드 바 위치:</span></td><td>				
 							<div>
-								<input type="radio" name="theme_sidebar" value="left"  <?if(!ms::meta('theme_sidebar') || ms::meta('theme_sidebar') == 'left') echo "checked"?>><span class='radio-left'>왼쪽</span> 
-								<input type="radio" name="theme_sidebar" value="right" <?if(ms::meta('theme_sidebar') =='right') echo "checked"?>><span class='radio-right'>오른쪽</span>
+								<input type="radio" name="theme_sidebar" value="left"  <?if(!meta('theme_sidebar') || meta('theme_sidebar') == 'left') echo "checked"?>><span class='radio-left'>왼쪽</span> 
+								<input type="radio" name="theme_sidebar" value="right" <?if(meta('theme_sidebar') =='right') echo "checked"?>><span class='radio-right'>오른쪽</span>
 							</div>
 						</td>
 					</tr>

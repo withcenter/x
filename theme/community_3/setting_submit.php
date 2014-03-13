@@ -15,4 +15,4 @@ for ( $i=1; $i <= 5; $i ++ ) {
 }
 
 
-	ms::meta('tel',$in['tel']);
+	meta_set('tel',$in['tel']);

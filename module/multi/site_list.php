@@ -74,7 +74,7 @@ $total_post = db::result (  "SELECT COUNT(*) FROM x_site_config WHERE domain <> 
 		$move_to_site = "<b>차단된 사이트</b>";
 	}
 	else {
-		$url_site = ms::url_site( $site['domain']);
+		$url_site = site_url( $site['domain']);
 		$status = '운영중';
 		$move_to_site = "<a href='$url_site' target='_blank'>사이트로 이동</a>";
 	}

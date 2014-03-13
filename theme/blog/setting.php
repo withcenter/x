@@ -3,8 +3,8 @@ function setTopMenu( $name ) {
 	global $cfgs;
 	
 	ob_start();
-	if ( ms::exist() ) {
-		$cfgs = ms::forums();
+	if ( x::site() ) {
+		$cfgs = x::forums();
 		if ( ! empty( $cfgs ) ) {
 	?>
 	<select name='<?=$name?>'>
@@ -111,7 +111,7 @@ function setTopMenu( $name ) {
 						} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 178px]</div>"; ?>
 							<input type='file' name='banner_<?=$i?>'>
 							<div class='title'>배너1 링크</div>
-							<input type='text' name='banner_<?=$i?>_url' value='<?=ms::meta('banner_1_url')?>'>
+							<input type='text' name='banner_<?=$i?>_url' value='<?=meta('banner_1_url')?>'>
 							<input type='checkbox' name='banner_<?=$i?>_remove' value='y'><span class='title-small'>이미지 제거</span>
 						</div>
 				</td>

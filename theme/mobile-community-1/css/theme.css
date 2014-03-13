@@ -111,22 +111,18 @@ a {
 
 /* latest */
 .latest-thumbnail{
-	margin-bottom: 3.75em;
+	margin-bottom: 0.625em;
 }
 
 .latest-thumbnail > .left {
-	width: 50%;
+	width: 49.45%;
 	float:left;
 }
-.latest-thumbnail > .left > .inner {
-	margin-right: 0.8%;
-}
+
 .latest-thumbnail > .right {
-	width: 50%;
+	width: 49.45%;
 	float:left;
-}
-.latest-thumbnail > .right > .inner {
-	margin-left: 0.8%;
+	margin-left: 1.1%;
 }
 
 

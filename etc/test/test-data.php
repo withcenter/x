@@ -24,9 +24,12 @@
 		if ( $i >= ( $max - 10 ) ) $o['file_1'] = "tmp/image.test.jpg";
 		
 		$wr_id = g::write( $o );
+		
+		
+		/* @todo insert it into post_latst */
+	
 		echo "$wr_id, ";
 		flush();
 	}
 
-	
 	

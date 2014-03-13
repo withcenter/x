@@ -1,0 +1,38 @@
+.x-gallery li {
+	width: 24.55%;
+	margin-left: 0.6%;
+}
+
+.x-gallery li:nth-child(1) {
+	margin-left: 0;
+}
+
+@media all and ( max-width: 50em ) {
+	.x-gallery li:nth-child(4) {
+		display: none;
+	}
+	.x-gallery li {
+		width: 32.88%;
+	}
+	.x-gallery .text .desc {
+		display:none;
+	}
+}
+
+
+@media all and ( max-width: 25em ) {
+	.x-gallery li:nth-child(3) {
+		display: none;
+	}
+	.x-gallery li:nth-child(2) {
+		display: none;
+	}
+	.x-gallery li {
+		width: 100%;
+	}
+	.x-gallery .text .desc {
+		display:block;
+	}
+}
+
+

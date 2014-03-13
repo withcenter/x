@@ -19,7 +19,7 @@
 		</div>
 		<div class='theme_config'>
 				<?
-				$active_theme = ms::meta('theme');
+				$active_theme = meta('theme');
 				$dirs = file::getDirs(X_DIR_THEME);
 				foreach ( $dirs as $dir ){
 					if ( $dir == $active_theme ) {
@@ -32,7 +32,7 @@
 				?>
 			<?if ( $active_theme ) { ?>
 				<div class='theme-thumb'>
-					<img src='theme/<?=ms::meta('theme')?>/preview.jpg' >					
+					<img src='theme/<?=meta('theme')?>/preview.jpg' >					
 					<div class='theme-name active-theme'><?=$active_theme?><span class='active-note'>선택 되었습니다</span></div>
 				</div>
 			<?}?>
@@ -58,7 +58,7 @@
 				
 				
 				$url = x::url().'/theme/'.$dir.'/preview.jpg';
-				if( preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower(ms::meta('theme'))) != preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower($dir)) ) { ?>
+				if( preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower(meta('theme'))) != preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower($dir)) ) { ?>
 					<div class='theme-thumb inactive' theme_value='<?=$dir?>'>
 					<img src='<?=$url?>' >
 					<span class='theme-name'><?=$name?></span>

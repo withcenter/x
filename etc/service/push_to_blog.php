@@ -1,8 +1,8 @@
 <?php
 for ( $cb = 1; $cb <= 3; $cb++ ) {
-		$api_end_point = ms::meta('api-end-point'.$cb);
-		$api_username = ms::meta('api-username'.$cb);
-		$api_password = ms::meta('api-password'.$cb);
+		$api_end_point = meta('api-end-point'.$cb);
+		$api_username = meta('api-username'.$cb);
+		$api_password = meta('api-password'.$cb);
 		
 		if ( empty($api_end_point) || empty($api_username) || empty($api_password) ) continue;
 		

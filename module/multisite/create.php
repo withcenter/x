@@ -43,10 +43,14 @@
 		<div class='title'>내 사이트 목록</div>
 		<ul>
 			<?php
-				foreach ( ms::my_site() as $site ) {
+				foreach ( sites( $member['mb_id'] ) as $site ) {
 			 ?>
-				<li><a href="<?=ms::url_site($site['domain'])?>">사이트 주소: <?=$site['domain']?><br>
-				사이트 제목: <?=$site['title']?></a></li>
+				<li>
+					<a href="<?=site_url($site['domain'])?>">
+						사이트 주소: <?=$site['domain']?><br>
+						사이트 제목: <?=site_title($site['domain'])?>
+					</a>
+				</li>
 			<? }?>
 		</ul>
 	</div>

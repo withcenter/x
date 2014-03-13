@@ -633,7 +633,10 @@ function admin()
 {
 	global $is_admin;
 	if ( $is_admin == 'super' ) return true;
-	else if ( ms::admin() ) return true;
+	else {
+		$site = x::site();
+		if ( $site['mb_id'] == my('id') ) return true;
+	}
 	return false;
 }
 
@@ -670,18 +673,6 @@ function board_form_page()
 {
 	$self = $_SERVER['PHP_SELF'];
 	return preg_match("/\/board_form.php/", $self);
-}
-
-/** @short return the bo_table of n'th menu
- *
- * @param [in] $n
- *
- * @return string bo_table
- */
-function bo_table($n)
-{
-	$bo_table = "ms_" . etc::last_domain(etc::domain()) . '_'.$n;
-	return $bo_table;
 }
 
 

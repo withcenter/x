@@ -49,7 +49,7 @@
 							$top_menu = x::meta('forum_no_'.$i.'_name');				
 						  }
 						  else {
-							$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('forum_no_'.$i)."'");
+							$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".meta('forum_no_'.$i)."'");
 							$top_menu = $row['bo_subject'];
 						 }		
 							
@@ -71,7 +71,7 @@
 							$top_menu = x::meta('forum_no_'.$i.'_name');				
 						  }
 						  else {
-							$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".ms::meta('forum_no_'.$i)."'");
+							$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".meta('forum_no_'.$i)."'");
 							$top_menu = $row['bo_subject'];
 						 }	
 							
