@@ -42,6 +42,8 @@ if ( $argv[1] == 'language' ) {
 
 	
 	include x::dir() . "/etc/patch/write_update.php";
+	include x::dir() . "/etc/patch/write_comment_update.php";
+	
 	include x::dir() . "/etc/patch/delete.php";
 	include x::dir() . "/etc/patch/outlogin.lib.php";
 	include x::dir() . "/etc/patch/latest.lib.php";
@@ -50,6 +52,7 @@ if ( $argv[1] == 'language' ) {
 	include x::dir() . "/etc/patch/visit_insert.inc.php";
 	include x::dir() . "/etc/patch/visit.lib.php";
 	include x::dir() . "/etc/patch/board.php";
+	include x::dir() . "/etc/patch/board_delete.inc.php";
 	
 	
 	echo "\n-- PATCH SUCCESS --\n";

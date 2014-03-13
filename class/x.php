@@ -604,18 +604,20 @@ class x {
 		$sql = "insert into x_post_data
                 set
 					domain					= '$o[domain]',
-					bo_table				= '$o[bo_table]',
-					wr_id					= '$o[wr_id]',
-					wr_comment				= 0,
+					bo_table					= '$o[bo_table]',
+					wr_id						= '$o[wr_id]',
+					wr_parent				= '$o[wr_parent]',
+					wr_is_comment		= '$o[wr_is_comment]',
+					wr_comment			= '$o[wr_comment]',
 					ca_name					= '$o[ca_name]',
 					wr_subject				= '$o[wr_subject]',
 					wr_content				= '$o[wr_content]',
-					wr_hit = 0,
-					wr_good = 0,
-					wr_nogood = 0,
-					mb_id					= '$o[mb_id]',
+					mb_id						= '$o[mb_id]',
 					wr_name					= '$o[wr_name]',
-					wr_datetime				= '$o[wr_datetime]'
+					wr_datetime				= '$o[wr_datetime]',
+					wr_hit						= 0,
+					wr_good					= 0,
+					wr_nogood				= 0
 				";
 		db::query($sql);
 	}

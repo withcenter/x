@@ -175,11 +175,11 @@ function get_site_menu()
 		$menus[] = array('bo_table'=>$bo_id,'name'=>$bo_name);
 	}
 	if ( empty($menus) ) {
-		$menus['default'] = ln("Please", "관리자");
-		$menus['fake-id-1'] = ln("config", "페이지에서");
-		$menus['fake-id-2'] = ln("menu", "메뉴를");
-		$menus['fake-id-3'] = ln("in admin", "설정");
-		$menus['fake-id-4'] = ln("page", "하세요");
+		$menus[]			= array('bo_table'=>'default', 'name'=>ln("Please", "관리자"));
+		$menus[]			= array('bo_table'=>'fake-id-1', 'name'=>ln("config", "페이지에서"));
+		$menus[]			= array('bo_table'=>'fake-id-2', 'name'=>ln("menu", "메뉴를"));
+		$menus[]			= array('bo_table'=>'fake-id-3', 'name'=>ln("in admin", "설정"));
+		$menus[]			= array('bo_table'=>'fake-id-4', 'name'=>ln("page", "하세요"));
 	}
 	return $menus;
 }
