@@ -1,0 +1,21 @@
+#x-rwd-gallery td {
+	width: 25%;
+}
+
+#x-rwd-gallery .post {
+	position:relative;
+}
+
+#x-rwd-gallery .post .photo img {
+	width: auto;
+	max-height: 160px;
+}
+
+
+
+#x-rwd-gallery .text {
+	position:absolute;
+	bottom: 10px;
+}
+
+
