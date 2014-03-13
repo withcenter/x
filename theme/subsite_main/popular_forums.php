@@ -12,7 +12,7 @@
 			foreach ( $posts as $p ) {
 				$subject = cut_str(strip_tags($p['wr_subject']), 15, "...");
 				$content = cut_str(strip_tags($p['wr_content']), 20, "...");
-				$post_url = ms::url_site($p['domain'])."/bbs/board.php?bo_table=".$p['bo_table']."&wr_id=".$p['wr_id'];
+				$post_url = site_url($p['domain'])."/bbs/board.php?bo_table=".$p['bo_table']."&wr_id=".$p['wr_id'];
 			?>
 			<div class='info-wrapper'>
 				<div class='top-info bo-table'><a href='<?=$post_url?>' target='_blank'><?=++$i?>) <?=$p['domain']?> (조회수: <?=number_format($p['wr_hit'])?> )</a></div>

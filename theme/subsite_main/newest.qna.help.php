@@ -7,7 +7,7 @@ echo "<div class='newest-site-list'>
 		<div class='title'>$title_icon1 <a href='#'>질문과답변</a></div>
 	";
 foreach ( $rows as $row ) {
-	$domain_url = ms::url_site( $row['domain'] );
+	$domain_url = site_url( $row['domain'] );
 	$domain_title = cut_str( $row['title'], 21, "..." );
 	$dot = $image_url.'/dot.gif';
 	
