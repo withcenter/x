@@ -246,8 +246,7 @@ x::hook_register('latest_before_return', 'hook_latest_before_return');
 function hook_latest_before_return()
 {
 	dlog("hook_latest_before_return begin:");
-	if ( admin() || ms::admin() ) {
-		dlog("ms::admin() true");
+	if ( admin() ) {
 		global $content, $global_skin_dir, $global_bo_table;
 		$code = x::skin_code( $global_skin_dir, $global_bo_table );
 		$content = "<div class='skin-update'><div class='skin-update-button' code='$code'>admin</div>$content</div>";
