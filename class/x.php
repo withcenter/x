@@ -822,5 +822,14 @@ class x {
 		$g5['title'] = $title;
 		$config['cf_title'] = $secondary_title;
 	}
-		
+	
+	
+	
+	static function url_config_forum( $id=null ) {
+		if ( empty($id) ) $id = $GLOBALS['bo_table'];
+		return x::url() . "?module=multisite&action=config_forum&mode=forum_setting&bo_table=$id";
+	}
+	
+	
+	
 }

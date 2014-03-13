@@ -4,8 +4,8 @@
 <?php
 	echo latest( 'x-rwd-gallery', bo_table(1) , 40, 40, 1,
 		array(
-			'width'		=> 233,
-			'height'	=> 188,
+			'width'		=> 240,
+			'height'	=> 180,
 			'radius'	=> 0,
 		)
 	);

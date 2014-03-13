@@ -99,15 +99,12 @@ a {
 #content .gallery {
 	margin-bottom: 0.625em;
 }
+
 #content .gallery .post {
-	margin: 0 0.2em;
+	margin: 0 1.33%;
 }
-#content .gallery .post[no='1'] {
-	margin-left: 0;
-}
-#content .gallery .post[no='4'] {
-	margin-right: 0;
-}
+
+
 
 /* latest */
 .latest-thumbnail{
