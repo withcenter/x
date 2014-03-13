@@ -191,9 +191,11 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 }
 #header .submenu li {
 	display: inline;
+	margin: 0 10px;
 }
 #header .submenu li a {
 	display: inline-block;
 	color: #292929;
 	padding: 0.75em 0.5em;
+	text-decoration:none;
 }
