@@ -121,7 +121,7 @@ function push_to_blog( $o, $cb )
 	$id			= $o['id'];
 	$password	= $o['password'];
 	$subject	= $o['subject'];
-	$description	=  $o['description'];
+	$description	=  nl2br($o['description']);
 	$mode		= $o['mode'];
 	$blog_no[$cb]	= $o['blog_no'];
 	
