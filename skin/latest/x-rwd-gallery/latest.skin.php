@@ -37,24 +37,24 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 	$count_image = 0;
 	for ($i=0; $i<count($list); $i++) {
 		if ( $count_image >= 4 ) break;
-                        $thumb = get_list_thumbnail($bo_table, $list[$i]['wr_id'], $width, $height);    					            
-                        if($thumb['src']) {
-                            $img = '<img class="img_left" src="'.$thumb['src'].'">';
-							$count_image ++;
-                        } else {
-							$img = '<img class="img_left" src="'.$latest_skin_url.'/img/no-image.png"/>';
-							$count_image ++;
-                        }
+			$thumb = get_list_thumbnail($bo_table, $list[$i]['wr_id'], $width, $height);    					            
+			if($thumb['src']) {
+				$img = '<img class="img_left" src="'.$thumb['src'].'">';
+				$count_image ++;
+			} else {
+				$img = '<img class="img_left" src="'.$latest_skin_url.'/img/no-image.png"/>';
+				$count_image ++;
+			}
 ?>	
-	<li>
-		<div class='post' no="<?=$count_image?>">
-			<div class='photo'><a href="<?=$list[$i]['href']?>"><?=$img?></a></div>
-			<div class='text'>
-				<div class='title'><a href="<?=$list[$i]['href']?>"><?php echo cut_str($list[$i]['subject'], 20, "..") ?></a></div>
-				<div class='desc'><a href="<?=$list[$i]['href'] ?>"><?php echo get_text(cut_str(strip_tags($list[$i][wr_content]), 65, '...' )) ?></a></div>
+		<li>
+			<div class='post' no="<?=$count_image?>">
+				<div class='photo'><a href="<?=$list[$i]['href']?>"><?=$img?></a></div>
+				<div class='text'>
+					<div class='title'><a href="<?=$list[$i]['href']?>"><?php echo cut_str($list[$i]['subject'], 20, "..") ?></a></div>
+					<div class='desc'><a href="<?=$list[$i]['href'] ?>"><?php echo get_text(cut_str(strip_tags($list[$i][wr_content]), 65, '...' )) ?></a></div>
+				</div>
 			</div>
-		</div>
-	</li>
+		</li>
 <?php } ?>
 </ul>
 <div style='clear:both;'></div>

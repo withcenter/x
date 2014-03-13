@@ -1,5 +1,5 @@
 .forum-tab {
-	margin-bottom: 1em;
+	margin-bottom: 0.625em;
 }
 
 
@@ -30,19 +30,17 @@
 }
 
 	.forum-tab .a {
-		margin-bottom: 1em;
+		margin-bottom: 0.625em;
 		width: 100%;
 		float: none;
 	}
 	.forum-tab .b, .forum-tab .c {
-		width: 49%;
+		width: 48.5%;
 	}
 	
-	.forum-tab .b {
-		margin-right: 1%;
-	}
+
 	.forum-tab .c {
-		margin-left: 1%;
+		margin-left: 2.5%;
 	}
 	.forum-tab .d {
 		display: none;
@@ -62,9 +60,14 @@ div.lt li {
 @media all and ( min-width: 25em ) {
 	.forum-tab .a, .forum-tab .b, .forum-tab .c {
 		float:left;
-		width: 33.33%;
+		width: 32.88%;
+		margin-left: 0.6%;
+	}
+	
+	.forum-tab .a {
 		margin: 0;
 	}
+	
 	.forum-tab-inner {
 		margin: 0 0.2em;
 	}
@@ -74,8 +77,9 @@ div.lt li {
 @media all and ( min-width: 50em ) {
 	.forum-tab .d {
 		display: block;
+		margin-left: 0.6%;
 	}
 	.forum-tab .a, .forum-tab .b, .forum-tab .c, .forum-tab .d {
-		width: 25%;
+		width: 24.55%;
 	}
 }

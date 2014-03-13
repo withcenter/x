@@ -26,7 +26,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 			if ( $count_post >= $options['no'] ) break;
 			$imgsrc = get_list_thumbnail( $bo_table , $list[$i]['wr_id'], 40, 35 );
 			if( $imgsrc ) $img = $imgsrc['src'];
-			else continue;
+			else $img = $latest_skin_url."/img/no-image.png";
 			
 			$count_post ++;
 			ob_start();
