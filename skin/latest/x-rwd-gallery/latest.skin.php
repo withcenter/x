@@ -42,7 +42,8 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
                             $img = '<img class="img_left" src="'.$thumb['src'].'">';
 							$count_image ++;
                         } else {
-                            continue;
+							$img = '<img class="img_left" src="'.$latest_skin_url.'/img/no-image.png"/>';
+							$count_image ++;
                         }
 ?>	
 	<li>
