@@ -633,7 +633,10 @@ function admin()
 {
 	global $is_admin;
 	if ( $is_admin == 'super' ) return true;
-	else if ( ms::admin() ) return true;
+	else {
+		$site = site();
+		if ( $site['mb_id'] == my('id') ) return true;
+	}
 	return false;
 }
 

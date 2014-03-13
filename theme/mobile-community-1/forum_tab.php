@@ -4,10 +4,10 @@
 	$option = array(
 						'icon' => x::url_theme().'/img/panel.png'
 						);
-	echo forum_tab('a', ms::board_id() . '_1', $option);
-	echo forum_tab('b', ms::board_id() . '_2', $option);
-	echo forum_tab('c', ms::board_id() . '_3', $option);
-	echo forum_tab('d', ms::board_id() . '_9', $option);
+	echo forum_tab('a', bo_table(1), $option);
+	echo forum_tab('b', bo_table(2), $option);
+	echo forum_tab('c', bo_table(3), $option);
+	echo forum_tab('d', bo_table(4), $option);
 	
 function forum_tab( $cls, $id , $option) {
 	
