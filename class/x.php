@@ -697,7 +697,7 @@ class x {
 			site_set( $in['idx'], $domain, $mb_id );
 		@endcod
 	 */
-	static function site_set( $idx, $domain, $mb_id ) {
+	static function site_set( $idx, $domain, $mb_id=null ) {
 		if ( x::site( $idx ) ) {
 			db::update( 'x_site_config', array( 'domain'=>$domain, 'mb_id'=>$mb_id ), array('idx'=>$idx) );
 			return $idx;

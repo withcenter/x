@@ -15,24 +15,11 @@
     <div id="hd_wrapper">
 
         <div id="logo">
-            <a href="<?php echo G5_URL ?>">
-			<? if( $extra['header_logo'] ) { ?>
-				<img src="<?=x::site_url(etc::domain()).$extra['img_url'].$extra['header_logo']?>">
-			<?} else {?>
-				<img src="<?php echo G5_IMG_URL ?>/logo.jpg" alt="<?php echo $config['cf_title']; ?>">
-			<?}?>
-			</a>
+            <a href="<?php echo G5_URL ?>">www.e<span class='x'>X</span>tended.KR</a>
         </div>
 
         <fieldset id="hd_sch">
-            <legend>사이트 내 전체검색</legend>
-            <form name="fsearchbox" method="get" action="<?php echo G5_BBS_URL ?>/search.php" onsubmit="return fsearchbox_submit(this);">
-            <input type="hidden" name="sfl" value="wr_subject||wr_content">
-            <input type="hidden" name="sop" value="and">
-            <label for="sch_stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
-            <input type="text" name="stx" id="sch_stx" maxlength="20">
-            <input type="submit" id="sch_submit" value="검색">
-            </form>
+            
 
             <script>
             function fsearchbox_submit(f)
@@ -95,12 +82,13 @@
 <div id="wrapper">
     <div id="aside">
 		<?php echo outlogin('basic'); // 외부 로그인  ?>
-		
-		<? if ( login() ) { ?>
-		<div><a href='<?=x::url_setting()?>'><?php echo _L('Member Setting');?></a></div>
-		<div><a href='<?=x::url_admin()?>'><?php echo _L('Admin Page');?></a></div>
-		<div><a href='<?=x::url()?>/?module=multisite&action=config'>Multisite Config</a></div>
-		<? } ?>
+
+		<div class='left-menu'>
+			<div class='item'><a href='<?=x::url_setting()?>'><?php echo _L('Member Setting');?></a></div>
+			<? if ( admin() ) { ?>
+				<div class='item'><a href='<?=url_x_admin()?>'><?php echo _L('Admin Page');?></a></div>
+			<? } ?>
+		</div>
 		
     </div>
     <div id="container">

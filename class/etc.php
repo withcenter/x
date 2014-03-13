@@ -736,26 +736,6 @@ EOH;
 }
 
 
-/**
- *
- */
-function url_site_config()
-{
-	return x::url() . "/?module=multi&action=config_first_page";
-}
-
-function url_forum_list( $id )
-{
-	return g::url_forum_list($id);
-}
-function url_forum_read( $bo_id, $wr_id )
-{
-	return g::url()."/bbs/board.php?bo_table=$bo_id&wr_id=$wr_id";
-}
-
-
-
-
 
 
 
