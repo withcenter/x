@@ -62,12 +62,14 @@
 
 /******************/
 .x-rwd-text-with-thumbnail .subject{
+	margin-top: 0;
 	margin-left: 0.75em;
-	margin-bottom: 0.3em;
+	margin-bottom: 0.2em;
 	height:1.2em;	
 	overflow:hidden;
 	font-weight: bold;
 	word-break:break-all;
+	color: #000000;
 }
 .x-rwd-text-with-thumbnail .subject a {
 	color: #494949;
@@ -76,9 +78,10 @@
 .x-rwd-text-with-thumbnail .contents_wrapper {
 	margin-left: 0.75em;
 	height:2.4em;
-	line-height:1.2em;
+	line-height: 1.2em;
 	overflow:hidden;	
 	word-break:break-all;
+	color: #808080;
 }
 
 .x-rwd-text-with-thumbnail .contents_wrapper a{

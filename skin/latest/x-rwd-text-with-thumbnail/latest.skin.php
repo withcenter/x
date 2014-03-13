@@ -56,33 +56,33 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 		echo implode( "<tr><td colspan='10'><div class='breaker'></div></td></tr>", $trs );
 		?>
     <?php if(count($list) == 0) { //게시물이 없을 때  ?>
-		<tr>
-			<td width=40><div class='timed_list_image'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=5'><img src='<?=$latest_skin_url?>/img/no-image.png'/></a></div></td>
-			 <td width=240>
+		<tr valign='top'>
+			<td><div class='photo'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=5'><img src='<?=$latest_skin_url?>/img/no-image.png'/></a></div></td>
+			 <td width='80%'>
 				<div class='subject'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=5'>사이트 만들기 안내</a></div>
 				<div class='contents_wrapper'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=5'>사이트 만들기 안내</a></div>
 			 </td>	
-			<td><div class='comment-time'><div class='comment_count'>10</div><span class='time'><?=date('H:i', time())?></span></div></td>
-		</tr>
-		<tr>
-			<td width=40><div class='timed_list_image'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=4'><img src='<?=$latest_skin_url?>/img/no-image.png'/></a></div></td>
-			 <td width=240>
+			<td><div class='comment-time'><div class='comment_count'>10</div><div class='time'><?=date('H:i', time())?></div></div></td>
+		</tr valign='top'>
+		<tr valign='top'>
+			<td><div class='photo'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=4'><img src='<?=$latest_skin_url?>/img/no-image.png'/></a></div></td>
+			 <td width='80%'>
 				<div class='subject'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=4'>블로그 만들기</a></div>
 				<div class='contents_wrapper'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=4'>블로그 만들기</a></div>
 			</td>	
 			<td><div class='comment-time'>0<br><span class='time'><?=date('H:i', time())?></span></div></td>
 		</tr>
-		<tr>
-			<td width=40><div class='timed_list_image'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=3'><img src='<?=$latest_skin_url?>/img/no-image.png'/></a></div></td>
-			 <td width=240>
+		<tr valign='top'>
+			<td><div class='photo'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=3'><img src='<?=$latest_skin_url?>/img/no-image.png'/></a></div></td>
+			 <td width='80%'>
 				<div class='subject'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=3'>커뮤니티 사이트 만들기</a></div>
 				<div class='contents_wrapper'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=3'>커뮤니티 사이트 만들기</a></div>
 			</td>	
 			<td><div class='comment-time'>0<br><span class='time'><?=date('H:i', time())?></span></div></td>
 		</tr>
-		<tr>
-			<td width=40><div class='timed_list_image'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=2'><img src='<?=$latest_skin_url?>/img/no-image.png'/></a></div></td>
-			 <td width=240>
+		<tr valign='top'>
+			<td><div class='photo'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=2'><img src='<?=$latest_skin_url?>/img/no-image.png'/></a></div></td>
+			 <td width='80%'>
 				<div class='subject'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=2'>여행사 사이트 만들기</a></div>
 				<div class='contents_wrapper'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=2'>여행사 사이트 만들기</a></div>
 			</td>	
