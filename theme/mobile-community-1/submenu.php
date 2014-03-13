@@ -1,4 +1,4 @@
-
+<?/*?>
         <ul>
             <li><a href="<?php echo G5_BBS_URL ?>/qalist.php" id="snb_new">1:1문의</a></li>
             <li class='visitor'><a href="<?php echo G5_BBS_URL ?>/current_connect.php" id="snb_cnt">접속자 <?php echo connect(); // 현재 접속자수 ?></a></li>
@@ -20,3 +20,18 @@
             <li><a href="javascript:void(0);" id="login-button">로그인</a></li>
             <?php } ?>
         </ul>
+<?*/?>
+<ul>
+<?
+$menus = get_site_menu();
+foreach ( $menus as $menu ) {?>
+	<li page='<?=x::meta('menu'.$i.'bo_table')?>'>		
+		<a href='<?=url_forum_list($menu['bo_table'])?>'>
+			<?=$menu['name']?>
+			<div class='border_left'></div>
+		</a>
+	</li>
+	<?
+	}
+?>
+</ul>
