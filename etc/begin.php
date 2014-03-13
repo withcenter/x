@@ -199,7 +199,7 @@ if ( strpos( $board_skin_path, "board/basic" ) ) {
 x::hook_register( 'begin', 'hook_begin_status' );
 function hook_begin_status()
 {
-	$status = meta_get( etc::domain(), 'status' );
+	$status = x::meta_get( etc::domain(), 'status' );
 	if ( $status == 'close' ) {
 		jsGo( g::url_base(), "This site has been closed." );
 	}

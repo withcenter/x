@@ -150,7 +150,7 @@ class multisite {
 	 */
 	static function get_extra( $domain = null )
 	{
-		$site = ms::get( $domain );
+		$site = ms::site( $domain );
 		return $site['extra'];
 	}
 	

@@ -29,7 +29,7 @@ foreach( $list as $l ){
     <input type="hidden" name="sw" value="">
 	<!------------------------------------------------------->
 		<?
-			if( ms::meta('theme') == 'travel_theme_1' && !ms::admin() ){}
+			if( meta('theme') == 'travel_theme_1' && !admin() ){}
 			else {
 		?>
 			<div class="travel-write">		
@@ -163,7 +163,7 @@ foreach( $list as $l ){
         <?php } ?>
         <?php if (count($list) == 0) { echo '<tr><td colspan="'.$colspan.'" class="empty_table">게시물이 없습니다.</td></tr>'; } ?>        
         </table>
-		<?if( ms::admin() ){?>
+		<?if( admin() ){?>
 			<?php if ($list_href || $is_checkbox || $write_href) { ?>
 			<div class="lower-buttons">
 				<?php if ($is_checkbox) { ?>
@@ -176,7 +176,7 @@ foreach( $list as $l ){
 				
 			
 			<?php
-				if( ms::meta('theme') == 'travel_theme_1' && !ms::admin() ){}
+				if( meta('theme') == 'travel_theme_1' && admin() ){}
 				else {
 					if ($list_href || $write_href) { ?>
 						<div class="btn_bo_user">

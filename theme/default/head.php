@@ -17,7 +17,7 @@
         <div id="logo">
             <a href="<?php echo G5_URL ?>">
 			<? if( $extra['header_logo'] ) { ?>
-				<img src="<?=ms::url_site(etc::domain()).$extra['img_url'].$extra['header_logo']?>">
+				<img src="<?=x::site_url(etc::domain()).$extra['img_url'].$extra['header_logo']?>">
 			<?} else {?>
 				<img src="<?php echo G5_IMG_URL ?>/logo.jpg" alt="<?php echo $config['cf_title']; ?>">
 			<?}?>

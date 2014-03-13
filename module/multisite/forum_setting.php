@@ -1,7 +1,7 @@
 <?php
 //for editor_html
 include_once(G5_EDITOR_LIB);
-	if ( ! ms::admin() ) {
+	if ( !admin() ) {
 		echo "You are not admin";
 		return;
 	}

@@ -3,11 +3,11 @@
 	return;
 ?>
 <?php
-	if ( ! ms::admin() ) {
+	if ( !admin() ) {
 		return; 
 	}
 	/* 생성된 게시판 정보를 가저온다 */
-	$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "\_%'";
+	$qb = "bo_table LIKE '" . x::board_id( etc::domain() ) . "\_%'";
 	
 	$q = "SELECT bo_table, bo_subject, bo_count_write FROM $g5[board_table] WHERE $qb";
 	
@@ -45,25 +45,25 @@
 
 					<tr valign='top'>
 						<td width='120'>
-							<span class='config-name'>메인 타이틀</span></td><td><input type='text' name='title' value='<?=ms::meta('title')?>'>
+							<span class='config-name'>메인 타이틀</span></td><td><input type='text' name='title' value='<?=meta('title')?>'>
 						</td>
 					</tr>
 					<tr valign='top'>
 						<td>
-							<span class='config-name'>서브 타이틀</span></td><td><input type='text' name='secondary_title' value='<?=ms::meta('secondary_title')?>'>
+							<span class='config-name'>서브 타이틀</span></td><td><input type='text' name='secondary_title' value='<?=meta('secondary_title')?>'>
 						</td>
 					</tr>
 					<tr valign='top'>
 						<td>
-							<span class='config-name'>하단 문구</span></td><td><textarea name='footer_text' ><?=stripslashes(ms::meta('footer_text'))?></textarea>
+							<span class='config-name'>하단 문구</span></td><td><textarea name='footer_text' ><?=stripslashes(meta('footer_text'))?></textarea>
 						</td>
 					</tr>
 					<tr valign='top'>
 						<td>
 						<span class='config-name'>사이드 바 위치:</span></td><td>				
 							<div>
-								<input type="radio" name="theme_sidebar" value="left"  <?if(!ms::meta('theme_sidebar') || ms::meta('theme_sidebar') == 'left') echo "checked"?>><span class='radio-left'>왼쪽</span> 
-								<input type="radio" name="theme_sidebar" value="right" <?if(ms::meta('theme_sidebar') =='right') echo "checked"?>><span class='radio-right'>오른쪽</span>
+								<input type="radio" name="theme_sidebar" value="left"  <?if(!meta('theme_sidebar') || meta('theme_sidebar') == 'left') echo "checked"?>><span class='radio-left'>왼쪽</span> 
+								<input type="radio" name="theme_sidebar" value="right" <?if(meta('theme_sidebar') =='right') echo "checked"?>><span class='radio-right'>오른쪽</span>
 							</div>
 						</td>
 					</tr>
@@ -75,9 +75,9 @@
 
 
 		
-		<? if ( ms::meta('theme') ) { ?>
+		<? if ( meta('theme') ) { ?>
 			<?php
-				if ( file_exists( ms::theme('setting') ) ) include ms::theme('setting');
+				if ( file_exists( x::theme('setting') ) ) include x::theme('setting');
 			?>
 		<? } else { ?>
 			<h1>테마를 선택하십시오.</h1>

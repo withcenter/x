@@ -54,8 +54,8 @@ var g5_url       = "<?php echo G5_URL ?>";
 
 <span class='caption'><?=ln("Forum ID", "게시판 아이디")?></span> : 
 <?
-	if ( ms::exist() ) {
-		$cfgs = ms::forums();
+	if ( x::site() ) {
+		$cfgs = x::forums();
 		if ( ! empty( $cfgs ) ) {
 ?>
 <select name='select_bo_table'>

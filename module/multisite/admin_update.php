@@ -1,5 +1,5 @@
 <?php
-	$ms = ms::get("$idx");
+	$ms = x::site("$idx");
 	list($second, $domain) = explode(".",$ms['domain'], 2);
 ?>
 <div class='create-site'>
@@ -13,8 +13,8 @@
 	
 	<div>
 		STATUS:
-			<input type='radio' name='status' value='open' <? if ( ms::meta_get($ms['domain'], 'status') != 'close' ) echo 'checked=1';?>> OPEN,
-			<input type='radio' name='status' value='close' <? if ( ms::meta_get($ms['domain'], 'status') == 'close' ) echo 'checked=1';?>> CLOSE
+			<input type='radio' name='status' value='open' <? if ( x::meta_get($ms['domain'], 'status') != 'close' ) echo 'checked=1';?>> OPEN,
+			<input type='radio' name='status' value='close' <? if ( x::meta_get($ms['domain'], 'status') == 'close' ) echo 'checked=1';?>> CLOSE
 	</div>
 	<input type='submit' value='Update Site' onclick="return confirm('Are you sure you want to update your Site?');">
 </form>

@@ -3,15 +3,15 @@ function setTopMenu( $name ) {
 	global $cfgs;
 	
 	ob_start();
-	if ( ms::exist() ) {
-		$cfgs = ms::forums();
+	if ( x::site() ) {
+		$cfgs = x::forums();
 		if ( ! empty( $cfgs ) ) {
 	?>
 	<select name='<?=$name?>'>
 		<option value=''>게시판을 선택하세요</option>
 		<option value=''></option>
 		<? foreach ( $cfgs as $c ) { 
-			if ( $c['bo_table'] == ms::meta($name) ) $selected = 'selected';
+			if ( $c['bo_table'] == meta($name) ) $selected = 'selected';
 			else $selected = null;
 		?>
 			<option value="<?=$c['bo_table']?>" <?=$selected?>><?=$c['bo_subject']?></option>

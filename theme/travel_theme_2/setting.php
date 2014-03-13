@@ -3,8 +3,8 @@ function setTopMenu( $name ) {
 	global $cfgs;
 	
 	ob_start();
-	if ( ms::exist() ) {
-		$cfgs = ms::forums();
+	if ( x::site() ) {
+		$cfgs = x::forums();
 		if ( ! empty( $cfgs ) ) {
 	?>
 	<select name='<?=$name?>'>

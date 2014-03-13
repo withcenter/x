@@ -45,7 +45,7 @@ $total_post = db::result ( "SELECT COUNT(*) FROM x_multisite_config ");
 			echo "<td><span class='site-title'>$site[title]</span></td>";
 			
 			
-			$theme = ms::meta_get($site['domain'],'theme');
+			$theme = x::meta_get($site['domain'],'theme');
 			if ( empty($theme) ) {
 				$cfg = md::config( etc::domain_name() );
 				$theme = $cfg['theme'];
@@ -55,13 +55,13 @@ $total_post = db::result ( "SELECT COUNT(*) FROM x_multisite_config ");
 			
 			
 			
-			echo "<td align='center'>".ms::meta_get($site['domain'], 'status')."</td>";
+			echo "<td align='center'>".meta_get($site['domain'], 'status')."</td>";
 			
 			
 			
-			echo "<td align='center'>".ms::count_forum($site['domain'])."</td>";
+			echo "<td align='center'>".x::count_forum($site['domain'])."</td>";
 			
-			echo "<td align='center'>".ms::count_post(ms::forum_ids( $site['domain'] ), null )."</td>";
+			echo "<td align='center'>".x::count_post(x::forum_ids( $site['domain'] ), null )."</td>";
 			
 
 		echo '</tr>';

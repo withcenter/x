@@ -1,5 +1,5 @@
 <?php
-if ( ! ms::admin() && $is_admin != 'super' ) {
+if ( !admin() ) {
 	return; 
 }
 

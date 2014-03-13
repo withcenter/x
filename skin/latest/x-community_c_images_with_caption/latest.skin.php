@@ -41,10 +41,10 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 						<? $imgsrc['src'] = $latest_skin_url.'/img/no-image.png';
 														
 							$img = "<img src='$imgsrc[src]'/>";						
-							echo "<div class='img-wrapper'><a href='".ms::url_config()."'>".$img."</a></div>";
+							echo "<div class='img-wrapper'><a href='".url_site_config()."'>".$img."</a></div>";
 						?>
 						</div>
-					<div class='caption'><a href='<?=ms::url_config()?>'>글을 등록해 주세요</a></div>						
+					<div class='caption'><a href='<?=url_site_config()?>'>글을 등록해 주세요</a></div>						
 				</div>
 			</div>		
 	<?

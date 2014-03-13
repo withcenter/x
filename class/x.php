@@ -235,17 +235,17 @@ class x {
 	static function load_site()
 	{
 		
-		$theme = meta_get( 'theme' );
-		if ( empty( $theme ) ) $theme = meta_get( '.' . etc::domain(), 'theme' );
+		$theme = x::meta_get( 'theme' );
+		if ( empty( $theme ) ) $theme = x::meta_get( '.' . etc::domain(), 'theme' );
 		if ( empty( $theme ) ) {
 			$parts = explode('.', etc::domain());
 			for ( $i = 0; $i < count($parts); $i ++ ) {
 				array_shift( $parts );
 				$domain = '.' . implode('.', $parts);
-				$theme = meta_get( $domain, 'theme' );
+				$theme = x::meta_get( $domain, 'theme' );
 				if ( $theme ) break;
 			}
-			if ( empty($theme) ) $theme = meta_get( '.', 'theme' );
+			if ( empty($theme) ) $theme = x::meta_get( '.', 'theme' );
 		}
 		self::$config['site']['theme'] = $theme;
 		// @deprecated. no more site type is used.

@@ -1,5 +1,5 @@
 <?
-	if ( ! ms::admin() ) {
+	if ( ! admin() ) {
 		return;
 	}
 	
@@ -10,7 +10,7 @@
 	}
 
 	
-	$qb = "bo_table LIKE '" . ms::board_id( etc::domain() ) . "\_%'";
+	$qb = "bo_table LIKE '" . x::board_id( etc::domain() ) . "\_%'";
 	
 	$q = "SELECT bo_table, bo_subject FROM $g5[board_table] WHERE $qb";
 	
@@ -53,7 +53,7 @@
 					<span class='select-wrapper'><span class='inner'>
 						<?php
 						foreach ( $rows as $row ) {
-							if ( ms::meta('menu_'.$i) && ms::meta('menu_'.$i) == $row['bo_table'] ) {
+							if ( meta('menu_'.$i) && meta('menu_'.$i) == $row['bo_table'] ) {
 								$default_value =  $row['bo_subject'];
 								break;
 							}

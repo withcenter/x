@@ -55,7 +55,7 @@
 	if ( $error_code = x::site_create( array('domain'=>$domain, 'title'=>addslashes($in['title'])) ) ) include module( 'create_fail' );
 	else {
 			$o = array(
-				'id'	=> ms::board_id( $domain ) . '_1',
+				'id'	=> x::board_id( $domain ) . '_1',
 				'subject'	=> "메뉴1",
 				'group_id'	=> 'multisite',
 				'bo_admin' => $member['mb_id'],
@@ -70,9 +70,9 @@
 			g::board_create($o);
 			
 			
-			x::meta( $domain, "menu1bo_table", ms::board_id ( $domain ).'_1' );
-			x::meta( $domain, 'forum_no_1', ms::board_id ( $domain ).'_1' );
-			if ( $site_type == 'blog' ) x::meta( $domain, 'forum_no_2', ms::board_id ( $domain ).'_1' );
+			x::meta( $domain, "menu1bo_table", x::board_id ( $domain ).'_1' );
+			x::meta( $domain, 'forum_no_1', x::board_id ( $domain ).'_1' );
+			if ( $site_type == 'blog' ) x::meta( $domain, 'forum_no_2', x::board_id ( $domain ).'_1' );
 			
 			// 모바일 테마 Default로 mobile-community-1를 선택 되도록 한다.
 			x::meta( $domain, 'mobile_theme', 'mobile-community-1');
@@ -82,7 +82,7 @@
 				
 				for ( $i = 2; $i <= 10; $i++ ) {
 					$o = array(
-						'id'	=> ms::board_id( $domain ) . '_'.$i,
+						'id'	=> x::board_id( $domain ) . '_'.$i,
 						'subject'	=> "메뉴".$i,
 						'group_id'	=> 'multisite',
 						'bo_admin' => $member['mb_id'],
@@ -101,9 +101,9 @@
 					}
 					g::board_create($o);
 					// 사이트 생성시 메뉴 저장
-					if ( $i <= 5 ) x::meta( $domain, "menu{$i}bo_table", ms::board_id ( $domain ).'_'.$i);
+					if ( $i <= 5 ) x::meta( $domain, "menu{$i}bo_table", x::board_id ( $domain ).'_'.$i);
 					
-					x::meta( $domain, 'forum_no_'.$i, ms::board_id ( $domain ).'_'.$i);
+					x::meta( $domain, 'forum_no_'.$i, x::board_id ( $domain ).'_'.$i);
 				}
 			}
 			
@@ -120,7 +120,7 @@
 			);
 			db::insert('x_multisite_meta', $meta_op );
 			*/
-			ms::meta( $domain, 'theme', $site_type );
+			meta( $domain, 'theme', $site_type );
 			/*
 			$theme = $site_type;
 			$priority = 10;
