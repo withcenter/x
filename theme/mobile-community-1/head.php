@@ -12,7 +12,15 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
 	<div class='top'>
 		<div class='logo'><a href='<?=g::url()?>'><img src="<?=x::theme_url('img/logo2.png')?>"></a></div>
 		<div class='contact_and_search'>
-			<div class='contact'>CONTACT (000) 000-00-00</div>
+		<?
+		if( x::meta('mobile_contact_num') ){
+			$mobile_contact = x::meta('mobile_contact_num');
+		}
+		else{
+			$mobile_contact = "(000) 000-00-00";
+		}
+		?>
+			<div class='contact'>CONTACT  <?=$mobile_contact?></div>
 			<div class='search'><?include x::theme('search')?></div>
 		</div>
 		<div style='clear:both;'></div>
@@ -33,9 +41,9 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
 					
 					<div id="login-box">
 					   <?php
-								if ( ! login() ) {
+								/*if ( ! login() ) {
 									echo outlogin('basic'); // 외부 로그인
-								}
+								}*/
 						?>
 					</div>
 					<?php if ((!$bo_table || $w == 's' ) && !defined("_INDEX_")) { ?><div id="container_title"><?php echo $g5['title'] ?></div><?php } ?>

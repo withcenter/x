@@ -38,13 +38,13 @@
 #header .menu ul li.menu_item.mobile_message_icon a .label{
 	position:relative;
 	display:inline-block;
-	width:60px;	
+	width:100px;	
 }
 
 #header .menu ul li.menu_item.mobile_message_icon a .exclamation{
 	position:absolute;
 	background-color:#e64343;
-	right:8px;
+	right:26px;
 	top:-35px;
 	display:inline-block;
 	padding:0 4px;
