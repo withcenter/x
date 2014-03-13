@@ -5,12 +5,16 @@ include_once(G5_PATH.'/head.sub.php');
 include_once(G5_LIB_PATH.'/latest.lib.php');
 include_once(G5_LIB_PATH.'/outlogin.lib.php');
 ?>
+<link rel="stylesheet" href="<?=x::theme_url()?>/css/header.css">
 <link rel="stylesheet" href="<?=x::theme_url()?>/css/theme.css">
 <script src="<?=x::theme_url()?>/js/theme.js"></script>
 <div id='header'>
 	<div class='top'>
-		<div class='logo'><a href='<?=g::url()?>'><img src="<?=x::theme_url('img/logo.png')?>"></a></div>
-		<div class='search'><?include x::theme('search')?></div>
+		<div class='logo'><a href='<?=g::url()?>'><img src="<?=x::theme_url('img/logo2.png')?>"></a></div>
+		<div class='contact_and_search'>
+			<div class='contact'>CONTACT (000) 000-00-00</div>
+			<div class='search'><?include x::theme('search')?></div>
+		</div>
 		<div style='clear:both;'></div>
 	</div>
 	<div class='top-below-500-px'>
