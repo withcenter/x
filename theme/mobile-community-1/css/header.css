@@ -20,7 +20,7 @@
 	width:14.28%;
 	text-align:center;
 }
-
+/*log in menu*/
 #header .menu ul li.menu_item.log-in-button {
 	position:relative;	
 }
@@ -30,7 +30,27 @@
 	position:absolute;
 	right:0;
 	top:80px;
-	/*display:none;*/
+	display:none;
+}
+
+/*message menu*/
+
+#header .menu ul li.menu_item.mobile_message_icon a .label{
+	position:relative;
+	display:inline-block;
+	width:60px;	
+}
+
+#header .menu ul li.menu_item.mobile_message_icon a .exclamation{
+	position:absolute;
+	background-color:#e64343;
+	right:8px;
+	top:-35px;
+	display:inline-block;
+	padding:0 4px;
+	font-size:.6em;
+	font-weight:bold;
+	color:white;
 }
 
 #header .menu ul li.menu_item  a > img{
@@ -40,7 +60,7 @@
 
 #header .menu ul li.menu_item .label{
 	text-align:center;
-	font-size:1.3em
+	font-size:1.3em;	
 }
 
 #header .menu ul li.menu_item > a{	
