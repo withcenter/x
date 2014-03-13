@@ -117,7 +117,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
             <li><a href="<?php echo $list_href ?>" class="btn_b01">목록</a></li>
             <?php if ($reply_href) { ?><li><a href="<?php echo $reply_href ?>" class="btn_b01">답변</a></li><?php } ?>
 			
-			<? if ( ms::admin() ) {?>
+			<? if ( admin() ) {?>
 				<?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b02">글쓰기</a></li><?php } ?>
 			<? }?>
 			

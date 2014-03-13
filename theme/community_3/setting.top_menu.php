@@ -1,7 +1,7 @@
 
 	<?
-	if ( ms::exist() ) {
-		$cfgs = ms::forums();
+	if ( x::site() ) {
+		$cfgs = x::forums();
 		if ( ! empty( $cfgs ) ) {
 ?>
 <select name='select_bo_table'>
