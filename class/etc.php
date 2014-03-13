@@ -634,7 +634,7 @@ function admin()
 	global $is_admin;
 	if ( $is_admin == 'super' ) return true;
 	else {
-		$site = site();
+		$site = x::site();
 		if ( $site['mb_id'] == my('id') ) return true;
 	}
 	return false;

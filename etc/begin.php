@@ -207,12 +207,12 @@ function hook_begin_status()
 
 
 
-// Change mobile theme if MOBILE 
+// Set default mobile theme to 'mobile-commuity-1' if it has no MOBILE theme.
 x::hook_register('before_theme_init', 'hook_theme_change');
 function hook_theme_change()
 {
 	if ( G5_IS_MOBILE ) {
-		x::$config['site']['theme'] = ms::meta('mobile_theme');
+		x::$config['site']['theme'] = meta('mobile_theme');
 		if ( empty(x::$config['site']['theme']) ) x::$config['site']['theme'] = "mobile-community-1";
 	}
 }
