@@ -113,7 +113,7 @@ function site_get( $mixed )
 }
 
 
-function site_set( $idx, $domain, $mb_id )
+function site_set( $idx, $domain, $mb_id=null )
 {
 	return x::site_set( $idx, $domain, $mb_id );
 }
@@ -127,10 +127,14 @@ function meta_get( $key, $code=null )
 {
 	return x::meta_get( $key, $code );
 }
+
 function meta_delete( $key, $code=null )
 {
 	return x::meta_delete( $key, $code );
 }
+
+
+
 
 /** @short returns the site menu list in array.
  *

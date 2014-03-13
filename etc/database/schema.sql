@@ -1,8 +1,4 @@
 
---
--- Table structure for table `x_multidomain_config`
---
-
 
 
 

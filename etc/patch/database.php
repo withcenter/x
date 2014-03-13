@@ -17,37 +17,22 @@
 	global $idx, $domain, $priority, $theme;
 	
 	
-	$priority	= 0;
-	$theme		= 'default';
-	$idx		= 0;
-	$domain		= '.com';
-	if ( ! md::get( $domain ) ) md::config_update();
+	site_set( '.', '.' );
+	meta_set( '.', 'theme', 'default' );
 	
-	$domain		= '.net';
-	$idx		= 0;
-	if ( ! md::get( $domain ) ) md::config_update();
 	
-	$domain		= '.org';
-	$idx		= 0;
-	if ( ! md::get( $domain ) ) md::config_update();
-	
-	$domain		= '.kr';
-	$idx		= 0;
-	if ( ! md::get( $domain ) ) md::config_update();
-	
-	patch_message('patched: create tables (x_*****) if not exist.');
+	patch_message('create . domain with default skin');
 
 	
 	$key = db::key_exist( $g5['member_table'], 'registered_domain' );
 	if ( $key ) {
-		patch_message("already patched: ADD INDEX ( 'registered_domain' )");
+		patch_message("already patched: adding index on member table");
 	}
 	else {
 		db::query("ALTER TABLE `{$g5['member_table']}` ADD INDEX registered_domain ( `mb_10` )");
-		patch_message("patched: ADD INDEX ( mb_10 )");
+		patch_message("patched: adding index on member table. ADD INDEX ( mb_10 )");
 	}
-	
-	
+
 	//
 	$key = db::key_exist( $g5['visit_table'], 'domain' );
 	if ( $key ) {
@@ -59,7 +44,6 @@
 			db::query("DROP INDEX index1 ON {$g5['visit_table']}");
 		}
 		db::query("CREATE INDEX index1 ON {$g5['visit_table']}( `vi_date`, `vi_ip` ) ");
-			
 		db::query("ALTER TABLE {$g5['visit_table']} ADD `domain` VARCHAR( 64 ) NOT NULL AFTER `vi_id` ");
 		db::query("ALTER TABLE {$g5['visit_table']} ADD UNIQUE domain ( `domain`, `vi_date`, `vi_ip` ) ");
 		patch_message("patched: ADD domain field and key for visit table");
