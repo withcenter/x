@@ -750,7 +750,7 @@ EOH;
  */
 function url_site_config()
 {
-	return x::url() . "?module=multi&action=config_first_page";
+	return x::url() . "/?module=multi&action=config_first_page";
 }
 
 function url_forum_list( $id )

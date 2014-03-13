@@ -13,7 +13,7 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 				<span class='edit_profile'><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=register_form.php">내 프로필</a></span>
 				<? if ($is_admin == 'super') {  ?>
 					<span class='admin_link'><a href="<?=x::url_admin()?>">X ADMIN</a><br><a href="<?php echo G5_ADMIN_URL ?>">ADMIN</a></span>
-				<? } 
+				<? }
 					else {?>
 					<span class='user-scrap'>
 							<a href="<?php echo G5_BBS_URL ?>/scrap.php" target="_blank" class='user-scrap'>스크랩</a>
@@ -33,7 +33,12 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 				<br>
 				<span class='user-points'>
 					<img src='<?=$outlogin_skin_url?>/star-icon.png'/>
-					<a href="<?php echo G5_BBS_URL ?>/point.php" target="_blank" class='user-win'>포인트</a> <?=$point?>
+					<? if ( admin() ) {?>
+						<a href="<?=url_site_config()?>" class='user-win'>사이트 관리</a>
+					<? }
+						else {?>	
+							<a href="<?php echo G5_BBS_URL ?>/point.php" target="_blank" class='user-win'>포인트</a> <?=$point?>
+					<? }?>
 				</span>
 			</span>
 			
