@@ -388,6 +388,7 @@ class etc {
 	
 	static function jsBack($message)
 	{
+		echo self::html_header();
 		if ( $message ) $message = self::jsmessage($message);
 		echo "<script>";
 		if ( $message ) echo "alert(\"$message\");";
@@ -570,7 +571,18 @@ static function utf8($string)
 		$included_files = get_included_files();
 		return $included_files[ count($included_files) - 1 ];
 	}
-	
+	static function html_header()
+	{
+		return<<<EOH
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+EOH;
+	}
+
+
 	
 
 } // eo etc class
@@ -725,14 +737,8 @@ function jsAlert($message=null)
 
 function html_header()
 {
-	return<<<EOH
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-</head>
-EOH;
-
+	return etc::html_header();
+	
 }
 
 

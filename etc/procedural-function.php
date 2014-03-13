@@ -243,9 +243,10 @@ function my( $field = 'id' ) {
 	bo_table(1); // is same as meta('menu_1', ms::board_id(etc::domain()).'_1')
  * @endcode
  */
-function bo_table($n)
+function bo_table($n, $domain=null)
 {
-	$bo_table = "ms_" . etc::last_domain(etc::domain()) . '_'.$n;
+	if ( empty($domain) ) $domain = etc::domain();
+	$bo_table = "ms_" . etc::last_domain( $domain ) . '_'.$n;
 	return $bo_table;
 }
 
@@ -255,9 +256,9 @@ function bo_table($n)
 /**
  *
  */
-function url_site_config()
+function url_site_config($domain=null)
 {
-	return x::url() . "/?module=multi&action=config_first_page";
+	return url_site_admin($domain);
 }
 
 function url_forum_list( $id )
@@ -273,6 +274,11 @@ function url_forum_read( $bo_id, $wr_id )
 function url_x_admin()
 {
 	return x::url() . "/?module=admin&action=index";
+}
+function url_site_admin($domain=null)
+{
+	if ( empty($domain) ) return x::url() . "/?module=multi&action=config_first_page";
+	else return site_url( $domain ) . "/x/?module=multi&action=config_first_page";
 }
 
 
