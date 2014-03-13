@@ -370,8 +370,8 @@ class multisite {
 	static function set_title( ) {
 		global $g5, $config;
 		
-		$title = ms::meta('title');
-		$secondary_title = ms::meta('secondary_title');
+		$title = meta('title');
+		$secondary_title = meta('secondary_title');
 		
 		if ( !$title ) $title = 'Welcome';
 		if ( !$secondary_title ) $secondary_title = etc::domain();
@@ -437,7 +437,7 @@ class multisite {
 	{
 		global $g5;
 		if ( empty($domain) ) $domain = etc::domain();
-		$qb = "bo_table LIKE '" . ms::board_id( $domain ) . "\_%'";
+		$qb = "bo_table LIKE '" . x::board_id( $domain ) . "\_%'";
 		$q = "SELECT COUNT(*) FROM $g5[board_table] WHERE $qb";
 		return db::result($q);
 	}
