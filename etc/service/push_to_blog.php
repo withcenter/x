@@ -47,8 +47,14 @@ for ( $cb = 1; $cb <= 3; $cb++ ) {
 	
 	
 	
-	$subject = $wr_subject;
-	$content = $wr_content;
+	$subject = $wr_subject;		
+	/**temporary solution? for removing \r\n***/
+	//$content = $wr_content; //--> original code
+	//$content = str_replace("\r\n", '', $wr_content); //--> double quote not working
+	//$content = nl2br($wr_content); //--> also not working...
+	$content = str_replace('\r\n', '', $wr_content);
+	///////////////////////////////////////////
+	
 	$url = g::url();
 	$copyright	= "게시글 출처:  <a href='$url' target='_blank'>$url</a>";
 	$content	= "
