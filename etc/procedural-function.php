@@ -118,6 +118,7 @@ function site_set( $idx, $domain, $mb_id=null )
 	return x::site_set( $idx, $domain, $mb_id );
 }
 
+/** @see x::meta_set() */
 function meta_set( $key, $code, $value=null )
 {
 	return x::meta_set( $key, $code, $value );
@@ -127,6 +128,12 @@ function meta_get( $key, $code=null )
 {
 	return x::meta_get( $key, $code );
 }
+
+function meta( $key, $code=null )
+{
+	return x::meta_get( $key, $code );
+}
+
 
 function meta_delete( $key, $code=null )
 {
@@ -231,6 +238,10 @@ function my( $field = 'id' ) {
  * @param [in] $n
  *
  * @return string bo_table
+ *
+ * @code
+	bo_table(1); // is same as meta('menu_1', ms::board_id(etc::domain()).'_1')
+ * @endcode
  */
 function bo_table($n)
 {

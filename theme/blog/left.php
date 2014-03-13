@@ -33,7 +33,7 @@
 		if ( empty($menu_1) ) $menu_1 = x::meta('menu_1', bo_table( 1 ) );
 		for ( $i = 1; $i <= 10; $i++ ) { 
 		$option = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".x::meta('menu_'.$i)."'");
-		${'menu_'.$i} = ms::meta('menu_'.$i);
+		${'menu_'.$i} = meta('menu_'.$i);
 		if ( ${'menu_'.$i} ) {
 			?><li class='menu-name'><a style='font-size: 9pt;' href='<?=g::url()?>/bbs/board.php?bo_table=<?=x::meta('menu_'.$i)?>'><?=$option['bo_subject']?></a></li>
 		<?}}?>
@@ -41,7 +41,7 @@
 </div>
 
 <?php
-if( empty( $menu_1 ) ) $menu_1 = ms::meta('menu_1', ms::board_id(etc::domain()).'_1');
+if( empty( $menu_1 ) ) $menu_1 = bo_table(1);
 /**Sample Latest Post, this only fetches 5 latest post from $extra['menu_1'] */?>
 <? 	if ( g::forum_exist( $g5['write_prefix'].$menu_1) ) {  ?>
 <div class='latest-posts'>

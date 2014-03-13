@@ -12,13 +12,11 @@ foreach ( $in as $key => $value) {
 
 
 /** new config meta update method */
-ms::meta( 'title' , $in['title'] );
-ms::meta( 'secondary_title' , $in['secondary_title'] );
-ms::meta( 'footer_text' , $in['footer_text'] );
+meta_set( 'title' , $in['title'] );
+meta_set( 'secondary_title' , $in['secondary_title'] );
+meta_set( 'footer_text' , $in['footer_text'] );
 
-
-
-ms::meta( 'theme_sidebar' , $in['theme_sidebar'] );
+meta_set( 'theme_sidebar' , $in['theme_sidebar'] );
 
 /* upload Global Settings Files ex. header_logo, banner_1, banner_2 to g5/data/upload/multisite/site_name/file_name.ext */
 $folder = path_multi_upload( etc::last_domain(etc::domain()) );

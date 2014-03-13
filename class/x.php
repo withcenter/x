@@ -671,8 +671,9 @@ class x {
 	 * @endcode
 	 * @note if you needs to get more than one record, use sites()
 	 */
-	static function site( $mixed )
+	static function site( $mixed=null )
 	{
+		if ( empty( $mixed ) ) $mixed = etc::domain();
 		if ( is_numeric($mixed) ) $qw = "idx=$mixed";
 		else $qw = "domain='$mixed'";
 		$q = "SELECT * FROM x_site_config WHERE $qw";
@@ -800,5 +801,26 @@ class x {
 		return db::rows("SELECT * FROM x_site_config WHERE mb_id='$mb_id'");
 	}
 	
-	
+
+
+	/**
+	 *  @brief sets the site title in browser title bar.
+	 *  
+	 *  @return empty
+	 *  
+	 *  @details changes the site title by setting g5 variable.
+	 */
+	static function set_title( ) {
+		global $g5, $config;
+		
+		$title = meta( 'title');
+		$secondary_title = meta('secondary_title');
+		
+		if ( !$title ) $title = 'Welcome';
+		if ( !$secondary_title ) $secondary_title = etc::domain();
+		
+		$g5['title'] = $title;
+		$config['cf_title'] = $secondary_title;
+	}
+		
 }

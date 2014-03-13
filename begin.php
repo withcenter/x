@@ -19,7 +19,7 @@ if ( x::installed() && etc::web() ) {
 }
 
 include 'etc/begin.php';
-if ( etc::web() ) ms::set_title();
+if ( etc::web() ) x::set_title();
 if ( etc::web() ) x::hook('begin');
 
 
