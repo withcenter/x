@@ -1,13 +1,51 @@
 
 
 <ul>
-<?for ( $i = 1; $i <= 7; $i++ ) {
-	if( $i == 7 ) $no_margin = "class = 'no-margin'";
-	else $no_margin = null;
-?>
-	<li <?=$no_margin?> menu_num = 'menu_<?=$i?>'>
-	<a href='#'><img src='<?=x::url_theme()?>/img/icon<?=$i?>.png'/></a>
-	<div class='label'><a href='#'>Menu</a></div>
+	<li class='menu_item'>
+		<a href='javascrip:void(0)'>
+			<img src='<?=x::url_theme()?>/img/mobile_icon1.png'/>		
+			<span class='label'>Menu</span>
+		</a>
 	</li>
-<?}?>
+	<li class='menu_item'>
+		<a href='javascrip:void(0)'>
+			<img src='<?=x::url_theme()?>/img/mobile_icon2.png'/>		
+			<span class='label'>Menu</span>
+		</a>
+	</li>
+	<li class='menu_item write'>
+		<a href='javascrip:void(0)'>
+			<img src='<?=x::url_theme()?>/img/mobile_icon3.png'/>		
+			<span class='label'>Menu</span>
+		</a>
+	</li>
+	<li class='menu_item images'>
+		<a href='javascrip:void(0)'>
+			<img src='<?=x::url_theme()?>/img/mobile_icon4.png'/>		
+			<span class='label'>Menu</span>
+		</a>
+	</li>
+	<li class='menu_item message'>
+		<a href='javascrip:void(0)'>
+			<img src='<?=x::url_theme()?>/img/mobile_icon5.png'/>
+			<span class='label'>Menu</span>			
+		</a>
+	</li>
+	<li  class='menu_item log-in-button'>
+		<a href='javascrip:void(0)'>
+			<img src='<?=x::url_theme()?>/img/mobile_icon6.png'/>		
+			<span class='label'>Menu</span>
+		</a>
+		<?/*
+		<div class='pop-up-login'>
+			<?=outlogin('x-mobile-1');?>
+		</div>
+		*/?>
+	</li>
+	<li class='less-padding menu_item'>
+		<a href='javascrip:void(0)'>
+			<img src='<?=x::url_theme()?>/img/mobile_icon7.png'/>		
+			<span class='label'>Menu</span>
+		</a>
+	</li>
 </ul>

@@ -26,8 +26,6 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
 	<div class='submenu'><div class='inner'><?include 'submenu.php'?></div></div>
 	
 </div>
-
-	
 <div id="content">
 	
     <div class="inner">
