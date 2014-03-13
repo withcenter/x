@@ -234,36 +234,18 @@ class x {
 	 */
 	static function load_site()
 	{
-		/*
-		$theme = ms::meta('theme');
-		if ( empty($theme) ) {
-			$cfg = md::config( etc::domain_name() );
-			if ( $cfg['theme'] ) $theme = $cfg['theme'];
-			else $theme = 'default';
-			$type = 'multidomain';
-		}
-		else {
-			$type = 'multisite';
-		}
-		*/
-
+		
 		$theme = meta_get( 'theme' );
+		if ( empty( $theme ) ) $theme = meta_get( '.' . etc::domain(), 'theme' );
 		if ( empty( $theme ) ) {
 			$parts = explode('.', etc::domain());
-			array_shift( $parts );
-			$domain = '.' . implode('.', $parts);
-			$theme = meta_get( $domain, 'theme' );
-			if ( empty( $theme ) ) {
-				$parts = explode('.', etc::domain());
-				array_shift( $parts );
+			for ( $i = 0; $i < count($parts); $i ++ ) {
 				array_shift( $parts );
 				$domain = '.' . implode('.', $parts);
 				$theme = meta_get( $domain, 'theme' );
-				if ( empty( $theme ) ) {
-					$theme = meta_get( '.' . etc::domain(), 'theme' );
-					if ( empty( $theme ) ) $theme = 'default';
-				}
+				if ( $theme ) break;
 			}
+			if ( empty($theme) ) $theme = meta_get( '.', 'theme' );
 		}
 		self::$config['site']['theme'] = $theme;
 		// @deprecated. no more site type is used.
@@ -681,12 +663,13 @@ class x {
 	}
 	
 	
-	/** @short returns the record of site in array.
+	/** @short returns only one(1) record of site in array.
 	 *
 	 * @param [in] $mixed if it is numeric, then the value is 'idx' or else the value is domain. 
 	 * @code
 		if ( x::site( $site['domain'] ) ) x::site_delete( $site['domain'] );
 	 * @endcode
+	 * @note if you needs to get more than one record, use sites()
 	 */
 	static function site( $mixed )
 	{
@@ -724,6 +707,34 @@ class x {
 		}
 	}
 	
+	/**
+	 *  @brief create a new sub-site.
+	 *  
+	 *  @param [in] $o contains optional values for creating a new site.
+	 *  @return int returns 0 on sucess. otherwise the return value will not be 0.
+	 *  
+	 *  @details To create a sub-site
+	 *  <ol>
+	 *  	<li> if 'multisite' board group does not exists, create it first ( It is done automatically when user creates the first sub-site )
+	 *  	<li> creates sub-site ( by inserting configuration value into a record to x_multisite_config table )
+	 *  	<li> creates 'board' (forum) for the site and sets default setting.
+	 *  </ol>
+	 *  
+	 */
+	static function site_create($o)
+	{
+		global $member;
+		
+		if ( ! g::group_exist('multisite') ) g::group_create(array('id'=>'multisite', 'subject'=>'multisite')); /* creating 'multisite' board group */
+		if ( self::site($o['domain']) ) return MS_EXIST;
+
+		
+		self::site_set( $o['domain'], $o['domain'], $member['mb_id'] );
+		self::meta_set( $o['domain'], 'title', $o['title'] );
+		return  0;
+	}
+	
+	
 	
 	
 	/**
@@ -751,4 +762,43 @@ class x {
 		}
 		return $count;
 	}
+	
+	
+	/**
+	 *  @brief returns the url of a site. 사이트 URL 주소를 리턴한다.
+	 *  
+	 *  @param [in] $domain domain of the site. 도메인
+	 *  @return string URL
+	 *  
+	 *  @details
+	 *  returns the url of sub-site. It supports sub-folder installation.
+	 *  
+	 *  도메인을 입력받아서 멀티 사이트의 주소를 리턴한다.
+	 *  그누보드가 도메인 최상위 폴더가 아니라 서브 폴더에 설치된 경우를 지원한다.
+	 *  
+	 *  Example) http://work.org/g5-5.0b17-2/
+	 */
+	static function site_url($domain)
+	{
+		$pi = pathinfo($_SERVER['PHP_SELF']);
+		$path = $pi['dirname'];
+		$path = str_replace('/bbs', '', $path);
+		$path = preg_replace('/\/x?$/', '', $path);
+		return 'http://' . $domain . $path;
+	}
+	
+	
+	/**
+	 *  @brief returns my sites
+	 *  
+	 *  @return array list of login user's sites.
+	 *  
+	 *  @details simply returns all the records of user's site.
+	 */	
+	static function sites( $mb_id )
+	{
+		return db::rows("SELECT * FROM x_site_config WHERE mb_id='$mb_id'");
+	}
+	
+	
 }

@@ -21,3 +21,4 @@ foreach ( $rows as $row ) {
 		";
 }
 echo "</div>";
+

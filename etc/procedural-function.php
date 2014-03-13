@@ -189,3 +189,38 @@ function get_site_menu()
 }
 
 
+
+function sites( $mb_id )
+{
+	return x::sites( $mb_id );
+}
+
+
+function site_url( $domain )
+{
+	return x::site_url( $domain );
+}
+
+function site_title ( $domain )
+{
+	return meta_get( $domain, 'title' );
+}
+
+
+/**
+ *  @brief function layer for preparing different system.
+ *  
+ *  @param [in] $field field of a member table ( information )
+ *  @return value of the field
+ *  
+ *  @details use this function to get the login user information
+ */
+function my( $field ) {
+	global $member;
+	switch ( $field ) {
+		case 'id'				: $field = 'mb_id';			break;
+		case 'name'				: $field = 'mb_nick';		break;
+		default				:							break;
+	}
+	return $member[ $field ];
+}
