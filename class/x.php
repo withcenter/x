@@ -595,10 +595,10 @@ class x {
 	/**
 	 *  @brief insert post into post_data
 	 *  
-	 *  @param [in] $o Parameter_Description
-	 *  @return Return_Description
+	 *  @param [in] $o options
+	 *  @return null
 	 *  
-	 *  @details Details
+	 *  @details use this function to insert a post into x_post_data
 	 */
 	static function post_data_insert( $o ) {
 		$sql = "insert into x_post_data
@@ -609,6 +609,7 @@ class x {
 					wr_parent				= '$o[wr_parent]',
 					wr_is_comment		= '$o[wr_is_comment]',
 					wr_comment			= '$o[wr_comment]',
+					wr_option					= '$o[wr_option]',
 					ca_name					= '$o[ca_name]',
 					wr_subject				= '$o[wr_subject]',
 					wr_content				= '$o[wr_content]',
@@ -621,6 +622,64 @@ class x {
 				";
 		db::query($sql);
 	}
+	
+	/**@short updates a post in x_post_data
+	 *
+	 *
+	 * @note integer fields are set without quote('), so you can use express on value like "wr_comment = wr_comment + 1"
+	 *
+	 */
+	static function post_data_update( $o )
+	{
+		if ( empty($o['bo_table']) || empty($o['wr_id']) ) return -1;
+		
+		$f = array();
+		
+				if ( isset( $o['wr_comment'] ) )	$f[]				= "wr_comment=$o[wr_comment]";
+				if ( isset( $o['wr_option'] ) )		$f[]				= "wr_option='$o[wr_option]'";
+				if ( isset( $o['ca_name'] ) )		$f[]				= "ca_name='$o[ca_name]'";
+				if ( isset( $o['wr_subject'] ) ) 	$f[]				= "wr_subject='$o[wr_subject]'";
+				if ( isset( $o['wr_content'] ) ) 	$f[]				= "wr_content='$o[wr_content]'";
+				if ( isset( $o['mb_id'] ) ) 			$f[]				= "mb_id='$o[mb_id]'";
+				if ( isset( $o['wr_name'] ) ) 		$f[]				= "wr_name='$o[wr_name]'";
+				if ( isset( $o['wr_hit'] ) ) 			$f[]				= "wr_hit=$o[wr_hit]";
+				if ( isset( $o['wr_good'] ) ) 		$f[]				= "wr_good=$o[wr_good]";
+				if ( isset( $o['wr_nogood'] ) ) 	$f[]				= "wr_nogood=$o[wr_nogood]";
+		
+		$q = "UPDATE x_post_data  SET ";
+		$q .= implode( ', ', $f);
+		$q .= " WHERE bo_table='$o[bo_table]' AND wr_id=$o[wr_id]";
+		db::query($q);
+	}
+	
+	
+	/** @short deletes a post in x_post_data
+	 *
+	 * @note use this function to delete a post and only that post.
+	 *				If you want to delete all the post in a thread including post and its comments, then use post_data_delete_thread()
+	 * @code
+			// delete post
+			x::post_data_delete( $bo_table, $write['wr_id'] );
+			
+			// delete post and its comments
+			x::post_data_delete_thread( $bo_table, $write['wr_id'] );
+	
+	 * @endcode
+	 *
+	 */
+	static function post_data_delete( $bo_table, $wr_id ) {
+		db::query("DELETE FROM x_post_data WHERE bo_table='$bo_table' AND wr_id=$wr_id");
+	}
+	
+		
+	/** @short deletes a post and all of tis comments in x_post_data
+	 *
+	 *
+	 */
+	static function post_data_delete_thread( $bo_table, $wr_id ) {
+		db::query("DELETE FROM x_post_data WHERE bo_table='$bo_table' AND wr_parent=$wr_id");
+	}
+	
 	
 	/** @short returns the record of site in array.
 	 *

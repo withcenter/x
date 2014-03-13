@@ -18,8 +18,9 @@ if( $latest_rows ) {
  */
 $posts = g::posts(
 	array(
-		'domain'			=> etc::domain(),
-		'limit'				=> 3,
+		'domain'				=> etc::domain(),
+		'wr_option'			=> array( "NOT LIKE '%secret%'" ),
+		'limit'					=> 3,
 	)
 );
 ?>
