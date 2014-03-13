@@ -26,6 +26,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		<div style='margin-bottom:5px;'>어드민 페이지에서 하단 이미지를 입력해 주세요. 어드민 페이지에서 하단 이미지를 입력해 주세요.</div>
 		<div>Copyright(C) 2004 All Rights Reserved.</div>
 		<a href="<?=g::url()?>?device=pc">PC 버젼</a>
+		<a href='<?=url_site_config()?>'>사이트 관리</a>
 	</div>
 	<div style='clear:both;'></div>
 </div>

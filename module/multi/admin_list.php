@@ -5,7 +5,6 @@
 	<a class='add-new-site' href='?module=<?=$module?>&action=admin_add_update'>Add new site.</a>
 	<div style='clear:right;'></div>
 
-
 	<table cellpadding=0 cellspacing=0 width='100%' class='admin-list-table'>
 		<tr valign='top' class='header'>
 			<td>Domain</td>
