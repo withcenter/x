@@ -1,0 +1,27 @@
+.latest-rwd-community-1 .title {
+	padding: 0.5em;
+	border-bottom: solid 1px #bbbbbb;
+	position: relative;
+}
+
+.latest-rwd-community-1 .title .latest-more {
+	position: absolute;
+	right: 8px;
+}
+
+.latest-rwd-community-1 ul {
+	list-style: none;
+	margin: 0;
+	padding: 0.5em 0.813em;
+}
+
+.latest-rwd-community-1 ul li {
+	width: 80%;
+	height: 14px;
+	overflow: hidden;
+	padding: 4px 0;
+}
+
+.latest-rwd-community-1 ul li img {
+	margin-right: 0.813em;
+}
