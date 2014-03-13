@@ -3,7 +3,7 @@
 	$data = file::read($path);
 	$src = 'delete_cache_latest($bo_table);';
 	$dst = "$src
-include x::dir() . '/etc/hook/write_comment_update.begin.php'; /* x patch */";
+include x::dir() . '/etc/hook/write_comment_update.end.php'; /* x patch */";
 	$data = patch_string( $data, $src, $dst );
 	
 	

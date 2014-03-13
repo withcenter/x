@@ -16,21 +16,23 @@
 }
 .x-gallery li .post {
 	position:relative;
+	border: solid 1px #1a1a1a;
 }
 
 .x-gallery .photo img {
 	width: 100%;
-	height: auto;
+	height: 100%;
 }
 .x-gallery .text {
 	position:absolute;
 	bottom:0;
 	z-index:100;
-	background:black;
+	background: #1a1a1a;
 	opacity: 0.7;
 	width: 100%;
 	font-size: 1em;
 	text-align: left;
+	text-align: center;
 }
 .x-gallery .text a {
 	color: white;

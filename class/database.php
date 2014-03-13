@@ -10,6 +10,27 @@ class sql {
 	/**
 	 *
 	 * $v holds the expression and value.
+	 * @note possilbe expression
+		"=value"
+		">value"
+		">=value"
+		"<value"
+		"<=value"
+		"<>value"
+		
+		or if it is array, then the first element will be used as the express and value.
+		
+		@code the code below will make SQL like "wr_option LIKE '%secret%'"
+			$posts = g::posts(
+				array(
+					'wr_option'			=> array( "LIKE '%secret%'" ),
+				)
+			);
+		@endcode
+		
+		
+
+		
 		@note
 			'wr_datetime'=> '>=' . g::datetime( time() - ONEDAY * 7),
 			will be parsed as wr_datetime >= 'YYYYMMDD HH:ii:ss'
@@ -33,18 +54,27 @@ class sql {
 	 */
 	static function cond( $k ) {
 		$v = self::$option[ $k ];
-		if ( $v[0] == '<'  || $v[0] == '>' ) {
-			if ( $v[1] == '=' ) {
+		if ( is_array($v) ) {
+			$str = "`$k` $v[0]";
+		}
+		else {
+			if ( $v[0] == '<'  || $v[0] == '>' ) {
+				if ( $v[1] == '=' ) {
+					$exp = substr( $v, 0, 2 );
+					$v = substr($v, 2);
+				}
+				else {
+					$exp = $v[0];
+					$v = substr($v, 1);
+				}
+			}
+			else if ( ( $v[0] == '!' && $v[1] == '=' ) || ( $v[0] == '<' && $v[1] == '>' ) ) {
 				$exp = substr( $v, 0, 2 );
 				$v = substr($v, 2);
 			}
-			else {
-				$exp = $v[0];
-				$v = substr($v, 1);
-			}
+			else $exp = '=';
+			$str = "`$k`$exp'$v'";
 		}
-		else $exp = '=';
-		$str = "`$k`$exp'$v'";
 		return $str;
 	}
 }

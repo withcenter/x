@@ -1,10 +1,12 @@
+
+
 <div class='gallery'>
 <?php
-	echo latest( 'x-rwd-gallery', 'ms_test7_1', 40, 40, 1,
+	echo latest( 'x-rwd-gallery', ms::board_id(etc::domain()).'_1' , 40, 40, 1,
 		array(
-			'width'		=>300,
-			'height'	=>180,
-			'radius'	=> 2
+			'width'		=> 233,
+			'height'	=> 188,
+			'radius'	=> 0,
 		)
 	);
 ?>

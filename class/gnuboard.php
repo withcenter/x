@@ -902,13 +902,14 @@ class gnuboard {
 			$rows = g::posts( $bo_table );
 			$rows = g::posts( array( 'domain'=>etc::domain(), 'limit'=>15) );
 	 * @endcode
-	 * @code LATEST POST
-					$posts = g::posts(
+	 * @code LATEST POST Without Scret
+				$posts = g::posts(
 					array(
-							'domain'			=> etc::domain(),
-							'limit'				=> 3,
-						)
-					);
+						'domain'				=> etc::domain(),
+						'wr_option'			=> array( "NOT LIKE '%secret%'" ),
+						'limit'					=> 3,
+					)
+				);
 	 * @endcode
 	 * @code Latest post ORDER BY wr_hit		
 					$posts = g::posts(
@@ -953,6 +954,10 @@ class gnuboard {
 		if ( $o['wr_datetime'] ) $cond[] = db::cond('wr_datetime');
 		if ( ! isset( $o['wr_is_comment']  ) ) $cond[] = "wr_is_comment=0";
 		else $cond[] = db::cond('wr_is_comment');
+		
+		
+		if ( $o['wr_option'] ) $cond[] = db::cond('wr_option');
+		
 		if ( $cond ) $where = "WHERE " . implode( ' AND ', $cond );
 		else $where = null;
 		
