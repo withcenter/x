@@ -27,21 +27,21 @@
 		</a>
 	</li>
 	<li class='menu_item'>
-		<a href='javascrip:void(0)'>
+		<a href='<?=g::url()?>/?page=latest_posts'>
 			<img src='<?=x::url_theme()?>/img/mobile_icon1.png'/>		
-			<span class='label'>Menu</span>
+			<span class='label'>Latest Posts</span>
 		</a>
 	</li>
 	<li class='menu_item favorites'>
-		<a href='javascrip:void(0)'>
+		<a href='<?=g::url()?>/?page=popular_posts'>
 			<img src='<?=x::url_theme()?>/img/mobile_icon2.png'/>		
-			<span class='label'>Menu</span>
+			<span class='label'>Popular Posts</span>
 		</a>
 	</li>
 	<li class='menu_item write'>
-		<a href='javascrip:void(0)'>
+		<a href='<?=g::url()?>/?page=gallery'>
 			<img src='<?=x::url_theme()?>/img/mobile_icon3.png'/>		
-			<span class='label'>Menu</span>
+			<span class='label'>갤러리</span>
 		</a>
 	</li>
 	<li class='menu_item images'>
