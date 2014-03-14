@@ -157,7 +157,6 @@ $minfo = db::row("SELECT * FROM ".$g5['member_table']." WHERE mb_id='$mb_id'");
 				</div>
 			</div>
 		</div>
-
+		<input type='submit' value='업데이트' class='per-config-submit'/>
 	</div>
-			<input type='submit' value='업데이트' class='per-config-submit'/>
 </form>

@@ -1103,7 +1103,8 @@ span.config-name {
 	background: #616161;
 	height: 30px;
 	width: 80px;
-	float: right;
+	margin-top: 10px;
+	
 }
 
 .config .image-config .image-upload-container {
@@ -1531,4 +1532,41 @@ span.config-name {
 	height: 26px;
 	line-height: 26px;
 	width: 125px;
+}
+
+/* config_member.php */
+.config-member .config-container {
+	position: relative;
+}
+
+.config-member .config-member-table {
+	margin-bottom: 30px;
+}
+
+.config-member .paging {
+	text-align: center;
+}
+
+.config-member .page_no {
+	border: 1px solid #666666;
+	display: inline-block;
+	padding: 5px 7px;
+	border-radius: 4px;
+	color: #666666;
+}
+
+.config-member .page_no:hover, .config-member .selected {
+	color: #ffffff;
+	background-color: #666666;
+}
+
+.config-member .x-admin-button {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	background-color: #666666;
+	color: #ffffff;
+	padding: 3px 10px;
+	border-radius: 3px;
+	
 }

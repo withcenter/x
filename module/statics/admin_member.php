@@ -32,7 +32,7 @@ if ( $no_of_rows ) $limit = "LIMIT 0, $no_of_rows";
 		</div>
 	</form>
 
-	<table cellpadding=0 cellspacing=0 width='100%' border=1>
+	<table cellpadding=0 cellspacing=0 width='100%'>
 		<tr class='table-header'>
 			<td>도메인</td>
 			<td width=100 align='center'>회원수</td>
@@ -44,12 +44,13 @@ if ( $no_of_rows ) $limit = "LIMIT 0, $no_of_rows";
 			$domain = $row[REGISTERED_DOMAIN];
 			if ( empty($domain) ) $domain = "NO DOMAIN";
 			$setting_url = x::url().'/?module=multi&action=config_member&domain='.$domain;
+			$setting_icon = "<img src='".x::url()."/module/".$module."/img/setting.png' />";
 			echo "
 				<tr>
 					<td>$domain</td>
 					<td align='center'>$row[cnt]</td>
 					<td align='center'>
-						<a href='$setting_url'>설정</a>
+						<a href='$setting_url'>$setting_icon</a>
 					</td>
 				</tr>
 			";

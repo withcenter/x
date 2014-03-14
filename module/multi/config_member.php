@@ -1,3 +1,4 @@
+<div class='config config-member'>
 <?php
 if ( !admin() ) {
 	return; 
@@ -6,9 +7,9 @@ if ( !admin() ) {
 	if ( $in['option'] == 'mb_edit' ) include_once 'config_member_edit.php';
 	else {
 		$cond = null;
-		if ( $in ) {
+		if ( $in['username'] || $in['block'] || $in['resign'] ) {
 			$q = array();
-			if ( $username ) $q[] = "mb_id LIKE '%{$username}%'";
+			if ( $username ) $q[] = "mb_id LIKE '%{$username}%' OR mb_nick LIKE '%{$username}%'";
 			if ( $block ) $q[] = "mb_intercept_date	 <> ''";
 			if ( $resign ) $q[] = "mb_leave_date <> ''";
 			
@@ -29,8 +30,6 @@ if ( !admin() ) {
 		$total_post = db::result ( "SELECT COUNT(*) FROM ".$g5['member_table']." WHERE  mb_id <> 'admin' $domain_cond $domain_cond $cond" );
 		$rows = db::rows("SELECT * FROM ".$g5['member_table']." WHERE mb_id <> 'admin' $domain_cond $cond ORDER BY mb_no DESC LIMIT $start, $no_of_post");
 ?>
-<div class='config config-member'>
-
 	<div class='config-main-title'>
 		<div class='inner'>
 			<img src='<?=module('img/direction.png')?>'> 회원 관리
@@ -54,8 +53,9 @@ if ( !admin() ) {
 			
 			<div class='search-form'>
 				<form method='get'>
-					<input type="hidden" name="module" value="multisite" />
-					<input type="hidden" name="action" value="config_member" />
+					<input type="hidden" name="module" value="<?=$module?>" />
+					<input type="hidden" name="action" value="<?=$action?>" />
+					<input type='hidden' name='domain' value="<?=$domain?>" />
 					
 					<span>아이디/닉네임 <input type="name" name="username" value="<?=$username?>" placeholder='아이디'/></span>
 					<span>탈퇴한 회원 <input type='checkbox' name='resign' value=1 <?=$resign?'checked=1':''?>/></span>
@@ -77,6 +77,7 @@ if ( !admin() ) {
 					<td>설정</td>
 				</tr>
 			<?php
+				$setting_icon = "<img src='".x::url()."/module/".$module."/img/setting.png' />";
 				foreach ( $rows as $m ) {
 				
 			?>
@@ -89,7 +90,7 @@ if ( !admin() ) {
 						<?=$m['mb_leave_date']?$m['mb_leave_date'] : '활동중'?>
 					</td>
 					<td><?=$m['mb_intercept_date']?$m['mb_intercept_date'] : '활동중'?></td>
-					<td><a href='<?=x::url()?>/?module=multi&action=config_member&option=mb_edit&mb_id=<?=$m['mb_id']?>'>설정</a></td>
+					<td>&nbsp;&nbsp;<a href='<?=x::url()?>/?module=multi&action=config_member&option=mb_edit&mb_id=<?=$m['mb_id']?>'><?=$setting_icon?></a></td>
 				</tr>
 			<? }?>
 			</table>
@@ -120,11 +121,11 @@ if ( !admin() ) {
 
 			echo "
 				<div class='paging'>
-					<a class='first_page_no' href='".x::url()."/?$qs&nav_no=1&page_no=1'>&lt;&lt;</a>
+					<a class='first_page_no page_no' href='".x::url()."/?$qs&nav_no=1&page_no=1'>&lt;&lt;</a>
 				";
 					
 			if ( $nav_no > 1 ) {
-				echo "<a class='button' href='".x::url()."/?$qs&nav_no=".($nav_no - 1)."&page_no=".$pn[$nav_no - 2][0] ."'>이전</a>";
+				echo "<a class='button page_no' href='".x::url()."/?$qs&nav_no=".($nav_no - 1)."&page_no=".$pn[$nav_no - 2][0] ."'>이전</a>";
 			}
 
 			$start = $nav_no - 1;
@@ -137,19 +138,17 @@ if ( !admin() ) {
 				}
 			}
 			if ( $nav_no < count ( $pn ) ) {
-				echo "<a class='button' href='".x::url()."/?$qs&nav_no=".($nav_no + 1). "&page_no=".$pn[$nav_no][0]."'>다음</a>";
+				echo "<a class='button page_no' href='".x::url()."/?$qs&nav_no=".($nav_no + 1). "&page_no=".$pn[$nav_no][0]."'>다음</a>";
 			}
 			echo "
-					<a class='last_page_no' href='".x::url()."/?$qs&nav_no=".count( $pn ) ."&page_no=$pages'>&gt;&gt;</a>
+					<a class='last_page_no page_no' href='".x::url()."/?$qs&nav_no=".count( $pn ) ."&page_no=$pages'>&gt;&gt;</a>
 				</div>
 			";
 		}
+		
+			if ( $is_admin == 'super' ) echo "<a class='x-admin-button' href='".x::url()."/?module=statics&action=admin_member'>X Admin으로 이동</a>";
 		?>
 			</div>
 		</div>
 	</div>
 </div>
-<?php
-	if ( $is_admin == 'super' ) {
-		echo "<a href='".x::url()."/?module=statics&action=admin_member'>X Admin으로 이동</a>";
-	}
