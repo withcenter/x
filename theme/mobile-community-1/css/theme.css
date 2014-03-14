@@ -106,6 +106,86 @@ a {
 }
 
 
+/** POPULAR POSTS */
+.popular-posts-container {
+	margin-top: 1.5em;
+	border: solid 1px #bbbbbb;
+	position: relative;
+	background: #ffffff;
+	margin-left: 0.625em;
+	padding-top: 1.875em;
+	word-break: break-all;
+}
+
+.popular-posts-container .posts-title {
+	padding: 0.625em;
+	width: 15.6em;
+	background: #e47e27;
+	color: #ffffff;
+	position: absolute;
+	top: -0.8em;
+	left: -0.625em;
+	font-weight: bold;
+}
+
+.popular-posts-container .posts-title img {
+	margin-right: 0.625em;
+	position: relative;
+	top: -1px;
+}
+
+.popular-posts-container .popular-posts {
+	border-bottom: solid 1px #eaeaea;
+	padding: 0.625em 1.250em;
+}
+
+.popular-posts-container .popular-posts img {
+	margin-right: 1.875em;
+}
+
+.popular-posts-container .popular-posts a {
+	text-decoration: none;
+}
+
+.popular-posts-container .popular-subject {
+	font-weight: bold;
+	margin-bottom: 0.5em;
+	height: 1em;
+	line-height: 1em;
+	overflow: hidden;
+}
+
+
+
+
+.popular-posts-container .popular-meta, .popular-posts-container .popular-meta a {
+	color: #999999;
+	margin-bottom: 0.5em;
+	height: 1em;
+	line-height: 1em;
+	overflow: hidden;
+}
+
+.popular-posts-container .popular-content {
+	overflow: hidden;
+	height: 2.5em;
+	line-height: 1.3em;
+}
+
+.popular-posts-container .post-divider {
+	margin: 0 0.5em;
+}
+
+.popular-posts-container .popular-posts .popular-image {
+	width: 240px;
+}
+
+.popular-posts-container .popular-posts .popular-info {
+	
+	height: 6.5em;
+	overflow: hidden;
+	max-width: 660px;
+}
 
 /* latest */
 .latest-thumbnail{
@@ -255,6 +335,48 @@ a {
 	
 	#content .gallery .post {
 		margin:0;
+	}
+
+}
+
+@media all and ( max-width: 25em ) {
+	.popular-posts-container {
+		padding: 0;
+	}
+	
+	.popular-posts-container .posts-title {
+		padding: 0.625em;
+		width: auto;
+		background: #e47e27;
+		color: #ffffff;
+		position: static;
+		margin-bottom: 0.625em;
+		font-weight: bold;
+	}
+
+	.popular-posts-container .popular-posts {
+		padding: 0;
+	}
+	
+	.popular-posts td {
+		display: block;
+	}
+	
+	.popular-posts-container .popular-posts .popular-image {
+		width: 100%;
+	}
+	
+	.popular-posts-container .popular-posts .popular-info {
+		padding: 0.625em;
+	}
+	
+	.popular-posts-container .popular-posts img {
+		margin: 0;
+		width: 100%;
+	}
+	
+	.popular-posts-container .post-divider {
+		margin: 0;
 	}
 
 }
