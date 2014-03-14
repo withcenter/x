@@ -50,7 +50,7 @@ add_stylesheet("<link rel='stylesheet' type='text/css' href='".x::url()."/module
 	else $site_type = 'blog';
 	
 	$domain = $sub_domain . '.' . etc::base_domain();
-	
+	$domain = strtolower( $domain );
 	
 	if ( $error_code = x::site_create( array('domain'=>$domain, 'title'=>addslashes($in['title'])) ) ) include module( 'create_fail' );
 	else {

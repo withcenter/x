@@ -63,6 +63,39 @@ if ( strpos($_SERVER['PHP_SELF'], 'register_result.php') !== false ) {
 }
 */
 
+
+/** @short Reset board skin path for PC and mobile.
+ *  -----------------------------------------------
+ *  
+ *  @note if there is board skin under x/skin/board folder, G5, then, can use it as its board skin.
+ *  All the codes between G5/skin/board folder and x/skin/board folder are compatible.
+ *  @see etc/end.php for re-setting the folders of x/skin/board folder.
+ * https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.hthvy4o49hmo
+ */
+
+if ( G5_IS_MOBILE ) $mobile = "mobile/";
+$p = "{$mobile}skin/board/x/";
+$board_skin_path = str_replace($p, 'x/', $board_skin_path);
+$board_skin_url = str_replace("{$mobile}skin/board/x/", 'x/', $board_skin_url);
+/** @short if 'skin/board/basic' was chosen by default, it will be reset to /x/skin/board/multi' here. */
+if ( strpos( $board_skin_path, "board/basic" ) ) {
+	$board_skin_path = x::dir() . "/skin/board/multi";
+	$board_skin_url = x::url() . "/skin/board/multi";
+}
+
+
+
+
+/// https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.an2o30375xzf
+x::hook_register( 'begin', 'hook_begin_status' );
+function hook_begin_status()
+{
+	$status = x::meta_get( etc::domain(), 'status' );
+	if ( $status == 'close' ) {
+		jsGo( g::url_base(), "This site has been closed." );
+	}
+}
+
 x::hook_register( 'write_update_end', 'hook_blog_push' );
 x::hook_register( 'delete_end', 'hook_blog_push' );
 
@@ -161,9 +194,10 @@ function hook_latest_check()
 
 
 /**
- *  @short login.php
+ *  @short add 'head.php' and 'tail.php' into 'login.php'
+ *  ----------------------------------------------------------
  */
-if ( strpos($_SERVER['PHP_SELF'], 'login.php') !== false ) {
+if ( login_page() || member_confirm_page() ) {
 	include_once G5_PATH . '/_head.php';
 	x::hook_register('end', 'hook_show_tail');
 	function hook_show_tail()
@@ -177,35 +211,6 @@ if ( strpos($_SERVER['PHP_SELF'], 'login.php') !== false ) {
 
 
 
-
-/** @short reset board skin path for PC and mobile.
- *  
- *  @note if there is board skin under x/skin/board folder, G5, then, can use it as its board skin.
- *  All the codes between G5/skin/board folder and x/skin/board folder are compatible.
- *  @see etc/end.php for re-setting the folders of x/skin/board folder.
- * https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.hthvy4o49hmo
- */
-if ( G5_IS_MOBILE ) $mobile = "mobile/";
-$p = "{$mobile}skin/board/x/";
-$board_skin_path = str_replace($p, 'x/', $board_skin_path);
-$board_skin_url = str_replace("{$mobile}skin/board/x/", 'x/', $board_skin_url);
-/** @short if 'skin/board/basic' was chosen by default, it will be reset to /x/skin/board/multi' here. */
-if ( strpos( $board_skin_path, "board/basic" ) ) {
-	$board_skin_path = x::dir() . "/skin/board/multi";
-	$board_skin_url = x::url() . "/skin/board/multi";
-}
-
-
-
-/// https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.an2o30375xzf
-x::hook_register( 'begin', 'hook_begin_status' );
-function hook_begin_status()
-{
-	$status = x::meta_get( etc::domain(), 'status' );
-	if ( $status == 'close' ) {
-		jsGo( g::url_base(), "This site has been closed." );
-	}
-}
 
 
 

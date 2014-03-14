@@ -282,3 +282,16 @@ function url_site_admin($domain=null, $module='multi', $action='config_first_pag
 }
 
 
+
+function login_page() {
+	return strpos($_SERVER['PHP_SELF'], 'login.php') !== false;
+}
+
+
+
+function member_confirm_page() {
+	return strpos($_SERVER['PHP_SELF'], 'member_confirm.php') !== false;
+}
+
+
+

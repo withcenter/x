@@ -119,10 +119,13 @@ class etc {
 	 *  i.e) abc.def.your-domain.com
 	 *  
 	 *  @details it returns the whole domain including all the levels. ( 2nd, 3rd, 4th ... level domains... )
+	 *  
+	 *  @warning It does not return the orinal domain. It sometimes change domain to fit to 'X'.
 	 */
 	static function domain()
 	{
-		return $_SERVER['HTTP_HOST'];
+		return x::domain();
+		// return $_SERVER['HTTP_HOST'];
 	}
 	
 	// ################################################################## helper functions
