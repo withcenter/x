@@ -117,7 +117,7 @@
 			echo "<a class='page_no' href='".g::url()."/?nav_no=".($nav_no + 1). "&page_no=".$pn[$nav_no][0]."'>다음</a>";
 		}
 		
-		if ( $total_post > 3) )
+		if ( $total_post > 3 )
 		echo "<a class='last_page_no page_no' href='".g::url()."/?nav_no=".count( $pn ) ."&page_no=$pages'>&gt;&gt;</a>";
 		
 		echo"</div>";
