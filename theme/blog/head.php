@@ -12,6 +12,8 @@
 			<?php
 				$menu_class = array( 'menu-2' , 'menu-3' , 'menu-4', 'menu-1' );
 				$menus = get_site_menu();
+				
+				
 				$i = 1;
 				$color = 0; 
 				foreach ( $menus as $menu ) {

@@ -52,6 +52,21 @@ class x {
 	}
 	
 	/**
+	 *  @brief Returns the accessed domain. and make it fit for X.
+	 *  
+	 *  @return string domain
+	 *  
+	 *  @details Use this function to get the accessed domain.
+	 */
+	static function domain()
+	{
+		$host = $_SERVER['HTTP_HOST'];
+		$host = strtolower($host);
+		return $host;
+	}
+	
+	
+	/**
 	 *	@brief returns the url of theme
 	 *	@code
 			<a href="<?php echo G5_URL ?>"><img src='<?=x::url_theme()?>/img/logo.png'></a>

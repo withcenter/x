@@ -7,21 +7,23 @@
 	if ( empty ( $title ) ) return jsBack ( "사이트 제목을 입력해 주세요" );
 	
 	$domain = $sub_domain . '.' . etc::base_domain();
+	$domain = strtolower( $domain );
 	if ( $error_code = x::site_create( array('domain'=>$domain, 'title'=>addslashes($in['title'])) ) ) return jsBack("해당 사이트가 이미 존재합니다. 다른 도메인을 입력하십시오.");
 	
 	meta( $domain, 'theme', 'community_3');
 	x::meta( $domain, 'mobile_theme', 'mobile-community-1');
 	
 	$o = array(
-				'subject'	=> "메뉴1",
+				
 				'group_id'	=> 'multisite',
 				'bo_admin' => my('id'),
 				'bo_use_dhtml_editor' => 1,
 				'bo_use_list_view' => 1,
-				'bo_skin'			=> 'multi',
+				'bo_skin'			=> 'x/skin/board/multi',
 			);
 	for ( $i=1; $i<=5; $i++ ) {
-		$o['id']	= bo_table( $i, $domain );
+		$o['subject']	= "메뉴$i";
+		$o['id']		= bo_table( $i, $domain );
 		g::board_create($o);
 		x::meta( $domain, "menu{$i}bo_table", bo_table( $i, $domain ) );
 	}
