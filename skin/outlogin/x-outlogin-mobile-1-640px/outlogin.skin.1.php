@@ -9,7 +9,8 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 	<div class='login-box-middle'>
 		<form name="foutlogin" action="<?php echo $outlogin_action_url ?>" onsubmit="return fhead_submit(this);" method="post" autocomplete="off">
 			<input type="hidden" name="url" value="<?php echo $outlogin_url ?>">
-		
+		<table width='100%' cellspacing=0 cellpadding=0><tr valign='top'>
+		<td>
 			<div  class='login-input'>
 				<div class='login-user'>
 					<input type="text" id="ol_id" name="mb_id" required  maxlength="20" placeholder='아이디'>
@@ -19,17 +20,20 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 				</div>
 				<div style='clear:both'></div>
 			</div>
+		</td>
+		<td width='85'>
 			<div class='submit-button'>
 				<input type="image" id="ol_submit" src='<?=$outlogin_skin_url?>/signin_button.png' />				
-			</div>
-			<div style='clear:both'></div>
+			</div>			
+		</td>
+		</tr>
+		<tr valign='top'><td colspan=2>	
 			<div class='register_autologin'>
 				<span class='auto_login'><input type="checkbox" name="auto_login" value="1" id="auto_login">자동 로그인</span>
 				<a href="<?php echo G5_BBS_URL ?>/password_lost.php" id="ol_password_lost">아이디/비번 찾기</a>
-				<a href='<?=G5_URL?>/<?=G5_BBS_DIR?>/register.php' class='login-reg'>회원가입</a>
-				<div style='clear:both;'></div>
+				<a href='<?=G5_URL?>/<?=G5_BBS_DIR?>/register.php' class='login-reg'>회원가입</a>				
 			</div>
-										
+		</td></tr></table>
 		</form>
 		<div style='clear:both'></div>
 	</div>

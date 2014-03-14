@@ -11,13 +11,12 @@
 
 
 .login-box-mobile-640px .login-box-middle .login-input{	
-	width:84%;
+	width:100%;
 	float:left;
 }
 
 .login-box-mobile-640px .login-box-middle .submit-button{	
-	width:16%;
-	float:left;
+	width:95px;	
 	text-align:right;
 }
 
@@ -110,9 +109,8 @@
 }
 
 .logout-box-mobile-640px .user-info {
-	width: 65%;
+	width: 100%;
 	float: left;
-	padding:10px 0 0 10px;
 }
 
 .logout-box-mobile-640px .user-admin {
@@ -197,9 +195,12 @@
 	text-align: right;
 }
 
+.login-box-mobile-640px .logout-inner {
+	padding:10px 10px 0 10px;
+}
+
 .login-box-mobile-640px .log_out {
-	float: right;
-	padding:10px 10px 0 0;
+	text-align:right;
 }
 
 .login-box-mobile-640px .user-logged-name {
@@ -211,5 +212,9 @@
 
 /**submit**/
 .login-box-mobile-640px #ol_submit{
+	
+}
+
+@media all and ( max-width: 320px ) {
 	
 }
