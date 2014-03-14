@@ -102,7 +102,8 @@
 	line-height:24px;
 	padding: 6px 0 24px 0;	
 	overflow:hidden;
-	text-decoration:none;
+	word-break:break-all;
+	text-decoration:none;	
 }
 
 #header .mobile-menu ul li.menu_item > a.selected{	
