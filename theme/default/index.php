@@ -27,9 +27,11 @@
 			</ul>
 	</p>
 	
+	<?include 'site-create-form.php';?>
 	
-	
-
-<?
-	include 'site-create-form.php';
-	
+	<table>
+		<tr valign=top>
+			<td><?include 'site-list.php';?></td>
+			<td><?include 'post-list.php';?></td>
+		</tr>
+	</table>
