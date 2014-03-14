@@ -37,7 +37,7 @@ function mobile_popular_posts($options, $icon) {
 			$imgsrc = get_list_thumbnail($popular_posts[$i]['bo_table'], $popular_posts[$i]['wr_id'], 210, 80); 
 			if ( $imgsrc['src'] ) {
 				$img = "<img src='$imgsrc[src]'/>";
-			} else $img = '';
+			} else $img = "<img src='".x::url_theme()."/img/no_image.png'/>";
 			$url = "bbs/board.php?bo_table=".$popular_posts[$i]['bo_table']."&wr_id=".$popular_posts[$i]['wr_id'];
 			?>
 			<table cellspacing='0' cellpadding='0' width='100%'>

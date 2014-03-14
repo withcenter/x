@@ -40,7 +40,7 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 			$i++;
 			if ( $imgsrc['src'] ) {
 				$img = "<img src='$imgsrc[src]'/>";
-			} else $img = '';
+			} else $img = "<img src='".$latest_skin_url."/img/no_image.png'";
 			$url = $li['href'];
 			?>
 			<table cellspacing='0' cellpadding='0' width='100%'>
