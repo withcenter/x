@@ -1,28 +1,21 @@
 <?php
 
-	
-
-
 ?>
 
-<div style="font-size: 1.2em;">
 
-	<p>
+	<div class='page-header'>
 		익스텐디드에 오신 것을 환영합니다.
-	</p>
-	&nbsp;
+	</div>
+	
 	<p>
 			홈페이지 관리자 이십니까? 그렇다면,
 			<ul>
-				<li> 사용 설명서를 먼저 읽어 보세요.</li>
-				<li> 테마를 선택해 보세요.</li>
+				<li> <a href="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub" target="_blank">사용 설명서를 먼저 읽어 보세요.</a></li>
+				<li> <a href='<?=url_site_admin('', 'multi', 'config_theme')?>'>테마를 선택해 보세요.</a></li>
 				<li> 위젯을 변경해 보세요.</li>
-				<li> 관리자 페이지에서 간편하게 자동 업데이트를 할 수 있습니다.</li>
-				<li> 테마와 위젯을 다운로드 할 수 있습니다.</li>
 			</ul>
 	</p>
 	
-	&nbsp;
 	
 	<p>
 			개발자 이십니까? 그렇다면,
@@ -31,10 +24,12 @@
 				<li> 그 다음, 개발자를 위한 코딩 가이드를 먼저 읽어 보세요.</li>
 				<li> 위젯(스킨)을 개발해 보세요.</li>
 				<li> 테마를 개발해 보세요.</li>
-				<li> 자동 업데이트 및 테마, 위젯 자동 설치를 위한 파일 압축과 업로드를 해 보세요.</li>
 			</ul>
 	</p>
 	
 	
-</div>
+	
 
+<?
+	include 'site-create-form.php';
+	
