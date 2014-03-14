@@ -35,7 +35,9 @@ body {
 
 
 .left-menu {
-	margin: 2em 1.4em;
+	list-style:none;
+	padding: 0;
+	margin: 0;
 }
 .left-menu > div {
 	width: 140px;
@@ -45,4 +47,22 @@ body {
 	padding: 1em;
 	background-color: #cdcdcd;
 	width: 100%;
+}
+
+
+#ft p {
+	padding: 2em!important;
+	color: white;
+	text-align:center;
+}
+
+
+
+.page-header {
+	margin: 0.4em 0;
+	padding: 1em;
+	border-top: 1px solid grey;
+	border-bottom: 1px solid grey;
+	font-size: 1.6em;
+	font-weight: bold;
 }

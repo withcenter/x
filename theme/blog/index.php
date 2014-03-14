@@ -1,7 +1,7 @@
 <?php
 	
 	/** display 3 posts from each forum that is selected by the user on Config_Global */
-	if ( x::meta('forum_no_1') ) include_once 'blog_main.php';
+	include_once 'blog_main.php';
 	
 	ob_start();
 ?>
@@ -40,11 +40,19 @@
 		}?>
 		<td>
 			<?php
+				$forum_exist = 0;
 				for ( $i = 2; $i <= 10; $i++ ) {
 					if ( x::meta('forum_no_'.$i) ) {
+						$forum_exist = 1;
+						
 						$option = db::row( "SELECT bo_subject, bo_count_write FROM $g5[board_table] WHERE bo_table='".x::meta('forum_no_'.$i)."'" );
 						echo latest( "x-latest-blog" , x::meta('forum_no_'.$i) , 3 , 25 );
 					}
+				}
+				
+				
+				if ( !$forum_exist ) {
+					echo latest( "x-latest-blog" , bo_table(1) , 3 , 25 );
 				}
 			?>
 		</td>
