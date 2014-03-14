@@ -342,20 +342,20 @@ a {
 @media all and ( max-width: 25em ) {
 	.popular-posts-container {
 		padding: 0;
+		margin-left: 0;
+		border-top: 0;
 	}
 	
 	.popular-posts-container .posts-title {
-		padding: 0.625em;
 		width: auto;
-		background: #e47e27;
-		color: #ffffff;
 		position: static;
 		margin-bottom: 0.625em;
-		font-weight: bold;
+		border-left: solid 1px #e47e27;
 	}
 
 	.popular-posts-container .popular-posts {
 		padding: 0;
+		border: 0;
 	}
 	
 	.popular-posts td {
