@@ -2,7 +2,115 @@
 
 
 /* Style for login confirm page */
+#container_title {
+	display: none;
+}
+#mb_login {
+	border: 1px solid #d5d5d5;
+	padding: 10px 20px;
+	border-radius: 3px;
+	
+}
 
+#mb_login #login_fs {
+	height: 100px;
+	background-color: #d5d5d5;
+	margin-top: 10px;
+	position: relative;
+	width: 400px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#mb_login  label.login_id {
+	position: relative;
+	top: 20px;
+	padding-left: 10px;
+}
+
+#mb_login  label.login_pw  {
+	position: relative;
+	top: 8px;
+	padding-left: 10px;
+}
+	
+#mb_login input[type='text'], #mb_login input[type='password'] {
+	position: relative;
+	display: block;
+	left: 80px;
+	width: 200px;
+}
+#mb_login input[type='password'] { 
+	top: -10px;
+}
+
+#mb_login #login_auto_login {
+	position: absolute;
+	left: 10px;
+	
+}
+
+#mb_login label[for=login_auto_login] {
+	display: inline-block;
+	position: absolute;
+	left: 30px;
+	
+}
+
+#mb_login #login_info {
+	margin-top: 20px;
+	font-family: '?? ??', AppleGothic;
+	width: 455px;
+	margin: 20px auto 0 auto;
+}
+
+#mb_login #login_info p {
+	margin-bottom: 20px;
+}
+
+#mb_login #login_info div {
+	text-align: center;
+}
+
+#mb_login  h1 {
+	font-family: '?? ??', AppleGothic;
+	font-weight: normal;
+	display: inline-block;
+	background-color: #555555;
+	color: #ffffff;
+	padding: 0 20px;
+	height: 30px;
+	line-height: 28px;
+	font-size: 11pt;
+}
+
+#mb_login  .btn_submit {
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-weight: bold;
+	font-size: 13pt;
+}
+
+#mb_login  .btn_confirm {
+ display: none;
+}
+
+#mb_login  .btn_confirm a {
+	display: inline-block;
+	height: 25px;
+	line-height: 23px;
+	padding: 0 20px;
+	font-family: '?? ??', AppleGothic;
+	background-color: #555555;
+	color: #ffffff;	
+}
+
+
+
+/*
 #container_title {
 	border: 1px solid grey!important;
 	padding: 1em !important;
@@ -13,7 +121,44 @@
 	border: 1px solid grey!important;
 	padding: 1em !important;
 }
+*/
 
+/* register_result.skin.php */
+#reg_result #result_logo {
+	margin-bottom: 20px;
+}
+#reg_result #result_logo .logo-text {
+	font-family: '?? ??', AppleGothic;
+	font-size: 20pt;
+	font-weight: bold;
+	color: #344870;
+	position: relative;
+	top: 5px;
+}
+.result_skin_wrapper {
+	border: 1px solid #d5d5d5;
+	background-color: #f9f9f9;
+	border-radius: 4px;
+}
+.result_skin_wrapper .inner {
+	border: 1px solid #ffffff;
+	padding: 50px;
+	border-radius: 4px;
+}
+.result_skin_wrapper .inner .main-message {
+	color: #284262;
+	font-weight: bold;
+	font-size: 1.250em;
+	font-family: '?? ??', AppleGothic;
+	margin-bottom: 10px;
+}
+.result_skin_wrapper .inner .main-message  strong {
+	color: #2e084f;
+	font-size: 1.3em;
+}
+.result_skin_wrapper .inner p {
+	line-height: 20px;
+}
 
 
 /* Style for member confirm page */

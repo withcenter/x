@@ -233,41 +233,4 @@ body{
 	width: 100%;
 	height: 100%;
 	border: 0;
-}	
-
-
-#reg_result #result_logo {
-	margin-bottom: 20px;
-}
-#reg_result #result_logo .logo-text {
-	font-family: '맑은 고딕', AppleGothic;
-	font-size: 20pt;
-	font-weight: bold;
-	color: #344870;
-	position: relative;
-	top: 5px;
-}
-.result_skin_wrapper {
-	border: 1px solid #d5d5d5;
-	background-color: #f9f9f9;
-	border-radius: 4px;
-}
-.result_skin_wrapper .inner {
-	border: 1px solid #ffffff;
-	padding: 50px;
-	border-radius: 4px;
-}
-.result_skin_wrapper .inner .main-message {
-	color: #284262;
-	font-weight: bold;
-	font-size: 1.250em;
-	font-family: '맑은 고딕', AppleGothic;
-	margin-bottom: 10px;
-}
-.result_skin_wrapper .inner .main-message  strong {
-	color: #2e084f;
-	font-size: 1.3em;
-}
-.result_skin_wrapper .inner p {
-	line-height: 20px;
 }
