@@ -183,7 +183,7 @@ a {
 	#header .top {
 		display:none;
 	}
-	#header .top-below-500-px { display:block; }
+	#header .top-below-640-px  { display:block; }
 	
 	.lt_more {
 		display:none;
@@ -209,7 +209,7 @@ a {
 }
 /* below 500 px */
 @media all and ( max-width: 500px ) {
-
+	
 }
 /* below 480 px */
 @media all and ( max-width: 480px ) {

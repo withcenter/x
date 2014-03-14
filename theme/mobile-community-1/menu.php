@@ -33,12 +33,15 @@
 	?>
 	<li class='menu_item mobile_message_icon'>
 		<a href="<?php echo G5_BBS_URL ?>/memo.php" target="_blank" >
-			<img src='<?=x::url_theme()?>/img/mobile_icon5.png'/>
+			<?if( $memo_not_read ){?>
+					<img src='<?=x::url_theme()?>/img/mobile_icon5-b.png'/>
+			<?}
+			else {
+			?>
+					<img src='<?=x::url_theme()?>/img/mobile_icon5.png'/>
+			<?}?>
 			<span class='label'>
 				Messages
-				<?if( $memo_not_read ){?>
-					<div class='exclamation'>!</div>
-				<?}?>
 			</span>			
 		</a>		
 	</li>
@@ -63,8 +66,8 @@
 		</a>
 
 		
-		<div class='pop-up-login'>
-			<?=outlogin('x-mobile-1');?>
+		<div class='pop-up pop-up-login'>
+			<?=outlogin('x-outlogin-mobile-1');?>
 		</div>
 		
 
