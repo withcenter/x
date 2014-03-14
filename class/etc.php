@@ -634,27 +634,6 @@ function ln($en, $ko=null)
 }
 
 
-/**
- *  @brief checks admin permission
- *
- *  @return true if the user has admin permission.
- *  
- *  @details it always return true if the login user is super admin.
-	it returns true if the user is a site admin and if the user is accessing his site.
-	
-	Use this function to check if the user is super admin or site admin.
- */
-function admin()
-{
-	if ( ! login() ) return false;
-	global $is_admin;
-	if ( $is_admin == 'super' ) return true;
-	else {
-		$site = x::site();
-		if ( $site['mb_id'] == my('id') ) return true;
-	}
-	return false;
-}
 
 /**
  *  @brief return true if the user is accessing admin page.

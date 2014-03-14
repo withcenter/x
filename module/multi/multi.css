@@ -601,16 +601,17 @@ table > .header td:first-child {
 .add-new-site {
 	float: right;
 	display: inline-block;
-	width: 120px;
-	height: 20px;
+	margin-bottom: 1em;
+	padding: 1em;
 	background-color: #616161;
-	color: #ffffff;
-	line-height: 20px;
+	color: white !important;
 	text-align: center;
-	margin-bottom: 10px;
+	font-weight: bold;
 }
+
 .add-new-site:hover {
-	text-decoration: none;
+	color: red !important;
+	text-decoration:none;
 }
 
 .admin-multisite-table .header {
@@ -1568,5 +1569,12 @@ span.config-name {
 	color: #ffffff;
 	padding: 3px 10px;
 	border-radius: 3px;
-	
+}
+
+
+
+
+
+.admin-list-table td {
+	padding: 0.4em 0;
 }

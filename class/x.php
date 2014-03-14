@@ -697,13 +697,19 @@ class x {
 	/** @short delete a site
 	 *
 	 *
-	 * @code
+	 * @code delete by domain
 			if ( x::site( $site['domain'] ) ) x::site_delete( $site['domain'] );
 		@endcode
+		@code delete by idx
+			$site = site_delete( $in['idx'] );
+		@endcode
+		
 	 */
-	static function site_delete ( $domain )
+	static function site_delete ( $mixed )
 	{
-		return db::query( "DELETE FROM x_site_config WHERE domain='$domain'");
+		if ( is_numeric($mixed) ) $qw = "idx=$mixed";
+		else $qw = "domain='$mixed'";
+		return db::query( "DELETE FROM x_site_config WHERE $qw");
 	}
 	
 	/**

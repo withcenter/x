@@ -41,6 +41,14 @@
 		</td>
 	</tr>
 	
+	
+	<tr>
+		<td>Site Title</td>
+		<td>
+			<input type='text' name='title' value="<?=meta_get($site['domain'], 'title')?>">
+		</td>
+	</tr>
+	
 	<tr>
 		<td>Theme</td>
 		<td>
@@ -71,7 +79,7 @@
 		<td></td>
 		<td>
 			<input type='submit' value='UPDATE'>
-			<a href="?module=<?=$module?>&action=admin_list">LIST</a>
+			<a href="?module=<?=$module?>&action=admin_site_list">LIST</a>
 		</td>
 	</tr>
 		

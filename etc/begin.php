@@ -16,6 +16,13 @@
 	if ( etc::web() ) include x::dir() . '/etc/rewrite/bbs/visit_insert.inc.php';
 	
 	
+	/** @short check if the user is super admin when some accesses super admin page
+	 *
+	 */
+	if ( preg_match("/^admin_/i", $action) && ! super_admin() ) { jsBack("관리자가 아닙니다."); exit; }
+	
+	
+	
 // -----------------------------------------------------------------------------
 //
 // @TODO ordered by JaeHo
@@ -237,17 +244,21 @@ function hook_body_begin()
 	if ( $done_head_begin_skin_update ) return;
 	else $done_head_begin_skin_update = 1;
 	
+	
+	
+	echo "<link rel='stylesheet' type='text/css' href='" . x::url() . "/css/default.css' />\n";
+	echo "<script src='".$url = x::url() . '/js/default.js'."'></script>\n";
+	
+	
+	/*
 	$url = x::url() . '/css/skin-update.css';
 	echo "<link rel='stylesheet' href='$url'>\n";
 	
 	
-	$url = x::url() . '/js/default.js';
-	echo "<script src='$url'></script>\n";
-	
 	$url = x::url() . '/js/skin-update.js';
 	echo "<script src='$url'></script>\n";
+	*/
 	
-	echo "<link rel='stylesheet' type='text/css' href='" . x::url() . "/css/default.css' />";
 	
 	// dlog("hook_body_begin() ends");
 }

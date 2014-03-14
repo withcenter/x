@@ -2,7 +2,7 @@
 
 <div class='admin-list'>
 	<div class='title'>Site List</div>
-	<a class='add-new-site' href='?module=<?=$module?>&action=admin_add_update'>Add new site.</a>
+	<a class='add-new-site' href='?module=<?=$module?>&action=admin_site_add_update'>Add New Site</a>
 	<div style='clear:right;'></div>
 
 	<table cellpadding=0 cellspacing=0 width='100%' class='admin-list-table'>
@@ -35,13 +35,13 @@
 			<td align='center'><?=x::forum_count( $site['domain'] )?></td>
 			<td align='center'><?=x::count_post(x::forum_ids( $site['domain'] ) )?></td>
 			<td align='center'>
-				<a href='?module=<?=$module?>&action=admin_add_update&idx=<?=$site['idx']?>'>
-					<img src='<?=x::url()?>/module/multisite/img/setting.png' />
+				<a href='?module=<?=$module?>&action=admin_site_add_update&idx=<?=$site['idx']?>'>
+					<img src='<?=module('/img/setting.png')?>' />
 				</a>
 			</td>
 			<td align='center'>
-				<a href="#" onclick="return confirm('Do you want to delete - <?=$site[domain]?>?');">
-					<img src='<?=x::url()?>/module/multisite/img/trashbin.png' />
+				<a href="?module=<?=$module?>&action=admin_site_delete_submit&idx=<?=$site['idx']?>" onclick="return confirm('Do you want to delete - <?=$site[domain]?>?');">
+					<img src='<?=module('/img/trashbin.png')?>' />
 				</a>
 			</td>
 		</tr>
