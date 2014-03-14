@@ -35,17 +35,31 @@
 		<a href="<?php echo G5_BBS_URL ?>/memo.php" target="_blank" >
 			<img src='<?=x::url_theme()?>/img/mobile_icon5.png'/>
 			<span class='label'>
-				Menu
+				Messages
 				<?if( $memo_not_read ){?>
 					<div class='exclamation'>!</div>
 				<?}?>
 			</span>			
 		</a>		
 	</li>
-	<li  class='menu_item log-in-button'>
+	<?
+		if( $member['mb_id'] ) {
+			$login_msg = "Logout";
+			$profile_msg = "Profile";
+			$profile_msg_url = G5_BBS_URL."/member_confirm.php?url=register_form.php";
+		}
+		else {
+			$login_msg = "Login";
+			$profile_msg = "Register";
+			$profile_msg_url = G5_BBS_URL."/register.php";
+		}
+	?>
+	<li class='menu_item log-in-button'>
 		<a href='javascrip:void(0)'>
 			<img src='<?=x::url_theme()?>/img/mobile_icon6.png'/>		
-			<span class='label'>Menu</span>
+			<span class='label'>
+				<?=$login_msg?>
+			</span>
 		</a>
 
 		
@@ -56,9 +70,9 @@
 
 	</li>
 	<li class='less-padding menu_item'>
-		<a href='javascrip:void(0)'>
+		<a href='<?=$profile_msg_url?>'>
 			<img src='<?=x::url_theme()?>/img/mobile_icon7.png'/>		
-			<span class='label'>Menu</span>
+			<span class='label'><?=$profile_msg?></span>
 		</a>
 	</li>
 </ul>

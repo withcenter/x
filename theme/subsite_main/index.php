@@ -39,11 +39,11 @@
 </div>
 
 <div id='create-your-site'>
-	<a href='<?=x::url()?>/?module=multisite&action=create'><img src='<?=x::url_theme()?>/img/create_button.png' /></a>
+	<a href='<?=x::url()?>/?module=multi&action=create'><img src='<?=x::url_theme()?>/img/create_button.png' /></a>
 </div>
 
 <div id='banner-wrapper'>
-	<a href='<?=x::url()?>/?module=multisite&action=create'><img src='<?=x::url_theme()?>/img/banner.png' /></a>
+	<a href='<?=x::url()?>/?module=multi&action=create'><img src='<?=x::url_theme()?>/img/banner.png' /></a>
 </div>
 
 <table class='bottom-content' cellpadding=0 cellspacing=0 width='100%' border=0>

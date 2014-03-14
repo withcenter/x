@@ -6,7 +6,7 @@
 ?>
 <div><?php echo _L('Member Setting');?></div>
 <div><?php echo _L('Choose Your Language');?></div>
-Your Current Language : <?=etc::user_language()?>
+<?php echo _L('Your Current Language')?> : <?=etc::user_language()?>
 <div>
 	<form name='setting' action='?'>
 		
@@ -21,8 +21,6 @@ Your Current Language : <?=etc::user_language()?>
 		</select>
 	</form>
 </div>
-<div><?php echo _L('Choose Your Time');?></div>
-
 
 
 <script>

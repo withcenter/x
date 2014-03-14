@@ -17,8 +17,8 @@
 	global $idx, $domain, $priority, $theme;
 	
 	
-	site_set( '.', '.' );
-	meta_set( '.', 'theme', 'default' );
+	x::site_set( '.', '.' );
+	x::meta_set( '.', 'theme', 'default' );
 	
 	
 	patch_message('create . domain with default skin');

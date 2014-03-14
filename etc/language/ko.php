@@ -171,3 +171,5 @@ $language_code['good'] = "추천";
 $language_code['comment'] = "댓글";
 
 $language_code['Site Info'] = '사이트 정보';
+$language_code['choose your language'] = "언어선택";
+$language_code['your current language'] = '현재 선택된 언어';
