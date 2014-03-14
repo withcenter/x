@@ -16,6 +16,7 @@
 	border: 0 solid blue;
 	width: 25%;
 	height: 100%;
+	word-break: break-all;
 }
 
 .x-gallery-2 li.left-images {
