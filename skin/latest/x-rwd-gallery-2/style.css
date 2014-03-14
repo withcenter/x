@@ -165,7 +165,8 @@
 	.x-gallery-2 .text .date-comment-view-mobile .post-mobile-meta {
 		display: block;
 		overflow: hidden;
-		height: 1em;
+		height: 1.1em;
+		line-height: 1em;
 	}
 	
 	.x-gallery-2 .text .date-comment-view-mobile .post-divider {
