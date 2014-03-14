@@ -57,8 +57,8 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 						<div class='date-comment-view'><a href="<?=$list[$i]['href']?>"><span class='post-date'><?=date('m/d/Y', strtotime($list[$i]['wr_datetime']))?></span> <span class='post-divider'> | </span> <span class='post-comment'><?=$list[$i]['wr_comment']?> Comment</span> <span class='post-divider'>|</span> <span class='post-views'><?=$list[$i]['wr_hit']?> view</span></a></div>
 						
 						<div class='date-comment-view-mobile'>
-							<span class='post-author'>by <?=get_sideview($list[$i]['mb_id'],$list[$i]['wr_name'])?></span> on <span class='post-date'><?=date('m/d/Y', strtotime($list[$i]['wr_datetime']))?></span>
-							<br><a href="<?=$list[$i]['href']?>"><span class='post-comment'><?=$list[$i]['wr_comment']?> Comment</span> <span class='post-divider'>|</span> <span class='post-views'><?=$list[$i]['wr_hit']?> view</span>
+							<span class='post-mobile-meta'><span class='post-author'>by <?=get_sideview($list[$i]['mb_id'],$list[$i]['wr_name'])?></span> on <span class='post-date'><?=date('m/d/Y', strtotime($list[$i]['wr_datetime']))?></span></span>
+							<span class='post-mobile-comment-view'><a href="<?=$list[$i]['href']?>"><span class='post-comment'><?=$list[$i]['wr_comment']?> Comment</span> <span class='post-divider'>|</span> <span class='post-views'><?=$list[$i]['wr_hit']?> view</span></span>
 							</a>
 						</div>
 						
