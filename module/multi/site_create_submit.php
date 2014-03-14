@@ -27,5 +27,3 @@
 	}
 	
 	jsGo( url_site_admin( $domain ) );
-	
-	

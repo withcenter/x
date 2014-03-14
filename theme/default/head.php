@@ -83,12 +83,13 @@
     <div id="aside">
 		<?php echo outlogin('basic'); // 외부 로그인  ?>
 
-		<div class='left-menu'>
-			<div class='item'><a href='<?=x::url_setting()?>'><?php echo _L('Member Setting');?></a></div>
+		<ul class='left-menu'>
+			<li><a href='<?=x::url_setting()?>'><?php echo _L('Member Setting');?></a></li>
 			<? if ( admin() ) { ?>
-				<div class='item'><a href='<?=url_x_admin()?>'><?php echo _L('Admin Page');?></a></div>
+				<li><a href='<?=url_x_admin()?>'><?php echo _L('X Admin Page');?></a></li>
+				<li><a href='<?=url_site_admin()?>'><?php echo _L('Site Admin Page');?></a></li>
 			<? } ?>
-		</div>
+		</ul>
 		
     </div>
     <div id="container">

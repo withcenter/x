@@ -643,6 +643,7 @@ function ln($en, $ko=null)
  */
 function admin()
 {
+	if ( ! login() ) return false;
 	global $is_admin;
 	if ( $is_admin == 'super' ) return true;
 	else {

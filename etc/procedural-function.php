@@ -275,10 +275,10 @@ function url_x_admin()
 {
 	return x::url() . "/?module=admin&action=index";
 }
-function url_site_admin($domain=null)
+function url_site_admin($domain=null, $module='multi', $action='config_first_page')
 {
-	if ( empty($domain) ) return x::url() . "/?module=multi&action=config_first_page";
-	else return site_url( $domain ) . "/x/?module=multi&action=config_first_page";
+	if ( empty($domain) ) return x::url() . "/?module=$module&action=$action";
+	else return site_url( $domain ) . "/x/?module=$module&action=$action";
 }
 
 
