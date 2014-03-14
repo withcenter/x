@@ -37,28 +37,17 @@
 		</div>
 		<div class ='main-content'>
 			<div class='travel_images_with_caption_wrapper'>
-				<?
-				$latest_bo_table = x::board_id(etc::domain()).'_2';
-				if(g::forum_exist($latest_bo_table)){	
-					$latest_1_output = latest("x-travel_2_images_with_caption", $latest_bo_table, 6, 20);
-					echo $latest_1_output;
-				}
-				?>
+				<?=latest("x-travel_2_images_with_caption", bo_table(2), 6, 20)?>
 			</div>
 
 
 			<div class='right-widgets'>
 				<div class='travel_posts_with_image_right'>
 				<?
-				$latest_bo_table = x::board_id(etc::domain()).'_3';
-				if(g::forum_exist($latest_bo_table)){	
 					$option = array(
-									'no' => 3,
 									'icon' => x::url_theme()."/img/chat_icon2.png"
 					);
-					$latest_2_output = latest("x-travel_2_posts_with_image_right", $latest_bo_table, 3, 50, $cache_time=1, $option );
-					echo $latest_2_output;
-				}
+					echo latest("x-travel_2_posts_with_image_right", bo_table(3), 3, 50, $cache_time=1, $option );
 				?>
 				</div>
 				<div class='travel_2_timezone'>
@@ -93,42 +82,27 @@
 		<div class='lower-posts'>
 			<div class='travel_left_posts'>		
 				<?
-				$latest_bo_table = x::board_id(etc::domain()).'_4';
-				if(g::forum_exist($latest_bo_table)){	
 					$option = array( 
-									'no' => 4 ,
 									'icon'=> x::url_theme()."/img/folded-paper.png"
 								);
-					$latest_1_output = latest("x-latest-travel-lower-posts", $latest_bo_table, 4, 20, $cache_time=1, $option );
-					echo $latest_1_output;
-				}
+					echo latest("x-latest-travel-lower-posts", bo_table(4), 4, 20 );
 				?>
 			</div>
 			<div class='travel_middle_posts'>		
 				<?
-				$latest_bo_table = x::board_id(etc::domain()).'_5';
-				if(g::forum_exist($latest_bo_table)){	
 					$option = array( 
-									'no' => 4,
 									'icon'=> x::url_theme()."/img/folded-paper.png"
 								);
 				
-					$latest_1_output = latest("x-latest-travel-lower-posts", $latest_bo_table, 4, 20, $cache_time=1, $option );
-					echo $latest_1_output;
-				}
+					echo latest("x-latest-travel-lower-posts", bo_table(5), 4, 20);
 				?>
 			</div>
 			<div class='travel_right_posts'>		
 				<?
-				$latest_bo_table = x::board_id(etc::domain()).'_6';
-				if(g::forum_exist($latest_bo_table)){	
 					$option = array( 
-									'no' => 4,
 									'icon'=> x::url_theme()."/img/folded-paper.png"
 								);
-					$latest_1_output = latest("x-latest-travel-lower-posts", $latest_bo_table, 4, 20, $cache_time=1, $option);
-					echo $latest_1_output;
-				}
+					echo latest("x-latest-travel-lower-posts", bo_table(6), 4, 20);
 				?>
 			</div>
 			
