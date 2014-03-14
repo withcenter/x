@@ -7,14 +7,14 @@
 		$rows = db::rows($q);
 		//di($rows);
 		foreach ( $rows as $site ) {
-			$title = meta_get( $site['domain'], 'title' );
-			if ( empty( $title ) ) $title = 'No Title';
+			$title1 = meta_get( $site['domain'], 'title' );
+			if ( empty( $title1 ) ) $title1 = 'No Title';
 			$site_url = site_url( $site['domain'] );
 		?>
 		<div class='info-wrapper'>
 			<div class='top-info site-domain'><a href='<?=$site_url?>' target='_blank'><?=$site['domain']?></a></div>
 			<div class='other-info site-owner'><a href='<?=$site_url?>' target='_blank'>만든이: <?=$site['mb_id']?></a></div>
-			<div class='other-info site-title'><a href='<?=$site_url?>' target='_blank'><?=$title?></a></div>
+			<div class='other-info site-title'><a href='<?=$site_url?>' target='_blank'><?=$title1?></a></div>
 		</div>
 		<?}?>		
 	</div>

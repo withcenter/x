@@ -11,6 +11,8 @@ foreach ( $rows as $row ) {
 	$domain_url = site_url( $row['domain'] );
 	$domain_url = str_replace("\\", '', $domain_url);
 	$domain_title = cut_str( x::meta_get($row['domain'], 'title'), 21, "..." );
+	if ( empty($domain_title ) ) continue;
+	
 	$dot = $image_url.'/dot.gif';
 	
 	echo "
