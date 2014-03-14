@@ -89,7 +89,7 @@
 					$option = array( 
 									'icon'=> x::url_theme()."/img/folded-paper.png"
 								);
-					$latest_1_output = latest("x-latest-travel-lower-posts", bo_table(4), 4, 20, $cache_time=1, $option );
+					$latest_1_output = latest("x-latest-travel-lower-posts", bo_table(4), 4, 20, 1, $option );
 					echo $latest_1_output;
 				?>
 			</div>
@@ -99,17 +99,16 @@
 								'icon'=> x::url_theme()."/img/folded-paper.png"
 							);
 				
-				$latest_1_output = latest("x-latest-travel-lower-posts", bo_table(5), 4, 20, $cache_time=1, $option );
+				$latest_1_output = latest("x-latest-travel-lower-posts", bo_table(5), 4, 20, 1, $option );
 				echo $latest_1_output;
 			?>
 			</div>
 			<div class='travel_right_posts'>		
 				<?
 					$option = array( 
-									'no' => 4,
 									'icon'=> x::url_theme()."/img/folded-paper.png"
 								);
-					$latest_1_output = latest("x-latest-travel-lower-posts", bo_table(6), 4, 20, $cache_time=1, $option);
+					$latest_1_output = latest("x-latest-travel-lower-posts", bo_table(6), 4, 20, 1, $option);
 					echo $latest_1_output;
 				?>
 			</div>
