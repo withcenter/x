@@ -1,5 +1,6 @@
 <?php
-	$forum = meta('forum_no_1');
+	if ( !$forum = meta('forum_no_1') ) $forum = bo_table(1);
+	
 	$forum_id = $g5['write_prefix'].$forum;
 	
 	if ( $in['page_no'] ) $page_no = $in['page_no'];

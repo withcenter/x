@@ -1,9 +1,8 @@
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
+add_stylesheet( "<link rel='stylesheet' href='".$latest_skin_url."/style.css'>" );
 ?>
-
-<link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
 <table class='blog-latest' cellpadding=0 cellspacing=0 width='100%'>
 <?php
 if ( $list ) {
