@@ -64,7 +64,7 @@ add_stylesheet("<link rel='stylesheet' type='text/css' href='".x::url()."/module
 			);
 			
 			if ( $site_type == 'blog' ) $o['bo_skin'] = 'x/skin/board/x-board-blog';
-			else if ( $site_type == 'travel_theme_1' )  $o['bo_skin'] = 'x/skin/board/x-board-travel-3';
+			else if ( $site_type == 'travel_theme_2' )  $o['bo_skin'] = 'x/skin/board/x-board-travel-3';
 			else $o['bo_skin'] = 'x/skin/board/multi';
 			
 			g::board_create($o);
@@ -90,7 +90,7 @@ add_stylesheet("<link rel='stylesheet' type='text/css' href='".x::url()."/module
 						'bo_use_list_view' => 1
 					);
 					
-					if ( $site_type == 'travel_theme_1'){
+					if ( $site_type == 'travel_theme_2'){
 						if ( $i == 2 || $i == 3 ) {
 							$o['bo_skin'] = 'x/skin/board/x-board-travel-3';
 						}

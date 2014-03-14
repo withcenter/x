@@ -96,10 +96,9 @@
 		if ( empty($in['nav_no'] ) ) $nav_no = 1;
 		else $nav_no = $in['nav_no'];
 
-		echo "
-			<div class='paging'>
-				<a class='first_page_no page_no' href='".g::url()."/?nav_no=1&page_no=1'>&lt;&lt;</a>
-			";
+		echo "<div class='paging'>";
+		
+		if ( $page_no > 1 ) echo  "<a class='first_page_no page_no' href='".g::url()."/?nav_no=1&page_no=1'>&lt;&lt;</a>";
 				
 		if ( $nav_no > 1 ) {
 			echo "<a class='page_no' href='".g::url()."/?nav_no=".($nav_no - 1)."&page_no=".$pn[$nav_no - 2][0] ."'>이전</a>";
@@ -117,10 +116,11 @@
 		if ( $nav_no < count ( $pn ) ) {
 			echo "<a class='page_no' href='".g::url()."/?nav_no=".($nav_no + 1). "&page_no=".$pn[$nav_no][0]."'>다음</a>";
 		}
-		echo "
-				<a class='last_page_no page_no' href='".g::url()."/?nav_no=".count( $pn ) ."&page_no=$pages'>&gt;&gt;</a>
-			</div>
-		";
+		
+		if ( $total_post > 3 )
+		echo "<a class='last_page_no page_no' href='".g::url()."/?nav_no=".count( $pn ) ."&page_no=$pages'>&gt;&gt;</a>";
+		
+		echo"</div>";
 	?>
 	</div>
 </div>
