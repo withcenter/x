@@ -53,7 +53,7 @@
         <ul id="tnb">
             <?php if ($is_member) {  ?>
             <?php if ($is_admin) {  ?>
-            <li><a href="<?php echo G5_ADMIN_URL ?>"><b>관리자</b></a></li>
+            <li><a href="<?php echo url_x_admin() ?>"><b>X 관리자</b></a></li>
             <?php }  ?>
             <li><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=<?php echo G5_BBS_URL ?>/register_form.php">정보수정</a></li>
             <li><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li>
@@ -84,10 +84,12 @@
 		<?php echo outlogin('basic'); // 외부 로그인  ?>
 
 		<ul class='left-menu'>
-			<li><a href='<?=x::url_setting()?>'><?php echo _L('Member Setting');?></a></li>
+			<li><a href="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub" target="_blank"><?=ln('X User Guide', 'X 이용 안내');?></a></li>
+			<li><a href='<?=x::url_setting()?>'><?=ln('User Settings', '사용자 설정');?></a></li>
 			<? if ( admin() ) { ?>
-				<li><a href='<?=url_x_admin()?>'><?php echo _L('X Admin Page');?></a></li>
-				<li><a href='<?=url_site_admin()?>'><?php echo _L('Site Admin Page');?></a></li>
+				<li><a href='<?=url_x_admin()?>'><?=ln('X Admin Page', 'X 관리자 페이지');?></a></li>
+				<li><a href='<?=url_site_admin()?>'><?=ln('Site Admin Page', '사이트 관리자 페이지');?></a></li>
+				<li><a href='<?=G5_URL?>/adm'><?=ln('G5 Admin Page', 'G5 관리자 페이지');?></a></li>
 			<? } ?>
 		</ul>
 		
