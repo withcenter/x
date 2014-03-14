@@ -52,7 +52,7 @@
 }
 
 .x-gallery-2 .photo img.no-image {
-	border: solid 1px #bbbbbb;
+
 }
 
 .x-gallery-2 .text {
@@ -121,7 +121,6 @@
 	}
 }
 
-
 @media all and ( max-width: 25em ) {
 	.x-gallery-2 li .post {
 		border: solid 1px #bbbbbb;
@@ -132,8 +131,7 @@
 	
 
 	.x-gallery-2 li .post .no-image {
-		position: relative;
-		left: -1px;
+
 	}
 	.x-gallery-2 li {
 	

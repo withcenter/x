@@ -42,7 +42,7 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 				$count_image ++;
 			} else {
 				$img = '<img class="img_left" src="'.$latest_skin_url.'/img/no-image.png"/>';
-				$no_image = g::thumbnail_from_image_tag( $img, $bo_table, $width-2, $height-4 );
+				$no_image = g::thumbnail_from_image_tag( $img, $bo_table, $width, $height);
 				$img = "<img class='img_left no-image' src='$no_image'/>";
 				$count_image ++;
 			}
