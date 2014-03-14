@@ -9,7 +9,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$latest_skin_url.'/style.css">', 
 	<div class='title'>
 		<span class='board_subject'>
 			<img src='<?=$options[icon]?>'/>
-			<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=<?php echo $bo_table ?>" class="lt_title"><strong><?php echo $bo_subject ?></strong></a>
+			<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=<?php echo $bo_table ?>" class="lt_title"><?php echo cut_str($bo_subject,'15','...') ?></a>
 		</span>
 		<span class='latest-more'>
 			<a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=<?php echo $bo_table ?>">+ 더보기</a>
