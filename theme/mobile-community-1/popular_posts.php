@@ -17,13 +17,13 @@
 	}
 		
 ?>
+<div class='posts-title'>
+	<img src='<?=x::url_theme()?>/img/category-icon.png'/><?=$popular_subject?>
+</div>
 <div class='popular-posts-container'>
-	<div class='posts-title'>
-		<img src='<?=x::url_theme()?>/img/category-icon.png'/><?=$popular_subject?>
-	</div>
 	<?
 	for ( $i = 0; $i <= 2 ; $i++ ) {
-		echo "<div class='popular-posts'>";
+			?><div class='popular-posts <?if ( $i==2 ) echo "last-popular-post";?>'> <?
 			$imgsrc = get_list_thumbnail($popular_posts_1[$i]['bo_table'], $popular_posts_1[$i]['wr_id'], 210, 80); 
 			if ( $imgsrc['src'] ) {
 				$img = "<img src='$imgsrc[src]'/>";
@@ -73,13 +73,14 @@
 		$popular_posts_2[$key]['wr_content'] = db::result("SELECT wr_content FROM $g5[write_prefix]".$value['bo_table']." WHERE wr_id='".$value['wr_id']."'");
 	}
 ?>
+<div class='posts-title'>
+	<img src='<?=x::url_theme()?>/img/category-icon.png'/><?=$popular_subject?>
+</div>
 <div class='popular-posts-container'>
-	<div class='posts-title'>
-		<img src='<?=x::url_theme()?>/img/category-icon.png'/><?=$popular_subject?>
-	</div>
 	<?
 	for ( $i = 0; $i <= 2 ; $i++ ) {
-		echo "<div class='popular-posts'>";
+		?>
+		<div class='popular-posts <?if ( $i==2 ) echo "last-popular-post";?>'> <?
 			$imgsrc = get_list_thumbnail($popular_posts_2[$i]['bo_table'], $popular_posts_2[$i]['wr_id'], 210, 80); 
 			if ( $imgsrc['src'] ) {
 				$img = "<img src='$imgsrc[src]'/>";
