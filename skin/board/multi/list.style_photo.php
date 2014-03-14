@@ -9,6 +9,7 @@
 	include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 	for ($i=0; $i<count($list); $i++) {
 		$thumb = get_list_thumbnail($board['bo_table'], $list[$i]['wr_id'], $board['bo_gallery_width'], $board['bo_gallery_height']);
+		if ( empty($thumb['src']) ) $thumb['src'] = g::thumbnail_from_image_tag( $list[$i]['wr_content'], $bo_table, $board['bo_gallery_width'], $board['bo_gallery_height'] );
 		if ( empty($thumb['src']) ) $img_content = '<img class="no-photo" src="'.$board_skin_url . "/img/no-image.png".'" alt="'.$thumb['alt'].'">';
 		else $img_content = '<img src="'.$thumb['src'].'" alt="'.$thumb['alt'].'">';
 ?>

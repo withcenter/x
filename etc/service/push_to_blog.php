@@ -1,12 +1,13 @@
 <?php
 for ( $cb = 1; $cb <= 3; $cb++ ) {
-		$api_end_point = meta('api-end-point'.$cb);
-		$api_username = meta('api-username'.$cb);
-		$api_password = meta('api-password'.$cb);
 		
+		$api_end_point = $blog_api[$cb]['endpoint'];
+		$api_username = $blog_api[$cb]['username'];
+		$api_password = $blog_api[$cb]['password'];
+
 		if ( empty($api_end_point) || empty($api_username) || empty($api_password) ) continue;
-		
-		dlog("including push_to_blog.php ...");
+
+		//dlog("including push_to_blog.php ...");
 
 
 	if ( php_sapi_name() == 'cli' ) { /// debugging
@@ -30,16 +31,14 @@ for ( $cb = 1; $cb <= 3; $cb++ ) {
 		else return;
 	
 	}
-	dlog("push_to_blog.php begins");
-	
-	
+	// dlog("push_to_blog.php begins");
 	
 	include_once x::dir() . '/etc/xmlrpc/xmlrpc-3.0b/lib/xmlrpc.inc';
 	
 	
 	
 	global $wr_subject, $wr_content;
-	dlog ( $wr_subject );
+	// dlog ( $wr_subject );
 	
 	if ( empty($wr_subject) ) $wr_subject = "No subject";
 	if ( empty($wr_content) ) $wr_content = "No content";
@@ -64,7 +63,7 @@ for ( $cb = 1; $cb <= 3; $cb++ ) {
 		$copyright
 	";
 	if ( $mode == 'edit' ) {
-		dlog("Blog push updating begins");
+		// dlog("Blog push updating begins");
 	}
 	else $mode = 'write';
 	
@@ -93,7 +92,7 @@ for ( $cb = 1; $cb <= 3; $cb++ ) {
 		$str = str_replace("&gt;", ">", $str);
 		
 		echo $str;
-		dlog ( $str );
+		// dlog ( $str );
 		
 	}
 	else {
@@ -101,7 +100,7 @@ for ( $cb = 1; $cb <= 3; $cb++ ) {
 		
 		if ( $return_no == '1' ) continue;			/// result from editPost();
 		
-		dlog("blog_no: ".$return_no);
+		// dlog("blog_no: ".$return_no);
 		if ( etc::cli() ) {
 		}
 		else {
@@ -119,8 +118,8 @@ function push_to_blog( $o, $cb )
 	$client = "client_".$cb;
 	$f = "f_".$cb;
 
-	dlog("push_to_blog( $o ):");
-	dlog($o);
+	// dlog("push_to_blog( $o ):");
+	// dlog($o);
 	
 	
 	$endpoint	= $o['endpoint'];
@@ -131,7 +130,7 @@ function push_to_blog( $o, $cb )
 	$mode		= $o['mode'];
 	$blog_no[$cb]	= $o['blog_no'];
 	
-	dlog ( $blog_no[$cb] );
+	// dlog ( $blog_no[$cb] );
 	
 	$publish = true;
 	echo "STEP 1..: $endpoint\n";

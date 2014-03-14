@@ -1,2 +1,19 @@
 /* default style for all theme */
 
+
+/* Style for login confirm page */
+
+#container_title {
+	border: 1px solid grey!important;
+	padding: 1em !important;
+}
+
+#mb_confirm {
+	
+	border: 1px solid grey!important;
+	padding: 1em !important;
+}
+
+
+
+/* Style for member confirm page */

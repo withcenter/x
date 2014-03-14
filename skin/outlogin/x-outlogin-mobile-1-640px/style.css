@@ -208,13 +208,45 @@
 	text-align: left;	
 	font-size: 1.2em;
 	color: #ffffff;
+	height:16px;
+	word-break:break-all;
+	overflow:hidden;
 }
 
 /**submit**/
 .login-box-mobile-640px #ol_submit{
 	
 }
+/* for log in */
+@media all and ( max-width: 342px ) {
+	.login-box-mobile-640px .register_autologin a{
+		display:block;
+	}
+}
 
-@media all and ( max-width: 320px ) {
+@media all and ( max-width: 250px ) {
+	.login-box-mobile-640px .register_autologin{
+		text-align:left;
+	}
 	
+	.login-box-mobile-640px .register_autologin #ol_password_lost, .login-box-mobile-640px .register_autologin .login-reg{
+		margin:0;
+	}
+	
+	.login-box-mobile-640px .register_autologin .auto_login{
+		float:none;
+		display:block;
+	}
+}
+
+/* for log out */
+@media all and ( max-width: 285px ) {
+	
+	.logout-box-mobile-640px{
+		font-size:.9em!important;
+	}
+	
+	.logout-box-mobile-640px .user-info img{
+		display:none;
+	}
 }

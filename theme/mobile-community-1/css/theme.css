@@ -319,6 +319,7 @@ a {
 		overflow:hidden;
 	}
 	#header .top .search .key{ width: 14em; }
+	#footer { margin-top: 3em; }
 }
 /* below 500 px */
 @media all and ( max-width: 500px ) {
@@ -365,9 +366,11 @@ a {
 	}
 	
 	#header .submenu{
-		width:100%;
-		margin:0!important;
+		margin:0 0.4em!important;
 	}
+	
+	#footer { margin-top: 2em; }
+	
 }
 /* below 480 px */
 @media all and ( max-width: 480px ) {
