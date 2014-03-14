@@ -143,7 +143,7 @@
 
 /**pop-up-login**/
 #header .mobile-menu .pop-up-login{
-	/*display:none;*/
+	display:none;
 	width:96.8%;	
 	margin:auto;
 	overflow:hidden;
