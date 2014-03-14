@@ -14,8 +14,11 @@
 		
 	?>
 	<? if ( admin() ) {?>
-		<div class='small-title'><a href='<?=g::url_write( $ids[0] )?>'>글쓰기</a></div>
+		<div class='small-title' style='float: left; margin-bottom: 0; margin-right: 10px;'><a href='<?=g::url_write( $ids[0] )?>'>글쓰기</a></div>
 	<? }?>
+	
+	<div class='small-title' style='float: left; margin-bottom: 0;'><a href='<?=g::url()?>?device=mobile'>모바일</a></div>
+	<div style='clear:left;'></div>
 </div>
 
 <div class='login-form'>

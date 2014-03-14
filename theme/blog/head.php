@@ -26,7 +26,7 @@
 					$i++;
 				}
 			?>
-			<li class='menu-mobile'><a href='<?=g::url()?>?device=mobile'>모바일</a></li>
+			<? /* <li class='menu-mobile'><a href='<?=g::url()?>?device=mobile'>모바일</a></li> */?>
         </ul>	
     </div>
 </div>
