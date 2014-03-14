@@ -529,6 +529,7 @@ class gnuboard {
 		self::write_file( array( 'bo_table'=>$o['bo_table'], 'wr_id'=>$wr_id, 'path'=>$o['file_3'] ) );
 		
 	@endcode
+	 * @warning it will cause error(warning) if the data folder does not exist. remember G5 only create data folder when a file is first uploaded.
 	 */
 	static function write_file( $o )
 	{
@@ -832,9 +833,13 @@ class gnuboard {
 	 *  
 	 *  @details Details
 	 *  
-	 *  @code
+	 *  @code for blog board theme
 	 *  	 $thumb = get_list_thumbnail($forum, $row['wr_id'], 450, 350);
 	 *  	 if ( empty($thumb['src']) )  $thumb['src'] = g::thumbnail_from_image_tag( $row['wr_content'], $forum, 450, 350 );
+	 *  @endcode
+	 *  @code for a board skin.
+	 *  	$thumb = get_list_thumbnail($board['bo_table'], $list[$i]['wr_id'], $board['bo_gallery_width'], $board['bo_gallery_height']);
+	 *  	 if ( empty($thumb['src']) ) $thumb['src'] = g::thumbnail_from_image_tag( $list[$i]['wr_content'], $bo_table, $board['bo_gallery_width'], $board['bo_gallery_height'] );
 	 *  @endcode
 	 *  @todo once it has thumbnail image, then do not repeat creating thumbnail.
 	 */
@@ -853,10 +858,15 @@ class gnuboard {
 		
 		$output_filename = "thumb-" . basename($file).'_thumbnail_x'.$width.'_h'.$height . '.png';
 		$dest_file = G5_DATA_PATH . '/file/' . $bo_table . '/' . $output_filename;
-		if( !file_exists( $dest_file ) ){
+		// dlog("---------------------------------------- desg_file : $dest_file");
+		if( ! file_exists( $dest_file ) ) {
+			dlog("---------------------------------------- desg_file does not exist. : creating $dest_file");
 			$phpThumb = PhpThumbFactory::create( $file );
 			$phpThumb->adaptiveResize($width, $height);		
 			$phpThumb->save($dest_file, 'png');
+		}
+		else {
+			// dlog("---------------------------------------- desg_file Exist. NO CREATE: returning the url $dest_file");
 		}
 		return G5_DATA_URL . '/file/' . $bo_table . '/' . $output_filename;
 	}

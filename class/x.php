@@ -842,7 +842,7 @@ class x {
 	
 	static function url_config_forum( $id=null ) {
 		if ( empty($id) ) $id = $GLOBALS['bo_table'];
-		return x::url() . "?module=multisite&action=config_forum&mode=forum_setting&bo_table=$id";
+		return x::url() . "?module=multi&action=config_forum&mode=forum_setting&bo_table=$id";
 	}
 	
 	

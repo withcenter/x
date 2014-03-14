@@ -103,9 +103,28 @@ function hook_blog_push( $hook )
 {
 	global $wr_id, $g5, $bo_table, $in, $wr_subject, $wr_content;
 	
+	$blog_api = array();
+	for ( $cb = 1; $cb <= 3; $cb++ ) {
+		$api_end_point = meta('api-end-point'.$cb);
+		$api_username = meta('api-username'.$cb);
+		$api_password = meta('api-password'.$cb);
+		
+		if ( $api_end_point ) {
+			$blog_api[$cb] = array(
+				'endpoint'	=> $api_end_point,
+				'username'	=> $api_username,
+				'password'	=> $api_password
+			);
+		}
+	}
+	if ( empty( $blog_api ) ) return;
+	
+	
+		
+	
 	
 	if ( $in['w'] == 'u' ) {
-		dlog("Blog push updating begins");
+		//dlog("Blog push updating begins");
 		$mode = 'edit';
 	}
 	else $mode = 'write';
@@ -145,10 +164,8 @@ function hook_blog_push( $hook )
 	}
 	
 	
-	
-	//for ( $cb = 0; $cb < MAX_BLOG_WRITER; $cb ++ ) {
-	
-		include_once x::dir() . '/etc/service/push_to_blog.php';
+	//dlog("---------------------------------------- hook_blog_push () . include");
+	include x::dir() . '/etc/service/push_to_blog.php';
 	
 }
 // https://docs.google.com/a/withcenter.com/document/d/1Q3cunvTGTmGTathp_Jx4LTVn8tdsNzqsZmmpE8kLsvg/edit#heading=h.1zkefc3j0po6
@@ -193,22 +210,6 @@ function hook_latest_check()
 
 
 
-/**
- *  @short add 'head.php' and 'tail.php' into 'login.php'
- *  ----------------------------------------------------------
- */
-if ( login_page() || member_confirm_page() ) {
-	include_once G5_PATH . '/_head.php';
-	x::hook_register('end', 'hook_show_tail');
-	function hook_show_tail()
-	{
-		global $config;
-		include_once G5_PATH . '/_tail.php';
-	}
-}
-
-
-
 
 
 
@@ -225,11 +226,17 @@ function hook_theme_change()
 }
 /// https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.2jz9ybhuk887
 x::hook_register( 'body_begin' , 'hook_body_begin');
+
 function hook_body_begin()
 {
+	
 	global $done_head_begin_skin_update;
+	
+	// dlog("hook_body_begin() begins");
+	
 	if ( $done_head_begin_skin_update ) return;
 	else $done_head_begin_skin_update = 1;
+	
 	$url = x::url() . '/css/skin-update.css';
 	echo "<link rel='stylesheet' href='$url'>\n";
 	
@@ -240,7 +247,9 @@ function hook_body_begin()
 	$url = x::url() . '/js/skin-update.js';
 	echo "<script src='$url'></script>\n";
 	
+	echo "<link rel='stylesheet' type='text/css' href='" . x::url() . "/css/default.css' />";
 	
+	// dlog("hook_body_begin() ends");
 }
 x::hook_register( 'module_begin' , 'hook_module_begin');
 function hook_module_begin() {
@@ -252,10 +261,34 @@ function hook_module_begin() {
 x::hook_register('latest_before_return', 'hook_latest_before_return');
 function hook_latest_before_return()
 {
-	dlog("hook_latest_before_return begin:");
+	// dlog("hook_latest_before_return begin:");
 	if ( admin() ) {
 		global $content, $global_skin_dir, $global_bo_table;
 		$code = x::skin_code( $global_skin_dir, $global_bo_table );
 		$content = "<div class='skin-update'><div class='skin-update-button' code='$code'>admin</div>$content</div>";
 	}
 }
+
+
+
+
+
+
+/**
+ *  @short add 'head.php' and 'tail.php' into 'login.php'
+ *  ----------------------------------------------------------
+ *  @warning This code must be stated at the bottom of begin.php or very first place of head.php to affect the hook.
+ *  
+ */
+if ( login_page() || member_confirm_page() ) {
+	include_once G5_PATH . '/_head.php';
+	x::hook_register('end', 'hook_show_tail');
+	function hook_show_tail()
+	{
+		global $config;
+		include_once G5_PATH . '/_tail.php';
+	}
+}
+
+
+

@@ -3,6 +3,7 @@
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/tail.css' />
 
 
+
 <?
 	$theme_sidebar = x::meta('theme_sidebar');
 	if ( empty($theme_sidebar) || $theme_sidebar == 'left') {
