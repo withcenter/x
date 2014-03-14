@@ -8,7 +8,7 @@
 		//di($rows);
 		foreach ( $rows as $site ) {
 			$title1 = meta_get( $site['domain'], 'title' );
-			if ( empty( $title1 ) ) $title1 = 'No Title';
+			if ( empty( $title1 ) ) $title1 = '제목 없음';
 			$site_url = site_url( $site['domain'] );
 		?>
 		<div class='info-wrapper'>
