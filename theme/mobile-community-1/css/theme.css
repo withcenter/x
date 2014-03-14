@@ -123,7 +123,7 @@ a {
 	position: relative;
 	background: #ffffff;
 	margin: -1.5em 0 0.625em 0.625em;
-	padding-top: 1.875em;
+	padding: 1.50em 0 1em 0;
 	word-break: break-all;
 }
 
@@ -407,11 +407,11 @@ a {
 
 @media all and ( max-width: 25em ) {
 	.popular-posts-container {
-		padding: 0;
 		margin-left: 0;
 		border-top: 0;
 		margin-top: 0;
 		padding-top: 0.625em;
+		padding-bottom: 0;
 	}
 	
 	.posts-title {
