@@ -34,6 +34,20 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
 		</div>
 		<div style='clear:both'></div>
 	</div>
+	<div class='top-below-500-px'>
+		<div class='logo'><a href='<?=g::url()?>'><img src="<?=x::theme_url('img/mobile_logo.png')?>"></a></div>		
+		<div class='search-button'>
+			<img src='<?=x::theme_url()?>/img/search-500px.png'/>
+			<div class='triangle'></div>
+		</div>
+		<div style='clear:both'></div>
+		<div class='search'>
+			<form>
+			<input class='key' type='text' name='key' autocomplete='off'><input class='submit' type='submit' value='검색' src='<?=x::url_theme()?>/img/search_icon.png'>
+			</form>
+		</div>		
+	</div>
+	
 	
 	<div class='mobile-menu'>
 		<div class='inner'><?include 'mobile-menu.php'?></div>

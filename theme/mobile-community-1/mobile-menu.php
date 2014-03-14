@@ -32,7 +32,7 @@
 			<span class='label'>Menu</span>
 		</a>
 	</li>
-	<li class='menu_item'>
+	<li class='menu_item favorites'>
 		<a href='javascrip:void(0)'>
 			<img src='<?=x::url_theme()?>/img/mobile_icon2.png'/>		
 			<span class='label'>Menu</span>

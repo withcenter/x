@@ -42,7 +42,7 @@
 	box-shadow:0 3px 0 0 #e8e8e8 inset;
 }
 #header .top-below-640-px  .search .key {
-	width:17.2em;	
+	width:17.2em;
 	padding:1em;
 }
 #header .top-below-640-px  .search .submit {
@@ -147,4 +147,79 @@
 	width:96.8%;	
 	margin:auto;
 	overflow:hidden;
+}
+
+
+/**500px**/
+.top-below-500-px{
+	display:none;
+}
+
+.top-below-500-px .logo{
+	width:43.5%;
+	float:left;
+	margin-top:10px;
+}
+
+.top-below-500-px .logo img{
+	width:100%;
+}
+
+.top-below-500-px .search-button{
+	float:left;
+	width:56.5%;
+	text-align:right;
+	cursor:pointer;
+	position:relative;
+	margin-bottom:10px;
+}
+
+.top-below-500-px .search-button .triangle{
+	position:absolute;
+	right:20px;
+	bottom:-5px;
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #345184;
+	display:none;
+}
+
+.top-below-500-px .search-button img{
+	background-color:#345184;
+	padding:13px;
+}
+
+.top-below-500-px .search{
+	position:relative;	
+	
+}
+
+.top-below-500-px .search input{
+	border:0;
+}
+
+.top-below-500-px .search input[name='key']{
+	border:0;
+	border:1px solid #345184;
+	box-shadow:0 3px 0 0 #e8e8e8 inset;
+	width:94.6%;
+	padding:15px 2.3%;
+	margin-bottom:10px;
+	font-size:1.2em;
+	background-color:#fafafa;
+}
+
+.top-below-500-px .search input.submit{
+	background-color:#345184;
+	box-shadow:0 1px 0 0 #8395b3 inset;
+	border:1px solid #2a426b;
+	padding:6px 17px;
+	color:#ffffff;
+	font-size:1.2em;
+	cursor:pointer;
+	position:absolute;
+	right:10px;
+	top:10px;
 }

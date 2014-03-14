@@ -25,6 +25,11 @@ $(function(){
 	$('#header .mobile-menu ul li.log-in-button a').click(function(){		
 		$('.mobile-menu .pop-up-login').toggle();	
 	});
+	
+	$('.top-below-500-px .search-button').click(function(){
+		$('.top-below-500-px .triangle').toggle();
+		$('.top-below-500-px .search').toggle();
+	});
 });
 
 

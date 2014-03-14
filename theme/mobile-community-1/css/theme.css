@@ -164,10 +164,6 @@ a {
 	}
 }
 
-
-
-
-
 @media all and ( max-width: 640px ) {
 	#header .top .search .key{ width: 16em; }
 	#sidebar {
@@ -221,7 +217,40 @@ a {
 }
 /* below 500 px */
 @media all and ( max-width: 500px ) {
+	.top-below-640-px{
+		display:none!important;
+	}
 	
+	.top-below-500-px{
+		display:block!important;
+	}
+	
+	.mobile-menu .inner .menu_item.favorites, .mobile-menu .inner .menu_item.write, .mobile-menu .inner .menu_item.mobile_message_icon{
+		display:none!important;
+	}
+	
+	
+	#header .mobile-menu ul li.menu_item {		
+		width:25%;		
+	}
+
+	#header .mobile-menu .inner ul{
+		width:100%;
+	}
+	
+	
+	#header .mobile-menu .drop-down{
+		width:100%;
+	}
+
+	#header .mobile-menu .pop-up-login{
+		width:100%;
+	}
+	
+	#header .submenu{
+		width:100%;
+		margin:0!important;
+	}
 }
 /* below 480 px */
 @media all and ( max-width: 480px ) {

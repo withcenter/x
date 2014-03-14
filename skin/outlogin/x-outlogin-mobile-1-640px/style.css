@@ -23,6 +23,11 @@
 
 .login-box-mobile-640px.logout-box-mobile-640px {
 	width:100%;
+	font-size:1.2em;	
+}
+
+#header .login-box-mobile-640px.logout-box-mobile-640px  a{
+	color:#d8d8d8;
 }
 
 .login-box-mobile-640px  input[type='text'], .login-box-mobile-640px input[type='password'] {
@@ -105,15 +110,18 @@
 }
 
 .logout-box-mobile-640px .user-info {
-	width: 120px;
+	width: 65%;
 	float: left;
-	padding:10px 10px 0 10px;
+	padding:10px 0 0 10px;
 }
 
-.logout-box-mobile-640px.user-admin {
-	border-bottom: solid 1px #444444;
-	padding-bottom: 4px;
-	margin-bottom: 5px;
+.logout-box-mobile-640px .user-admin {
+	border-top: solid 1px #0a101a;
+	padding:5px 0;
+}
+
+.logout-box-mobile-640px .user-admin  img{
+	margin:0 7px 0 2px;
 }
 
 .logout-box-mobile-640px.user-meta {
@@ -150,51 +158,55 @@
 	text-decoration: none;
 }
 
-.user-admin {
+.login-box-mobile-640px .user-admin {
 	margin-top: 2px;
 }
 
-.user-admin span.user-icon-points {
+.login-box-mobile-640px .user-admin span.user-icon-points {
 	display: inline-block;
 	width: 50px;
 	float: left;
 }
-.user-meta span.user-message {
+.login-box-mobile-640px .user-meta span.user-message, .login-box-mobile-640px  .user-meta span.user-points {
 	display: inline-block;
-	margin-bottom: 5px;
+	padding:5px 0;
 }
-.user-meta span.user-message img, .user-meta span.user-points img {
+
+.login-box-mobile-640px .user-meta span.user-message img, .login-box-mobile-640px  .user-meta span.user-points img {
 	position: relative;
-	top: -1px;
-}
-.user-admin .user-scrap {
-	float: right;
+	top: -2px;
+
 }
 
-.user-admin span.edit_profile {
-	display: inline-block;
-	float: left;
+.user-meta span.user-points img {
+	margin-right:5px;
 }
 
-.user-admin span.admin_link {
+.login-box-mobile-640px .user-admin .user-scrap {
+	float:none;
+}
+
+.login-box-mobile-640px .user-admin span.edit_profile {
+	border:1px solid red;
+}
+
+.login-box-mobile-640px .user-admin span.admin_link {
 	display: inline-block;
 	width: 50px;
 	float: right;
 	text-align: right;
 }
 
-.log_out {
+.login-box-mobile-640px .log_out {
 	float: right;
-	padding:10px 10px 0 10px;
+	padding:10px 10px 0 0;
 }
 
-.user-logged-name {
+.login-box-mobile-640px .user-logged-name {
 	margin-top: 6px;
-	text-align: center;
-	font-weight: bold;
-	font-size: 12px;
-	color: #b9b9b9;
-	text-transform: UPPERCASE;
+	text-align: left;	
+	font-size: 1.2em;
+	color: #ffffff;
 }
 
 /**submit**/
