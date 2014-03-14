@@ -5,7 +5,7 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 <!-- 로그인 후 아웃로그인 시작 { -->
 <link rel="stylesheet" href="<?php echo $outlogin_skin_url ?>/style.css">
 
-<div class='login-box logout-mobile'>
+<div class='login-box-mobile-640px logout-box-mobile-640px'>	
 	<div style='border-bottom: solid 1px #444444; padding-bottom: 8px;'>
 	<div class='user-info'>
 	

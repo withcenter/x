@@ -4,13 +4,26 @@ $(function(){
 		else $('#login-box').hide();
 	});	
 
-	$('#header .menu ul li.menu_item a').click(function(){	
-		$('#header .menu ul li.menu_item a').removeClass('selected');
-		$(this).addClass('selected');				
+	$('#header ul li.menu_item a').click(function(){	
+	if( $(this).hasClass('selected') ){
+			$('#header ul li.menu_item a').removeClass('selected');
+	}else{
+			$('#header ul li.menu_item a').removeClass('selected');
+			$(this).addClass('selected');				
+			$('#header .pop-up').hide();
+		}
+	});
+	
+	$('#header ul li.menu_item.drop-down-button a').click(function(){			
+		$('.mobile-menu .drop-down').toggle();
 	});
 	
 	$('#header .menu ul li.log-in-button a').click(function(){		
-		$('.pop-up-login').toggle();		
+		$('.menu .pop-up-login').toggle();		
+	});
+	
+	$('#header .mobile-menu ul li.log-in-button a').click(function(){		
+		$('.mobile-menu .pop-up-login').toggle();	
 	});
 });
 

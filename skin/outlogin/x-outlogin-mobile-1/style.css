@@ -1,0 +1,177 @@
+.login-box-mobile {
+	font-family: Dotum;
+	background: #2a426b;
+	color: #ffffff;
+	height: 96px;
+	width:100%;
+	padding: 8px 7px;
+	overflow: hidden;	
+}
+
+.login-box-mobile.logout-box-mobile {
+	width:200px;		
+}
+
+.login-box-mobile  input[type='text'], .login-box-mobile input[type='password'] {
+	width: 170px;
+	height: 24px;
+	line-height: 22px;
+	padding: 0 10px;
+	border:1px solid black;
+}
+.login-box-mobile .login-user {
+	margin-bottom: 8px;
+}
+
+.login-box-mobile .register_autologin {
+	margin-top: 2px;
+	height:16px;
+	padding-left:3px;
+}
+
+
+.login-box-mobile  .dot {
+	position: relative;
+	top: -2px;
+
+}
+
+/**autologin password-lost register**/
+.login-box-mobile .register_autologin .auto_login {	
+	color: #d8d8d8;
+	float:left;	
+	margin-top:2px;
+}
+.login-box-mobile .register_autologin #ol_password_lost {
+	float:left;
+	margin-left: 25px;
+	color: #d8d8d8;	
+}
+
+.login-box-mobile .register_autologin .login-reg {
+	float: left;
+	color: #d8d8d8!important;
+	position: relative;	
+	margin-left:18px;
+}
+
+/* outlogin.skin.2.php */
+.logout-box-mobile{
+	padding: 9px 9px;
+	position: relative;
+	height: 94px;
+	font-size: 9pt;
+}
+
+.logout-box-mobile {
+	color: #ffffff;
+}
+
+.logout-box-mobile #ol_after_info {
+	background-color: #0e5565;
+	color: #ffffff;
+	display: inline-block;
+	padding: 0 10px;
+	height: 22px;
+	line-height: 23px;
+}
+.logout-box-mobile.admin-mode {
+	position: absolute;
+	bottom: 15px;
+	right: 3px;
+}
+
+.logout-box-mobile .admin-mode a{
+	margin-right: 10px;
+}
+
+.logout-box-mobile .user-info {
+	width: 120px;
+	float: left;
+}
+
+.logout-box-mobile.user-admin {
+	border-bottom: solid 1px #444444;
+	padding-bottom: 4px;
+	margin-bottom: 5px;
+}
+
+.logout-box-mobile.user-meta {
+	padding-top: 4px;
+	padding-bottom: 0;	
+	position: relative;	
+}
+
+.logout-box-mobile.no_of_unreaded_message {
+	border-radius: 10px;
+	display: inline-block;
+	width: 11px;
+	height: 15px;
+	line-height: 16px;
+	background-color: #444444;
+	color: #ffffff;
+	padding-left: 4px;
+}
+
+.logout-box-mobile#ol_after_logout {
+	display: inline-block;
+	width: 80px;
+	height: 24px;
+	background-color: #0e5565;
+	font-weight: bold;
+	line-height: 24px;
+	text-align: center;
+	color: #ffffff;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
+.logout-box-mobile a:hover {
+	text-decoration: none;
+}
+
+.user-admin {
+	margin-top: 2px;
+}
+
+.user-admin span.user-icon-points {
+	display: inline-block;
+	width: 50px;
+	float: left;
+}
+.user-meta span.user-message {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+.user-meta span.user-message img, .user-meta span.user-points img {
+	position: relative;
+	top: -1px;
+}
+.user-admin .user-scrap {
+	float: right;
+}
+
+.user-admin span.edit_profile {
+	display: inline-block;
+	float: left;
+}
+
+.user-admin span.admin_link {
+	display: inline-block;
+	width: 50px;
+	float: right;
+	text-align: right;
+}
+
+.log_out {
+	float: right;
+}
+
+.user-logged-name {
+	margin-top: 6px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 12px;
+	color: #b9b9b9;
+	text-transform: UPPERCASE;
+}

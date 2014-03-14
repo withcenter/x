@@ -6,6 +6,7 @@ include_once(G5_LIB_PATH.'/latest.lib.php');
 include_once(G5_LIB_PATH.'/outlogin.lib.php');
 ?>
 <link rel="stylesheet" href="<?=x::theme_url()?>/css/header.css">
+<link rel="stylesheet" href="<?=x::theme_url()?>/css/mobile-menu.css">
 <link rel="stylesheet" href="<?=x::theme_url()?>/css/theme.css">
 <script src="<?=x::theme_url()?>/js/theme.js"></script>
 <div id='header'>
@@ -25,11 +26,22 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
 		</div>
 		<div style='clear:both;'></div>
 	</div>
-	<div class='top-below-500-px'>
-		<div class='logo'><a href='<?=g::url()?>'><img src="<?=x::theme_url('img/logo-below-500-px.png')?>"></a></div>
+	<div class='top-below-640-px'>
+		<div class='logo'><a href='<?=g::url()?>'><img src="<?=x::theme_url('img/logo2.png')?>"></a></div>
+		<div class='contact_and_search'>
+			<div class='contact'>CONTACT  <?=$mobile_contact?></div>
+			<div class='search'><?include x::theme('search')?></div>
+		</div>
+		<div style='clear:both'></div>
 	</div>
 	
-	<div class='mobile-menu'><div class='inner'><?include 'mobile-menu.php'?></div></div>
+	<div class='mobile-menu'>
+		<div class='inner'><?include 'mobile-menu.php'?></div>
+		<div class='pop-up drop-down'><?include 'drop-down-menu.php'?></div>
+		<div class='pop-up pop-up-login'>
+			<?=outlogin('x-outlogin-mobile-1-640px');?>
+		</div>	
+	</div>
 	<div class='menu'><div class='inner'><?include 'menu.php'?></div></div>
 	<div class='submenu'><div class='inner'><?include 'submenu.php'?></div></div>
 	

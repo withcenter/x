@@ -1,73 +1,92 @@
-.login-box {
+.login-box-mobile-640px {
 	font-family: Dotum;
 	background: #2a426b;
-	color: #ffffff;
-	height: 96px;
-	width:290px;
-	padding: 8px 7px;
+	color: #ffffff;	
+	width:100%;	
 	overflow: hidden;	
 }
-
-.login-box.logout-mobile {
-	width:200px;		
+.login-box-mobile-640px .login-box-middle{	
+	padding:10px;
 }
 
-.login-box  input[type='text'], .login-box input[type='password'] {
-	width: 170px;
-	height: 24px;
+
+.login-box-mobile-640px .login-box-middle .login-input{	
+	width:84%;
+	float:left;
+}
+
+.login-box-mobile-640px .login-box-middle .submit-button{	
+	width:16%;
+	float:left;
+	text-align:right;
+}
+
+.login-box-mobile-640px.logout-box-mobile-640px {
+	width:100%;
+}
+
+.login-box-mobile-640px  input[type='text'], .login-box-mobile-640px input[type='password'] {
+	width: 90%;
+	padding:9px 5% 8px 5%;
+	font-size:1.3em;
+	/*height: 24px;
 	line-height: 22px;
-	padding: 0 10px;
+	padding: 0 10px;*/
 	border:1px solid black;
 }
-.login-box .login-user {
-	margin-bottom: 8px;
+.login-box-mobile-640px .login-user {
+	margin-bottom: 9px;
 }
 
-.login-box .register_autologin {
-	margin-top: 2px;
-	height:16px;
-	padding-left:3px;
+.login-box-mobile-640px .register_autologin {	
+	font-size:1.2em;
+	margin-top:14px;
+	text-align:right;
 }
 
 
-.login-box  .dot {
+.login-box-mobile-640px  .dot {
 	position: relative;
 	top: -2px;
 
 }
 
 /**autologin password-lost register**/
-.login-box .register_autologin .auto_login {	
+.login-box-mobile-640px .register_autologin .auto_login {	
 	color: #d8d8d8;
 	float:left;	
-	margin-top:2px;
+	margin-top:3px;
 }
-.login-box .register_autologin #ol_password_lost {
-	float:left;
+
+.login-box-mobile-640px .register_autologin .auto_login  #auto_login{	
+	position:relative;
+	top:-3px;
+	margin-right:4px;
+}
+.login-box-mobile-640px .register_autologin #ol_password_lost {	
 	margin-left: 25px;
 	color: #d8d8d8;	
 }
 
-.login-box .register_autologin .login-reg {
-	float: left;
+.login-box-mobile-640px .register_autologin .login-reg {	
 	color: #d8d8d8!important;
 	position: relative;	
 	margin-left:18px;
 }
 
 /* outlogin.skin.2.php */
-.logout-mobile{
-	padding: 9px 9px;
-	position: relative;
-	height: 94px;
+.logout-box-mobile-640px{	
+	position: relative;	
 	font-size: 9pt;
-}
-
-.logout-mobilea {
 	color: #ffffff;
+	padding-bottom:10px;
 }
 
-.logout-mobile #ol_after_info {
+.logout-box-mobile-640px .inner{
+	padding:10px;
+}
+
+.logout-box-mobile-640px #ol_after_info {
 	background-color: #0e5565;
 	color: #ffffff;
 	display: inline-block;
@@ -75,34 +94,35 @@
 	height: 22px;
 	line-height: 23px;
 }
-.logout-mobile.admin-mode {
+.logout-box-mobile-640px.admin-mode {
 	position: absolute;
 	bottom: 15px;
 	right: 3px;
 }
 
-.logout-mobile .admin-mode a{
+.logout-box-mobile-640px .admin-mode a{
 	margin-right: 10px;
 }
 
-.logout-mobile .user-info {
+.logout-box-mobile-640px .user-info {
 	width: 120px;
 	float: left;
+	padding:10px 10px 0 10px;
 }
 
-.logout-mobile.user-admin {
+.logout-box-mobile-640px.user-admin {
 	border-bottom: solid 1px #444444;
 	padding-bottom: 4px;
 	margin-bottom: 5px;
 }
 
-.logout-mobile.user-meta {
+.logout-box-mobile-640px.user-meta {
 	padding-top: 4px;
 	padding-bottom: 0;	
 	position: relative;	
 }
 
-.logout-mobile.no_of_unreaded_message {
+.logout-box-mobile-640px.no_of_unreaded_message {
 	border-radius: 10px;
 	display: inline-block;
 	width: 11px;
@@ -113,7 +133,7 @@
 	padding-left: 4px;
 }
 
-.logout-mobile#ol_after_logout {
+.logout-box-mobile-640px#ol_after_logout {
 	display: inline-block;
 	width: 80px;
 	height: 24px;
@@ -126,7 +146,7 @@
 	bottom: 10px;
 	left: 10px;
 }
-.logout-mobile a:hover {
+.logout-box-mobile-640px a:hover {
 	text-decoration: none;
 }
 
@@ -165,6 +185,7 @@
 
 .log_out {
 	float: right;
+	padding:10px 10px 0 10px;
 }
 
 .user-logged-name {
@@ -174,4 +195,9 @@
 	font-size: 12px;
 	color: #b9b9b9;
 	text-transform: UPPERCASE;
+}
+
+/**submit**/
+.login-box-mobile-640px #ol_submit{
+	
 }

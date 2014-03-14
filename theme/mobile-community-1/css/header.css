@@ -28,29 +28,10 @@
 #header .menu ul li.menu_item.log-in-button .pop-up-login{
 	z-index:999;
 	position:absolute;
-	right:0;
+	right:15px;
 	top:80px;
 	display:none;
-}
-
-/*message menu*/
-
-#header .menu ul li.menu_item.mobile_message_icon a .label{
-	position:relative;
-	display:inline-block;
-	width:100px;	
-}
-
-#header .menu ul li.menu_item.mobile_message_icon a .exclamation{
-	position:absolute;
-	background-color:#e64343;
-	right:26px;
-	top:-35px;
-	display:inline-block;
-	padding:0 4px;
-	font-size:.6em;
-	font-weight:bold;
-	color:white;
+	width:270px;
 }
 
 #header .menu ul li.menu_item  a > img{
@@ -84,31 +65,7 @@
 
 
 /* mobile-menu */
-#header .mobile-menu {
-	display:none;
-	padding: 0.4em;
-	background-color: black;
-}
-#header .mobile-menu ul {
-	list-style:none;
-	margin:0;
-	padding:0;
-}
-#header .mobile-menu ul li {
-	display:inline-block;
-	margin: 0.2em 0;
-	text-align:center;
-}
 
-#header .mobile-menu ul li a {
-	display:inline-block;
-	padding: 1em;
-	background-color: white;
-	color: black;
-}
-#header .mobile-menu .icon {
-	margin-bottom: 0.4em;
-}
 
 
 /* #header .top */
@@ -132,10 +89,10 @@
 #header .top .logo {
 	float: left;
 }
-#header .top-below-500-px {
+#header .top-below-640-px  {
 	display:none;
 }
-#header .top-below-500-px img {
+#header .top-below-640-px  img {
 	width: 100%;
 	height: auto;
 }
