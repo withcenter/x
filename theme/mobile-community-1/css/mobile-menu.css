@@ -200,7 +200,7 @@
 	border:0;
 }
 
-.top-below-500-px .search input[name='key']{
+.top-below-500-px .search .key{
 	border:0;
 	border:1px solid #345184;
 	box-shadow:0 3px 0 0 #e8e8e8 inset;

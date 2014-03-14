@@ -1,0 +1,126 @@
+/** latest POSTS */
+.latest-posts-container {
+	border: solid 1px #bbbbbb;
+	position: relative;
+	background: #ffffff;
+	margin: -1.5em 0 0.625em 0.625em;
+	padding-top: 1.875em;
+	word-break: break-all;
+}
+
+.posts-title {
+	padding: 0.625em;
+	width: 15.6em;
+	background: #e47e27;
+	color: #ffffff;
+	position: relative;
+
+	font-weight: bold;
+	z-index: 100;
+}
+
+.posts-title img {
+	margin-right: 0.625em;
+	position: relative;
+	top: -1px;
+}
+
+.latest-posts-container .latest-posts {
+	border-bottom: solid 1px #eaeaea;
+	padding: 0.625em 1.250em;
+}
+
+.latest-posts-container .latest-posts.last-latest-post {
+	border: 0;
+}
+
+.latest-posts-container .latest-posts img {
+	margin-right: 1.875em;
+}
+
+.latest-posts-container .latest-posts a {
+	text-decoration: none;
+}
+
+.latest-posts-container .latest-subject {
+	font-weight: bold;
+	margin-bottom: 0.5em;
+	height: 1em;
+	line-height: 1em;
+	overflow: hidden;
+}
+
+
+
+
+.latest-posts-container .latest-meta, .latest-posts-container .latest-meta a {
+	color: #999999;
+	margin-bottom: 0.5em;
+	height: 1em;
+	line-height: 1em;
+	overflow: hidden;
+}
+
+.latest-posts-container .latest-content {
+	overflow: hidden;
+	height: 2.5em;
+	line-height: 1.3em;
+}
+
+.latest-posts-container .post-divider {
+	margin: 0 0.5em;
+}
+
+.latest-posts-container .latest-posts .latest-image {
+	width: 240px;
+}
+
+.latest-posts-container .latest-posts .latest-info {
+	
+	height: 6.5em;
+	overflow: hidden;
+	max-width: 660px;
+}
+
+@media all and ( max-width: 25em ) {
+	.latest-posts-container {
+		padding: 0;
+		margin-left: 0;
+		border-top: 0;
+		margin-top: 0;
+		padding-top: 0.625em;
+	}
+	
+	.posts-title {
+		width: auto;
+		position: static;
+		border-left: solid 1px #e47e27;
+	}
+
+	.latest-posts-container .latest-posts {
+		padding: 0;
+		border: 0;
+	}
+	
+	.latest-posts td {
+		display: block;
+	}
+	
+	.latest-posts-container .latest-posts .latest-image {
+		width: 100%;
+	}
+	
+	.latest-posts-container .latest-posts .latest-info {
+		padding: 0.625em;
+	}
+	
+	.latest-posts-container .latest-posts img {
+		margin: 0;
+		width: 100%;
+	}
+	
+	.latest-posts-container .post-divider {
+		margin: 0;
+	}
+
+}

@@ -16,6 +16,7 @@
 	border: 0 solid blue;
 	width: 25%;
 	height: 100%;
+	word-break: break-all;
 }
 
 .x-gallery-2 li.left-images {
@@ -67,6 +68,7 @@
 	height: 1.2em;
 	overflow:hidden;
 	margin-bottom: 0.625em;
+	
 }
 
 .x-gallery-2 .text .title .post-author, .x-gallery-2 .text .title .post-author a {
@@ -75,6 +77,11 @@
 
 .x-gallery-2 .text .date-comment-view, .x-gallery-2 .text .date-comment-view-mobile {
 	margin-bottom: 0.625em;
+}
+
+.x-gallery-2 .text .date-comment-view {
+	height: 1.2em;
+	overflow: hidden;
 }
 
 .x-gallery-2 .text .date-comment-view-mobile {
@@ -150,7 +157,16 @@
 	
 	.x-gallery-2 .text .date-comment-view-mobile {
 		color: #999999;
-		display: inline-block;
+		display: block;
+		height: 2.5em;
+		overflow: hidden;
+	}
+	
+	.x-gallery-2 .text .date-comment-view-mobile .post-mobile-meta {
+		display: block;
+		overflow: hidden;
+		height: 1.1em;
+		line-height: 1em;
 	}
 	
 	.x-gallery-2 .text .date-comment-view-mobile .post-divider {
