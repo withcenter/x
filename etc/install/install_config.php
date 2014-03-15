@@ -35,7 +35,7 @@ if (!isset($_POST['agree']) || $_POST['agree'] != '동의함') {
         </td>
     </tr>
     <tr>
-        <th scope="row"><label for="">User</label></th>
+        <th scope="row"><label for="">MySQL User ID</label></th>
         <td>
             <input name="mysql_user" type="text" id="mysql_user">
         </td>
@@ -47,7 +47,7 @@ if (!isset($_POST['agree']) || $_POST['agree'] != '동의함') {
         </td>
     </tr>
     <tr>
-        <th scope="row"><label for="">DB</label></th>
+        <th scope="row"><label for="">DB Name</label></th>
         <td>
             <input name="mysql_db" type="text" id="mysql_db">
         </td>
@@ -56,39 +56,39 @@ if (!isset($_POST['agree']) || $_POST['agree'] != '동의함') {
         <th scope="row"><label for="">TABLE prefix</label></th>
         <td>
             <input name="table_prefix" type="text" value="g5_" id="table_prefix">
-            <span>Recommended not to edit</span>
+            <span><?=ln("Recommended not to change.","가능한 변경하지 마십시오")?></span>
         </td>
     </tr>
     </tbody>
     </table>
 
     <table class="ins_frm">
-    <caption>Super Admin Information</caption>
+    <caption><?=ln("Web Site Admin Information", "최고관리자 정보입력")?></caption>
     <colgroup>
         <col style="width:150px">
         <col>
     </colgroup>
     <tbody>
     <tr>
-        <th scope="row"><label for="">User ID</label></th>
+        <th scope="row"><label for=""><?=ln("User ID","회원 ID")?></label></th>
         <td>
             <input name="admin_id" type="text" value="admin" id="admin_id">
         </td>
     </tr>
     <tr>
-        <th scope="row"><label for="">Password</label></th>
+        <th scope="row"><label for=""><?=ln("Password","비밀번호")?></label></th>
         <td>
             <input name="admin_pass" type="text" id="admin_pass">
         </td>
     </tr>
     <tr>
-        <th scope="row"><label for="">Name</label></th>
+        <th scope="row"><label for=""><?=ln("Name","이름")?></label></th>
         <td>
             <input name="admin_name" type="text" value="Admin" id="admin_name">
         </td>
     </tr>
     <tr>
-        <th scope="row"><label for="">E-mail</label></th>
+        <th scope="row"><label for=""><?=ln("E-mail","이메일")?></label></th>
         <td>
             <input name="admin_email" type="text" value="admin@domain.com" id="admin_email">
         </td>
@@ -97,8 +97,13 @@ if (!isset($_POST['agree']) || $_POST['agree'] != '동의함') {
     </table>
 
     <p>
-        <strong class="st_strong">Warning! This may delete all the data of the database. ( if GNUBoard is previously installed )</strong><br>
+		<?=ln('
+        <strong class="st_strong">Warning! This may delete tables in database that are previously installed.</strong><br>&nbsp;<br>
         Click "Next" if you want to continue installation.
+		','
+		 <strong class="st_strong">주의! 이미 GNUBoard5 Extended 가 존재한다면 DB 자료가 망실되므로 주의하십시오.</strong><br>&nbsp;<br>
+        주의사항을 이해했으며, 그누보드 설치를 계속 진행하시려면 다음을 누르십시오.
+		')?>
     </p>
 
     <div class="inner_btn">
@@ -150,6 +155,6 @@ function frm_install_submit(f)
 </script>
 
 <?php
-include_once ('./install.inc2.php');
+include_once ('bottom.php');
 ?>
 <?php exit; ?>

@@ -4,19 +4,20 @@ $data_path = '../'.G5_DATA_DIR;
 
 if (!$title) $title = G5_VERSION." 설치";
 ?>
+<?
+	include 'lib.php';
+?>
 <!doctype html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
 <title><?php echo $title; ?></title>
 <link rel="stylesheet" href="install.css">
+<link rel="stylesheet" href="../x/etc/install/style.css">
 </head>
 <body>
 
-<div id="ins_bar">
-    <span id="bar_img">GNUBOARD5</span>
-    <span id="bar_txt">INSTALLATION</span>
-</div>
+<?include 'top.php'?>
 
 <?php
 // 파일이 존재한다면 설치할 수 없다.
@@ -42,12 +43,16 @@ $exists_data_dir = true;
 if (!is_dir($data_path))
 {
 ?>
-<h1>GNUBoard Installation : Confirm below</h1>
+<h1><?=ln("X Installation : <span class='warning'>ERROR</span>", "X 설치 : <span class='warning'>에러</span>")?></h1>
 
 <div class="ins_inner">
     <p>
-		<p>Create "data" folder under installation folder and refresh this page.</p>
+		<p>
+			<?=ln("Create 'data' folder under installation folder and refresh this page.", "'data' 폴더를 생성한 후 리프레쉬 하십시오.")?>
+		</p>
 		
+		<p>&nbsp;</p>
+		<?=ln("Example of how to create 'data' folder", "'data' 폴더 생성 예")?> :
         <p>$ mkdir <?php echo G5_DATA_DIR ?></p>
     </p>
 </div>

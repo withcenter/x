@@ -1,0 +1,22 @@
+
+#ins_bar {
+	color: white !important;
+}
+#ins_bar a {
+	color: white !important;
+	text-decoration: none !important;
+}
+#bar_img {
+	letter-spacing: 0.2em;
+}
+#page-title {
+	letter-spacing: 0.1em;
+	
+}
+#page-title span {
+	color: #ff3000;
+}
+
+.warning {
+	color: #FF3000;
+}

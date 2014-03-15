@@ -31,6 +31,8 @@ body {
 #container {
 	border-right: 0;
 	border-left: 1px solid #dde4e9;
+	padding-top:0 !important;
+	padding-bottom:0 !important;
 }
 
 
@@ -45,7 +47,7 @@ body {
 .left-menu a {
 	display: inline-block;
 	padding: 1em;
-	background-color: #cdcdcd;
+	background-color: #e9e9e9;
 	width: 100%;
 }
 
@@ -61,7 +63,7 @@ body {
 .page-header {
 	margin: 0.4em 0;
 	padding: 1em;
-	border-top: 1px solid grey;
+	border-top: 0;
 	border-bottom: 1px solid grey;
 	font-size: 1.6em;
 	font-weight: bold;

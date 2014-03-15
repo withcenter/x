@@ -2,7 +2,7 @@
 /* SIR 지운아빠 */
 
 /* 아웃로그인 스킨 */
-.ol {position:relative;padding:15px 15px 14px 14px;border-bottom:1px solid #dde4e9}
+.ol {background-color: #e9e9e9; position:relative;padding:15px 15px 14px 14px;border-bottom:1px solid #dde4e9}
 .ol h2 {margin:0;padding:0;width:1px;height:1px;font-size:0;line-height:0;overflow:hidden}
 .ol ul {margin:0;padding:0;list-style:none}
 
@@ -26,12 +26,12 @@
 #ol_auto input {width:13px;height:13px;vertical-align:bottom}
 
 #ol_after {}
-#ol_after_hd {margin:0 0 3px}
+#ol_after_hd {margin:0 0 3px; padding:0.6em; background-color:#dfdfdf;}
 #ol_after_hd .btn_admin {margin-top:5px;width:158px;text-align:center}
 #ol_after_private {margin:0 0 3px;zoom:1}
 #ol_after_private:after {display:block;visibility:hidden;clear:both;content:""}
 #ol_after_private li {float:left}
-#ol_after_private a {display:block;padding-top:8px;height:37px;background:#f7f7f7;text-align:center}
+#ol_after_private a {display:block;padding-top:8px;height:37px;background:#dfdfdf;text-align:center}
 #ol_after_private a strong {display:block;padding-top:3px;color:#000;font-weight:normal}
 #ol_after_private a:focus,
 #ol_after_private a:hover {background:#333;color:#fff;text-decoration:none}

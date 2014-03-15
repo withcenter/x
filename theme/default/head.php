@@ -64,6 +64,7 @@
             <li><a href="<?php echo G5_BBS_URL ?>/qalist.php">1:1문의</a></li>
             <li><a href="<?php echo G5_BBS_URL ?>/current_connect.php">접속자 <?php echo connect(); // 현재 접속자수  ?></a></li>
             <li><a href="<?php echo G5_BBS_URL ?>/new.php">새글</a></li>
+			<li><a href='<?=x::url_setting()?>'><?=ln('Language Change', '언어 변경');?></a></li>
         </ul>
 
 		
@@ -85,7 +86,7 @@
 
 		<ul class='left-menu'>
 			<li><a href="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub" target="_blank"><?=ln('X User Guide', 'X 이용 안내');?></a></li>
-			<li><a href='<?=x::url_setting()?>'><?=ln('User Settings', '사용자 설정');?></a></li>
+
 			<? if ( admin() ) { ?>
 				<li><a href='<?=url_x_admin()?>'><?=ln('X Admin Page', 'X 관리자 페이지');?></a></li>
 				<li><a href='<?=url_site_admin()?>'><?=ln('Site Admin Page', '사이트 관리자 페이지');?></a></li>
