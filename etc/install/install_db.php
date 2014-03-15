@@ -28,8 +28,17 @@ if (!$dblink) {
 ?>
 
 <div class="ins_inner">
-    <p>Error: Wrong MySQL Host, User, Password. Please double check</p>
-    <div class="inner_btn"><a href="./install_config.php">GO BACK</a></div>
+    <p>
+	
+		<?=ln(
+				"Error: Wrong MySQL Host, User, Password. Please double check",
+				"에러: MySQL Host, User, Password 를 확인해 주십시오."
+			)?>
+			
+	</p>
+	
+    <div class="inner_btn"><a href="./install_config.php"><?=ln('GO BACK', '뒤로가기')?></a></div>
+	
 </div>
 
 <?php

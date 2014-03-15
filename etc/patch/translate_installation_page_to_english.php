@@ -76,4 +76,13 @@ $src";
 	
 	
 	
-	
+	$path = '../install/install.inc2.php';
+	$data = file::read($path);
+	$src = '<div id=';
+	$dst = "<?php
+	include '../x/etc/install/install.inc2.php';
+	return;
+?>
+$src";
+	$data = patch_string( $data, $src, $dst );
+	file::write( $path,  $data );

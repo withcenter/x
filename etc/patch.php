@@ -73,7 +73,7 @@ function patch_failed()
 
 function pattern_exist( $data, $src )
 {
-	return strpos($data, $src);
+	return strpos($data, $src) !== false ;
 }
 
 
@@ -146,7 +146,7 @@ function patch_string( $string, $src, $dst )
 	}
 	else {
 		if ( ! pattern_exist($string, $src) ) {
-			patch_message( " Srouce pattern does not exist. FAILED\nsource patttern : [$src]");
+			patch_message( "Srouce pattern does not exist. FAILED\nsource patttern : [$src]\nFile Content:\n$string");
 			patch_failed();
 		}
 		else {

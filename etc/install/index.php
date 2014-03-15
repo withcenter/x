@@ -53,6 +53,6 @@ function frm_submit(f)
 ?>
 
 <?php
-include_once ('bottom.php');
+include_once ('./install.inc2.php');
 ?>
 <?php exit; ?>
