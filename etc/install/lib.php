@@ -2,7 +2,15 @@
 
 function url_language( $lang )
 {
-	return "x/etc/install/language.php?lang=$lang&return_url=".urlencode($_SERVER["PHP_SELF"]);
+	if ( strpos($_SERVER['PHP_SELF'], '/etc/') ) {
+	}
+	else if ( strpos( $_SERVER['PHP_SELF'], 'install/' ) ) {
+		$x = "../x";
+	}
+	else {
+		$x = 'x';
+	}
+	return "$x/etc/install/language.php?lang=$lang&return_url=".urlencode($_SERVER["PHP_SELF"]);
 }
 
 function install_language()

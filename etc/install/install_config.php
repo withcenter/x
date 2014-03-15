@@ -107,7 +107,7 @@ if (!isset($_POST['agree']) || $_POST['agree'] != '동의함') {
     </p>
 
     <div class="inner_btn">
-        <input type="submit" value="Next">
+        <input type="submit" value="<?=ln('CONTINUE', '계속 설치')?>">
     </div>
 </div>
 

@@ -26,3 +26,7 @@
 	font-weight: bold;
 	font-size: 1.2em;
 }
+
+.ins_inner {
+	font-size: 1.2em !important;
+}

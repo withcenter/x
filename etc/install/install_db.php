@@ -69,7 +69,12 @@ if(version_compare(mysql_get_server_info(), '5.6.6', '>=')  == 1) {
 ?>
 
 <div class="ins_inner">
-    <h2><?php echo G5_VERSION ?> Installation has begun</h2>
+    <h2>
+		<?=ln("GNUBoard5 eXtended installation begins",
+			"GNUBoard5 익스텐디드 설치를 합니다."
+			)?>
+			
+	</h2>
 
     <ol>
 <?php
@@ -286,20 +291,35 @@ fclose($f);
 ?>
     </ol>
 
-    <p>Congratulation <?php echo G5_VERSION ?> Installation has finished</p>
+    <p>
+		<?=ln("GNUBoard5 Extended Installation Finished",
+			"GNUBoard5 익스텐디드 설치가 완료되었습니다."
+			)?>
+			
+	</p>
 
 </div>
 
 <div class="ins_inner">
 
-    <h2>Please follow to configure site</h2>
+<?=ln("
+    <h2>홈페이지에서 관리자로 로그인을 해 보십시오.</h2>
+
+    <ol>
+        <li>메인화면으로 이동</li>
+        <li>관리자 로그인</li>
+    </ol>
+	","
+    <h2>Please sign in your site as admin.</h2>
 
     <ol>
         <li>Move to first page</li>
-        <li>Sign in as Super Admin</li>
-        <li>Open Admin Page</li>
-        <li>Open Basic Settings page</li>
+        <li>Sign in as Admin</li>
     </ol>
+	"
+);
+?>
+
 
     <div class="inner_btn">
         <a href="../index.php">Move to first page</a>

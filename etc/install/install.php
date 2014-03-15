@@ -28,11 +28,16 @@
     <p>
 		<?=ln("Click 'CONTINUE' button to install X", "'X'를 설치하시려면 '설치하기' 버튼을 클릭하세요.")?>
 	</p>
+	<p>&nbsp;</p>
+    <p>
+		<?=ln("설치 화면을 <b>한국어</b>로 보시려면 오른쪽 상단의 <b>한국어</b> 버튼을 클릭하십시오.",
+		"'Click '<b>English</b>' button on the top of right corner to see this page in English.")?>
+	</p>
     <div class="inner_btn">
         <a href="<?php echo G5_URL; ?>/install/"><?=ln("CONTINUE", "설치하기")?></a>
     </div>
 </div>
-<?include 'x/etc/install/bottom.php'?>
+<?include 'x/etc/install/install.inc2.php'?>
 </body>
 </html>
 <?php exit; ?>
