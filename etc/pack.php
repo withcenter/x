@@ -39,6 +39,9 @@ foreach ( $dirs as $dir ) {
 	copy_source( $dir );
 }
 
+
+// 필요한 x 파일 복사
+copy_source( 'x/class' );
 copy_source( 'x/css' );
 copy_source( 'x/etc' );
 copy_source( 'x/js' );

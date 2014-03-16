@@ -13,10 +13,17 @@ class gnuboard {
 	 *  @return string gnuboard5 installed path
 	 *  
 	 *  @details this returns the value of G5_PATH
+	 *  @note if G5_NEW_PATH is defined, it returns G5_NEW_PATH.
+	 *  	You can define G5_NEW_PATH when G5_PATH has wrong value like when it is being installed.
+	 *  @code		
+			define('G5_NEW_PATH', '..');
+			echo 'dir:'.g::dir() ;
+	 *  @endcode
 	 */
 	static function dir()
 	{
-		return G5_PATH;
+		if ( defined( 'G5_NEW_PATH' ) ) return G5_NEW_PATH;
+		else return G5_PATH;
 	}
 	
 	static function url()
@@ -304,7 +311,7 @@ class gnuboard {
 		
 		
 		/// create board table
-		$file = file( g::dir() . '/adm/sql_write.sql');
+		$file = file( self::dir() . '/adm/sql_write.sql');
 		$sql = implode($file, "\n");
 		$create_table = $g5['write_prefix'] . $o['id'];
 		$source = array('/__TABLE_NAME__/', '/;/');

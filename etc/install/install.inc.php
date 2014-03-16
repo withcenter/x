@@ -56,6 +56,12 @@ if (!is_dir($data_path))
         <p>$ mkdir <?php echo G5_DATA_DIR ?></p>
     </p>
 </div>
+<script>
+	setTimeout(function(){
+		location.reload();
+	},
+	2000);
+</script>
 <?php
     $exists_data_dir = false;
 }

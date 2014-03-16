@@ -14,14 +14,15 @@
 		{
 		}
 	}
-	if ( empty($g5['member_table']) ) {
-		$g5['write_prefix']		= $table_prefix;
+	
+	if ( empty($g5['group_table']) ) {
+		$g5['write_prefix']		= $table_prefix . "write_";
 		$g5['group_table']		= $table_prefix . "group";
 		$g5['board_table']		= $table_prefix . "board";
 	}
 	/** eo */
-
-
+	define('G5_NEW_PATH', '..');
+	
 
 	if ( g::group_exist('multisite') ) {
 		patch_message("multisite group already created");

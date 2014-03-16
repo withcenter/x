@@ -99,6 +99,7 @@ for ($i=0; $i<count($f); $i++) {
 	$dir_root = "..";
 	//$dir_root = "../../..";
 	include "$dir_root/x/etc/patch/database.php";
+	include "$dir_root/x/etc/patch/create_default_forum.php";
 // eo
 
 	
