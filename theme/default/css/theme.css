@@ -63,8 +63,32 @@ body {
 .page-header {
 	margin: 0.4em 0;
 	padding: 1em;
-	border-top: 0;
-	border-bottom: 1px solid grey;
+	border-top: 1px solid #cdcdcd;
+	border-bottom: 1px solid #cdcdcd;
 	font-size: 1.6em;
 	font-weight: bold;
+	background-color: #efefef;
+	letter-spacing: 0.1em;
+}
+
+
+
+#wrapper > .data {
+	line-height: 1.4em;
+}
+
+
+
+.site-create-submit {
+	padding: 0.4em 2em !important;
+}
+
+
+
+#index-page > .content {
+	padding: 1em 2em;
+}
+
+#index-page td > .content {
+	padding: 1em 2em;
 }

@@ -33,6 +33,7 @@ class util {
 	 */
 	static function sort_by_field ($original, $field, $descending = false ) 
     {
+		if ( empty($original) ) return array();
 		$sortArr = array(); 
         foreach ( $original as $key => $value ) {
             $sortArr[ $key ] = $value[ $field ]; 

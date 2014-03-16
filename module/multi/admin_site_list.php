@@ -19,6 +19,7 @@
 		</tr>
 		<?php
 			$sites = db::rows("SELECT * FROM x_site_config ORDER BY domain");
+			
 			$hosts = array();
 			foreach ( $sites as $site ) { 
 				$hosts[] = $site['domain'];

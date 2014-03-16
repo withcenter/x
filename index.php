@@ -17,9 +17,7 @@
 														x::hook("module_end");
 	}
 	else {
-		echo "<a href='?module=admin&action=index'>ADMIN Page</a><br>";
-		//include "xml_sample/demo/client.php";
-		//include "etc/test/post.php";
+		echo "<a href='?module=admin&action=index' style='display:block; padding: 3em; font-size: 2em; color: red;'>X ADMIN Page</a>";
 	}
 	
 	include_once(G5_PATH.'/tail.php');

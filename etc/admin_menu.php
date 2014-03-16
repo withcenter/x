@@ -1,8 +1,8 @@
 <?php
 if ( ! admin() ) {
-	echo "You are not admin";
+	echo "<p style='padding: 3em; font-size:2em; color: red;'>You are not admin</p>";
 	dlog("You are not admin");
-	return;
+	exit;
 }
 ?>
 <link rel="stylesheet" href="module/admin/menu.css">

@@ -1,6 +1,7 @@
 <div class='page-header'>
 	최근 등록된 글
 </div>
+<div class='content'>
 
 <?
 $posts = g::posts(
@@ -27,3 +28,5 @@ foreach ( $posts as $p ) {
 echo "</div>";
 
 
+?>
+</div>

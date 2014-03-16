@@ -15,7 +15,7 @@
     <div id="hd_wrapper">
 
         <div id="logo">
-            <a href="<?php echo G5_URL ?>">www.e<span class='x'>X</span>tended.KR</a>
+            <a href="<?=g::url()?>">www.e<span class='x'>X</span>tended.KR</a>
         </div>
 
         <fieldset id="hd_sch">
@@ -95,7 +95,7 @@
 		</ul>
 		
     </div>
-    <div id="container">
+    <div id="container" class='data'>
 		<?php if ((!$bo_table || $w == 's' ) && !defined("_INDEX_")) { ?><div id="container_title"><?php echo $g5['title'] ?></div><?php } ?>
 
 		

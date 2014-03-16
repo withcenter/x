@@ -13,6 +13,7 @@ function hook_head_begin()
 				location.href='$url';
 			</script>
 		";
+		exit;
 	}
 }
 

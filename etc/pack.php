@@ -14,7 +14,7 @@ $dir_g5 = getcwd();
 $version	= $argv[1];
 
 
-$zip_path	= "$dir_tmp/x-$version.zip";
+$zip_path	= "$dir_tmp/g5x-$version.zip";
 
 
 

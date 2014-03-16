@@ -176,7 +176,7 @@ class database extends sql{
 
 	static function sql_fetch_array($result)
 	{
-		if ( function_exists( 'sql_fetch_array' ) ) return sql_fetch_array( $sql, $error );
+		if ( function_exists( 'sql_fetch_array' ) ) return sql_fetch_array( $result );
 		$row = @mysql_fetch_assoc($result);
 		return $row;
 	}
