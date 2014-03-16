@@ -69,9 +69,6 @@ if(version_compare(mysql_get_server_info(), '5.6.6', '>=')  == 1) {
 }
 
 
-	$dir_root = "..";
-	//$dir_root = "../../..";
-	include "$dir_root/x/etc/patch/database.php";
 ?>
 
 <div class="ins_inner">
@@ -96,6 +93,15 @@ for ($i=0; $i<count($f); $i++) {
     mysql_query($f[$i]) or die(mysql_error());
 }
 // 테이블 생성 ------------------------------------
+
+
+// X DB 설치
+	$dir_root = "..";
+	//$dir_root = "../../..";
+	include "$dir_root/x/etc/patch/database.php";
+// eo
+
+	
 ?>
 
         <li>Table creation finished</li>
