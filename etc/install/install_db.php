@@ -316,18 +316,18 @@ fclose($f);
 <div class="ins_inner">
 
 <?=_ln("
-    <h2>홈페이지에서 관리자로 로그인을 해 보십시오.</h2>
-
-    <ol>
-        <li>메인화면으로 이동</li>
-        <li>관리자 로그인</li>
-    </ol>
-	","
     <h2>Please sign in your site as admin.</h2>
 
     <ol>
         <li>Move to first page</li>
         <li>Sign in as Admin</li>
+    </ol>
+	","
+    <h2>홈페이지에서 관리자로 로그인을 해 보십시오.</h2>
+
+    <ol>
+        <li>메인화면으로 이동</li>
+        <li>관리자 로그인</li>
     </ol>
 	"
 );

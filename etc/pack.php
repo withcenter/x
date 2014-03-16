@@ -69,7 +69,11 @@ copy_source( 'x/skin/latest/x-latest-community3-posts');
 copy_source( 'x/skin/latest/x-community_3_images_with_caption');
 copy_source( 'x/skin/latest/x-community-3-timed-list');
 copy_source( 'x/skin/outlogin/x-outlogin-blog');
-
+copy_source( 'x/skin/latest/x-latest-blog');
+copy_source( 'x/skin/latest/x-rwd-gallery');
+copy_source( 'x/skin/latest/x-latest-rwd-community-1');
+copy_source( 'x/skin/latest/x-rwd-text-with-thumbnail');
+copy_source( 'x/skin/outlogin/x-outlogin-mobile-1');
 
 
 //// .... done here ... You need to gzip it now. ------------------------
