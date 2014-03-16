@@ -64,6 +64,12 @@ copy_source( 'x/skin/latest/basic' );
 copy_source( 'x/skin/outlogin/basic' );
 copy_source( 'x/skin/visit/basic' );
 
+copy_source( 'x/skin/outlogin/x-outlogin-travel_3');
+copy_source( 'x/skin/latest/x-latest-community3-posts');
+copy_source( 'x/skin/latest/x-community_3_images_with_caption');
+copy_source( 'x/skin/latest/x-community-3-timed-list');
+copy_source( 'x/skin/outlogin/x-outlogin-blog');
+
 
 
 //// .... done here ... You need to gzip it now. ------------------------

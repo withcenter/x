@@ -1,10 +1,8 @@
 <?php
 
 	if ( ! $forum = meta('forum_no_1') ) $forum = bo_table(1);
-	
-	
-	
-	$forum_id = $g5['write_prefix'].$forum;
+	if ( ! g::forum_exist( $forum ) ) $forum = 'default';
+	$forum_id = g::write_table( $forum );
 	
 	if ( $in['page_no'] ) $page_no = $in['page_no'];
 	else $page_no = 1;
