@@ -9,6 +9,7 @@ header('Pragma: no-cache'); // HTTP/1.0
 
 include_once ('../config.php');
 $title = G5_VERSION." 설치 완료 3/3";
+// TEST
 include_once ('./install.inc.php');
 
 //print_r($_POST); exit;
@@ -30,14 +31,14 @@ if (!$dblink) {
 <div class="ins_inner">
     <p>
 	
-		<?=ln(
+		<?=_ln(
 				"Error: Wrong MySQL Host, User, Password. Please double check",
 				"에러: MySQL Host, User, Password 를 확인해 주십시오."
 			)?>
 			
 	</p>
 	
-    <div class="inner_btn"><a href="./install_config.php"><?=ln('GO BACK', '뒤로가기')?></a></div>
+    <div class="inner_btn"><a href="./install_config.php"><?=_ln('GO BACK', '뒤로가기')?></a></div>
 	
 </div>
 
@@ -66,11 +67,16 @@ if(version_compare(mysql_get_server_info(), '5.6.6', '>=')  == 1) {
     @mysql_query("SET SESSION sql_mode = ''");
     $mysql_set_mode = 'true';
 }
+
+
+	$dir_root = "..";
+	//$dir_root = "../../..";
+	include "$dir_root/x/etc/patch/database.php";
 ?>
 
 <div class="ins_inner">
     <h2>
-		<?=ln("GNUBoard5 eXtended installation begins",
+		<?=_ln("GNUBoard5 eXtended installation begins",
 			"GNUBoard5 익스텐디드 설치를 합니다."
 			)?>
 			
@@ -292,7 +298,7 @@ fclose($f);
     </ol>
 
     <p>
-		<?=ln("GNUBoard5 Extended Installation Finished",
+		<?=_ln("GNUBoard5 Extended Installation Finished",
 			"GNUBoard5 익스텐디드 설치가 완료되었습니다."
 			)?>
 			
@@ -302,7 +308,7 @@ fclose($f);
 
 <div class="ins_inner">
 
-<?=ln("
+<?=_ln("
     <h2>홈페이지에서 관리자로 로그인을 해 보십시오.</h2>
 
     <ol>

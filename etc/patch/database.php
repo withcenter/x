@@ -1,5 +1,24 @@
 <?php
-
+	/** @short 아래의 코드는 웹 브라우저로 그누보드5 & Extended 처음 설치시에 같이 설치가 되도록 하기 위한 코드이다.
+	 *
+	 *
+	 */
+	include_once "$dir_root/x/class/etc.php";
+	include_once "$dir_root/x/class/database.php";
+	include_once "$dir_root/x/class/x.php";
+	
+	if ( ! function_exists( 'patch_message' ) ) {
+		function patch_message()
+		{
+		}
+	}
+	if ( empty($g5['member_table']) ) {
+		$g5['member_table']	= $table_prefix . "member";
+		 $g5['visit_table']			= $table_prefix . "visit";
+		 $g5['visit_sum_table']			= $table_prefix . "visit_sum";
+	}
+	/** eo */
+	
 	$path = $dir_root . '/x/etc/database/schema.sql';
 	$all_lines = file($path, FILE_SKIP_EMPTY_LINES | FILE_IGNORE_NEW_LINES);
 	

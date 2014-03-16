@@ -91,10 +91,25 @@ class database extends sql{
 	 */
 	static function query( $q, $error=TRUE)
 	{
-		dlog("QUERY: $q");
-		return sql_query( $q, $error );
+		if ( function_exists( 'dlog' ) ) dlog("QUERY: $q");
+		return self::sql_query( $q, $error );
 	}
 	
+	
+	/** @short it checks if G5 'sql_query()' exists. or else does same routine of it.
+	 *
+	 *
+	 */
+	static function sql_query($sql, $error=TRUE)
+	{
+		if ( function_exists( 'sql_query' ) ) return sql_query( $sql, $error );
+		if ($error)
+			$result = @mysql_query($sql) or die("<p>$sql<p>" . mysql_errno() . " : " .  mysql_error() . "<p>error file : {$_SERVER['PHP_SELF']}");
+		else
+			$result = @mysql_query($sql);
+		return $result;
+	}
+
 
 	/**
 	 *  @brief 쿼리를 해서 1 개의 행을 리턴한다.
@@ -106,8 +121,23 @@ class database extends sql{
 	 */
 	static function row( $q )
 	{
-		return sql_fetch( $q );
+		return self::sql_fetch( $q );
 	}
+	
+	
+	/** @short it checks if G5 'sql_fetch()' exists. or else does same routine of it.
+	 *
+	 *
+	 */
+	static function sql_fetch($sql, $error=TRUE)
+	{
+		if ( function_exists( 'sql_fetch' ) ) return sql_fetch( $sql, $error );
+		$result = self::sql_query($sql, $error);
+		//$row = @sql_fetch_array($result) or die("<p>$sql<p>" . mysql_errno() . " : " .  mysql_error() . "<p>error file : $_SERVER['PHP_SELF']");
+		$row = self::sql_fetch_array($result);
+		return $row;
+	}
+
 	
 	/**
 	 *  @brief 쿼리를 해서 1 개의 값을 리턴한다.
@@ -136,11 +166,22 @@ class database extends sql{
 	static function rows( $q ) {
 		$rows = array();
 		$result = self::query( $q );
-		while ( $row = sql_fetch_array($result) ) {
+		while ( $row = self::sql_fetch_array($result) ) {
 			$rows[] = $row;
 		}
 		return $rows;
 	}
+	
+	
+
+	static function sql_fetch_array($result)
+	{
+		if ( function_exists( 'sql_fetch_array' ) ) return sql_fetch_array( $sql, $error );
+		$row = @mysql_fetch_assoc($result);
+		return $row;
+	}
+
+
 	
 	
 	

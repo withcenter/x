@@ -56,39 +56,39 @@ if (!isset($_POST['agree']) || $_POST['agree'] != '동의함') {
         <th scope="row"><label for="">TABLE prefix</label></th>
         <td>
             <input name="table_prefix" type="text" value="g5_" id="table_prefix">
-            <span><?=ln("Recommended not to change.","가능한 변경하지 마십시오")?></span>
+            <span><?=_ln("Recommended not to change.","가능한 변경하지 마십시오")?></span>
         </td>
     </tr>
     </tbody>
     </table>
 
     <table class="ins_frm">
-    <caption><?=ln("Web Site Admin Information", "최고관리자 정보입력")?></caption>
+    <caption><?=_ln("Web Site Admin Information", "최고관리자 정보입력")?></caption>
     <colgroup>
         <col style="width:150px">
         <col>
     </colgroup>
     <tbody>
     <tr>
-        <th scope="row"><label for=""><?=ln("User ID","회원 ID")?></label></th>
+        <th scope="row"><label for=""><?=_ln("User ID","회원 ID")?></label></th>
         <td>
             <input name="admin_id" type="text" value="admin" id="admin_id">
         </td>
     </tr>
     <tr>
-        <th scope="row"><label for=""><?=ln("Password","비밀번호")?></label></th>
+        <th scope="row"><label for=""><?=_ln("Password","비밀번호")?></label></th>
         <td>
             <input name="admin_pass" type="text" id="admin_pass">
         </td>
     </tr>
     <tr>
-        <th scope="row"><label for=""><?=ln("Name","이름")?></label></th>
+        <th scope="row"><label for=""><?=_ln("Name","이름")?></label></th>
         <td>
             <input name="admin_name" type="text" value="Admin" id="admin_name">
         </td>
     </tr>
     <tr>
-        <th scope="row"><label for=""><?=ln("E-mail","이메일")?></label></th>
+        <th scope="row"><label for=""><?=_ln("E-mail","이메일")?></label></th>
         <td>
             <input name="admin_email" type="text" value="admin@domain.com" id="admin_email">
         </td>
@@ -97,7 +97,7 @@ if (!isset($_POST['agree']) || $_POST['agree'] != '동의함') {
     </table>
 
     <p>
-		<?=ln('
+		<?=_ln('
         <strong class="st_strong">Warning! This may delete tables in database that are previously installed.</strong><br>&nbsp;<br>
         Click "Next" if you want to continue installation.
 		','
@@ -107,7 +107,7 @@ if (!isset($_POST['agree']) || $_POST['agree'] != '동의함') {
     </p>
 
     <div class="inner_btn">
-        <input type="submit" value="<?=ln('CONTINUE', '계속 설치')?>">
+        <input type="submit" value="<?=_ln('CONTINUE', '계속 설치')?>">
     </div>
 </div>
 

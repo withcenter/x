@@ -11,7 +11,7 @@ if (!$title) $title = G5_VERSION." 설치";
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title><?php echo $title; ?></title>
+<title>G5 eXtended <?=_ln("Installation", "설치")?></title>
 <link rel="stylesheet" href="install.css">
 <link rel="stylesheet" href="../x/etc/install/style.css">
 </head>
@@ -43,16 +43,16 @@ $exists_data_dir = true;
 if (!is_dir($data_path))
 {
 ?>
-<h1><?=ln("X Installation : <span class='warning'>ERROR</span>", "X 설치 : <span class='warning'>에러</span>")?></h1>
+<h1><?=_ln("X Installation : <span class='warning'>ERROR</span>", "X 설치 : <span class='warning'>에러</span>")?></h1>
 
 <div class="ins_inner">
     <p>
 		<p>
-			<?=ln("Create 'data' folder under installation folder and refresh this page.", "'data' 폴더를 생성한 후 리프레쉬 하십시오.")?>
+			<?=_ln("Create 'data' folder under installation folder and refresh this page.", "'data' 폴더를 생성한 후 리프레쉬 하십시오.")?>
 		</p>
 		
 		<p>&nbsp;</p>
-		<?=ln("Example of how to create 'data' folder", "'data' 폴더 생성 예")?> :
+		<?=_ln("Example of how to create 'data' folder", "'data' 폴더 생성 예")?> :
         <p>$ mkdir <?php echo G5_DATA_DIR ?></p>
     </p>
 </div>

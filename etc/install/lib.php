@@ -20,7 +20,7 @@ function install_language()
 	else return substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 }
 
-function ln($en, $ko=null)
+function _ln($en, $ko=null)
 {
 	$ln = install_language();
 	if ( $ln == 'en' ) return $en;

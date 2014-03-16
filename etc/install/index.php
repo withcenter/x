@@ -12,7 +12,7 @@ if ($exists_data_dir && $write_data_dir) {
 
 <div class="ins_inner">
     <p>
-		<?=ln('
+		<?=_ln('
 					<p><strong class="st_strong">License Agreement</strong></p><br>
 					Check "Agree" and click "Next" to continue
 				','
@@ -27,12 +27,12 @@ if ($exists_data_dir && $write_data_dir) {
     </div>
 
     <div id="ins_agree">
-        <label for="agree"><?=ln("Yes, I agree", "네, 동의합니다.")?></label>
+        <label for="agree"><?=_ln("Yes, I agree", "네, 동의합니다.")?></label>
         <input type="checkbox" name="agree" value="동의함" id="agree">
     </div>
 
     <div class="inner_btn">
-        <input type="submit" value="<?=ln("CONTINUE", "동의 & 설치 진행")?>">
+        <input type="submit" value="<?=_ln("CONTINUE", "동의 & 설치 진행")?>">
     </div>
 </div>
 
@@ -42,7 +42,7 @@ if ($exists_data_dir && $write_data_dir) {
 function frm_submit(f)
 {
     if (!f.agree.checked) {
-        alert("<?=ln("You have to check on the agree box to continue.", "라이센스 내용에 동의하셔야 설치가 가능합니다.")?>");
+        alert("<?=_ln("You have to check on the agree box to continue.", "라이센스 내용에 동의하셔야 설치가 가능합니다.")?>");
         return false;
     }
     return true;
