@@ -949,12 +949,13 @@ class gnuboard {
 			if ( g::forum_exist( $id ) ) {
 				$posts = g::posts( array( 'bo_table' => $id, 'limit'=>5 ) );
 			}
-			
-			
-			
-
-		@code
-	 * @return array. the return value is the same as that of latest.lib.php
+	 *  @endcode
+	 *  
+	 *  @code how to use LIKE
+	 *  		'wr_option'			=> array( "LIKE '%secret%'" ),
+	 *  @endcode
+	 *  @note see sql::cond to know how to use Expression
+	 *  @return array. the return value is the same as that of latest.lib.php
 	 */
 	static function posts( $option )
 	{

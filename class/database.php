@@ -18,12 +18,16 @@ class sql {
 		"<=value"
 		"<>value"
 		
-		or if it is array, then the first element will be used as the express and value.
+	 *  @note How to use (ANY) expression :
+	 *  
+		if it is array, then the first element will be used as the express and value.
 		
 		@code the code below will make SQL like "wr_option LIKE '%secret%'"
 			$posts = g::posts(
 				array(
 					'wr_option'			=> array( "LIKE '%secret%'" ),
+					'wr_hit'			=> array( "!= 1234" ),
+					'wr_subject'		=> array( "IS NOT NULL" ),
 				)
 			);
 		@endcode
