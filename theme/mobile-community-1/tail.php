@@ -31,9 +31,13 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		<img src='<?=x::url_theme()?>/img/footer-500px.png'/>
 	</div>
 </td>
-<td>
+<td width='80%'>
 	<div class='text-info'>
-		<div class='footer-text'><?=nl2br(x::meta('footer_text'))?></div>		
+		<div class='footer-text'>
+		<?if ( x::meta('footer_text')) echo nl2br(x::meta('footer_text'));
+		else echo "no footer text";
+		?>
+		</div>		
 		<?/*<a href="<?=g::url()?>?device=pc">PC 버젼</a>
 		<a href='<?=url_site_config()?>'>사이트 관리</a>*/?>
 	</div>	
