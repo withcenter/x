@@ -4,7 +4,7 @@
 <?
 for ( $i=1; $i <=10; $i++ ) {
 	$forum_name = x::meta('popular_forum_no_'.$i);
-	$no_of_posts = x::meta('latest_no_of_posts_'.$i);
+	$no_of_posts = x::meta('popular_no_of_posts_'.$i);
 	if ( empty($no_of_posts) || ($no_of_posts == 0) ) $no_of_posts = 3;
 	if ( $forum_name ) {
 	echo mobile_popular_posts(	array(
@@ -12,13 +12,16 @@ for ( $i=1; $i <=10; $i++ ) {
 										'wr_is_comment'	=> 0,
 										'bo_table'		=> $forum_name,
 										'order by'		=> 'wr_hit DESC',
-										'limit'			=> $no_of_posts
-								), x::url_theme().'/img/category-icon.png');	
+								),
+								array( 
+									'icon'		 => x::url_theme().'/img/category-icon.png',
+									'no_of_posts' => $no_of_posts,
+								));
 }}
-function mobile_popular_posts($options, $icon) {
+function mobile_popular_posts($options, $meta) {
 	global $g5;
 	$popular_posts = g::posts($options);
-	if( !$popular_posts ) return;
+	if($popular_posts == null) return;
 	$popular_subject = db::result("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".$options['bo_table']."'");
 	foreach( $popular_posts as $key => $value ) {
 		$popular_posts[$key]['wr_content'] = db::result("SELECT wr_content FROM $g5[write_prefix]".$value['bo_table']." WHERE wr_id='".$value['wr_id']."'");
@@ -26,12 +29,13 @@ function mobile_popular_posts($options, $icon) {
 		
 ?>
 <div class='posts-title'>
-	<img src='<?=$icon?>'/><?=$popular_subject?>
+	<img src='<?=$meta['icon']?>'/><?=$popular_subject?>
 </div>
 <div class='popular-posts-container'>
 	<?
-	for ( $i = 0; $i <= 2 ; $i++ ) {
-			?><div class='popular-posts <?if ( $i==2 ) echo "last-popular-post";?>'> <?
+	$no_of_posts =  $meta['no_of_posts']-1;
+	for ( $i = 0; $i <= $no_of_posts; $i++ ) {
+			?><div class='popular-posts <?if ( $i==$no_of_posts ) echo "last-popular-post";?>'> <?
 			$imgsrc = get_list_thumbnail($popular_posts[$i]['bo_table'], $popular_posts[$i]['wr_id'], 210, 80); 
 			if ( $imgsrc['src'] ) {
 				$img = "<img src='$imgsrc[src]'/>";
