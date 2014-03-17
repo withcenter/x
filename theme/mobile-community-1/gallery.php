@@ -17,13 +17,15 @@
 	$posts = g::posts(array( 'limit' => 100));
 
 	$i = 0;
+
 	foreach( $posts as $key => $value ) {
+		if( $value['wr_is_comment'] != 0 ) continue;
 		$lists[$i] = db::row("SELECT * FROM $g5[write_prefix]".$value['bo_table']." WHERE wr_id='".$value['wr_id']."'");
 		$lists[$i]['bo_table'] = $value['bo_table'];
 		$i++;
 	}
 
-	isset($options['width'])		? $width = $options['width'] : $width = 300;
+	isset($options['width'])	? $width = $options['width'] : $width = 300;
 	isset($options['radius'])	? $height = $options['height'] : $height = 180;
 	isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 	add_stylesheet('<link rel="stylesheet" href="'.x::url_theme().'/css/gallery.css">', 0);
