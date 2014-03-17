@@ -242,9 +242,12 @@ a {
 	margin-bottom:10px;
 }
 
-#footer .pc_version .label{
-	color:#e9e9e9;
+#footer .pc_version a{
 	text-decoration:none;
+}
+
+#footer .pc_version .label{
+	color:#e9e9e9;	
 }
 
 /* sidebar */
