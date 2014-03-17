@@ -9,7 +9,11 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
     <div id="result_logo">
 		<a href='<?=g::url()?>'>
-				<img src="<?=x::url_theme()?>/img/logo_register.png" class='registration-logo'/>	
+		<?
+			if( file_exists( x::path_file( 'registration_logo') ) ) {
+				echo "<img style='width:178px;' src='".x::url_file( 'registration_logo' )."'>";
+			} else echo "<img src='<?=x::url_theme()?>/img/logo_register.png' class='registration-logo'/>";	
+		?>
 		</a>
 		<span class='logo-text'>
 		<?

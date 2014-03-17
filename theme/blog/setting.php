@@ -118,6 +118,18 @@ function setTopMenu( $name ) {
 				
 			<?}?>
 			</tr>
+			<tr valign='top' >
+				<td colspan='2'>
+					<div class='image-title'>Registration Logo</div>
+						<div class='image-upload'>
+						<?if( file_exists( x::path_file( 'registration_logo') ) ) {
+							echo "<img style='width:178px;' src='".x::url_file( 'registration_logo' )."'>"; 
+						} else echo "<div class='setting-no-image'>이미지가 없습니다. [가로 225px]</div>"; ?>
+							<input type='file' name='registration_logo'>
+							<input type='checkbox' name='banner_<?=$i?>_remove' value='y'><span class='title-small'>이미지 제거</span>
+						</div>
+				</td>	
+			</tr>
 		</table>
 	</div>
 	<input type='submit' value='업데이트' />
