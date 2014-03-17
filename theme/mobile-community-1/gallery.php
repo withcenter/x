@@ -8,6 +8,7 @@
 						'width'		=> 214,
 						'height'	=> 170,
 						'radius'	=> 0,
+						'domain'	=> etc::domain(),
 					)
 		);
 
