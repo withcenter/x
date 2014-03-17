@@ -116,10 +116,14 @@
 				<form name="comm3_search_form" method="get" action="<?=x::url()?>" onsubmit="return fsearchbox_submit(this);">
 				<input type="hidden" name="module" value="post">
 				<input type="hidden" name="action" value="search">
+				<input type='hidden' name='search_subject' value=1 />
+				<input type='hidden' name='search_content' value=1 />
+				<? /*
 				<input type="hidden" name="sfl" value="wr_subject||wr_content">
 				<input type="hidden" name="sop" value="and">
 				<label for="sch_stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
-				<input type="text" name="stx" id="comm3_search_text" maxlength="20" placeholder='검색어를 입력해 주세요.' autocomplete='off'><input type="submit" value='검색' id="comm3_search_submit">
+				*/?>
+				<input type="text" name="key" id="comm3_search_text" maxlength="20" placeholder='검색어를 입력해 주세요.' autocomplete='off'><input type="submit" value='검색' id="comm3_search_submit">
 
 				</form>
 			</fieldset>

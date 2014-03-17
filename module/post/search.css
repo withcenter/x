@@ -1,0 +1,86 @@
+.search .search-form {
+	margin-bottom: 20px;
+	border: 1px solid #d5d5d5;
+	padding: 10px 20px;
+	border-radius: 3px;
+}
+.search .search-form input[type='text'] {
+	padding: 5px 10px;
+}
+
+.search .search-form input[type='submit'] {
+	padding: 7px 20px;
+	display: inline-block;
+	background-color: #666666;
+	color: #ffffff;
+	border: 0;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.search .search-form select {
+	padding: 5px 10px;
+}
+.search .posts .row{
+	border-top: 1px solid #d5d5d5;
+	padding: 10px;
+	min-height: 40px;
+}
+.search .posts .row:last-child {
+	border-bottom: 1px solid #d5d5d5;
+}
+
+.search .posts .row a:hover {
+	text-decoration: none;
+}
+
+.search .posts .row .subject {
+	font-size: 10pt;
+	font-weight: bold;
+	line-height: 20px;
+	height:20px;
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+
+.search .posts .row .subject  a {
+	color: #444444;
+}
+
+.search .posts .row  .keyword {
+	font-weight: bold;
+	border: 1px solid #d5d5d5;
+	background-color: #d8d8d8;
+	padding: 2px 3px;
+	color: #3f556b;
+}
+
+.search .posts .row  .contents {
+	line-height: 20px;
+	height: 40px;
+	overflow: hidden;
+}
+
+.search .post-info {
+	text-align: right;
+}
+
+.search .paging {
+	margin: 10px 0 20px 0;
+}
+
+.search .paging .page_no {
+	border: 1px solid #666666;
+	color: #666666;
+	display: inline-block;
+	padding: 5px 7px;
+	border-radius: 2px;
+	margin: 0 2px;
+	
+}
+
+.search .paging .page_no:hover, .search .paging .selected {
+	text-decoration: none;
+	background-color: #666666;
+	color: #ffffff;
+}
