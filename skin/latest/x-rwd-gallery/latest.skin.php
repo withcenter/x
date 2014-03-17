@@ -36,12 +36,19 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 <?
 	$count_image = 0;
 	for ($i=0; $i<count($list); $i++) {
+		
 		if ( $count_image >= 4 ) break;
 			$thumb = get_list_thumbnail($bo_table, $list[$i]['wr_id'], $width, $height);    					            
 			if($thumb['src']) {
 				$img = '<img class="img_left" src="'.$thumb['src'].'">';
 				$count_image ++;
 			} else {
+				$image_from_tag = g::thumbnail_from_image_tag( $list[$i]['wr_content'], $bo_table, $width-2, $height-1 );
+				$img = "<img class='img_left' src='$image_from_tag'/>";
+				$count_image ++;
+			}
+			
+			if ( empty($image_from_tag) && empty($thumb['src']) ) {
 				$img = '<img class="img_left" src="'.$latest_skin_url.'/img/no-image.png"/>';
 				$no_image = g::thumbnail_from_image_tag( $img, $bo_table, $width-2, $height-1 );
 				$img = "<img class='img_left' src='$no_image'/>";
