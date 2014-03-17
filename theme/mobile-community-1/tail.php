@@ -45,7 +45,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 <td>
 	<div class='pc_version'>
 		<a href="<?=g::url()?>?device=pc">
-			<img src='<?=x::url_theme()?>/img/pc_version.png'/>
+			<img src='<?=x::url_theme()?>/img/pc_version.png'/><br>
 			<span class='label'>PC Version</span>
 		</a>		
 	</div>
