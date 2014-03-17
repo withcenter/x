@@ -1,7 +1,8 @@
 <?php
 	
 ?>
-<script src='<?=x::url()?>/module/<?=$module?>/subsite.js'></script>
+<!--<script src='<?=x::url()?>/module/<?=$module?>/subsite.js'></script>-->
+
 <form action='?' class='config_general' method='POST' enctype='multipart/form-data'>
 		<input type='hidden' name='module' value='<?=$module?>'>
 		<input type='hidden' name='action' value='config_global_submit'>

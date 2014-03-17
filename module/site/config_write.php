@@ -20,7 +20,7 @@ if ( $in['done'] ) {
 		</div>
 	<div class='config-wrapper'>
 	<form method='get'> 
-		<input type='hidden' name='module' value='multi' />
+		<input type='hidden' name='module' value='<?=$module?>' />
 		<input type='hidden' name='action' value='config_write' />
 		<input type='hidden' name='done' value=1 />
 <?php 

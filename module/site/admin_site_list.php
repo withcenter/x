@@ -70,7 +70,7 @@
 				<tr>
 					<td>$row[key]</td>
 					<td>$row[value]</td>
-					<td><a href='?module=$module&action={$action}_submit&mode=delete_theme&domain=$row[key]'>Delete</a></td>
+					<td><a href='?module=$module&action={$action}_submit&domain=$row[key]'>Delete</a></td>
 				</tr>
 			";
 		}

@@ -8,5 +8,5 @@
 	}
 	
 
-	jsGo( '?module=multi&action=config_menu' );
+	jsGo( "?module=$module&action=config_menu" );
 	

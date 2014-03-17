@@ -4,6 +4,7 @@
 		jsBack("Domain exists. Choose another");
 		return;
 	}
+	
 	$idx = site_set( $in['idx'], $domain, $mb_id );
 	meta_set( $domain, 'title', $title );
 	meta_set( $domain, 'theme', $theme );

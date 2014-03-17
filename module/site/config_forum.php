@@ -7,7 +7,6 @@
 			$no_of_board = count($rows);
 			
 		?>
-	<link rel='stylesheet' type='text/css' href='<?=x::url()?>/module/<?=$module?>/multi.css' />
 	<div class='config config_forum'>
 	<div class='config-main-title'>
 		<div class='inner'>
