@@ -7,16 +7,16 @@ if ( $option == 'mb_edit' ) include_once 'admin_member_edit.php';
 else {
 	if ( $in['page_no'] ) $page_no = $in['page_no'];
 	else $page_no = 1;
-	$no_of_rows = 10;
+	$no_of_rows = 20;
 	include 'search_form.php';
 
 	$start = ( $page_no - 1 ) * $no_of_rows;
 	$total_rows = db::result ( "SELECT COUNT(*) FROM ".$g5['member_table']." $conds");
 	$rows = db::rows ( "SELECT mb_no, mb_id, mb_name, mb_nick, mb_email, mb_tel, mb_leave_date, mb_intercept_date,".REGISTERED_DOMAIN." FROM ".$g5['member_table']." $conds ORDER BY mb_no DESC LIMIT $start, $no_of_rows");
 	?>
-	<div class='no_of_members'>검색 회원 수 <?=number_format($total_rows)?></div>
+	<div class='no_of_members'>검색 회원 수 <b><?=number_format($total_rows)?></b>명</div>
 
-	<table cellpadding=0 cellspacing=0 width='100%'>
+	<table class='admin-list-table' cellpadding=0 cellspacing=0 width='100%'>
 		<tr class='header'>
 			<td nowrap>번호</td>
 			<td width=50>도메인</td>

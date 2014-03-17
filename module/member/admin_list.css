@@ -1,16 +1,82 @@
 /* admin_list.php */
-.admin_list table tr td {
+.admin_list .search-form{
+	border: 1px solid #d5d5d5;
+	padding: 10px;
+	border-radius: 3px;
+}
+
+.admin_list .search-form  .title {
+	font-weight: bold;
+	color: #3e5068;
+	font-size: 11pt;
+	font-family: '맑은 고딕', 'AppleGothic';
+	margin-bottom: 10px;
+}
+
+.admin_list .search-form  table td {
+	padding: 5px 0;
+	color: #444444;
+}
+
+.admin_list .search-form  table td input[type='text'] {
+	padding: 5px 10px;
+	width: 170px;
+}
+
+.admin_list .search-form  table td input[type='submit'] {
+	background-color: #666666;
+	color: #ffffff;
+	display: inline-block;
+	padding: 7px 20px;
+	border: 0;
+}
+
+.admin_list .no_of_members {
+	color: #444444;
+	margin: 20px 0 5px 0;
+}
+
+.admin_list .no_of_members b {
+	color: #3e5068;
+}
+
+.admin_list .admin-list-table tr td {
 	padding: 7px 2px;
 	border-bottom: 1px solid #d5d5d5;
 }
 
-.admin_list table .header {
-	background-color: #666666;
+.admin_list .admin-list-table .header {
+	background-color: #727272;
 	color: #ffffff;
+	font-weight: bold;
+}
+.admin_list .admin-list-table .header td {
+	border-right: 1px solid #ffffff;
+	text-align: center;
 }
 
+.admin_list .admin-list-table .header td:last-child {
+	border-right: 0;
+}
 
+.admin_list .paging {
+	margin-top: 10px;
+	text-align: center;
+}
 
+.admin_list .paging .page_no {
+	border: 1px solid #666666;
+	color: #666666;
+	display: inline-block;
+	padding: 3px 7px;
+	border-radius: 3px;
+	margin: 0 2px;
+}
+
+.admin_list .paging .selected {
+	color: #ffffff;
+	background-color: #666666;
+}
 /* admin_member_edit.php */
 .member-info {
 	border: 1px solid #d5d5d5;
