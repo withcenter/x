@@ -20,7 +20,7 @@
 		</a>
 	</li>
 	<li class='menu_item images'>
-		<a href='javascrip:void(0)'>
+		<a href='javascript:void(0)'>
 			<img src='<?=x::url_theme()?>/img/mobile_icon4.png'/>		
 			<span class='label'>Menu</span>
 		</a>
@@ -47,18 +47,20 @@
 	</li>
 	<?
 		if( $member['mb_id'] ) {
-			$login_msg = "Logout";
+			$login_msg = "Logout";			
+			$log_href = G5_BBS_URL."/logout.php";
 			$profile_msg = "Profile";
 			$profile_msg_url = G5_BBS_URL."/member_confirm.php?url=register_form.php";
 		}
 		else {
 			$login_msg = "Login";
+			$log_href = "javascript:void(0)";
 			$profile_msg = "Register";
-			$profile_msg_url = G5_BBS_URL."/register.php";
+			$profile_msg_url = G5_BBS_URL."/register.php";			
 		}
 	?>
 	<li class='menu_item log-in-button'>
-		<a href='javascrip:void(0)'>
+		<a login_type = 'menu' href='<?=$log_href?>'>
 			<img src='<?=x::url_theme()?>/img/mobile_icon6.png'/>		
 			<span class='label'>
 				<?=$login_msg?>

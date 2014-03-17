@@ -27,41 +27,43 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 				border-radius: <?=$radius?>px;
 			}
 </style>
-<div class='posts-title'>
-	<img src='<?=$options['icon']?>'/><?=$bo_subject?>
-</div>
-<div class='latest-posts-container'>
+<? if ($list) { ?>
+	<div class='posts-title'>
+		<img src='<?=$options['icon']?>'/><?=$bo_subject?>
+	</div>
+	<div class='latest-posts-container'>
 
-	<?	$i=0;
-		foreach($list as $li ) {
-			?>
-			<div class='latest-posts <?if ( $i==2 ) echo "last-latest-post";?>'> <?
-			$imgsrc = get_list_thumbnail($bo_table, $li['wr_id'], $width, $height);
-			$i++;
-			if ( $imgsrc['src'] ) {
-				$img = "<img src='$imgsrc[src]'/>";
-			} else $img = "<img src='".$latest_skin_url."/img/no_image.png'";
-			$url = $li['href'];
-			?>
-			<table cellspacing='0' cellpadding='0' width='100%'>
-				<tr valign='top'>
-					<td  class='latest-image'><a href='<?=$url?>'><?=$img?></a></td>
-				<td align='left'>
-					<div class='latest-info'>
-						<div class='latest-subject'><a href='<?=$url?>'><?=cut_str($li['wr_subject'],100,'...')?></a></div>
-						<div class='latest-meta'>
-							Posted by <?=get_sideview($li['mb_id'], $li['wr_name'])?>
-							on <?=date('m/d/Y', strtotime($li['wr_datetime']))?> <span class='post-divider'>|</span>
-							<?=$li['wr_comment']?> Comment <span class='post-divider'>|</span>
-							<?=$li['wr_hit']?> view
+		<?	$i=0;
+			foreach($list as $li ) {
+				?>
+				<div class='latest-posts <?if ( $i==2 ) echo "last-latest-post";?>'> <?
+				$imgsrc = get_list_thumbnail($bo_table, $li['wr_id'], $width, $height);
+				$i++;
+				if ( $imgsrc['src'] ) {
+					$img = "<img src='$imgsrc[src]'/>";
+				} else $img = "<img src='".$latest_skin_url."/img/no_image.png'";
+				$url = $li['href'];
+				?>
+				<table cellspacing='0' cellpadding='0' width='100%'>
+					<tr valign='top'>
+						<td  class='latest-image'><a href='<?=$url?>'><?=$img?></a></td>
+					<td align='left'>
+						<div class='latest-info'>
+							<div class='latest-subject'><a href='<?=$url?>'><?=cut_str($li['wr_subject'],100,'...')?></a></div>
+							<div class='latest-meta'>
+								Posted by <?=get_sideview($li['mb_id'], $li['wr_name'])?>
+								on <?=date('m/d/Y', strtotime($li['wr_datetime']))?> <span class='post-divider'>|</span>
+								<?=$li['wr_comment']?> Comment <span class='post-divider'>|</span>
+								<?=$li['wr_hit']?> view
+							</div>
+							<div class='latest-content'>
+								<a href="<?=$url?>"><?php echo get_text(cut_str(strip_tags($li['wr_content']), 240, '...' )) ?></a>
+							</div>
 						</div>
-						<div class='latest-content'>
-							<a href="<?=$url?>"><?php echo get_text(cut_str(strip_tags($li['wr_content']), 240, '...' )) ?></a>
-						</div>
-					</div>
-				</td>
-			</tr>
-		</table>
-		</div>
-	<?}?>
-</div>
+					</td>
+				</tr>
+			</table>
+			</div>
+		<?}?>
+	</div>
+<? } ?>

@@ -41,7 +41,6 @@
 		$count_image = 0;
 	$i=0;
 	foreach ( $lists as $list ) {
-	
 		$thumb = get_list_thumbnail($list['bo_table'], $list['wr_id'], $width, $height);    					            
 		if($thumb['src']) {
 			$img  = '<img class="img_left" src="'.$thumb['src'].'">';
@@ -59,7 +58,7 @@
 					<div class='post' no="<?=$count_image?>">
 						<div class='photo'><a href="<?=$url?>"><?=$img?></a></div>
 						<div class='text'>
-							<div class='title'><a href="<?=$url?>" class='post-subject'><?php echo cut_str($list['subject'], 10 , "...") ?></a> <span class='post-author'>by <?=get_sideview($list['mb_id'],$list['wr_name'])?></span></div>
+							<div class='title'><a href="<?=$url?>" class='post-subject'><?php echo cut_str($list['wr_subject'], 10 , "...") ?></a> <span class='post-author'>by <?=get_sideview($list['mb_id'],$list['wr_name'])?></span></div>
 							<div class='date-comment-view'><a href="<?=$url?>"><span class='post-date'><?=date('m/d/Y', strtotime($list['wr_datetime']))?></span> <span class='post-divider'> | </span> <span class='post-comment'><?=$list['wr_comment']?> Comment</span> <span class='post-divider'>|</span> <span class='post-views'><?=$list['wr_hit']?> view</span></a></div>
 							
 							<div class='date-comment-view-mobile'>
