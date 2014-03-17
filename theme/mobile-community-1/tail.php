@@ -19,8 +19,8 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
 
 <div id='footer'>
-<table width='100%' cellspacing=0 cellpadding=0></tr valign='top'>
-<td>
+<table width='100%' cellspacing=0 cellpadding=0><tr valign='top'>
+<td class='td-logo'>
 	<div class='logo'>
 		<img src='<?=x::url_theme()?>/img/footerlogo.png'/>
 	</div>
@@ -34,9 +34,17 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 <td>
 	<div class='text-info'>
 		<div class='footer-text'><?=nl2br(x::meta('footer_text'))?></div>		
-		<a href="<?=g::url()?>?device=pc">PC 버젼</a>
-		<a href='<?=url_site_config()?>'>사이트 관리</a>
+		<?/*<a href="<?=g::url()?>?device=pc">PC 버젼</a>
+		<a href='<?=url_site_config()?>'>사이트 관리</a>*/?>
 	</div>	
+</td>
+<td>
+	<div class='pc_version'>
+		<a href="<?=g::url()?>?device=pc">
+			<img src='<?=x::url_theme()?>/img/pc_version.png'/>
+			<span class='label'>PC Version</span>
+		</a>		
+	</div>
 </td>
 </tr></table>
 </div>

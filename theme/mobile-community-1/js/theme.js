@@ -18,7 +18,7 @@ $(function(){
 		$('.mobile-menu .drop-down').slideDown('fast');	
 	});
 	
-	$('#header .close-dropdown-button').click(function(){
+	$('#header .close-dropdown').click(function(){
 		$('.mobile-menu .drop-down').slideUp('fast');	
 	});
 
