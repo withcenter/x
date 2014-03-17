@@ -21,7 +21,7 @@
 <?*/?>
 <ul>
 	<li class='menu_item drop-down-button'>
-		<a href='javascrip:void(0)'>
+		<a href='javascript:void(0)'>
 			<img src='<?=x::url_theme()?>/img/mobile_icon0.png'/>		
 			<span class='label'>More</span>
 		</a>
@@ -45,7 +45,7 @@
 		</a>
 	</li>
 	<li class='menu_item images'>
-		<a href='javascrip:void(0)'>
+		<a href='javascript:void(0)'>
 			<img src='<?=x::url_theme()?>/img/mobile_icon4.png'/>		
 			<span class='label'>Menu</span>
 		</a>
@@ -73,13 +73,15 @@
 	<?
 		if( $member['mb_id'] ) {
 			$login_msg = "Logout";
+			$login_href = G5_BBS_URL."/logout.php";
 		}
 		else {
 			$login_msg = "Login";			
+			$login_href = "javascript:void(0)";
 		}
 	?>
 	<li class='menu_item log-in-button'>
-		<a href='javascrip:void(0)'>
+		<a login_type = 'mobile-menu' href='<?=$login_href?>'>
 			<img src='<?=x::url_theme()?>/img/mobile_icon6.png'/>		
 			<span class='label'>
 				<?=$login_msg?>

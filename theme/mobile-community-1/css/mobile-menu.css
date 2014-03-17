@@ -145,6 +145,16 @@
 	text-decoration:none;
 }
 
+#header .mobile-menu .drop-down .close-dropdown{	
+	padding:0 10px 10px 10px;		
+	text-align:right;
+}
+
+#header .mobile-menu .drop-down .close-dropdown .close-dropdown-button{	
+	cursor:pointer;
+	color:#ffffff;
+}
+
 /**pop-up-login**/
 #header .mobile-menu .pop-up-login{
 	display:none;

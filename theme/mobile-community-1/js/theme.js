@@ -1,29 +1,50 @@
 $(function(){
+/*
 	$('#login-button').click(function(){
 		if ( $('#login-box').css('display') == 'none' ) $('#login-box').show();
 		else $('#login-box').hide();
 	});	
-
-	$('#header ul li.menu_item a').click(function(){	
+*/
+	$('#header ul li.drop-down-button a').click(function(){	
 	if( $(this).hasClass('selected') ){
 			$('#header ul li.menu_item a').removeClass('selected');
 	}else{
 			$('#header ul li.menu_item a').removeClass('selected');
-			$(this).addClass('selected');				
-			$('#header .pop-up').hide();
+			$(this).addClass('selected');
 		}
 	});
 	
-	$('#header ul li.menu_item.drop-down-button a').click(function(){			
-		$('.mobile-menu .drop-down').toggle();
+	$('#header ul li.menu_item.drop-down-button a').click(function(){		
+		$('.mobile-menu .drop-down').slideDown('fast');	
 	});
 	
-	$('#header .menu ul li.log-in-button a').click(function(){		
-		$('.menu .pop-up-login').toggle();		
+	$('#header .close-dropdown-button').click(function(){
+		$('.mobile-menu .drop-down').slideUp('fast');	
+	});
+
+var login_timeout;
+var login_type;
+
+	$('#header ul li.log-in-button > a').mouseenter(function(){
+		$('#header ul li.menu_item a').removeClass('selected');
+		$('.mobile-menu .drop-down').hide();
+		
+		login_type = $(this).attr('login_type');
+		clearTimeout(login_timeout);
+		$('.' + login_type + ' .pop-up-login').show();
+		$(this).addClass('selected');	
 	});
 	
-	$('#header .mobile-menu ul li.log-in-button a').click(function(){		
-		$('.mobile-menu .pop-up-login').toggle();	
+	$('#header ul li.log-in-button > a').mouseleave(function(){
+		login_timeout = popup_login_timeout('.' + login_type + ' .pop-up-login');
+	});	
+	
+	$('.pop-up-login').mouseleave(function(){		
+		login_timeout = popup_login_timeout('.' + login_type + ' .pop-up-login');
+	});
+	
+	$('.pop-up-login').mouseenter(function(){
+		clearTimeout(login_timeout);		
 	});
 	
 	$('.top-below-500-px .search-button').click(function(){
@@ -32,7 +53,7 @@ $(function(){
 	});
 });
 
-
+/*
 function open_menu()
 {
 	$('.menu').slideDown('fast');
@@ -43,4 +64,13 @@ function close_menu()
 {
 	$('.menu').slideUp('fast');
 	$('.all-hide').show();
+}
+*/
+/**pop up login**/
+function popup_login_timeout(login_box)
+{		
+	return setTimeout(function(){	
+		$(login_box).hide();
+		$('#header ul li.log-in-button a').removeClass('selected');		
+	},300);
 }
