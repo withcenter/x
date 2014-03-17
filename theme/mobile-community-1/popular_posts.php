@@ -5,7 +5,7 @@
 for ( $i=1; $i <=10; $i++ ) {
 	$forum_name = x::meta('popular_forum_no_'.$i);
 	$no_of_posts = x::meta('latest_no_of_posts_'.$i);
-	if ( empty($no_of_posts) ) $no_of_posts = 3;
+	if ( empty($no_of_posts) || ($no_of_posts == 0) ) $no_of_posts = 3;
 	if ( $forum_name ) {
 	echo mobile_popular_posts(	array(
 										'domain'		=> etc::domain(),
@@ -18,6 +18,7 @@ for ( $i=1; $i <=10; $i++ ) {
 function mobile_popular_posts($options, $icon) {
 	global $g5;
 	$popular_posts = g::posts($options);
+	if( !$popular_posts ) return;
 	$popular_subject = db::result("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".$options['bo_table']."'");
 	foreach( $popular_posts as $key => $value ) {
 		$popular_posts[$key]['wr_content'] = db::result("SELECT wr_content FROM $g5[write_prefix]".$value['bo_table']." WHERE wr_id='".$value['wr_id']."'");
