@@ -2,22 +2,19 @@
 	<img src='<?=x::url_theme()?>/img/popular-icon.png'/>인기글
 </div>
 <?
+for ( $i=1; $i <=10; $i++ ) {
+	$forum_name = x::meta('popular_forum_no_'.$i);
+	$no_of_posts = x::meta('latest_no_of_posts_'.$i);
+	if ( empty($no_of_posts) ) $no_of_posts = 3;
+	if ( $forum_name ) {
 	echo mobile_popular_posts(	array(
 										'domain'		=> etc::domain(),
 										'wr_is_comment'	=> 0,
-										'bo_table'		=> bo_table(1),
+										'bo_table'		=> $forum_name,
 										'order by'		=> 'wr_hit DESC',
-										'limit'			=> 3
-								), x::url_theme().'/img/category-icon.png');
-									
-	echo mobile_popular_posts(	array(
-										'domain'		=> etc::domain(),
-										'wr_is_comment'	=> 0,
-										'bo_table'		=> bo_table(2),
-										'order by'		=> 'wr_hit DESC',
-										'limit'			=> 3
-								), x::url_theme().'/img/category-icon.png');		
-									
+										'limit'			=> $no_of_posts
+								), x::url_theme().'/img/category-icon.png');	
+}}
 function mobile_popular_posts($options, $icon) {
 	global $g5;
 	$popular_posts = g::posts($options);

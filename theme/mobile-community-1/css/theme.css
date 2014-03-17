@@ -451,3 +451,30 @@ a {
 
 }
 
+/**Theme specific META CONFIG CSS*/
+
+.mobile-meta-table td {
+	border-bottom: solid 1px #e6e6e6 !important;
+	padding-top: 0.625em;
+}
+
+.mobile-meta-table input {
+	padding: 0.3em !important;
+	width: 10em !important;
+}
+
+.mobile-meta-table select {
+	height: 2.7em !important;
+	vertical-align: top;
+	border: solid 1px #c3c3c3;
+	width: 10em;
+}
+
+.mobile-meta-table td.no_of_posts input {
+	width: 3em !important;
+}
+
+.mobile-table-header td {
+	padding: 1em !important;
+	font-weight: bold;
+}
