@@ -190,6 +190,11 @@
 #reg_result #result_logo {
 	margin-bottom: 20px;
 }
+
+#reg_result #result_logo img {
+	max-height: 80px;
+}
+
 #reg_result #result_logo .logo-text {
 	font-family: '?? ??', AppleGothic;
 	font-size: 20pt;
