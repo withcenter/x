@@ -1,0 +1,145 @@
+/* admin_list.php */
+.admin_list table tr td {
+	padding: 7px 2px;
+	border-bottom: 1px solid #d5d5d5;
+}
+
+.admin_list table .header {
+	background-color: #666666;
+	color: #ffffff;
+}
+
+
+
+/* admin_member_edit.php */
+.member-info {
+	border: 1px solid #d5d5d5;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+.member-info .title {
+	border: 1px solid #808080;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 10px;
+	background-color: #808080;
+	color: #ffffff;
+	margin-bottom: 10px;
+}
+
+.member-info .sub-title {
+	display: inline-block;
+	width: 100px;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 10px;
+	margin-right: 10px;
+	background-color: #fafafa;
+	border: solid 1px #cccccc;
+	margin: 0 6px 6px 6px;
+}
+
+.member-info .member-info-content-edit {
+	margin: 10px 0;
+}
+
+.member-info tr td {
+	border-bottom: solid 1px #e6e6e6;
+	padding: 5px;
+}
+
+.member-info tr td .sub-title {
+	margin: 0;
+}
+
+.member-info input[type='text'], textarea {
+	padding: 6px;
+	border: solid 1px #cccccc;
+	width: 400px;
+	margin: 0;
+}
+
+.member-info input[type='checkbox'] {
+	margin: 6px;
+}
+
+
+.member-info tr td.member-zip input[type='text'] {
+	width: 50px;
+}
+
+.member-info tr td.member-address input[type='text'] {
+	margin-bottom: 5px;
+}
+
+.member-info tr td.member-address input.member-address-last {
+	margin: 0;
+}
+
+.config-member .search-form {
+	margin-bottom: 10px;
+}
+
+.config-member .no-of-member {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+.config-member .config-member-table {
+	margin-bottom: 10px;
+}
+
+.config-member .config-member-table td {
+	padding: 7px;
+	border-bottom: solid 1px #e6e6e6;
+}
+
+.config-member .config-member-table td.member-no {
+	font-weight: bold;
+}
+
+.config-member .config-member-table .table-header {
+	border: solid 1px #cccccc;
+}
+
+.config-member .config-member-table .table-header td {
+	padding: 9px;
+	font-weight: bold;
+	font-size: 12px;
+	background: #fafafa;
+	border-bottom: 0;
+}
+
+.config-member .paging a {
+	
+}
+
+.config-member .paging a.selected {
+	font-weight: bold;
+}
+
+.config-member .config-member-submit {
+	background: #616161;
+	border: solid 1px #616161;
+	border-radius: 0 !important;
+	padding: 5px 20px;
+	color: #ffffff;
+}
+
+.config-member input[name='username'] {
+	padding: 5px;
+	border: solid 1px #cccccc;
+	width: 50%;
+}
+
+.per-config-submit {
+	border: 0 !important;
+	border-radius: 0 !important;
+	color: #ffffff;
+	background: #616161;
+	height: 30px;
+	width: 80px;
+	margin-top: 10px;
+	
+}
