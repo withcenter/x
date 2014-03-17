@@ -46,8 +46,9 @@ var this_item;
 		
 	});
 	
-	$('#header ul li.log-in-button > a').mouseleave(function(){
+	$('#header ul li.log-in-button > a').mouseleave(function(){		
 		if( this_item.hasClass('logout_button') ) return;		
+		clearTimeout(login_enter_timeout);
 		login_timeout = popup_login_timeout('.' + login_type + ' .pop-up-login');
 	});	
 	
