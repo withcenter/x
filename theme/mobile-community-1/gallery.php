@@ -74,7 +74,7 @@
 								</a>
 							</div>
 							
-							<div class='desc'><a href="<?=$url ?>"><?php echo get_text(cut_str(strip_tags($list[wr_content]), 65, '...' )) ?></a></div>
+							<div class='desc'><a href="<?=$url ?>"><?php echo get_text(cut_str(strip_tags(str_replace('&nbsp;',"", $list[wr_content])), 65, '...' )) ?></a></div>
 						</div>
 					</div>
 				</div>
