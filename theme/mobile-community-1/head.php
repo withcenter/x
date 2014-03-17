@@ -54,9 +54,13 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
 	<div class='mobile-menu'>
 		<div class='inner'><?include 'mobile-menu.php'?></div>
 		<div class='pop-up drop-down'><?include 'drop-down-menu.php'?></div>
-		<div class='pop-up pop-up-login'>
-			<?=outlogin('x-outlogin-mobile-1-640px');?>
-		</div>	
+		<?if( !$member['mb_id'] ) {
+		//no need to show log in box when logged in
+		?>
+			<div class='pop-up pop-up-login'>
+				<?=outlogin('x-outlogin-mobile-1-640px');?>
+			</div>	
+		<?}?>
 	</div>
 	<div class='menu'><div class='inner'><?include 'menu.php'?></div></div>
 	<div class='submenu'><div class='inner'><?include 'submenu.php'?></div></div>

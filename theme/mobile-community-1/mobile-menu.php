@@ -73,6 +73,7 @@
 	<?
 		if( $member['mb_id'] ) {
 			$login_msg = "Logout";
+			$login_class = "logout_button";
 			$login_href = G5_BBS_URL."/logout.php";
 		}
 		else {
@@ -81,7 +82,7 @@
 		}
 	?>
 	<li class='menu_item log-in-button'>
-		<a login_type = 'mobile-menu' href='<?=$login_href?>'>
+		<a class='<?=$login_class?>' login_type = 'mobile-menu' href='<?=$login_href?>'>
 			<img src='<?=x::url_theme()?>/img/mobile_icon6.png'/>		
 			<span class='label'>
 				<?=$login_msg?>

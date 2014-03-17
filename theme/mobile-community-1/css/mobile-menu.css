@@ -182,10 +182,13 @@
 .top-below-500-px .search-button{
 	float:left;
 	width:56.5%;
-	text-align:right;
-	cursor:pointer;
+	text-align:right;	
 	position:relative;
 	margin-bottom:10px;
+}
+
+.top-below-500-px .search-button img{
+	cursor:pointer;
 }
 
 .top-below-500-px .search-button .triangle{

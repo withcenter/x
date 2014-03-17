@@ -49,6 +49,7 @@
 		if( $member['mb_id'] ) {
 			$login_msg = "Logout";			
 			$log_href = G5_BBS_URL."/logout.php";
+			$login_class = "logout_button";
 			$profile_msg = "Profile";
 			$profile_msg_url = G5_BBS_URL."/member_confirm.php?url=register_form.php";
 		}
@@ -60,18 +61,20 @@
 		}
 	?>
 	<li class='menu_item log-in-button'>
-		<a login_type = 'menu' href='<?=$log_href?>'>
+		<a class='<?=$login_class?>' login_type = 'menu' href='<?=$log_href?>'>
 			<img src='<?=x::url_theme()?>/img/mobile_icon6.png'/>		
 			<span class='label'>
 				<?=$login_msg?>
 			</span>
 		</a>
 
-		
-		<div class='pop-up pop-up-login'>
-			<?=outlogin('x-outlogin-mobile-1');?>
-		</div>
-		
+		<?if( !$member['mb_id'] ) {
+		//no need to show log in box when logged in
+		?>
+			<div class='pop-up pop-up-login'>
+				<?=outlogin('x-outlogin-mobile-1');?>
+			</div>
+		<?}?>
 
 	</li>
 	<li class='less-padding menu_item'>

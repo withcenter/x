@@ -22,20 +22,32 @@ $(function(){
 		$('.mobile-menu .drop-down').slideUp('fast');	
 	});
 
+var login_enter_timeout;
 var login_timeout;
 var login_type;
+var this_item;
 
 	$('#header ul li.log-in-button > a').mouseenter(function(){
-		$('#header ul li.menu_item a').removeClass('selected');
-		$('.mobile-menu .drop-down').hide();
+	this_item = $(this);
+	login_type = this_item.attr('login_type');
+	clearTimeout(login_timeout);
+	clearTimeout(login_enter_timeout);
+	
+	if( this_item.hasClass('logout_button') ) return;
+	
+	login_enter_timeout = setTimeout(function(){
+			$('#header ul li.menu_item a').removeClass('selected');
+			$('.mobile-menu .drop-down').hide();
+						
+			
+			$('.' + login_type + ' .pop-up-login').show();
+			this_item.addClass('selected');
+		},300);
 		
-		login_type = $(this).attr('login_type');
-		clearTimeout(login_timeout);
-		$('.' + login_type + ' .pop-up-login').show();
-		$(this).addClass('selected');	
 	});
 	
 	$('#header ul li.log-in-button > a').mouseleave(function(){
+		if( this_item.hasClass('logout_button') ) return;		
 		login_timeout = popup_login_timeout('.' + login_type + ' .pop-up-login');
 	});	
 	
@@ -43,11 +55,11 @@ var login_type;
 		login_timeout = popup_login_timeout('.' + login_type + ' .pop-up-login');
 	});
 	
-	$('.pop-up-login').mouseenter(function(){
+	$('.pop-up-login').mouseenter(function(){		
 		clearTimeout(login_timeout);		
 	});
 	
-	$('.top-below-500-px .search-button').click(function(){
+	$('.top-below-500-px .search-button img').click(function(){
 		$('.top-below-500-px .triangle').toggle();
 		$('.top-below-500-px .search').toggle();
 	});
