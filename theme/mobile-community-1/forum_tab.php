@@ -2,12 +2,14 @@
 <div class='forum-tab'>
 <?php
 	$option = array(
-						'icon' => x::url_theme().'/img/panel.png'
-						);
-	echo forum_tab('a', bo_table(1), $option);
-	echo forum_tab('b', bo_table(2), $option);
-	echo forum_tab('c', bo_table(3), $option);
-	echo forum_tab('d', bo_table(4), $option);
+					'icon' => x::url_theme().'/img/panel.png'
+				);
+	$forum_tab_name = array('a','b','c','d');
+	for ( $i=1; $i <=4; $i++ ) {
+		${"middle_forum_".$i} = x::meta('middle_forum_'.$i);
+		if ( empty(${"middle_forum_".$i}) ) ${"middle_forum_".$i} = bo_table($i);
+		echo forum_tab($forum_tab_name[$i-1], ${"middle_forum_".$i}, $option);
+	}
 	
 function forum_tab( $cls, $id , $option) {
 	

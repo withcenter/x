@@ -97,18 +97,32 @@
 
 <div class='config-wrapper'>
 	<div class='config-title'>
-		<span class='config-title-info'>ADDITIONAL INFORMATION</span>
+		<span class='config-title-info'>INDEX PAGE FORUMS</span>
 		<span class='config-title-notice'>
-			<span class='user-google-guide-button' page = 'google_doc_mobile_1_1' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
+			<span class='user-google-guide-button' page = 'google_doc_mobile_1_4' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
 			<img src='<?=module('img/setting_2.png')?>'>
 		</span>
 	</div>
 	<div class='config-container' cellspacing='0' cellpadding='10' >
-	<div class='hidden-google-doc google_doc_travel_1_1'>	
+	<div class='hidden-google-doc google_doc_travel_1_4'>	
 	</div>
-		<table>
+		<table cellpadding=0 cellspacing=0>
+			<tr valign='top'>
+				<td>TOP FORUM (Images) <?=set_posts('top_forum_with_images')?></td>
 			<tr>
-				<td colspan='2'><span class='title-small'>Contact Number</span><input type='text' name='mobile_contact_num' value='<?=x::meta('mobile_contact_num')?>' /></td>
+			<tr valign='top'>
+				<td>
+						<? for ( $i = 1; $i <=4; $i++ ) {?>
+							<div>MIDDLE FORUM <?=$i?> <?=set_posts('middle_forum_'.$i)?></div>
+						<?}?>
+				</td>
+			<tr>
+			<tr valign='top'>
+				<td>
+					<? for ( $i = 1; $i <=2; $i++ ) {?>
+					<div>BOTTOM FORUM <?=$i?> <?=set_posts('bottom_forum_'.$i)?></div>
+					<?}?>
+				</td>
 			<tr>
 		</table>
 	</div>
