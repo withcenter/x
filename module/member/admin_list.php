@@ -43,9 +43,9 @@ else {
 					<tr>
 						<td>$row[mb_no]</td>
 						<td>$site_domain</td>
-						<td>$row[mb_id]</td>
-						<td>$row[mb_name]</td>
-						<td>$row[mb_nick]</td>
+						<td nowrap>$row[mb_id]</td>
+						<td nowrap>$row[mb_name]</td>
+						<td nowrap>$row[mb_nick]</td>
 						<td>$row[mb_email]</td>
 						<td nowrap>$row[mb_tel]</td>
 						<td>$leave_date</td>
