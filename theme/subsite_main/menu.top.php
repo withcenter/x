@@ -22,7 +22,7 @@
 	<? }?>
 	
 	<? if ( $member['mb_id'] ) {?>
-		<li class="menu-list"><a class='my-sites' href='<?=x::url()?>/?module=multi&action=my_sites'>내 사이트</a></li>
+		<li class="menu-list"><a class='my-sites' href='<?=x::url()?>/?module=site&action=my_sites'>내 사이트</a></li>
 	<? }?>
 	
 	

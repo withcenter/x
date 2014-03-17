@@ -6,11 +6,7 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 <link rel="stylesheet" href="<?php echo $outlogin_skin_url ?>/style.css">
 <div class='login-box logged-in'><div class='inner'>
 	<div class='logged-in-name'>
-		<? if ( admin() ) {?>
-			<a href='<?=url_site_config()?>'>사이트 관리</a>
-		<? } else { ?>
-			[<?=$nick?>]님 로그인
-		<? }?>
+		[<?=$nick?>]님 로그인
 	</div>
 	<div class='logged-in-messages'>
 		<a href="<?php echo G5_BBS_URL ?>/memo.php" target="_blank">

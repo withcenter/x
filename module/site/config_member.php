@@ -9,7 +9,7 @@ if ( !admin() ) {
 		$cond = null;
 		if ( $in['username'] || $in['block'] || $in['resign'] ) {
 			$q = array();
-			if ( $username ) $q[] = "mb_id LIKE '%{$username}%' OR mb_nick LIKE '%{$username}%'";
+			if ( $username ) $q[] = "( mb_id LIKE '%{$username}%' OR mb_nick LIKE '%{$username}%' )";
 			if ( $block ) $q[] = "mb_intercept_date	 <> ''";
 			if ( $resign ) $q[] = "mb_leave_date <> ''";
 			
@@ -27,7 +27,7 @@ if ( !admin() ) {
 		else $domain_cond = " AND " .REGISTERED_DOMAIN."='$domain'";
 		
 		
-		$total_post = db::result ( "SELECT COUNT(*) FROM ".$g5['member_table']." WHERE  mb_id <> 'admin' $domain_cond $domain_cond $cond" );
+		$total_post = db::result ( "SELECT COUNT(*) FROM ".$g5['member_table']." WHERE  mb_id <> 'admin' $domain_cond $cond" );
 		$rows = db::rows("SELECT * FROM ".$g5['member_table']." WHERE mb_id <> 'admin' $domain_cond $cond ORDER BY mb_no DESC LIMIT $start, $no_of_post");
 ?>
 	<div class='config-main-title'>
@@ -40,9 +40,9 @@ if ( !admin() ) {
 
 		<div class='config-wrapper'>						
 			<div class='config-title'>
-				<span class='config-title-info'>Member Configuration <span class='no-of-member'>검색 회원수: <strong><?=$total_post?></strong></span></span>
+				<span class='config-title-info'>회원 관리<span class='no-of-member'>검색 회원수: <strong><?=$total_post?></strong></span></span>
 				<span class='config-title-notice'>
-					<span class='user-google-guide-button' page = 'google_doc_member' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
+					<span class='user-google-guide-button' page = 'google_doc_member' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[보이기]</span>
 					<img src='<?=module('img/setting_2.png')?>'>
 					</span>
 			</div>	
@@ -90,7 +90,7 @@ if ( !admin() ) {
 						<?=$m['mb_leave_date']?$m['mb_leave_date'] : '활동중'?>
 					</td>
 					<td><?=$m['mb_intercept_date']?$m['mb_intercept_date'] : '활동중'?></td>
-					<td>&nbsp;&nbsp;<a href='<?=x::url()?>/?module=multi&action=config_member&option=mb_edit&mb_id=<?=$m['mb_id']?>'><?=$setting_icon?></a></td>
+					<td>&nbsp;&nbsp;<a href='<?=x::url()?>/?module=site&action=config_member&option=mb_edit&mb_id=<?=$m['mb_id']?>'><?=$setting_icon?></a></td>
 				</tr>
 			<? }?>
 			</table>

@@ -1,5 +1,5 @@
 <?
-	add_stylesheet("<link rel='stylesheet' type='text/css' href='".x::url()."/module/".$module."/multi.css' />");
+	add_stylesheet("<link rel='stylesheet' type='text/css' href='".x::url()."/module/".$module."/site.css' />");
 	if ( ! login() ) {
 		/*
 		echo "<div class='success-fail-message'><div class='inner'>이 페이지를 이용하시려면 로그인을 하셔야 합니다. ";
