@@ -113,7 +113,9 @@
 		<td>
 			<fieldset id="search_field">
 				<legend>사이트 내 전체검색</legend>
-				<form name="comm3_search_form" method="get" action="<?php echo G5_BBS_URL ?>/search.php" onsubmit="return fsearchbox_submit(this);">
+				<form name="comm3_search_form" method="get" action="<?=x::url()?>" onsubmit="return fsearchbox_submit(this);">
+				<input type="hidden" name="module" value="post">
+				<input type="hidden" name="action" value="search">
 				<input type="hidden" name="sfl" value="wr_subject||wr_content">
 				<input type="hidden" name="sop" value="and">
 				<label for="sch_stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
