@@ -5,7 +5,7 @@
 <div class='content'>
 
 			<form action='?'>
-				<input type='hidden' name='module' value='multi'>
+				<input type='hidden' name='module' value='site'>
 				<input type='hidden' name='action' value='site_create_submit'>
 				
 				

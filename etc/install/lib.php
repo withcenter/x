@@ -1,4 +1,5 @@
 <?php
+error_reporting( E_ALL ^ E_NOTICE );
 
 function url_language( $lang )
 {
