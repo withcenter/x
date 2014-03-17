@@ -40,6 +40,8 @@ function mobile_popular_posts($options, $meta) {
 			$imgsrc = get_list_thumbnail($popular_posts[$i]['bo_table'], $popular_posts[$i]['wr_id'], 210, 80); 
 			if ( $imgsrc['src'] ) {
 				$img = "<img src='$imgsrc[src]'/>";
+			} elseif ( $image_from_tag = g::thumbnail_from_image_tag( $popular_posts[$i]['wr_content'],  $popular_posts[$i]['bo_table'], 210, 80 )) {
+				$img = "<img class='img_left' src='$image_from_tag'/>";
 			} else $img = "<img src='".x::url_theme()."/img/no_image.png'/>";
 			$url = "bbs/board.php?bo_table=".$popular_posts[$i]['bo_table']."&wr_id=".$popular_posts[$i]['wr_id'];
 			?>

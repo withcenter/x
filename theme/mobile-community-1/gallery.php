@@ -47,6 +47,9 @@
 		if($thumb['src']) {
 			$img  = '<img class="img_left" src="'.$thumb['src'].'">';
 			$count_image ++;
+		} elseif ( $image_from_tag = g::thumbnail_from_image_tag( $list['wr_content'], $bo_table, $width-2, $height-2 )) {
+			$img = "<img class='img_left' src='$image_from_tag'/>";
+			$count_image ++;
 		} else {
 			$img = '<img class="img_left" src="'.x::url_theme().'/img/no-image.png"/>';
 			$no_image = g::thumbnail_from_image_tag( $img, $bo_table, $width, $height);

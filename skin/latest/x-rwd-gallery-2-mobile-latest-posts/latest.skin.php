@@ -41,6 +41,8 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 				$i++;
 				if ( $imgsrc['src'] ) {
 					$img = "<img src='$imgsrc[src]'/>";
+				} elseif ( $image_from_tag = g::thumbnail_from_image_tag( $li['wr_content'], $bo_table, $width, $height )) {
+					$img = "<img class='img_left' src='$image_from_tag'/>";
 				} else $img = "<img src='".$latest_skin_url."/img/no_image.png'";
 				$url = $li['href'];
 				?>
