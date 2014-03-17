@@ -41,7 +41,7 @@
 			<img src='<?=module('img/setting_2.png')?>'>
 		</span>
 	</div>
-	<div class='config-container' cellspacing='0' cellpadding='10' >
+	<div class='config-container'>
 	<div class='hidden-google-doc google_doc_travel_1_1'>	
 	</div>
 		<table>
@@ -103,7 +103,7 @@
 			<img src='<?=module('img/setting_2.png')?>'>
 		</span>
 	</div>
-	<div class='config-container' cellspacing='0' cellpadding='10' >
+	<div class='config-container'>
 	<div class='hidden-google-doc google_doc_travel_1_4'>	
 	</div>
 		<table cellpadding=0 cellspacing=0>
