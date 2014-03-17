@@ -15,11 +15,13 @@ $(function(){
 	});
 	
 	$('#header ul li.menu_item.drop-down-button a').click(function(){		
+		$('.pop-up-login').hide();
 		$('.mobile-menu .drop-down').slideDown('fast');	
 	});
 	
-	$('#header .close-dropdown').click(function(){
+	$('#header .close-dropdown').click(function(){		
 		$('.mobile-menu .drop-down').slideUp('fast');	
+		$('#header ul li.menu_item a').removeClass('selected');
 	});
 
 var login_enter_timeout;

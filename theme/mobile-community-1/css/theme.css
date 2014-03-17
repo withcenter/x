@@ -231,8 +231,7 @@ a {
 /**pc version icon**/
 
 #footer .pc_version{
-	background-color:#8f8f8f;
-	display:none;
+	background-color:#8f8f8f;	
 	padding:10px 10px 9px 10px;
 	width:70px;
 	text-align:center;	
@@ -323,11 +322,7 @@ a {
 	
 	#footer .text-info{
 		margin-left:37px;
-	}
-	
-	#footer .pc_version{
-		display:block;
-	}
+	}	
 }
 @media all and ( min-width: 641px ) {
 	#header .menu {
