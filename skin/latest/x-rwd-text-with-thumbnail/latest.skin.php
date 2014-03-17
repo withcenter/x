@@ -25,8 +25,9 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 		for ($i=0; $i<count($list); $i++) {
 			if ( $count_post >= $options['no'] ) break;
 			$imgsrc = get_list_thumbnail( $bo_table , $list[$i]['wr_id'], 40, 35 );
-			if( $imgsrc ) $img = $imgsrc['src'];
-			else $img = $latest_skin_url."/img/no-image.png";
+			if( $imgsrc ) $img = "<img src='".$imgsrc['src']."'/>";
+			elseif ( $imgsrc = g::thumbnail_from_image_tag( $list[$i]['wr_content'], $bo_table, 40, 35 )) $img = "<img src='$imgsrc'/>";
+			else $img = "<img src='".$latest_skin_url."/img/no-image.png'/>";
 			
 			$count_post ++;
 			ob_start();
@@ -36,7 +37,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
             <?php		
 			
 			
-			echo "<td><div class='photo'><a href='".$list[$i]['href']."'><img src='$img'/></a></div></td>";
+			echo "<td><div class='photo'><a href='".$list[$i]['href']."'>$img</a></div></td>";
 			        
             echo "<td>
 					<div class='subject'><a href='".$list[$i]['href']."'>".conv_subject($list[$i]['subject'], 15, '...')."</a></div>
