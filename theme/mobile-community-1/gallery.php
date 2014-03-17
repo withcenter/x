@@ -13,7 +13,8 @@
 
 	function gallery_posts( $options ) {
 	global $g5;
-	$posts = g::posts(array());
+	$posts = g::posts(array( 'limit' => 100));
+
 	$i = 0;
 	foreach( $posts as $key => $value ) {
 		$lists[$i] = db::row("SELECT * FROM $g5[write_prefix]".$value['bo_table']." WHERE wr_id='".$value['wr_id']."'");
