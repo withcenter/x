@@ -90,3 +90,13 @@ input[name='tel']{
 	padding:3px;
 	width:170px;
 }
+
+/* register_result.skin.php */
+.registration-logo img {
+	width: 100%;
+}
+
+.registration-logo {
+	max-width: 330px;
+	max-height: 50px;
+}

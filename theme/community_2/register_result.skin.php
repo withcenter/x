@@ -8,8 +8,20 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 <div id="reg_result" class="mbskin">
 
     <div id="result_logo">
-		<img src="<?php echo $member_skin_url ?>/img/logo_register.png" alt="">
-		<span class='logo-text'>필고 홈페이지 서비스</span>
+		<a href='<?=g::url()?>'>
+			<?if( file_exists( path_logo() ) ) { ?>
+					<img src="<?=url_logo()?>" class='registration-logo'>
+			<?} else {?>
+				<img src="<?=x::url_theme()?>/img/banner.png" class='registration-logo'/>	
+			<?}?>
+		</a>
+		<span class='logo-text'>
+		<?
+			global $g5;
+			if( !$site_title = x::meta('title') ) $site_title = $g5['title'];
+			echo $site_title;
+		?>
+		</span>
 	</div>
 
 	<div class='result_skin_wrapper'><div class='inner'>
