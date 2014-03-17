@@ -1,4 +1,9 @@
 <?php
+	/** @short no more language patch is done here.
+	 *  
+	 */
+return;
+
 /**
  *  @note
  *  <ol>

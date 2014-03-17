@@ -208,7 +208,6 @@ class etc {
 		{
 		  $full_domain = $DOMAIN[1] . '.' . $DOMAIN[0];;
 		}
-	  
 	  // did we succeed?  
 	  return $full_domain;
 	}
@@ -222,18 +221,21 @@ class etc {
 	 *  @return string
 	 *  
 	 *  @details language code can be case sensitive and case insensitive.
+	 *  @note it tries to match the original code and if there is no match, then it does with lower case.
 	 */
 	static function lang( $code, $arg1=null, $arg2=null, $arg3=null )
 	{
 		global $language_code;
 		
-		$code_back = $code;
-		$code = strtolower($code);
+		
+		$code_lower = strtolower($code);
 
-		if ( ! isset($language_code[$code]) ) {
-			return $code_back;
+		
+		if ( $string = $language_code[$code] ) {
 		}
-		else $string = $language_code[$code];
+		else if ( $string = $language_code[ strtolower($code) ] ) {
+		}
+		else return $code;
 		
 		
 		if ( strpos($string, '#1') !== false ) $string = str_replace("#1", $arg1, $string);
