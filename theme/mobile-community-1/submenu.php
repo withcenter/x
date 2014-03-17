@@ -34,4 +34,34 @@ foreach ( $menus as $menu ) {?>
 	<?
 	}
 ?>
+<?if( $member['mb_id'] ) {?>
+
+	<li>		
+		<a href="<?=G5_BBS_URL?>/member_confirm.php?url=register_form.php">내 프로필</a>
+	</li>
+
+	<? if ($is_admin == 'super') {  ?>
+		<li>		
+			<a href="<?=x::url_admin()?>">X ADMIN</a>		
+		</li>
+		
+		<li>
+			<a href="<?php echo G5_ADMIN_URL ?>">ADMIN</a>
+		</li>
+	<?}?>
+	<li>
+		<a href="<?php echo G5_BBS_URL ?>/scrap.php" target="_blank" class='user-scrap'>스크랩</a>
+	</li>
+	<? if ( admin() ) {?>
+	<li>
+		<a href="<?=url_site_config()?>" class='user-win'>사이트 관리</a>
+	</li>
+	<? }
+		else {?>	
+	<li>
+		<a href="<?php echo G5_BBS_URL ?>/point.php" target="_blank" class='user-win'>포인트</a> <?=$point?>
+	</li>
+	<? }
+	
+	}?>
 </ul>

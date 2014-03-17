@@ -17,4 +17,4 @@ foreach ( $menus as $menu ) {
 	}
 ?>
 </ul>
-<div class='close-dropdown'><span class='close-dropdown-button'>Close menu</span></div>
+<div class='close-dropdown'><span class='label'>Close Tab</span></div>

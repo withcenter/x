@@ -124,6 +124,7 @@
 	margin:auto;
 	background-color:#2a426b;
 	display:none;
+	padding-bottom:10px;
 }
 
 #header .mobile-menu .drop-down ul{
@@ -145,14 +146,17 @@
 	text-decoration:none;
 }
 
-#header .mobile-menu .drop-down .close-dropdown{	
-	padding:0 10px 10px 10px;		
-	text-align:right;
+#header .mobile-menu .drop-down .close-dropdown{			
+	border:1px solid #162238;
+	background-color: #203252;
+	margin:0 10px 0 10px;
+	cursor:pointer;
 }
 
-#header .mobile-menu .drop-down .close-dropdown .close-dropdown-button{	
-	cursor:pointer;
+#header .mobile-menu .drop-down .close-dropdown .label{		
 	color:#ffffff;
+	display:inline-block;
+	padding:10px;
 }
 
 /**pop-up-login**/
