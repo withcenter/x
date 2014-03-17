@@ -275,7 +275,6 @@ function url_forum_read( $bo_id, $wr_id )
 	return g::url()."/bbs/board.php?bo_table=$bo_id&wr_id=$wr_id";
 }
 
-
 function url_x_admin()
 {
 	return x::url() . "/?module=admin&action=index";
@@ -286,6 +285,11 @@ function url_site_admin($domain=null, $module='site', $action='config_first_page
 	else return site_url( $domain ) . "/x/?module=$module&action=$action";
 }
 
+
+function url_language_setting()
+{
+	return x::url() . '/?module=member&action=setting';
+}
 
 
 function login_page() {

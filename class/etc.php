@@ -245,6 +245,23 @@ class etc {
 		return $string;
 	}
 	
+	/**
+	 *
+	 *
+	 *  @code
+			<?php echo _L('Your Current Language', etc::language_from_code(etc::user_language()))?>
+	 *  @endcode
+	 */
+	static function language_from_code( $code )
+	{
+		switch ( $code ) {
+			case 'ko'				: return 'Korean';
+			case 'en'				: return 'English';
+			default					: return $code;
+		}
+	}
+	
+	
 	
 	
 	
