@@ -1,5 +1,5 @@
 <?php
-add_stylesheet("<link rel='stylesheet' type='text/css' href='".x::url()."/module/".$module."/multi.css' />");
+add_stylesheet("<link rel='stylesheet' type='text/css' href='".x::url()."/module/".$module."/site.css' />");
 	
 	
 

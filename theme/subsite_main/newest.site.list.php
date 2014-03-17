@@ -5,7 +5,7 @@ $rows = db::rows( $query );
 $image_url = x::url_theme().'/img';
 $title_icon1 = "<img src='$image_url/directions-blue.png' />";
 echo "<div class='newest-site-list'>
-		<div class='title'>$title_icon1 <a href='".x::url()."/?module=multi&action=site_list'>최근 생성사이트</a></div>
+		<div class='title'>$title_icon1 <a href='".x::url()."/?module=site&action=site_list'>최근 생성사이트</a></div>
 	";
 foreach ( $rows as $row ) {
 	$domain_url = site_url( $row['domain'] );

@@ -43,7 +43,7 @@ if ( $no_of_rows ) $limit = "LIMIT 0, $no_of_rows";
 			if ( $row['cnt'] < 3 ) continue;
 			$domain = $row[REGISTERED_DOMAIN];
 			if ( empty($domain) ) $domain = "NO DOMAIN";
-			$setting_url = x::url().'/?module=multi&action=config_member&domain='.$domain;
+			$setting_url = x::url().'/?module=site&action=config_member&domain='.$domain;
 			$setting_icon = "<img src='".x::url()."/module/".$module."/img/setting.png' />";
 			echo "
 				<tr>
