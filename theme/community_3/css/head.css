@@ -92,17 +92,44 @@ form[name='comm3_search_form'] {
 	width: 20em;
 	width: 20em;	
 	border: 2px solid black;
-	height:35px;
+	height:41px;
 }
 #comm3_search_submit {
 	background-color: black;
 	color:white;	
 	border:0;
-	height:39px;
+	height:45px;
 	cursor: pointer;	
 }
 
+/***visitor***/
+.header .visitor_stats{
+	position:relative;
+	height:45px;
+	width:45px;
+}
 
+.header .visitor_stats .visit_button{	
+	height:45px;
+	width:45px;
+	margin:12px 0 0 4px;
+	background-color:black;
+	cursor:pointer;
+}
+
+.header .visitor_stats .visit_button img{	
+	position:absolute;
+	left:14px;
+	top:11px;
+}
+
+.header .visitor_stats #visit{
+	position:absolute;
+	top:55px;
+	right:-4px;
+	z-index:999;
+	display:none;
+}
 
 .main-menu{
 	width:100%;		
