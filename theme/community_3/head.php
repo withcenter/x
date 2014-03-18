@@ -59,7 +59,7 @@
 				</form>
 			</fieldset>
 		</td>
-		<td width='45'>
+		<td width='49'>
 			<div class='visitor_stats'>
 				<div class='visit_button'>
 					<img src='<?=x::url_theme()?>/img/visit_stats.png'/>

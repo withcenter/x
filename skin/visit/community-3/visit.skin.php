@@ -28,7 +28,10 @@ add_stylesheet('<link rel="stylesheet" href="'.$visit_skin_url.'/style.css">', 0
 		}
 		?>
 	</div>
-	<div class='visit-super-admin-command'>
-		<?php if ($is_admin == "super") {  ?><a href="<?php echo G5_ADMIN_URL ?>/visit_list.php">상세보기</a><?php } ?>
-	</div>	
+		<?php if ($is_admin == "super") {  ?>
+		<div class='visit-super-admin-command'>
+			<a href="<?php echo G5_ADMIN_URL ?>/visit_list.php">상세보기</a>
+		</div>	
+		<?php } ?>
+	
 </div>

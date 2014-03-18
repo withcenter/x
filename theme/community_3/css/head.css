@@ -1,10 +1,10 @@
 .top{
-	width:100%;	
+	min-width:970px;
 	background-color:#cccccc;
 }
 
 .top .inner{
-	max-width:970px;
+	width:970px;
 	height:30px;
 	margin:auto;
 	color:#4d4d4d;
@@ -43,7 +43,7 @@
 }
 
 .header{
-	width:100%;
+	min-width:970px;
 	height:75px;
 	background-color:#e6e6e6;	
 }
@@ -132,7 +132,7 @@ form[name='comm3_search_form'] {
 }
 
 .main-menu{
-	width:100%;		
+	min-width:970px;
 	margin-bottom:10px;
 	overflow:hidden;
 	background: #444444; /* Old browsers */
