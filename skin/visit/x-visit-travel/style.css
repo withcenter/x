@@ -1,0 +1,33 @@
+/* STATISTICS.PHP */
+.stats-container {
+	border: solid 1px #bbbbbb;
+	height: 91%;
+	padding-bottom: 15px;
+}
+
+.stats-title {
+	padding: 7px;
+	background: #fafafa;
+	border-bottom: solid 1px #bbbbbb;
+	font-weight: bold;
+}
+
+.stats-title img {
+	margin-right: 10px;
+}
+
+.stats-content {
+	padding: 0 10px;
+}
+
+.stats-content .per-stats {
+	padding: 8px 0 8px 0;
+	border-bottom: 1px solid #bbbbbb;
+	position: relative;
+}
+
+.stats-content .per-stats .stats-results {
+	color: #cc4235;
+	position: absolute;
+	right: 0;
+}

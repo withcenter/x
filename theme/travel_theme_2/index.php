@@ -98,12 +98,7 @@
 				?>
 			</div>
 			<div class='travel_right_posts'>		
-				<?
-					$option = array( 
-									'icon'=> x::url_theme()."/img/folded-paper.png"
-								);
-					echo latest("x-latest-travel-lower-posts", bo_table(6), 4, 20);
-				?>
+				<?=visit('x-visit-travel')?>
 			</div>
 			
 				<div style='clear:both;'></div>
