@@ -2,7 +2,8 @@
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 ?>
-<link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
+
+<?add_stylesheet('<link rel="stylesheet" href='.$latest_skin_url.'/style.css">', 0);?>
 <div class='travel_images_with_captions'>
 		<div class='title'>
 		<span class='travel-subject'>
