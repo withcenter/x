@@ -1007,9 +1007,9 @@ a.user-google-guide-button{
 }
 
 .config .config-main-title  {
+
 	padding: 10px;
-	margin: 10px 0 10px 10px;
-	background: #808080;		
+	background: #808080;	
 	height:16px;
 }
 .config .config-main-title .inner  {
@@ -1083,10 +1083,12 @@ a.user-google-guide-button{
 }
 
 
+/* this creates error on other page */
+/* find more explicit path for the rule.
 .config input[type='text'], .config textarea {
 	margin-bottom: 6px !important;
-	
 }
+*/
 
 .config input[name='title'], .config input[name='secondary_title'], .config textarea[name='footer_text'] {
 	width: 98% !important;
@@ -1525,15 +1527,9 @@ span.config-name {
 .config_menu select[name='select_bo_table'], .config_menu input.bo_table, .config_menu input.menu_name {
 	border: solid 1px #d8d8d8;
 	vertical-align: top;
-	padding: 5px;
-	width: 30%;
+	width: 16em;
 }
 
-.config_menu select[name='select_bo_table'] {
-	height: 26px;
-	line-height: 26px;
-	width: 125px;
-}
 
 /* config_member.php */
 .config-member .config-container {
@@ -1578,3 +1574,20 @@ span.config-name {
 .admin-list-table td {
 	padding: 0.4em 0;
 }
+
+
+
+form.config_menu {
+}
+form.config_menu table {
+	margin-top: 1em;
+}
+form.config_menu table td {
+	padding: 0.2em;
+}
+form.config_menu select, form.config_menu input {
+	margin:0 !important;
+	padding:0;
+	height: 2em;
+}
+

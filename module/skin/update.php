@@ -54,7 +54,7 @@ var g5_url       = "<?php echo G5_URL ?>";
 
 <span class='caption'><?=ln("Forum ID", "게시판 아이디")?></span> : 
 <?
-	if ( x::site() ) {
+
 		$cfgs = x::forums();
 		if ( ! empty( $cfgs ) ) {
 ?>
@@ -73,7 +73,7 @@ $(function(){
 </script>
 <?
 		}
-	}
+		
 ?>
 
 <input type='text' name='bo_table' value="<?=x::config("bo_table.$code")?>" placeholder=" Input bo_table ex) qna"><br>

@@ -33,14 +33,13 @@
 </div>
 
 <div class='main-menu'><div class='inner'>
-	<?
-		$menus = get_site_menu();
-		foreach ( $menus as $menu ) {
-	?>
-			<a  href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$menu['bo_table']?>'><?=$menu['name']?></a>
-	<? } ?>
-
-</div></div> 
+	<?=x::menu_link()?>
+</div></div>
+<style>
+.main-menu a[href*='<?=$bo_table?>'] {
+	color: orange;
+}
+</style>
 
 <div class='layout'>
 	<div class='main-content'>

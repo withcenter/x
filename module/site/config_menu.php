@@ -11,74 +11,54 @@
 				<div style='clear: both'></div>
 			</div>
 		</div>
+		<div class='hidden-google-doc google_doc_menu'></div>
 	
-		<div class='config-wrapper'>
-			<div class='hidden-google-doc google_doc_menu'>	
-			</div>
-			<div class='config-title'>
-				<span class='config-title-info'>
-					<span class='menu-num'>메뉴 번호</span>
-					<span class='menu-select-name'><?=ln("Forum ID", "게시판 아이디")?></span>
-					MENU NAME
-				</span>
-			</div>
-			<div class='config-container'>
+		<table cellpadding=0 cellspacing=0 border=0 width='100%'>
+			<tr>
+				<td>번호</td>
+				<td>메뉴 타입 (직접 입력 또는 게시판)</td>
+				<td>URL 또는 게시판 아이디</td>
+				<td>메뉴 이름</td>
+				<td>새창</td>
+			</tr>
 			<?
+				$forums = x::forums();
 				for ( $i=1; $i<=10; $i++ ) {
-					echo forum_select( $i );
-				}
+				
+				 
 			?>
-			</div>
+					<tr>
+						<td><?=$i?></td>
+						<td>
+							<select name='select_bo_table'>
+								<option value=''>메뉴 선택</option>
+								<option value=''></option>
+								<option value=''<? if ( x::menu_type( x::menu( $i ) ) == 'url' ) echo " selected=true";?>>직접 URL 입력</option>
+								<option value=''></option>
+								<? foreach ( $forums as $c ) { ?>
+									<option value="<?=$c['bo_table']?>"<?if (  x::menu( $i ) == $c['bo_table'] ) echo " selected=true"?>><?=$c['bo_subject']?></option>
+								<? } ?>
+							</select>
+						</td>
+						
+						<td><input type='text' class='bo_table' name='menu<?=$i?>bo_table' value="<?=x::menu($i)?>" placeholder=" Input bo_table ex) qna"></td>
+						<td><input type='text' class='menu_name' name='menu<?=$i?>name' value="<?=x::menu_name($i)?>" placeholder=" Menu Name"></td>
+						<td><input type='checkbox' name='menu<?=$i?>target' value="Y"<?if (  x::menu_target( $i ) ) echo " checked=true"?>></td>
+					</tr>
+			<? } ?>
+		</table>
+		<center>
 		<input type='submit' class='per-config-submit' style='margin-top: 10px'>
-		<div style='clear:both'></div>
-		</div>
+		</center>
+		
 	</div>
 
 </form>
-		
-			
-<?/******THIS IS JUST TEMPORARY*******/			
-function forum_select($i)
-		{
-			ob_start();
-		?>
-		<div class="forum <? if ($i==MS_MAX_FORUM) echo 'last-forum'?>" >
-		<span class='caption'><?=$i?></span>
-		<span class='text'>
-		<?
-			$cfgs = x::forums();			
-			if ( ! empty( $cfgs ) ) {
-		?>
-		<select name='select_bo_table'>
-			<option value=''>Select Forum ID</option>
-			<? foreach ( $cfgs as $c ) { 
-				if( x::meta("menu{$i}bo_table") == $c['bo_table'] ){
-					$is_selected = 'selected';
-				}
-				else $is_selected = null;
-			?>
-				<option value="<?=$c['bo_table']?>" <?=$is_selected?>><?=$c['bo_subject']?></option>
-			<? } ?>
-		</select>
 		<script>
-		$(function(){
-			$("[name='select_bo_table']").change(function(){
-				$(this).parent().find(".bo_table").val($(this).val());
+			$(function(){
+				$("[name='select_bo_table']").change(function(){
+					$(this).parent().find(".bo_table").val($(this).val());
+				});
 			});
-		});
 		</script>
-		<?
-			}
-		?>
-
-		<input type='text' class='bo_table' name='menu<?=$i?>bo_table' value="<?=x::meta("menu{$i}bo_table")?>" placeholder=" Input bo_table ex) qna">
-		<input type='text' class='menu_name' name='menu<?=$i?>name' value="<?=x::meta("menu{$i}name")?>" placeholder=" Menu Name">
-
-
-		</span>
-		</div>
-		<?
-			return ob_get_clean();
-		}
-/*******************************/
-?>
+		

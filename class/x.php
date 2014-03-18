@@ -862,5 +862,113 @@ class x {
 	}
 	
 	
+	static function menus()
+	{
+		$menus = array();
+		for ( $i = 1; $i <= MAX_MENU; $i++ ) {
+			$bo_key		= "menu{$i}bo_table";
+			$bo_id			= meta_get( $bo_key );
+			if ( empty($bo_id) ) continue;
+			$bo_name	= meta_get("menu{$i}name");
+			if ( empty($bo_name) ) {
+				$cfg = g::config($bo_id);
+				if ( empty($cfg['bo_subject']) ) $bo_name = ln("No Subject", "제목없음");
+				else $bo_name = $cfg['bo_subject'];
+			}
+			$target			= meta_get("menu{$i}target");
+			$menus[] = array('bo_table'=>$bo_id,'name'=>$bo_name, 'target'=>$target);
+		}
+		if ( empty($menus) ) {
+			$menus[]			= array('bo_table'=>'default', 'name'=>ln("Please", "관리자"));
+			$menus[]			= array('bo_table'=>'fake-id-1', 'name'=>ln("config", "페이지에서"));
+			$menus[]			= array('bo_table'=>'fake-id-2', 'name'=>ln("menu", "메뉴를"));
+			$menus[]			= array('bo_table'=>'fake-id-3', 'name'=>ln("in admin", "설정"));
+			$menus[]			= array('bo_table'=>'fake-id-4', 'name'=>ln("page", "하세요"));
+		}
+		return $menus;
+	}
+	
+	
+	/** @short returns menu links in array.
+	 *
+	 * @code how to use with UL, LI tags.
+		<ul>
+			<?="<li>" . implode( "</li><li>", x::menu_links() ) . "</li>"?>
+		</ul>
+	 * @code
+	 */
+	static function menu_links()
+	{
+		$menus = self::menus();
+		$arr = array();
+		foreach ( $menus as $menu ) {
+			$url		= self::menu_url($menu['bo_table']);
+			$target	= self::menu_target_attr($menu['target']);
+			$arr[]	= "<a href='$url'$target>$menu[name]</a>";
+		}
+		return $arr;
+	}
+	
+	static function menu_link()
+	{
+		return implode( "\n", self::menu_links() );
+	}
+	
+	
+	/** @short returns the url of the menu
+	 *
+	 * @see #menu url
+	 *
+	 */
+	static function menu_url( $url )
+	{
+		if ( strpos($url, "http") === 0 ) return $url;
+		else if ( $url[0] == '.' || $url[0] == '/' || $url[0] == '?' ) return $url;
+		else if ( $url == 'URL_HOME' ) return g::url();
+		return url_forum_list( $url );
+	}
+	
+	/** @returns the menu url type.
+	 *
+	 * @return
+					'url'				- if the $url is entered as normal URL ( homepage address )
+					'forum_id'		- if the $url is forum id.
+					null				- if $url is empty.
+	 * @coe
+		<option value=''<? if ( x::menu_type( x::menu( $i ) ) == 'url' ) echo " selected=true";?>>직접 URL 입력</option>
+	    @endcode
+	 */
+	static function menu_type( $url ) {
+		if ( empty($url) ) return null;
+		else if ( $url == self::menu_url( $url ) ) return 'url';
+		else return 'forum_id';
+	}
+	
+	
+	/** @short returns value of menu.
+	 *
+	 *
+	 */
+	static function menu( $n )
+	{
+		return x::meta("menu{$n}bo_table");
+	}
+	
+	static function menu_name( $n )
+	{
+		return x::meta("menu{$n}name");
+	}
+	
+	static function menu_target( $n )
+	{
+		return x::meta("menu{$n}target");
+	}
+	static function menu_target_attr( $Y )
+	{
+		if ( $Y == 'Y' ) return " target='_blank'";
+		else return null;
+	}
+	
+	
 	
 }

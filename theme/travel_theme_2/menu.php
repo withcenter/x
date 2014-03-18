@@ -2,20 +2,8 @@
 <div class='main-menu'>
 <ul>
 	<li class='first-item home'><div class='inner'><a href='<?=g::url()?>'>홈</a></div></li>
-	<?php	
-	$menus = get_site_menu();
-		foreach ( $menus as $menu ) {?>
-			<li page='<?=x::meta('menu'.$i.'bo_table')?>'>
-						<div class='inner'>
-							<a href='<?=url_forum_list($menu['bo_table'])?>'>
-								<?=$menu['name']?>
-								<div class='border_left'></div>
-							</a>
-						</div>
-					</li>
-	<?
-		}
-	?>
+	<?="<li><div class='inner'><div class='border_left'></div>" . implode( "</div></li><li><div class='inner'><div class='border_left'></div>", x::menu_links() ) . "</div></li>"?>
+
 </ul>
 <div class='search-bar'>
 	  <form name="fsearchbox" method="get" action="<?=x::url()?>">	
@@ -63,10 +51,16 @@
 </div>
 <div style='clear:both;'></div>
 </div>
+<style>
+</style>
+<style>
+.main-menu a[href*='<?=$bo_table?>'] {
+	font-weight:bold;
+	color:#ff4000;
+}
+</style>
 <script>
 	$(function(){				
-		if( '<?=$in['bo_table']?>' != '' ) $(".main-menu li[page='<?=$in['bo_table']?>']").addClass("selected");
-		else if( '<?=$in['module']?>' ) $(".main-menu li[page='admin-menu']").addClass("selected");
-		else $(".main-menu .home").addClass("selected");
+		if ( '<?=$bo_table?>' == '' ) $(".main-menu li.first-item a").css("font-weight", "bold").css('color', '#ff4000');
 	});
 </script>

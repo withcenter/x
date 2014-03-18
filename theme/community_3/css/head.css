@@ -125,7 +125,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444444', end
 	height:44px;	
 }
 
-.main-menu #comm3_main_menu .comm3_menu{
+.main-menu #comm3_main_menu li{
 	list-style:none;	
 	overflow:hidden;
 	float:left;
@@ -133,11 +133,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444444', end
 }
 
 
-.main-menu #comm3_main_menu .comm3_menu[page="admin-menu"]{
+.main-menu #comm3_main_menu li[page="admin-menu"]{
 	margin-right:0;	
 }
 
-.main-menu #comm3_main_menu .comm3_menu a{
+.main-menu #comm3_main_menu li a{
 	font-family: '맑은 고딕', AppleGothic;
 	color:#ffffff;
 	display:inline-block;	
@@ -151,7 +151,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444444', end
 	padding:7px 15px;	
 }
 
-.main-menu #comm3_main_menu .comm3_menu a:hover{	
+.main-menu #comm3_main_menu li a:hover{	
 	background-color:#000000;
 }
 

@@ -22,18 +22,8 @@
         </ul>
 <?*/?>
 <ul>
-<?
-$menus = get_site_menu();
-foreach ( $menus as $menu ) {?>
-	<li class='menu-group' page='<?=x::meta('menu'.$i.'bo_table')?>'>		
-		<a href='<?=url_forum_list($menu['bo_table'])?>'>
-			<?=$menu['name']?>
-			<div class='border_left'></div>
-		</a>
-	</li>
-	<?
-	}
-?>
+<?="<li class='menu-group'>" . implode( "</li><li class='menu-group'>", x::menu_links() ) . "</li>"?>
+
 <?if( $member['mb_id'] ) {?>
 
 	<li>		

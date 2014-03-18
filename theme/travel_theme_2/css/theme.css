@@ -97,6 +97,7 @@
 
 .main-menu li .inner {	
 	border-left: 0;
+	position:relative;
 }
 
 .main-menu li  a {		
@@ -106,10 +107,9 @@
 	float:left;	
 	padding: 11px 10px;	
 	text-align:center;
-	position:relative;
 }
 
-.main-menu li  a .border_left{	
+.main-menu li  .border_left {
 	border-left:1px solid #cccccc;
 	position:absolute;
 	left:0;

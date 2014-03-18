@@ -151,53 +151,11 @@ function meta_delete( $key, $code=null )
 /** @short returns the site menu list in array.
  *
  *
- * @code
-	<?
-		$menus = get_site_menu();
-		foreach ( $menus as $menu ) {
-	?>
-			<a  href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$menu['bo_table']?>'><?=$menu['name']?></a>
-	<? } ?>
- * @endcode
- * @code
-		<ul id="menu">
-			<?
-				$menus = get_site_menu();
-				foreach ( $menus as $menu ) {
-					echo "<li class='comm3_menu'><a href='".url_forum_list($menu['bo_table'])."'>$menu[name]</a></li>";
-				}
-				if ( admin() ) {
-			?>
-					<li class="comm3_menu" page = "admin-menu">
-						<a href="<?=url_site_config()?>">사이트 관리</a>
-					</li>
-			<? } ?>
-		</ul>
- * @endcode
+ *
  */
 function get_site_menu()
 {
-	$menus = array();
-	for ( $i = 1; $i <= MAX_MENU; $i++ ) {
-		$bo_key		= "menu{$i}bo_table";
-		$bo_id			= meta_get( $bo_key );
-		if ( empty($bo_id) ) continue;
-		$bo_name	= meta_get("menu{$i}name");
-		if ( empty($bo_name) ) {
-			$cfg = g::config($bo_id);
-			if ( empty($cfg['bo_subject']) ) $bo_name = ln("No Subject", "제목없음");
-			else $bo_name = $cfg['bo_subject'];
-		}
-		$menus[] = array('bo_table'=>$bo_id,'name'=>$bo_name);
-	}
-	if ( empty($menus) ) {
-		$menus[]			= array('bo_table'=>'default', 'name'=>ln("Please", "관리자"));
-		$menus[]			= array('bo_table'=>'fake-id-1', 'name'=>ln("config", "페이지에서"));
-		$menus[]			= array('bo_table'=>'fake-id-2', 'name'=>ln("menu", "메뉴를"));
-		$menus[]			= array('bo_table'=>'fake-id-3', 'name'=>ln("in admin", "설정"));
-		$menus[]			= array('bo_table'=>'fake-id-4', 'name'=>ln("page", "하세요"));
-	}
-	return $menus;
+	return x::menus();
 }
 
 
@@ -325,3 +283,9 @@ function super_admin()
 	return $is_admin == 'super';
 }
 
+
+
+function share( $script )
+{
+	return x::dir() . "/etc/share/$script.php";
+}

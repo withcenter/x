@@ -1,10 +1,5 @@
-<ul id="comm3_main_menu">		
-	<?
-		$menus = get_site_menu();
-		foreach ( $menus as $menu ) {
-			echo "<li class='comm3_menu'><a href='".url_forum_list($menu['bo_table'])."'>$menu[name]</a></li>";
-		}
-?>
+<ul id="comm3_main_menu">
+	<?="<li>" . implode( "</li><li>", x::menu_links() ) . "</li>"?>
 </ul>
 
 <?
@@ -25,7 +20,7 @@
 </style>
 <script>
 	$(function(){
-		if( '<?=$in['module']?>' ) $(".comm3_menu[page='admin-menu']").addClass("comm3-menu-selected");		
+		if( '<?=$in['module']?>' ) $("#comm3_main_menu li[page='admin-menu']").addClass("comm3-menu-selected");		
 	});
 </script>
 
