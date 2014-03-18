@@ -282,24 +282,25 @@ function hook_latest_before_return()
 
 
 
-
-
-
-/**
+/** @todo this code must be hooked on each bbs/member_confirm.php and login() ...
+ *  it creates error on member_confirm and login of mobile page()
  *  @short add 'head.php' and 'tail.php' into 'login.php'
  *  ----------------------------------------------------------
  *  @warning This code must be stated at the bottom of begin.php or very first place of head.php to affect the hook.
  *  
  */
 if ( login_page() || member_confirm_page() ) {
-	include_once G5_PATH . '/_head.php';
-	x::hook_register('end', 'hook_show_tail');
-	function hook_show_tail()
-	{
-		global $config;
-		include_once G5_PATH . '/_tail.php';
-	}
+		include_once G5_PATH . '/_head.php';
+		x::hook_register('end', 'hook_show_tail');
+		function hook_show_tail()
+		{
+			global $config;
+			include_once G5_PATH . '/_tail.php';
+		}
 }
+
+
+
 
 
 
