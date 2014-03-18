@@ -35,7 +35,10 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	<div class='text-info'>
 		<div class='footer-text'>
 		<?if ( x::meta('footer_text')) echo nl2br(x::meta('footer_text'));
-		else echo "no footer text";
+		else {?>
+			<div>회원님께서는 현재 필고 <b style='color:#506ab6;'>모바일 테마</b>를 선택 하셨습니다.</div>
+			<div>하단 문구는 사이트 설정에서 수정하실 수 있습니다.</div>
+		<?}
 		?>
 		</div>		
 		<?/*<a href="<?=g::url()?>?device=pc">PC 버젼</a>
@@ -46,7 +49,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	<div class='pc_version'>
 		<a href="<?=g::url()?>?device=pc">
 			<img src='<?=x::url_theme()?>/img/pc_version.png'/><br>
-			<span class='label'>PC Version</span>
+			<span class='label'>PC 버전</span>
 		</a>		
 	</div>
 </td>
