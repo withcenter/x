@@ -25,77 +25,7 @@
 </style>
 	
 <div class='layout'>
-	<div class='top'>
-		<div class='inner'>
-			<? 
-				$page_uri = $_SERVER['REQUEST_URI'];
-				if ( $member['mb_id'] ) {
-			
-				$do_log = "<a href='".G5_BBS_URL."/logout.php'>로그아웃</a>";
-				$profile = "<a href='".G5_BBS_URL."/member_confirm.php?url=register_form.php'>회원정보수정</a>";
-			} 
-				else {
-				
-				$do_log = "<a href='".G5_BBS_URL."/login.php'>로그인</a>";
-				$profile = "<a href='".G5_URL."/".G5_BBS_DIR."/register.php'>회원가입</a>";
-			}?>
-			<?
-			?>
-			<div class='left'>
-				<a href='<?=g::url()?>'>홈</a><?=$do_log?><?=$profile?>
-				
-				<? 
-					for ( $i=1; $i <=3; $i++ ) {
-						 if ( x::meta('forum_no_'.$i.'_name') ) {
-							$top_menu = x::meta('forum_no_'.$i.'_name');				
-						  }
-						  else {
-							$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".meta('forum_no_'.$i)."'");
-							$top_menu = $row['bo_subject'];
-						 }		
-							
-						
-						if ( $top_menu ) {?>
-						
-						<a page = '<?=x::meta('forum_no_'.$i)?>' href='<?=G5_BBS_URL?>/board.php?bo_table=<?=x::meta('forum_no_'.$i)?>'><?=cut_str($top_menu,10,'...')?></a>
-						
-					<?	}
-					}
-				?>
-				
-			</div>
-			
-			<div class='right'>
-				<? 
-					for ( $i=4; $i <=6; $i++ ) {
-						 if ( x::meta('forum_no_'.$i.'_name') ) {
-							$top_menu = x::meta('forum_no_'.$i.'_name');				
-						  }
-						  else {
-							$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".meta('forum_no_'.$i)."'");
-							$top_menu = $row['bo_subject'];
-						 }	
-							
-						
-						if ( $top_menu ) {?>
-						
-						<a page = '<?=x::meta('forum_no_'.$i)?>' href='<?=G5_BBS_URL?>/board.php?bo_table=<?=x::meta('forum_no_'.$i)?>'><?=cut_str($top_menu,10,'...')?></a>
-						
-					<?	}
-					} 
-				?>
-			
-				<? if ( !$com3_contact_number = x::meta('tel') ) $com3_contact_number = '+82 070 7529 1749'?>
-				<a href='javascript:void(0)' class='contact-num'>전화번호: <?=$com3_contact_number?></a>
-				
-				<a href='<?=g::url()?>?device=mobile'>모바일</a>
-			</div>
-			
-			
-			
-			
-		</div>
-	</div>
+	<div class='top'><?include 'top.php'?></div>
 	<div class='header'>
 
 	<table cellpadding=0 cellspacing=0><tr valign='top'>

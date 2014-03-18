@@ -228,5 +228,37 @@
 	line-height: 20px;
 }
 
+/* page */
+.page {
+	background-color: #e8e8e8;
+	min-height: 69.2em;
+}
+.page > .page-title {
+	padding: 1em;
+	background-color: #494949;
+	font-size: 1.6em;
+	font-weight: bold;
+	color: white;
+}
+
+.page > .page-content {
+	margin: 1em;
+	padding: 1em;
+	background-color: white;
+	min-height: 60em;
+}
+
+.page-caption {
+	background-color: #b9c9d9;
+	padding: 1em;
+}
+.page-data {
+	margin: 1em 0;
+	padding: 1em;
+	border: 1px solid #b9b9b9;
+	line-height: 1.6em;
+}
+
+
 
 /* Style for member confirm page */

@@ -104,7 +104,7 @@ body{
 	position: relative;
 }
 
-.logo_search .inner .search-bar .wrapper .s_inner .s_inner_inner input[name='stx'] {
+.logo_search .inner .search-bar .wrapper .s_inner .s_inner_inner input[name='key'] {
 	border: 0;
 	height: 35px;
 	line-height: 35px;

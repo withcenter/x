@@ -4,22 +4,28 @@
 
 
 ?>
-<div><?php echo _L('Member Setting');?></div>
-<div><?php echo _L('Choose Your Language');?></div>
-<?php echo _L('Your Current Language')?> : <?=etc::user_language()?>
-<div>
-	<form name='setting' action='?'>
-		
-		<input type='hidden' name='module' value='member'>
-		<input type='hidden' name='action' value='setting_submit'>
-		
-		
-		<select name='user_language'>
-			<option value=''><?=_l('Please choose your language')?></option>
-			<option value='en'>English</option>
-			<option value='ko'>Korean</option>
-		</select>
-	</form>
+<div class='page'>
+	<div class='page-title'><?=lang('User Setting');?></div>
+	<div class='page-content'>
+		<div class='page-caption'><?php echo _L('Choose Your Language');?></div>
+		<div class='page-data'>
+				<?php echo _L('Your Current Language', etc::language_from_code(etc::user_language()))?>
+				<div style='margin-top: 1em;'>
+					<form name='setting' action='?'>
+						
+						<input type='hidden' name='module' value='member'>
+						<input type='hidden' name='action' value='setting_submit'>
+						
+						
+						<select name='user_language'>
+							<option value=''><?=_l('Please choose your language')?></option>
+							<option value='en'>English</option>
+							<option value='ko'>Korean</option>
+						</select>
+					</form>
+				</div>
+		</div>
+	</div>
 </div>
 
 
