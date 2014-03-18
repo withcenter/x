@@ -1,8 +1,9 @@
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
+
+add_stylesheet("<link rel='stylesheet' href='". $latest_skin_url."/style.css'>", 0);
 ?>
 
-<link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
 <div class='withcenter_latest'>
 	<div class='title'>
 		<div  class='top-title'>
