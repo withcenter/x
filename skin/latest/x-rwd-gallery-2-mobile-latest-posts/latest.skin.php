@@ -53,10 +53,10 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 						<div class='latest-info'>
 							<div class='latest-subject'><a href='<?=$url?>'><?=cut_str($li['wr_subject'],100,'...')?></a></div>
 							<div class='latest-meta'>
-								Posted by <?=get_sideview($li['mb_id'], $li['wr_name'])?>
-								on <?=date('m/d/Y', strtotime($li['wr_datetime']))?> <span class='post-divider'>|</span>
-								<?=$li['wr_comment']?> Comment <span class='post-divider'>|</span>
-								<?=$li['wr_hit']?> view
+								<b>글쓴이</b> <?=get_sideview($li['mb_id'], $li['wr_name'])?>
+								<b>작성일</b> <?=date('m/d/Y', strtotime($li['wr_datetime']))?> <span class='post-divider'>|</span>
+								<b>댓글</b> <?=$li['wr_comment']?><span class='post-divider'>|</span>
+								<b>조회수</b> <?=$li['wr_hit']?>
 							</div>
 							<div class='latest-content'>
 								<a href="<?=$url?>"><?php echo get_text(cut_str(strip_tags($li['wr_content']), 240, '...' )) ?></a>

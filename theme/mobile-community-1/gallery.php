@@ -21,14 +21,14 @@
 				);
 
 	$i = 0;
-
+	
 	foreach( $posts as $key => $value ) {
 		if( $value['wr_is_comment'] != 0 ) continue;
 		$lists[$i] = db::row("SELECT * FROM $g5[write_prefix]".$value['bo_table']." WHERE wr_id='".$value['wr_id']."'");
 		$lists[$i]['bo_table'] = $value['bo_table'];
 		$i++;
 	}
-
+	
 	isset($options['width'])	? $width = $options['width'] : $width = 300;
 	isset($options['radius'])	? $height = $options['height'] : $height = 180;
 	isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
@@ -44,6 +44,7 @@
 				}
 	</style>
 	<div class='x-gallery-2-outer'>
+<? if ( $lists ) {?>
 	<ul class="x-gallery-2">
 	<?
 		$count_image = 0;
@@ -69,12 +70,12 @@
 					<div class='post' no="<?=$count_image?>">
 						<div class='photo'><a href="<?=$url?>"><?=$img?></a></div>
 						<div class='text'>
-							<div class='title'><a href="<?=$url?>" class='post-subject'><?php echo cut_str($list['wr_subject'], 10 , "...") ?></a> <span class='post-author'>by <?=get_sideview($list['mb_id'],$list['wr_name'])?></span></div>
-							<div class='date-comment-view'><a href="<?=$url?>"><span class='post-date'><?=date('m/d/Y', strtotime($list['wr_datetime']))?></span> <span class='post-divider'> | </span> <span class='post-comment'><?=$list['wr_comment']?> Comment</span> <span class='post-divider'>|</span> <span class='post-views'><?=$list['wr_hit']?> view</span></a></div>
+							<div class='title'><a href="<?=$url?>" class='post-subject'><?php echo cut_str($list['wr_subject'], 10 , "...") ?></a> <span class='post-author'><b>글쓴이</b> <?=get_sideview($list['mb_id'],$list['wr_name'])?></span></div>
+							<div class='date-comment-view'><a href="<?=$url?>"><span class='post-date'><?=date('Y/m/d', strtotime($list['wr_datetime']))?></span> <span class='post-divider'> | </span> <span class='post-comment'><b>댓글</b> <?=$list['wr_comment']?></span> <span class='post-divider'>|</span> <span class='post-views'><b>조회수</b> <?=$list['wr_hit']?></span></a></div>
 							
 							<div class='date-comment-view-mobile'>
-								<span class='post-mobile-meta'><span class='post-author'>by <?=get_sideview($list['mb_id'],$list['wr_name'])?></span> on <span class='post-date'><?=date('m/d/Y', strtotime($list['wr_datetime']))?></span></span>
-								<span class='post-mobile-comment-view'><a href="<?=$url?>"><span class='post-comment'><?=$list['wr_comment']?> Comment</span> <span class='post-divider'>|</span> <span class='post-views'><?=$list['wr_hit']?> view</span></span>
+								<span class='post-mobile-meta'><span class='post-author'><b>글쓴이</b> <?=get_sideview($list['mb_id'],$list['wr_name'])?></span> <b>작성일</b> <span class='post-date'><?=date('m/d/Y', strtotime($list['wr_datetime']))?></span></span>
+								<span class='post-mobile-comment-view'><a href="<?=$url?>"><span class='post-comment'><b>댓글</b> <?=$list['wr_comment']?></span> <span class='post-divider'>|</span> <span class='post-views'><b>조회수</b> <?=$list['wr_hit']?></span></span>
 								</a>
 							</div>
 							
@@ -86,6 +87,7 @@
 		
 	<?php $i++;} ?>
 	</ul>
+<? }?>
 	<div style='clear:both;'></div>
 	</div>
 

@@ -26,7 +26,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 			if ( $count_post >= $options['no'] ) break;
 			$imgsrc = get_list_thumbnail( $bo_table , $list[$i]['wr_id'], 40, 35 );
 			if( $imgsrc ) $img = "<img src='".$imgsrc['src']."'/>";
-			elseif ( $imgsrc = g::thumbnail_from_image_tag( $list[$i]['wr_content'], $bo_table, 40, 35 )) $img = "<img src='$imgsrc'/>";
+			//elseif ( $imgsrc = @g::thumbnail_from_image_tag( $list[$i]['wr_content'], $bo_table, 40, 35 )) $img = "<img src='$imgsrc'/>";
 			else $img = "<img src='".$latest_skin_url."/img/no-image.png'/>";
 			
 			$count_post ++;
