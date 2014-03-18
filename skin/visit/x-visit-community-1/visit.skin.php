@@ -16,7 +16,7 @@ $visit_name = array('오늘', '어제', '최대', '전체');
 		<?for( $i=0; $i<=3; $i++) { ?>
 			<div class='per-stats'><?=$visit_name[$i]?> <span class='stats-results'><?=number_format($visit[$i+1])?></span></div>
 		<?}?>
-		<?php if ($is_admin == "super") {  ?><a href="<?php echo G5_ADMIN_URL ?>/visit_list.php">상세보기</a><?php } ?>
 	</div>
+	<?php if ($is_admin == "super") {  ?><a class='view-more-stats' href="<?php echo G5_ADMIN_URL ?>/visit_list.php">VIEW MORE</a><?php } ?>
 </div>
 
