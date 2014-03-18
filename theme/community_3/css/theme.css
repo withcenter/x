@@ -100,3 +100,13 @@ input[name='tel']{
 	max-width: 330px;
 	max-height: 50px;
 }
+
+.visit_stats {
+	float:right;
+	width:40%;
+}
+
+#visit > .title {
+	float:left;
+}
+

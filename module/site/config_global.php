@@ -1,5 +1,5 @@
 <?php
-	
+	include x::theme('config');
 ?>
 <!--<script src='<?=x::url()?>/module/<?=$module?>/subsite.js'></script>-->
 
@@ -29,6 +29,8 @@
 
 			<div class='hidden-google-doc google_doc_global'>	
 			</div>
+			
+			
 				<table cellpadding='0' cellspacing='0' width='100%'>
 
 					<tr valign='top'>
@@ -60,7 +62,13 @@
 				<input type='submit' value='업데이트' class='per-config-submit'>
 				<div style='clear:right;'></div>
 		</div>
-
+		
+		<?php
+			$id = 'top'; include 'config_global_menu.php';
+			$id = 'left'; include 'config_global_menu.php';
+			$id = 'right'; include 'config_global_menu.php';
+			$id = 'bottom'; include 'config_global_menu.php';
+		?>
 
 		
 		<? if ( x::theme() ) { ?>

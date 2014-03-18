@@ -18,6 +18,26 @@ meta_set( 'footer_text' , $in['footer_text'] );
 
 meta_set( 'theme_sidebar' , $in['theme_sidebar'] );
 
+for( $i=1; $i<=10; $i++ ) {
+	$m = 'top';
+		x::meta( "menu$m{$i}bo_table", $in[ "menu$m{$i}bo_table" ] );
+		x::meta( "menu$m{$i}name", $in[ "menu$m{$i}name" ] );
+		x::meta( "menu$m{$i}target", $in[ "menu$m{$i}target" ] );
+	$m = 'left';
+		x::meta( "menu$m{$i}bo_table", $in[ "menu$m{$i}bo_table" ] );
+		x::meta( "menu$m{$i}name", $in[ "menu$m{$i}name" ] );
+		x::meta( "menu$m{$i}target", $in[ "menu$m{$i}target" ] );
+	$m = 'right';
+		x::meta( "menu$m{$i}bo_table", $in[ "menu$m{$i}bo_table" ] );
+		x::meta( "menu$m{$i}name", $in[ "menu$m{$i}name" ] );
+		x::meta( "menu$m{$i}target", $in[ "menu$m{$i}target" ] );
+	$m = 'bottom';
+		x::meta( "menu$m{$i}bo_table", $in[ "menu$m{$i}bo_table" ] );
+		x::meta( "menu$m{$i}name", $in[ "menu$m{$i}name" ] );
+		x::meta( "menu$m{$i}target", $in[ "menu$m{$i}target" ] );
+}
+
+
 /* upload Global Settings Files ex. header_logo, banner_1, banner_2 to g5/data/upload/multisite/site_name/file_name.ext */
 $folder = path_multi_upload( etc::last_domain(etc::domain()) );
 if( !is_dir( $folder ) ) mkdir( $folder, 0777, true );

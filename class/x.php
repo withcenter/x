@@ -862,28 +862,30 @@ class x {
 	}
 	
 	
-	static function menus()
+	static function menus($m=null)
 	{
 		$menus = array();
 		for ( $i = 1; $i <= MAX_MENU; $i++ ) {
-			$bo_key		= "menu{$i}bo_table";
-			$bo_id			= meta_get( $bo_key );
-			if ( empty($bo_id) ) continue;
-			$bo_name	= meta_get("menu{$i}name");
-			if ( empty($bo_name) ) {
-				$cfg = g::config($bo_id);
+			$url			= meta_get( self::menu_id($i, $m) ); // "menu{$i}bo_table";
+			
+			if ( empty($url) ) continue;
+			$bo_name	= self::menu_name($i, $m); // meta_get("menu{$i}name");
+			
+			if ( empty($bo_name) && self::menu_type($url) == 'forum_id' ) {
+				$cfg = g::config($url);
 				if ( empty($cfg['bo_subject']) ) $bo_name = ln("No Subject", "제목없음");
 				else $bo_name = $cfg['bo_subject'];
 			}
-			$target			= meta_get("menu{$i}target");
-			$menus[] = array('bo_table'=>$bo_id,'name'=>$bo_name, 'target'=>$target);
+			
+			$target			= meta_get("menu$m{$i}target");
+			$menus[] = array('url'=>$url,'name'=>$bo_name, 'target'=>$target);
 		}
 		if ( empty($menus) ) {
-			$menus[]			= array('bo_table'=>'default', 'name'=>ln("Please", "관리자"));
-			$menus[]			= array('bo_table'=>'fake-id-1', 'name'=>ln("config", "페이지에서"));
-			$menus[]			= array('bo_table'=>'fake-id-2', 'name'=>ln("menu", "메뉴를"));
-			$menus[]			= array('bo_table'=>'fake-id-3', 'name'=>ln("in admin", "설정"));
-			$menus[]			= array('bo_table'=>'fake-id-4', 'name'=>ln("page", "하세요"));
+			$menus[]			= array('url'=>'default', 'name'=>ln("Please", "관리자"));
+			$menus[]			= array('url'=>'fake-id-1', 'name'=>ln("config", "페이지에서"));
+			$menus[]			= array('url'=>'fake-id-2', 'name'=>ln("menu", "메뉴를"));
+			$menus[]			= array('url'=>'fake-id-3', 'name'=>ln("in admin", "설정"));
+			$menus[]			= array('url'=>'fake-id-4', 'name'=>ln("page", "하세요"));
 		}
 		return $menus;
 	}
@@ -897,21 +899,21 @@ class x {
 		</ul>
 	 * @code
 	 */
-	static function menu_links()
+	static function menu_links($m=null)
 	{
-		$menus = self::menus();
+		$menus = self::menus($m);
 		$arr = array();
 		foreach ( $menus as $menu ) {
-			$url		= self::menu_url($menu['bo_table']);
+			$url		= self::menu_url($menu['url']);
 			$target	= self::menu_target_attr($menu['target']);
 			$arr[]	= "<a href='$url'$target>$menu[name]</a>";
 		}
 		return $arr;
 	}
 	
-	static function menu_link()
+	static function menu_link($m=null)
 	{
-		return implode( "\n", self::menu_links() );
+		return implode( "\n", self::menu_links($m) );
 	}
 	
 	
@@ -923,7 +925,7 @@ class x {
 	static function menu_url( $url )
 	{
 		if ( strpos($url, "http") === 0 ) return $url;
-		else if ( $url[0] == '.' || $url[0] == '/' || $url[0] == '?' ) return $url;
+		else if ( $url[0] == '.' || $url[0] == '/' || $url[0] == '?' || $url[0] == '#' ) return $url;
 		else if ( $url == 'URL_HOME' ) return g::url();
 		return url_forum_list( $url );
 	}
@@ -949,20 +951,48 @@ class x {
 	 *
 	 *
 	 */
-	static function menu( $n )
+	static function menu( $n, $m=null )
 	{
-		return x::meta("menu{$n}bo_table");
+		return self::meta( self::menu_id( $n, $m ) );
 	}
 	
-	static function menu_name( $n )
+	/** @short returns menu id of menu
+	 *
+	 * There is a mal-structured in menu.
+	 * the keyword 'bo_table' should be replaced with 'id'.
+	 */
+	static function menu_id( $n, $m=null )
 	{
-		return x::meta("menu{$n}name");
+		return "menu$m{$n}bo_table";
 	}
 	
-	static function menu_target( $n )
+	
+	/** @short return the name of the menu
+	 *
+	 *
+		@code
+			x::menu_name( 1, 'left' ); // will returns the first name of left menu.
+		@endcode
+	 */
+	static function menu_name( $n, $m=null )
 	{
-		return x::meta("menu{$n}target");
+		return x::meta("menu$m{$n}name");
 	}
+	
+	
+	/** @short return the target of the menu
+	 *
+	 *
+		@code
+			x::menu_target( 1, 'left' ); // will returns the first target of left menu.
+		@endcode
+	 */
+	static function menu_target( $n, $m=null )
+	{
+		return x::meta("menu$m{$n}target");
+	}
+	
+	
 	static function menu_target_attr( $Y )
 	{
 		if ( $Y == 'Y' ) return " target='_blank'";

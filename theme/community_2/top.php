@@ -10,8 +10,10 @@
 			<a href='<?=G5_BBS_URL?>/login.php'>로그인</a>
 			<a href='<?=G5_BBS_URL?>/register.php'>회원가입</a> 
 		<? } ?>
+		<?=x::menu_link( 'left' )?>
 		</div>
 		<div class='top-menu-right'>
+		<?=x::menu_link( 'left' )?>
 			<a href='<?=g::url()?>?device=mobile' class='top-menu-mobile'>모바일</a>
 		</div>
 		<div style='clear: both'></div>
