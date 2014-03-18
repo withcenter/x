@@ -25,7 +25,7 @@
 <?
 $menus = get_site_menu();
 foreach ( $menus as $menu ) {?>
-	<li class='sub-menu-item' page='<?=x::meta('menu'.$i.'bo_table')?>'>		
+	<li class='menu-group' page='<?=x::meta('menu'.$i.'bo_table')?>'>		
 		<a href='<?=url_forum_list($menu['bo_table'])?>'>
 			<?=$menu['name']?>
 			<div class='border_left'></div>
@@ -65,3 +65,11 @@ foreach ( $menus as $menu ) {?>
 	
 	}?>
 </ul>
+<style>
+@media all and ( min-width: 640px ) {
+	.menu-group {
+		display: none;
+		background-color: reed;
+	}
+}
+</style>

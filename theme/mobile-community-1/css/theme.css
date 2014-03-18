@@ -330,7 +330,7 @@ a {
 		margin-left:37px;
 	}	
 	
-	#header .submenu .sub-menu-item{
+	#header .submenu .menu-group{
 		display:none;
 	}
 }
@@ -525,4 +525,12 @@ a {
 .mobile-table-header td {
 	padding: 1em !important;
 	font-weight: bold;
+}
+
+/* submenu.php */
+
+@media all and ( min-width: 640px ) {
+	.menu-group {
+		display: inline;
+	}
 }

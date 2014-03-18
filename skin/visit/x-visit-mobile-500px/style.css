@@ -1,0 +1,25 @@
+
+.visit-stats {
+	height: auto;
+	border: solid 1px #345184;
+	margin-bottom: 0.625em;
+}
+
+.visit-stats .visit-stats-title {
+	text-align: center;
+	min-height: 30px;
+	padding: 1em 0 0.3em 0;
+	background: #345184;
+	width: 20%;
+	color: #ffffff;
+	font-weight: bold;
+	float: left;
+}
+
+.visit-stats .per-stats-mobile {
+	padding-top: 0.7em;
+	width: 20%;
+	float: left;
+	text-align: center;
+	color: #345184;
+}

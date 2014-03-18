@@ -5,3 +5,4 @@
 <?php
 include 'popular.posts.php';
 include 'new.posts.php';
+echo visit('x-visit-community-1');
