@@ -128,6 +128,8 @@ class etc {
 		// return $_SERVER['HTTP_HOST'];
 	}
 	
+	
+	
 	// ################################################################## helper functions
 	// get base domain (domain.tld)
 	// usage : etc::base_domain($_SERVER['HTTP_HOST'])
@@ -384,6 +386,7 @@ class etc {
 
 	static function jsGo($url, $message=NULL, $target=NULL) {
 		if ( $message ) $message = self::jsmessage($message);
+		echo self::html_header();
 		$out = "<script>";
 		if ( $message ) $out.= "alert(\"$message\");";
 		if ( $target ) $target = "$target.";

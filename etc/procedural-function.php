@@ -238,21 +238,9 @@ function my( $field = 'id' ) {
 }
 
 
-/** @short return the bo_table of n'th menu
- *
- * @param [in] $n
- *
- * @return string bo_table
- *
- * @code
-	bo_table(1); // is same as meta('menu_1', ms::board_id(etc::domain()).'_1')
- * @endcode
- */
 function bo_table($n, $domain=null)
 {
-	if ( empty($domain) ) $domain = etc::domain();
-	$bo_table = "ms_" . etc::last_domain( $domain ) . '_'.$n;
-	return $bo_table;
+	return g::bo_table( $n, $domain );
 }
 
 

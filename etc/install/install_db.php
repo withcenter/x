@@ -9,7 +9,6 @@ header('Pragma: no-cache'); // HTTP/1.0
 
 include_once ('../config.php');
 $title = G5_VERSION." 설치 완료 3/3";
-// TEST
 include_once ('./install.inc.php');
 
 //print_r($_POST); exit;
@@ -95,7 +94,8 @@ for ($i=0; $i<count($f); $i++) {
 // 테이블 생성 ------------------------------------
 
 
-// X DB 설치
+/// X DB 설치
+/// 실제 설치를 위한 코드를 변경한 곳은 이곳 뿐이다.. 나머지는 그냥 한/영 언어 변경 뿐. 
 	$dir_root = "..";
 	//$dir_root = "../../..";
 	include "$dir_root/x/etc/patch/database.php";
@@ -149,6 +149,7 @@ $sql = " insert into `{$table_prefix}config`
                 cf_mobile_search_skin = 'basic',
                 cf_mobile_connect_skin = 'basic',
                 cf_mobile_member_skin = 'basic',
+					cf_editor = 'ckeditor4',
                 cf_captcha_mp3 = 'basic',
                 cf_register_level = '2',
                 cf_register_point = '1000',

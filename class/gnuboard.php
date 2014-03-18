@@ -190,7 +190,7 @@ class gnuboard {
 	 *  @code
 	 *  
 		$o = array(
-			'id'	=> ms::board_id( $domain ),
+			'id'	=> self::board_id( $domain ),
 			'subject'	=> $title,
 			'group_id'	=> 'multisite',
 		);
@@ -658,7 +658,7 @@ class gnuboard {
 	 */
 	static function update( $o )
 	{
-		$write_table = self::board_table($o['bo_table']);
+		$write_table = self::table_name($o['bo_table']);
 		
 		$fd = array();
 		if ( isset($o['wr_subject']) ) $fd[] = "wr_subject = '$o[wr_subject]'";
@@ -729,20 +729,54 @@ class gnuboard {
 	}
 	
 	/**
-	 *  @brief Brief
+	 *  @brief returns write_table name
 	 *  
 	 *  @param [in] $bo_table Parameter_Description
 	 *  @return Return_Description
 	 *  
 	 *  @details Details
 	 *  @code
-	 *  	g::board_table( $extra['menu_1'] );
+	 *  	g::table_name( $extra['menu_1'] );
 	 *  @endcode
 	 */
-	static function board_table($bo_table)
+	static function table_name($bo_table)
 	{
 		return self::write_table($bo_table);
 	}
+	
+	
+	/** @short return the bo_table of n'th menu
+	 *
+	 * @note bo_table() returns fourm id, while table_name() returns write_table name.
+	 * @param [in] $n nth menu
+		@note if $n is 0, then it only returns the bo_table itself.
+			ex)
+				bo_table(0, 'abc.def.kr'); // may return "ms_abc"
+				while
+				bo_table(1, 'abc.def.kr'); // may return "ms_abc_1"
+				
+				
+	 * @param [in] $domain is the domain of the site.
+	 *
+	 * @return string bo_table
+	 *
+	 * @code
+		bo_table(1); // is same as meta('menu_1', ms::board_id(etc::domain()).'_1')
+	 * @endcode
+	 *
+	 * @warning if 'basedomain' is accessed, then it assumes that the site is accessed with "www."
+	 */
+	static function bo_table($n, $domain=null)
+	{
+		if ( empty($domain) ) {
+			$domain = etc::domain();
+		}
+		
+		$bo_table = "ms_" . etc::last_domain( $domain );
+		if ( $n ) $bo_table .= '_'.$n;
+		return $bo_table;
+	}
+	
 	
 	
 	
@@ -800,7 +834,7 @@ class gnuboard {
 	 */
 	static function post( $bo_table, $wr_id )
 	{
-		$bo_table = self::board_table( $bo_table );
+		$bo_table = self::table_name( $bo_table );
 		return db::row("SELECT * FROM $bo_table WHERE wr_id=$wr_id");
 	}
 	static function get( $bo_table, $wr_id )
@@ -826,7 +860,7 @@ class gnuboard {
 	 */
 	static function forum_exist($bo_table)
 	{
-		return db::table_exist( self::board_table($bo_table) );
+		return db::table_exist( self::table_name($bo_table) );
 	}
 	
 	/**
@@ -1008,7 +1042,7 @@ class gnuboard {
 	
 	static function posts_old( $o )
 	{
-		$bo_table = self::board_table( $o['bo_table'] );
+		$bo_table = self::table_name( $o['bo_table'] );
 		
 		$cond = array();
 		if ( $o['mb_id'] ) $cond['mb_id'] = $o['mb_id'];

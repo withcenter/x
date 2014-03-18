@@ -57,12 +57,20 @@ class x {
 	 *  @return string domain
 	 *  
 	 *  @details Use this function to get the accessed domain.
+	 *  @waring If the domain is BASE-DOMAIN, it returns the domain adding 'www.' on the begining.
+	 *  ex) "abc.com" will be return "www.abc.com"
+	 
+	 
 	 */
 	static function domain()
 	{
 		$host = $_SERVER['HTTP_HOST'];
 		$host = strtolower($host);
-		return $host;
+		
+	
+		/// @warning if it's base-domain, it adds 'www.' on the begining.
+		if ( $host == etc::base_domain($host) ) return "www.$host";
+		else return $host;
 	}
 	
 	
@@ -465,8 +473,7 @@ class x {
 	 */
 	static function board_id( $domain=null )
 	{
-		if ( empty($domain) ) $domain = etc::domain();
-		return 'ms_' . etc::last_domain($domain);
+		return g::bo_table( 0, $domain );
 	}
 	
 	
@@ -498,8 +505,11 @@ class x {
 	static function forums($domain=null)
 	{
 		global $g5;
-		if ( $domain === null ) $domain = etc::domain();
-		$bo_table = self::board_id( $domain );
+		
+		
+		
+		$bo_table = bo_table( 0, $domain );
+		
 		$qb = "bo_table LIKE '$bo_table\_%'";	
 		$rows = db::rows( "SELECT * FROM $g5[board_table] WHERE $qb");
 		return $rows;

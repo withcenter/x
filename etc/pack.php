@@ -74,6 +74,8 @@ copy_source( 'x/skin/latest/x-rwd-gallery');
 copy_source( 'x/skin/latest/x-latest-rwd-community-1');
 copy_source( 'x/skin/latest/x-rwd-text-with-thumbnail');
 copy_source( 'x/skin/outlogin/x-outlogin-mobile-1');
+copy_source( 'x/skin/latest/x-community-3-timed-list-with-images');
+
 
 
 //// .... done here ... You need to gzip it now. ------------------------

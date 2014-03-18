@@ -24,7 +24,7 @@
 			게시판 수 : <b><?=count($rows)?></span>
 			<span class='config-title-notice'><img src='<?=module('img/setting_2.png')?>'></span></div>	
 			<div class='config-container'>
-		<form class='create-forum' target='hidden_iframe' autocomplete='off'>
+		<form class='create-forum' autocomplete='off'>
 			<input type='hidden' name='module' value='<?=$module?>' />
 			<input type='hidden' name='action' value='config_forum_submit' />
 			<input class='create-forum-input' type='text' name='subject' placeholder='게시판 제목을 입력하세요.' />
