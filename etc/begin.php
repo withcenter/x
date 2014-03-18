@@ -223,6 +223,10 @@ function hook_latest_check()
 
 
 // Set default mobile theme to 'mobile-commuity-1' if it has no MOBILE theme.
+/** @note This code is now moved to load_site().
+	
+	DELETE THIS CODE WHENEVER
+	
 x::hook_register('before_theme_init', 'hook_theme_change');
 function hook_theme_change()
 {
@@ -231,6 +235,7 @@ function hook_theme_change()
 		if ( empty(x::$config['site']['theme']) ) x::$config['site']['theme'] = "mobile-community-1";
 	}
 }
+*/
 /// https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.2jz9ybhuk887
 x::hook_register( 'body_begin' , 'hook_body_begin');
 
@@ -279,8 +284,6 @@ function hook_latest_before_return()
 		$content = "<div class='skin-update'><div class='skin-update-button' code='$code'>admin</div>$content</div>";
 	}
 }
-
-
 
 /** @todo this code must be hooked on each bbs/member_confirm.php and login() ...
  *  it creates error on member_confirm and login of mobile page()

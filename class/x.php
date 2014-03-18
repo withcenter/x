@@ -257,18 +257,23 @@ class x {
 	 */
 	static function load_site()
 	{
-		
-		$theme = x::meta_get( 'theme' );
-		if ( empty( $theme ) ) $theme = x::meta_get( '.' . etc::domain(), 'theme' );
-		if ( empty( $theme ) ) {
-			$parts = explode('.', etc::domain());
-			for ( $i = 0; $i < count($parts); $i ++ ) {
-				array_shift( $parts );
-				$domain = '.' . implode('.', $parts);
-				$theme = x::meta_get( $domain, 'theme' );
-				if ( $theme ) break;
+		if ( G5_IS_MOBILE ) {
+			$theme = meta('mobile_theme');
+			if ( empty( $theme ) ) $theme = "mobile-community-1";
+		}
+		else {
+			$theme = x::meta_get( 'theme' );
+			if ( empty( $theme ) ) $theme = x::meta_get( '.' . etc::domain(), 'theme' );
+			if ( empty( $theme ) ) {
+				$parts = explode('.', etc::domain());
+				for ( $i = 0; $i < count($parts); $i ++ ) {
+					array_shift( $parts );
+					$domain = '.' . implode('.', $parts);
+					$theme = x::meta_get( $domain, 'theme' );
+					if ( $theme ) break;
+				}
+				if ( empty($theme) ) $theme = x::meta_get( '.', 'theme' );
 			}
-			if ( empty($theme) ) $theme = x::meta_get( '.', 'theme' );
 		}
 		self::$config['site']['theme'] = $theme;
 		// @deprecated. no more site type is used.
@@ -880,7 +885,8 @@ class x {
 			$target			= meta_get("menu$m{$i}target");
 			$menus[] = array('url'=>$url,'name'=>$bo_name, 'target'=>$target);
 		}
-		if ( empty($menus) ) {
+		/// default menu on main menu only.
+		if ( empty($m) && empty($menus) ) {
 			$menus[]			= array('url'=>'default', 'name'=>ln("Please", "관리자"));
 			$menus[]			= array('url'=>'fake-id-1', 'name'=>ln("config", "페이지에서"));
 			$menus[]			= array('url'=>'fake-id-2', 'name'=>ln("menu", "메뉴를"));

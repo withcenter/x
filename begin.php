@@ -18,6 +18,8 @@ if ( x::installed() && etc::web() ) {
 	ob_start();
 }
 
+
+
 include 'etc/begin.php';
 
 
