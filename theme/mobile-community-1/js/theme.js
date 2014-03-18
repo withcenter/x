@@ -38,7 +38,7 @@ var this_item;
 	if( this_item.hasClass('logout_button') ) return;
 	
 	login_enter_timeout = setTimeout(function(){
-			$('#header ul li.menu_item a').removeClass('selected');
+			this_item.removeClass('selected');
 			$('.mobile-menu .drop-down').hide();
 						
 			
@@ -61,6 +61,10 @@ var this_item;
 	$('.pop-up-login').mouseenter(function(){		
 		clearTimeout(login_timeout);		
 	});
+	
+	$('#header ul li.log-in-button > a').click(function(){					
+		$('.' + login_type + ' .pop-up-login').toggle();
+	});	
 	
 	$('.top-below-500-px .search-button img').click(function(){
 		$('.top-below-500-px .triangle').toggle();

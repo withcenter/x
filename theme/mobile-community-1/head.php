@@ -64,7 +64,10 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
 	</div>
 	<div class='menu'><div class='inner'><?include 'menu.php'?></div></div>
 	<div class='submenu'><div class='inner'><?include 'submenu.php'?></div></div>
-	
+<script>
+	console.log('<?=$in['page']?>');
+	$(".menu_item[page='<?=$in['page']?>'] a").addClass('selected');
+</script>
 </div>
 <div id="content">
 	

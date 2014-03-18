@@ -1,19 +1,19 @@
 
 
 <ul>
-	<li class='menu_item'>
+	<li class='menu_item' page= 'latest_posts'>
 		<a href='<?=g::url()?>/?page=latest_posts'>
 			<img src='<?=x::url_theme()?>/img/mobile_icon1.png'/>		
 			<span class='label'>Latest Posts</span>
 		</a>
 	</li>
-	<li class='menu_item'>
+	<li class='menu_item' page = 'popular_posts'>
 		<a href='<?=g::url()?>/?page=popular_posts'>
 			<img src='<?=x::url_theme()?>/img/mobile_icon2.png'/>		
 			<span class='label'>Popular Posts</span>
 		</a>
 	</li>
-	<li class='menu_item write'>
+	<li class='menu_item write' page = 'gallery'>
 		<a href='<?=g::url()?>/?page=gallery'>
 			<img src='<?=x::url_theme()?>/img/mobile_icon3.png'/>		
 			<span class='label'>갤러리</span>
