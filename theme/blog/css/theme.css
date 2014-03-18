@@ -266,7 +266,7 @@
 	font-family: Arial;
 }
 
-#aside .search input[name='stx'] {
+#aside .search input[name='key'] {
 	width: 12em;
 }
 

@@ -18,13 +18,19 @@
 	?>
 </ul>
 <div class='search-bar'>
-	  <form name="fsearchbox" method="get" action="<?php echo G5_BBS_URL ?>/search.php" onsubmit="return fsearchbox_submit(this);">
+	  <form name="fsearchbox" method="get" action="<?=x::url()?>">	
+		<input type='hidden' name='module' value='post' />
+		<input type='hidden' name='action' value='search' />
+		<input type='hidden' name='search_subject' value=1 />
+		<input type='hidden' name='search_content' value=1 />
+		<? /*
 		<input type="hidden" name="sfl" value="wr_subject||wr_content">
 		<input type="hidden" name="sop" value="and">
-		<input type="text" name="stx" id="travel_search_text" maxlength="20" placeholder='검색어를 입력해 주세요.' />
+		*/?>
+		<input type="text" name="key" id="travel_search_text" maxlength="20" placeholder='검색어를 입력해 주세요.' />
 		<input type="image" id="travel_search_submit" src='<?=x::url_theme()?>/img/search.png' />
       </form>
-
+	<? /*
 		  <script>
 				function fsearchbox_submit(f)
 				{
@@ -52,6 +58,7 @@
 					return true;
 				}
 		 </script>
+		 */?>
 	</div>
 </div>
 <div style='clear:both;'></div>
