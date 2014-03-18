@@ -6,9 +6,7 @@ $(function(){
 	});	
 */
 	$('#header ul li.drop-down-button a').click(function(){	
-	if( $(this).hasClass('selected') ){
-			$('#header ul li.menu_item a').removeClass('selected');
-	}else{
+	if( !$(this).hasClass('selected') ){			
 			$('#header ul li.menu_item a').removeClass('selected');
 			$(this).addClass('selected');
 		}
@@ -37,10 +35,9 @@ var this_item;
 	
 	if( this_item.hasClass('logout_button') ) return;
 	
-	login_enter_timeout = setTimeout(function(){
-			this_item.removeClass('selected');
-			$('.mobile-menu .drop-down').hide();
-						
+	login_enter_timeout = setTimeout(function(){			
+			$('#header ul li.menu_item a').removeClass('selected');
+			$('.mobile-menu .drop-down').hide();						
 			
 			$('.' + login_type + ' .pop-up-login').show();
 			this_item.addClass('selected');

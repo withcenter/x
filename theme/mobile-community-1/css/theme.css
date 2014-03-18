@@ -364,7 +364,7 @@ a {
 		display:block!important;
 	}
 	
-	.mobile-menu .inner .menu_item.favorites, .mobile-menu .inner .menu_item.write, .mobile-menu .inner .menu_item.mobile_message_icon{
+	.mobile-menu .inner .menu_item[page='popular_posts'], .mobile-menu .inner .menu_item[page='gallery'], .mobile-menu .inner .menu_item.mobile_message_icon{
 		display:none!important;
 	}
 	

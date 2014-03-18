@@ -66,9 +66,19 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
 	</div>
 	<div class='menu'><div class='inner'><?include 'menu.php'?></div></div>
 	<div class='submenu'><div class='inner'><?include 'submenu.php'?></div></div>
+	<?
+		di($_SERVER);
+	?>
+<?/*
+<style>
+.menu_item a[href*="<?=$in['page']?>"] {
+	background-color:#2a426b;
+}
+</style>
+*/?>
 <script>
-	console.log('<?=$in['page']?>');
-	$(".menu_item[page='<?=$in['page']?>'] a").addClass('selected');
+	if( $(".menu_item[page='<?=$in['page']?>'] a").length ) $(".menu_item[page='<?=$in['page']?>'] a").addClass('selected');
+	//else if ( '<?=$_SERVER['REQUEST_URI']?>' == '/bbs/register.php')
 </script>
 </div>
 <div id="content">
