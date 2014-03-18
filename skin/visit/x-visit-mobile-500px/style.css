@@ -2,6 +2,7 @@
 .visit-stats {
 	height: auto;
 	border: solid 1px #345184;
+	margin: 0 0.1em;
 	margin-bottom: 0.625em;
 }
 
