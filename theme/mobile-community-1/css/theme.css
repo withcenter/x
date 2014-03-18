@@ -373,6 +373,9 @@ a {
 		display:block!important;
 	}
 	
+	.top-below-500-px .logo img {
+	}
+	
 	.mobile-menu .inner .menu_item[page='popular_posts'], .mobile-menu .inner .menu_item[page='gallery'], .mobile-menu .inner .menu_item.mobile_message_icon{
 		display:none!important;
 	}

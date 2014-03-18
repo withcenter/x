@@ -10,6 +10,10 @@
 	margin:10px 0;
 }
 
+.top-below-640-px  .logo img {
+	max-height: 59px;
+}
+
 .top-below-640-px  .contact_and_search{
 	width:22.5em;
 	display:inline-block;	
@@ -178,7 +182,7 @@
 }
 
 .top-below-500-px .logo img{
-	width:100%;
+	width: 100%;
 }
 .top-below-500-px .top-buttons {
 	float: left;

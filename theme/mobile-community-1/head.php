@@ -11,7 +11,15 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
 <script src="<?=x::theme_url()?>/js/theme.js"></script>
 <div id='header'>
 	<div class='top'>
-		<div class='logo'><a href='<?=g::url()?>'><img src="<?=x::theme_url('img/logo2.png')?>"></a></div>
+		<div class='logo'>
+			<a href="<?php echo G5_URL ?>">
+				<?if( file_exists( path_logo() ) ) { ?>
+					<img src="<?=url_logo()?>">
+				<?} else {?>
+					<img src="<?=x::theme_url('img/logo2.png')?>">
+				<?}?>
+			</a>
+		</div>
 		<div class='contact_and_search'>
 		<?
 		if( x::meta('mobile_contact_num') ){
@@ -27,7 +35,15 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
 		<div style='clear:both;'></div>
 	</div>
 	<div class='top-below-640-px'>
-		<div class='logo'><a href='<?=g::url()?>'><img src="<?=x::theme_url('img/logo2.png')?>"></a></div>
+		<div class='logo'>
+			<a href="<?php echo G5_URL ?>">
+				<?if( file_exists( path_logo() ) ) { ?>
+					<img src="<?=url_logo()?>">
+				<?} else {?>
+					<img src="<?=x::theme_url('img/logo2.png')?>">
+				<?}?>
+			</a>
+		</div>
 		<div class='contact_and_search'>
 			<div class='contact'>전화번호  <?=$mobile_contact?></div>
 			<div class='search'><?include x::theme('search')?></div>
@@ -35,7 +51,15 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
 		<div style='clear:both'></div>
 	</div>
 	<div class='top-below-500-px'>
-		<div class='logo'><a href='<?=g::url()?>'><img src="<?=x::theme_url('img/mobile_logo.png')?>"></a></div>		
+		<div class='logo'>
+			<a href="<?php echo G5_URL ?>">
+				<?if( file_exists( path_logo() ) ) { ?>
+					<img src="<?=url_logo()?>">
+				<?} else {?>
+					<img src="<?=x::theme_url('img/logo2.png')?>">
+				<?}?>
+			</a>
+		</div>		
 		<div class='top-buttons'>
 			<div class='search-button'>
 				<img src='<?=x::theme_url()?>/img/search-500px.png'/>

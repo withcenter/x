@@ -94,6 +94,10 @@
 	float: left;
 }
 
+#header .top .logo img {
+	max-height: 59px;
+}
+
 #header .top-below-640-px  {
 	display:none;
 }
