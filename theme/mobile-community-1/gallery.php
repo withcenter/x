@@ -14,7 +14,11 @@
 
 	function gallery_posts( $options ) {
 	global $g5;
-	$posts = g::posts(array( 'limit' => 100));
+	$posts = g::posts(
+						array( 'limit' => 100,
+								'domain'=>etc::domain(),
+							)
+				);
 
 	$i = 0;
 

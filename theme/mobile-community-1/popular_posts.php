@@ -2,6 +2,7 @@
 	<img src='<?=x::url_theme()?>/img/popular-icon.png'/>인기글
 </div>
 <?
+$forum_exists = 0;
 for ( $i=1; $i <=10; $i++ ) {
 	$forum_name = x::meta('popular_forum_no_'.$i);
 	$no_of_posts = x::meta('popular_no_of_posts_'.$i);
@@ -17,7 +18,22 @@ for ( $i=1; $i <=10; $i++ ) {
 									'icon'		 => x::url_theme().'/img/category-icon.png',
 									'no_of_posts' => $no_of_posts,
 								));
+	$forum_exists = 1;
 }}
+
+if ( !$forum_exists ) {
+	echo mobile_popular_posts(	array(
+										'domain'		=> etc::domain(),
+										'wr_is_comment'	=> 0,
+										'bo_table'		=> bo_table(1),
+										'order by'		=> 'wr_hit DESC',
+								),
+								array( 
+									'icon'		 => x::url_theme().'/img/category-icon.png',
+									'no_of_posts' => 3,
+								));
+}
+
 function mobile_popular_posts($options, $meta) {
 	global $g5;
 	$popular_posts = g::posts($options);
