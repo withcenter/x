@@ -505,3 +505,11 @@ a {
 	padding: 1em !important;
 	font-weight: bold;
 }
+
+/* submenu.php */
+
+@media all and ( min-width: 640px ) {
+	.menu-group {
+		display: inline;
+	}
+}
