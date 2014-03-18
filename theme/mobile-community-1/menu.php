@@ -4,13 +4,13 @@
 	<li class='menu_item' page= 'latest_posts'>
 		<a href='<?=g::url()?>/?page=latest_posts'>
 			<img src='<?=x::url_theme()?>/img/mobile_icon1.png'/>		
-			<span class='label'>Latest Posts</span>
+			<span class='label'>최신글</span>
 		</a>
 	</li>
 	<li class='menu_item' page = 'popular_posts'>
 		<a href='<?=g::url()?>/?page=popular_posts'>
 			<img src='<?=x::url_theme()?>/img/mobile_icon2.png'/>		
-			<span class='label'>Popular Posts</span>
+			<span class='label'>인기글</span>
 		</a>
 	</li>
 	<li class='menu_item write' page = 'gallery'>
@@ -22,7 +22,7 @@
 	<li class='menu_item images'>
 		<a href='javascript:void(0)'>
 			<img src='<?=x::url_theme()?>/img/mobile_icon4.png'/>		
-			<span class='label'>Menu</span>
+			<span class='label'>글쓰기</span>
 		</a>
 	</li>
 	<?
@@ -40,23 +40,21 @@
 			?>
 					<img src='<?=x::url_theme()?>/img/mobile_icon5.png'/>
 			<?}?>
-			<span class='label'>
-				Messages
-			</span>			
+			<span class='label'>쪽지</span>			
 		</a>		
 	</li>
 	<?
 		if( $member['mb_id'] ) {
-			$login_msg = "Logout";			
+			$login_msg = "로그아웃";			
 			$log_href = G5_BBS_URL."/logout.php";
 			$login_class = "logout_button";
-			$profile_msg = "Profile";
+			$profile_msg = "회원정보";
 			$profile_msg_url = G5_BBS_URL."/member_confirm.php?url=register_form.php";
 		}
 		else {
-			$login_msg = "Login";
+			$login_msg = "로그인";
 			$log_href = "javascript:void(0)";
-			$profile_msg = "Register";
+			$profile_msg = "회원가입";
 			$profile_msg_url = G5_BBS_URL."/register.php";			
 		}
 	?>

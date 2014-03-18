@@ -41,7 +41,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 			        
             echo "<td>
 					<div class='subject'><a href='".$list[$i]['href']."'>".conv_subject($list[$i]['subject'], 15, '...')."</a></div>
-					<div class='contents_wrapper'><a href='".$list[$i]['href']."'>".cut_str(strip_tags($list[$i]['wr_content']), 50, '...')."</a></div>
+					<div class='contents_wrapper'><a href='".$list[$i]['href']."'>".cut_str(strip_tags($list[$i]['wr_content']), 30, '...')."</a></div>
 			
 				</td>";
 			
@@ -61,7 +61,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 			<td><div class='photo'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=5'><img src='<?=$latest_skin_url?>/img/no-image.png'/></a></div></td>
 			 <td width='80%'>
 				<div class='subject'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=5'>사이트 만들기 안내</a></div>
-				<div class='contents_wrapper'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=5'>사이트 만들기 안내</a></div>
+				<div class='contents_wrapper' style='margin-bottom: 8px;' ><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=5'>사이트 만들기 안내</a></div>
 			 </td>	
 			<td><div class='comment-time'><div class='comment_count'>10</div><div class='time'><?=date('H:i', time())?></div></div></td>
 		</tr valign='top'>
@@ -69,7 +69,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 			<td><div class='photo'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=4'><img src='<?=$latest_skin_url?>/img/no-image.png'/></a></div></td>
 			 <td width='80%'>
 				<div class='subject'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=4'>블로그 만들기</a></div>
-				<div class='contents_wrapper'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=4'>블로그 만들기</a></div>
+				<div class='contents_wrapper' style='margin-bottom: 8px;'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=4'>블로그 만들기</a></div>
 			</td>	
 			<td><div class='comment-time'>0<br><span class='time'><?=date('H:i', time())?></span></div></td>
 		</tr>
@@ -77,7 +77,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 			<td><div class='photo'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=3'><img src='<?=$latest_skin_url?>/img/no-image.png'/></a></div></td>
 			 <td width='80%'>
 				<div class='subject'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=3'>커뮤니티 사이트 만들기</a></div>
-				<div class='contents_wrapper'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=3'>커뮤니티 사이트 만들기</a></div>
+				<div class='contents_wrapper' style='margin-bottom: 8px;'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=3'>커뮤니티 사이트 만들기</a></div>
 			</td>	
 			<td><div class='comment-time'>0<br><span class='time'><?=date('H:i', time())?></span></div></td>
 		</tr>
@@ -85,7 +85,15 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 			<td><div class='photo'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=2'><img src='<?=$latest_skin_url?>/img/no-image.png'/></a></div></td>
 			 <td width='80%'>
 				<div class='subject'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=2'>여행사 사이트 만들기</a></div>
-				<div class='contents_wrapper'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=2'>여행사 사이트 만들기</a></div>
+				<div class='contents_wrapper' style='margin-bottom: 8px;'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=2'>여행사 사이트 만들기</a></div>
+			</td>	
+			<td><div class='comment-time'><div class='comment_count'>10</div><span class='time'><?=date('H:i', time())?></span></div></td>
+		</tr>
+		<tr valign='top'>
+			<td><div class='photo'><a href='http://www.philgo.net/bbs/board.php?bo_table=help&wr_id=2'><img src='<?=$latest_skin_url?>/img/no-image.png'/></a></div></td>
+			 <td width='80%'>
+				<div class='subject'><a href='<?=url_site_config()?>'>사이트 설정하기</a></div>
+				<div class='contents_wrapper' style='margin-bottom: 8px;'><a href='<?=url_site_config()?>'>사이트 설정 바로가기</a></div>
 			</td>	
 			<td><div class='comment-time'><div class='comment_count'>10</div><span class='time'><?=date('H:i', time())?></span></div></td>
 		</tr>

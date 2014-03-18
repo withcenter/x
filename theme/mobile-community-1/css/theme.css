@@ -431,6 +431,8 @@ a {
 	#content .gallery .post {
 		margin:0;
 	}
+	
+	
 
 }
 
@@ -442,7 +444,6 @@ a {
 		padding-top: 0.625em;
 		padding-bottom: 0;
 	}
-	
 	.posts-title {
 		width: auto;
 		position: static;
