@@ -125,7 +125,7 @@ form[name='comm3_search_form'] {
 
 .header .visitor_stats #visit{
 	position:absolute;
-	top:55px;
+	top:50px;
 	right:-4px;
 	z-index:999;
 	display:none;
