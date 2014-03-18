@@ -63,9 +63,16 @@ var this_item;
 		$('.' + login_type + ' .pop-up-login').toggle();
 	});	
 	
+	var search_toggle = 0;
+	var visit_toggle = 0;
 	$('.top-below-500-px .search-button img').click(function(){
-		$('.top-below-500-px .triangle').toggle();
+		$('.top-below-500-px .search-button .triangle').toggle();
 		$('.top-below-500-px .search').toggle();
+	});
+
+	$('.top-below-500-px .visit-button img').click(function(){
+		$('.top-below-500-px .visit-button .triangle').toggle();
+		$('.top-below-500-px .visit-stats').toggle();
 	});
 });
 
