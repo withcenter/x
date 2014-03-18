@@ -16,22 +16,21 @@ add_stylesheet('<link rel="stylesheet" href="'.$visit_skin_url.'/style.css">', 0
 		for( $i = 1; $i <= 4; $i++ ){		
 		if( number_format($visit[$i]) == 0 ) $no_visit = "no-visit";
 		?>
-		<div>
 			<span class='label'>
 				<?=$labels[$i-1]?>
 			</span>
 			<span class='value <?=$no_visit?>'>
 				<?php echo number_format($visit[$i]) ?>
 			</span>
-		</div>
+			<?if( $i != 4 ) {?>
+			<span class='seperator'>|</span>
+			<?}?>
 		<?
 		}
 		?>
-	</div>
-		<?php if ($is_admin == "super") {  ?>
-		<div class='visit-super-admin-command'>
-			<a href="<?php echo G5_ADMIN_URL ?>/visit_list.php">상세보기</a>
-		</div>	
+		<span class='seperator'>|</span>
+		<?php if ($is_admin == "super") {  ?>		
+			<a href="<?php echo G5_ADMIN_URL ?>/visit_list.php">상세보기</a>		
 		<?php } ?>
-	
+	</div>	
 </div>

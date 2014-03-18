@@ -74,12 +74,16 @@ a {
 	word-break:break-all;	
 	color:#8f8f8f;		
 	margin:20px 10px 0 10px;
-	padding-bottom:10px;	
+	padding-bottom:10px;
 }
 
 #footer .text-info a{
 	text-decoration:none;
 	color:#8f8f8f;		
+}
+
+#footer .text-info .footer-text{
+	margin-bottom:10px;
 }
 
 #login-box {
@@ -279,12 +283,6 @@ a {
 	}
 }
 
-@media all and ( max-width: 688px ) {
-	#header .top .search .key {
-		width:20em;	
-	}
-}
-
 @media all and ( max-width: 640px ) {
 	#header .top .search .key{ width: 16em; }
 	#sidebar {
@@ -351,16 +349,6 @@ a {
 	}
 	#header .top .search .key{ width: 14em; }
 	#footer { margin-top: 3em; }
-}
-
-@media all and ( max-width: 581px ) {
-	.top-below-640-px  .contact_and_search{
-		width:22em;
-	}
-
-	#header .top-below-640-px  .search .key {
-		width:12.5em;	
-	}
 }
 
 /* below 500 px */

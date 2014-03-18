@@ -104,10 +104,6 @@
 }
 
 /* search */
-#header .top .search {	
-	margin-right:5px
-}
-
 #header .top .search form{
 	border:1px solid #345184;	
 }
@@ -131,34 +127,6 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 	padding: 0 !important;
 	border: 0 none !important;
 }
-
-
-/*visitor stats*/
-#header .top .visitor-stats{
-	position:relative;	
-}
-
-#header .top .visitor-stats .visit-button{
-	border:1px solid #345184;
-	height:40px;
-	width:40px;
-	position:relative;
-	cursor:pointer;
-}
-
-#header .top .visitor-stats .visit-button img{	
-	position:absolute;
-	left:9px;
-	top:7px;
-}
-
-#header .top .visitor-stats #visit{	
-	position:absolute;
-	top:45px;
-	right:0;
-	display:none;
-}
-
 
 /* #header .submenu */
 #header .submenu {

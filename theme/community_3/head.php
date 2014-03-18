@@ -59,14 +59,6 @@
 				</form>
 			</fieldset>
 		</td>
-		<td width='49'>
-			<div class='visitor_stats'>
-				<div class='visit_button'>
-					<img src='<?=x::url_theme()?>/img/visit_stats.png'/>
-				</div>
-				<?=visit('community-3');?>
-			</div>
-		</td>
 		</tr>
 	</table>
 	</div><!--header-->

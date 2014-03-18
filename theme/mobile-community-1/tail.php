@@ -42,7 +42,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		?>
 		</div>		
 		<?/*<a href="<?=g::url()?>?device=pc">PC 버젼</a>
-		<a href='<?=url_site_config()?>'>사이트 관리</a>*/?>
+		<a href='<?=url_site_config()?>'>사이트 관리</a>*/?>		
 	</div>	
 </td>
 <td>
