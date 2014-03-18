@@ -35,9 +35,9 @@
 
 <div class='config-wrapper'>
 	<div class='config-title'>
-		<span class='config-title-info'>ADDITIONAL INFORMATION</span>
+		<span class='config-title-info'>추가 설정</span>
 		<span class='config-title-notice'>
-			<span class='user-google-guide-button' page = 'google_doc_mobile_1_1' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
+			<span class='user-google-guide-button' page = 'google_doc_mobile_1_1' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[보이기]</span>
 			<img src='<?=module('img/setting_2.png')?>'>
 		</span>
 	</div>
@@ -46,7 +46,7 @@
 	</div>
 		<table>
 			<tr>
-				<td colspan='2'><span class='title-small'>Contact Number</span><input type='text' name='mobile_contact_num' value='<?=x::meta('mobile_contact_num')?>' /></td>
+				<td colspan='2'><span class='title-small'>전화번호</span><input type='text' name='mobile_contact_num' value='<?=x::meta('mobile_contact_num')?>' /></td>
 			<tr>
 		</table>
 	</div>
@@ -56,9 +56,9 @@
 
 <div class='config-wrapper'>
 	<div class='config-title'>
-		<span class='config-title-info'><span class='config-title-info'>LOGOS</span></span>
+		<span class='config-title-info'><span class='config-title-info'>사이트 로고</span></span>
 		<span class='config-title-notice'>
-			<span class='user-google-guide-button' page = 'google_doc_mobile_1_2' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
+			<span class='user-google-guide-button' page = 'google_doc_mobile_1_2' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[보이기]</span>
 			<img src='<?=module('img/setting_2.png')?>'>
 		</span>
 	</div>
@@ -97,9 +97,9 @@
 
 <div class='config-wrapper'>
 	<div class='config-title'>
-		<span class='config-title-info'>INDEX PAGE FORUMS</span>
+		<span class='config-title-info'>사이트 메인에 보일 게시판</span>
 		<span class='config-title-notice'>
-			<span class='user-google-guide-button' page = 'google_doc_mobile_1_4' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
+			<span class='user-google-guide-button' page = 'google_doc_mobile_1_4' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[보이기]</span>
 			<img src='<?=module('img/setting_2.png')?>'>
 		</span>
 	</div>
@@ -108,19 +108,19 @@
 	</div>
 		<table cellpadding=0 cellspacing=0>
 			<tr valign='top'>
-				<td>TOP FORUM (Images) <?=set_posts('top_forum_with_images')?></td>
+				<td>상단 갤러리 게시판 <?=set_posts('top_forum_with_images')?></td>
 			<tr>
 			<tr valign='top'>
 				<td>
 						<? for ( $i = 1; $i <=4; $i++ ) {?>
-							<div>MIDDLE FORUM <?=$i?> <?=set_posts('middle_forum_'.$i)?></div>
+							<div>중앙 게시판 <?=$i?> <?=set_posts('middle_forum_'.$i)?></div>
 						<?}?>
 				</td>
 			<tr>
 			<tr valign='top'>
 				<td>
 					<? for ( $i = 1; $i <=2; $i++ ) {?>
-					<div>BOTTOM FORUM <?=$i?> <?=set_posts('bottom_forum_'.$i)?></div>
+					<div>하단 게시판 <?=$i?> <?=set_posts('bottom_forum_'.$i)?></div>
 					<?}?>
 				</td>
 			<tr>
@@ -132,9 +132,9 @@
 
 <div class='config-wrapper'>
 	<div class='config-title'>
-		<span class='config-title-info'><span class='config-title-info'>POPULAR POSTS AND LATEST POSTS</span></span>
+		<span class='config-title-info'><span class='config-title-info'>인기글 및 최신글</span></span>
 		<span class='config-title-notice'>
-			<span class='user-google-guide-button' page = 'google_doc_mobile_1_3' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
+			<span class='user-google-guide-button' page = 'google_doc_mobile_1_3' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[보이기]</span>
 			<img src='<?=module('img/setting_2.png')?>'>
 		</span>
 	</div>
@@ -143,7 +143,7 @@
 	<div class='hidden-google-doc google_doc_mobile_1_3'>	
 	</div>	
 		<table cellpadding=0 cellspacing=0 class='mobile-meta-table' width='100%'>
-		<tr class='mobile-table-header'><td width='50' align='center'>NO.</td><td width='240'>LATEST FORUM</td><td>NO. OF POSTS</td></tr>
+		<tr class='mobile-table-header'><td width='50' align='center'>번호</td><td width='240'>최신글</td><td>게시물 갯수</td></tr>
 			<? for ( $i = 1; $i <=10; $i++ ) {?>
 				<tr valign='top'>
 					<td align='center'><?=$i?></td>
@@ -151,7 +151,7 @@
 					<td class='no_of_posts'><input type='text' name='latest_no_of_posts_<?=$i?>' value='<?=x::meta('latest_no_of_posts_'.$i)?>'></td>
 				</tr>
 			<?}?>
-		<tr class='mobile-table-header'><td width='50' align='center'>NO.</td><td>POPULAR</td><td>NO. OF POSTS</td></tr>
+		<tr class='mobile-table-header'><td width='50' align='center'>번호</td><td>게시판</td><td>게시물 갯수</td></tr>
 			<? for ( $i = 1; $i <=10; $i++ ) {?>
 				<tr valign='top'>
 					<td align='center' ><?=$i?></td>
