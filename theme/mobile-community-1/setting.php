@@ -30,7 +30,19 @@
 <?
 	return $content = ob_get_clean();
 }
-?>
+
+	function set_no_of_posts( $name ) {
+	?>
+		<select name="<?=$name?>">
+			<option value=''>---</option>
+			<? for( $i=1; $i<=15; $i++ ) {
+			if( $i == x::meta($name) ) $selected = 'selected';
+			else $selected = '';
+			?>
+			<option value='<?=$i?>' <?=$selected?>><?=$i?></option>
+			<?}?>
+		</select>
+	<?}?>
 
 
 <div class='config-wrapper'>
@@ -148,7 +160,7 @@
 				<tr valign='top'>
 					<td align='center'><?=$i?></td>
 					<td><?=set_posts('latest_forum_no_'.$i)?></td>
-					<td class='no_of_posts'><input type='text' name='latest_no_of_posts_<?=$i?>' value='<?=x::meta('latest_no_of_posts_'.$i)?>'></td>
+					<td class='no_of_posts'><?=set_no_of_posts("latest_no_of_posts_".$i)?></td>
 				</tr>
 			<?}?>
 		<tr class='mobile-table-header'><td width='50' align='center'>번호</td><td>게시판</td><td>게시물 갯수</td></tr>
@@ -156,7 +168,7 @@
 				<tr valign='top'>
 					<td align='center' ><?=$i?></td>
 					<td><?=set_posts('popular_forum_no_'.$i)?></td>
-					<td  class='no_of_posts'><input type='text' name='popular_no_of_posts_<?=$i?>' value='<?=x::meta('popular_no_of_posts_'.$i)?>'></td>
+					<td  class='no_of_posts'><?=set_no_of_posts("popular_no_of_posts_".$i)?></td>
 				</tr>
 			<? }?>
 		</table>
