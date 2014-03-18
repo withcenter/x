@@ -45,7 +45,7 @@
 		</a>
 	</li>
 	<li class='menu_item images'>
-		<a href='javascript:void(0)'>
+		<a href='<?=G5_BBS_URL?>/write.php?bo_table=<?=bo_table(1)?>'>
 			<img src='<?=x::url_theme()?>/img/mobile_icon4.png'/>		
 			<span class='label'>글쓰기</span>
 		</a>
