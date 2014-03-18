@@ -1,0 +1,45 @@
+#visit {		
+	background-color:black;
+	color:white;
+	width:99px;
+	height:125px;
+	padding:10px 18px;
+}
+#visit a {
+	color:white;
+	text-decoration:none;
+}
+
+#visit > .title {
+	font-weight: bold;
+	font-size: 1.1em;
+	border-bottom:1px solid #808080;
+	text-align:center;
+	padding-bottom:5px;
+	margin-bottom:6px;
+}
+
+#visit .visit-content-wrapper{
+	border-bottom:1px solid #808080;
+	margin-bottom:5px;
+}
+
+#visit .visit-content-wrapper > div{
+	margin:5px 21px;
+	
+}
+
+#visit .visit-content-wrapper .label {	
+}
+
+#visit .visit-content-wrapper .value {	
+	float:right;
+}
+
+#visit .visit-content-wrapper .value.no-visit {	
+	color:#bfbfbf;
+}
+
+#visit .visit-super-admin-command {	
+	text-align:center;
+}

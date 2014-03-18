@@ -1,6 +1,7 @@
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/theme.css' />
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/head.css' />
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/tail.css' />
+<script src='<?=x::url_theme()?>/js/visitor.js' /></script>
 
 
 
@@ -57,6 +58,14 @@
 
 				</form>
 			</fieldset>
+		</td>
+		<td width='45'>
+			<div class='visitor_stats'>
+				<div class='visit_button'>
+					<img src='<?=x::url_theme()?>/img/visit_stats.png'/>
+				</div>
+				<?=visit('community-3');?>
+			</div>
 		</td>
 		</tr>
 	</table>
