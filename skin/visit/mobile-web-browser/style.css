@@ -1,0 +1,43 @@
+#visit.browser {
+	border:1px solid #345184;
+	background-color:white;
+	color:#345184;
+	width:100px;	
+}
+#visit.browser a {
+	color:#345184!important;
+	text-decoration:none;
+}
+
+#visit.browser > .title {
+	font-weight: bold;
+	font-size: 1.1em;
+	border-bottom:1px solid #345184;
+	text-align:center;
+	padding:5px;	
+}
+
+#visit.browser .visit-content-wrapper{	
+	margin-bottom:5px;
+}
+
+#visit.browser .visit-content-wrapper > div{
+	margin:3px 21px;	
+}
+
+#visit.browser .visit-content-wrapper .label {	
+}
+
+#visit.browser .visit-content-wrapper .value {	
+	float:right;
+}
+
+#visit.browser .visit-content-wrapper .value.no-visit {	
+	color:#bfbfbf;
+}
+
+#visit.browser .visit-super-admin-command {	
+	text-align:center;
+	margin-top:5px;
+	padding:5px 0;
+}

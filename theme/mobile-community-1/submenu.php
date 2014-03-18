@@ -25,7 +25,7 @@
 <?
 $menus = get_site_menu();
 foreach ( $menus as $menu ) {?>
-	<li page='<?=x::meta('menu'.$i.'bo_table')?>'>		
+	<li class='sub-menu-item' page='<?=x::meta('menu'.$i.'bo_table')?>'>		
 		<a href='<?=url_forum_list($menu['bo_table'])?>'>
 			<?=$menu['name']?>
 			<div class='border_left'></div>

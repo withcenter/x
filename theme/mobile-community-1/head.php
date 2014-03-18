@@ -21,16 +21,52 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
 			$mobile_contact = "(000) 000-00-00";
 		}
 		?>
-			<div class='contact'>전화번호  <?=$mobile_contact?></div>
-			<div class='search'><?include x::theme('search')?></div>
+		<table cellpadding=0 cellspacing=0>
+			<tr>
+				<td colspan='2'>
+					<div class='contact'>전화번호  <?=$mobile_contact?></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class='search'><?include x::theme('search')?></div>
+				</td>
+				<td width='40'>
+					<div class='visitor-stats'>
+						<div class='visit-button'>
+							<img src='<?=x::url_theme()?>/img/visitor_stats.png'/>
+						</div>
+						<?=visit('mobile-web-browser')?>
+					</div>
+				</td>
+			</tr>
+		</table>
 		</div>
 		<div style='clear:both;'></div>
 	</div>
 	<div class='top-below-640-px'>
 		<div class='logo'><a href='<?=g::url()?>'><img src="<?=x::theme_url('img/logo2.png')?>"></a></div>
 		<div class='contact_and_search'>
-			<div class='contact'>전화번호  <?=$mobile_contact?></div>
-			<div class='search'><?include x::theme('search')?></div>
+			<table cellpadding=0 cellspacing=0>
+				<tr>
+					<td colspan='2'>
+						<div class='contact'>전화번호  <?=$mobile_contact?></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class='search'><?include x::theme('search')?></div>
+					</td>
+					<td width='40'>
+						<div class='visitor-stats'>
+							<div class='visit-button'>
+								<img src='<?=x::url_theme()?>/img/visitor_stats.png'/>
+							</div>
+							<?=visit('mobile-tablet')?>
+						</div>
+					</td>
+				</tr>
+			</table>
 		</div>
 		<div style='clear:both'></div>
 	</div>

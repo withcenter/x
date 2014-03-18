@@ -67,6 +67,13 @@ var this_item;
 		$('.top-below-500-px .triangle').toggle();
 		$('.top-below-500-px .search').toggle();
 	});
+	
+	/**visitor stats**/
+	$(function(){
+	$('#header .visitor-stats .visit-button').click(function(){
+		$('#header .visitor-stats #visit').toggle();
+	});
+});
 });
 
 /*
