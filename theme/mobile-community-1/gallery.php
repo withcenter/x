@@ -21,14 +21,14 @@
 				);
 
 	$i = 0;
-
+	
 	foreach( $posts as $key => $value ) {
 		if( $value['wr_is_comment'] != 0 ) continue;
 		$lists[$i] = db::row("SELECT * FROM $g5[write_prefix]".$value['bo_table']." WHERE wr_id='".$value['wr_id']."'");
 		$lists[$i]['bo_table'] = $value['bo_table'];
 		$i++;
 	}
-
+	
 	isset($options['width'])	? $width = $options['width'] : $width = 300;
 	isset($options['radius'])	? $height = $options['height'] : $height = 180;
 	isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
@@ -44,6 +44,7 @@
 				}
 	</style>
 	<div class='x-gallery-2-outer'>
+<? if ( $lists ) {?>
 	<ul class="x-gallery-2">
 	<?
 		$count_image = 0;
@@ -86,6 +87,7 @@
 		
 	<?php $i++;} ?>
 	</ul>
+<? }?>
 	<div style='clear:both;'></div>
 	</div>
 
