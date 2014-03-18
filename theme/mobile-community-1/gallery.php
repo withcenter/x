@@ -70,12 +70,12 @@
 					<div class='post' no="<?=$count_image?>">
 						<div class='photo'><a href="<?=$url?>"><?=$img?></a></div>
 						<div class='text'>
-							<div class='title'><a href="<?=$url?>" class='post-subject'><?php echo cut_str($list['wr_subject'], 10 , "...") ?></a> <span class='post-author'>by <?=get_sideview($list['mb_id'],$list['wr_name'])?></span></div>
-							<div class='date-comment-view'><a href="<?=$url?>"><span class='post-date'><?=date('m/d/Y', strtotime($list['wr_datetime']))?></span> <span class='post-divider'> | </span> <span class='post-comment'><?=$list['wr_comment']?> Comment</span> <span class='post-divider'>|</span> <span class='post-views'><?=$list['wr_hit']?> view</span></a></div>
+							<div class='title'><a href="<?=$url?>" class='post-subject'><?php echo cut_str($list['wr_subject'], 10 , "...") ?></a> <span class='post-author'><b>글쓴이</b> <?=get_sideview($list['mb_id'],$list['wr_name'])?></span></div>
+							<div class='date-comment-view'><a href="<?=$url?>"><span class='post-date'><?=date('Y/m/d', strtotime($list['wr_datetime']))?></span> <span class='post-divider'> | </span> <span class='post-comment'><b>댓글</b> <?=$list['wr_comment']?></span> <span class='post-divider'>|</span> <span class='post-views'><b>조회수</b> <?=$list['wr_hit']?></span></a></div>
 							
 							<div class='date-comment-view-mobile'>
-								<span class='post-mobile-meta'><span class='post-author'>by <?=get_sideview($list['mb_id'],$list['wr_name'])?></span> on <span class='post-date'><?=date('m/d/Y', strtotime($list['wr_datetime']))?></span></span>
-								<span class='post-mobile-comment-view'><a href="<?=$url?>"><span class='post-comment'><?=$list['wr_comment']?> Comment</span> <span class='post-divider'>|</span> <span class='post-views'><?=$list['wr_hit']?> view</span></span>
+								<span class='post-mobile-meta'><span class='post-author'><b>글쓴이</b> <?=get_sideview($list['mb_id'],$list['wr_name'])?></span> <b>작성일</b> <span class='post-date'><?=date('m/d/Y', strtotime($list['wr_datetime']))?></span></span>
+								<span class='post-mobile-comment-view'><a href="<?=$url?>"><span class='post-comment'><b>댓글</b> <?=$list['wr_comment']?></span> <span class='post-divider'>|</span> <span class='post-views'><b>조회수</b> <?=$list['wr_hit']?></span></span>
 								</a>
 							</div>
 							

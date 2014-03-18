@@ -68,10 +68,10 @@ function mobile_popular_posts($options, $meta) {
 					<div class='popular-info'>
 						<div class='popular-subject'><a href='<?=$url?>'><?=cut_str($popular_posts[$i]['wr_subject'],100,'...')?></a></div>
 						<div class='popular-meta'>
-							Posted by <?=get_sideview($popular_posts[$i]['mb_id'], $popular_posts[$i]['wr_name'])?>
-							on <?=date('m/d/Y', strtotime($popular_posts[$i]['wr_datetime']))?> <span class='post-divider'>|</span>
-							<?=$popular_posts[$i]['wr_comment']?> Comment <span class='post-divider'>|</span>
-							<?=$popular_posts[$i]['wr_hit']?> view
+							<b>글쓴이</b> <?=get_sideview($popular_posts[$i]['mb_id'], $popular_posts[$i]['wr_name'])?>
+							<b>작성일</b> <?=date('m/d/Y', strtotime($popular_posts[$i]['wr_datetime']))?> <span class='post-divider'>|</span>
+							<b>댓글</b> <?=$popular_posts[$i]['wr_comment']?> <span class='post-divider'>|</span>
+							<b>조회수</b> <?=$popular_posts[$i]['wr_hit']?>
 						</div>
 						<div class='popular-content'>
 							<a href="<?=$url?>"><?php echo get_text(cut_str(strip_tags($popular_posts[$i]['wr_content']), 240, '...' )) ?></a>
