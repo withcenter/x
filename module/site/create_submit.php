@@ -102,30 +102,12 @@ add_stylesheet("<link rel='stylesheet' type='text/css' href='".x::url()."/module
 					g::board_create($o);
 					// 사이트 생성시 메뉴 저장
 					if ( $i <= 5 ) x::meta_set( $domain, "menu{$i}bo_table", x::board_id ( $domain ).'_'.$i);
-					
-					x::meta_set( $domain, 'forum_no_'.$i, x::board_id ( $domain ).'_'.$i);
+
 				}
 			}
-			
-			/**
-			 * @bug This is a data integrity violation.
-			 * Theme value is set on both of x_multidomain_config and x_multisite_meta and it will cause problem in the future.
-			
-			*/
-			/*
-			$meta_op = array(
-							'domain' => $domain,
-							'code'=>'theme',
-							'value'=> $site_type
-			);
-			db::insert('x_multisite_meta', $meta_op );
-			*/
+		
 			x::meta_set( $domain, 'theme', $site_type );
-			/*
-			$theme = $site_type;
-			$priority = 10;
-			md::config_update();
-			*/
+			
 			include module( 'create_success' );
 	}
 ?>
