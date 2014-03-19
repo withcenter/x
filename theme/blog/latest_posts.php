@@ -7,6 +7,7 @@ $list = g::posts( array(
 				'domain' => etc::domain(),
 				'limit'=> $no_of_posts,
 				'order by'=> 'wr_datetime DESC',
+				'select' =>"bo_table,wr_id,wr_datetime,wr_subject,wr_content"
 				)
 );
 
@@ -35,10 +36,10 @@ if ( $list ) {
 			<td class='right' <?=$colspan?>>
 				<div class='date'><b>작성일</b><?=$newDate = date("Y-m-d", strtotime($li['wr_datetime']))?></div>
 				<div class='subject'>
-					<a href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$bo_table?>&wr_id=<?=$li['wr_id']?>'><?=cut_str(get_text($li['wr_subject']), 25, "...");?></a>
+					<a href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$li['bo_table']?>&wr_id=<?=$li['wr_id']?>'><?=cut_str(get_text($li['wr_subject']), 25, "...");?></a>
 				</div>
 				<div class='content'>
-					<a href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$bo_table?>&wr_id=<?=$li['wr_id']?>'><?=cut_str(strip_tags($li['wr_content']), 200,'...')?></a>
+					<a href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$li['bo_table']?>&wr_id=<?=$li['wr_id']?>'><?=cut_str(strip_tags($li['wr_content']), 200,'...')?></a>
 				</div>
 			</td>
 		</tr>	
