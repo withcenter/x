@@ -4,14 +4,15 @@ body{
 /* site top */
 .site_top {
 	background-color: #ecf0f1;
-	width: 100%;
+	min-width:970px;
 	font-family: '맑은 고딕', AppleGothic;
 	height: 40px;
 	line-height: 40px;
+	
 }
 .site_top .inner {
-	margin: 0 auto;
-	width: 970px;
+	max-width:970px;
+	margin: 0 auto;	
 }
 .site_top .inner  a {
 	text-decoration: none;
@@ -25,16 +26,18 @@ body{
 }
 .site_top .inner .top-menu-left {
 	float: left;	
+	margin-left:10px;
 }
 
 .site_top .inner .top-menu-right {
 	float: right;
+	margin-right:10px;
 }
 
 
 /* logo search */
 .logo_search {
-	width: 100%;
+	min-width:970px;
 	background-color: #78bb9f;
 }
 .logo_search .inner {

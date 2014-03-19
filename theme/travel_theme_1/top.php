@@ -11,34 +11,24 @@
 					<li><div class='inner'><a href='<?=G5_BBS_URL?>/register.php'>회원가입</a></div></li>
 				<?}?>
 
-			<? for ( $i = 1; $i <= 3; $i++ ) {
-					if ( x::meta('forum_no_'.$i.'_name') ) {
-						$top_menu = x::meta('forum_no_'.$i.'_name');				
-					  }
-					  else {
-						$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".x::meta('forum_no_'.$i)."'");
-						$top_menu = $row['bo_subject'];
-					  }
-			?>
-				<li><div class='inner'><a href='<?=g::url()?>/bbs/board.php?bo_table=<?=x::meta('forum_no_'.$i)?>'><?=$top_menu?></a></div></li>
-			<?}?>
+				<?php
+				 foreach( x::menu_links('left' ) as $link ) {
+					echo "<li><div class='inner'>$link</div></li>";
+				 }
+				?>
+		
 		</ul>
 		<div style='clear:left;'></div>
 	</div></div>
 	<div  id="menu-top-right"><div class='inner'>
 		<ul>
-			<? for ( $i = 4; $i <= 5; $i++ ) {
-					if ( x::meta('forum_no_'.$i.'_name') ) {
-						$top_menu = x::meta('forum_no_'.$i.'_name');				
-					  }
-					  else {
-						$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".x::meta('forum_no_'.$i)."'");
-						$top_menu = $row['bo_subject'];
-					  }
+			<?php
+				 foreach( x::menu_links('right' ) as $link ) {
+					echo "<li><div class='inner'>$link</div></li>";
+				 }
 			?>
-				<li  <?if($i==4) echo "class='first-item'"?>><div class='inner'><a href='<?=g::url()?>/bbs/board.php?bo_table=<?=x::meta('forum_no_'.$i)?>'><?=$top_menu?></a></div></li>
-			<?}?>
-			<li><a href='<?=g::url()?>?device=mobile'>모바일</a></li>
+			<li><a href='<?=url_language_setting()?>'><?=lang("Change Language")?></a></li>
+			<li><a href='<?=g::url()?>?device=mobile'><?=lang("Mobile View")?></a></li>
 		</ul>
 		<div style='clear:left;'></div>
 	</div></div>

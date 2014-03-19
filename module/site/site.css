@@ -1536,7 +1536,8 @@ span.config-name {
 	background: #616161;
 	border: solid 1px #616161;
 	border-radius: 0 !important;
-	padding: 5px 20px;
+	width:66px;
+	padding: 5px 0;	
 	color: #ffffff;
 }
 
@@ -1631,3 +1632,7 @@ form.config_menu select, form.config_menu input {
 	height: 2em;
 }
 
+/*config menu*/
+.config-wrapper select[name='select_bo_table']{
+	width:100px;
+}

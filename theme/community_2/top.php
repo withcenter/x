@@ -13,8 +13,9 @@
 		<?=x::menu_link( 'left' )?>
 		</div>
 		<div class='top-menu-right'>
-		<?=x::menu_link( 'left' )?>
-			<a href='<?=g::url()?>?device=mobile' class='top-menu-mobile'>모바일</a>
+		<?=x::menu_link( 'right' )?>
+			<a href='<?=url_language_setting()?>'><?=lang("Change Language")?></a>
+			<a href='<?=g::url()?>?device=mobile' class='top-menu-mobile'><?=lang("Mobile View")?></a>
 		</div>
 		<div style='clear: both'></div>
 	</div>

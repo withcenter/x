@@ -16,12 +16,13 @@
 	border-top: 1px solid #d1d1d1;
 	background: #fafafa;
 	color: #444444;
-	padding: 30px 0;
+	padding: 30px 0;	
+	min-width: 970px;
 }
 
-.footer {
-	width: 970px;
+.footer {	
 	margin: auto;
+	width: 970px;
 	position: relative;
 }
 
@@ -44,13 +45,13 @@
 .footer  .footer-info {
 	position: relative;
 	top: -2px;
+	width: 850px;
 }
 .footer .footer-tagline {
 	font-size: 16px;
 	padding-bottom: 5px;
 	margin-bottom: 10px;
-	border-bottom: solid 1px #bbbbbb;
-	width: 850px;
+	border-bottom: solid 1px #bbbbbb;	
 	font-family: '맑은 고딕', AppleGothic;
 }
 

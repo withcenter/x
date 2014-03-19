@@ -1,75 +1,8 @@
-<?php
-function setTopMenu( $name ) {
-	global $cfgs;
-	
-	ob_start();
-	if ( x::site() ) {
-		$cfgs = x::forums();
-		if ( ! empty( $cfgs ) ) {
-	?>
-	<select name='<?=$name?>'>
-		<option value=''>게시판을 선택하세요</option>
-		<option value=''></option>
-		<? foreach ( $cfgs as $c ) { 
-			if ( $c['bo_table'] == x::meta($name) ) $selected = 'selected';
-			else $selected = null;
-		?>
-			<option value="<?=$c['bo_table']?>" <?=$selected?>><?=$c['bo_subject']?></option>
-		<? } ?>
-	</select>
-	<script>
-	$(function(){
-		$("[name='<?=$name?>']").change(function(){
-			$("[name='<?=$name?>_bo_table']").val($(this).val());
-		});
-	});
-	</script>
-	<?
-		}
-	}?>
-	<input type='text' name='<?=$name?>_bo_table' value="<?=x::meta($name."_name")?>" placeholder=" 게시판 아이디 직접 입력" style='height: 23px; width: 140px; line-height: 23px; padding: 0 10px;' />
-<?
-	return $content = ob_get_clean();
-}
-?>
-
-
- 	<div class='config-wrapper'>
-		<div class='config-title'>
-			<span class='config-title-info'>탑 메뉴 설정</span>			
-			<span class='config-title-notice'>
-			<span class='user-google-guide-button' page = 'google_doc_travel_2_1' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
-			<img src='<?=module('img/setting_2.png')?>'>
-		</span>
-	</div>
-		<div class='config-container'>
-<div class='hidden-google-doc google_doc_travel_2_1'>	
-</div>
-			<table cellpadding=0 cellspacing=0 width='100%'>
-				<tr valign='top'>
-					<td>
-						<? for ( $i = 1; $i <=2; $i++ ) {?>
-							<div class='menu-item-list'>상단1-<?=$i?> : <?=setTopMenu('forum_no_'.$i)?></div>
-						<? }?>
-					</td>
-					<td width=10></td>
-					<td>
-						<? for ( $i = 3; $i <=6; $i++ ) {?>
-							<div class ='menu-item-list'>상단2-<?=$i-3?> : <?=setTopMenu('forum_no_'.$i)?></div>
-						<? }?>
-					</td>
-				</tr>
-			</table>	
-		</div>
-		<input type='submit' value='업데이트'>
-		<div style='clear:right;'></div>
-	</div>
-
 <div class='config-wrapper'>
 	<div class='config-title'>
 		<span class='config-title-info'>사이트 추가 설정</span>
 		<span class='config-title-notice'>
-			<span class='user-google-guide-button' page = 'google_doc_travel_1_2' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
+			<span class='user-google-guide-button' page = 'google_doc_travel_1_2' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[설명 보이기]</span>
 			<img src='<?=module('img/setting_2.png')?>'>
 		</span>
 	</div>
@@ -90,7 +23,7 @@ function setTopMenu( $name ) {
 	<div class='config-title'>
 		<span class='config-title-info'>사이트 상하단 로고 & 로고 문구</span>
 		<span class='config-title-notice'>
-			<span class='user-google-guide-button' page = 'google_doc_travel_1_3' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
+			<span class='user-google-guide-button' page = 'google_doc_travel_1_3' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[설명 보이기]</span>
 			<img src='<?=module('img/setting_2.png')?>'>
 		</span>
 	</div>
@@ -142,7 +75,7 @@ function setTopMenu( $name ) {
 	<div class='config-title'>
 		<span class='config-title-info'>메인 롤링 배너</span>
 		<span class='config-title-notice'>
-			<span class='user-google-guide-button' page = 'google_doc_travel_1_4' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
+			<span class='user-google-guide-button' page = 'google_doc_travel_1_4' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[설명 보이기]</span>
 			<img src='<?=module('img/setting_2.png')?>'>
 		</span>
 		</div>
@@ -186,7 +119,7 @@ function setTopMenu( $name ) {
 	<div class='config-title'>
 		<span class='config-title-info'>오른쪽 날개 배너</span>
 		<span class='config-title-notice'>
-			<span class='user-google-guide-button' page = 'google_doc_travel_1_5' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
+			<span class='user-google-guide-button' page = 'google_doc_travel_1_5' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[설명 보이기]</span>
 			<img src='<?=module('img/setting_2.png')?>'>
 		</span>
 		</div>
@@ -229,7 +162,7 @@ function setTopMenu( $name ) {
 	<div class='config-title'>
 		<span class='config-title-info'>중앙 사이드 배너, 하단 배너</span>
 		<span class='config-title-notice'>
-			<span class='user-google-guide-button' page = 'google_doc_travel_1_6' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
+			<span class='user-google-guide-button' page = 'google_doc_travel_1_6' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[설명 보이기]</span>
 			<img src='<?=module('img/setting_2.png')?>'>
 		</span>
 		</div>
@@ -257,7 +190,7 @@ function setTopMenu( $name ) {
 			</td>
 
 		<td>
-			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>오른쪽 사이드 배너</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/site/img/img-icon.png'>오른쪽 사이드 배너</div>
 			<div class='image-upload'>
 			<?						
 
@@ -276,7 +209,7 @@ function setTopMenu( $name ) {
 		</td>
 
 		<td>
-			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>하단 배너</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/site/img/img-icon.png'>하단 배너</div>
 			<div class='image-upload'>
 			<?						
 

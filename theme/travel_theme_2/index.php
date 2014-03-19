@@ -85,7 +85,7 @@
 					$option = array( 
 									'icon'=> x::url_theme()."/img/folded-paper.png"
 								);
-					echo latest("x-latest-travel-lower-posts", bo_table(4), 4, 20 );
+					echo latest("x-latest-travel-lower-posts", bo_table(4), 4, 20, $cache_time=1, $option );
 				?>
 			</div>
 			<div class='travel_middle_posts'>		
@@ -94,7 +94,7 @@
 									'icon'=> x::url_theme()."/img/folded-paper.png"
 								);
 				
-					echo latest("x-latest-travel-lower-posts", bo_table(5), 4, 20);
+					echo latest("x-latest-travel-lower-posts", bo_table(5), 4, 20,  $cache_time=1, $option );
 				?>
 			</div>
 			<div class='travel_right_posts'>		
