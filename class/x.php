@@ -883,16 +883,16 @@ class x {
 			$url			= meta_get( self::menu_id($i, $m) ); // "menu{$i}bo_table";
 			
 			if ( empty($url) ) continue;
-			$bo_name	= self::menu_name($i, $m); // meta_get("menu{$i}name");
+			$name	= self::menu_name($i, $m); // meta_get("menu{$i}name");
 			
-			if ( empty($bo_name) && self::menu_type($url) == 'forum_id' ) {
+			if ( empty($name) && self::menu_type($url) == 'forum_id' ) {
 				$cfg = g::config($url);
-				if ( empty($cfg['bo_subject']) ) $bo_name = ln("No Subject", "제목없음");
-				else $bo_name = $cfg['bo_subject'];
+				if ( empty($cfg['bo_subject']) ) $name = ln("No Subject", "제목없음");
+				else $name = $cfg['bo_subject'];
 			}
-			
+			if ( empty($name) ) continue;
 			$target			= meta_get("menu$m{$i}target");
-			$menus[] = array('url'=>$url,'name'=>$bo_name, 'target'=>$target);
+			$menus[] = array('url'=>$url,'name'=>$name, 'target'=>$target);
 		}
 		/// default menu on main menu only.
 		if ( empty($m) && empty($menus) ) {

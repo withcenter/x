@@ -51,11 +51,16 @@
 
 .travel-theme-top-wrapper #menu-top-left .inner ul li a, .travel-theme-top-wrapper #menu-top-right .inner ul li a{
 	text-decoration: none;
-	border-left: solid 1px #808080;
+	border-right: solid 1px #808080;
 	padding: 0 10px;
 	color: #808080;
 	font-size: 11px;
 }
+.travel-theme-top-wrapper #menu-top-left .inner ul li.last a, .travel-theme-top-wrapper #menu-top-right .inner ul li.last a{
+	border-right: 0;
+}
+
+
 
 
 .travel-theme-top-wrapper #menu-top-left .inner ul li.first-item a, .travel-theme-top-wrapper #menu-top-right .inner ul li.first-item a{

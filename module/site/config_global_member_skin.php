@@ -38,9 +38,10 @@
 				
 			</div>
 			
+		
 				<input type='submit' value='업데이트' class='per-config-submit'>
 				<div style='clear:right;'></div>
-		
+				
 		</div>
 	</div>
 	

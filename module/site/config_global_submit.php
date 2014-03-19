@@ -1,4 +1,6 @@
 <?php
+db::query("SET AUTOCOMMIT=0");
+db::query("START TRANSACTION");
 
 /**remove tags*/
 foreach ( $in as $key => $value) {
@@ -55,6 +57,9 @@ foreach( $_FILES as $name => $file ) {
 		move_uploaded_file( $file['tmp_name'] , $folder.$name );				 // ex: 123456_filename
 	}
 }
+
+db::query("COMMIT");
+db::query("SET AUTOCOMMIT=1");
 
 
 if ( file_exists( x::theme('setting_submit') ) ) include x::theme('setting_submit');
