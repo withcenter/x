@@ -8,8 +8,6 @@ $(function(){
 </script>
 <? } ?>
 
-
-
  <div class='config-wrapper'>
 	<div class='config-title'>
 		<span class='config-title-info'><?=$theme_config["menu_$id"]["name"]?> 설정</span>
