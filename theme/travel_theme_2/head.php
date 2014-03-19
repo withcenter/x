@@ -20,8 +20,12 @@
 	<div class='extra-menu-items'>
 		<div class='extra-top'>
 			<?php
+			$i = 0;
 			 foreach( x::menu_links('left' ) as $link ) {
-					echo "$link";
+				if ( $i == 0 ) $add_class = "class='first-item'";
+				else $add_class = null;
+				$i++;
+					echo "<span {$add_class}>{$link}</span>";
 				}
 			?>
 			<a href='<?=url_language_setting()?>'><?=lang("Change Language")?></a>
@@ -31,9 +35,13 @@
 		</div>
 		<div class='extra-bottom'>
 			<?php
+			$i = 0;
 			 foreach( x::menu_links('right' ) as $link ) {
-					echo "$link";
-				}
+				if ( $i == 0 ) $add_class = "class='first-item'";
+				else $add_class = null;
+				$i++;
+				echo "<span {$add_class}>{$link}</span>";
+			}
 			?>			
 			<div style='clear:both'></div>
 		</div>

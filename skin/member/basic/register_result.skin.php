@@ -12,8 +12,10 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
 		<a href='<?=g::url()?>'>
 			<?if( file_exists( path_logo() ) ) { ?>
 					<img src="<?=url_logo()?>" class='registration-logo'>
-			<?} else {?>
-				<img src="<?=x::url_theme()?>/img/banner.png" class='registration-logo'/>	
+			<?} else {
+				if ( meta('theme') != 'blog' )  {?>
+					<img src="<?=$member_skin_url?>/img/logo.png" class='registration-logo'/>	
+				<? }?>
 			<?}?>
 		</a>
 		<span class='logo-text'>
