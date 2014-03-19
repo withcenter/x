@@ -243,8 +243,14 @@ fieldset{
 	color: #797979;
 	font-size: 1em;
 	font-family: '맑은 고딕', AppleGothic;
+	position:relative;
 }
-
+#footer .mobile_view{
+	position:absolute;
+	right:10px;
+	top:10px;
+	color: #797979;
+}
 /*
  #footer{
 	margin-top:260px;
