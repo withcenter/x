@@ -46,7 +46,7 @@ $minfo = db::row("SELECT * FROM ".$g5['member_table']." WHERE mb_id='$mb_id'");
 ?>
 <form method='get'>
 	<div class='member-info'>
-		<input type='hidden' name='module' value='multi' />
+		<input type='hidden' name='module' value='<?=$module?>' />
 		<input type='hidden' name='action' value='config_member' />
 		<input type='hidden' name='option' value='mb_edit' />
 		<input type='hidden' name='mb_id' value='<?=$mb_id?>' />

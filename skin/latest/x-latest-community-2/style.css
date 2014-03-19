@@ -14,7 +14,7 @@
 .withcenter_latest .title {
 	border-bottom: 1px solid #d5d5d5;
 	padding-bottom: 8px;
-	margin: 0 0 11px 8px; 	
+	margin: 0 0 11px 8px; 		
 }
 .withcenter_latest .title .x-latest-withcenter-icon {
 	position: relative;
@@ -28,9 +28,11 @@
 }
 .withcenter_latest .title .top-title {
 	float: left;
-	white-space:nowrap;	
+	word-break:break-all;
 	width:80%;
 	overflow:hidden;
+	height:20px;
+	line-height:20px;
 }
 .withcenter_latest .title .more_btn {
 	float: right;
