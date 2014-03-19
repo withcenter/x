@@ -4,10 +4,14 @@
 	border:1px solid #bbbbbb;
 	overflow:hidden;
 	margin-bottom:10px;
+	position:relative;
 }
 
 .foot_banner img{
 	width:100%;
+	position:absolute;
+	left:0;
+	top:0;
 }
 
 /**FOOTER */
