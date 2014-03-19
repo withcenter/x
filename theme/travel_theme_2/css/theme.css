@@ -224,6 +224,7 @@
 .travel_theme2_header {
 	width:970px;
 	margin:auto;
+	margin-top: 10px;
 }
 
 
@@ -322,8 +323,8 @@
 	border-left:1px solid #000000;
 
 }
-.extra-menu-items .extra-bottom a:last-child {
-	background-color: red;
+.extra-menu-items .first-item  a{
+	border-left: 0;
 }
 
 /****setting.php*****/

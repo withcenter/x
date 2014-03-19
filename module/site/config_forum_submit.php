@@ -16,7 +16,7 @@
 					'subject'	=> db::addquotes($in['subject']),
 					'bo_admin' =>$member['mb_id'],
 					'group_id'	=> 'multisite',
-					'bo_use_dhtml_editor' => 1,
+					'bo_use_dhtml_editor' =>1,
 					'bo_use_list_view' => 1
 	);
 	
