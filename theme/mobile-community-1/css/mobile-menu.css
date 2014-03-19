@@ -178,7 +178,9 @@
 .top-below-500-px .logo{
 	width:43.5%;
 	float:left;
-	margin-top:10px;
+	margin-bottom:10px;
+	height:50px;	
+	overflow:hidden;	
 }
 
 .top-below-500-px .logo img{

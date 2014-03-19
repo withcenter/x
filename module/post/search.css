@@ -9,7 +9,8 @@
 }
 
 .search .search-form input[type='submit'] {
-	padding: 7px 20px;
+	width:64px;
+	padding: 7px;
 	display: inline-block;
 	background-color: #666666;
 	color: #ffffff;
