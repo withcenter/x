@@ -279,7 +279,6 @@ class gnuboard {
 				bo_upload_size = '1048576',
 				bo_reply_order = '1',
 				bo_use_search = '1', bo_order = '',
-				bo_show_menu = '1',
 				bo_write_min = '',
 				bo_write_max = '',
 				bo_comment_min = '',
