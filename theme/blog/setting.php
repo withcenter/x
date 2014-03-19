@@ -43,6 +43,8 @@ function setTopMenu( $name ) {
 	
 ?>
 
+
+
 <div class='config-wrapper'>
 	<div class='config-title'>
 		<span class='config-title-info'>프로필 사진 및 문구</span>
