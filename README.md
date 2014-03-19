@@ -13,15 +13,9 @@
 
 
 
+[한글 사용자 설명서](https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub)
 
-[한글 설명서](https://docs.google.com/document/d/1cqG9sghuNGyrSKsZBaV4dmretcA6tb_WfOD1jlyldLk/pub)
-
-[한글 사용 설명서](https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub)
-
-[한글 개발 문서](https://docs.google.com/document/d/1cqG9sghuNGyrSKsZBaV4dmretcA6tb_WfOD1jlyldLk/pub)
-
-
-[영문 개발 문서 : GNUBoard5 Extended Build Guide](https://docs.google.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/pub) 매뉴얼을 참고하십시오.
+[한글 개발자 설명서](https://docs.google.com/document/d/1cqG9sghuNGyrSKsZBaV4dmretcA6tb_WfOD1jlyldLk/pub)
 
 
 

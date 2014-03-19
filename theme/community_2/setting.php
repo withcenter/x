@@ -18,7 +18,7 @@
 				if( file_exists( path_logo() ) ) echo "<img src='".url_logo()."'>";
 				else {
 			?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 330px X 세로 50px]</div>
+					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/site/img/no-image.png'><br>[가로 330px X 세로 50px]</div>
 				<?}?>
 				<input type='file' name='<?=code_logo()?>'>
 				<input type='checkbox' name='<?=code_logo()?>_remove' value='y'><span class='title-small'>이미지 제거</span>
@@ -31,7 +31,7 @@
 			<?php
 			if( file_exists( x::path_file( "banner" ) ) ) echo "<img src='".x::url_file( "banner" )."'>";
 			else {?>
-				<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 760px X 세로 250px]</div>
+				<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/site/img/no-image.png'><br>[가로 760px X 세로 250px]</div>
 			<?}?>
 			<input type='file' name='banner'>
 			<input type='checkbox' name='banner_remove' value='y'><span class='title-small'>이미지 제거</span>
@@ -44,7 +44,7 @@
 			<?php
 				if( file_exists( x::path_file( "banner_bottom" ) ) ) echo "<img src='".x::url_file( "banner_bottom" )."'>";
 				else {?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/multisite/img/no-image.png'><br>[가로 760px X 세로 130px]</div>
+					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/site/img/no-image.png'><br>[가로 760px X 세로 130px]</div>
 				<?}?>
 				<input type='file' name='banner_bottom'>
 				<input type='checkbox' name='banner_bottom_remove' value='y'><span class='title-small'>이미지 제거</span>

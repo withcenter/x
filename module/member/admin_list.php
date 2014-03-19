@@ -17,7 +17,7 @@ else {
 	<div class='no_of_members'>검색 회원 수 <b><?=number_format($total_rows)?></b>명</div>
 
 	<table class='admin-list-table' cellpadding=0 cellspacing=0 width='100%'>
-		<tr class='header'>
+		<tr class='table-header'>
 			<td nowrap>번호</td>
 			<td width=50>도메인</td>
 			<td width=100>아이디</td>

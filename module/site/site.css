@@ -1,3 +1,43 @@
+/* config_first_page */
+.first-page-title {
+	border: 1px solid #666666;
+	color: #3f6885;
+	padding: 5px 20px;
+	background-color: #d5d5d5;
+	font-weight: bold;
+	font-size: 11pt;
+	margin-bottom: 30px;
+	border-radius: 3px;
+}
+
+.first-page-button {
+	font-weight: bold;
+	background-color: #666666;
+	color: #ffffff;
+	display: inline-block;
+	height: 24px;
+	line-height: 24px;
+	padding: 0 20px;
+	border-radius: 3px;
+	font-size: 9pt;
+	margin: 20px 0 0 20px;
+}
+.first-page-button:hover {
+	background-color: #6988c0;
+	text-decoration: none;
+}
+
+.first-page-message:hover {
+	text-decoration: none;
+}
+
+
+
+.first-page-message {
+	padding: 0 20px;
+	color: #444444;
+}
+
 .config-header {
 	list-style: none;
 	padding: 0;

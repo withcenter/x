@@ -17,11 +17,14 @@
 					  }
 					  else {
 						$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".x::meta('forum_no_'.$i)."'");
-						$top_menu = $row['bo_subject'];
+						$top_menu = $row['bo_subject'];						
 					  }
+				if( $top_menu ){?>
+					<li><div class='inner'><a href='<?=g::url()?>/bbs/board.php?bo_table=<?=x::meta('forum_no_'.$i)?>'><?=$top_menu?></a></div></li>
+				<?}
+				
+				}
 			?>
-				<li><div class='inner'><a href='<?=g::url()?>/bbs/board.php?bo_table=<?=x::meta('forum_no_'.$i)?>'><?=$top_menu?></a></div></li>
-			<?}?>
 		</ul>
 		<div style='clear:left;'></div>
 	</div></div>
@@ -35,9 +38,11 @@
 						$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".x::meta('forum_no_'.$i)."'");
 						$top_menu = $row['bo_subject'];
 					  }
-			?>
+			if( $top_menu ){?>
 				<li  <?if($i==4) echo "class='first-item'"?>><div class='inner'><a href='<?=g::url()?>/bbs/board.php?bo_table=<?=x::meta('forum_no_'.$i)?>'><?=$top_menu?></a></div></li>
-			<?}?>
+			<?}
+			
+			}?>
 			<li><a href='<?=g::url()?>?device=mobile'>모바일</a></li>
 		</ul>
 		<div style='clear:left;'></div>
