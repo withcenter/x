@@ -1,5 +1,6 @@
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
+include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 ?>
 <? if ( ! $GLOBALS[$latest_skin_url] ++ ) { ?>
 <?add_stylesheet('<link rel="stylesheet" href='.$latest_skin_url.'/style.css">', 0);?>

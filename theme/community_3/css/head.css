@@ -7,7 +7,7 @@
 	width:970px;
 	height:30px;
 	margin:auto;
-	color:#4d4d4d;
+	color:#4d4d4d;	
 }
 
 .top .inner a{
@@ -52,7 +52,8 @@
 /* bug fix: should be margined here intead of padding image for 7 px */
 	margin-top: 4px;
 	height:60px;
-	overflow:hidden;	
+	width:400px;
+	overflow:hidden;
 }
 
 
@@ -60,21 +61,14 @@
 	height:100%;	
 }
 
-.header table{
-	width:970px;
+.header table{	
 	margin:auto;
-	clear:both;
+	clear:both;	
+	width:970px;
 }
-
-.header #search_table_holder{
-	text-align:right;
-	width:100%;
-	margin-top:15px;	
-}
-
 
 form[name='comm3_search_form'] {
-	float:right;
+	float:right;	
 }
 #comm3_search_text, #comm3_search_submit{
 	margin-top: 1em;
@@ -88,12 +82,12 @@ form[name='comm3_search_form'] {
 }
 
 #comm3_search_text {
-	box-shadow: -1px 2px 3px #d3d3d3 inset;
-	width: 20em;
+	box-shadow: -1px 2px 3px #d3d3d3 inset;	
 	width: 20em;	
 	border: 2px solid black;
-	height:41px;
+	height:41px;	
 }
+
 #comm3_search_submit {
 	background-color: black;
 	color:white;	

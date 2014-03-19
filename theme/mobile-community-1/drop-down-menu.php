@@ -7,7 +7,7 @@ foreach ( $menus as $menu ) {
 	else $no_margin = null;
 ?>
 	<li <?=$no_margin?> page='<?=x::meta('menu'.$i.'bo_table')?>'>		
-		<a href='<?=url_forum_list($menu['bo_table'])?>'>
+		<a href='<?=url_forum_list($menu['url'])?>'>
 			<?=$menu['name']?>
 			<div class='border_left'></div>
 		</a>
