@@ -57,7 +57,7 @@
 		<script>
 			$(function(){
 				$("[name='select_bo_table']").change(function(){
-					$(this).parent().find(".bo_table").val($(this).val());
+					$(this).parent().parent().find(".bo_table").val($(this).val());					
 				});
 			});
 		</script>
