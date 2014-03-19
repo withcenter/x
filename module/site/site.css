@@ -1631,3 +1631,7 @@ form.config_menu select, form.config_menu input {
 	height: 2em;
 }
 
+/*config menu*/
+.config-wrapper select[name='select_bo_table']{
+	width:100px;
+}

@@ -260,7 +260,7 @@ function setTopMenu( $name ) {
 			</td>
 
 		<td>
-			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>오른쪽 사이드 배너</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/site/img/img-icon.png'>오른쪽 사이드 배너</div>
 			<div class='image-upload'>
 			<?						
 
@@ -279,7 +279,7 @@ function setTopMenu( $name ) {
 		</td>
 
 		<td>
-			<div class='image-title'><img src='<?=x::url()?>/module/multisite/img/img-icon.png'>하단 배너</div>
+			<div class='image-title'><img src='<?=x::url()?>/module/site/img/img-icon.png'>하단 배너</div>
 			<div class='image-upload'>
 			<?						
 

@@ -13,7 +13,7 @@
 		<?=x::menu_link( 'left' )?>
 		</div>
 		<div class='top-menu-right'>
-		<?=x::menu_link( 'left' )?>
+		<?=x::menu_link( 'right' )?>
 			<a href='<?=g::url()?>?device=mobile' class='top-menu-mobile'>모바일</a>
 		</div>
 		<div style='clear: both'></div>
