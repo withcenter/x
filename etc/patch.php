@@ -1,7 +1,7 @@
 <?php
 /**
  *  
- *  
+ *  https://docs.google.com/a/withcenter.com/document/d/1cqG9sghuNGyrSKsZBaV4dmretcA6tb_WfOD1jlyldLk/edit#heading=h.22001fpn27cu
  */
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -10,12 +10,19 @@ if ( $argv[1] == 'install' ) {
 	exit;
 }
 
-
+/** G5 must be installed first before this.
+ *
+ *
+ */
+$path_dbconfig = "../data/dbconfig.php";
+if ( ! file_exists( $path_dbconfig ) ) {
+	echo "ERROR: To patch 'X', you must install GNUBoard5 first.\n";
+	exit;
+}
 define('_INDEX_', true);
 include_once('../common.php');
 
 $dir_root = G5_PATH;
-
 
 
 include_once ($dir_root.'/x/etc/class.php');
