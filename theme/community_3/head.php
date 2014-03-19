@@ -24,7 +24,6 @@
 		float: <?=$content?>;
 	}
 </style>
-	
 <div class='layout'>
 	<div class='top'><?include 'top.php'?></div>
 	<div class='header'>
@@ -55,15 +54,15 @@
 				<label for="sch_stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
 				*/?>
 				<input type="text" name="key" id="comm3_search_text" maxlength="20" placeholder='검색어를 입력해 주세요.' autocomplete='off'><input type="submit" value='검색' id="comm3_search_submit">
-				</form>
-				<!--[if IE lte 8]>
-					<style>						
-						#comm3_search_text {							
-							line-height:41px;	
-						}
-					</style>
-				<![endif]-->
+				</form>				
 			</fieldset>
+			<!--[if lte IE 8]>
+				<style>						
+					#comm3_search_text {							
+						line-height:41px;	
+					}
+				</style>
+			<![endif]-->	
 		</td>
 		</tr>
 	</table>
@@ -72,7 +71,6 @@
 	<div class='main-menu'>	
 			<?include x::theme('main-menu')?>
 	</div>
-
 	<div class='body-wrapper'>
 		<div class='main-content'>
 			<div class='sidebar'>	
