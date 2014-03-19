@@ -45,17 +45,17 @@
 	border-bottom: 1px solid #d5d5d5;
 }
 
-.admin_list .admin-list-table .header {
+.admin_list .admin-list-table .table-header {
 	background-color: #727272;
 	color: #ffffff;
 	font-weight: bold;
 }
-.admin_list .admin-list-table .header td {
+.admin_list .admin-list-table .table-header td {
 	border-right: 1px solid #ffffff;
 	text-align: center;
 }
 
-.admin_list .admin-list-table .header td:last-child {
+.admin_list .admin-list-table .table-header td:last-child {
 	border-right: 0;
 }
 
