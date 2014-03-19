@@ -24,15 +24,43 @@
 						<img src="<?=x::theme_url('img/top_icon1.png')?>"/>
 						<p>로그인</p>
 					</div>
-					<div class='statistics-button'>
+					<?
+						if ( login() ) $register_link = g::url()."/bbs/member_confirm.php?url=register_form.php";
+						else $register_link = g::url()."/bbs/register.php";
+					?>
+					<div class='register-edit-button'>
+						<a href='<?=$register_link?>'><img src="<?=x::theme_url('img/top_icon2.png')?>"/></a>
+						<a href='<?=$register_link?>'><p>회원가입</p></a>
+					</div>
+					<!--<div class='statistics-button'>
 						<img src="<?=x::theme_url('img/top_icon2.png')?>"/>
 						<p>회원가입</p>
-					</div>
+					</div>-->
 					<div class='search-button'>
 						<img src="<?=x::theme_url('img/top_icon3.png')?>"/>
 						<p>검색</p>
 					</div>
-					<div style="clear: both;"></div>
+					<div class='login-container'>
+						<div class='triangle'></div>
+						<?=outlogin('x-outlogin-gallery-2')?>
+					</div>
+					<div class='statistics-container'>
+						<div class='triangle'></div>
+						<?=visit('x-visit-gallery-2')?>
+					</div>
+					<div class='search-container'>
+						<div class='triangle'></div>
+						<fieldset id="search_field">
+						<legend>사이트 내 전체검색</legend>
+							<form name="gallery_2_search_forum" method="get" action="<?=x::url()?>" onsubmit="return fsearchbox_submit(this);">
+								<input type="hidden" name="module" value="post">
+								<input type="hidden" name="action" value="search">
+								<input type='hidden' name='search_subject' value=1 />
+								<input type='hidden' name='search_content' value=1 />
+								<input type="text" name="key" id="gallery_2_search_forum_text" maxlength="20" placeholder='검색어를 입력해 주세요.' autocomplete='off'>
+							</form>
+						</fieldset>
+					</div>
 				</div>
 			</td>
 			<td class='menu-panel-td' align='left'>

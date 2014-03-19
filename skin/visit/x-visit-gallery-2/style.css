@@ -1,0 +1,38 @@
+/* STATISTICS.PHP */
+.stats-container {
+	position: relative;
+	padding-bottom: 30px;
+	background: #58839c;
+	color: #ffffff;
+	padding: 10px 20px;
+}
+
+.stats-title {
+	padding: 10px 0;
+	border-bottom: solid 1px #1a1a1a;
+	font-weight: bold;
+	color: #ffffff
+	font-size: 13px;
+}
+
+.stats-title img {
+	
+}
+
+.stats-content {
+	padding: 0 10px 5px 10px;
+	border-bottom: solid 1px #1a1a1a;	
+	margin-bottom: 10px;
+}
+
+.stats-content .per-stats {
+	padding: 8px 0 8px 0;
+}
+
+.stats-content .per-stats .stats-results {
+	margin-left: 50px;
+}
+
+.view-more-stats {
+
+}

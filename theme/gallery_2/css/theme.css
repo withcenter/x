@@ -31,6 +31,11 @@ body {
 .login-panel-td {
 	width: 1500px;
 	background: #334d5c;
+	padding: 8px 0 7px 0;
+}
+
+.login-panel-td a {
+	text-decoration: none;
 }
 
 .top-menu-td {
@@ -71,11 +76,11 @@ body {
 
 
 .login-panel {
-	padding: 8px;
+	padding: 0 8px;
 	width: 234px;
-	float: right;
 	color: #ffffff;
 	background: #334d5c;
+	position: relative;
 }
 
 .login-panel a {
@@ -85,7 +90,14 @@ body {
 .login-panel > div {
 	float: left;
 	text-align: center;
-	width: 33%;
+	border-radius: 3px;
+	margin-left: 10px;
+}
+
+.login-button, .statistics-button, .search-button, .register-edit-button {
+	margin: 0;
+	width: 65px;
+	padding: 8px 0;
 }
 
 .login-panel > div img {
@@ -124,6 +136,10 @@ body {
 	border-bottom: solid 1px #ffffff;
 }
 
+.active-popup-menu {
+	background: #58839c;
+}
+
 /* CONTENT */
 .layout .content {
 	max-width: 970px;
@@ -153,4 +169,87 @@ body {
 
 .layout .footer .footer-logo img {
 	margin-bottom: 0.625em;
+}
+
+/** TOP ICONS */
+.login-container {
+	position: absolute;
+	top: 55px;
+	width: 300px;
+	display: none;
+}
+
+.triangle {
+	width: 0; 
+	height: 0; 
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-bottom: 9px solid #58839c;
+}
+
+.login-container .triangle {
+	margin-left: 25px;
+}
+
+.statistics-container {
+	position: absolute;
+	top: 54px;
+	left: 80px;
+	display: none;
+}
+
+.statistics-container .triangle {
+	margin-left: 25px;
+}
+
+.search-container {
+	position: absolute;
+	top: 54px;
+	left: 157px;
+	display: none;
+	width: 170px;
+
+}
+
+#gallery_2_search_forum_text {
+	border: solid 3px #58839c;
+	padding: 5px;
+	height: 24px;
+	width: 274px;
+	border-radius: 3px;
+}
+
+.search-container .triangle {
+	margin-left: 25px;
+}
+
+/* BANNER */
+.banner {
+	margin-bottom: 10px;
+}
+
+.banner .banner-image {
+	
+}
+
+/*POSTS CONTAINER*/
+
+.posts-container > div {
+	float: left;
+	width: 485px;
+	margin-bottom: 10px;
+}
+
+.posts-container .right-posts-container > div {
+	width: 233px;
+	float: left;
+}
+.posts-container .right-panel-posts {
+	margin-left: 6px;
+}
+
+.posts-container .right-gallery-post {
+	height: 368px;
+	border: solid 1px #333333;
+	margin-left: 10px;
 }
