@@ -285,7 +285,6 @@
 
 .extra-menu-items .extra-top a{
 	color:#808080;
-	border-right:1px solid #808080;
 	text-decoration:none;
 	display:block;
 	width:85px;
@@ -306,7 +305,6 @@
 }
 .extra-menu-items .extra-bottom a{
 	color:#000000;
-	border-right:1px solid #000000;
 	text-decoration:none;
 	display:block;
 	width:85px;
@@ -315,10 +313,8 @@
 	text-align:center;
 	float:left;	
 }
-
-
-.extra-menu-items .extra-bottom a.no-border{	
-	border-right:none;
+.extra-menu-items .extra-bottom a:last-child {
+	background-color: red;
 }
 
 /****setting.php*****/

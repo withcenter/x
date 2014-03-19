@@ -22,47 +22,21 @@
 
 	<div class='extra-menu-items'>
 		<div class='extra-top'>
-			<?for( $i = 1; $i <= 3; $i ++){			
-				if( $i == 3 ) {?>
-					<a class='no-border' href = '<?=g::url()?>?device=mobile'>모바일</a>
-				<?}
-				else {
-				if ( x::meta('forum_no_'.$i ) ) {				
-					  if ( x::meta('forum_no_'.$i.'_name') ) {
-						$top_menu = x::meta('forum_no_'.$i.'_name');				
-					  }
-					  else {
-						$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".meta('forum_no_'.$i)."'");
-						$top_menu = $row['bo_subject'];
-					  }					  
-					  ?>
-						<a href = '<?=G5_BBS_URL?>/board.php?bo_table=<?=meta('forum_no_'.$i)?>'>
-							<?=cut_str($top_menu,10,'...')?>
-						</a>													
-				<?}?>
-			<?}
-			
-			}?>
+			<?php
+			 foreach( x::menu_links('left' ) as $link ) {
+					echo "$link";
+				}
+			?>
+			<a class='no-border' href = '<?=g::url()?>?device=mobile'>모바일</a>
+				
 			<div style='clear:both'></div>
 		</div>
 		<div class='extra-bottom'>
-			<?for( $i = 3; $i <= 6; $i ++){
-				if( $i == 6 ) $no_border = 'no-border';
-				else $no_border = null;				
-				if ( x::meta('forum_no_'.$i ) ) {				
-					  if ( x::meta('forum_no_'.$i.'_name') ) {
-						$top_menu = x::meta('forum_no_'.$i.'_name');				
-					  }
-					  else {
-						$row = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".x::meta('forum_no_'.$i)."'");
-						$top_menu = $row['bo_subject'];
-					  }
-					  ?>
-						<a class='<?=$no_border?> 'href = '<?=G5_BBS_URL?>/board.php?bo_table=<?=x::meta('forum_no_'.$i)?>'>
-							<?=cut_str($top_menu,10,'...')?>
-						</a>													
-				<?}?>			
-			<?}?>
+			<?php
+			 foreach( x::menu_links('right' ) as $link ) {
+					echo "$link";
+				}
+			?>
 			<div style='clear:both'></div>
 		</div>
 	</div>			
