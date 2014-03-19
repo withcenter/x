@@ -1,0 +1,156 @@
+body {
+	width: 100%;
+}
+
+/*HEADER*/
+.header {
+	width: 100%;
+	margin-bottom: 0.625em;
+}
+
+.header .logo-menu {
+	max-width: 970px;
+	margin: 0 auto;
+}
+
+
+.header .logo-menu .header-logo {
+	width: 250px;
+	background: #f3f3f3;
+}
+
+.top-menu {
+	width: 720px;
+}
+
+.header-logo-td {
+	width: 1120px;
+	background: #f3f3f3;
+}
+
+.login-panel-td {
+	width: 1500px;
+	background: #334d5c;
+}
+
+.top-menu-td {
+	width: 1880px;
+	background: #4e8077;
+}
+.menu-panel-td {
+	background: #45b29d;
+}
+
+.top-menu ul {
+	padding: 45px 0 0 0;
+	list-style: none;
+	float: right;
+}
+
+.top-menu ul li {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.top-menu ul li.first-menu {
+	margin: 0;
+}
+
+.top-menu ul li a {
+	padding: 30px 10px 10px 10px;
+	color: #ffffff;
+	font-size: 15px;
+	text-decoration: none;
+}
+
+.top-menu ul li a:hover {
+	background: #3e665f;
+	border-radius: 3px;
+}
+
+
+
+.login-panel {
+	padding: 8px;
+	width: 234px;
+	float: right;
+	color: #ffffff;
+	background: #334d5c;
+}
+
+.login-panel a {
+	color: #ffffff;
+}
+
+.login-panel > div {
+	float: left;
+	text-align: center;
+	width: 33%;
+}
+
+.login-panel > div img {
+	margin-bottom: 5px;
+}
+
+.menu-panel {
+	background: #45b29d;
+	width: 708px;	
+}
+
+.menu-panel ul {
+
+	margin: 0;
+	float: right;
+}
+
+.menu-panel ul li {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+.menu-panel ul li.first-menu {
+	margin-left: 0;
+}
+
+.menu-panel ul li a {
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 11px;
+	text-transform: UPPERCASE;
+	padding: 2px 0;
+}
+
+.menu-panel ul li a:hover {
+	border-bottom: solid 1px #ffffff;
+}
+
+/* CONTENT */
+.layout .content {
+	max-width: 970px;
+	margin: 0 auto;
+}
+
+/*FOOTER*/
+.layout .footer {
+	width: 970px;
+	margin: 0 auto;
+	margin-top: 0.625em;
+}
+
+.layout .footer .footer-info {
+	background: #334d5c;
+	padding: 35px 35px 50px 35px;
+	color: #ffffff;
+}
+
+.layout .footer .footer-logo {
+	width: 245px;
+	height: 171px;
+	background: #f3f3f3;
+	text-align: center;
+	color: #334d5c;
+}
+
+.layout .footer .footer-logo img {
+	margin-bottom: 0.625em;
+}
