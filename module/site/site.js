@@ -32,11 +32,11 @@ var document_name;
 	
 		$(this).empty();
 		if( show_hide == 0 ) {
-			$(this).append("[hide]");
+			$(this).append("[설명 숨기기]");
 			show_hide = 1;
 		}
 		else {
-			$(this).append("[show]");
+			$(this).append("[설명 보이기]");
 			show_hide = 0;
 		}
 		
