@@ -14,6 +14,15 @@
 	$data = patch_string( $data, $src, $dst );
 	
 	
+	$src = 'ob_start();';
+	$dst = '/* ob_start(); moved before loading extend sripts */';
+	$data = patch_string( $data, $src, $dst );
+	
+	$src = "include_once(G5_BBS_PATH.'/visit_insert.inc.php');";
+	$dst = "$src
+ob_start();";
+	$data = patch_string( $data, $src, $dst );
+	
 	file::write( $path,  $data );
 	
 	
