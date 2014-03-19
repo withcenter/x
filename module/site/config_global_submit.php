@@ -18,6 +18,9 @@ meta_set( 'footer_text' , $in['footer_text'] );
 
 meta_set( 'theme_sidebar' , $in['theme_sidebar'] );
 
+meta_set( 'member_skin' , $in['member_skin'] );
+
+
 for( $i=1; $i<=10; $i++ ) {
 	$m = 'top';
 		x::meta( "menu$m{$i}bo_table", $in[ "menu$m{$i}bo_table" ] );

@@ -27,8 +27,7 @@
 			
 			<div class='config-container'>
 
-			<div class='hidden-google-doc google_doc_global'>	
-			</div>
+			<div class='hidden-google-doc google_doc_global'></div>
 			
 			
 				<table cellpadding='0' cellspacing='0' width='100%'>
@@ -64,6 +63,9 @@
 		</div>
 		
 		<?php
+		
+			include 'config_global_member_skin.php';
+		
 			$id = 'top'; include 'config_global_menu.php';
 			$id = 'left'; include 'config_global_menu.php';
 			$id = 'right'; include 'config_global_menu.php';

@@ -275,7 +275,16 @@ class x {
 				if ( empty($theme) ) $theme = x::meta_get( '.', 'theme' );
 			}
 		}
+		
+		$member_skin = self::meta_get( 'member_skin' );
+		if ( empty( $member_skin ) ) $member_skin = 'basic';
+
+		
+		
 		self::$config['site']['theme'] = $theme;
+		self::$config['site']['member_skin'] = $member_skin;
+		
+		
 		// @deprecated. no more site type is used.
 		self::$config['site']['type'] = null;
 	}

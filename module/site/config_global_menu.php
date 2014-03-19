@@ -1,3 +1,9 @@
+<?php
+
+	if ( empty($theme_config["menu_$id"]["max"]) ) return;
+	
+?>
+
 <? if ( empty( $_config_global_menu ) ) { $_config_global_menu = true; ?>
 <script>
 $(function(){

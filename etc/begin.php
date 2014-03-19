@@ -104,8 +104,12 @@ $member_skin_path = str_replace("skin/", 'x/skin/', $member_skin_path);
 
 $member_skin_url = str_replace("mobile/", '', $member_skin_url);
 $member_skin_url = str_replace("skin/", 'x/skin/', $member_skin_url);
- 
- 
+
+
+
+$member_skin = x::$config['site']['member_skin'];
+$member_skin_path = substr_replace( $member_skin_path, "/member/$member_skin", strpos($member_skin_path, '/member/') );
+$member_skin_url = substr_replace( $member_skin_url, "/member/$member_skin", strpos($member_skin_url, '/member/') );
 
 
 
