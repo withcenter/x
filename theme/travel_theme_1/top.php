@@ -27,7 +27,8 @@
 					echo "<li><div class='inner'>$link</div></li>";
 				 }
 			?>
-			<li><a href='<?=g::url()?>?device=mobile'>모바일</a></li>
+			<li><a href='<?=url_language_setting()?>'><?=lang("Change Language")?></a></li>
+			<li><a href='<?=g::url()?>?device=mobile'><?=lang("Mobile View")?></a></li>
 		</ul>
 		<div style='clear:left;'></div>
 	</div></div>

@@ -17,12 +17,13 @@
 	background: #fafafa;
 	color: #444444;
 	padding: 30px 0;
+	min-width: 970px;
 }
 
-.footer {
-	width: 970px;
+.footer {	
 	margin: auto;
-	position: relative;
+	width: 970px;
+	position: relative;	
 }
 
 .footer .footer-logo {

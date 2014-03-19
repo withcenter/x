@@ -16,12 +16,13 @@
 	border-top: 1px solid #d1d1d1;
 	background: #fafafa;
 	color: #444444;
-	padding: 30px 0;
+	padding: 30px 0;	
+	min-width: 970px;
 }
 
-.footer {
-	width: 970px;
+.footer {	
 	margin: auto;
+	width: 970px;
 	position: relative;
 }
 

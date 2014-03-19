@@ -5,9 +5,6 @@
 <script src='<?=x::url_theme()?>/js/floating-bar.js'></script>
 
 <!-- 상단 시작 { -->
-<?php
-	include 'top.php';
-?>
 <div class="travel_theme2_header">
     <h1 id="hd_h1"><?php echo $g5['title'] ?></h1>
 
@@ -27,7 +24,8 @@
 					echo "$link";
 				}
 			?>
-			<a class='no-border' href = '<?=g::url()?>?device=mobile'>모바일</a>
+			<a href='<?=url_language_setting()?>'><?=lang("Change Language")?></a>
+			<a class='no-border' href = '<?=g::url()?>?device=mobile'><?=lang("Mobile View")?></a>
 				
 			<div style='clear:both'></div>
 		</div>
@@ -36,7 +34,7 @@
 			 foreach( x::menu_links('right' ) as $link ) {
 					echo "$link";
 				}
-			?>
+			?>			
 			<div style='clear:both'></div>
 		</div>
 	</div>			
