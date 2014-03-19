@@ -4,7 +4,9 @@
 	color: #323232;
 	height: 20px;
 	line-height: 20px;
-	margin: 5px 0 0 0;
+	margin: 0 0 20px 0;
+	background-color: #f6f6f6;
+	padding: 3px 0;
 }
 .travel-theme-top-wrapper > .inner {
 	width: 970px;

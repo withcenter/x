@@ -37,7 +37,7 @@ function setTopMenu( $name ) {
 
   <div class='config-wrapper'>
 	<div class='config-title'>
-		<span class='config-title-info'>추가 사이트 정보</span>
+		<span class='config-title-info'>전화번호</span>
 		<span class='config-title-notice'>
 			<span class='user-google-guide-button' page = 'google_doc_community_2_2' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[설명 보이기]</span>
 			<img src='<?=module('img/setting_2.png')?>'>
