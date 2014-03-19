@@ -30,7 +30,13 @@
 		<input type="text" name="key" id="sch_stx" maxlength="20" placeholder='검색어를 입력해 주세요.' />
 		<input type="image" id="sch_submit" src='<?=x::url_theme()?>/img/search-icon.png' />
       </form>
-
+		<!--[if lte IE 8]>
+				<style>						
+					.search-bar input[type='text'] {							
+						line-height:36px;	
+					}
+				</style>
+		<![endif]-->
 		 
 	</div>
 	<div style='clear:both;'></div>

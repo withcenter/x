@@ -16,8 +16,7 @@
 .search-bar input[type='text'] {
 	border: 2px solid #0e5565;
 	border-right: 0;
-	height: 36px;
-	line-height: 36px;
+	height: 36px;	
 	position: relative;
 	left: 4px;
 	width: 319px;
