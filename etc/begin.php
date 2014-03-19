@@ -78,6 +78,7 @@ if ( strpos($_SERVER['PHP_SELF'], 'register_result.php') !== false ) {
  *  All the codes between G5/skin/board folder and x/skin/board folder are compatible.
  *  @see etc/end.php for re-setting the folders of x/skin/board folder.
  * https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.hthvy4o49hmo
+ * https://docs.google.com/a/withcenter.com/document/d/1cqG9sghuNGyrSKsZBaV4dmretcA6tb_WfOD1jlyldLk/edit?pli=1#heading=h.wsvgqvozxpkx ( Korean )
  */
 
 if ( G5_IS_MOBILE ) $mobile = "mobile/";
@@ -89,6 +90,23 @@ if ( strpos( $board_skin_path, "board/basic" ) ) {
 	$board_skin_path = x::dir() . "/skin/board/multi";
 	$board_skin_url = x::url() . "/skin/board/multi";
 }
+
+
+
+/** @short RESET MEMBER SKIN for PC and Mobile
+ *  -----------------------------------------------
+ *  
+ * https://docs.google.com/a/withcenter.com/document/d/1cqG9sghuNGyrSKsZBaV4dmretcA6tb_WfOD1jlyldLk/edit?pli=1#heading=h.wsvgqvozxpkx
+ */
+
+$member_skin_path = str_replace("mobile/", '', $member_skin_path);
+$member_skin_path = str_replace("skin/", 'x/skin/', $member_skin_path);
+
+$member_skin_url = str_replace("mobile/", '', $member_skin_url);
+$member_skin_url = str_replace("skin/", 'x/skin/', $member_skin_url);
+ 
+ 
+
 
 
 
@@ -292,7 +310,7 @@ function hook_latest_before_return()
  *  @warning This code must be stated at the bottom of begin.php or very first place of head.php to affect the hook.
  *  
  */
-if ( login_page() || member_confirm_page() ) {
+if ( login_page() || member_confirm_page() || password_page() ) {
 		include_once G5_PATH . '/_head.php';
 		x::hook_register('end', 'hook_show_tail');
 		function hook_show_tail()

@@ -248,6 +248,10 @@ function member_confirm_page() {
 	return strpos($_SERVER['PHP_SELF'], 'member_confirm.php') !== false;
 }
 
+function password_page() {
+	return strpos($_SERVER['PHP_SELF'], 'password.php') !== false;
+}
+
 
 
 /**

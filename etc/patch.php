@@ -38,6 +38,7 @@ if ( $argv[1] == 'language' ) {
  */
 
 
+	include x::dir() . "/etc/patch/common.php";
 	include x::dir() . "/etc/patch/x.php";
 	include x::dir() . "/etc/patch/index.php";
 	include x::dir() . "/etc/patch/database.php";
