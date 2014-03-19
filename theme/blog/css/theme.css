@@ -442,3 +442,7 @@ section#ol_before h2, section#ol_after h2, section#ol_after #ol_after_private{
 .registration-logo {
 	max-width: 225px;
 }
+
+.stats {
+	margin-top: 0.5em;
+}

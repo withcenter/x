@@ -65,6 +65,11 @@ if( empty( $menu_1 ) ) $menu_1 = bo_table(1);
 	</div>
 <? }?>
 
+<div class='stats'>
+	<?=visit('x-visit-blog')?>
+</div>
+
+
 <div class='search'>
 	<fieldset>
 		<form name="fsearchbox" method="get" action="<?=x::url()?>">
@@ -78,13 +83,4 @@ if( empty( $menu_1 ) ) $menu_1 = bo_table(1);
 	</fieldset>
 </div>
 
-<!-- Temporarily hide this one until this one has real function
-<div class='navigator'>
-	<table width='100%'>
-		<tr>
-			<td><a href='#'><span class='prevnav'><img src='<?=x::url_theme()?>/img/previcon.png'>PREV</span></a></td>
-			<td align='right'><a href='#'><span class='nextnav'>NEXT<img src='<?=x::url_theme()?>/img/nexticon.png'></span></a></td>
-		</tr>
-	</table>
-</div>
--->
+
