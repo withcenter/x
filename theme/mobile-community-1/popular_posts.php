@@ -1,5 +1,5 @@
 <div class='mobile-title-bar'>
-	<img src='<?=x::url_theme()?>/img/popular-icon.png'/>인기글
+	<img style='position: relative; top: -2px;' src='<?=x::url_theme()?>/img/popular-icon.png'/>인기글
 </div>
 <?
 $forum_exists = 0;
