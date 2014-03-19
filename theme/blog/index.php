@@ -40,6 +40,8 @@
 		}?>
 		<td>
 			<?php
+			include_once 'latest_posts.php';
+			/*
 				$forum_exist = 0;
 				for ( $i = 2; $i <= 10; $i++ ) {
 					if ( x::meta('forum_no_'.$i) ) {
@@ -54,7 +56,7 @@
 				if ( !$forum_exist ) {
 					echo latest( "x-latest-blog" , bo_table(1) , 3 , 25 );
 				}
-			?>
+			*/?>
 		</td>
 		
 		<? if (x::meta('theme_sidebar') !='right' ) {

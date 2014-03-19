@@ -72,7 +72,6 @@ add_stylesheet("<link rel='stylesheet' type='text/css' href='".x::url()."/module
 			
 			x::meta_set( $domain, "menu1bo_table", x::board_id ( $domain ).'_1' );
 			x::meta_set( $domain, 'forum_no_1', x::board_id ( $domain ).'_1' );
-			if ( $site_type == 'blog' ) x::meta_set( $domain, 'forum_no_2', x::board_id ( $domain ).'_1' );
 			
 			// 모바일 테마 Default로 mobile-community-1를 선택 되도록 한다.
 			x::meta( $domain, 'mobile_theme', 'mobile-community-1');

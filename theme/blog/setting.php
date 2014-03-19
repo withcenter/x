@@ -3,7 +3,6 @@ function setTopMenu( $name ) {
 	global $cfgs;
 	
 	ob_start();
-	if ( x::site() ) {
 		$cfgs = x::forums();
 		if ( ! empty( $cfgs ) ) {
 	?>
@@ -24,13 +23,24 @@ function setTopMenu( $name ) {
 		});
 	});
 	</script>
-	<?
-		}
-	}?>
+	<?}?>
 	<input type='text' name='<?=$name?>_bo_table' value="" placeholder=" 게시판 아이디 직접 입력" style='height: 23px; width: 150px; line-height: 23px; padding: 0 10px;' />
-<?
-	return $content = ob_get_clean();
-}
+<?return $content = ob_get_clean();?>
+<? }?>
+<?php
+	ob_start();
+	echo "<select name='main_no_of_post'>
+			<option value=''>선택</option>
+			<option value=''></option>";
+	for( $i=1; $i<= 20; $i++ ) {
+		if ( meta('main_no_of_post') == $i ) $selected = "selected";
+		else $selected = null;
+		
+		echo "<option value='$i' $selected>$i</option>";
+	}
+	echo "</select";
+	$sel_no_of_post = ob_get_clean();
+	
 ?>
 
 <div class='config-wrapper'>
@@ -69,7 +79,7 @@ function setTopMenu( $name ) {
 </div>
 <div class='config-wrapper'>
 	<div class='config-title'>
-		<span class='config-title-info'>첫 페이지 본문 게시판</span>
+		<span class='config-title-info'>사이트 메인 게시글 설정</span>
 		<span class='config-title-notice'>
 			<span class='user-google-guide-button' page = 'google_doc_blog_1_2' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[설명 보이기]</span>
 			<img src='<?=module('img/setting_2.png')?>'>
@@ -78,10 +88,8 @@ function setTopMenu( $name ) {
 	<div class='config-container'>
 	<div class='hidden-google-doc google_doc_blog_1_2'>	
 	</div>
-		<div>메인 게시판 <?=setTopMenu('forum_no_1')?></div>
-		<? for ( $i=2; $i <= 10; $i++ ) {?>
-			<div>게시판<?=$i?> <?=setTopMenu('forum_no_'.$i)?></div>
-		<?}?>
+		<div>메인 배너 게시판 <?=setTopMenu('forum_no_1')?></div>
+		<div>최신글 갯 수 <?=$sel_no_of_post?></div>
 	</div>
 	<input type='submit' value='업데이트' />
 </div>
