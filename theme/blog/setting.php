@@ -37,7 +37,7 @@ function setTopMenu( $name ) {
 	<div class='config-title'>
 		<span class='config-title-info'>프로필 사진 및 문구</span>
 		<span class='config-title-notice'>
-			<span class='user-google-guide-button' page = 'google_doc_blog_1_1' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
+			<span class='user-google-guide-button' page = 'google_doc_blog_1_1' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[설명 보이기]</span>
 			<img src='<?=module('img/setting_2.png')?>'>
 		</span>
 		</div>
@@ -71,7 +71,7 @@ function setTopMenu( $name ) {
 	<div class='config-title'>
 		<span class='config-title-info'>첫 페이지 본문 게시판</span>
 		<span class='config-title-notice'>
-			<span class='user-google-guide-button' page = 'google_doc_blog_1_2' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
+			<span class='user-google-guide-button' page = 'google_doc_blog_1_2' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[설명 보이기]</span>
 			<img src='<?=module('img/setting_2.png')?>'>
 		</span>
 	</div>
@@ -90,7 +90,7 @@ function setTopMenu( $name ) {
 	<div class='config-title'>
 		<span class='config-title-info'>사이드 배너 이미지</span>
 		<span class='config-title-notice'>
-			<span class='user-google-guide-button' page = 'google_doc_blog_1_3' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
+			<span class='user-google-guide-button' page = 'google_doc_blog_1_3' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[설명 보이기]</span>
 			<img src='<?=module('img/setting_2.png')?>'>
 		</span>
 	</div>

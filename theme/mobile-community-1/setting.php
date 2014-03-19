@@ -49,7 +49,7 @@
 	<div class='config-title'>
 		<span class='config-title-info'>추가 설정</span>
 		<span class='config-title-notice'>
-			<span class='user-google-guide-button' page = 'google_doc_mobile_1_1' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[보이기]</span>
+			<span class='user-google-guide-button' page = 'google_doc_mobile_1_1' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[설명 보이기]</span>
 			<img src='<?=module('img/setting_2.png')?>'>
 		</span>
 	</div>
@@ -70,7 +70,7 @@
 	<div class='config-title'>
 		<span class='config-title-info'><span class='config-title-info'>사이트 로고</span></span>
 		<span class='config-title-notice'>
-			<span class='user-google-guide-button' page = 'google_doc_mobile_1_2' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[보이기]</span>
+			<span class='user-google-guide-button' page = 'google_doc_mobile_1_2' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[설명 보이기]</span>
 			<img src='<?=module('img/setting_2.png')?>'>
 		</span>
 	</div>
@@ -111,7 +111,7 @@
 	<div class='config-title'>
 		<span class='config-title-info'>사이트 메인에 보일 게시판</span>
 		<span class='config-title-notice'>
-			<span class='user-google-guide-button' page = 'google_doc_mobile_1_4' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[보이기]</span>
+			<span class='user-google-guide-button' page = 'google_doc_mobile_1_4' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[설명 보이기]</span>
 			<img src='<?=module('img/setting_2.png')?>'>
 		</span>
 	</div>
@@ -146,7 +146,7 @@
 	<div class='config-title'>
 		<span class='config-title-info'><span class='config-title-info'>인기글 및 최신글</span></span>
 		<span class='config-title-notice'>
-			<span class='user-google-guide-button' page = 'google_doc_mobile_1_3' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[보이기]</span>
+			<span class='user-google-guide-button' page = 'google_doc_mobile_1_3' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[설명 보이기]</span>
 			<img src='<?=module('img/setting_2.png')?>'>
 		</span>
 	</div>

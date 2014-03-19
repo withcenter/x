@@ -12,7 +12,7 @@
 		<div class='inner'>
 			<span class='config-title-info'><img src='<?=module('img/direction.png')?>'> 게시판은 게시판 제목을 입력하시면 생성이 됩니디.</span>
 			<span class='config-title-notice'>
-				<span class='user-google-guide-button inner-title' page = 'google_doc_forum' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[show]</span>
+				<span class='user-google-guide-button inner-title' page = 'google_doc_forum' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[설명 보이기]</span>
 			</span>
 			<div style='clear: both'></div>
 		</div>
