@@ -16,6 +16,9 @@
 		include module( $action );
 														x::hook("module_end");
 	}
+	else if ( $in['page'] ) {
+		include x::theme( $in['page'] );
+	}
 	else {
 		echo "<a href='?module=admin&action=index' style='display:block; padding: 3em; font-size: 2em; color: red;'>X ADMIN Page</a>";
 	}

@@ -32,21 +32,23 @@ a:hover {
 }
 
 #logo {
+	position:absolute;
+	top:24px;
+	left:10px;
 	padding:0!important;
 }
-
-#logo img {
-	position:absolute;
-	top:15px;
-	left:10px;
+#logo .text {
+	margin-left: 2em;
+	line-height: 20px;
 }
+
 
 #hd-wrapper{
 	width: 100%;
 	margin:auto;
 }
 #hd-wrapper #menu-top{
-	height:65px;
+	height:100px;
 	background-color:#f5f8f9;
 	position:relative;
 }
@@ -76,6 +78,8 @@ a:hover {
 #container {
 	border-right: 0;
 	border-left: 1px solid #dde4e9;
+	width: 100% !important;
+	float: none!important;
 }
 
 #search-wrapper{
@@ -160,6 +164,7 @@ fieldset{
 
 #howto-steps{
 	margin-bottom:10px;
+	line-height: 1.6em;
 }
 
 #howto-steps td{
@@ -425,7 +430,7 @@ fieldset{
 	display:block;
 	color: #7997c4;
 	text-decoration:none;
-	padding:25px 8px 5px 8px;
+	padding:40px 8px 5px 8px;
 }
 
 #top-menu .menu-list .selected{
@@ -440,3 +445,62 @@ fieldset{
 #top-menu .menu-list:hover a {
 	color: #ffffff;
 }
+
+
+#create-site {
+	margin: 3em 0;
+	padding: 0.2em;
+	border-radius: 2px;
+	box-shadow: 0 0 1px 2px #dfdfdf;
+}
+
+#create-site a {
+	display: block;
+	padding: 1em;
+	border-radius: 2px;
+	background-color: #f7f7f7;
+	font-size: 1.8em;
+	font-family: Malgun Gothic,AppleGothic;
+	color: #393939;
+	text-align:center;
+}
+
+
+
+#create-site a:hover {
+	background-color: #f3f3f3;
+	color: black;
+}
+
+
+/* service */
+.page {
+	padding: 3em !important;
+	background-color: #efefef !important;
+	font-family: Malgun Gothic;
+	line-height: 1.8em;
+	letter-spacing: 1px;
+}
+.page > .title {
+	margin-bottom: 1em;
+	color: #498977;
+}
+
+.page > .title.first {
+	font-size: 2em;
+}
+
+.page > .title.second {
+	font-size: 1.7em;
+}
+
+.page > .title.third {
+	font-size: 1.4em;
+}
+
+.page > .text {
+	margin-bottom: 3em;
+}
+
+
+
