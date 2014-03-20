@@ -18,6 +18,8 @@
 						<div class='lower-title'>
 							LOWER-LEFT
 						</div>
+						<div class='bottom-bar'></div>
+						
 					</div>
 				</div>
 				<div class='lower-middle'>

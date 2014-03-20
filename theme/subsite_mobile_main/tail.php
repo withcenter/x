@@ -15,10 +15,8 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			</div>
 			<div class='footer-text'>
 				<div class='inner'>
-					<?if ( x::meta('footer_text')) echo nl2br(x::meta('footer_text'));
-					else {?>
-						사이트 견적 및 제작의뢰      로고, 배너 제작 의뢰     사이트 갤러리     템플릿 갤러리 질문과 답변 
-					<?}?>
+					<span>사이트 견적 및 제작의뢰  &nbsp&nbsp&nbsp    로고, 배너 제작 의뢰  &nbsp&nbsp&nbsp     사이트 갤러리   &nbsp&nbsp&nbsp    템플릿 갤러리 질문과 답변 </span>
+					<span class='copyright'>Copyright © 2007 ~ 2014 All Rights Reserved by WithCenter</span>
 				</div>
 			</div>
 			<div style='clear: left'></div>

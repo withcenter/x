@@ -39,6 +39,10 @@
 	word-break: break-all;
 }
 
+.footer-container .footer .footer-text .inner .copyright {
+	position: relative;
+	bottom: -40px;
+}
 
 @media (max-width: 31.250em) {
 	.footer-contact {
