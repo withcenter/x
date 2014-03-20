@@ -7,7 +7,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	<div class='header'>
 		<div class='inner'>
 			<div class='logo'>
-				<img src='<?=x::url_theme()?>/img/logo.png'/>
+				<a href='<?=G5_URL?>'><img src='<?=x::url_theme()?>/img/logo.png'/></a>
 			</div>
 			<div class='right_menus'>
 				<ul>

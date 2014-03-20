@@ -100,3 +100,9 @@
 		text-align:center;
 	}
 }
+
+@media all and ( max-width: 640px ) {
+	.header  .logo{
+		width:100%;
+	}
+}
