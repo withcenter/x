@@ -15,8 +15,9 @@
 			<div class='right-lower-panel'>
 				<div class='lower-left'>
 					<div class='lower-title'>
-						LOWER-LEFT
+						<div class='title'>LOWER-LEFT</div>
 					</div>
+					<img src = '<?=x::url_theme()?>/img/lower-left.png'/>
 				</div>
 				<div class='lower-middle'>
 					<div class='lower-title'>

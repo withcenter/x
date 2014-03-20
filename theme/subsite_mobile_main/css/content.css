@@ -78,3 +78,23 @@
 		display: block;
 	}
 }
+
+/**lower left**/
+.right-lower-panel .lower-left .lower-title{	
+	border-bottom: solid 1px #696969;
+	margin-bottom: 15px;
+}
+
+.right-lower-panel .lower-left .lower-title .title{
+	color:#24a1b3;
+	font-weight:bold;
+	max-width: 70%;
+	border-bottom: solid 2px #696969;
+	color: #24a1b3;
+	padding-bottom: 3px;
+}
+
+
+.right-lower-panel .lower-left img{	
+	width:100%;
+}
