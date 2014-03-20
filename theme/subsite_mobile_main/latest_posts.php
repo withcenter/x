@@ -1,5 +1,6 @@
 <? $posts = g::posts(array( 'wr_is_comment' => 0,
-							'order by' => 'wr_datetime DESC' ));
+							'order by' => 'wr_datetime DESC',
+							'limit' => 13 ));
 							?>
 <div class='rwd-mobile-posts'>
 	<div class='title'>
