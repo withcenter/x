@@ -76,6 +76,7 @@ foreach( $list as $l ){
 			</div><!--/inner-->	
 		</div><!--/travel_post-->	
         <?php } ?>
+		<div style='clear:both;'></div>
 	</div><!--/board_wrapper-->
         <?php if (count($list) == 0) { echo '<td colspan="'.$colspan.'" class="empty_table">게시물이 없습니다.'; } ?>                
 		<?if( admin() ){?>
