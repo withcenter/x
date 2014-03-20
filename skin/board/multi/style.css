@@ -372,6 +372,12 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 	color: #b9b9b9;
 }
 
+/**for IE7 compatibility**/
+.list-type table {
+	width:140px;
+}
+
+
 @media all and ( min-width: 800px ) {
 	.tbl_wrap {
 		margin: 0 !important;
@@ -442,4 +448,10 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 		transform:rotate(0deg);
 	}
 
+}
+
+@media all and ( max-width: 390px ) {	
+	#bo_w .tbl_frm01.tbl_wrap input[type='text'], #bo_w .tbl_frm01.tbl_wrap input[type='password'],  #bo_w .tbl_frm01.tbl_wrap textarea{	
+		width:100%;
+	}
 }

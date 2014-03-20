@@ -22,6 +22,7 @@
 			<?php
 			$i = 0;
 			 foreach( x::menu_links('left' ) as $link ) {
+				if ( $i == 3 ) break;
 				if ( $i == 0 ) $add_class = "class='first-item'";
 				else $add_class = null;
 				$i++;

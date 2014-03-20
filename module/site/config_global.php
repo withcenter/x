@@ -65,6 +65,11 @@
 		<?php
 		
 			include 'config_global_member_skin.php';
+
+			
+			//include 'config_global_search_option.php';
+		
+		
 			include 'config_global_search.php';
 			$id = 'top'; include 'config_global_menu.php';
 			$id = 'left'; include 'config_global_menu.php';
