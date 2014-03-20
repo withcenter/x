@@ -101,7 +101,7 @@
 	}
 }
 
-@media all and ( max-width: 640px ) {
+@media all and ( max-width: 320px ) {
 	.header  .logo{
 		width:100%;
 	}
