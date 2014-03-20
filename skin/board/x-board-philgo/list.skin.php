@@ -67,7 +67,7 @@ foreach( $list as $l ){
 			<div style='clear:both'></div>
 		</div>
 	<?}?>	
-        <table width='750px;' cellpadding=0 cellspacing=0>           
+        <table cellpadding=0 cellspacing=0>           
         <?php		
         for ($i=0; $i<count($list); $i++) {			
 		if( $i+1 == count($list) ) $no_padding = "class = 'no-padding'";
@@ -119,14 +119,15 @@ foreach( $list as $l ){
 								if( empty($post_sub_title) ) $post_sub_title = null;
 								if( empty($post_availability) ) $post_availability = null;
 							?>
-							<div class='post-subject'>
-								<a href ='<?=$list[$i]['href']?>'><?=$post_subject?> (<?=$num_of_comments?>)</a>
+							<div class='post-subject'>								
+								<a href ='<?=$list[$i]['href']?>'><?=$post_subject?> (<?=$num_of_comments?>)</a>								
 								<div class='right-info'>
 									<span class='author'><?=$author ?></span>
 									<span class='num_of_views'><?=$num_of_views?></span>
 									<span class='date_time'><?=$datetime?></span>
 								</div>
 							</div>
+							<div style='clear:both'></div>
 							<div class='post-content'><a href ='<?=$list[$i]['href']?>'><?=$post_content?></a></div>							
 						</div>
 				</td>					

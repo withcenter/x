@@ -35,14 +35,14 @@ foreach( $list as $l ){
 			<?php if ($write_href) { ?><a href="<?php echo $write_href ?>" class="btn_b02">글쓰기</a><?php } ?>
 		</div>
 	<?}?>
-        <table width='750px;' cellpadding=0 cellspacing=0>           
+        <table cellpadding=0 cellspacing=0>           
         <?php
         for ($i=0; $i<count($list); $i++) {		
 		if( $i == 0 ) $no_padding = "no-padding";
 		else $no_padding = ndivl;
         ?>
 			<tr class = 'travel_posts' valign='top'>					
-				<td width ='148px' class = '<?=$no_padding?>'>					
+				<td class = 'td-image <?=$no_padding?>'>					
 					<div class='post-image'><a href ='<?=$list[$i]['href']?>'><img src = '<?=$images[$i]['src']?>' /></a></div>					
 				</td>
 				<td class = '<?=$no_padding?>'>
