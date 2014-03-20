@@ -293,3 +293,8 @@ function share( $script )
 {
 	return x::dir() . "/etc/share/$script.php";
 }
+
+function page( $page )
+{
+	return x::url() . "?page=$page";
+}

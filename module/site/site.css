@@ -357,9 +357,6 @@
 	border: solid 1px #e3e3e3;
 }
 
-.create-site div {
-	margin: 0.5em;
-}
 
 .create-site > div {
 	display: inline-block;
@@ -745,6 +742,7 @@ table > .header td:first-child {
 }
 .create-site .wrapper{
 	position: relative;
+	margin-right: 2em;
 }
 
 .create-site  .main-title, .create-site  .title, .view-site .title {
@@ -754,14 +752,13 @@ table > .header td:first-child {
 	height: 30px;
 	text-align: center;
 	margin: 0;
-	margin-left: 10px;
 	font-weight: bold;
 	font-size: 10pt;
 }
 
-.create-site  .title, .view-site  .title  {
+.create-site  .main-title, .create-site  .title, .view-site  .title  {
 	line-height: 30px;
-	margin-bottom: 10px;
+	margin-bottom: 2em;
 }
 .create-site  input[type='text'] {
 	height: 25px;

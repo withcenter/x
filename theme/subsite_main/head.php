@@ -7,9 +7,23 @@
 	<div id='menu-top'>
 		<div class='inner'>
 			<div id="logo">
-				<a href="<?php echo G5_URL ?>">
-					<img src='<?=x::url_theme()?>/img/logo1.png'>
-				</a>
+				
+					<table cellpadding='0' cellspacing='0'>
+						<tr>
+							<td><a href="<?php echo G5_URL ?>"><img src='<?=x::url_theme()?>/img/logo1.png'></a></td>
+							<td>
+								<div class='text'>
+								<a href="<?=page('service')?>">
+								<font color='#ff3000'>필고</font> <font color='#008cc0'>무료 홈페이지</font><br>
+								바쁘신 분이나 직접 꾸미기 어려운 분들을 위해 ...<br>
+								홈페이지 꾸미기 + 독립 도메인 + 웹호스팅 + 스마트폰 어플 = 7 만원
+								</a>
+								</div>
+							</td>
+						</tr>
+					</table>
+
+				
 			</div>
 			<?include x::theme('menu.top')?>
 		</div>
