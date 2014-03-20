@@ -11,3 +11,20 @@ define('MAX_MENU', 10);
 define('REGISTERED_DOMAIN', 'mb_10');
 
 define("ONEDAY", 86400);
+
+
+
+/** DEBUG SETTINGS
+ *
+ *
+ */
+define( 'X_DEBUG', true );
+
+if ( X_DEBUG ) {
+	define( 'URL_X', 'http://extended.org' );
+}
+else {
+	define( 'URL_X', 'http://extended.kr' );
+}
+
+

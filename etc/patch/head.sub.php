@@ -4,7 +4,10 @@
 	
 	
 	$src = "<body>";
-	$dst = $src . "\n\t<?php x::hook( 'body_begin' );?>\n";
+	$dst = "$src
+<?php include x::dir() . '/etc/hook/body_begin.php';?>";
+	
+	
 	$data = patch_string( $data, $src, $dst );
 	file::write( $path,  $data );
 	
