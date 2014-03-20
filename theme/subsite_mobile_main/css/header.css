@@ -42,7 +42,7 @@
 }
 
 .header .right_menus ul li .extra-border{	
-	border-left:2px solid #696969;
+	border-left:3px solid #696969;
 	position:absolute;
 	left:0;
 	top:0;
@@ -60,6 +60,7 @@
 
 .header .right_menus a{
 	font-size:1.2em;
+	font-weight:bold;
 	text-align:center;
 	height:28px;
 	line-height:16px;
@@ -82,13 +83,20 @@
 	}
 }
 
-@media all and ( max-width: 420px ) {
+@media all and ( max-width: 640px ) {
 	.header  .logo{
-	 width:100%;
-	}
+		width:285px;
+		float:none;
+		margin:auto;
+	}		
 	
 	.header .right_menus{
 		width:100%;
 		margin:10px 0;
+		padding:0 .5%;
+	}
+	
+	.header  .text-info{	
+		text-align:center;
 	}
 }
