@@ -56,7 +56,9 @@
 	font-weight: bold;
 	max-width: 70%;
 	height: 1em;
-	line-height: 1em;
+	line-height: 1.2em;
+	overflow: hidden;
+	word-break: break-all;
 	border-bottom: solid 2px #696969;
 	color: #24a1b3;
 	padding-bottom: 3px;
