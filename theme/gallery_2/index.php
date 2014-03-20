@@ -8,11 +8,17 @@ BANNER PLACE HOLDER
 	</div>
 	<div class='right-posts-container'>
 		<div class='right-panel-posts'>
-			RIGHT PANEL POSTS CONTAINER
+			<div class='right-posts-1'>
+				<?=latest( 'x-latest-gallery-posts', bo_table(1), 10, 40 )?>
+			</div>
+			<div class='right-posts-2'>
+				<?=latest( 'x-latest-gallery-posts', bo_table(4), 5, 40 )?>
+			</div>
 		</div>
 		<div class='right-gallery-post'>
-			RIGHT GALLERY POST
+			<?=latest( 'x-latest-right-gallery', bo_table(5) , 1, 40 )?>
 		</div>
+		<div style='clear: left'></div>
 	</div>
 	<div style='clear: left'></div>
 </div>

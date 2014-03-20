@@ -142,7 +142,7 @@ body {
 
 /* CONTENT */
 .layout .content {
-	max-width: 970px;
+	width: 970px;
 	margin: 0 auto;
 }
 
@@ -229,7 +229,7 @@ body {
 }
 
 .banner .banner-image {
-	
+
 }
 
 /*POSTS CONTAINER*/
@@ -240,16 +240,29 @@ body {
 	margin-bottom: 10px;
 }
 
-.posts-container .right-posts-container > div {
-	width: 233px;
-	float: left;
-}
 .posts-container .right-panel-posts {
-	margin-left: 6px;
+	float: left;
+	margin-left: 5px;
+	width: 233px;
 }
 
 .posts-container .right-gallery-post {
+	float: left;
+	width: 233px;
 	height: 368px;
-	border: solid 1px #333333;
-	margin-left: 10px;
+	margin-left: 13px;
 }
+
+.posts-container .right-panel-posts .right-posts-1 {
+	margin-bottom: 10px;
+}
+
+.posts-container .right-panel-posts .right-posts-1 .latest-gallery-posts {
+	padding-bottom: 5px;
+}
+
+.right-posts-2 .latest-gallery-posts .title{
+	padding-bottom: 9px;
+}
+
+

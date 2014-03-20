@@ -1,0 +1,37 @@
+.latest-right-gallery .right-post {
+	height: 368px;
+	background: gray;
+	border: solid 1px #333333;
+	position: relative;
+}
+
+.latest-right-gallery .right-posts-container {
+	padding: 20px 15px 20px 25px;
+	background: #000000;
+	opacity: 0.8;
+	color: #ffffff;
+	width: 193px;
+	height: 328px;
+	text-align: center;
+	display: none;
+}
+
+.latest-right-gallery .right-posts-subject {
+	font-size: 14px;
+	font-weight: bold;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.latest-right-gallery .right-posts-content {
+	color: #e6e6e6;
+	font-size: 13px;
+	text-align: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.latest-right-gallery a {
+	text-decoration: none;
+	color: #e6e6e6;
+}
