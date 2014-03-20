@@ -259,6 +259,10 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 	font-family: '맑은 고딕', AppleGothic;
 	width:100%;
 }
+#travel_theme_board_2 table{
+	width:100%;
+}
+
 #travel_theme_board_2 .travel_posts{
 	
 }

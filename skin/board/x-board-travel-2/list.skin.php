@@ -50,7 +50,7 @@ foreach( $list as $l ){
 							<?
 								$post_subject = conv_subject($list[$i]['wr_subject'],20,"...");
 								$post_sub_title = cut_str($list[$i]['wr_1'],20,"...");
-								$post_content = cut_str(strip_tags($list[$i]['wr_content']),150,"...");
+								$post_content = cut_str(strip_tags($list[$i]['wr_content']),200,"...");
 								$post_availability = cut_str($list[$i]['wr_2'],50,"...");
 								
 								if( empty($post_sub_title) ) $post_sub_title = null;
