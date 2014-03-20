@@ -622,6 +622,7 @@ class x {
 	 *  @details use this function to insert a post into x_post_data
 	 */
 	static function post_data_insert( $o ) {
+		$o['wr_content'] = strip_tags($o['wr_content']);
 		$sql = "insert into x_post_data
                 set
 					domain					= '$o[domain]',

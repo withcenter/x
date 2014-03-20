@@ -544,7 +544,13 @@ static function utf8($string)
 	/**
 	 *  @brief returns cache file path
 	 *  
-	 *  @param [in] $id Parameter_Description
+	 *  @param [in] $id Parameter_Description.
+		 $id should be $bo_table
+		 
+		 And if you need to add more tags to make it unique, then make $id in form of "$bo_table-options".
+		 There should a dash(-) right after bo_table to make it compatible with G5.
+		 
+		 
 	 *  @param [in] $intval INT of minutes. cache data duration. 
 	 *  @return Return_Description
 	 *  
@@ -565,7 +571,7 @@ static function utf8($string)
 	static function cache_read( $id, $intval = 25 )
 	{
 		$intval = $intval * 60;
-		$file_path = G5_DATA_PATH."/cache/latest-".$id;
+		$file_path = G5_DATA_PATH."/cache/latest-{$id}-";
 		if( ! G5_USE_CACHE ) return null;
 		if( ! file_exists($file_path) ) return null;
 		$filetime = filemtime($file_path);
@@ -579,7 +585,7 @@ static function utf8($string)
 	
 	static function cache_write( $id, $data )
 	{
-		$file_path = G5_DATA_PATH."/cache/latest-".$id;
+		$file_path = G5_DATA_PATH."/cache/latest-{$id}-";
 		file::write( $file_path, string::scalar( $data ) );
 	}
 	

@@ -324,6 +324,7 @@ class gnuboard {
 	 *  @brief Uploads ( write or record ) a new post into a forum programtically.
 	 *  
 	 *  @param [in] $o options to post
+	 * $o['domain']				is the domain of the site to save data into x_post_data. if it is empty, it uses from etc::domain()
 	 *  $o['bo_table']				is the board table name ( board_id )
 	 *  $o['wr_subject']			is the subject of the post.
 	 *  $o['ca_name']
@@ -406,6 +407,7 @@ class gnuboard {
 		$wr_homepage	= $o['wr_homepage'];
 		$html			= $o['html'];
 		$ca_name		=	$o['ca_name'];
+		$secret			= $o['secret'];
 		
 		if ( $o['wr_1'] ) $wr_1 = $o['wr_1'];
 		if ( $o['wr_2'] ) $wr_2 = $o['wr_2'];
@@ -455,6 +457,24 @@ class gnuboard {
 
 		db::query($sql);
 		$wr_id = db::insert_id();
+		
+		if ( empty($o['domain']) ) $o['domain'] = etc::domain;
+		$p = array(
+			'domain'					=> $o['domain'],
+			'bo_table'					=> $o['bo_table'],
+			'wr_id'						=> $wr_id,
+			'wr_parent'				=> $wr_id,
+			'wr_option'				=> "$html,$secret",
+			'ca_name'				=> $ca_name,
+			'wr_subject'				=> $wr_subject,
+			'wr_content'				=> $wr_content,
+			'mb_id'						=> $mb_id,
+			'wr_name'				=> $wr_name,
+			'wr_datetime'			=> G5_TIME_YMDHIS
+		);
+		x::post_data_insert( $p );
+		
+		
 		
 		$count = self::count_write( $o['bo_table'] );
 		
@@ -563,8 +583,11 @@ class gnuboard {
         $shuffle = implode('', $chars_array);
 		$file = date('ymdHi').'_' . substr($shuffle,0,8) . '_' . str_replace('%', '', urlencode(str_replace(' ', '_', $filename)) );
 		
-		
-		$dest_file = G5_DATA_PATH.'/file/'.$bo_table.'/'.$file;
+		$path_dir = G5_DATA_PATH.'/file/'.$bo_table;
+		if ( ! is_dir( $path_dir ) ) {
+			mkdir( $path_dir, 0777, true );
+		}
+		$dest_file = $path_dir .'/'.$file;
 		//dlog("Copy: $path to $dest_file");
 		copy( $path, $dest_file );
 		

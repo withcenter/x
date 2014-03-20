@@ -134,9 +134,9 @@ function meta_get( $key, $code=null )
 	return x::meta_get( $key, $code );
 }
 
-function meta( $key, $code=null )
+function meta($code, $value='_NULL_CAN_BE_SAVED_', $third_value=null)
 {
-	return x::meta_get( $key, $code );
+	return x::meta( $code, $value, $third_value );
 }
 
 
