@@ -23,7 +23,7 @@
 	</li>
 	
 	<li class="gnb_1dli">
-		<a href="http://extended.kr>" target='_blank' class="gnb_2da">X 홈페이지</a>
+		<a href="http://extended.kr" target='_blank' class="gnb_2da">X 홈페이지</a>
 	</li>
 
 	
