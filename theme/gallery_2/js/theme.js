@@ -51,4 +51,12 @@ $(function(){
 	$('.bottom-post').mouseleave(function(){
 		$(this).find('.bottom-posts-container').hide();
 	});
+	
+	$('.right-post').mouseenter(function(){
+		$(this).find('.right-posts-container').show();
+	});
+	
+	$('.right-post').mouseleave(function(){
+		$(this).find('.right-posts-container').hide();
+	});
 });

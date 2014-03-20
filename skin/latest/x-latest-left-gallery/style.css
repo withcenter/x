@@ -11,7 +11,7 @@
 .latest-left-gallery .top-posts-container {
 	padding: 20px;
 	background: #000000;
-	opacity: 0.8;
+	background-color: rgba(0,0,0,0.6);
 	color: #ffffff;
 	height: 189px;
 	width: 193px;
@@ -48,7 +48,7 @@
 .latest-left-gallery .bottom-posts-container {
 	padding: 20px;
 	background: #000000;
-	opacity: 0.8;
+	background-color: rgba(0,0,0,0.6);
 	color: #ffffff;
 	width: 438px;
 	height: 88px;

@@ -1,0 +1,94 @@
+.header  .logo{
+	width:45%;
+	float:left;
+}
+
+.header  .logo img{
+	/*width:100%;*/
+}
+
+.header  .text-info{	
+	font-size:1.1em;
+	font-weight:bold;
+	margin:4px 0 10px 0;
+}
+
+.header  .text-info .info.call-us{
+	color:#5ab7c5;	
+}
+
+.header  .text-info .info.text{
+	color:#d6d6d6;	
+}
+
+.header .right_menus{
+	width:55%;
+	float:left;
+}
+
+.header .right_menus ul{
+	text-decoration:none;
+	padding:0;
+	margin:0;
+}
+
+.header .right_menus ul li{	
+	padding:0;
+	margin:0;
+	display:inline-block;
+	float:left;	
+	width:24.5%;
+	position:relative;
+}
+
+.header .right_menus ul li .extra-border{	
+	border-left:2px solid #696969;
+	position:absolute;
+	left:0;
+	top:0;
+	height:44px;
+}
+
+
+.header .right_menus ul li:hover a{	
+	border-color:#f2860c;
+}
+
+.header .right_menus ul li:hover .extra-border{	
+	border-color:#f2860c;
+}
+
+.header .right_menus a{
+	font-size:1.2em;
+	text-align:center;
+	height:28px;
+	line-height:16px;
+	overflow:hidden;
+	word-break:break-all;
+	text-decoration:none;
+	display:inline-block;
+	border-left:1px solid #696969;
+	padding:16px 16.29% 20px 16.29%;	
+}
+
+/**medias**/
+@media all and ( max-width: 670px ) {	
+	.header  .logo{
+	/*width:65.3%;*/
+	}
+
+	.header  .logo img{
+		width:95%;
+	}
+}
+
+@media all and ( max-width: 420px ) {
+	.header  .logo{
+	 width:100%;
+	}
+	
+	.header .right_menus{
+		width:100%;
+		margin:10px 0;
+	}
+}

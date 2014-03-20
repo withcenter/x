@@ -45,7 +45,7 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 	<div class='bottom-post' style="background: url('<?=$img?>')">
 		<div class='bottom-posts-container'>
 			<div class='bottom-posts-subject'><a href="<?=$list[$i]['href']?>"><?=$list[2]['wr_subject']?></a></div>
-			<div class='bottom-posts-content'><a href="<?=$list[$i]['href']?>"><?=cut_str(strip_tags($list[2]['wr_content']), 100, '...')?></a></div>
+			<div class='bottom-posts-content'><a href="<?=$list[$i]['href']?>"><?=cut_str(strip_tags($list[2]['wr_content']), 80, '...')?></a></div>
 			<a href="<?=$li[2]['href']?>">READ MORE</a>
 		</div>		
 	</div>
