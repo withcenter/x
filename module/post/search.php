@@ -8,7 +8,20 @@ add_stylesheet("<link rel='stylesheet' type='text/css' href='".x::url()."/module
 if ( $key ) {
 	$q = array();
 	
-	$q[] = "domain = '".etc::domain()."'";
+	// 사이트 전제 검색 옵션이 있는 경우는 domain 조건을 제거 한다.
+	if ( !meta('all_site_search') ) {
+		// 사이트 검색 조건이 있는 경우
+		if ( $site_list = meta('site_search') ) {
+			$sl = explode( ',', $site_list );
+			
+			$sl_q = array();
+			foreach ( $sl as $s ) {
+				$sl_q[] = "domain = '".mysql_real_escape_string($s)."'";
+			}
+			if ( $sl_q ) $q[] = "(". implode(" OR ", $sl_q ) . ")";
+		}
+		else $q[] = "domain = '".etc::domain()."'";
+	}
 	
 	// 아이디 검색 조건이 있는 경우
 	if ( $search_username ) $q[] = "mb_id LIKE '%{$key}%'";
@@ -47,6 +60,7 @@ if ( $key ) {
 	
 	if ( $q ) $conds  = " WHERE ".implode(' AND ', $q );
 	
+	
 	/* 페이지 나누기 */
 	if ( $in['page_no'] ) $page_no = $in['page_no'];
 	else $page_no = 1;
@@ -57,7 +71,7 @@ if ( $key ) {
 	$total_posts = db::result( "SELECT COUNT(*) FROM x_post_data $conds" );
 	$posts = db::rows("SELECT bo_table, wr_id, wr_subject, wr_content, mb_id, wr_datetime FROM x_post_data $conds ORDER BY wr_datetime DESC LIMIT $start, $no_of_pages");
 ?>	
-	<div>총 <?=number_format($total_posts)?>개의 게시물이 검색 되었습니다.</div>
+	<div>총 <b><?=number_format($total_posts)?></b>개의 게시물이 검색 되었습니다.</div>
 	<div class='posts'>
 <?php 
 	foreach ( $posts as $post ) {

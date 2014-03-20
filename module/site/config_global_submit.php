@@ -13,6 +13,11 @@ foreach ( $in as $key => $value) {
 }
 
 
+/* config_global_search.php */
+meta_set('all_site_search', $in['all_site_search']);
+meta_set('site_search', $in['site_search']);
+
+
 /** new config meta update method */
 meta_set( 'title' , $in['title'] );
 meta_set( 'secondary_title' , $in['secondary_title'] );
