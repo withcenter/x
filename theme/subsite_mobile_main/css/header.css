@@ -93,7 +93,11 @@
 	
 	.header .right_menus{
 		width:100%;
-		margin:10px 0;		
+		margin-top:10px;		
+	}
+	
+	.header .right_menus ul{	
+		padding:0 1%;
 	}
 	
 	.header  .text-info{	
