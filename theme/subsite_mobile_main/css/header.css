@@ -10,7 +10,7 @@
 .header  .text-info{	
 	font-size:1.1em;
 	font-weight:bold;
-	margin:4px 0 10px 0;
+	margin:4px 0 10px 0;	
 }
 
 .header  .text-info .info.call-us{
@@ -61,6 +61,7 @@
 .header .right_menus a{
 	font-size:1.2em;
 	font-weight:bold;
+	color:#646464;
 	text-align:center;
 	height:28px;
 	line-height:16px;
@@ -92,8 +93,7 @@
 	
 	.header .right_menus{
 		width:100%;
-		margin:10px 0;
-		padding:0 .5%;
+		margin:10px 0;		
 	}
 	
 	.header  .text-info{	
