@@ -14,18 +14,28 @@
 			</div>
 			<div class='right-lower-panel'>
 				<div class='lower-left'>
-					<div class='lower-title'>
-						<div class='title'>LOWER-LEFT</div>
+					<div class='inner'>
+						<div class='lower-title'>
+							<div class='title'>LOWER-LEFT</div>
+						</div>							
+						<img src = '<?=x::url_theme()?>/img/lower-left.png'/>
 					</div>
-					<img src = '<?=x::url_theme()?>/img/lower-left.png'/>
 				</div>
 				<div class='lower-middle'>
-					<div class='lower-title'>
-						LOWER-MIDDLE
-					</div>				
+					<div class='inner'>
+						<div class='lower-middle-title'>
+							TEMPLATES
+						</div>
+						<div class='bottom-bar'></div>
+						<div class='lower-middle-1'><img src="<?=x::theme_url('img/middle_lower_1.png')?>"/></div>
+						<div class='lower-middle-2'><img src="<?=x::theme_url('img/middle_lower_2.png')?>"/></div>
+						<div class='lower-middle-3'><img src="<?=x::theme_url('img/middle_lower_3.png')?>"/></div>			
+						</div>
 				</div>
 				<div class='lower-right'>
-					<?include x::theme('latest_posts')?>
+					<div class='inner'>
+						<?include x::theme('latest_posts')?>
+					</div>
 				</div>
 				<div style='clear: both'></div>
 			</div>

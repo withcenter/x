@@ -1,3 +1,7 @@
+.left-content{
+	 width:42.5%;
+}
+
 .left-main-banner {
 	max-width: 410px;
 }
@@ -15,11 +19,30 @@
 	width: 100%;
 }
 
-.lower-left, .lower-middle, .lower-left {
+.lower-left, .lower-middle, .lower-right {
 	float: left;
 	width: 33%;
 }
 
+.lower-left .inner {
+	padding-right: 10px;
+}
+
+.lower-right .inner {
+	padding-left: 10px;
+}
+
+.lower-middle-1, .lower-middle-2, .lower-middle-3 {
+	border: solid 1px #696969;
+}
+
+.lower-middle-1 img, .lower-middle-2 img , .lower-middle-3 img {
+	width: 100%;
+}
+
+.lower-middle-1, .lower-middle-2 {
+	margin-bottom: 10px;
+}
 
 .rwd-mobile-posts {
 	overflow: hidden;
@@ -29,7 +52,7 @@
 	text-decoration: none;
 }
 
-.rwd-mobile-posts .title {
+.rwd-mobile-posts .title, .lower-middle-title {
 	font-weight: bold;
 	max-width: 70%;
 	border-bottom: solid 2px #696969;
@@ -37,9 +60,9 @@
 	padding-bottom: 3px;
 }
 
-.rwd-mobile-posts .bottom-bar {
+.bottom-bar {
 	border-top: solid 1px #696969;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 }
 
 .rwd-mobile-posts .post-items {
@@ -61,6 +84,10 @@
 	
 
 @media (max-width: 31.250em) {
+	.left-content{
+		width: 100%;
+	}
+	
 	.left-main-banner {
 		max-width: 100% !important;
 		margin-bottom: 10px;
@@ -80,6 +107,10 @@
 }
 
 /**lower left**/
+.right-lower-panel .lower-left .inner{
+	padding-right:10px;
+}
+
 .right-lower-panel .lower-left .lower-title{	
 	border-bottom: solid 1px #696969;
 	margin-bottom: 15px;
