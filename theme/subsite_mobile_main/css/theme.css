@@ -3,6 +3,13 @@
 }
 
 .layout .header{
+	background-color:#fafafa;
+	padding-top:20px;
+	border-bottom:1px solid #696969;
+	margin-bottom:10px;
+}
+
+.layout .header .inner{
 	max-width:970px;
 	margin:auto;	
 }
