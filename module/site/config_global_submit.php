@@ -23,6 +23,10 @@ meta_set( 'theme_sidebar' , $in['theme_sidebar'] );
 meta_set( 'member_skin' , $in['member_skin'] );
 
 
+meta_set( 'search_all_site' , $in['search_all_site'] );
+meta_set( 'search_sites' , $in['search_sites'] );
+
+
 for( $i=1; $i<=10; $i++ ) {
 	$m = 'top';
 		x::meta( "menu$m{$i}bo_table", $in[ "menu$m{$i}bo_table" ] );
