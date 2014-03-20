@@ -1,4 +1,7 @@
 <?php
+$g5['title'] = "필고";
+$g5['cf_title'] = "무료 홈페이지 서비스";
+
 x::hook_register('head_begin', 'hook_head_begin' );
 function hook_head_begin()
 {
