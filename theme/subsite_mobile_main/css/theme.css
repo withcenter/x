@@ -17,6 +17,7 @@
 .layout .container{
 	max-width:970px;
 	margin:auto;	
+	margin-bottom: 10px;
 }
 
 .layout .footer{

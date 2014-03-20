@@ -8,7 +8,7 @@
 .latest-right-gallery .right-posts-container {
 	padding: 20px 15px 20px 25px;
 	background: #000000;
-	opacity: 0.8;
+	background-color: rgba(0,0,0,0.6);
 	color: #ffffff;
 	width: 193px;
 	height: 328px;

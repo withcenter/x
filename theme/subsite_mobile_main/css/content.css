@@ -1,0 +1,40 @@
+.left-main-banner {
+	max-width: 410px;
+}
+
+.left-main-banner img {
+	width: 100%;
+}
+
+.right-main-banner {
+	max-width: 550px;
+	margin-bottom: 10px;
+}
+
+.right-main-banner img {
+	width: 100%;
+}
+
+.lower-left, .lower-middle, .lower-left {
+	float: left;
+	width: 33%;
+}
+
+@media (max-width: 31.250em) {
+	.left-main-banner {
+		max-width: 100% !important;
+		margin-bottom: 10px;
+	}
+	
+	.container {
+		padding: 0 0.625em;
+	}
+	
+	.content-divider {
+		display: none;
+	}
+	
+	.content-table td {
+		display: block;
+	}
+}
