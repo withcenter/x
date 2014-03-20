@@ -281,7 +281,7 @@
 	margin-bottom:3px;
 	position:absolute;
 	right:0;
-	top:14px;	
+	top:11px;	
 }
 
 .extra-menu-items .extra-top a{
@@ -291,8 +291,8 @@
 	width:75px;
 	padding:0 5px;
 	word-break:break-all;
-	height:10px;
-	line-height:10px;
+	height: 15px;
+	line-height: 15px;
 	overflow:hidden;
 	text-align:center;	
 	float:left;
@@ -306,7 +306,7 @@
 .extra-menu-items .extra-bottom{	
 	position:absolute;
 	right:0;
-	top:35px;
+	top:32px;
 }
 .extra-menu-items .extra-bottom a{
 	color:#000000;
@@ -315,8 +315,6 @@
 	width:75px;
 	padding:0 5px;
 	word-break:break-all;
-	height:10px;
-	line-height:10px;
 	overflow:hidden;
 	text-align:center;
 	float:left;

@@ -12,10 +12,11 @@
 해외 개발자 및 해외 사이트를 대상으로 만들다 보니 부분적으로 영어로 되어져 있습니다.
 
 
+[설치 설명서](https://docs.google.com/document/d/1B0amy6P1xdBbYIPIl58Btgnjq8jwO33NfAwGToj8wWY/pub)
 
-[한글 사용자 설명서](https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub)
+[사용자 설명서](https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub)
 
-[한글 개발자 설명서](https://docs.google.com/document/d/1cqG9sghuNGyrSKsZBaV4dmretcA6tb_WfOD1jlyldLk/pub)
+[개발자 설명서](https://docs.google.com/document/d/1cqG9sghuNGyrSKsZBaV4dmretcA6tb_WfOD1jlyldLk/pub)
 
 
 

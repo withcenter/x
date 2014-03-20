@@ -65,7 +65,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 			</div>
 			<div class="category"><?php include 'list.category.php'; ?></div>
 			<div class="list-type">
-						<table cellpadding=0 cellspacing=0>
+						<table cellpadding=0 cellspacing=0'>
 							<tr>
 								<td><a href='<?=g::url_forum_list()?>&list_style=text'><img src="<?=$board_skin_url?>/img/text.png"></a></td>
 								<td width='6'>&nbsp;</td>

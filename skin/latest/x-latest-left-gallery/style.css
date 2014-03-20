@@ -1,0 +1,75 @@
+.latest-left-gallery .top-posts {
+	width: 233px;
+	height: 229px;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border: solid 1px #333333;
+	position: relative;
+}
+
+.latest-left-gallery .top-posts-container {
+	padding: 20px;
+	background: #000000;
+	opacity: 0.8;
+	color: #ffffff;
+	height: 189px;
+	width: 193px;
+	text-align: center;
+	display: none;
+}
+
+.latest-left-gallery .top-posts-subject {
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.latest-left-gallery .top-posts-content {
+	color: #e6e6e6;
+	font-size: 13px;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.latest-left-gallery .top-posts.last-post {
+	margin: 0;
+}
+
+.latest-left-gallery .bottom-post {
+	clear: left;
+	width: 478px;
+	height: 128px;
+	background: gray;
+	border: solid 1px #333333;
+	position: relative;
+}
+
+.latest-left-gallery .bottom-posts-container {
+	padding: 20px;
+	background: #000000;
+	opacity: 0.8;
+	color: #ffffff;
+	width: 438px;
+	height: 88px;
+	text-align: center;
+	display: none;
+}
+
+.latest-left-gallery .bottom-posts-subject {
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.latest-left-gallery .bottom-posts-content {
+	color: #e6e6e6;
+	font-size: 13px;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.latest-left-gallery a {
+	text-decoration: none;
+	color: #e6e6e6;
+}
