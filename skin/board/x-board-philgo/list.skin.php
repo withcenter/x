@@ -76,11 +76,11 @@ foreach( $list as $l ){
 		$count_images = count($images[$i]);
 		if( $count_images > 5 ){
 			$count_images = 5;
-		}
+		}		
         ?>
 			<tr class = 'post_list' valign='top'>
 			<?if( $images[$i][0]['src'] ) {?>
-				<td width ='76' <?=$no_padding?>>					
+				<td style='width:8%!important;' <?=$no_padding?>>					
 					<div class='post-image' number="<?=$i?>">
 						<a href ='<?=$list[$i]['href']?>'><img src = '<?=$images[$i][0]['src']?>' /></a>
 						<?if( $count_images > 1 ){?>

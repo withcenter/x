@@ -62,7 +62,7 @@ foreach( $list as $l ){
 				</div>
 				<div class='post-subject'>
 					<a href ='<?=$list[$i]['href']?>'>
-						<?=conv_subject($list[$i]['wr_subject'],10,"...")?>
+						<?=conv_subject($list[$i]['wr_subject'],20,"...")?>
 					</a>
 				</div>
 				<div class='user-review'>

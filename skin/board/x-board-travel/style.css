@@ -288,9 +288,9 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 #travel_theme_board .travel_posts .post-subject{
 	font-size:11pt;
 	font-weight:bold;
-	color:#5d5d5d;	
-	height:14px;
-	line-height:14px;	
+	color:#5d5d5d;
+	height:17px;
+	line-height:15px;	
 	width:90%;
 	margin: 0 auto 9px auto;
 	word-break:break-all;
