@@ -13,10 +13,6 @@ foreach ( $in as $key => $value) {
 }
 
 
-/* config_global_search.php */
-meta_set('all_site_search', $in['all_site_search']);
-meta_set('site_search', $in['site_search']);
-
 
 /** new config meta update method */
 meta_set( 'title' , $in['title'] );
@@ -28,6 +24,8 @@ meta_set( 'theme_sidebar' , $in['theme_sidebar'] );
 meta_set( 'member_skin' , $in['member_skin'] );
 
 
+
+/* config_global_search.php */
 meta_set( 'search_all_site' , $in['search_all_site'] );
 meta_set( 'search_sites' , $in['search_sites'] );
 
