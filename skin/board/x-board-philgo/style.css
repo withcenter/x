@@ -257,6 +257,7 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 /***NEW BOARD***/
 #board_philgo_1  {
 	font-family: 굴림,Gulim,AppleGothic;
+	width:100%;
 }
 
 #board_philgo_1 td.no-padding{
@@ -327,13 +328,29 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 #board_philgo_1 .post_list .post-subject{
 	font-size:1.1em;
 	color:#384350;
-	font-weight:bold;
+	font-weight:bold;	
 	margin-bottom:3px;
 }
 
-#board_philgo_1 .post_list .post-subject .right-info{
+#board_philgo_1 .post_list .post-subject > a{
+	width:60%;
+	float:left;
+	height:12px;
+	line-height:12px;
+	overflow:hidden;
+	word-break:break-all;
+	display:inline-block;
+}
+
+#board_philgo_1 .post_list .post-subject .right-info{	
+	width:38%;
 	float:right;
-	margin-right:10px;
+	text-align:right;
+	margin-right:2%;
+	height:14px;
+	line-height:14px;
+	overflow:hidden;
+	word-break:break-all;
 }
 
 #board_philgo_1 .post_list .post-subject .right-info .num_of_views{
@@ -348,12 +365,12 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 
 #board_philgo_1 .post_list .post-content{
 	font-size:1.1em;
-	margin-right:198px;
+	margin-right:23.87%;
 	color:#696969;		
 	line-height:19px;
 	word-break:break-all;
 	overflow:hidden;
-	height:37px;
+	height:37px;	
 }
 
 #board_philgo_1 .travel-write{

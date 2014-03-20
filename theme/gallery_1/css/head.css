@@ -1,0 +1,16 @@
+.layout .header .search_and_top_wrapper{
+	float:right;
+	position:relative;
+}
+
+.layout .header .search_and_top_wrapper #gallery_1_search_text{
+	border:2px solid #ff8866;
+	float:left;
+	padding:11px 10px;
+}
+
+.layout .header .search_and_top_wrapper #gallery_1_search_submit{
+	background-color:#ff8866;
+	padding:8px 10px 8px 8px;
+	float:left;
+}

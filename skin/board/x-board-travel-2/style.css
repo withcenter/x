@@ -257,7 +257,12 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 /***NEW BOARD***/
 #travel_theme_board_2  {
 	font-family: '맑은 고딕', AppleGothic;
+	width:100%;
 }
+#travel_theme_board_2 table{
+	width:100%;
+}
+
 #travel_theme_board_2 .travel_posts{
 	
 }
@@ -273,6 +278,10 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 
 #travel_theme_board_2 .travel_posts a{
 	text-decoration:none;
+}
+
+#travel_theme_board_2 .travel_posts .td-image{
+		width:148px;
 }
 
 #travel_theme_board_2 .travel_posts .post-image{
@@ -295,6 +304,12 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 #travel_theme_board_2 .travel_posts .post-subject{
 	font-size:1.5em;
 	color:#5d5d5d;
+	line-height:25px;
+	height: 25px;
+	overflow:hidden;
+	word-break:break-all;
+	width:70%;
+	
 }
 
 #travel_theme_board_2 .travel_posts .post-sub-title{
@@ -306,9 +321,9 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 #travel_theme_board_2 .travel_posts .post-content{
 	font-size:1em;
 	color:#868686;
-	margin-right:113px;
+	margin-right:20%;
 	margin-bottom:10px;
-	line-height:14px;
+	line-height:15px;
 	height: 30px;
 	overflow:hidden;
 	word-break:break-all;
@@ -318,7 +333,7 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 	font-size:.9em;
 	font-style:italic;
 	color:#868686;
-	margin-right:113px;
+	margin-right:20%;
 }
 
 #travel_theme_board_2 .travel_posts .post-image{
@@ -334,4 +349,25 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 
 #travel_theme_board_2 .lower-buttons{
 	margin-top:10px;	
+}
+
+@media all and ( max-width: 530px ) {	
+	#travel_theme_board_2 .travel_posts .text-info img{
+		right:0;
+	}
+}
+
+@media all and ( max-width: 355px ) {	
+	.td-image{
+		width:80px!important;
+	}
+	
+	.td-image .post-image{
+		width:80px!important;
+		height:58px!important;
+	}
+	
+	.td-image .post-image img{
+		width:100%;
+	}
 }

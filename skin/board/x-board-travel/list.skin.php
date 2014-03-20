@@ -7,12 +7,16 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 <link rel="stylesheet" href="<?php echo $board_skin_url ?>/style.css">
 <?
 $count = 0;
+$img_width = 313;
+$img_height = 177;
 foreach( $list as $l ){	
 		if( $temp_wr_id == $l['wr_id'] ) continue;
-		$images[] = get_list_thumbnail($board['bo_table'], $l['wr_id'], 243, 137);				
+		$images[] = get_list_thumbnail($board['bo_table'], $l['wr_id'], $img_width, $img_height);				
 		$temp_wr_id = $l['wr_id'];
 		if( !$images[$count] ){
-			$images[$count]['src'] = $board_skin_url.'/img/no-image.png';
+			//$images[$count]['src'] = $board_skin_url.'/img/no-image.png';
+			$img = '<img class="img_left" src="'.$board_skin_url.'/img/no-image.png"/>';
+			$images[$count]['src'] = g::thumbnail_from_image_tag( $img, $bo_table, $img_width, $img_height);			
 		}
 		$count++;
 }
@@ -36,133 +40,45 @@ foreach( $list as $l ){
 				<?php if ($list_href) { ?><a href="<?php echo $list_href ?>" class="btn_b01">목록</a><?php } ?>
 				<?php if ($write_href) { ?><a href="<?php echo $write_href ?>" class="btn_b02">글쓰기</a><?php } ?>		
 			</div>
-		<?}?>
-        <table width='750px;' cellpadding=0 cellspacing=0>        
+		<?}?>        
+	<div class = 'board_wrapper'>
         <?php
-        for ($i=0; $i<count($list); $i+=3) {	
+		if( count($list) > 21 ) $list_count = 21;		
+		else $list_count = count($list);
+        for ( $i = 0; $i < $list_count; $i++ ) {	
 			if ( $list[$i]['wr_comment'] ) $no_of_comment = "<b>코멘트</b>(".$list[$i]['wr_comment'].")";
 			else $no_of_comment = null;
 			
 			if ( $list[$i]['wr_hit'] ) $no_of_view = "<b>조회수</b>(".number_format($list[$i]['wr_hit']).")";
 			else $no_of_view = null;
 			
-        ?>
-			<tr valign='top'>
-				<td width='33%'>					
-						<div class='travel_posts'>
-						<div class='post-image'>
-							<a href ='<?=$list[$i]['href']?>'>
-								<img src = '<?=$images[$i]['src']?>' />
-							</a>
-						</div>
-						<div class='post-subject'>
-							<a href ='<?=$list[$i]['href']?>'>
-								<?=conv_subject($list[$i]['wr_subject'],10,"...")?>
-							</a>
-						</div>
-						<div class='user-review'>
-							<span class='view-guide'><?=$no_of_view?></span>&nbsp;&nbsp;<?=$no_of_comment?> 
-							
-							<? /*
-							<div class='stars'>
-								<img src='<?=$board_skin_url?>/img/star.png'/>
-								<img src='<?=$board_skin_url?>/img/star.png'/>
-								<img src='<?=$board_skin_url?>/img/star.png'/>
-								<img src='<?=$board_skin_url?>/img/star.png'/>
-								<img src='<?=$board_skin_url?>/img/star.png'/>
-							</div>
-							*/?>
-							
-						</div>
-						<div class='post-content'>
-							<a href ='<?=$list[$i]['href']?>'>
-								<?=cut_str(strip_tags($list[$i]['wr_content']),200,"...")?>
-							</a>
-						</div>
-						</div>
-				</td>
-				<?if ($list[$i+1]){
-					if ( $list[$i+1]['wr_comment'] ) $no_of_comment = "<b>코멘트</b>(".$list[$i]['wr_comment'].")";
-					else $no_of_comment = null;
-			
-					if ( $list[$i+1]['wr_hit'] ) $no_of_view = "<b>조회수</b>(".number_format($list[$i]['wr_hit']).")";
-					else $no_of_view = null;
-				?>
-				<td>
-					<div class='travel_posts'>
-						<div class='post-image'>
-							<a href ='<?=$list[$i+1]['href']?>'>
-								<img src = '<?=$images[$i+1]['src']?>' />
-							</a>
-						</div>
-						<div class='post-subject'>
-							<a href ='<?=$list[$i+1]['href']?>'>
-								<?=conv_subject($list[$i+1]['wr_subject'],10,"...")?>
-							</a>
-						</div>
-						<div class='user-review'>
-							<span class='view-guide'><?=$no_of_view?></span>&nbsp;&nbsp;<?=$no_of_comment?> 
-							
-							<? /*
-							<div class='stars'>
-								<img src='<?=$board_skin_url?>/img/star.png'/>
-								<img src='<?=$board_skin_url?>/img/star.png'/>
-								<img src='<?=$board_skin_url?>/img/star.png'/>
-								<img src='<?=$board_skin_url?>/img/star.png'/>
-								<img src='<?=$board_skin_url?>/img/star.png'/>
-							</div> */?>
-						</div>
-						<div class='post-content'>
-							<a href ='<?=$list[$i+1]['href']?>'>
-								<?=cut_str(strip_tags($list[$i+1]['wr_content']),200,"...")?>
-							</a>
-						</div>
-					</div>
-				</td>
-				<?}?>
-				<?if ($list[$i+2]){
-					if ( $list[$i+2]['wr_comment'] ) $no_of_comment = "<b>코멘트</b>(".$list[$i]['wr_comment'].")";
-					else $no_of_comment = null;
-					
-					if ( $list[$i+2]['wr_hit'] ) $no_of_view = "<b>조회수</b>(".number_format($list[$i]['wr_hit']).")";
-					else $no_of_view = null;
-				?>
-				<td>
-					<div class='travel_posts'>
-						<div class='post-image'>
-							<a href ='<?=$list[$i+2]['href']?>'>
-								<img src = '<?=$images[$i+2]['src']?>' />
-							</a>
-						</div>
-						<div class='post-subject'>
-							<a href ='<?=$list[$i+2]['href']?>'>
-								<?=conv_subject($list[$i+2]['wr_subject'],10,"...")?><span class='view-guide'>VIEW GUIDE</span>
-							</a>
-						</div>
-						<div class='user-review'>
-							<span class='view-guide'><?=$no_of_view?></span>&nbsp;&nbsp;<?=$no_of_comment?> 
-							<? /*
-							<div class='stars'>
-								<img src='<?=$board_skin_url?>/img/star.png'/>
-								<img src='<?=$board_skin_url?>/img/star.png'/>
-								<img src='<?=$board_skin_url?>/img/star.png'/>
-								<img src='<?=$board_skin_url?>/img/star.png'/>
-								<img src='<?=$board_skin_url?>/img/star.png'/>
-							</div>
-							*/?>
-						</div>
-						<div class='post-content'>
-							<a href ='<?=$list[$i+2]['href']?>'>
-								<?=cut_str(strip_tags($list[$i+2]['wr_content']),200,"...")?>
-							</a>
-						</div>
-					</div>
-				</td>
-				<?}?>
-			</tr>
+        ?>			
+		<div class='travel_posts'>
+			<div class='inner'>
+				<div class='post-image'>
+					<a href ='<?=$list[$i]['href']?>'>
+						<img src = '<?=$images[$i]['src']?>' />
+					</a>
+				</div>
+				<div class='post-subject'>
+					<a href ='<?=$list[$i]['href']?>'>
+						<?=conv_subject($list[$i]['wr_subject'],20,"...")?>
+					</a>
+				</div>
+				<div class='user-review'>
+					<span class='view-guide'><?=$no_of_view?></span>&nbsp;&nbsp;<?=$no_of_comment?> 
+				</div>
+				<div class='post-content'>
+					<a href ='<?=$list[$i]['href']?>'>
+						<?=cut_str(strip_tags($list[$i]['wr_content']),200,"...")?>
+					</a>
+				</div>
+			</div><!--/inner-->	
+		</div><!--/travel_post-->	
         <?php } ?>
-        <?php if (count($list) == 0) { echo '<tr><td colspan="'.$colspan.'" class="empty_table">게시물이 없습니다.</td></tr>'; } ?>        
-        </table>
+		<div style='clear:both;'></div>
+	</div><!--/board_wrapper-->
+        <?php if (count($list) == 0) { echo '<td colspan="'.$colspan.'" class="empty_table">게시물이 없습니다.'; } ?>                
 		<?if( admin() ){?>
 			<?php if ($list_href || $is_checkbox || $write_href) { ?>
 			<div class="lower-buttons">

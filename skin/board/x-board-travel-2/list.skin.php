@@ -35,14 +35,14 @@ foreach( $list as $l ){
 			<?php if ($write_href) { ?><a href="<?php echo $write_href ?>" class="btn_b02">글쓰기</a><?php } ?>
 		</div>
 	<?}?>
-        <table width='750px;' cellpadding=0 cellspacing=0>           
+        <table cellpadding=0 cellspacing=0>           
         <?php
         for ($i=0; $i<count($list); $i++) {		
 		if( $i == 0 ) $no_padding = "no-padding";
 		else $no_padding = ndivl;
         ?>
 			<tr class = 'travel_posts' valign='top'>					
-				<td width ='148px' class = '<?=$no_padding?>'>					
+				<td class = 'td-image <?=$no_padding?>'>					
 					<div class='post-image'><a href ='<?=$list[$i]['href']?>'><img src = '<?=$images[$i]['src']?>' /></a></div>					
 				</td>
 				<td class = '<?=$no_padding?>'>
@@ -50,7 +50,7 @@ foreach( $list as $l ){
 							<?
 								$post_subject = conv_subject($list[$i]['wr_subject'],20,"...");
 								$post_sub_title = cut_str($list[$i]['wr_1'],20,"...");
-								$post_content = cut_str(strip_tags($list[$i]['wr_content']),150,"...");
+								$post_content = cut_str(strip_tags($list[$i]['wr_content']),200,"...");
 								$post_availability = cut_str($list[$i]['wr_2'],50,"...");
 								
 								if( empty($post_sub_title) ) $post_sub_title = null;
