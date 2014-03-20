@@ -14,13 +14,17 @@
 			</div>
 			<div class='right-lower-panel'>
 				<div class='lower-left'>
-			
+					<div class='lower-title'>
+						LOWER-LEFT
+					</div>
 				</div>
 				<div class='lower-middle'>
-				
+					<div class='lower-title'>
+						LOWER-MIDDLE
+					</div>				
 				</div>
 				<div class='lower-right'>
-				
+					<?include x::theme('latest_posts')?>
 				</div>
 				<div style='clear: both'></div>
 			</div>
