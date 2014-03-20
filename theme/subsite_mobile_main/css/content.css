@@ -117,6 +117,10 @@
 }
 
 .right-lower-panel .lower-left .lower-title .title{
+	height:1em;
+	line-height:1.2em;
+	overflow:hidden;
+	word-break:break-all;
 	color:#24a1b3;
 	font-weight:bold;
 	max-width: 70%;
