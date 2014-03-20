@@ -1,3 +1,7 @@
+.left-content{
+	 width:42.5%;
+}
+
 .left-main-banner {
 	max-width: 410px;
 }
@@ -82,6 +86,10 @@
 	
 
 @media (max-width: 31.250em) {
+	.left-content{
+		width: 100%;
+	}
+	
 	.left-main-banner {
 		max-width: 100% !important;
 		margin-bottom: 10px;
@@ -98,4 +106,28 @@
 	.content-table td {
 		display: block;
 	}
+}
+
+/**lower left**/
+.right-lower-panel .lower-left .inner{
+	padding-right:10px;
+}
+
+.right-lower-panel .lower-left .lower-title{	
+	border-bottom: solid 1px #696969;
+	margin-bottom: 15px;
+}
+
+.right-lower-panel .lower-left .lower-title .title{
+	color:#24a1b3;
+	font-weight:bold;
+	max-width: 70%;
+	border-bottom: solid 2px #696969;
+	color: #24a1b3;
+	padding-bottom: 3px;
+}
+
+
+.right-lower-panel .lower-left img{	
+	width:100%;
 }

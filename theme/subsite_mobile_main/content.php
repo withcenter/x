@@ -16,10 +16,16 @@
 				<div class='lower-left'>
 					<div class='inner'>
 						<div class='lower-title'>
+<<<<<<< HEAD
 							LOWER-LEFT
 						</div>
 						<div class='bottom-bar'></div>
 						
+=======
+							<div class='title'>LOWER-LEFT</div>
+						</div>							
+						<img src = '<?=x::url_theme()?>/img/lower-left.png'/>
+>>>>>>> 005914802fbac8b25c9936162a9963553f9cccee
 					</div>
 				</div>
 				<div class='lower-middle'>
