@@ -478,7 +478,7 @@ fieldset{
 	padding: 3em !important;
 	background-color: #efefef !important;
 	font-family: Malgun Gothic;
-	line-height: 1.8em;
+	line-height: 2em;
 	letter-spacing: 1px;
 }
 .page > .title {
@@ -487,7 +487,7 @@ fieldset{
 }
 
 .page > .title.first {
-	font-size: 2em;
+	font-size: 1.4em;
 }
 
 .page > .title.second {
