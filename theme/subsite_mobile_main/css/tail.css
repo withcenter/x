@@ -59,4 +59,8 @@
 	.footer-text .inner {
 		padding-left: 1.563em;
 	}
+	
+	.footer-container .footer .footer-text .inner .copyright {
+		bottom: -20px;
+	}
 }
