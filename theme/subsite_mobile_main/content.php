@@ -10,7 +10,8 @@
 		<td width='10' class='content-divider'></td>
 		<td class='right-content'>
 			<div class='right-main-banner'>
-				<img src="<?=x::theme_url('img/right_main_banner.png')?>"/>
+				<img src="<?=x::theme_url('img/right_main_banner.png')?>" class='right_main_banner_web'/>
+				<img src="<?=x::theme_url('img/right_main_banner_400px.png')?>" class='right_main_banner_mobile'/>
 			</div>
 			<div class='right-lower-panel'>
 				<div class='lower-left'>
@@ -18,7 +19,8 @@
 						<div class='lower-title'>
 							<div class='title'>LOWER-LEFT</div>
 						</div>							
-						<img src = '<?=x::url_theme()?>/img/lower-left.png'/>
+						<img src = '<?=x::url_theme()?>/img/lower-left.png' class='lower_left_image_web'/>
+						<img src = '<?=x::url_theme()?>/img/lower-left_400px.png' class='lower_left_image_mobile'/>
 					</div>
 				</div>
 				<div class='lower-middle'>
