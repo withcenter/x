@@ -20,7 +20,7 @@
 	?>	
 		<div class='banner' total_banners="<?=$total_banners?>" >
 			<div class='inner' style="position: relative; height: 318px; width: 968px;">
-				<div class='images-container' style='z-index: 50; width: <?=$container_width+968?>px; position: relative; left: -968px;' container-width='<?=$container_width?>'>
+				<div class='images-container' style='z-index: 50; width: <?=$container_width+(968*2)?>px; position: relative; left: -968px;' container-width='<?=$container_width?>'>
 				<?
 					/** Fake Last Image */
 							if ( !$url = $banners[$total_banners-1]['href'] ) $url = "javascript:void(0)";
