@@ -1,5 +1,5 @@
 $(function(){
-	var banner_rotator = setInterval( function() { rotate_the_banner() } , 1000 );
+	var banner_rotator = setInterval( function() { rotate_the_banner() } , 5000 );
 	var banner_num, left_value, page_num;
 	var total_banners = $(".banner").attr("total_banners");
 	
@@ -31,7 +31,7 @@ $(function(){
 	/*hide banner information*/
 	$(".banner").mouseleave(function(){
 		$(this).find('.banner-content').hide();
-		banner_rotator = setInterval( function() { rotate_the_banner() } , 1000 );
+		banner_rotator = setInterval( function() { rotate_the_banner() } , 5000 );
 		$(".next-banner").hide();
 		$(".previous-banner").hide();		
 	});
