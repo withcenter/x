@@ -62,7 +62,7 @@ $(function(){
 		$(".page_"+page_num).addClass('selected_num');
 		$(".image_"+page_num).addClass('selected');
 		$('.banner-content').fadeOut();
-		$(".images-container").animate({left: -(((page_num-1) * 968)+968)}, 500).find('.banner-content').fadeIn();
+		$(".images-container").animate({left: -((page_num-1) * 968)}, 500).find('.banner-content').fadeIn();
 		previous_next_toggle( page_num );
 	}
 	
