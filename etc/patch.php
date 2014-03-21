@@ -22,7 +22,7 @@ if ( ! file_exists( $path_dbconfig ) ) {
 define('_INDEX_', true);
 include_once('../common.php');
 /// to prevent sesion warnings.
-session_unset();
+session_destroy();
 $dir_root = G5_PATH;
 
 
