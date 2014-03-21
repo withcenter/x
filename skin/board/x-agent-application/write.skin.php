@@ -6,8 +6,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 
 $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하였습니다.";
 ?>
-
-<section id="bo_w">
+<div id="application-form">
     <!-- 게시물 작성/수정 시작 { -->
 
     <form name="fwrite" id="fwrite" action="<?php echo $action_url ?>" onsubmit="return fwrite_submit(this);" method="post" enctype="multipart/form-data" autocomplete="off" style="width:<?php echo $width; ?>">
@@ -23,50 +22,40 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
     <input type="hidden" name="sod" value="<?php echo $sod ?>">
     <input type="hidden" name="page" value="<?php echo $page ?>">
 	<input type="hidden" name="wr_subject" value='<?=$application_status?>' />
-	<input type="hidden" name="secret" value="secret">
+	<? if ($is_secret) {?> 
+		<input type="hidden" name="secret" value="secret">
+	<? }?>
 	
 	<script>
 		var application_status = "<?=$application_status?>";
 	</script>
     <?php
 	
-
-    $option = '';
-    $option_hidden = '';
-	/*
-    if ($is_notice || $is_html || $is_secret || $is_mail) {
-        $option = '';
-        if ($is_notice) {
-            $option .= "\n".'<input type="checkbox" id="notice" name="notice" value="1" '.$notice_checked.'>'."\n".'<label for="notice">공지</label>';
-        }
-
-      
-
-        if ($is_secret) {
-            if ($is_admin || $is_secret==1) {
-                $option .= "\n".'<input type="checkbox" id="secret" name="secret" value="secret" '.$secret_checked.'>'."\n".'<label for="secret">비밀글</label>';
-            } else {
-                $option_hidden .= '<input type="hidden" name="secret" value="secret">';
-            }
-        }
+	// 웹사이트 분류 선택 박스 
+	ob_start();
+	$c = array(
+				'company' => '회사/업체/상품소개',
+				'community' => '커뮤니티(카페)',
+				'shopping' => '쇼핑몰'		
+	);
+	echo "<select name='wr_6'>
+			<option value=''>분류를 선택 하세요</option>
+			<option value=''></option>
+	";
+	foreach ( $c as $key => $value ) {
+		if ( $wr_6 == $key ) $selected = "selected";
+		else $selected = null;
 		
-        if ($is_mail) {
-            $option .= "\n".'<input type="checkbox" id="mail" name="mail" value="mail" '.$recv_email_checked.'>'."\n".'<label for="mail">답변메일받기</label>';
-        }
-		
-	} */
-	 if ($is_html) {
-            if ($is_dhtml_editor) {
-                $option_hidden .= '<input type="hidden" value="html1" name="html">';
-            } else {
-                $option .= "\n".'<input type="checkbox" id="html" name="html" onclick="html_auto_br(this);" value="'.$html_value.'" '.$html_checked.'>'."\n".'<label for="html">html</label>';
-            }
-     }
+		echo "<option value='$key' $selected>$value</option>";
+	}
 	
-    echo $option_hidden;
+	echo "</select>";
+	
+	$sel_category = ob_get_clean();
+	
     ?>
 	<div class='application-title'>제작의뢰 신청서</div>
-	<table cellpadding=0 cellspacing=0 width='100%' class='application-table'> 
+	<table cellpadding=0 cellspacing=0 width='100%' class='application-table'>
 		<tr>
 			<td>회사/단체/신청자</td>
 			<td><input type='text' name='wr_1' value='<?=$wr_1?>' /></td>
@@ -76,14 +65,14 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
 			<td><input type='text' name='wr_2' value='<?=$wr_2?>' /></td>
 		</tr>
 		<tr>
-			<td>담당자 명</td>
-			<td><input type='text' name='wr_3' value='<?=$wr_3?>' /></td>
+			<td>담당자 이름</td>
+			<td><input type='text' name='wr_name' value='<?=$wr_name?>' /></td>
 		</tr>
 		<tr>
 			<td>전화</td>
 			<td>
-				(유선)<input type='text' name='wr_4' value='<?=$wr_4?>' />
-				(무선)<input type='text' name='wr_5' value='<?=$wr_5?>' />
+				<input type='text' name='wr_4' value='<?=$wr_4?>' placeholder='유선 전화'/>
+				<input type='text' name='wr_5' value='<?=$wr_5?>' placeholder='휴대 전화' />
 			</td>
 		</tr>
 		<tr>
@@ -96,15 +85,25 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
 		</tr>
 		<tr>
 			<td>웹사이트 분류</td>
-			<td><input type='text' name='wr_6' value='<?=$wr_6?>' /></td>
+			<td><?=$sel_category?></td>
 		</tr>
 		<tr>
 			<td>템플릿 선택</td>
-			<td><input type='text' name='wr_7' value='<?=$wr_7?>' /></td>
+			<td><div class='sel-template-msg'></div></td>
+		<tr>
+			<td colspan='2'> 
+				<input type='hidden' name='wr_7' value='<?=$wr_7?>' />
+				<? if ( $wr_7 ) $active_theme = $wr_7; ?>
+				<iframe class='show-template-frame' frameborder=0 border=0 src='<?=x::url()?>/?module=site&action=template&theme=n&active_theme=<?=$wr_7?>'></iframe>
+			</td>
 		</tr>
 		<tr>
 			<td>예상 제작 기간</td>
 			<td><input type='text' name='wr_8' value='<?=$wr_8?>' /></td>
+		</tr>
+		<tr>
+			<td>신청 도메인</td>
+			<td><input type='text' name='wr_9' value='<?=$wr_9?>' /> 원하시는 도메인이 사용 중인 경우 다른 도메인을 선택 하셔야 합니다.</td>
 		</tr>
 		<tr>
 			<td colspan=2>기타 요청사항</td>
@@ -112,127 +111,29 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
 		<tr>
 			<td colspan=2><?php echo $editor_html; // 에디터 사용시는 에디터로, 아니면 textarea 로 노출 ?>
 			</td>
-		</tr> 
-	<? /*
-        <table>
-        <tbody>
-        <?php if ($is_name) { ?>
-        <tr>
-            <th scope="row"><label for="wr_name">이름<strong class="sound_only">필수</strong></label></th>
-            <td><input type="text" name="wr_name" value="<?php echo $name ?>" id="wr_name" required class="frm_input required" size="10" maxlength="20"></td>
-        </tr>
-        <?php } ?>
-
-        <?php if ($is_password) { ?>
-        <tr>
-            <th scope="row"><label for="wr_password">비밀번호<strong class="sound_only">필수</strong></label></th>
-            <td><input type="password" name="wr_password" id="wr_password" <?php echo $password_required ?> class="frm_input <?php echo $password_required ?>" maxlength="20"></td>
-        </tr>
-        <?php } ?>
-
-        <?php if ($is_email) { ?>
-        <tr>
-            <th scope="row"><label for="wr_email">이메일</label></th>
-            <td><input type="text" name="wr_email" value="<?php echo $email ?>" id="wr_email" class="frm_input email" size="50" maxlength="100"></td>
-        </tr>
-        <?php } ?>
-
-        <?php if ($is_homepage) { ?>
-        <tr>
-            <th scope="row"><label for="wr_homepage">홈페이지</label></th>
-            <td><input type="text" name="wr_homepage" value="<?php echo $homepage ?>" id="wr_homepage" class="frm_input" size="50"></td>
-        </tr>
-        <?php } ?>
-
-        <?php if ($option) { ?>
-        <tr>
-            <th scope="row">옵션</th>
-            <td><?php echo $option ?></td>
-        </tr>
-        <?php } ?>
-
-        <?php if ($is_category) { ?>
-        <tr>
-            <th scope="row"><label for="ca_name">분류<strong class="sound_only">필수</strong></label></th>
-            <td>
-                <select name="ca_name" id="ca_name" required class="required" >
-                    <option value="">선택하세요</option>
-                    <?php echo $category_option ?>
-                </select>
-            </td>
-        </tr>
-        <?php } ?>
-
-        <tr>
-            <th scope="row"><label for="wr_subject">제목<strong class="sound_only">필수</strong></label></th>
-            <td>
-                <div id="autosave_wrapper">
-                    <input type="text" name="wr_subject" value="<?php echo $subject ?>" id="wr_subject" required class="frm_input required" size="50" maxlength="255">
-                    <?php if ($is_member) { // 임시 저장된 글 기능 ?>
-                    <script src="<?php echo G5_JS_URL; ?>/autosave.js"></script>
-                    <button type="button" id="btn_autosave" class="btn_frmline">임시 저장된 글 (<span id="autosave_count"><?php echo $autosave_count; ?></span>)</button>
-                    <div id="autosave_pop">
-                        <strong>임시 저장된 글 목록</strong>
-                        <div><button type="button" class="autosave_close"><img src="<?php echo $board_skin_url; ?>/img/btn_close.gif" alt="닫기"></button></div>
-                        <ul></ul>
-                        <div><button type="button" class="autosave_close"><img src="<?php echo $board_skin_url; ?>/img/btn_close.gif" alt="닫기"></button></div>
-                    </div>
-                    <?php } ?>
-                </div>
-            </td>
-        </tr>
-
-        <tr>
-            <th scope="row"><label for="wr_content">내용<strong class="sound_only">필수</strong></label></th>
-            <td class="wr_content">
-                <?php if($write_min || $write_max) { ?>
-                <!-- 최소/최대 글자 수 사용 시 -->
-                <p id="char_count_desc">이 게시판은 최소 <strong><?php echo $write_min; ?></strong>글자 이상, 최대 <strong><?php echo $write_max; ?></strong>글자 이하까지 글을 쓰실 수 있습니다.</p>
-                <?php } ?>
-                <?php echo $editor_html; // 에디터 사용시는 에디터로, 아니면 textarea 로 노출 ?>
-                <?php if($write_min || $write_max) { ?>
-                <!-- 최소/최대 글자 수 사용 시 -->
-                <div id="char_count_wrap"><span id="char_count"></span>글자</div>
-                <?php } ?>
-            </td>
-        </tr>
-
-        <?php for ($i=1; $is_link && $i<=G5_LINK_COUNT; $i++) { ?>
-        <tr>
-            <th scope="row"><label for="wr_link<?php echo $i ?>">링크 #<?php echo $i ?></label></th>
-            <td><input type="text" name="wr_link<?php echo $i ?>" value="<?php if($w=="u"){echo$write['wr_link'.$i];} ?>" id="wr_link<?php echo $i ?>" class="frm_input" size="50"></td>
-        </tr>
-        <?php } ?>
-
-        <?php for ($i=0; $is_file && $i<$file_count; $i++) { ?>
-        <tr>
-            <th scope="row">파일 #<?php echo $i+1 ?></th>
-            <td>
-                <input type="file" name="bf_file[]" title="파일첨부 <?php echo $i+1 ?> :  용량 <?php echo $upload_max_filesize ?> 이하만 업로드 가능" class="frm_file frm_input">
-                <?php if ($is_file_content) { ?>
-                <input type="text" name="bf_content[]" value="<?php echo $file[$i]['bf_content'];  ?>" title="파일 설명을 입력해주세요." class="frm_file frm_input" size="50">
-                <?php } ?>
-                <?php if($w == 'u' && $file[$i]['file']) { ?>
-                <input type="checkbox" id="bf_file_del<?php echo $i ?>" name="bf_file_del[<?php echo $i;  ?>]" value="1"> <label for="bf_file_del<?php echo $i ?>"><?php echo $file[$i]['source'].'('.$file[$i]['size'].')';  ?> 파일 삭제</label>
-                <?php } ?>
-            </td>
-        </tr>
-        <?php } ?>
-
-        <?php if ($is_guest) { //자동등록방지  ?>
-        <tr>
-            <th scope="row">자동등록방지</th>
-            <td>
-                <?php echo $captcha_html ?>
-            </td>
-        </tr>
-        <?php } ?>
-
-        </tbody>
-        </table>
-		*/?>
+		</tr>
 	</table>
+	<div class='terms-conditions'>
+		<div class='title'>계약 확인</div>
+			<ul>
+				<li>홈페이지 개설 비용은 5만원 ( 1년 도메인, 웹호스팅 포함 ) 이며, 추가 기능, 디자인 요청시 비용이 증가 할 수 있습니다.</li>
 
+				<li>처음 사이트 개설 1년 후 매 년 5만원 의 유지 비용을 지불해야합니다.</li>
+
+				<li>모든 비용은 선불입니다.</li>
+
+				<li>웹호스팅은 기본 사양(HDD 400M, 트래픽 1.4G)이며 방문자가 늘어날 수록 웹 트래픽 량을 증설 해야 할 수 있습니다. 이 경우 비용이 증가 될 수 있습니다.</li>
+			</ul>
+			<div><input type='checkbox' name='wr_10' value=1 id='agreement' <?=$wr_10?"checked=1":""?>/> 동의 합니다. </div>
+	</div>
+	<?php if ($is_guest) { //자동등록방지  ?>
+        <div><?php echo $captcha_html ?></div>
+    <?php } ?>
+	
+	<?php if ($is_secret) {?>
+		<div>비밀번호 <input type="password" name="wr_password" id="wr_password" <?php echo $password_required ?> class="frm_input <?php echo $password_required ?>" maxlength="20"/></div>
+	<? }?>
+	
     <div class="btn_confirm">
         <input type="submit" value="작성완료" id="btn_submit" accesskey="s" class="btn_submit">
         <a href="./board.php?bo_table=<?php echo $bo_table ?>" class="btn_cancel">취소</a>
@@ -268,6 +169,7 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
 
     function fwrite_submit(f)
     {
+		
 		var content = f.wr_content.value;
 		if ( f.wr_content.value == '' ) f.wr_content.value = '기타 요청 사항 없음';
 		
@@ -282,7 +184,7 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
 			return false;
 		}
 		
-		if ( f.wr_3.value == '' ) {
+		if ( f.wr_name.value == '' ) {
 			alert ( "담당자 성함을 입력 하세요");
 			return false;
 		}
@@ -312,66 +214,38 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
 			return false;
 		}
 		
-		f.wr_subject.value = f.wr_3.value + application_status;
-		
-		/*
-        <?php echo $editor_js; // 에디터 사용시 자바스크립트에서 내용을 폼필드로 넣어주며 내용이 입력되었는지 검사함   ?>
-		
-        var subject = "";
-        var content = "";
-		
-        $.ajax({
-            url: g5_bbs_url+"/ajax.filter.php",
-            type: "POST",
-            data: {
-                "subject": f.wr_subject.value,
-                "content": f.wr_content.value
-            },
-            dataType: "json",
-            async: false,
-            cache: false,
-            success: function(data, textStatus) {
-                subject = data.subject;
-                content = data.content;
-            }
-        });
+		if ( !document.getElementById("agreement").checked ) {
+			alert ("계약 확인을 읽어 보신 후 계약을 원하실 경우 동의합니다에 체크해 주세요.");
+			return false;
+		}
+	
+		f.wr_subject.value = f.wr_name.value + application_status;
 		
 		
-        if (subject) {
-            alert("제목에 금지단어('"+subject+"')가 포함되어있습니다");
-            f.wr_subject.focus();
-            return false;
-        }
-
-        if (content) {
-            alert("내용에 금지단어('"+content+"')가 포함되어있습니다");
-            if (typeof(ed_wr_content) != "undefined")
-                ed_wr_content.returnFalse();
-            else
-                f.wr_content.focus();
-            return false;
-        }
-
-        if (document.getElementById("char_count")) {
-            if (char_min > 0 || char_max > 0) {
-                var cnt = parseInt(check_byte("wr_content", "char_count"));
-                if (char_min > 0 && char_min > cnt) {
-                    alert("내용은 "+char_min+"글자 이상 쓰셔야 합니다.");
-                    return false;
-                }
-                else if (char_max > 0 && char_max < cnt) {
-                    alert("내용은 "+char_max+"글자 이하로 쓰셔야 합니다.");
-                    return false;
-                }
-            }
-        }
-		*/
-        <?php echo $captcha_js; // 캡챠 사용시 자바스크립트에서 입력된 캡챠를 검사함  ?>
+        <?php  echo $captcha_js; // 캡챠 사용시 자바스크립트에서 입력된 캡챠를 검사함   ?>
 
         document.getElementById("btn_submit").disabled = "disabled";
 
         return true;
     }
+	
+	function callback_preview( src, theme, theme_name ) {
+		$(".popup-preview").remove();
+		$("#application-form").prepend("<div class='popup-preview'><div class='inner'><img src='" + src + "' />" + 
+		"<div><span class='select-theme'>선택하기</span><span class='close-select-theme'>창 닫기</span></div>" +
+		"</div></div>");
+		
+		$(".close-select-theme").click(function() {
+			$(".popup-preview").remove();
+		});
+		$(".select-theme").click(function() {
+			$("input[name='wr_7']").val ( theme );
+			$(".sel-template-msg").html("<b>" + theme_name + "</b> 이 선택 됨");
+			var old_src = $(".show-template-frame").prop("src", '<?=x::url()?>/?module=site&action=template&theme=n&active_theme=' + theme);
+			
+			$(".popup-preview").remove();
+		});
+	}
     </script>
-</section>
+</div>
 <!-- } 게시물 작성/수정 끝 -->

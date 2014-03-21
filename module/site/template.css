@@ -1,0 +1,14 @@
+.template .theme-thumb {
+	border: 1px solid #666666;
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+}
+.template .theme-thumb  img {
+	width: 100%;
+}
+
+.template .inactive {
+	float: left;
+}
+
