@@ -213,6 +213,10 @@
 		margin-bottom: 10px;
 	}
 	
+	.lower-middle .inner{
+		padding:0;
+	}
+	
 	.lower-middle .inner img {
 		width: 100%;
 	}
