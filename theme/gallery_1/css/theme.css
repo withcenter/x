@@ -1,9 +1,18 @@
+.layout{
+	font-family:dotum;
+	font-size:9pt;
+}
+
 .layout .body-wrapper{
 	width:970px;
 	margin:auto;
 }
 
+.layout .header{
+	margin-top:12px;	
+}
+
 .layout .header .inner{
 	width:970px;
-	margin:auto;
+	margin:0 auto 10px auto;
 }

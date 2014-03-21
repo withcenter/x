@@ -1,5 +1,11 @@
 <ul id="gallery_1_main_menu">
-	<?="<li>" . implode( "</li><li>", x::menu_links() ) . "</li>"?>
+	<?
+		$menus = x::menu_links();		
+		for( $i=0; $i<5; $i++ ){
+			$menu_list[] = str_replace("</a>","<span class='highlight'></span></a>", $menus[$i]);
+		}		
+	?>
+	<?="<li>" . implode( "</li><li>", $menu_list ) . "</li>"?>
 </ul>
 
 <?
@@ -15,12 +21,29 @@
 ?>
 <style>
 #gallery_1_main_menu a[href*="<?=$_bo_table?>"] {
-	background-color: black;
+	border-top:4px solid #2ca3b4;
+	border-bottom:3px solid #2ca3b4;	
+}
+
+#gallery_1_main_menu a[href*="<?=$_bo_table?>"] .highlight{
+	display:block;
 }
 </style>
 <script>
+$(function(){
+	var triangle_left;
+	var selected_menu = "#gallery_1_main_menu a[href*='<?=$_bo_table?>']";
+	
+	if( $(selected_menu).length ){				
+		triangle_left = $(selected_menu).width()/2+9;
+		console.log(triangle_left);
+		$(selected_menu).find('.highlight').css('left',triangle_left);
+	}
+});
+</script>
+<script>
 	$(function(){
-		if( '<?=$in['module']?>' ) $("#gallery_1_main_menu li[page='admin-menu']").addClass("comm3-menu-selected");		
+		if( '<?=$in['module']?>' ) $("#gallery_1_main_menu li[page='admin-menu']").addClass("selected");		
 	});
 </script>
 

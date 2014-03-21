@@ -1,5 +1,5 @@
 <?php
-	$theme_config['name'] = ln("Gallery Theme 1","Gallery Theme 1");
+	$theme_config['name'] = ln("Gallery No. 1","Gallery No. 1");
 	$theme_config['type'] = "pc";
 		
 	$theme_config['menu_right']['max'] = 5;

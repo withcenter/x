@@ -1,7 +1,7 @@
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/theme.css' />
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/head.css' />
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/tail.css' />
-<script src='<?=x::url_theme()?>/js/visitor.js' /></script>
+<script src='<?=x::url_theme()?>/js/theme.js' /></script>
 
 
 
@@ -24,8 +24,7 @@
 		float: <?=$content?>;
 	}
 </style>
-<div class='layout'>
-	<div class='top'></div>
+<div class='layout'>	
 	<div class='header'>
 		<div class='inner'>
 			<table width='100%' cellpadding=0 cellspacing=0><tr valign='top'>
@@ -42,7 +41,9 @@
 				</td>
 				<td>
 					<div class='search_and_top_wrapper'>
-						<?include 'top.php'?>
+						<div class='top'>
+							<?include 'top.php'?>
+						</div>
 						<fieldset id="search_field">
 							<legend>사이트 내 전체검색</legend>
 							<form name="gallery_1_search_form" method="get" action="<?=x::url()?>" onsubmit="return fsearchbox_submit(this);">
@@ -55,11 +56,16 @@
 							<input type="hidden" name="sop" value="and">
 							<label for="sch_stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
 							*/?>
-							<input type="text" name="key" id="gallery_1_search_text" maxlength="20" placeholder='검색어를 입력해 주세요.' autocomplete='off'>
-							<input type="image" src='<?=x::url_theme()?>/img/search.png' id="gallery_1_search_submit">
-							<div style='clear:both'></div>
+							<table cellpadding=0 cellspacing=0 width='100%'><tr>
+								<td>
+									<input type="text" name="key" id="gallery_1_search_text" maxlength="20" placeholder='검색어를 입력해 주세요.' autocomplete='off'>
+								</td>
+								<td width='40'>
+									<input type="image" src='<?=x::url_theme()?>/img/search.png' id="gallery_1_search_submit">
+								</td>
+							</table>							
 							</form>				
-						</fieldset>
+						</fieldset>						
 						<!--[if lte IE 8]>
 							<style>						
 								#gallery_1_search_text {							
@@ -70,7 +76,10 @@
 					</div><!--/search_and_top_wrapper-->
 				</td>
 				</tr>
-			</table>
+			</table>			
+		</div>
+		<div class='main-menu'>
+			<?include 'main-menu.php'?>
 		</div>
 	</div><!--header-->
 	<div class='body-wrapper'>		
