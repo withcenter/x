@@ -13,6 +13,10 @@
 	margin:4px 0 10px 0;	
 }
 
+.header  .text-info a{
+	text-decoration:none;
+}
+
 .header  .text-info.tablet{	
 	display:none;
 }

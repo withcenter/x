@@ -17,8 +17,9 @@
 				<div class='lower-left'>
 					<div class='inner'>
 						<div class='lower-title'>
-							<div class='title'>LOWER-LEFT</div>
-						</div>							
+							LOWER-LEFT
+						</div>		
+						<div class='bottom-bar'></div>						
 						<img src = '<?=x::url_theme()?>/img/lower-left.png' class='lower_left_image_web'/>
 						<img src = '<?=x::url_theme()?>/img/lower-left_400px.png' class='lower_left_image_mobile'/>
 					</div>
