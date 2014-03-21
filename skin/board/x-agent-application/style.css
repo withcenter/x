@@ -262,31 +262,75 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 	border: 1px solid #d5d5d5;
 	padding: 20px;
 	border-radius: 2px;
+	color: #555555;
 }
 
 .application-title {
-	border: 1px solid #666666;
+	border: 1px solid #d5d5d5;
 	font-family: '맑은 고딕', AppleGothic;
 	padding: 10px;
 	border-radius: 2px;
 	margin-bottom: 10px;
-	font-size: 11pt;
+	font-size: 12pt;
 	font-weight: bold;
 	color: #3e6271;
+	background-color: #fbfbfb;
 }
 #application-form  .application-table tr td  {
-	padding: 5px 0;
+	padding: 5px 10px;
 }	
 #application-form  .application-table tr td input[type='text'] {
 	width: 200px;
 	padding: 5px 10px;
 }
+#application-form  .application-table tr td input[name='wr_2'] {
+	width: 71%;
+}
 #application-form  .application-table tr td select {
 	padding: 5px 10px;
 }
+
+#application-form  .item-title {
+	font-family: '맑은 고딕', AppleGothic;
+	font-size: 11pt;
+	color: #60583c;
+}
+#application-form  .item-extra {
+	width: 160px;
+	display: inline-block;
+}
+#application-form .captcha-title {
+	position: relative;
+	top: -30px;
+}
+#application-form  .margin{
+	margin: 20px 0 10px 0;
+}
+
+#application-form  .margin-bottom {
+	margin-bottom: 30px;
+}
+#application-form  .application-table tr .item-underline {
+	border-bottom: 1px solid #d5d5d5;
+	padding-bottom: 10px;
+}
+
+#application-form  .application-table tr td textarea[name='wr_content'] {
+	width: 94%;
+	height: 150px;
+	resize: none;
+	padding: 3%;
+}
+
+#application-form  .application-table tr td  .item-message {
+	margin-top: 10px;
+	color: #705c3a;
+	font-style: italic;
+	font-size: 10pt;
+}
 .show-template-frame {
 	width: 100%;
-	height: 300px;
+	border: 1px solid #d5d5d5;
 }
 
 .popup-preview{
@@ -311,4 +355,33 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 	max-height: 700px;
 	vertical-align: 
 	
+}
+
+
+/* 계약 확인 */
+.terms-conditions {
+	background-color: #fbfbfb;
+	margin: 10px;
+	padding: 20px;
+}
+.terms-conditions  .title {
+	font-size: 11pt;
+	color: #313131;
+	font-family: '맑은 고딕', AppleGothic;
+	border-bottom: 1px solid #d5d5d5;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+}
+.terms-conditions  ul {
+	padding-left: 20px;
+	margin: 0;
+}
+.terms-conditions  ul  li {
+	line-height: 180%;
+	color: #555555;
+}
+.terms-conditions .terms-agree {
+	text-align: center;
+	margin-top: 30px;
+	color: #313131;
 }

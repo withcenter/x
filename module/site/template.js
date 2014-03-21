@@ -1,4 +1,6 @@
 $(function() {
+	parent.callback_iframe_resize( $(".template").height() );
+	
 	$(".template .inactive").click(function() {
 		var src = $(this).children('img').attr('src');
 		var theme_value = $(this).attr('theme_value');

@@ -9,45 +9,47 @@
 			if ( $dir == $active_theme ) {
 				$theme_config = array();
 				include X_DIR_THEME . "/$dir/config.php";
-				$active_theme = $theme_config['name'];
+				$active_theme_name = $theme_config['name'];
 				break;
 			}
 		}
 	?>
-	<?if ( $active_theme ) { ?>
+	<?if ( $active_theme_name ) { ?>
 		<div class='theme-thumb'>
-			<img src='theme/<?=meta('theme')?>/preview.jpg' >					
-			<div class='theme-name active-theme'><?=$active_theme?><span class='active-note'>선택 되었습니다</span></div>
+			<img src='theme/<?=$active_theme?>/preview.jpg' >					
+			<div class='theme-name active-theme'><?=$active_theme_name?><span class='active-note'>가 선택 되었습니다</span></div>
 		</div>
 	<?}?>
-	<?php
-		$theme_ctr = 2;
-			
-			foreach ( $dirs as $dir ) {
-				$path = X_DIR_THEME . "/$dir/config.php";
-				if ( ! file_exists($path) ) continue;
+	<div class='theme-selection'>
+		<?php
+			$theme_ctr = 2;
 				
-				$theme_config = array();
-				include $path;
-				$name = $theme_config['name'];
-				if ( empty($name) ) continue;
+				foreach ( $dirs as $dir ) {
+					$path = X_DIR_THEME . "/$dir/config.php";
+					if ( ! file_exists($path) ) continue;
+					
+					$theme_config = array();
+					include $path;
+					$name = $theme_config['name'];
+					if ( empty($name) ) continue;
+					
+					$type = explode(',', $theme_config['type']);
+					
+					
+					
+					if ( ! in_array( 'pc', $type ) ) continue;
+					
+					
+					
+					
+				$url = x::url().'/theme/'.$dir.'/preview.jpg';
+				?>
+				<div class='theme-thumb inactive' theme_value='<?=$dir?>' theme_name ='<?=$theme_config['name']?>'>
+					<img src='<?=$url?>' >
+					<span class='theme-name'><?=$name?></span>
+				</div>
 				
-				$type = explode(',', $theme_config['type']);
-				
-				
-				
-				if ( ! in_array( 'pc', $type ) ) continue;
-				
-				
-				
-				
-			$url = x::url().'/theme/'.$dir.'/preview.jpg';
-			?>
-			<div class='theme-thumb inactive' theme_value='<?=$dir?>' theme_name ='<?=$theme_config['name']?>'>
-				<img src='<?=$url?>' >
-				<span class='theme-name'><?=$name?></span>
-			</div>
-			
-		<?}?>
-		<div style='clear:both'></div>
+			<?}?>
+			<div style='clear:both'></div>
+	</div>
 </div>			

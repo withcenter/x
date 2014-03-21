@@ -58,38 +58,39 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
 	<div class='application-title'>제작의뢰 신청서</div>
 	<table cellpadding=0 cellspacing=0 width='100%' class='application-table'>
 		<tr>
-			<td>회사/단체/신청자</td>
+			<td width='150'>
+			<span class='item-title'>회사/단체/신청자</span></td>
 			<td><input type='text' name='wr_1' value='<?=$wr_1?>' /></td>
 		</tr>
 		<tr>
-			<td>주소</td>
+			<td><span class='item-title'>주소</span></td>
 			<td><input type='text' name='wr_2' value='<?=$wr_2?>' /></td>
 		</tr>
 		<tr>
-			<td>담당자 이름</td>
-			<td><input type='text' name='wr_name' value='<?=$name?>' /></td>
+			<td><span class='item-title'>작성자 이름</span></td>
+			<td><input type='text' name='wr_name' value='<?=$name?$name:$member['mb_name']?>' <? if ( login() ) echo "disabled"; ?> /></td>
 		</tr>
 		<tr>
-			<td>전화</td>
+			<td><span class='item-title'>전화</span></td>
 			<td>
 				<input type='text' name='wr_4' value='<?=$wr_4?>' placeholder='유선 전화'/>
 				<input type='text' name='wr_5' value='<?=$wr_5?>' placeholder='휴대 전화' />
 			</td>
 		</tr>
 		<tr>
-			<td>이메일</td>
-			<td><input type='text' name='wr_email' value='<?=$wr_email?>' /></td>
+			<td><span class='item-title'>이메일</span></td>
+			<td><input type='text' name='wr_link1' value='<?=$write['wr_link1']?>' /></td>
 		</tr>
 		<tr>
-			<td>현재 웹사이트 주소</td>
-			<td><input type='text' name='wr_homepage' value='<?=$wr_homepage?>' /></td>
+			<td><span class='item-title'>현재 웹사이트 주소</span></td>
+			<td><input type='text' name='wr_link2' value='<?=$write['wr_link2']?>' /></td>
 		</tr>
 		<tr>
-			<td>웹사이트 분류</td>
-			<td><?=$sel_category?></td>
+			<td class='item-underline'><span class='item-title'>웹사이트 분류</span></td>
+			<td class='item-underline'><?=$sel_category?></td>
 		</tr>
 		<tr>
-			<td>템플릿 선택</td>
+			<td><span class='item-title'>템플릿 선택</span></td>
 			<td><div class='sel-template-msg'></div></td>
 		<tr>
 			<td colspan='2'> 
@@ -99,15 +100,18 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
 			</td>
 		</tr>
 		<tr>
-			<td>예상 제작 기간</td>
+			<td><span class='item-title'>예상 제작 기간</span></td>
 			<td><input type='text' name='wr_8' value='<?=$wr_8?>' /></td>
 		</tr>
 		<tr>
-			<td>신청 도메인</td>
-			<td><input type='text' name='wr_9' value='<?=$wr_9?>' /> 원하시는 도메인이 사용 중인 경우 다른 도메인을 선택 하셔야 합니다.</td>
+			<td><span class='item-title'>신청 도메인</span></td>
+			<td>
+				<input type='text' name='wr_9' value='<?=$wr_9?>' />
+				<div class='item-message'>원하시는 도메인이 사용 중인 경우 다른 도메인을 선택 하셔야 합니다.</div>
+			</td>
 		</tr>
 		<tr>
-			<td colspan=2>기타 요청사항</td>
+			<td colspan=2 class='item-underline'><span class='item-title'>기타 요청사항</span></td>
 		</tr>
 		<tr>
 			<td colspan=2><?php echo $editor_html; // 에디터 사용시는 에디터로, 아니면 textarea 로 노출 ?>
@@ -115,7 +119,7 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
 		</tr>
 	</table>
 	<div class='terms-conditions'>
-		<div class='title'>계약 확인</div>
+		<div class='title'>계약 확인 및 동의</div>
 			<ul>
 				<li>홈페이지 개설 비용은 5만원 ( 1년 도메인, 웹호스팅 포함 ) 이며, 추가 기능, 디자인 요청시 비용이 증가 할 수 있습니다.</li>
 
@@ -125,18 +129,18 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
 
 				<li>웹호스팅은 기본 사양(HDD 400M, 트래픽 1.4G)이며 방문자가 늘어날 수록 웹 트래픽 량을 증설 해야 할 수 있습니다. 이 경우 비용이 증가 될 수 있습니다.</li>
 			</ul>
-			<div><input type='checkbox' name='wr_10' value=1 id='agreement' <?=$wr_10?"checked=1":""?>/> 동의 합니다. </div>
+			<div class='terms-agree'><input type='checkbox' name='wr_10' value=1 id='agreement' <?=$wr_10?"checked=1":""?>/> 동의 합니다. </div>
 	</div>
 	<?php if ($is_guest) { //자동등록방지  ?>
-        <div><?php echo $captcha_html ?></div>
+        <div class='margin'><span class='item-title item-extra captcha-title'>보안문자 입력</span><?php echo $captcha_html ?></div>
     <?php } ?>
 	
 	<?php if ($is_secret) {?>
-		<div>비밀번호 <input type="password" name="wr_password" id="wr_password" <?php echo $password_required ?> class="frm_input <?php echo $password_required ?>" maxlength="20"/></div>
+		<div class='margin-bottom'><span class='item-title item-extra'>비밀번호</span> <input type="password" name="wr_password" id="wr_password" <?php echo $password_required ?> class="frm_input <?php echo $password_required ?>" maxlength="20"/></div>
 	<? }?>
 	
     <div class="btn_confirm">
-        <input type="submit" value="작성완료" id="btn_submit" accesskey="s" class="btn_submit">
+        <input type="submit" value="신청하기" id="btn_submit" accesskey="s" class="btn_submit">
         <a href="./board.php?bo_table=<?php echo $bo_table ?>" class="btn_cancel">취소</a>
     </div>
     </form>
@@ -230,11 +234,13 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
         return true;
     }
 	
+	var iframe_height;
 	function callback_preview( src, theme, theme_name ) {
 		$(".popup-preview").remove();
 		$("#application-form").prepend("<div class='popup-preview'><div class='inner'><img src='" + src + "' />" + 
 		"<div><span class='select-theme'>선택하기</span><span class='close-select-theme'>창 닫기</span></div>" +
-		"</div></div>");
+		"</div></div>" );
+		$("html, body").animate({ scrollTop: 150 }, 600);
 		
 		$(".close-select-theme").click(function() {
 			$(".popup-preview").remove();
@@ -244,8 +250,15 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
 			$(".sel-template-msg").html("<b>" + theme_name + "</b> 이 선택 됨");
 			var old_src = $(".show-template-frame").prop("src", '<?=x::url()?>/?module=site&action=template&theme=n&active_theme=' + theme);
 			
+			callback_iframe_resize ( iframe_height + 350 );
+			
 			$(".popup-preview").remove();
 		});
+	}
+	
+	function callback_iframe_resize( height ) {
+		iframe_height = height;
+		$(".show-template-frame").height( height + 50 );
 	}
     </script>
 </div>
