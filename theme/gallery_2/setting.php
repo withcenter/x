@@ -39,7 +39,7 @@
 					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/<?=$module?>/img/no-image.png'><br>[가로 72px X 세로 103px]</div>
 				<?}?>
 				<input type='file' name='gallery_footer_logo'>
-					<input type='checkbox' name='gallery_footer_logologo_remove' value='y'><span class='title-small'>이미지 제거</span>
+					<input type='checkbox' name='gallery_footer_logo_remove' value='y'><span class='title-small'>이미지 제거</span>
 						<span class='title-small'>하단문구제목</span><input type='text' name='gallery_footer_tagline' value='<?=x::meta('gallery_footer_tagline')?>' />
 			</div>	
 		</td>
