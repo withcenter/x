@@ -13,12 +13,11 @@ $(function(){
 			$(".page_num").first().addClass('selected_num');
 		}
 		banner_num = $(".banner-image.selected").attr('image_num');
-		left_value = -(((banner_num-1) * 968)+968);
+		left_value = -(((banner_num) * 968));
 		if (banner_num == 1 ) {	
 			$(".images-container").css('left',0);
-			$(".images-container").animate({left: left_value}, 500);
 		}
-		else $(".images-container").animate({left: left_value}, 500);
+		$(".images-container").animate({left: left_value}, 500);
 	}
 	
 	/*show banner information on hover ( subject, content, pagination, previous and next buttons) */
