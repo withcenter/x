@@ -20,6 +20,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 				</div>
 			</div>
 			<div style='clear: left'></div>
+			<span class='copyright-mobile'>Copyright © 2007 ~ 2014 All Rights Reserved by WithCenter</span>
 		</div>
 	</div>
 </div><!--/layout-->
