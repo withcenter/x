@@ -1,6 +1,7 @@
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
+
 // add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
 add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
 
@@ -66,7 +67,7 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
 		</tr>
 		<tr>
 			<td>담당자 이름</td>
-			<td><input type='text' name='wr_name' value='<?=$wr_name?>' /></td>
+			<td><input type='text' name='wr_name' value='<?=$name?>' /></td>
 		</tr>
 		<tr>
 			<td>전화</td>
