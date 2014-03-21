@@ -6,7 +6,13 @@
 		<tr valign='top'>
 			<td class='header-logo-td' align='right'>
 				<div class='header-logo'>
-					<a href="<?=g::url()?>"/><img src='<?=x::theme_url('img/header_logo_default.png')?>'/></a>
+					<a href="<?=g::url()?>"/>
+						<?if( file_exists( path_logo() ) ) { ?>
+							<img src="<?=url_logo()?>">
+						<?} else {?>
+							<img src='<?=x::theme_url('img/header_logo_default.png')?>'/>
+						<?}?>
+					</a>
 				</div>
 			</td>
 			<td class='top-menu-td' align='left'>

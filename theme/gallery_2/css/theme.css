@@ -8,6 +8,16 @@ body {
 	margin-bottom: 0.625em;
 }
 
+.header .header-logo {
+	width: 250px;
+	height: 100px;
+	overflow: hidden;
+}
+
+.header .header-logo img {
+	width: 100%;
+}
+
 .header .logo-menu {
 	max-width: 970px;
 	margin: 0 auto;
@@ -167,10 +177,17 @@ body {
 	color: #334d5c;
 }
 
-.layout .footer .footer-logo img {
+.layout .footer .footer-logo-container {
+	height: 103px;
+	width: 72px;
+	overflow: hidden; 
+	margin: auto;
 	margin-bottom: 0.625em;
 }
 
+.layout .footer .footer-logo-container img {
+	width: 100%;
+}
 /** TOP ICONS */
 .login-container {
 	position: absolute;
