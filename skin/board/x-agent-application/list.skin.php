@@ -20,20 +20,32 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
     <input type="hidden" name="sw" value="">
  <?php
  
-	 if ($write_href) { ?><div><a href="<?php echo $write_href ?>" class="btn_b02">글쓰기</a></div><?php }
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+	 if ($write_href) { ?><div class='list-application'><a style='color: #ffffff;' href="<?php echo $write_href ?>" class='application-button'>제작의뢰하기</a></div><?php }
+	
 
+
+ 
+	echo "<div class='x-agent-application-list'>";
+	
+	foreach ( $list as $li ) {
+		echo "
+			<div class='row'>
+				<div class='subject'><a href='$li[href]'>$li[wr_subject]</a></div>
+			</div>
+		";
+	}
+	
+	
+	echo "</div>";
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  /*
     <!-- 게시판 카테고리 시작 { -->

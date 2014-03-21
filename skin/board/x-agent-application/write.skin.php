@@ -68,7 +68,14 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
 		</tr>
 		<tr>
 			<td><span class='item-title'>작성자 이름</span></td>
-			<td><input type='text' name='wr_name' value='<?=$name?$name:$member['mb_name']?>' <? if ( login() ) echo "disabled"; ?> /></td>
+			<td>
+				<? if ( login() ) {?>
+					<?=$member['mb_name']?>
+				<? }
+					else {?>
+				<input type='text' name='wr_name' value='<?=$name?>' />
+				<? }?>
+			</td>
 		</tr>
 		<tr>
 			<td><span class='item-title'>전화</span></td>
@@ -174,6 +181,7 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
 
     function fwrite_submit(f)
     {
+			alert(f.wr_name.value)
 		
 		var content = f.wr_content.value;
 		if ( f.wr_content.value == '' ) f.wr_content.value = '기타 요청 사항 없음';
