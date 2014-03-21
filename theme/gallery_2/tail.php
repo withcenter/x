@@ -9,8 +9,17 @@
 				?>
 				</td>
 				<td valign='middle' class='footer-logo'>
-					<img src="<?=x::theme_url('img/footer_logo.png')?>"/>
-					<p>필리핀 최대 정보 커뮤니티 필고</p>
+					<div class='footer-logo-container'>
+					<?
+						if( file_exists( x::path_file( "gallery_footer_logo" ) ) ) $img = "<img src='".x::url_file('gallery_footer_logo')."' />";
+						else {
+							$img = "<img src='".x::url_theme()."/img/footer_logo.png' />";
+						}
+						echo $img;
+					?>
+					</div>
+					<p><? if( $footer_tagline = x::meta('gallery_footer_tagline')) echo $footer_tagline;
+						else echo "필리핀 최대 정보 커뮤니티 필고"; ?></p>
 				</td>
 			</tr>
 		</table>

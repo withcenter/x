@@ -4,3 +4,5 @@
 		x::meta("banner{$i}_content", $in["banner{$i}_content"]);	
 		x::meta("banner{$i}_url", $in["banner{$i}_url"]);
 	}
+	
+	x::meta("gallery_footer_tagline", $in["gallery_footer_tagline"]);
