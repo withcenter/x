@@ -20,7 +20,7 @@
 							LOWER-LEFT
 						</div>		
 						<div class='bottom-bar'></div>						
-						<img src = '<?=x::url_theme()?>/img/lower-left.png' class='lower_left_image_web'/>
+						<div class='left-first-image-wrapper'><img src = '<?=x::url_theme()?>/img/lower-left.png' class='lower_left_image_web'/></div>
 						<img src = '<?=x::url_theme()?>/img/lower-left_400px.png' class='lower_left_image_mobile'/>
 					</div>
 				</div>
