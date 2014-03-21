@@ -361,7 +361,7 @@
 	width:94%;	
 	padding:10px 3%;
 	margin-bottom:10px;
-	background:transparent!important;
+	background:#ffffff!important;
 }
 
 #extended_login #extended_login_fields input[type='password']{
@@ -394,7 +394,7 @@
 	margin:-4px 0 0 10px;
 }
 
-#extended_login #extended_login_fields .checkbox_wrapper .checkbox-label{
+#extended_login #extended_login_fields .checkbox_wrapper .checkbox_label{
 	display:inline-block;	
 	color:#ffffff;
 	font-size:1.2em;
@@ -431,3 +431,67 @@
 }
 
 /**EDIT for mb_register**/
+.extended_register_form{
+	width:830px;
+	margin:auto;
+}
+
+.extended_register_form .inner{
+	border:1px solid #d9d9d9;
+	background-color:#fafafa;
+	padding:20px 58px 38px 58px;
+}
+
+
+.extended_register_form .inner .title_wrapper{
+	width:270px;
+	margin:auto;
+}
+.extended_register_form .inner .title{
+	width:50%;
+	float:left;
+	text-align:center;
+	font-size:1.5em;
+	font-weight:bold;	
+	margin-bottom:30px;
+}
+
+.extended_register_form .inner .title.register {
+	color:#24a1b3;
+	border-bottom:3px solid #696969;
+}
+
+.extended_register_form .inner .title.login {	
+	padding-bottom:2px;
+	border-bottom:1px solid #696969;
+}
+
+.extended_register_form .inner .title.login a{
+	color:#696969;
+	text-decoration:none;
+}
+
+.extended_register_form .inner .left{
+	padding-right:6.5%;
+}
+
+.extended_register_form .inner .right{
+	padding-left:6.5%;
+}
+
+.extended_register_form .inner .left, .extended_register_form .inner .right{
+	width:43.5%;
+	float:left;
+}
+
+.extended_register_form .inner input[type='text'], .extended_register_form .inner input[type='password']{
+	width:94%;	
+	padding:10px 3%;
+	margin-bottom:10px;
+	background:#ffffff!important;
+}
+
+.extended_register_form .inner input[type='text']:focus, .extended_register_form .inner input[type='password']:focus{
+	border:1px solid #f2860c;
+	outline: none;
+}
