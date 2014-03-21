@@ -12,7 +12,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		}
 		else {
 			$login_msg = "로그인";
-			$log_href = "javascript:void(0)";
+			$log_href = G5_BBS_URL."/login.php";			
 			$profile_msg = "회원가입";
 			$profile_msg_url = G5_BBS_URL."/register.php";			
 		}
