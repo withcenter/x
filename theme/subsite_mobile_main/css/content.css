@@ -190,7 +190,7 @@
 		width: 100%;		
 	}
 	
-	.lower-left, .lower-right {
+	.lower-left .inner, .lower-right .inner{
 		border: solid 1px #808080;
 		background: #fafafa;
 		border-radius: 3px;
@@ -213,8 +213,8 @@
 	}
 	
 	.lower-title, .lower-middle-title, .rwd-mobile-posts .title {
-		padding-bottom: 10px !important;
-		max-width: 40% !important;
+		padding-bottom: 10px !important;		
+		width: 156px!important;		
 	}
 	
 	.right_main_banner_web {
