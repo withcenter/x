@@ -1,5 +1,5 @@
 $(function(){
-	var banner_rotator = setInterval( function() { rotate_the_banner() } , 5000 );
+	var banner_rotator = setInterval( function() { rotate_the_banner() } , 1000 );
 	var banner_num, left_value, page_num;
 	var total_banners = $(".banner").attr("total_banners");
 	
@@ -31,7 +31,7 @@ $(function(){
 	/*hide banner information*/
 	$(".banner").mouseleave(function(){
 		$(this).find('.banner-content').hide();
-		banner_rotator = setInterval( function() { rotate_the_banner() } , 5000 );
+		banner_rotator = setInterval( function() { rotate_the_banner() } , 1000 );
 		$(".next-banner").hide();
 		$(".previous-banner").hide();		
 	});
@@ -62,7 +62,7 @@ $(function(){
 		$(".page_"+page_num).addClass('selected_num');
 		$(".image_"+page_num).addClass('selected');
 		$('.banner-content').fadeOut();
-		$(".images-container").animate({left: -((page_num-1) * 968)}, 500).find('.banner-content').fadeIn();
+		$(".images-container").animate({left: -((page_num) * 968)}, 500).find('.banner-content').fadeIn();
 		previous_next_toggle( page_num );
 	}
 	
