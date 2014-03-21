@@ -503,4 +503,28 @@ fieldset{
 }
 
 
+/* login.php CSS 조정 */
+#mb_login #login_fs .login_id {
+	position: absolute;
+	top: 5px;
+	left: 10px;
+}
+#mb_login #login_fs #login_auto_login {
+	margin-left: 10px;
+}
+#mb_login #login_fs  {
+	margin-left: 90px;
+	margin-bottom: 20px;
+}
+#mb_login #login_fs .login_pw {
+	position: absolute;
+	top: 30px;
+	left: 10px;
+}
+
+#mb_login #login_fs .btn_submit {
+	position: absolute;
+	top: 0px;
+}
+
 
