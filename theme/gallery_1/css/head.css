@@ -1,12 +1,19 @@
 .layout .header .search_and_top_wrapper{
 	float:right;
 	position:relative;
+	text-align:right;
+}
+
+.layout .header .search_and_top_wrapper form[name='gallery_1_search_form']{
+	
 }
 
 .layout .header .search_and_top_wrapper #gallery_1_search_text{
 	border:2px solid #ff8866;
 	float:left;
-	padding:11px 10px;
+	height:36px;
+	padding:0 10px;
+	width:375px;
 }
 
 .layout .header .search_and_top_wrapper #gallery_1_search_submit{

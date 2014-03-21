@@ -42,6 +42,7 @@
 				</td>
 				<td>
 					<div class='search_and_top_wrapper'>
+						<?include 'top.php'?>
 						<fieldset id="search_field">
 							<legend>사이트 내 전체검색</legend>
 							<form name="gallery_1_search_form" method="get" action="<?=x::url()?>" onsubmit="return fsearchbox_submit(this);">
