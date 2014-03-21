@@ -32,7 +32,7 @@ $(function(){
 	/*hide banner information*/
 	$(".banner").mouseleave(function(){
 		$(this).find('.banner-content').hide();
-		banner_rotator = setInterval( function() { rotate_the_banner() } , 1000 );
+		banner_rotator = setInterval( function() { rotate_the_banner() } , 5000 );
 		$(".next-banner").hide();
 		$(".previous-banner").hide();		
 	});
