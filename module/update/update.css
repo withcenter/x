@@ -5,3 +5,23 @@
 .theme img {
 	width:100%;
 }
+
+
+
+
+
+
+/* list page */
+.list > iframe {
+	width:100%;
+	min-height: 1024px;
+}
+
+/* admin_theme_installed */
+.installed .theme {
+	width: 33.33%;
+	
+}
+.installed .theme img {
+	width:100%;
+}
