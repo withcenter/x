@@ -640,7 +640,35 @@ class x {
 					wr_datetime				= '$o[wr_datetime]',
 					wr_hit						= 0,
 					wr_good					= 0,
-					wr_nogood				= 0
+					wr_nogood				= 0,
+					wr_num = '$o[wr_num]',
+                     wr_reply = '$o[wr_reply]',
+                 
+                     wr_link1 = '$o[wr_link1]',
+                     wr_link2 = '$o[wr_link2]',
+                     wr_link1_hit = 0,
+                     wr_link2_hit = 0,
+					 
+                     wr_password = '$o[wr_password]',
+
+                     wr_email = '$o[wr_email]',
+                     wr_homepage = '$o[wr_homepage]',
+    
+                     wr_last = '$o[wr_last]',
+                     wr_ip = '$o[wr_ip]',
+                     wr_1 = '$o[wr_1]',
+                     wr_2 = '$o[wr_2]',
+                     wr_3 = '$o[wr_3]',
+                     wr_4 = '$o[wr_4]',
+                     wr_5 = '$o[wr_5]',
+                     wr_6 = '$o[wr_6]',
+                     wr_7 = '$o[wr_7]',
+                     wr_8 = '$o[wr_8]',
+                     wr_9 = '$o[wr_9]',
+                     wr_10 = '$o[wr_10]',
+					 
+					 
+					 wr_file = '$o[wr_file]'
 				";
 		db::query($sql);
 	}
@@ -667,6 +695,25 @@ class x {
 				if ( isset( $o['wr_hit'] ) ) 			$f[]				= "wr_hit=$o[wr_hit]";
 				if ( isset( $o['wr_good'] ) ) 		$f[]				= "wr_good=$o[wr_good]";
 				if ( isset( $o['wr_nogood'] ) ) 	$f[]				= "wr_nogood=$o[wr_nogood]";
+				
+				if ( isset( $o['wr_num'] ) ) 	$f[]				= "wr_num = '$o[wr_num]'";
+				if ( isset( $o['wr_reply'] ) ) 	$f[]				= "wr_reply = '$o[wr_reply]'";
+				if ( isset( $o['wr_link1'] ) ) 	$f[]				= "wr_link1 = '$o[wr_link1]'";
+				if ( isset( $o['wr_link2'] ) ) 	$f[]				= "wr_link2 = '$o[wr_link2]'";
+				if ( isset( $o['wr_link1_hit'] ) ) 	$f[]				= "wr_link1_hit = '$o[wr_link1_hit]'";
+				if ( isset( $o['wr_link2_hit'] ) ) 	$f[]				= "wr_link2_hit = '$o[wr_link2_hit]'";
+				if ( isset( $o['wr_password'] ) ) 	$f[]				= "wr_password = '$o[wr_password]'";
+				if ( isset( $o['wr_email'] ) ) 	$f[]				= "wr_email = '$o[wr_email]'";
+				if ( isset( $o['wr_homepage'] ) ) 	$f[]				= "wr_homepage = '$o[wr_homepage]'";
+				if ( isset( $o['wr_last'] ) ) 	$f[]				= "wr_last = '$o[wr_last]'";
+				if ( isset( $o['wr_ip'] ) ) 	$f[]				= "wr_ip = '$o[wr_ip]'";
+				
+				for( $i=1; $i<=10; $i++ ) {
+					if ( isset( $o["wr_$i"] ) ) 	$f[]				= "wr_$i = '" . $o["wr_$i"] . "'";
+				}
+				
+				
+				if ( isset( $o['wr_file'] ) ) 	$f[]				= "wr_file = '$o[wr_file]'";
 		
 		$q = "UPDATE x_post_data  SET ";
 		$q .= implode( ', ', $f);
