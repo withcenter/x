@@ -12,7 +12,7 @@
 	<!--<![endif]-->
 </head>
 <body>
-<div class='layout'>
+<div class='list'>
 <?php
 
 	$posts = x::posts( array( 
