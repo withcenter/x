@@ -5,28 +5,17 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	</div><!--/container-->
 	<div class='footer-container'>
 		<div class='footer'>
-			<div class='footer-contact'>
-				<div class='inner'>
-					<span class='footer-contact-title contact'>Get In Touch</span>
-					<span class='contact'>Do you want to work with us? Call Us</span>
-					<span class='footer-number contact'> Tel. No.: <?if ( $contact_number = x::meta('mobile_contact_number') ) echo $contact_number; else echo "(070) 7259 1749" ?> </span>
-					<span class='footer-email contact'>Email Add: <?if ( $contact_email = x::meta('mobile_contact_email') ) echo $contact_email; else echo "username@email.com" ?></span>
-				</div>
-			</div>
 			<div class='footer-text'>
 				<div class='inner'>
-					<span class='footer_links_web'>사이트 견적 및 제작의뢰  &nbsp&nbsp&nbsp    로고, 배너 제작 의뢰  &nbsp&nbsp&nbsp     사이트 갤러리   &nbsp&nbsp&nbsp    템플릿 갤러리   &nbsp&nbsp&nbsp   질문과 답변 </span>
-					<span class='copyright'>Copyright © 2007 ~ 2014 All Rights Reserved by WithCenter</span>
+					<span class='copyright'>
+						<div><b>상호</b> 위세너 | <b>대표자명</b> 송재호 | <b>사업자등록번호</b> 106-02-98669 | <b>통신판매신고번호</b> 2008-경남김해-0098</div>
+						<div><b>이메일</b> philgohelp@gmail.com | <b>주소</b> 경상남도 김해시 한림면 신천리 284| <b>사업자 종목</b> 홈페이지 운영 상담 | <b>개인정보관리책임자</b> 송재호</div>
+						<div><i>본 사이트 "위세너" 회사에 의해 운영되고 있으며, "공정거래위원회"에서 제시하는 "전자상거래표준약관"을 따르고,</i></div>
+						<div><i>전자상거래소비자보호법에 따라 사이트 이용의 안전을 위해 보증보험에 가입을 하였습니다.</i></div>
+					</span>
 					
-					<div class='footer_links_mobile'>
-						<div class='footer_links_left'><div class='inner'><span>사이트 견적 및제작의뢰</span> <span>로고, 배너 제작 의뢰</span> <span>사이트 갤러리</span> <span>템플릿 갤러리</span></div></div>
-						<div class='footer_links_right'><div class='inner'><span>질문과 답변</span> <span>로그인</span> <span>회원가입</span></div></div>
-						<div style='clear: both'></div>
-					</div>
 				</div>
 			</div>
-			<div style='clear: left'></div>
-			<span class='copyright-mobile'>Copyright © 2007 ~ 2014 All Rights Reserved by WithCenter</span>
 		</div>
 	</div>
 </div><!--/layout-->

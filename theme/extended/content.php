@@ -17,7 +17,7 @@
 				<div class='lower-left'>
 					<div class='inner'>
 						<div class='lower-title'>
-							LOWER-LEFT
+							사이트 갤러리
 						</div>		
 						<div class='bottom-bar'></div>						
 						<div class='left-first-image-wrapper'><img src = '<?=x::url_theme()?>/img/lower-left.png' class='lower_left_image_web'/></div>
@@ -27,7 +27,7 @@
 				<div class='lower-middle'>
 					<div class='inner'>
 						<div class='lower-middle-title'>
-							TEMPLATES
+							템플릿 갤러리
 						</div>
 						<div class='bottom-bar'></div>
 						<div class='lower-middle-1'><img src="<?=x::theme_url('img/middle_lower_1.png')?>"/></div>
