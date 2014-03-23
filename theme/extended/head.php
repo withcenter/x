@@ -35,10 +35,10 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			</div>
 			<div class='right_main_menus above-400px'>
 				<ul>
-					<li><div class='extra-border'></div><a href='javascript:void(0)'>Site Quotation</a></li>
-					<li><div class='extra-border'></div><a href='javascript:void(0)'>Logo Banner Quotation</a></li>
-					<li><div class='extra-border'></div><a href='javascript:void(0)'>Site Gallery</a></li>
-					<li><div class='extra-border'></div><a href='javascript:void(0)'>Template Gallery</a></li>							
+					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/board.php?bo_table=quotation'>사이트<br /> 제작의뢰</a></li>
+					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/board.php?bo_table=quotation'>로고 배너<br /> 제작의뢰</a></li>
+					<li><div class='extra-border'></div><a href='javascript:void(0)'>사이트<br />갤러리</a></li>
+					<li><div class='extra-border'></div><a href='javascript:void(0)'>템플릿<br />갤러리</a></li>							
 				</ul>						
 				<div style='clear:both;'></div>
 			</div>
