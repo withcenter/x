@@ -29,6 +29,31 @@ CREATE TABLE IF NOT EXISTS `x_post_data` (
   `mb_id` varchar(32) NOT NULL DEFAULT '',
   `wr_subject` varchar(255) NOT NULL DEFAULT '',
   `wr_content` longtext NOT NULL,
+  `wr_num` int(11) NOT NULL DEFAULT '0',
+  `wr_reply` varchar(10) NOT NULL,
+  `wr_comment_reply` varchar(5) NOT NULL,
+  `wr_link1` text NOT NULL,
+  `wr_link2` text NOT NULL,
+  `wr_link1_hit` int(11) NOT NULL DEFAULT '0',
+  `wr_link2_hit` int(11) NOT NULL DEFAULT '0',
+  `wr_password` varchar(255) NOT NULL,
+  `wr_email` varchar(255) NOT NULL,
+  `wr_homepage` varchar(255) NOT NULL,
+  `wr_file` tinyint(4) NOT NULL DEFAULT '0',
+  `wr_last` varchar(19) NOT NULL,
+  `wr_ip` varchar(255) NOT NULL,
+  `wr_facebook_user` varchar(255) NOT NULL,
+  `wr_twitter_user` varchar(255) NOT NULL,
+  `wr_1` varchar(255) NOT NULL,
+  `wr_2` varchar(255) NOT NULL,
+  `wr_3` varchar(255) NOT NULL,
+  `wr_4` varchar(255) NOT NULL,
+  `wr_5` varchar(255) NOT NULL,
+  `wr_6` varchar(255) NOT NULL,
+  `wr_7` varchar(255) NOT NULL,
+  `wr_8` varchar(255) NOT NULL,
+  `wr_9` varchar(255) NOT NULL,
+  `wr_10` varchar(255) NOT NULL,
   PRIMARY KEY (`idx`),
   KEY `domain` (`domain`),
   KEY `ca_name` (`ca_name`),
@@ -37,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `x_post_data` (
   KEY `bo_table_2` (`bo_table`,`wr_id`),
   KEY `bo_table_3` (`bo_table`,`wr_option`,`wr_datetime`),
   KEY `bo_table_4` (`bo_table`,`wr_datetime`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 
 CREATE TABLE IF NOT EXISTS `x_site_config` (

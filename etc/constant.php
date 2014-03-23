@@ -27,4 +27,6 @@ else {
 	define( 'URL_X', 'http://extended.kr' );
 }
 
+define('URL_HOME',		G5_URL);
+define('PATH_HOME',		G5_PATH);
 
