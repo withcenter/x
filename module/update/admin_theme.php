@@ -1,15 +1,11 @@
-<style>
-.list > iframe {
-	width:100%;
-	min-height: 400px;
-}
-</style>
+<link rel="stylesheet" href="<?=module("$module.css")?>">
+
 테마를 추가, 삭제 또는 업데이트 합니다.<br>
 
 &nbsp;<br>
 
 
-업데이트 가능한 테마 | 추가된 테마 | 추가되어 있지 않은 테마<br>
+업데이트 가능한 테마 | <a href='?module=update&action=admin_theme_installed'>추가된 테마</a> | 추가되어 있지 않은 테마<br>
 
 
 
