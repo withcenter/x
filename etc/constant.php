@@ -18,16 +18,23 @@ define("ONEDAY", 86400);
  *
  *
  */
-define( 'X_DEBUG', true );
+define( 'X_DEBUG', false );
 
 if ( X_DEBUG ) {
-	define( 'URL_X', 'http://extended.org' );
+	define( 'URL_EXTENDED', 'http://www.work.org/g5-5.0b26.1' );
 }
 else {
-	define( 'URL_X', 'http://extended.kr' );
+	define( 'URL_EXTENDED', 'http://www.extended.kr/' );
 }
 
 define('URL_HOME',		G5_URL);
 define('PATH_HOME',		G5_PATH);
 
 define( 'L', etc::user_language() );
+
+
+
+// update
+define( 'X_UPDATE_TABLE', 'default');
+
+

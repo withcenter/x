@@ -2,5 +2,5 @@
 <?include 'menu_theme.php'?>
 
 <div class='list'>
-<iframe src="<?=URL_X?>/?module=update&action=list&mode=theme_list_updatable&theme=n"></iframe>
+	<?include 'admin_theme_list.php'?>
 </div>

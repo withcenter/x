@@ -615,12 +615,16 @@ EOH;
 
 
 	
-static function xml2json($xml) {
+	static function xml2json($xml) {
 
          normalizeSimpleXML(simplexml_load_string($xml), $result);
          return json_encode($result);
      }
-	 
+	
+
+	/** @short loads local or remote XML file and returns in assoc after parseing
+	 *
+	 */
 	static function load_and_parse_xml_into_assoc( $path )
 	{
 		$lines = file( $path );
