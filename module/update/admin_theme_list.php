@@ -12,7 +12,7 @@
 	$url = URL_EXTENDED . '/x/etc/rss-update-list.php';
 	
 	
-	di($url);
+	// di($url);
 	
 	$rss = load_xml( $url );
 	
