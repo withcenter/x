@@ -10,7 +10,12 @@
 	*/
 	
 	$url = URL_EXTENDED . '/x/etc/rss-update-list.php';
+	
+	
+	di($url);
+	
 	$rss = load_xml( $url );
+	
 	
 	
 	// https://github.com/withcenter/theme-sample/blob/master/preview.jpg

@@ -24,7 +24,7 @@ if ( X_DEBUG ) {
 	define( 'URL_EXTENDED', 'http://www.work.org/g5-5.0b26.1' );
 }
 else {
-	define( 'URL_EXTENDED', 'http://www.extended.kr/' );
+	define( 'URL_EXTENDED', 'http://www.extended.kr' );
 }
 
 define('URL_HOME',		G5_URL);
@@ -35,6 +35,6 @@ define( 'L', etc::user_language() );
 
 
 // update
-define( 'X_UPDATE_TABLE', 'default');
+define( 'X_UPDATE_TABLE', 'theme');
 
 
