@@ -22,6 +22,9 @@ echo "connect ok<br>";
 @ftp_login($handle, $user, $pass) or die("Could not login to {$host}");
 echo "login ok<br>";
 
+recursiveDelete( $dir );
+echo "delete ok<br>";
+
 function recursiveDelete($directory)
 {
 	global $handle;

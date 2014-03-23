@@ -6,7 +6,7 @@
 	
 	
 ?>
-<form action='?'>
+<form action='?' method='POST' target='hiframe'>
 <input type='hidden' name='module' value='<?=$module?>'>
 <input type='hidden' name='action' value='<?=$action?>_submit'>
 <input type='hidden' name='host' value='<?=$host?>'>
@@ -20,5 +20,5 @@ FTP Password: <input type='text' name='password'><br>
 <input type='submit'>
 </form>
 
-<iframe src="javascript:void(0);" style='width: 100%; height: 400px;"></iframe>
+<iframe name='hiframe' src="javascript:void(0);" style='width: 100%; height: 400px;"></iframe>
 
