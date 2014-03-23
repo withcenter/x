@@ -6,9 +6,13 @@
 		<ko>여행사 디자인 1번</ko>
 	</name>
 	<version>0.1</version>
-	<short>...</short>
+	<short>
+		<en></en>
+		<ko></ko>
+	</short>
 	<detail>
-		...
+		<en></en>
+		<ko></ko>
 	</detail>
 	<menu>
 		<top>
