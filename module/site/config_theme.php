@@ -23,8 +23,7 @@
 				$dirs = file::getDirs(X_DIR_THEME);
 				foreach ( $dirs as $dir ){
 					if ( $dir == $active_theme ) {
-						$theme_config = array();
-						include X_DIR_THEME . "/$dir/config.php";
+						$theme_config = load_config( X_DIR_THEME . "/$dir/config.xml" );
 						$active_theme = $theme_config['name'];
 						break;
 					}
@@ -40,12 +39,16 @@
 			$theme_ctr = 2;
 			
 			foreach ( $dirs as $dir ) {
-				$path = X_DIR_THEME . "/$dir/config.php";
+				$path = X_DIR_THEME . "/$dir/config.xml";
 				if ( ! file_exists($path) ) continue;
 				
-				$theme_config = array();
-				include $path;
-				$name = $theme_config['name'];
+				
+				$theme_config = load_config( $path );
+				
+				
+				
+				
+				$name = $theme_config['name'][L];
 				if ( empty($name) ) continue;
 				
 				$type = explode(',', $theme_config['type']);

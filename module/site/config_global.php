@@ -1,5 +1,5 @@
 <?php
-	include x::theme('config');
+	$theme_config = load_config( x::theme_folder() . '/config.xml');
 ?>
 <!--<script src='<?=x::url()?>/module/<?=$module?>/subsite.js'></script>-->
 

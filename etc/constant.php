@@ -30,3 +30,4 @@ else {
 define('URL_HOME',		G5_URL);
 define('PATH_HOME',		G5_PATH);
 
+define( 'L', etc::user_language() );

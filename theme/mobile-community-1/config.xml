@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<config>
+	<type>mobile</type>
+	<name>
+		<en>Mobile Design No. 1</en>
+		<ko>모바일 디자인 1번</ko>
+	</name>
+	<version>0.1</version>
+	<short>...</short>
+	<detail>
+		...
+	</detail>
+	<menu>
+		<top>
+			<name>
+				<en>Menu Top</en>
+				<ko>상단 톱 메뉴</ko>
+			</name>
+			<max>0</max>
+		</top>
+		<left>
+			<name>
+				<en>Top Left Menu</en>
+				<ko>상단 왼쪽 메뉴</ko>
+			</name>
+			<max>0</max>
+		</left>
+		<right>
+			<name>
+				<en>Menu Top Right</en>
+				<ko>상단 오른쪽 메뉴</ko>
+			</name>
+			<max>0</max>
+		</right>
+		<bottom>
+			<name>
+				<en>Menu Bottom</en>
+				<ko>하단 메뉴</ko>
+			</name>
+			<max>0</max>
+		</bottom>
+	</menu>
+</config>

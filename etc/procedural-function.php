@@ -298,3 +298,12 @@ function page( $page )
 {
 	return x::url() . "?page=$page";
 }
+
+
+function load_config( $path )
+{
+	return etc::load_and_parse_xml_into_assoc( $path );
+	
+}
+
+

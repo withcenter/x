@@ -1,6 +1,6 @@
 <?php
 
-	if ( empty($theme_config["menu_$id"]["max"]) ) return;
+	if ( empty($theme_config["menu"][$id]["max"]) ) return;
 	
 ?>
 
@@ -16,7 +16,7 @@ $(function(){
 
  <div class='config-wrapper'>
 	<div class='config-title'>
-		<span class='config-title-info'><?=$theme_config["menu_$id"]["name"]?> 설정</span>
+		<span class='config-title-info'><?=$theme_config["menu"][$id]["name"][L]?> 설정</span>
 		<span class='config-title-notice'>
 			<span class='user-google-guide-button' page = 'google_doc_community_2_1' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[설명 보이기]</span>
 			<img src='<?=module('img/setting_2.png')?>'>
@@ -39,7 +39,7 @@ $(function(){
 			</tr>
 			<?
 				$forums = x::forums();
-				for ( $i=1; $i<=$theme_config["menu_$id"]["max"]; $i++ ) {
+				for ( $i=1; $i<=$theme_config["menu"][$id]["max"]; $i++ ) {
 				
 				 
 			?>
