@@ -9,7 +9,7 @@
  *  그누보드 확장 팩 라이브러리
  *  
  */
-class x {
+class x extends gnuboard{
 
 	static $config;
 	static $hook_list;
