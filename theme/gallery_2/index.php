@@ -74,27 +74,19 @@
 
 <div class='posts-container'>
 	<div class='left-posts-container'>
-		<?	
-			if ( (g::forum_exist($gallery_left = x::meta('gallery_forum_left'))) ) echo latest( 'x-latest-left-gallery', $gallery_left , 3, 40 );
-		?>
+		<?=latest( 'x-latest-left-gallery', bo_table(1) , 3, 40 )?>
 	</div>
 	<div class='right-posts-container'>
 		<div class='right-panel-posts'>
 			<div class='right-posts-1'>
-				<?
-					if ( (g::forum_exist($posts_1 = x::meta('gallery_forum_list_1'))) ) echo latest( 'x-latest-gallery-posts', $posts_1, 10, 40 );
-				?>
+				<?=latest( 'x-latest-gallery-posts', bo_table(2), 10, 40 )?>
 			</div>
 			<div class='right-posts-2'>
-				<?
-					if ( (g::forum_exist($posts_2 = x::meta('gallery_forum_list_2'))) ) echo latest( 'x-latest-gallery-posts', $posts_2	, 5, 40 );
-				?>
+				<?=latest( 'x-latest-gallery-posts', bo_table(3), 5, 40 )?>
 			</div> 
 		</div>
 		<div class='right-gallery-post'>
-			<?
-				if ( (g::forum_exist($gallery_right = x::meta('gallery_forum_right'))) ) echo latest( 'x-latest-right-gallery', $gallery_right , 1, 40 );
-			?>
+			<?=latest( 'x-latest-right-gallery', bo_table(4), 1, 40 )?>
 		</div>
 		<div style='clear: left'></div>
 	</div>
