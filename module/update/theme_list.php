@@ -30,6 +30,7 @@
 	// =>
 	// https://raw.githubusercontent.com/withcenter/theme-sample/master/preview.jpg
 	foreach ( $rss['channel']['item'] as $p ) {
+
 	
 	
 		$u = parse_url($p['link']);
@@ -43,6 +44,17 @@
 		
 		
 		if ( empty($theme_config) ) continue;
+		$a = explode('/', $p['link']);
+		$pname = $a[ count($a) - 1 ];
+
+
+		if ( in_array( $pname, $in['dirs'] ) ) {
+			$installed = "설치됨";
+		}
+		else {
+			$installed = "설치하기";
+		}
+
 		echo "
 			<div class='theme'>
 				<img src='$u[scheme]://$host$u[path]/master/preview.jpg'><br>
