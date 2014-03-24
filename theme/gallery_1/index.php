@@ -51,12 +51,18 @@
 
 <div class='gallery-1-posts-with-image'>
 	<?
-		if ( (g::forum_exist($gallery_middle = x::meta('gallery_1_forum_middle'))) ) echo latest('x-latest-gallery-1-posts-with-image', $gallery_middle, 4, 20)
+		if ( (g::forum_exist($gallery_middle = x::meta('gallery_1_forum_middle'))) ) { 
+			if ( !$num_of_posts = x::meta('gallery_1_middle_posts_no')) $num_of_posts = 4;
+			echo latest('x-latest-gallery-1-posts-with-image', $gallery_middle, $num_of_posts, 20);
+		}
 	?>
 </div>
 
 <div class='gallery-1-lower-posts'>
 		<?	
-			if ( (g::forum_exist($gallery_bottom = x::meta('gallery_1_forum_bottom'))) ) echo latest('x-latest-gallery-1-lower-posts', $gallery_bottom, 2, 20);
+			if ( (g::forum_exist($gallery_bottom = x::meta('gallery_1_forum_bottom'))) ) {
+				if ( !$num_of_posts = x::meta('gallery_1_bottom_posts_no')) $num_of_posts = 2;
+				echo latest('x-latest-gallery-1-lower-posts', $gallery_bottom, $num_of_posts, 20);
+			}
 		?>
 </div>

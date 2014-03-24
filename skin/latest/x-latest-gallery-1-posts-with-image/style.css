@@ -10,9 +10,10 @@
 	margin-left: 10px;
 	border: solid 1px #2ca3b4;
 	padding: 9px;
+	margin-bottom: 10px;
 }
 
-.latest-gallery-posts-1-with-image .post-item.first-item {
+.latest-gallery-posts-1-with-image .post-item.left-item {
 	margin: 0;
 }
 

@@ -11,3 +11,5 @@ for ( $i=1; $i <= 5; $i ++ ) {
 	meta_set('tel',$in['tel']);
 	meta_set('gallery_1_forum_middle', $in['gallery_1_forum_middle']);
 	meta_set('gallery_1_forum_bottom', $in['gallery_1_forum_bottom']);
+	meta_set('gallery_1_middle_posts_no', $in['gallery_1_middle_posts_no']);
+	meta_set('gallery_1_bottom_posts_no', $in['gallery_1_bottom_posts_no']);

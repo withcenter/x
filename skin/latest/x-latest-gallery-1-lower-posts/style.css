@@ -1,9 +1,10 @@
 .latest-gallery-1-lower-posts .post-item {
 	float: left;
 	width: 480px;
+	margin-bottom: 10px;
 }
 
-.latest-gallery-1-lower-posts .post-item.first-item {
+.latest-gallery-1-lower-posts .post-item.left-item {
 	margin-right: 10px;
 }
 

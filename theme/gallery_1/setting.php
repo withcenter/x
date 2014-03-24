@@ -30,7 +30,24 @@
 <?
 	return $content = ob_get_clean();
 }
+
+	function set_no_of_posts( $name ) {
+	?>
+		<select name="<?=$name?>">
+			<option value=''>---</option>
+			<? for( $i=1; $i<=16; $i++ ) {
+			if( $name == "gallery_1_middle_posts_no") $i = $i + 3;
+			elseif ( $name == "gallery_1_bottom_posts_no") $i = $i + 1;
+			if( $i == x::meta($name) ) $selected = 'selected';
+			else $selected = '';
+			?>
+			<option value='<?=$i?>' <?=$selected?>><?=$i?></option>
+			<?}?>
+		</select>
+	<?}?>
+
 ?>
+
 
 
 
@@ -63,8 +80,9 @@
 	<div class='hidden-google-doc google_doc_community_2_4'>	
 	</div>
 		<table cellspacing='0' cellpadding='0' width='100%'>
-			<tr valign='top'><td width='150'>MIDDLE POSTS ( Four ): </td><td><?=set_posts('gallery_1_forum_middle')?></td></tr>
-			<tr valign='top'><td>BOTTOM POSTS ( Two ): </td><td><?=set_posts('gallery_1_forum_bottom')?></td></tr>
+			<tr><td>POSTS LOCATION</td><td>FORUM NAME</td><td>NO. OF POSTS</td>
+			<tr valign='top'><td width='150'>MIDDLE POSTS </td><td width='350'><?=set_posts('gallery_1_forum_middle')?></td><td><?=set_no_of_posts("gallery_1_middle_posts_no")?></td></tr>
+			<tr valign='top'><td>BOTTOM POSTS </td><td><?=set_posts('gallery_1_forum_bottom')?></td><td><?=set_no_of_posts("gallery_1_bottom_posts_no")?></td></tr>
 			</tr>
 		</table>
 	</div>

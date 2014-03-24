@@ -20,7 +20,7 @@ if ( ! $GLOBALS[$latest_skin_url] ++ ) { ?><link rel="stylesheet" href="<?php ec
 				$img = '<img class="img_left" src="'.$latest_skin_url.'/img/no-image.png"/>';				
 			}
 	?>
-		<div class="post-item <? if ($i==1) echo 'first-item'?>">
+		<div class="post-item <? if ($i%2==1) echo 'left-item'?>">
 			<div class='post-image'>
 				<a href="<?=$post['href']?>"><?=$img?></a>
 			</div>
