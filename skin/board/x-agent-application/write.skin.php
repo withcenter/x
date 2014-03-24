@@ -244,8 +244,8 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
 	var iframe_height;
 	function callback_preview( src, theme, theme_name ) {
 		$(".popup-preview").remove();
-		$("#application-form").prepend("<div class='popup-preview'><div class='inner'><img src='" + src + "' />" + 
-		"<div><span class='select-theme'>선택하기</span><span class='close-select-theme'>창 닫기</span></div>" +
+		$("#application-form").prepend("<div class='popup'><div class='popup-preview'><div class='inner'><img src='" + src + "' />" + 
+		"<div><span class='select-theme'>선택하기</span><span class='close-select-theme'>창 닫기</span></div></div>" +
 		"</div></div>" );
 		$("html, body").animate({ scrollTop: 150 }, 600);
 		

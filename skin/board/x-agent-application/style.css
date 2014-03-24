@@ -333,20 +333,23 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 	border: 1px solid #d5d5d5;
 }
 
-.popup-preview{
+.popup-up{
 	position: absolute;
 	left: 0;
+	width: 100%;
+}
+.popup-preview {
 	border: 1px solid #727272;
 	text-align: center;
 	background-color: #d5d5d5;
 	border-radius: 3px;
+	width: 642px;
+	margin: 0 auto;
 }
 
 .popup-preview .inner {
 	padding: 20px;
 	border: 1px solid #ffffff;
-	width: 600px;
-	height: 700px;
 	border-radius: 3px;
 }
 
