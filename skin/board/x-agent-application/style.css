@@ -341,7 +341,7 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 .popup-preview {
 	border: 1px solid #727272;
 	text-align: center;
-	background-color: #d5d5d5;
+	background-color: #e7e7e7;
 	border-radius: 3px;
 	width: 642px;
 	margin: 0 auto;
@@ -359,7 +359,20 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 	vertical-align: 
 	
 }
+.popup-preview .inner .select-theme, .popup-preview .inner .close-select-theme {
+	display: inline-block;
+	background-color: #517995;
+	padding: 7px 10px;
+	width: 70px;
+	border-radius: 4px;
+	color: #ffffff;
+	margin: 20px 0 0 10px;
+	cursor: pointer;
+}
 
+.popup-preview .inner .select-theme:hover, .popup-preview .inner .close-select-theme:hover {
+	background-color: #37566c;
+}
 
 /* 계약 확인 */
 .terms-conditions {
