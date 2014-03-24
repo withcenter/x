@@ -12,7 +12,7 @@
 				);
 			}
 		}
-		$total_banners = count($banners);
+		$total_banners = count($banners);		
 	?>	
 		<div class='banner' total_banners="<?=$total_banners?>" >
 			<div class='inner' style="position: relative;">

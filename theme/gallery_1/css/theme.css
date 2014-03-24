@@ -9,7 +9,8 @@
 }
 
 .layout .header{
-	margin-top:12px;	
+	margin-top:12px;
+	min-width:970px;
 }
 
 .layout .header .inner{
