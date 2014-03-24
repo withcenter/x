@@ -1,8 +1,18 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+	<!--[if lt IE 9]>
+		<script type='text/javascript' src='<?php echo G5_URL ?>/x/js/jquery-1.11.0.min.js'></script>
+	<![endif]-->
+	<!--[if gte IE 9]><!-->
+		<script type='text/javascript' src='<?php echo G5_URL ?>/x/js/jquery-2.1.0.min.js'></script>
+	<!--<![endif]-->
+</head>
+<body>
 <?php
-
 	$url = URL_EXTENDED . '/x/etc/rss-update-list.php';
 	
-	return;
 	
 	// di($url);
 	
@@ -11,20 +21,6 @@
 	
 	//di( $rss );
 	
-	/**
-	 *  로컬에서 직접 다운로드하고 FTP 로 로컬에서 로컬로 업로드한다면,
-	 *  로컬에
-	 *  	SSL 모듈이 등록되어져 있어야 하며,
-	 *  	원격 파일 오픈(fopen, include, file 등) 이 되어져 있어야  하며
-	 *  	FTP 설정 등
-	 *  	각종 설정이 되어져 있어야 한다.
-	 *  이것을
-	 *  원격에서 다운로드하고, FTP 로 원격에서 로컬로 업데이트 한다면
-	 *  위와 같은 설정은 필요가 없다.
-	 *  
-	 *  그래서... 원격으로 할 것인가?
-	 *  
-	 */
 	
 	// https://github.com/withcenter/theme-sample/blob/master/preview.jpg
 	// =>
@@ -52,3 +48,6 @@
 		flush();
 	}
 ?>
+</body>
+</html>
+

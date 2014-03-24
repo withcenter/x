@@ -8,9 +8,9 @@ foreach ( $dirs as $dir ) {
 	if ( ! file_exists($path) ) continue;
 				
 	$theme_config = load_config ( $path );
-	$name = $theme_config['name']['ko'];
+	$name = $theme_config['name'][L];
 	if ( empty($name) ) continue;
-				
+
 	$type = explode(',', $theme_config['type']);
 				
 				
@@ -20,7 +20,14 @@ foreach ( $dirs as $dir ) {
 ?>
 			<div class='template_photo'>
 				<img src='<?=$url?>' />
-				<div class='template_title'><?=$name?></div>
+				<div class='template_title'>
+					<?=$name?>
+					
+					[데모]
+					<?=$theme_config['demo']?>
+				
+				</div>
+				
 			</div>
 		
 <?}?>	
