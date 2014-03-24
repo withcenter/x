@@ -7,9 +7,9 @@
 <div class='page'>
 	<div class='page-title'><?=lang('User Setting');?></div>
 	<div class='page-content'>
-		<div class='page-caption'><?php echo _L('Choose Your Language');?></div>
+		<div class='page-caption'><?php echo lang('Choose Your Language');?></div>
 		<div class='page-data'>
-				<?php echo _L('Your Current Language', etc::language_from_code(etc::user_language()))?>
+				<?php echo lang('Your Current Language', etc::language_from_code(etc::user_language()))?>
 				<div style='margin-top: 1em;'>
 					<form name='setting' action='?'>
 						
@@ -18,7 +18,7 @@
 						
 						
 						<select name='user_language'>
-							<option value=''><?=_l('Please choose your language')?></option>
+							<option value=''><?=lang('Please choose your language')?></option>
 							<option value='en'>English</option>
 							<option value='ko'>Korean</option>
 						</select>
