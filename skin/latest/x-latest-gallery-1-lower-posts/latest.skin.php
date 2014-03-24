@@ -17,9 +17,7 @@ if ( ! $GLOBALS[$latest_skin_url] ++ ) { ?><link rel="stylesheet" href="<?php ec
 				$count_image ++;
 			}
 			else {
-				$img = '<img class="img_left" src="'.$latest_skin_url.'/img/no-image.png"/>';
-				$no_image = g::thumbnail_from_image_tag( $img, $bo_table, 233-2, 208-1 );
-				$img = "<img class='img_left' src='$no_image'/>";
+				$img = '<img class="img_left" src="'.$latest_skin_url.'/img/no-image.png"/>';				
 			}
 	?>
 		<div class="post-item <? if ($i==1) echo 'first-item'?>">

@@ -1,7 +1,6 @@
+<script src='<?=x::url_theme()?>/js/banner.js' /></script>
 <?
-	
 		$banners = array();
-		$container_width = 0;
 		for ( $i = 1; $i <= 5 ; $i++) { 
 			if ( file_exists( x::path_file( "banner$i" ) ) ) {
 				$banners[] = array(
@@ -12,7 +11,7 @@
 				);
 			}
 		}
-		$total_banners = count($banners);
+		$total_banners = count($banners);		
 	?>	
 		<div class='banner' total_banners="<?=$total_banners?>" >
 			<div class='inner' style="position: relative;">
@@ -28,6 +27,8 @@
 							echo "<div class='banner-image-container image_$selected $first_image' image_num='$selected'><div class='banner-image'>";
 							echo "<a href='$url' target='_blank'><img src='$banner[src]''></a></div>";
 							echo "<div class='banner-content-container'><a href='$url' target='_blank'><span class='banner-content'><p class='banner-text'><div class='banner-subject'>".cut_str(strip_tags($banner['subject']),20,'...')."</div><div class='banner-inner-contents'>".cut_str(strip_tags($banner['content']),200,'...')."</div></p></span></a>";
+							echo "<div class='arrow-left-inner'></div>";
+							echo "<div class='arrow-left-outer'></div>";
 							echo "</div>";
 							echo "<a href='$url' class='read-more'>READ MORE ></a></div>";
 						}
@@ -35,6 +36,7 @@
 					else {
 						echo "<img src='".x::url_theme()."/img/no_image_banner1.png' />";
 					}
+
 					echo "<div style='clear: left'></div>";
 					
 				?>

@@ -13,6 +13,10 @@
 	text-decoration:none;
 }
 
+.layout .header .top a.last_menu{
+	margin-right:0;
+}
+
 .layout .header .search_and_top_wrapper #gallery_1_search_text{
 	border:2px solid #ff8866;
 	
