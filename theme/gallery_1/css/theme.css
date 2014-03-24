@@ -79,13 +79,31 @@
 .banner .banner-inner-contents {
 	line-height: 18px;
 	font-size: 13px;
-	height: 215px;
+	height: 190px;
 	overflow: hidden;
+}
+
+.banner .read-more {
+	position: absolute;
+	bottom: 13px;
+	right: 17px;
+	color: #999999;
 }
 
 
 .banner .banner-pagination {
 	position: absolute;
-	bottom: 14px;
-	right: 230px;
+	bottom: 17px;
+	right: 125px;
+}
+
+.banner .banner-pagination .page_num {
+	color: #fafafa;
+	padding: 5px 7px;
+	background: #666666;
+	margin-right: 7px;
+}
+
+.banner .banner-pagination .page_num.selected_num {
+	background: #000000;
 }
