@@ -277,17 +277,22 @@
 	font-weight:bold;
 	max-width: 70%;
 	border-bottom: solid 2px #696969;
-	color: #24a1b3;
 	padding-bottom: 3px;
 }
 
+.right-lower-panel .lower-left .lower-title a {
+	color: #24a1b3;
+}
+.right-lower-panel .lower-left .lower-title a:hover {
+	text-decoration: none;
+}
 
 .right-lower-panel .lower-left .left-first-image-wrapper{	
 	padding:0 13px 0 10px;
 }
 
 .right-lower-panel .lower-left img{	
-	width:100%;		
+	
 }
 
 .lower_left_image_mobile {

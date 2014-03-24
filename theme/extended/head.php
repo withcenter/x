@@ -106,7 +106,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	
 <script>
 	$(function(){
-		$("a[href*='<?=$bo_table?>'], a[href*='<?=$in['page']?>']").parent().find('.extra-border').css("border-left", "3px solid #f2860c");
-		$("a[href*='<?=$bo_table?>'], a[href*='<?=$in['page']?>']").css("border-left", "1px solid #f2860c");
+		$(".right_main_menus a[href*='<?=$bo_table?>'], a[href*='<?=$in['page']?>']").parent().find('.extra-border').css("border-left", "3px solid #f2860c");
+		$(".right_main_menus a[href*='<?=$bo_table?>'], a[href*='<?=$in['page']?>']").css("border-left", "1px solid #f2860c");
 	});
 </script>
