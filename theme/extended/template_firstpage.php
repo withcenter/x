@@ -1,13 +1,12 @@
 <?php
 $dirs = file::getDirs(X_DIR_THEME);
-for ( $i=1; $i <= 3; $i ++ ) {
+
+for ( $i=1; $i <= 10; $i ++ ) {
 	$path = X_DIR_THEME . "/".$dirs[$i]."/config.xml";
 	if ( ! file_exists($path) ) continue;
 				
 	$theme_config = load_config ( $path );
-	di ( $theme_config );
 	$name = $theme_config['name'][L];
-	if ( empty($name) ) continue;
 				
 	$type = explode(',', $theme_config['type']);
 				
