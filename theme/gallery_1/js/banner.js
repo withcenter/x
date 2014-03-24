@@ -4,7 +4,7 @@ $(function(){
 	
 	var banner_rotate_interval = setInterval(function(){
 		rotate_the_banner();		
-	},1000);
+	},5000);
 	
 	$('.banner').mouseenter(function(){
 		clearInterval(banner_rotate_interval);
@@ -13,7 +13,7 @@ $(function(){
 	$('.banner').mouseleave(function(){
 		banner_rotate_interval = setInterval(function(){
 			rotate_the_banner();		
-		},1000);
+		},5000);
 	});
 	
 	$('.page_num').click(function() {
