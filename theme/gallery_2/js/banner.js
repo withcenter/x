@@ -1,22 +1,20 @@
 $(function(){
 	var banner_rotator = setInterval( function() { rotate_the_banner() } , 5000 );
-	var banner_num, left_value, page_num;
-	var total_banners = $(".banner").attr("total_banners");
+	var banner_num, left_value, page_num, total_banners = $(".banner").attr("total_banners");
 	
 	/*banner rotation*/
 	function rotate_the_banner() {
 		$(".banner-image.selected").removeClass('selected').next().addClass('selected');
 		$(".page_num.selected_num").removeClass('selected_num').next().addClass('selected_num');
-		
+			
 		if( banner_num==total_banners ) {
-			$(".banner-image").first().addClass('selected');
+			$(".banner-image").first().addClass('selected'); 
 			$(".page_num").first().addClass('selected_num');
 		}
+
 		banner_num = $(".banner-image.selected").attr('image_num');
 		left_value = -(((banner_num) * 968));
-		if (banner_num == 1 ) {	
-			$(".images-container").css('left',0);
-		}
+		if ( banner_num == 1 ) $(".images-container").css('left',0);
 		$(".images-container").animate({left: left_value}, 500);
 	}
 	
@@ -32,8 +30,7 @@ $(function(){
 	$(".banner").mouseleave(function(){
 		$(this).find('.banner-content').hide();
 		banner_rotator = setInterval( function() { rotate_the_banner() } , 5000 );
-		$(".next-banner").hide();
-		$(".previous-banner").hide();		
+		$(".next-banner").hide().siblings(".previous-banner").hide();		
 	});
 	
 	/*pagination click()*/
@@ -57,28 +54,20 @@ $(function(){
 	
 	/*pagination*/
 	function clicked_banner( page_num ) {
-		$(".banner-image.selected").removeClass('selected');
-		$(".page_num.selected_num").removeClass('selected_num');
-		$(".page_"+page_num).addClass('selected_num');
-		$(".image_"+page_num).addClass('selected');
+		$(".banner-image.selected").removeClass('selected').siblings(".image_"+page_num).addClass('selected');		
+		$(".page_num.selected_num").removeClass('selected_num').siblings(".page_"+page_num).addClass('selected_num');;	
+		
 		$('.banner-content').fadeOut();
 		$(".images-container").animate({left: -((page_num) * 968)}, 500).find('.banner-content').fadeIn();
+		banner_num = $(".banner-image.selected").attr('image_num');
+		
 		previous_next_toggle( page_num );
 	}
 	
 	/*previous and next button ( show and hide ) conditions*/
 	function previous_next_toggle( page_num ) {
-
-		if( page_num == 1 ) {
-			$(".next-banner").show();
-			$(".previous-banner").hide();
-		} else if ( page_num == total_banners ) {
-			$(".next-banner").hide();
-			$(".previous-banner").show();		
-		}
-		else {
-			$(".next-banner").show();
-			$(".previous-banner").show();			
-		}	
+		if( page_num == 1 )	$(".next-banner").show().siblings(".previous-banner").hide();
+		else if ( page_num == total_banners ) $(".next-banner").hide().siblings(".previous-banner").show();		
+		else $(".next-banner").show().siblings(".previous-banner").show();			
 	}
 });
