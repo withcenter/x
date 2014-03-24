@@ -71,7 +71,37 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			</div>
 			<div style='clear:both;'></div>
 	</div>
-	
+	<!--[if lte IE 8]>
+		<style>
+			.header{
+				min-width:970px;
+			}
+			.header .inner{
+				width:970px;				
+			}
+			
+			.header  .logo-wrapper{
+				width:425px;				
+			}
+						
+			.header .right_main_menus{
+				width:545px
+				float:left;
+			}
+			
+			.header .right_main_menus ul li{	
+				width:24%;
+			}	
+
+			.container{
+				min-width:970px;
+			}
+			
+			.footer-container{
+				min-width:970px;
+			}
+		</style>
+	<![endif]-->
 	<div class='container'>
 
 	

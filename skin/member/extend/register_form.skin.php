@@ -72,6 +72,14 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
 	<div style='clear:both'></div>
 	</div>
 </div>
+
+<!--[if IE 7]>
+		<style>
+			.extended input[type='submit'], .extended .checkbox_wrapper{
+				width:49.5%;
+			}						
+		</style>
+<![endif]-->
  <script>
     $(function() {
         $("#reg_zip_find").css("display", "inline-block");

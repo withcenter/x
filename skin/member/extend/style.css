@@ -326,6 +326,7 @@
 	padding:22px 12.37% 40px 12.37%;
 }
 
+
 #extended_login .inner .title{
 	width:50%;
 	float:left;
@@ -336,7 +337,7 @@
 	padding-bottom:5px;
 	height:20px;
 	line-height:25px;
-	overflow:hidden;
+	overflow:hidden;	
 }
 
 #extended_login .inner .title.login {
