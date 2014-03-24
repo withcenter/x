@@ -5,9 +5,77 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 // add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
 add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
 ?>
-
 <script src="<?php echo G5_JS_URL; ?>/viewimageresize.js"></script>
+<?php
+	$website_item = null;
+	if ( $view['wr_6'] == 'company' ) $website_item =  '회사/업체/상품소개';
+	else if ( $view['wr_6'] == 'community' ) $website_item =  '커뮤니티(카페)';
+	else if ( $view['wr_6'] == 'shopping' ) $website_item =  '쇼핑몰';
+	else $website_item =  '선택 없음';
+?>
+<div class='application-view'>
+<div class='title'>
+	<?=$view['wr_name']?>님의 제작요청사항 입니다.
+</div>
 
+ <ul class="bo_v_com">
+            <?php if ($update_href) { ?><li><a href="<?php echo $update_href ?>" class="btn_b01">수정</a></li><?php } ?>
+            <?php if ($delete_href) { ?><li><a href="<?php echo $delete_href ?>" class="btn_b01" onclick="del(this.href); return false;">삭제</a></li><?php } ?>
+            <?php if ($copy_href) { ?><li><a href="<?php echo $copy_href ?>" class="btn_admin" onclick="board_move(this.href); return false;">복사</a></li><?php } ?>
+            <?php if ($move_href) { ?><li><a href="<?php echo $move_href ?>" class="btn_admin" onclick="board_move(this.href); return false;">이동</a></li><?php } ?>
+            <?php if ($search_href) { ?><li><a href="<?php echo $search_href ?>" class="btn_b01">검색</a></li><?php } ?>
+            <li><a href="<?php echo $list_href ?>" class="btn_b01">목록</a></li>
+            <?php if ($reply_href) { ?><li><a href="<?php echo $reply_href ?>" class="btn_b01">답변</a></li><?php } ?>
+            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b02">글쓰기</a></li><?php } ?>
+ </ul>
+<table cellpadding=0 cellspacing=0 width='100%' border=1>
+	<tr>
+		<td width='120'>웹사이트 종류</td>
+		<td><?=$website_item?></td>
+		<td width='120'>템플릿 종류</td>
+		<td><?=$view['wr_7']?></td>
+	</tr>
+	<tr>
+		<td width='120'>회사/단체/신청자</td>
+		<td><?=$view['wr_1']?></td>
+		<td width='120'>작성자 이름</td>
+		<td><?=$view['wr_name']?></td>
+	</tr>
+	<tr>
+		<td width='120'>주소</td>
+		<td colspan=3><?=$view['wr_2']?></td>
+	</tr>
+	<tr>
+		<td width='120'>유선 전화</td>
+		<td><?=$view['wr_4']?></td>
+		<td width='120'>휴대 전화</td>
+		<td><?=$view['wr_5']?></td>
+	</tr>
+	<tr>
+		<td width='120'>이메일</td>
+		<td><?=$view['wr_link1']?></td>
+		<td width='120'>현재 웹사이트 주소</td>
+		<td><?=$view['wr_link2']?></td>
+	</tr>
+	<tr>
+		<td width='120'>예상제작기간</td>
+		<td><?=$view['wr_8']?></td>
+		<td width='120'>신청 도메인</td>
+		<td><?=$view['wr_9']?></td>
+	</tr>
+	<tr>
+		<td colspan=4>기타 요청사항</td>
+	</tr>
+	<tr>
+		<td colspan=4><textarea><?=$view['wr_content']?></textarea></td>
+	</tr>
+</table>
+</div>
+ <?php
+   // 코멘트 입출력
+   include_once('./view_comment.php');
+ ?>
+<? /*
 <!-- 게시물 읽기 시작 { -->
 <div id="bo_v_table"><?php echo $board['bo_subject']; ?></div>
 
@@ -202,7 +270,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 
 </article>
 <!-- } 게시판 읽기 끝 -->
-
+*/?>
 <script>
 <?php if ($board['bo_download_point'] < 0) { ?>
 $(function() {
