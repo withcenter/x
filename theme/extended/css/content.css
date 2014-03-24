@@ -43,7 +43,6 @@
 
 .lower-middle-1, .lower-middle-2, .lower-middle-3 {
 	border: 1px solid #696969;
-	max-width: 170px;
 	max-height: 80px;
 	overflow: hidden;
 }
