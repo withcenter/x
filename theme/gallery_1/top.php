@@ -8,4 +8,4 @@
 <? } ?>
 
 <a href='<?=url_language_setting()?>'><?=lang("Language")?></a>
-<a href='<?=g::url()?>?device=mobile'><?=lang("Mobile")?></a>
+<a class='last_menu' href='<?=g::url()?>?device=mobile'><?=lang("Mobile")?></a>
