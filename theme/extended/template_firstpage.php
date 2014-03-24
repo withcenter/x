@@ -1,7 +1,7 @@
 <?php
 $dirs = file::getDirs(X_DIR_THEME);
 
-for ( $i=1; $i <= 3; $i ++ ) {
+for ( $i=1; $i <= 10; $i ++ ) {
 	$path = X_DIR_THEME . "/".$dirs[$i]."/config.xml";
 	if ( ! file_exists($path) ) continue;
 				
