@@ -308,9 +308,7 @@
 }
 
 /**EDIT for mb_login**/
-#extended_login{
-	border:1px solid #d9d9d9;
-	background-color:#fafafa;
+#extended_login{	
 	height:338px;
 	/*width:44.3%;*/
 	width:430px;
@@ -318,6 +316,8 @@
 }
 
 #extended_login .inner{
+	border:1px solid #d9d9d9;
+	background-color:#fafafa;
 	padding:22px 12.37% 40px 12.37%;
 }
 
@@ -327,7 +327,11 @@
 	text-align:center;
 	font-size:1.5em;
 	font-weight:bold;	
-	margin-bottom:30px;
+	margin-bottom:25px;
+	padding-bottom:5px;
+	height:20px;
+	line-height:25px;
+	overflow:hidden;
 }
 
 #extended_login .inner .title.login {
@@ -336,7 +340,7 @@
 }
 
 #extended_login .inner .title.register {	
-	padding-bottom:2px;
+	padding-bottom:7px;
 	border-bottom:1px solid #696969;
 }
 
@@ -359,13 +363,13 @@
 
 #extended_login #extended_login_fields input[type='text'], #extended_login #extended_login_fields input[type='password']{
 	width:94%;	
-	padding:10px 3%;
+	padding:8px 3%;
 	margin-bottom:10px;
 	background:#ffffff!important;
 }
 
 #extended_login #extended_login_fields input[type='password']{
-	margin-bottom:32px;
+	margin-bottom:40px;
 }
 
 #extended_login #extended_login_fields .checkbox_wrapper{
@@ -424,9 +428,15 @@
 
 }
 
-@media all and (max-width:450px){
+@media all and (max-width:640px){
 	#extended_login{
-		width:99%;
+		width:100%;
+	}
+}
+
+@media all and (max-width:400px){
+	#extended_login{
+		width:89%;
 	}
 }
 
@@ -453,7 +463,7 @@
 	text-align:center;
 	font-size:1.5em;
 	font-weight:bold;	
-	margin-bottom:30px;
+	margin-bottom:30px;	
 }
 
 .extended_register_form .inner .title.register {
