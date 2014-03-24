@@ -1,9 +1,6 @@
-.list .theme {
-	width: 33.33%;
-	
-}
-.list .theme img {
-	width:100%;
+.list iframe {
+	width: 100%;
+	min-height: 768px;
 }
 
 

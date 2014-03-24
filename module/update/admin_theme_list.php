@@ -1,16 +1,8 @@
 <?php
-/*
-	$posts = x::posts( array( 
-		'bo_table'				=> 'default',
-		'wr_link1'				=> array( 'IS NOT NULL' ),
-		'limit'=>5,
-		'select' => '*',
-		
-	) );
-	*/
-	
+
 	$url = URL_EXTENDED . '/x/etc/rss-update-list.php';
 	
+	return;
 	
 	// di($url);
 	
