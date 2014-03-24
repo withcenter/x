@@ -52,10 +52,13 @@
 	<tr>
 		<td>Theme</td>
 		<td>
+		<?
+		?>
 			<select name='theme'>
 				<?
 					$theme = meta_get( $site['domain'], 'theme' );
 					reset_theme();
+					
 					while ( next_theme() ) {
 				?>
 					<option value="<?=theme_dir()?>" <? if ( theme_dir() == $theme ) echo "selected=1"; ?>><?=theme_name()?></option>
