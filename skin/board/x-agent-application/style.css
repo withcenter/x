@@ -388,8 +388,13 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 
 /* list.skin.php */
 .list-application {
-	text-align: right;
+
 }
+
+.list-application .banner-image {
+	float: left;
+}
+
 .list-application .application-button {
 	display: inline-block;
 	font-family: '맑은 고딕', AppleGothic;
@@ -398,8 +403,50 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 	background-color: #60583c;
 	padding: 7px 20px 10px 20px;
 	border-radius: 4px;
+	float: right;
 }
 
 .list-application .application-button:hover {
 	text-decoration: none;
+}
+
+.x-agent-application-list {
+	margin: 10px 0;
+	border-radius: 3px;
+}
+
+.x-agent-application-list .title {
+	font-family: '맑은 고딕', AppleGothic;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #6c8499;
+	margin: 20px 0 10px 0;
+}
+
+.x-agent-application-list .row {
+	height: 30px;
+	line-height: 30px;
+	position: relative;
+	padding: 0 10px;
+}
+
+.x-agent-application-list .row:last-child {
+	border-bottom: 0;
+}
+
+.x-agent-application-list .row a {
+	font-family: '맑은 고딕', AppleGothic;
+}
+
+.x-agent-application-list .row a:hover {
+	text-decoration: none;
+}
+
+.x-agent-application-list .row img {
+	position: relative;
+	top: -1px;
+}
+
+.x-agent-application-list .background {
+	background-color: #f2f2f2;
 }

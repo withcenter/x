@@ -7,7 +7,7 @@
 	background-color:#fafafa;
 	padding-top:20px;
 	border-bottom:1px solid #696969;
-	margin-bottom:10px;
+	margin-bottom:30px;
 }
 
 .layout .header .inner{
@@ -17,6 +17,7 @@
 
 .layout .container{
 	max-width:970px;
+	min-height: 520px;
 	margin:auto;	
 	margin-bottom: 10px;
 }

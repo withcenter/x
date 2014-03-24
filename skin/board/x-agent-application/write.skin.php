@@ -70,7 +70,8 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
 			<td><span class='item-title'>작성자 이름</span></td>
 			<td>
 				<? if ( login() ) {?>
-					<?=$member['mb_name']?>
+					<?=$member['mb_id']."(".$member['mb_nick'].")"?>
+					<input type='hidden' name='wr_name' value='<?=$member['mb_id']."(".$member['mb_nick'].")"?>' />
 				<? }
 					else {?>
 				<input type='text' name='wr_name' value='<?=$name?>' />
@@ -181,8 +182,8 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
 
     function fwrite_submit(f)
     {
-			alert(f.wr_name.value)
-		
+		f.wr_subject.value = f.wr_name.value + application_status;
+			
 		var content = f.wr_content.value;
 		if ( f.wr_content.value == '' ) f.wr_content.value = '기타 요청 사항 없음';
 		
@@ -232,8 +233,6 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
 			return false;
 		}
 	
-		f.wr_subject.value = f.wr_name.value + application_status;
-		
 		
         <?php  echo $captcha_js; // 캡챠 사용시 자바스크립트에서 입력된 캡챠를 검사함   ?>
 
