@@ -8,9 +8,9 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
 <!-- 로그인 시작 { -->
 <div id="extended_login" class="extended_skin">
 <div class='inner'>
-   <div class='title login'><?php echo $g5['title'] ?></div>
-   <div class='title register'><a href='<?=G5_BBS_URL?>/register.php'>회원가입</a></div>
-
+	<div class='title login'><?php echo $g5['title'] ?></div>
+	<div class='title register'><a href='<?=G5_BBS_URL?>/register.php'>회원가입</a></div>
+	<div style='clear:both'></div>
     <form name="flogin" action="<?php echo $login_action_url ?>" onsubmit="return flogin_submit(this);" method="post">
     <input type="hidden" name="url" value='<?php echo $login_url ?>'>
 

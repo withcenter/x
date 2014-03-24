@@ -38,6 +38,10 @@
 	display:none;
 }
 
+.header .right_main_menus.below-400px ul{
+	margin:0 2.5%;
+}
+
 .header .right_main_menus ul{
 	text-decoration:none;
 	padding:0;
