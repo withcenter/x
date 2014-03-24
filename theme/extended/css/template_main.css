@@ -40,3 +40,12 @@
 	opacity: 0.8;
 	width: 100%;
 }
+
+.template_main .template_photo .template_title a {
+	color: #ffffff;
+}
+
+.template_main .template_photo .template_title a:hover {
+	text-decoration: none;
+	color: orange;
+}
