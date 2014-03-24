@@ -6,144 +6,89 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
 ?>
 
-<h2 id="container_title"><?php echo $board['bo_subject'] ?><span class="sound_only"> 목록</span></h2>
-
 <!-- 게시판 목록 시작 { -->
-<div id="bo_gall" style="width:<?php echo $width; ?>">
+<div class='list_site_gallery'>
 
-    <?php if ($is_category) { ?>
-    <nav id="bo_cate">
-        <h2><?php echo $board['bo_subject'] ?> 카테고리</h2>
-        <ul id="bo_cate_ul">
-            <?php echo $category_option ?>
-        </ul>
-    </nav>
-    <?php } ?>
-
-    <div class="bo_fx">
-        <div id="bo_list_total">
-            <span>Total <?php echo number_format($total_count) ?>건</span>
-            <?php echo $page ?> 페이지
-        </div>
+<? if ( super_admin() ) {?>
 
         <?php if ($rss_href || $write_href) { ?>
-        <ul class="btn_bo_user">
-            <?php if ($rss_href) { ?><li><a href="<?php echo $rss_href ?>" class="btn_b01">RSS</a></li><?php } ?>
-            <?php if ($admin_href) { ?><li><a href="<?php echo $admin_href ?>" class="btn_admin">관리자</a></li><?php } ?>
-            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b02">글쓰기</a></li><?php } ?>
-        </ul>
+        <div class="admin-menu">
+            <?php if ($rss_href) { ?><a href="<?php echo $rss_href ?>" class="btn_b01">RSS</a><?php } ?>
+            <?php if ($admin_href) { ?><a href="<?php echo $admin_href ?>" class="btn_admin">관리자</a><?php } ?>
+            <?php if ($write_href) { ?><a href="<?php echo $write_href ?>" class="btn_b02">글쓰기</a><?php } ?>
+        </div>
         <?php } ?>
-    </div>
+<? }?>
 
-    <form name="fboardlist"  id="fboardlist" action="./board_list_update.php" onsubmit="return fboardlist_submit(this);" method="post">
-    <input type="hidden" name="bo_table" value="<?php echo $bo_table ?>">
-    <input type="hidden" name="sfl" value="<?php echo $sfl ?>">
-    <input type="hidden" name="stx" value="<?php echo $stx ?>">
-    <input type="hidden" name="spt" value="<?php echo $spt ?>">
-    <input type="hidden" name="page" value="<?php echo $page ?>">
-    <input type="hidden" name="sw" value="">
+	<form name="fboardlist"  id="fboardlist" action="./board_list_update.php" onsubmit="return fboardlist_submit(this);" method="post">
+		<input type="hidden" name="bo_table" value="<?php echo $bo_table ?>">
+		<input type="hidden" name="sfl" value="<?php echo $sfl ?>">
+		<input type="hidden" name="stx" value="<?php echo $stx ?>">
+		<input type="hidden" name="spt" value="<?php echo $spt ?>">
+		<input type="hidden" name="page" value="<?php echo $page ?>">
+		<input type="hidden" name="sw" value="">
+		
+		<div class='title'>사이트 갤러리</div>	
+		<table cellpadding=0 cellspacing=0 width='100%'>
+			<tr>
+		<?php
+			$i = 0;
+			foreach ( $list as $li ) {
+				if ( $i != 0 && $i % 3 == 0 ) echo "</tr><tr>";
+				if ( $i % 3 == 0 || $i % 3 == 1) $add_margin = "<td width=10></td>"; 
+				$i++;
+				$thumb = get_list_thumbnail($bo_table, $li['wr_id'], 320, 320);
+				
+				if ( $thumb['src'] ) {
+					if ( super_admin() ) {
+						$url = $li['href'];
+						$target = null;
+					}
+					else {
+						$url = $li['wr_link1'];
+						$target = "target='_blank'";
+					}
+					
+					// 제목
+					$subject = conv_subject($li['wr_subject'], 15, '...');
+					echo "
+						<td>
+							<div class='photo'>
+								<a href='$url' $target><img src='".$thumb['src']."' /></a>
+								<div class='pannel'>
+									$subject   <a href='$url' target='_blank'>사이트로 이동</a>
+								</div>
+							</div>
+						</td>".$add_margin;
+				}
+			}
+				if ( $i % 3 == 1  )  echo "<td></td><td width=10></td><td></td>";
+				else if ( $i % 3 == 2 ) echo "<td></td>";
+			?>
+				</tr>
+			</table>
+			
+		<? if ( super_admin() ) {?>
+			<?php if ($list_href || $is_checkbox || $write_href) { ?>
+			<div class="bo_fx">
+				<?php if ($is_checkbox) { ?>
+				<ul class="btn_bo_adm">
+					<li><input type="submit" name="btn_submit" value="선택삭제" onclick="document.pressed=this.value"></li>
+					<li><input type="submit" name="btn_submit" value="선택복사" onclick="document.pressed=this.value"></li>
+					<li><input type="submit" name="btn_submit" value="선택이동" onclick="document.pressed=this.value"></li>
+				</ul>
+				<?php } ?>
 
-    <?php if ($is_checkbox) { ?>
-    <div id="gall_allchk">
-        <label for="chkall" class="sound_only">현재 페이지 게시물 전체</label>
-        <input type="checkbox" id="chkall" onclick="if (this.checked) all_checked(true); else all_checked(false);">
-    </div>
-    <?php } ?>
+				<?php if ($list_href || $write_href) { ?>
+				<ul class="btn_bo_user">
+					<?php if ($list_href) { ?><li><a href="<?php echo $list_href ?>" class="btn_b01">목록</a></li><?php } ?>
+					<?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b02">글쓰기</a></li><?php } ?>
+				</ul>
+				<?php } ?>
+			</div>
+			<?php } ?>
+		<? }?>
 
-    <ul id="gall_ul">
-        <?php for ($i=0; $i<count($list); $i++) {
-            if($i>0 && ($i % $bo_gallery_cols == 0))
-                $style = 'clear:both;';
-            else
-                $style = '';
-            if ($i == 0) $k = 0;
-            $k += 1;
-            if ($k % $bo_gallery_cols == 0) $style .= "margin:0 !important;";
-         ?>
-        <li class="gall_li <?php if ($wr_id == $list[$i]['wr_id']) { ?>gall_now<?php } ?>" style="<?php echo $style ?>width:<?php echo $board['bo_gallery_width'] ?>px">
-            <?php if ($is_checkbox) { ?>
-            <label for="chk_wr_id_<?php echo $i ?>" class="sound_only"><?php echo $list[$i]['subject'] ?></label>
-            <input type="checkbox" name="chk_wr_id[]" value="<?php echo $list[$i]['wr_id'] ?>" id="chk_wr_id_<?php echo $i ?>">
-            <?php } ?>
-            <span class="sound_only">
-                <?php
-                if ($wr_id == $list[$i]['wr_id'])
-                    echo "<span class=\"bo_current\">열람중</span>";
-                else
-                    echo $list[$i]['num'];
-                 ?>
-            </span>
-            <ul class="gall_con">
-                <li class="gall_href">
-                    <a href="<?php echo $list[$i]['href'] ?>">
-                    <?php
-                    if ($list[$i]['is_notice']) { // 공지사항  ?>
-                        <strong style="width:<?php echo $board['bo_gallery_width'] ?>px;height:<?php echo $board['bo_gallery_height'] ?>px">공지</strong>
-                    <?php } else {
-                        $thumb = get_list_thumbnail($board['bo_table'], $list[$i]['wr_id'], $board['bo_gallery_width'], $board['bo_gallery_height']);
-
-                        if($thumb['src']) {
-                            $img_content = '<img src="'.$thumb['src'].'" alt="'.$thumb['alt'].'" width="'.$board['bo_gallery_width'].'" height="'.$board['bo_gallery_height'].'">';
-                        } else {
-                            $img_content = '<span style="width:'.$board['bo_gallery_width'].'px;height:'.$board['bo_gallery_height'].'px">no image</span>';
-                        }
-
-                        echo $img_content;
-                    }
-                     ?>
-                    </a>
-                </li>
-                <li class="gall_text_href" style="width:<?php echo $board['bo_gallery_width'] ?>px">
-                    <?php
-                    // echo $list[$i]['icon_reply']; 갤러리는 reply 를 사용 안 할 것 같습니다. - 지운아빠 2013-03-04
-                    if ($is_category && $list[$i]['ca_name']) {
-                     ?>
-                    <a href="<?php echo $list[$i]['ca_name_href'] ?>" class="bo_cate_link"><?php echo $list[$i]['ca_name'] ?></a>
-                    <?php } ?>
-                    <a href="<?php echo $list[$i]['href'] ?>">
-                        <?php echo $list[$i]['subject'] ?>
-                        <?php if ($list[$i]['comment_cnt']) { ?><span class="sound_only">댓글</span><?php echo $list[$i]['comment_cnt']; ?><span class="sound_only">개</span><?php } ?>
-                    </a>
-                    <?php
-                    // if ($list[$i]['link']['count']) { echo '['.$list[$i]['link']['count']}.']'; }
-                    // if ($list[$i]['file']['count']) { echo '<'.$list[$i]['file']['count'].'>'; }
-
-                    if (isset($list[$i]['icon_new'])) echo $list[$i]['icon_new'];
-                    if (isset($list[$i]['icon_hot'])) echo $list[$i]['icon_hot'];
-                    //if (isset($list[$i]['icon_file'])) echo $list[$i]['icon_file'];
-                    //if (isset($list[$i]['icon_link'])) echo $list[$i]['icon_link'];
-                    //if (isset($list[$i]['icon_secret'])) echo $list[$i]['icon_secret'];
-                     ?>
-                </li>
-                <li><span class="gall_subject">작성자 </span><?php echo $list[$i]['name'] ?></li>
-                <li><span class="gall_subject">작성일 </span><?php echo $list[$i]['datetime2'] ?></li>
-                <li><span class="gall_subject">조회 </span><?php echo $list[$i]['wr_hit'] ?></li>
-                <?php if ($is_good) { ?><li><span class="gall_subject">추천</span><strong><?php echo $list[$i]['wr_good'] ?></strong></li><?php } ?>
-                <?php if ($is_nogood) { ?><li><span class="gall_subject">비추천</span><strong><?php echo $list[$i]['wr_nogood'] ?></strong></li><?php } ?>
-            </ul>
-        </li>
-        <?php } ?>
-        <?php if (count($list) == 0) { echo "<li class=\"empty_list\">게시물이 없습니다.</li>"; } ?>
-    </ul>
-
-    <?php if ($list_href || $is_checkbox || $write_href) { ?>
-    <div class="bo_fx">
-        <?php if ($is_checkbox) { ?>
-        <ul class="btn_bo_adm">
-            <li><input type="submit" name="btn_submit" value="선택삭제" onclick="document.pressed=this.value"></li>
-            <li><input type="submit" name="btn_submit" value="선택복사" onclick="document.pressed=this.value"></li>
-            <li><input type="submit" name="btn_submit" value="선택이동" onclick="document.pressed=this.value"></li>
-        </ul>
-        <?php } ?>
-
-        <?php if ($list_href || $write_href) { ?>
-        <ul class="btn_bo_user">
-            <?php if ($list_href) { ?><li><a href="<?php echo $list_href ?>" class="btn_b01">목록</a></li><?php } ?>
-            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b02">글쓰기</a></li><?php } ?>
-        </ul>
-        <?php } ?>
-    </div>
-    <?php } ?>
     </form>
 </div>
 
@@ -157,6 +102,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 <?php echo $write_pages;  ?>
 
 <!-- 게시물 검색 시작 { -->
+<? /*
 <fieldset id="bo_sch">
     <legend>게시물 검색</legend>
 
@@ -179,6 +125,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
     <input type="submit" value="검색" class="btn_submit">
     </form>
 </fieldset>
+*/?>
 <!-- } 게시물 검색 끝 -->
 
 <?php if ($is_checkbox) { ?>
