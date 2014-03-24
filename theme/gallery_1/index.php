@@ -26,7 +26,7 @@
 							if ( !$url = $banner['href'] ) $url = "javascript:void(0)";
 							echo "<div class='banner-image-container image_$selected $first_image' image_num='$selected'><div class='banner-image'>";
 							echo "<a href='$url' target='_blank'><img src='$banner[src]''></a></div>";
-							echo "<div class='banner-content-container'><a href='$url' target='_blank'><span class='banner-content'><p class='banner-text'><div class='banner-subject'>".cut_str(strip_tags($banner['subject']),20,'...')."</div><div class='banner-inner-contents'>".cut_str(strip_tags($banner['content']),200,'...')."</div></p></span></a>";
+							echo "<div class='banner-content-container'><a href='$url' target='_blank'><span class='banner-content'><p class='banner-text'><div class='banner-subject'>".cut_str(strip_tags($banner['subject']),20,'...')."</div><div class='banner-inner-contents'>".cut_str(strip_tags($banner['content']),260,'...')."</div></p></span></a>";
 							echo "<div class='arrow-left-inner'></div>";
 							echo "<div class='arrow-left-outer'></div>";
 							echo "</div>";
