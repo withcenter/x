@@ -28,7 +28,26 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
     </form>
 </div>
 </div>
+<!--[if IE 7]>
+		<style>						
+			#extended_login .inner{
+					width:324px;
+			}
+			
+			.extended input[type='submit'], .extended .checkbox_wrapper{
+				width:49.5%;
+			}		
+			
+			.extended input[type='checkbox']{
+				margin-top:9px;
+				float:left;
+			}
 
+			.extended .checkbox_wrapper .checkbox_label{								
+				float:left;
+			}		
+		</style>
+<![endif]-->
 <script>
 $(function(){
     $("#login_auto_login").click(function(){
