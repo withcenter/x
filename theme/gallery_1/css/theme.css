@@ -44,7 +44,7 @@
 	display: none;
 }
 
-.banner .banner-image-container.image_1 {
+.banner .banner-image-container.selected {
 	display: block;
 }
 
@@ -65,6 +65,7 @@
 	border-left: solid 2px #25828f;
 	padding: 19px;
 	min-height: 278px;
+	position :relative;
 }
 
 .banner .banner-subject {
@@ -106,4 +107,28 @@
 
 .banner .banner-pagination .page_num.selected_num {
 	background: #000000;
+}
+
+.banner .arrow-left-inner {
+	position: absolute;
+	top: 59px;
+	left: -20px;	
+	width: 0; 
+	height: 0; 
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent; 
+	border-right: 20px solid #ffffff; 
+	z-index: 999;
+}
+
+.banner .arrow-left-outer {
+	position: absolute;
+	top: 56px;
+	left: -23px;	
+	width: 0; 
+	height: 0; 
+	border-top: 23px solid transparent;
+	border-bottom: 23px solid transparent; 
+	border-right: 23px solid #25828f; 
+	z-index: 998;
 }
