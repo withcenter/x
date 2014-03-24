@@ -5,7 +5,6 @@
 .x-latest-site-gallery .photo {
 	float: left;
 	border: 1px solid #696969;
-	max-width: 170px;
 	max-height: 80px;
 	margin-bottom: 6px;
 	overflow: hidden;
