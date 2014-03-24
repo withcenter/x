@@ -70,7 +70,7 @@
 
   <div class='config-wrapper'>
 	<div class='config-title'>
-		<span class='config-title-info'>SELECT FORUM ON FRONT PAGE</span>
+		<span class='config-title-info'>메인 페이지에 나타날 게시판을 선택 하세요</span>
 		<span class='config-title-notice'>
 			<span class='user-google-guide-button' page = 'google_doc_community_2_4' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[설명 보이기]</span>
 			<img src='<?=module('img/setting_2.png')?>'>
@@ -80,9 +80,9 @@
 	<div class='hidden-google-doc google_doc_community_2_4'>	
 	</div>
 		<table cellspacing='0' cellpadding='0' width='100%'>
-			<tr><td>POSTS LOCATION</td><td>FORUM NAME</td><td>NO. OF POSTS</td>
-			<tr valign='top'><td width='150'>MIDDLE POSTS </td><td width='350'><?=set_posts('gallery_1_forum_middle')?></td><td><?=set_no_of_posts("gallery_1_middle_posts_no")?></td></tr>
-			<tr valign='top'><td>BOTTOM POSTS </td><td><?=set_posts('gallery_1_forum_bottom')?></td><td><?=set_no_of_posts("gallery_1_bottom_posts_no")?></td></tr>
+			<tr><td>게시물들 위치</td><td>게시판 이름</td><td>게시물 개수</td>
+			<tr valign='top'><td width='150'>중간 게시물 </td><td width='350'><?=set_posts('gallery_1_forum_middle')?></td><td><?=set_no_of_posts("gallery_1_middle_posts_no")?></td></tr>
+			<tr valign='top'><td>하단 게시물 </td><td><?=set_posts('gallery_1_forum_bottom')?></td><td><?=set_no_of_posts("gallery_1_bottom_posts_no")?></td></tr>
 			</tr>
 		</table>
 	</div>

@@ -9,9 +9,9 @@ if ( $key ) {
 	$q = array();
 	
 	// 사이트 전제 검색 옵션이 있는 경우는 domain 조건을 제거 한다.
-	if ( !meta('all_site_search') ) {
+	if ( !meta('search_all_site') ) {
 		// 사이트 검색 조건이 있는 경우
-		if ( $site_list = meta('site_search') ) {
+		if ( $site_list = meta('search_sites') ) {
 			$sl = explode( ',', $site_list );
 			
 			$sl_q = array();
