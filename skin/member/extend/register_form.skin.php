@@ -25,11 +25,22 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
 		<?php 
 			$mb_nick_read_only = $readonly;
 			$mb_nick_message = "Last Edit : ".$member['mb_nick_date']."<br>Next Edit : ".date("Y-m-d", G5_SERVER_TIME + ($config['cf_nick_modify'] * 87840));
-		}  ?>
+		}
 		
+		if( $member['mb_id'] ) {
+			$login_msg = "로그아웃";			
+			$log_href = G5_BBS_URL."/logout.php";			
+			$profile_msg = "Update";			
+		}
+		else {
+			$login_msg = "로그인";
+			$log_href = G5_BBS_URL."/login.php";			
+			$profile_msg = "회원가입";			
+		}
+		?>
 	<div class='title_wrapper'>
-		<div class='title login'><a href='<?=G5_BBS_URL?>/login.php'>로그인</a></div>
-		<div class='title register'><?php echo $g5['title'] ?></div>
+		<div class='title login'><a href='<?=$log_href?>'><?=$login_msg?></a></div>
+		<div class='title register'><?=$profile_msg?></div>
 		<div style='clear:both'></div>
 	</div>
 	

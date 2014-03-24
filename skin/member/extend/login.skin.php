@@ -16,7 +16,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
 
     <fieldset id="extended_login_fields">
         <div class='label' for="login_id" class="login_id">회원아이디</div>
-        <input type="text" name="mb_id" id="login_id" required class="frm_input required" size="20" maxLength="20">
+        <input type="text" name="mb_id" id="login_id" required class="frm_input required" size="20" maxLength="20" autocomplete='off'>
         <div class='label' for="login_pw" class="login_pw">비밀번호</div>
         <input type="password" name="mb_password" id="login_pw" required class="frm_input required" size="20" maxLength="20">
 		<div class='checkbox_wrapper'>
