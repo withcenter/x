@@ -615,11 +615,50 @@ EOH;
 
 
 	
+	static function xml2json($xml) {
 
+         normalizeSimpleXML(simplexml_load_string($xml), $result);
+         return json_encode($result);
+     }
+	
+
+	/** @short loads local or remote XML file and returns in assoc after parseing
+	 *
+	 */
+	static function load_and_parse_xml_into_assoc( $path )
+	{
+		$lines = file( $path );
+		if ( $lines ) {
+			$lines = implode('', $lines);
+			$xml = new SimpleXMLElement($lines);
+			$json = self::xml2json($lines);
+			return json_decode($json,true) ;
+		}
+		else return array();
+	}
 } // eo etc class
 
 
 
+         function normalizeSimpleXML($obj, &$result) {
+             $data = $obj;
+             if (is_object($data)) {
+                 $data = get_object_vars($data);
+             }
+             if (is_array($data)) {
+                 foreach ($data as $key => $value) {
+                     $res = null;
+                     normalizeSimpleXML($value, $res);
+                     if (($key == '@attributes') && ($key)) {
+                         $result = $res;
+                     } else {
+                         $result[$key] = $res;
+                     }
+                 }
+             } else {
+                 $result = $data;
+             }
+         }
 
 /**@short returns path a script under the current module folder
  *
@@ -660,6 +699,12 @@ function ln($en, $ko=null)
 		else return $en;
 	}
 }
+
+function L()
+{
+	return etc::user_language();
+}
+
 
 
 
@@ -716,11 +761,12 @@ function patch( $file )
 }
 
 
-
+/** deprecated
 function _L($code, $a=null, $b=null, $c=null)
 {
 	return etc::lang($code, $a, $b, $c);
 }
+*/
 
 
 

@@ -1,0 +1,18 @@
+.list .theme {
+	width: 33.33%;
+	
+}
+.list .theme img {
+	width:100%;
+}
+
+
+/* admin_theme_installed */
+.installed .theme {
+	margin-bottom: 2em;
+	width: 33.33%;	
+}
+.installed .theme img {
+	width:100%;
+}
+

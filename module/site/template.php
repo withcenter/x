@@ -7,9 +7,14 @@
 		$dirs = file::getDirs(X_DIR_THEME);
 		foreach ( $dirs as $dir ){
 			if ( $dir == $active_theme ) {
+<<<<<<< HEAD
 				$theme_config = array();
 				include X_DIR_THEME . "/$dir/config.php";
 				$active_theme_name = $theme_config['name'];
+=======
+				$theme_config = load_config( X_DIR_THEME . "/$dir/config.xml" );
+				$active_theme = $theme_config['name'];
+>>>>>>> 6f43c47b74ad7a48b01dc89435ece2cd951a7091
 				break;
 			}
 		}
@@ -20,6 +25,7 @@
 			<div class='theme-name active-theme'><?=$active_theme_name?><span class='active-note'>가 선택 되었습니다</span></div>
 		</div>
 	<?}?>
+<<<<<<< HEAD
 	<div class='theme-selection'>
 		<?php
 			$theme_ctr = 2;
@@ -52,4 +58,36 @@
 			<?}?>
 			<div style='clear:both'></div>
 	</div>
+=======
+	<?php
+		$theme_ctr = 2;
+			
+			foreach ( $dirs as $dir ) {
+				$path = X_DIR_THEME . "/$dir/config.xml";
+				if ( ! file_exists($path) ) continue;
+				
+				$theme_config = load_config($path);
+				//include $path;
+				$name = $theme_config['name'];
+				if ( empty($name) ) continue;
+				
+				$type = explode(',', $theme_config['type']);
+				
+				
+				
+				if ( ! in_array( 'pc', $type ) ) continue;
+				
+				
+				
+				
+			$url = x::url().'/theme/'.$dir.'/preview.jpg';
+			?>
+			<div class='theme-thumb inactive' theme_value='<?=$dir?>' theme_name ='<?=$theme_config['name']?>'>
+				<img src='<?=$url?>' >
+				<span class='theme-name'><?=$name?></span>
+			</div>
+			
+		<?}?>
+		<div style='clear:both'></div>
+>>>>>>> 6f43c47b74ad7a48b01dc89435ece2cd951a7091
 </div>			

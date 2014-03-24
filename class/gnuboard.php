@@ -1034,6 +1034,9 @@ class gnuboard {
 		
 		if ( $o['wr_option'] ) $cond[] = db::cond('wr_option');
 		
+		if ( $o['wr_link1'] ) $cond[] = db::cond('wr_link1');
+		if ( $o['wr_link2'] ) $cond[] = db::cond('wr_link2');
+		
 		if ( $cond ) $where = "WHERE " . implode( ' AND ', $cond );
 		else $where = null;
 		

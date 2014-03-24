@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<config>
+	<type>pc,mobile</type>
+	<name>
+		<en>Extended.KR</en>
+		<ko>Extended.KR</ko>
+	</name>
+	<version>0.1</version>
+	<short>
+		<en></en>
+		<ko></ko>
+	</short>
+	<detail>
+		<en></en>
+		<ko></ko>
+	</detail>
+	<menu>
+		<top>
+			<name>
+				<en>Menu Top</en>
+				<ko>상단 톱 메뉴</ko>
+			</name>
+			<max>0</max>
+		</top>
+		<left>
+			<name>
+				<en>Menu Left</en>
+				<ko>왼쪽 메뉴</ko>
+			</name>
+			<max>4</max>
+		</left>
+		<right>
+			<name>
+				<en>Menu Right</en>
+				<ko>오른쪽 메뉴</ko>
+			</name>
+			<max>1</max>
+		</right>
+		<bottom>
+			<name>
+				<en>Menu Bottom</en>
+				<ko>하단 메뉴</ko>
+			</name>
+			<max>0</max>
+		</bottom>
+	</menu>
+</config>
