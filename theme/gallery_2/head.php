@@ -38,10 +38,6 @@
 						<a href='<?=$register_link?>'><img src="<?=x::theme_url('img/top_icon2.png')?>"/></a>
 						<a href='<?=$register_link?>'><p>회원가입</p></a>
 					</div>
-					<!--<div class='statistics-button'>
-						<img src="<?=x::theme_url('img/top_icon2.png')?>"/>
-						<p>회원가입</p>
-					</div>-->
 					<div class='search-button'>
 						<img src="<?=x::theme_url('img/top_icon3.png')?>"/>
 						<p>검색</p>
@@ -49,10 +45,6 @@
 					<div class='login-container'>
 						<div class='triangle'></div>
 						<?=outlogin('x-outlogin-gallery-2')?>
-					</div>
-					<div class='statistics-container'>
-						<div class='triangle'></div>
-						<?=visit('x-visit-gallery-2')?>
 					</div>
 					<div class='search-container'>
 						<div class='triangle'></div>

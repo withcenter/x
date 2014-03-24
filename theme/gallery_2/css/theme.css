@@ -150,6 +150,10 @@ body {
 	background: #58839c;
 }
 
+.search-container.selected, .login-container.selected {
+	display: block;
+}
+
 /* CONTENT */
 .layout .content {
 	width: 970px;
