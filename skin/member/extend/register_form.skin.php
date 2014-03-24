@@ -4,7 +4,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 // add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
 add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 0);
 ?>
-<div class='extended_register_form'>
+<div class='extended extended_register_form'>
 	<div class='inner'>
 		<form id="fregisterform" name="fregisterform" action="<?php echo $register_action_url ?>" onsubmit="return fregisterform_submit(this);" method="post" enctype="multipart/form-data" autocomplete="off">
 			<input type="hidden" name="w" value="<?php echo $w ?>">
@@ -24,46 +24,50 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
 	</div>
 	
 	<div class='left'>
-			<div class='label'>user:</div>
+			<div class='label'>User Name</div>
 			<div class='input_wrapper id'>
 				<input type="text" name="mb_id" value="<?php echo $member['mb_id'] ?>" id="reg_mb_id" <?php echo $required ?> <?php echo $readonly ?> class="frm_input minlength_3 <?php echo $required ?> <?php echo $readonly ?>"maxlength="20">
 			</div>
-			<div class='label'>pass:</div>
+			<div class='label'>Password</div>
 			<div class='input_wrapper pass'>
 				<input type="password" name="mb_password" id="reg_mb_password" <?php echo $required ?> class="frm_input minlength_3 <?php echo $required ?>" maxlength="20">
 			</div>
-			<div class='label'>retype:</div>
+			<div class='label'>Retype Password</div>
 			<div class='input_wrapper retype_pass'>
 				<input type="password" name="mb_password_re" id="reg_mb_password_re" <?php echo $required ?> class="frm_input minlength_3 <?php echo $required ?>" maxlength="20">
 			</div>
-			<div class='label'>nickname:</div>
-			<div class='input_wrapper nickname'>
-				<input type="hidden" name="mb_nick_default" value="<?php echo isset($member['mb_nick'])?$member['mb_nick']:''; ?>">
-				<input type="text" name="mb_nick" value="<?php echo isset($member['mb_nick'])?$member['mb_nick']:''; ?>" id="reg_mb_nick" required class="frm_input required nospace" maxlength="20">
-			</div>					
-	</div>
-	<div class='right'>
-			<div class='label'>email:</div>
+			<div class='label'>Email</div>
 			<div class='input_wrapper email'>
 				<input type="hidden" name="old_email" value="<?php echo $member['mb_email'] ?>">
 				<input type="text" name="mb_email" value="<?php echo isset($member['mb_email'])?$member['mb_email']:''; ?>" id="reg_mb_email" required class="frm_input email required" maxlength="100">	
-			</div>					
-			<div class='label'>phone:</div>
-			<div class='input_wrapper tel_num'>
-				<input type="text" name="mb_tel" value="<?php echo $member['mb_tel'] ?>" id="reg_mb_tel" <?php echo $config['cf_req_tel']?"required":""; ?> class="frm_input <?php echo $config['cf_req_tel']?"required":""; ?>" maxlength="20">
-			</div>
-			<div class='label'>birth:</div>
-			<div class='input_wrapper mb_birth'>
-				<input type="text" name="mb_birth" value="<?php echo $member['mb_birth'] ?>" id="reg_mb_birth" class="frm_input" maxlength="20">
 			</div>
 			<div class='input_wrapper captcha'>
 			<?php echo captcha_html(); ?>
 			</div>
+							
+	</div>
+	<div class='right'>			
+			<div class='label'>Name</div>
+			<div class='input_wrapper nickname'>				
+				<input type="text" id="reg_mb_name" name="mb_name" value="<?php echo $member['mb_name'] ?>" class="frm_input">
+			</div>				
+			<div class='label'>Nickname</div>
+			<div class='input_wrapper nickname'>
+				<input type="hidden" name="mb_nick_default" value="<?php echo isset($member['mb_nick'])?$member['mb_nick']:''; ?>">
+				<input type="text" name="mb_nick" value="<?php echo isset($member['mb_nick'])?$member['mb_nick']:''; ?>" id="reg_mb_nick" required class="frm_input required nospace" maxlength="20">
+			</div>				
+			<div class='label'>Phone No.</div>
+			<div class='input_wrapper tel_num'>
+				<input type="text" name="mb_tel" value="<?php echo $member['mb_tel'] ?>" id="reg_mb_tel" class="frm_input" maxlength="20">
+			</div>					
+			<div class='label'>Mobile No.</div>
+			<div class='input_wrapper cell_num'>
+				<input type="text" name="mb_1" value="<?php echo $member['mb_1'] ?>" id="reg_mb_1" class="frm_input" maxlength="20">
+			</div>						
 		
-		<div class="btn_confirm">
-				<input type="submit" value="<?php echo $w==''?'회원가입':'정보수정'; ?>" id="btn_submit" class="btn_submit" accesskey="s">
-				<a href="<?php echo G5_URL ?>" class="btn_cancel">취소</a>
-		</div>
+		
+        <input type="submit" value="로그인" class="btn_submit"> 
+		<div class='cancel_wrapper'><a href="<?php echo G5_URL ?>" class="register_cancel">취소</a></div>
 	</div>
 		</form>	
 	<div style='clear:both'></div>
@@ -112,7 +116,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
             certify_win_open("<?php echo $cert_type; ?>", "<?php echo $cert_url; ?>");
             return;
         });
-        <?php } ?>
+        <?php } ?>				
     });
 
     // submit 최종 폼체크
@@ -136,19 +140,19 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
             }
         }
 
-        /*if (f.mb_password.value != f.mb_password_re.value) {
+        if (f.mb_password.value != f.mb_password_re.value) {
             alert("비밀번호가 같지 않습니다.");
             f.mb_password_re.focus();
             return false;
-        }*/
+        }
 
-        /*if (f.mb_password.value.length > 0) {
+        if (f.mb_password.value.length > 0) {
             if (f.mb_password_re.value.length < 3) {
                 alert("비밀번호를 3글자 이상 입력하십시오.");
                 f.mb_password_re.focus();
                 return false;
             }
-        }*/
+        }
 
         // 이름 검사
         if (f.w.value=="") {
