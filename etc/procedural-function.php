@@ -55,6 +55,18 @@ function reset_theme()
 	reset( $_theme_list );
 }
 
+/**
+ * @code
+	$themes = get_themes();
+ * @endcode
+ */
+function get_themes()
+{
+	global $_theme_list;
+	reset_theme();
+	return $_theme_list;
+}
+
 function next_theme()
 {
 	global $_theme_list, $_theme_list_current;
