@@ -15,7 +15,7 @@ foreach ( $dirs as $dir ) {
 	if ( in_array( 'pc', $type ) ) {
 		$url = x::url().'/theme/'.$dir.'/preview.jpg';
 ?>
-			<div class='lower-middle-<?=$i?>'>
+			<div class='lower-middle-<?=$j?>'>
 				<a href='<?=g::url()?>/?page=template_main'><img src='<?=$url?>' style='border:0;'/></a>
 			</div>
 		
