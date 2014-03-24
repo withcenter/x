@@ -361,7 +361,6 @@
 	color:#333333;
 }
 
-
 #extended_login #extended_login_fields input[type='text']:focus, #extended_login #extended_login_fields input[type='password']:focus{
 	border:1px solid #f2860c;
 	outline: none;
@@ -496,6 +495,34 @@
 	color:#333333;
 	margin-bottom:5px;
 	font-size:1.3em;
+}
+
+.extended_register_form .inner .input_wrapper.nickname{
+	position:relative;
+}
+
+.extended_register_form .inner .input_wrapper.nickname .triangle{
+	position:absolute;
+	top:-5px;
+	left:5px;
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;	
+	border-bottom: 5px solid orange;
+}
+
+.extended_register_form .inner .input_wrapper.nickname .notice{
+	display:none;
+	width:90%;
+	padding:10px 5%;
+	position:absolute;
+	bottom:-50px;
+	left:0;
+	color:blue;
+	border:1px solid orange;
+	border-radius:3px;
+	background-color:#fafafa;
 }
 
 .extended_register_form .inner .left{

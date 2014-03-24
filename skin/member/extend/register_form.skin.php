@@ -4,6 +4,12 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 // add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
 add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 0);
 ?>
+
+<script src="<?php echo G5_JS_URL ?>/jquery.register_form.js"></script>
+    <?php if($config['cf_cert_use'] && ($config['cf_cert_ipin'] || $config['cf_cert_hp'])) { ?>
+    <script src="<?php echo G5_JS_URL ?>/certify.js"></script>
+   <?php } ?>
+
 <div class='extended extended_register_form'>
 	<div class='inner'>
 		<form id="fregisterform" name="fregisterform" action="<?php echo $register_action_url ?>" onsubmit="return fregisterform_submit(this);" method="post" enctype="multipart/form-data" autocomplete="off">
@@ -11,12 +17,16 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
 			<input type="hidden" name="url" value="<?php echo $urlencode ?>">
 			<input type="hidden" name="agree" value="<?php echo $agree ?>">
 			<input type="hidden" name="agree2" value="<?php echo $agree2 ?>">
-			<input type="hidden" name="cert_type" value="<?php echo $member['mb_certify']; ?>">
-			<?php if (isset($member['mb_sex'])) {  ?><input type="hidden" name="mb_sex" value="<?php echo $member['mb_sex'] ?>"><?php }  ?>
-			<?php if (isset($member['mb_nick_date']) && $member['mb_nick_date'] > date("Y-m-d", G5_SERVER_TIME - ($config['cf_nick_modify'] * 86400))) { // 닉네임수정일이 지나지 않았다면  ?>
+			<input type="hidden" name="cert_type" value="<?php echo $member['mb_certify']; ?>">		
+
+		<?php if (isset($member['mb_nick_date']) && $member['mb_nick_date'] > date("Y-m-d", G5_SERVER_TIME - ($config['cf_nick_modify'] * 86400))) { // 닉네임수정일이 지나지 않았다면  ?>		
 			<input type="hidden" name="mb_nick_default" value="<?php echo $member['mb_nick'] ?>">
 			<input type="hidden" name="mb_nick" value="<?php echo $member['mb_nick'] ?>">
-			<?php }  ?>
+		<?php 
+			$mb_nick_read_only = $readonly;
+			$mb_nick_message = "Last Edit : ".$member['mb_nick_date']."<br>Next Edit : ".date("Y-m-d", G5_SERVER_TIME + ($config['cf_nick_modify'] * 87840));
+		}  ?>
+		
 	<div class='title_wrapper'>
 		<div class='title login'><a href='<?=G5_BBS_URL?>/login.php'>로그인</a></div>
 		<div class='title register'><?php echo $g5['title'] ?></div>
@@ -48,13 +58,19 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
 	</div>
 	<div class='right'>			
 			<div class='label'>Name</div>
-			<div class='input_wrapper nickname'>				
-				<input type="text" id="reg_mb_name" name="mb_name" value="<?php echo $member['mb_name'] ?>" class="frm_input">
+			<div class='input_wrapper name'>				
+				<input type="text" id="reg_mb_name" name="mb_name" value="<?php echo $member['mb_name'] ?>" <?php echo $required ?> <?php if ($w=='u') echo 'readonly'; ?> class="frm_input nospace <?php echo $required ?> <?php echo $readonly ?>">
 			</div>				
 			<div class='label'>Nickname</div>
 			<div class='input_wrapper nickname'>
 				<input type="hidden" name="mb_nick_default" value="<?php echo isset($member['mb_nick'])?$member['mb_nick']:''; ?>">
-				<input type="text" name="mb_nick" value="<?php echo isset($member['mb_nick'])?$member['mb_nick']:''; ?>" id="reg_mb_nick" required class="frm_input required nospace" maxlength="20">
+				<input type="text" name="mb_nick" value="<?php echo isset($member['mb_nick'])?$member['mb_nick']:''; ?>" id="reg_mb_nick" required class="frm_input required nospace" maxlength="20" <?=$mb_nick_read_only?>>
+				<? if ($mb_nick_message) {?>					
+					<div class='notice'>	
+						<div class='triangle'></div>
+						<?=$mb_nick_message?>						
+					</div>
+				<?}?>
 			</div>				
 			<div class='label'>Phone No.</div>
 			<div class='input_wrapper tel_num'>
@@ -123,7 +139,16 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
             certify_win_open("<?php echo $cert_type; ?>", "<?php echo $cert_url; ?>");
             return;
         });
-        <?php } ?>				
+        <?php } ?>
+
+		/**added for nickname notice**/
+		$('.extended_register_form .inner .input_wrapper.nickname').mouseenter(function(){
+			$('.extended_register_form .inner .input_wrapper.nickname .notice').show();
+		});
+		
+		$('.extended_register_form .inner .input_wrapper.nickname').mouseleave(function(){
+			$('.extended_register_form .inner .input_wrapper.nickname .notice').hide();
+		});
     });
 
     // submit 최종 폼체크
@@ -169,25 +194,26 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
                 return false;
             }
 
-            /*
+            
             var pattern = /([^가-힣\x20])/i;
             if (pattern.test(f.mb_name.value)) {
                 alert("이름은 한글로 입력하십시오.");
                 f.mb_name.select();
                 return false;
             }
-            */
+            
         }
 
         // 닉네임 검사
-        if ((f.w.value == "") || (f.w.value == "u" && f.mb_nick.defaultValue != f.mb_nick.value)) {
+        /*if ((f.w.value == "") || (f.w.value == "u" && f.mb_nick.defaultValue != f.mb_nick.value)) {
+			//return true;
             var msg = reg_mb_nick_check();
             if (msg) {
                 alert(msg);
                 f.reg_mb_nick.select();
                 return false;
             }
-        }
+        }*/
 
         // E-mail 검사
         if ((f.w.value == "") || (f.w.value == "u" && f.mb_email.defaultValue != f.mb_email.value)) {
@@ -224,9 +250,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
             }
         }
 
-        <?php// echo chk_captcha_js();  ?>
-
-        document.getElementById("btn_submit").disabled = "disabled";
+        <?php echo chk_captcha_js();  ?>       
 
         return true;
     }
