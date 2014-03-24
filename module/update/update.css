@@ -20,8 +20,9 @@
 
 /* admin_theme_installed */
 .installed .theme {
-	margin-bottom: 2em;
-	width: 33.33%;	
+	float: left;
+	margin: 1em;
+	width: 45%;
 }
 .installed .theme img {
 	width:100%;
