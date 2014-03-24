@@ -11,7 +11,7 @@ $(function(){
 			$(".banner-image").first().addClass('selected'); 
 			$(".page_num").first().addClass('selected_num');
 		}
-
+ 
 		banner_num = $(".banner-image.selected").attr('image_num');
 		left_value = -(((banner_num) * 968));
 		if ( banner_num == 1 ) $(".images-container").css('left',0);

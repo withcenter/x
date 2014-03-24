@@ -92,7 +92,7 @@
 					if ( !(g::forum_exist($posts_2 = x::meta('gallery_forum_list_2'))) ) $posts_1 = bo_table(2);
 					echo latest( 'x-latest-gallery-posts', $posts_2	, 5, 40 );
 				?>
-			</div>
+			</div> 
 		</div>
 		<div class='right-gallery-post'>
 			<?
