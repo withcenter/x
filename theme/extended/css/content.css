@@ -78,7 +78,13 @@
 	color: #24a1b3;
 	padding-bottom: 3px;
 }
+.lower-middle-title a, .rwd-mobile-posts .title a {
+	color: #24a1b3;
+}
 
+.lower-middle-title a:hover, .rwd-mobile-posts .title a:hover {
+	text-decoration: none;
+}
 .bottom-bar {
 	border-top: solid 1px #696969;
 	margin-bottom: 12px;

@@ -5,7 +5,7 @@
 							?>
 <div class='rwd-mobile-posts'>
 	<div class='title'>
-		제작의뢰현황
+		<a href='<?=G5_BBS_URL?>/board.php?bo_table=quotation'>제작의뢰현황</a>
 	</div>
 	<div class='bottom-bar'></div>
 	<div class='post-items'>

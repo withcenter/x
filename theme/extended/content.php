@@ -27,12 +27,15 @@
 				<div class='lower-middle'>
 					<div class='inner'>
 						<div class='lower-middle-title'>
-							템플릿 갤러리
+							<a href='<?=g::url()?>/?page=template_main'>템플릿 갤러리</a>
 						</div>
 						<div class='bottom-bar'></div>
+						<? include 'template_firstpage.php'; ?>
+						<? /*
 						<div class='lower-middle-1'><img src="<?=x::theme_url('img/middle_lower_1.png')?>"/></div>
 						<div class='lower-middle-2'><img src="<?=x::theme_url('img/middle_lower_2.png')?>"/></div>
-						<div class='lower-middle-3'><img src="<?=x::theme_url('img/middle_lower_3.png')?>"/></div>			
+						<div class='lower-middle-3'><img src="<?=x::theme_url('img/middle_lower_3.png')?>"/></div>
+						*/?>
 						</div>
 				</div>
 				<div class='lower-right'>

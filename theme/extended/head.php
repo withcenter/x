@@ -41,7 +41,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 				<ul>
 					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/write.php?bo_table=quotation'>사이트<br /> 제작의뢰</a></li>
 					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/write.php?bo_table=quotation'>로고 배너<br /> 제작의뢰</a></li>
-					<li><div class='extra-border'></div><a href='javascript:void(0)'>사이트<br />갤러리</a></li>
+					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/board.php?bo_table=site_gallery'>사이트<br />갤러리</a></li>
 					<li><div class='extra-border'></div><a href='<?=g::url()?>/?page=template_main'>템플릿<br />갤러리</a></li>							
 				</ul>						
 				<div style='clear:both;'></div>
@@ -73,5 +73,10 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	</div>
 	
 	<div class='container'>
-
 	
+<script>
+	$(function(){
+		$("a[href*='<?=$bo_table?>'], a[href*='<?=$in['page']?>']").parent().find('.extra-border').css("border-left", "3px solid #f2860c");
+		$("a[href*='<?=$bo_table?>'], a[href*='<?=$in['page']?>']").css("border-left", "1px solid #f2860c");
+	});
+</script>
