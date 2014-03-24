@@ -41,7 +41,7 @@
 				<en>Menu Bottom</en>
 				<ko>하단 메뉴</ko>
 			</name>
-			<max>0</max>
+			<max>7</max>
 		</bottom>
 	</menu>
 </config>
