@@ -450,3 +450,43 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 .x-agent-application-list .background {
 	background-color: #f2f2f2;
 }
+
+.application-view .title {
+	float: left;
+	position: relative;
+	font-family: '맑은 고딕', AppleGothic;
+	font-weight: bold;
+	font-size: 12pt;
+	color: #9c9c9c;
+	top: 8px;
+}
+.application-view .title span {
+	color: #476783;
+}
+.application-view .top-button {
+	float: right;
+}
+
+.application-view-table {
+	margin: 20px 0;
+}
+.application-view-table tr td {
+	padding: 5px 10px 5px 0;
+	color: #444444;
+}
+
+.application-view-table tr td .sub-title {
+	background-color: #afafaf;
+	color: #ffffff;
+	display: inline-block;
+	padding: 7px 10px;
+	width: 120px;
+	border-radius: 3px;
+}
+.application-view-table tr td textarea {
+	width: 94%;
+	height: 150px;
+	resize: none;
+	border-radius: 3px;
+	padding: 3%;
+}
