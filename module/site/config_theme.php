@@ -24,7 +24,7 @@
 				foreach ( $dirs as $dir ){
 					if ( $dir == $active_theme ) {
 						$theme_config = load_config( X_DIR_THEME . "/$dir/config.xml" );
-						$active_theme = $theme_config['name'];
+						$active_theme = $theme_config['name'][L];
 						break;
 					}
 				}

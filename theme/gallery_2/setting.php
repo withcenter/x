@@ -1,3 +1,59 @@
+<? function set_posts( $name ) {
+	global $cfgs;
+	
+	ob_start();
+	if ( x::site() ) {
+		$cfgs = x::forums();
+		if ( ! empty( $cfgs ) ) {
+	?>
+	<select name='<?=$name?>'>
+		<option value=''>게시판을 선택하세요</option>
+		<option value=''></option>
+		<? foreach ( $cfgs as $c ) { 
+			if ( $c['bo_table'] == meta($name) ) $selected = 'selected';
+			else $selected = null;
+		?>
+			<option value="<?=$c['bo_table']?>" <?=$selected?>><?=$c['bo_subject']?></option>
+		<? } ?>
+	</select>
+	<script>
+	$(function(){
+		$("[name='<?=$name?>']").change(function(){
+			$("[name='<?=$name?>_bo_table']").val($(this).val());
+		});
+	});
+	</script>
+	<?
+		}
+	}?>
+	<input type='text' name='<?=$name?>_bo_table' value="<?=x::meta($name."_name")?>" placeholder=" 게시판 아이디 직접 입력" style='height: 23px; width: 140px; line-height: 23px; padding: 0 10px;' />
+<?
+	return $content = ob_get_clean();
+}
+?>
+
+<div class='config-wrapper'>
+	<div class='config-title'>
+		<span class='config-title-info'>POSTS ON FRONT PAGE</span>
+		<span class='config-title-notice'>
+			<span class='user-google-guide-button' page = 'google_doc_mobile_1_4' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[설명 보이기]</span>
+			<img src='<?=module('img/setting_2.png')?>'>
+		</span>
+	</div>
+	<div class='config-container'>
+	<div class='hidden-google-doc google_doc_travel_1_4'>	
+	</div>
+		<table cellspacing='0' cellpadding='0' width='100%' class='gallery-config-table'>
+			<tr valign='top'><td width='180' class='gallery-config-title'>GALLERY FORUM LEFT</td><td><?=set_posts('gallery_forum_left')?></td></tr>
+			<tr valign='top'><td class='gallery-config-title'>GALLERY FORUM RIGHT</td><td><?=set_posts('gallery_forum_right')?></td></tr>
+			<tr valign='top'><td class='gallery-config-title'>FORUM POSTS AS LIST 1</td><td><?=set_posts('gallery_forum_list_1')?></td></tr>
+			<tr valign='top'><td class='gallery-config-title'>FORUM POSTS AS LIST 2</td><td><?=set_posts('gallery_forum_list_2')?></td></tr>
+		</table>
+	</div>
+	<input type='submit' value='업데이트'>
+	<div style='clear:right;'></div>
+</div>
+
 <div class='config-wrapper'>
 <div class='config-title'>
 	<span class='config-title-info'>메인 롤링 배너</span>
