@@ -485,7 +485,7 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 }
 .application-view-table tr td textarea {
 	width: 94%;
-	height: 150px;
+	height: 250px;
 	resize: none;
 	border-radius: 3px;
 	padding: 3%;
