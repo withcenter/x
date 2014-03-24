@@ -1,5 +1,4 @@
-<?php
-function setTopMenu( $name ) {
+<? function set_posts( $name ) {
 	global $cfgs;
 	
 	ob_start();
@@ -11,7 +10,7 @@ function setTopMenu( $name ) {
 		<option value=''>게시판을 선택하세요</option>
 		<option value=''></option>
 		<? foreach ( $cfgs as $c ) { 
-			if ( $c['bo_table'] == x::meta($name) ) $selected = 'selected';
+			if ( $c['bo_table'] == meta($name) ) $selected = 'selected';
 			else $selected = null;
 		?>
 			<option value="<?=$c['bo_table']?>" <?=$selected?>><?=$c['bo_subject']?></option>
@@ -47,6 +46,27 @@ function setTopMenu( $name ) {
 	<div class='hidden-google-doc google_doc_community_2_2'>	
 	</div>
 		<span class='title-small'>전화번호: </span><input type='text' name='tel' value='<?=x::meta('tel')?>'>	
+	</div>
+		<input type='submit' value='업데이트'>
+		<div style='clear:right;'></div>
+</div>
+
+  <div class='config-wrapper'>
+	<div class='config-title'>
+		<span class='config-title-info'>SELECT FORUM ON FRONT PAGE</span>
+		<span class='config-title-notice'>
+			<span class='user-google-guide-button' page = 'google_doc_community_2_4' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[설명 보이기]</span>
+			<img src='<?=module('img/setting_2.png')?>'>
+		</span>
+	</div>
+	<div class='config-container'>
+	<div class='hidden-google-doc google_doc_community_2_4'>	
+	</div>
+		<table cellspacing='0' cellpadding='0' width='100%'>
+			<tr valign='top'><td width='150'>MIDDLE POSTS ( Four ): </td><td><?=set_posts('gallery_1_forum_middle')?></td></tr>
+			<tr valign='top'><td>BOTTOM POSTS ( Two ): </td><td><?=set_posts('gallery_1_forum_bottom')?></td></tr>
+			</tr>
+		</table>
 	</div>
 		<input type='submit' value='업데이트'>
 		<div style='clear:right;'></div>
@@ -105,10 +125,12 @@ function setTopMenu( $name ) {
 					<input type='file' name='banner<?=$i?>'>
 						<input type='checkbox' name='banner<?=$i?>_remove' value='y'><span class='title-small'>이미지 제거</span>
 					
-					<div class='title'>배너<?=$i?>의 문구</div>
-					<textarea name='banner<?=$i?>_text'><?=stripslashes(x::meta("banner{$i}_text"))?></textarea>
-					<div class='title'>배너<?=$i?> 링크</div>
-					<input type='text' name='banner<?=$i?>_url' value='<?=x::meta("banner{$i}_url")?>'>
+				<div class='title'>BANNER <?=$i?> SUBJECT</div>
+				<input type='text' name='banner<?=$i?>_subject' value='<?=stripslashes(x::meta("banner{$i}_subject"))?>'>				
+				<div class='title'>BANNER <?=$i?> CONTENT</div>
+				<textarea name='banner<?=$i?>_content'><?=stripslashes(x::meta("banner{$i}_content"))?></textarea>
+				<div class='title'>배너<?=$i?> 링크</div>
+				<input type='text' name='banner<?=$i?>_url' value='<?=x::meta("banner{$i}_url")?>'>
 				</div>
 			</td>
 			
