@@ -5,10 +5,10 @@ add_stylesheet("<link rel='stylesheet' href='{$latest_skin_url}/style.css'>", 0)
 include_once(G5_LIB_PATH.'/thumbnail.lib.php'); 
 echo "<div class='x-latest-site-gallery'>";
 foreach ( $list as $li ) {
-	$thumb = get_list_thumbnail($bo_table, $li['wr_id'], 60, 60);
+	$thumb = get_list_thumbnail($bo_table, $li['wr_id'], 170, 150);
 	echo "
 		<div class='photo'>
-			<a href='".G5_BBS_URL."/board.php?bo_table=".$li['bo_table']."'><img src='".$thumb['src']."' /></a>
+			<a href='".G5_BBS_URL."/board.php?bo_table=".$bo_table."'><img src='".$thumb['src']."' /></a>
 		</div>
 	";
 };
