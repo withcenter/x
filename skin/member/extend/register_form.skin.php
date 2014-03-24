@@ -62,12 +62,11 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
 			</div>					
 			<div class='label'>Mobile No.</div>
 			<div class='input_wrapper cell_num'>
-				<input type="text" name="mb_1" value="<?php echo $member['mb_1'] ?>" id="reg_mb_1" class="frm_input" maxlength="20">
+				<input type="text" name="mb_hp" value="<?php echo $member['mb_hp'] ?>" id="reg_mb_hp" class="frm_input" maxlength="20">
 			</div>						
-		
-		
-        <input type="submit" value="로그인" class="btn_submit"> 
+				        
 		<div class='cancel_wrapper'><a href="<?php echo G5_URL ?>" class="register_cancel">취소</a></div>
+		<input type="submit" value="로그인" class="btn_submit"> 
 	</div>
 		</form>	
 	<div style='clear:both'></div>
