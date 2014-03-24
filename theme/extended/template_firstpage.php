@@ -5,7 +5,8 @@ for ( $i=1; $i <= 3; $i ++ ) {
 	if ( ! file_exists($path) ) continue;
 				
 	$theme_config = load_config ( $path );
-	$name = $theme_config['name']['ko'];
+	di ( $theme_config );
+	$name = $theme_config['name'][L];
 	if ( empty($name) ) continue;
 				
 	$type = explode(',', $theme_config['type']);
