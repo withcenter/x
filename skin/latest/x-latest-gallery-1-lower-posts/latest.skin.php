@@ -36,8 +36,9 @@ if ( ! $GLOBALS[$latest_skin_url] ++ ) { ?><link rel="stylesheet" href="<?php ec
 <? } else { ?>
 <div class='latest-gallery-1-lower-posts'>
 	<?
-		$no_subject = "Maecenas Risus Felis Rhoncus";
-		$no_content = "Integer convallis justo sit amet libero facilisis, vel dapibus metus imperdiet. Nunc eu ligula rhoncus, ullamcorper quam at, rutrum nulla. In sed erat convallis, iaculis erat nec, adipiscing urna. Fusce ut elit nec quam lobortis blandit. Ut vestibulum felis sit amet odio eleifend molestie. Aliquam nec eros vel arcu congue luctus vitae et dui.";
+		$no_subject = "회원님게서는 현재...";
+		$no_content = "필고 갤러리 테마 No.1을 선택 하였습니다. <br />
+						메인 배너의 이미지는 <a style='font-weight: bold; color:#355c75;' href='".url_site_config()."'>사이트 관리</a>의 일반 설정에서 배너 이미지를 등록 해 주세요.";
 		for ( $i=1; $i<=2; $i++ ) { 
 			$img = "<img src='$latest_skin_url/img/no_bottom_$i.png'/>";
 	?>

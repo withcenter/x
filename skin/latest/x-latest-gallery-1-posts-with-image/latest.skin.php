@@ -36,8 +36,8 @@ if ( ! $GLOBALS[$latest_skin_url] ++ ) { ?><link rel="stylesheet" href="<?php ec
 <? } else { ?>
 <div class='latest-gallery-posts-1-with-image'>
 		<?
-			$no_subject = "Maecenas A Risus Sed Felis";
-			$no_content = "Morbi placerat enim nec aliquam rutrum. Donec accumsan risus id.";
+			$no_subject = "회원님께서는 현재...";
+			$no_content = "필고 갤러리 테마 No.1을 선택 하였습니다.";
 		for ( $i = 1; $i <= 4; $i++ ) {
 			$img = "<img src='$latest_skin_url/img/no_middle_$i.png'/>";
 		?>		

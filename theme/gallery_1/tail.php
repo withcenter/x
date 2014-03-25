@@ -13,7 +13,7 @@
 				<div class='copyright'>									
 					<? 
 						if ( $footer_text = meta('footer_text') ) echo nl2br($footer_text); 
-						else echo "어드민 페이지에서 하단 이미지를 입력해 주세요 <br><br>Copyright 2014 All Rights Reserved Domain.COM";
+						else echo "어드민 페이지에서 하단 문구를 입력해 주세요 <br><br>Copyright 2014 All Rights Reserved Domain.COM";
 					?>
 				</div>				
 			</div>
