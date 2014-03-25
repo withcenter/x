@@ -88,7 +88,7 @@
 ?>
 <style>
 <? if ( $wr_id && $bo_table)  $selected_menu = "&wr_id=".$wr_id;
-	else if ( $bo_table && !$wr_id ) $selected_menu = "bo_table=".$bo_table;
+	else if ( $bo_table && empty($wr_id) ) $selected_menu = "bo_table=".$bo_table;
 	else $selected_menu = null;
 ?>
 .top-menu ul a[href*="<?=$selected_menu?>"] {
