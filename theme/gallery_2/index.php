@@ -16,7 +16,7 @@
 			}
 		}
 		
-		$total_banners = count($banners);
+		if ( $total_banners = count($banners) ) {
 	?>	
 		<div class='banner' total_banners="<?=$total_banners?>" >
 			<div class='inner' style="position: relative; height: 318px; width: 968px;">
@@ -71,7 +71,10 @@
 
 			</div>
 		</div>
-
+	<? }
+		else {?>
+			<div style='margin-bottom:10px;'><img src='<?=x::url_theme()?>/img/no_banner_image.png' /></div>
+	<?	}?>
 <div class='posts-container'>
 	<div class='left-posts-container'>
 		<?=latest( 'x-latest-left-gallery', bo_table(1) , 3, 40 )?>

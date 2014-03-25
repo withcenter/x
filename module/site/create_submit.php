@@ -43,8 +43,9 @@ add_stylesheet("<link rel='stylesheet' type='text/css' href='".x::url()."/module
 
 	if ( $in['site-type'] ) {
 		if ( $in['site-type'] == 'community' ) $site_type = 'community_3';
-		else if ( $in['site-type'] == 'travel' ) 	$site_type = 'travel_theme_2';
+		else if ( $in['site-type'] == 'travel' ) $site_type = 'travel_theme_2';
 		else if ( $in['site-type'] == 'blog' ) $site_type = 'blog';
+		else if ( $in['site-type'] == 'gallery' ) $site_type = 'gallery_2';
 		else $site_type = 'blog';
 	}
 	else $site_type = 'blog';
