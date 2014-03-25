@@ -6,6 +6,7 @@
 .layout .body-wrapper{
 	width:970px;
 	margin:auto;
+	min-height: 600px;
 }
 
 .layout .header{

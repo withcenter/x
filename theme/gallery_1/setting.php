@@ -68,9 +68,9 @@
 					<input type='file' name='banner<?=$i?>'>
 						<input type='checkbox' name='banner<?=$i?>_remove' value='y'><span class='title-small'>이미지 제거</span>
 					
-				<div class='title'>BANNER <?=$i?> SUBJECT</div>
+				<div class='title'>배너 <?=$i?> 제목</div>
 				<input type='text' name='banner<?=$i?>_subject' value='<?=stripslashes(x::meta("banner{$i}_subject"))?>'>				
-				<div class='title'>BANNER <?=$i?> CONTENT</div>
+				<div class='title'>배너 <?=$i?> 내용</div>
 				<textarea name='banner<?=$i?>_content'><?=stripslashes(x::meta("banner{$i}_content"))?></textarea>
 				<div class='title'>배너<?=$i?> 링크</div>
 				<input type='text' name='banner<?=$i?>_url' value='<?=x::meta("banner{$i}_url")?>'>
