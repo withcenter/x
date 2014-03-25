@@ -24,19 +24,29 @@
 			</td>
 		</tr>
 		<tr>
+				<?
+						if ( login() ) {
+							$register_link = g::url()."/bbs/member_confirm.php?url=register_form.php";
+							$register_text = "정보수정";
+							$login_text = "로그아웃";
+						}
+						else {
+							$register_link = g::url()."/bbs/register.php";
+							$register_text = "회원가입";
+							$login_text = "로그인";
+						}
+					?>
+		
 			<td class='login-panel-td' align='right'>
 				<div class='login-panel'>
 					<div class='login-button'>
 						<img src="<?=x::theme_url('img/top_icon1.png')?>"/>
-						<p>로그인</p>
+						<p><?=$login_text?></p>
 					</div>
-					<?
-						if ( login() ) $register_link = g::url()."/bbs/member_confirm.php?url=register_form.php";
-						else $register_link = g::url()."/bbs/register.php";
-					?>
+					
 					<div class='register-edit-button'>
 						<a href='<?=$register_link?>'><img src="<?=x::theme_url('img/top_icon2.png')?>"/></a>
-						<a href='<?=$register_link?>'><p>회원가입</p></a>
+						<a href='<?=$register_link?>'><p><?=$register_text?></p></a>
 					</div>
 					<div class='search-button'>
 						<img src="<?=x::theme_url('img/top_icon3.png')?>"/>
