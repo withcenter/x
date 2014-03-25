@@ -24,8 +24,13 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			<div class='logo-wrapper'>
 				<div class='logo'><a href='<?=G5_URL?>'><img src='<?=x::url_theme()?>/img/logo.png'/></a></div>
 				<div class='text-info tablet'>
+<<<<<<< HEAD
 					<span class='info call-us'>문의 070-7529-1749</span>
 					<a href='<?=G5_BBS_URL?>/board.php?bo_table=qna' class='info text'>/ 질문과 답변 /</a>
+=======
+					<span class='info call-us'>문의 070-7529-1749</span> <a class='info text'>/</a>
+					<a href='<?=G5_BBS_URL?>/board.php?bo_table=qna' class='info text'>질문과 답변 /</a>
+>>>>>>> 6a092ca547692f5e89d46f81c34558b292153c59
 					<a href='<?=$log_href?>' class='info text'><?=$login_msg?> /</a>
 					<a href='<?=$profile_msg_url?>' class='info text'><?=$profile_msg?></a>
 					<?if ( admin() ){?>
@@ -41,20 +46,21 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 				<ul>
 					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/write.php?bo_table=quotation'>사이트<br /> 제작의뢰</a></li>
 					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/write.php?bo_table=quotation'>로고 배너<br /> 제작의뢰</a></li>
-					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/board.php?bo_table=site_gallery'>사이트<br />갤러리</a></li>
+					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_3'>사이트<br />갤러리</a></li>
 					<li><div class='extra-border'></div><a href='<?=g::url()?>/?page=template_main'>템플릿<br />갤러리</a></li>							
 				</ul>						
 				<div style='clear:both;'></div>
 			</div>
 			<div style='clear:both;'></div>
 			<div class='text-info web-browser'>
-				<span class='info call-us'>문의 070-7529-1749</span>
-				<a href='<?=G5_BBS_URL?>/board.php?bo_table=qna' class='info text'>/ 질문과 답변 /</a>
+				<span class='info call-us'>문의 070-7529-1749</span> <a class='info text'>/</a> 
+				<a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_2' class='info text'>질문과 답변 /</a>
 				<a href='<?=$log_href?>' class='info text'><?=$login_msg?> /</a>
 				<a href='<?=$profile_msg_url?>' class='info text'><?=$profile_msg?> </a>
 				<?if ( admin() ){?>
-					<a class='info text' href='<?=x::url_admin()?>'>/ X-ADMIN</a>
+						<a class='info text' href='<?=url_site_config()?>'>/ 사이트 관리</a>
 					<? if ( super_admin() ) {?>
+						<a class='info text' href='<?=x::url_admin()?>'>/ X-ADMIN</a>
 						<a class='info text' href='<?=g::url()?>/adm'>/ ADMIN</a>
 					<? }?>
 				<?}?>
@@ -64,7 +70,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 				<ul>
 					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/write.php?bo_table=quotation'>사이트<br /> 제작의뢰</a></li>
 					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/write.php?bo_table=quotation'>로고 배너<br /> 제작의뢰</a></li>
-					<li><div class='extra-border'></div><a href='javascript:void(0)'>사이트<br />갤러리</a></li>
+					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/write.php?bo_table=ms_www_3'>사이트<br />갤러리</a></li>
 					<li><div class='extra-border'></div><a href='j<?=g::url()?>/?page=template_main'>템플릿<br />갤러리</a></li>						
 				</ul>						
 				<div style='clear:both;'></div>

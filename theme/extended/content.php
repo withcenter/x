@@ -20,7 +20,7 @@
 							<a href='<?=G5_BBS_URL?>/board.php?bo_table=site_gallery'>사이트 갤러리</a>
 						</div>		
 						<div class='bottom-bar'></div>
-						<?=latest('x-latest-site-gallery', 'site_gallery', 3)?>
+						<?=latest('x-latest-site-gallery', 'ms_www_3', 3)?>
 						<? /*
 						<div class='left-first-image-wrapper'><img src = '<?=x::url_theme()?>/img/lower-left.png' class='lower_left_image_web'/></div>
 						<img src = '<?=x::url_theme()?>/img/lower-left_400px.png' class='lower_left_image_mobile'/>
