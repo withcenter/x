@@ -39,7 +39,7 @@
 		
 			<td class='login-panel-td' align='right'>
 				<div class='login-panel'>
-					<div class='login-button'>
+					<div class='login-button <? if ( login() ) echo "logout-button"?>'>
 						<img src="<?=x::theme_url('img/top_icon1.png')?>"/>
 						<p><?=$login_text?></p>
 					</div>
