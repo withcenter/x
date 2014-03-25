@@ -1,16 +1,28 @@
 $(function(){
 	
 	$(".login-button").click(function(){
+		show_login();
+	});
+	
+	$(".login-button").mouseenter(function(){
+		show_login();
+	});	
+	
+	$(".login-button").mouseleave(function(){
+		show_login();
+	});
+	
+	function show_login()  {
 		if ( $('.search-container').hasClass('selected') ) $('.search-container').removeClass('selected');
-		if ($(this).hasClass('active-popup-menu')) {
-			$(this).removeClass('active-popup-menu');
+		if ($('.login-button').hasClass('active-popup-menu')) {
+			$('.login-button').removeClass('active-popup-menu');
 			$('.login-container').removeClass('selected');
 		} else {
-			$(this).siblings().removeClass('active-popup-menu');
-			$(this).addClass('active-popup-menu')
+			$('.login-button').siblings().removeClass('active-popup-menu');
+			$('.login-button').addClass('active-popup-menu')
 			$('.login-container').addClass('selected');
 		}
-	});
+	};
 	
 	$(".search-button").click(function(){
 		if ( $('.login-container').hasClass('selected') ) $('.login-container').removeClass('selected');
