@@ -1,5 +1,5 @@
 <? $posts = g::posts(array( 'wr_is_comment' => 0,
-							'bo_table'=>'quotation',
+							'bo_table'=>'ms_www_1',
 							'order by' => 'wr_datetime DESC',
 							'limit' => 13 ));
 							?>
