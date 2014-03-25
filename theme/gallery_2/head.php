@@ -87,12 +87,16 @@
 	
 ?>
 <style>
-.top-menu ul a[href*="<?=$_bo_table?>"] {
+<? if ( $wr_id )  $selected_menu = "wr_id=".$wr_id;
+	else if ( $bo_table && !$wr_id ) $selected_menu = $bo_table;
+	else $selected_menu = null;
+?>
+.top-menu ul a[href*="<?=$selected_menu?>"] {
 	background: #3e665f;
 	border-radius: 3px;
 }
 
-.menu-panel ul a[href*="<?=$_bo_table?>"] {
+.menu-panel ul a[href*="<?=$selected_menu?>"] {
 	border-bottom: solid 1px #ffffff;
 }
 </style>
