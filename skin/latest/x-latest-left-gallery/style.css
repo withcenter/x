@@ -17,6 +17,7 @@
 	width: 193px;
 	text-align: center;
 	display: none;
+	cursor: pointer;
 }
 
 .latest-left-gallery .top-posts-subject {
@@ -54,6 +55,7 @@
 	height: 88px;
 	text-align: center;
 	display: none;
+	cursor: pointer;
 }
 
 .latest-left-gallery .bottom-posts-subject {

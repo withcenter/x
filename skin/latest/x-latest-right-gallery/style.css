@@ -14,6 +14,7 @@
 	height: 328px;
 	text-align: center;
 	display: none;
+	cursor: pointer;
 }
 
 .latest-right-gallery .right-posts-subject {

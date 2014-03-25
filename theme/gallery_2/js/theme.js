@@ -60,5 +60,20 @@ $(function(){
 	$('.right-post').mouseleave(function(){
 		$(this).find('.right-posts-container').hide();
 	});
+	
+	/* CLICK ON LINKS ON GALLERY POSTS */
+	$('.top-posts').click(function(){
+		window.location=$(this).find("a.read_more").attr("href"); 
+	});
+
+	$('.bottom-post').click(function(){
+		window.location=$(this).find("a.read_more").attr("href"); 
+	});
+	
+	$('.right-post').click(function(){
+		window.location=$(this).find("a.read_more").attr("href"); 
+	});
+	
+
 
 });
