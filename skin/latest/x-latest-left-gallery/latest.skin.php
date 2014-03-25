@@ -42,8 +42,8 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 			<div class='top-posts-container'>
 				<div class='top-posts-subject'><a href="<?=$url?>"><?=$subject?></a></div>
 				<div class='top-posts-content'><a href="<?=$url?>"><?=$content?></a></div>
-				<? if ( $list ) {?> <a href="<?=$url?>">자세히</a>
-				<? } else {?> <a href='<?=url_site_config()?>'>사이트 설정</a> <?}?>
+				<? if ( $list ) {?>자세히<a href="<?=$url?>" class='read_more'></a>
+				<? } else {?> 사이트 설정<a href='<?=url_site_config()?>' class='read_more'></a> <?}?>
 			</div>
 		</div>
 	<?}?>
@@ -74,8 +74,8 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 		<div class='bottom-posts-container'>
 			<div class='bottom-posts-subject'><a href="<?=$url?>"><?=$subject?></a></div>
 			<div class='bottom-posts-content'><a href="<?=$url?>"><?=$content?></a></div>
-			<? if ( $list ) {?> <a href="<?=$url?>" class='read_more'>자세히</a>
-			<? } else {?> <a href="<?=url_site_config()?>" class='read_more'>사이트 설정</a> <?}?>
+			<? if ( $list ) {?>자세히 <a href="<?=$url?>" class='read_more'></a>
+			<? } else {?>사이트 설정 <a href="<?=url_site_config()?>" class='read_more'></a> <?}?>
 		</div>		
 	</div>
 </div>

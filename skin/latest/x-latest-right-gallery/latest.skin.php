@@ -42,10 +42,10 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 				$content = "필고 갤러리 테마 No.2를 선택 하셨습니다.";
 			}
 			?>
-			<div class='right-posts-subject'><a href="<?=$url?>"><?=$subject?></a></div>
-			<div class='right-posts-content'><a href="<?=$url?>"><?=$content?></a></div>
-			<? if ( $list ) {?><a href="<?=$url?>" class='read_more'>자세히</a>
-			<?} else {?> <a href='<?=url_site_config()?>' class='read_more'>사이트 설정</a><?}?>
+			<div class='right-posts-subject'><?=$subject?></div>
+			<div class='right-posts-content'><?=$content?></div>
+			<? if ( $list ) {?>자세히<a href="<?=$url?>" class='read_more'></a>
+			<?} else {?> 사이트 설정<a href='<?=url_site_config()?>' class='read_more'></a><?}?>
 		</div>		
 	</div>
 </div>

@@ -18,6 +18,7 @@
 	text-align: center;
 	display: none;
 	cursor: pointer;
+	position: relative;
 }
 
 .latest-left-gallery .top-posts-subject {
@@ -37,6 +38,15 @@
 	margin: 0;
 }
 
+.latest-left-gallery .top-posts-container a.read_more {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 233px;
+	height: 229px;
+}
+
+
 .latest-left-gallery .bottom-post {
 	clear: left;
 	width: 478px;
@@ -50,12 +60,13 @@
 	padding: 20px;
 	background: #000000;
 	background-color: rgba(0,0,0,0.6);
-	color: #ffffff;
+	color: #e6e6e6;
 	width: 438px;
 	height: 88px;
 	text-align: center;
 	display: none;
 	cursor: pointer;
+	position: relative;
 }
 
 .latest-left-gallery .bottom-posts-subject {
@@ -75,3 +86,13 @@
 	text-decoration: none;
 	color: #e6e6e6;
 }
+
+.latest-left-gallery .bottom-posts-container a.read_more {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 478px;
+	height: 128px;
+}
+
+

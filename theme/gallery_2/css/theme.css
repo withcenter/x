@@ -108,6 +108,7 @@ body {
 	margin: 0;
 	width: 65px;
 	padding: 8px 0;
+	cursor: pointer;
 }
 
 .login-panel > div img {
