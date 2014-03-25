@@ -39,9 +39,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			</div>
 			<div class='right_main_menus above-400px'>
 				<ul>
-					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/write.php?bo_table=quotation'>사이트<br /> 제작의뢰</a></li>
-					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/write.php?bo_table=quotation'>로고 배너<br /> 제작의뢰</a></li>
-					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/board.php?bo_table=site_gallery'>사이트<br />갤러리</a></li>
+					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/write.php?bo_table=ms_www_1'>사이트<br /> 제작의뢰</a></li>
+					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/write.php?bo_table=ms_www_1'>로고 배너<br /> 제작의뢰</a></li>
+					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_3'>사이트<br />갤러리</a></li>
 					<li><div class='extra-border'></div><a href='<?=g::url()?>/?page=template_main'>템플릿<br />갤러리</a></li>							
 				</ul>						
 				<div style='clear:both;'></div>
@@ -49,7 +49,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			<div style='clear:both;'></div>
 			<div class='text-info web-browser'>
 				<span class='info call-us'>문의 070-7529-1749</span> <a class='info text'>/</a> 
-				<a href='<?=G5_BBS_URL?>/board.php?bo_table=qna' class='info text'>질문과 답변 /</a>
+				<a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_2' class='info text'>질문과 답변 /</a>
 				<a href='<?=$log_href?>' class='info text'><?=$login_msg?> /</a>
 				<a href='<?=$profile_msg_url?>' class='info text'><?=$profile_msg?> </a>
 				<?if ( admin() ){?>
@@ -62,9 +62,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		</div>		
 			<div class='right_main_menus below-400px'>
 				<ul>
-					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/write.php?bo_table=quotation'>사이트<br /> 제작의뢰</a></li>
-					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/write.php?bo_table=quotation'>로고 배너<br /> 제작의뢰</a></li>
-					<li><div class='extra-border'></div><a href='javascript:void(0)'>사이트<br />갤러리</a></li>
+					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/write.php?bo_table=ms_www_1'>사이트<br /> 제작의뢰</a></li>
+					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/write.php?bo_table=ms_www_1'>로고 배너<br /> 제작의뢰</a></li>
+					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/write.php?bo_table=ms_www_3'>사이트<br />갤러리</a></li>
 					<li><div class='extra-border'></div><a href='j<?=g::url()?>/?page=template_main'>템플릿<br />갤러리</a></li>						
 				</ul>						
 				<div style='clear:both;'></div>
