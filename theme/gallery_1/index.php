@@ -37,8 +37,9 @@
 						for ( $i = 1; $i <= 5 ; $i++) { 
 								$no_banners[] = array(
 									'src' => x::theme_url('img/no_banner_'.$i.'.png'),
-									'subject' => "Quisque Viverra Velit Porta Tempus",
-									'content' => "Quisque viverra velit in porta tempus. Etiam ut quam eget magna adipiscing commodo. Nulla at enim pharetra, ultricies felis ac, pharetra lorem. Vestibulum fermentum ligula eu massa imperdiet semper. Donec vitae urna tincidunt, convallis turpis sed, convallis odio.<br><br>Curabitur feugiat tellus imperdiet dolor suscipit ullamcorper ut iaculis quam. Sed ornare massa vitae dolor rutrum laoreet. Fusce eu purus malesuada, vulputate tortor et, egestas."
+									'subject' => "회원님게서는 현재...",
+									'content' => "필고 갤러리 테마 No.1을 선택 하였습니다. <br />
+												메인 배너의 이미지는 <a style='font-weight: bold; color:#355c75;' href='".url_site_config()."'>사이트 관리</a>의 일반 설정에서 배너 이미지를 등록 해 주세요."
 								);
 						}
 						$selected = 0;
@@ -53,7 +54,7 @@
 							echo "<div class='arrow-left-inner'></div>";
 							echo "<div class='arrow-left-outer'></div>";
 							echo "</div>";
-							echo "<a href='$url' class='read-more'>READ MORE ></a></div>";
+							echo "<a href='$url' class='read-more'>자세히보기 &gt;</a></div>";
 						}
 					}
 

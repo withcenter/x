@@ -1,6 +1,10 @@
 .layout{
 	font-family:dotum;
 	font-size:9pt;
+	color: #444444;
+}
+.layout a {
+	color: #444444;
 }
 
 .layout .body-wrapper{
