@@ -27,7 +27,7 @@
 				<?
 						if ( login() ) {
 							$register_link = g::url()."/bbs/member_confirm.php?url=register_form.php";
-							$register_text = "회원정보수정";
+							$register_text = "정보수정";
 							$login_text = "로그아웃";
 						}
 						else {
