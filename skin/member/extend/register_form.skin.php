@@ -45,19 +45,19 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
 	</div>
 	
 	<div class='left'>
-			<div class='label'>User Name</div>
+			<div class='label'>아이디</div>
 			<div class='input_wrapper id'>
 				<input type="text" name="mb_id" value="<?php echo $member['mb_id'] ?>" id="reg_mb_id" <?php echo $required ?> <?php echo $readonly ?> class="frm_input minlength_3 <?php echo $required ?> <?php echo $readonly ?>"maxlength="20">
 			</div>
-			<div class='label'>Password</div>
+			<div class='label'>비밀번호</div>
 			<div class='input_wrapper pass'>
 				<input type="password" name="mb_password" id="reg_mb_password" <?php echo $required ?> class="frm_input minlength_3 <?php echo $required ?>" maxlength="20">
 			</div>
-			<div class='label'>Retype Password</div>
+			<div class='label'>비밀번호 확인</div>
 			<div class='input_wrapper retype_pass'>
 				<input type="password" name="mb_password_re" id="reg_mb_password_re" <?php echo $required ?> class="frm_input minlength_3 <?php echo $required ?>" maxlength="20">
 			</div>
-			<div class='label'>Email</div>
+			<div class='label'>이메일</div>
 			<div class='input_wrapper email'>
 				<input type="hidden" name="old_email" value="<?php echo $member['mb_email'] ?>">
 				<input type="text" name="mb_email" value="<?php echo isset($member['mb_email'])?$member['mb_email']:''; ?>" id="reg_mb_email" required class="frm_input email required" maxlength="100">	
@@ -68,11 +68,11 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
 							
 	</div>
 	<div class='right'>			
-			<div class='label'>Name</div>
+			<div class='label'>이름</div>
 			<div class='input_wrapper name'>				
 				<input type="text" id="reg_mb_name" name="mb_name" value="<?php echo $member['mb_name'] ?>" <?php echo $required ?> <?php if ($w=='u') echo 'readonly'; ?> class="frm_input nospace <?php echo $required ?> <?php echo $readonly ?>">
 			</div>				
-			<div class='label'>Nickname</div>
+			<div class='label'>닉네임</div>
 			<div class='input_wrapper nickname'>
 				<input type="hidden" name="mb_nick_default" value="<?php echo isset($member['mb_nick'])?$member['mb_nick']:''; ?>">
 				<input type="text" name="mb_nick" value="<?php echo isset($member['mb_nick'])?$member['mb_nick']:''; ?>" id="reg_mb_nick" required class="frm_input required nospace" maxlength="20" <?=$mb_nick_read_only?>>
@@ -83,16 +83,16 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
 					</div>
 				<?}?>
 			</div>				
-			<div class='label'>Phone No.</div>
+			<div class='label'>유선전화</div>
 			<div class='input_wrapper tel_num'>
 				<input type="text" name="mb_tel" value="<?php echo $member['mb_tel'] ?>" id="reg_mb_tel" class="frm_input" maxlength="20">
 			</div>					
-			<div class='label'>Mobile No.</div>
+			<div class='label'>휴대전화</div>
 			<div class='input_wrapper cell_num'>
 				<input type="text" name="mb_hp" value="<?php echo $member['mb_hp'] ?>" id="reg_mb_hp" class="frm_input" maxlength="20">
 			</div>						
 				        		
-		<input type="submit" value="로그인" class="btn_submit"> 
+		<input type="submit" value="회원가입" class="btn_submit"> 
 		<div class='cancel_wrapper'><a href="<?php echo G5_URL ?>" class="register_cancel">취소</a></div>
 	</div>
 		</form>	
