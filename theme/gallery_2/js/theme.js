@@ -1,19 +1,23 @@
 $(function(){
-	var login_button;
+	var show_button, hide_button;
 	$(".login-button").click(function(){
 		show_login();
 	});
 	
 	$(".logout-button").mouseenter(function(){
-		show_login();
+		show_button = setTimeout( function() { show_login() }, 100 );
 	});	
 	
 	$(".logout-button").mouseleave(function(){
-		login_button = setTimeout( function() { show_login() }, 500);
+		if ( show_button ) clearTimeout(show_button);
+		hide_button = setTimeout( function() {if ($('.login-button').hasClass('active-popup-menu')) {
+			$('.login-button').removeClass('active-popup-menu');
+			$('.login-container').removeClass('selected');
+		}}, 200);
 	});
 	
 	$(".login-container").mouseenter(function(){
-		clearTimeout(login_button);
+		clearTimeout(hide_button);
 	});
 	
 	$(".login-container").mouseleave(function(){
