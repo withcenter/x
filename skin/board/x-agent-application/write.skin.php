@@ -55,10 +55,10 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
 	$sel_category = ob_get_clean();
 	
     ?>
-	<div class='application-title'>제작의뢰 신청서</div>
+	<div class='application-title'><div class='inner'>제작의뢰 신청서</div></div>
 	<table cellpadding=0 cellspacing=0 width='100%' class='application-table'>
 		<tr>
-			<td width='150'>
+			<td class='name-title'>
 			<span class='item-title'>회사/단체/신청자</span></td>
 			<td><input type='text' name='wr_1' value='<?=$wr_1?>' /></td>
 		</tr>
@@ -70,7 +70,7 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
 			<td><span class='item-title'>작성자 이름</span></td>
 			<td>
 				<? if ( login() ) {?>
-					<?=$member['mb_id']."(".$member['mb_nick'].")"?>
+					<?=$member['mb_id']." (".$member['mb_nick'].")"?>
 					<input type='hidden' name='wr_name' value='<?=$member['mb_id']."(".$member['mb_nick'].")"?>' />
 				<? }
 					else {?>
@@ -101,12 +101,15 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
 			<td><span class='item-title'>템플릿 선택</span></td>
 			<td><div class='sel-template-msg'></div></td>
 		<tr>
-			<td colspan='2'> 
-				<input type='hidden' name='wr_7' value='<?=$wr_7?>' />
-				<? if ( $wr_7 ) $active_theme = $wr_7; ?>
-				<iframe class='show-template-frame' frameborder=0 border=0 src='<?=x::url()?>/?module=site&action=template&theme=n&active_theme=<?=$wr_7?>'></iframe>
-			</td>
-		</tr>
+		</table>
+		
+		<div class='select_themes'>
+			<input type='hidden' name='wr_7' value='<?=$wr_7?>' />
+			<? if ( $wr_7 ) $active_theme = $wr_7; ?>
+			<iframe class='show-template-frame' frameborder=0 border=0 width='100%' src='<?=x::url()?>/?module=site&action=template&theme=n&active_theme=<?=$wr_7?>'></iframe>
+		</div>
+		
+		<table cellpadding=0 cellspacing=0 width='100%' class='application-table'> 	
 		<tr>
 			<td><span class='item-title'>예상 제작 기간</span></td>
 			<td><input type='text' name='wr_8' value='<?=$wr_8?>' /></td>
@@ -119,10 +122,8 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
 			</td>
 		</tr>
 		<tr>
-			<td colspan=2 class='item-underline'><span class='item-title'>기타 요청사항</span></td>
-		</tr>
-		<tr>
-			<td colspan=2><?php echo $editor_html; // 에디터 사용시는 에디터로, 아니면 textarea 로 노출 ?>
+			<td class='item-underline' valign='top'><span class='item-title'>기타 요청사항</span></td>
+			<td><?php echo $editor_html; // 에디터 사용시는 에디터로, 아니면 textarea 로 노출 ?>
 			</td>
 		</tr>
 	</table>
@@ -146,11 +147,16 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
 	<?php if ($is_secret) {?>
 		<div class='margin-bottom'><span class='item-title item-extra'>비밀번호</span> <input type="password" name="wr_password" id="wr_password" <?php echo $password_required ?> class="frm_input <?php echo $password_required ?>" maxlength="20"/></div>
 	<? }?>
-	
-    <div class="btn_confirm">
-        <input type="submit" value="신청하기" id="btn_submit" accesskey="s" class="btn_submit">
-        <a href="./board.php?bo_table=<?php echo $bo_table ?>" class="btn_cancel">취소</a>
-    </div>
+	<div class='captcha_submit'>
+		<div class='input_wrapper captcha'>
+			<?php echo captcha_html(); ?>
+		</div>
+		<div class="btn_confirm">
+			<input type="image" value="신청하기" id="btn_submit" accesskey="s" src="<?=$board_skin_url?>/img/template_submit.png">
+			<a href="./board.php?bo_table=<?php echo $bo_table ?>"><img src="<?=$board_skin_url?>/img/template_cancel.png"</a>
+		</div>
+		<div style="clear: both"></div>
+	</div>
     </form>
 
     <script>

@@ -3,28 +3,9 @@
 </script>
 <script src='<?=x::url()?>/module/site/template.js'></script>
 <div class='template'>
-	<?
-		$dirs = file::getDirs(X_DIR_THEME);
-		foreach ( $dirs as $dir ){
-			if ( $dir == $active_theme ) {
-				$theme_config = load_config( X_DIR_THEME . "/$dir/config.xml" );
-				$active_theme = $theme_config['name']['ko'];
-				
-				$active_theme_dir = $dir;
-				break;
-			}
-		}
-	?>
-	<?if ( $active_theme_dir ) { ?>
-		<div class='theme-thumb'>
-			<img src='theme/<?=$active_theme_dir?>/preview.jpg' >					
-			<div class='theme-name active-theme'><?=$active_theme?><span class='active-note'>가 선택 되었습니다</span></div>
-		</div>
-	<?}?>
 	<div class='theme-selection'>
 	<?php
-		$theme_ctr = 2;
-			
+			$dirs = file::getDirs(X_DIR_THEME);		
 			foreach ( $dirs as $dir ) {
 				$path = X_DIR_THEME . "/$dir/config.xml";
 				if ( ! file_exists($path) ) continue;
@@ -45,9 +26,17 @@
 				
 			$url = x::url().'/theme/'.$dir.'/preview.jpg';
 			?>
-			<div class='theme-thumb inactive' theme_value='<?=$dir?>' theme_name ='<?=$theme_config['name']['ko']?>'>
-				<img src='<?=$url?>' >
-				<span class='theme-name'><?=$name?></span>
+			<? if ( $dir == $active_theme ) $thumb_class = "active-theme";
+				else $thumb_class = "inactive";
+			?>
+			
+			<div class='theme-thumb <?=$thumb_class?> ' theme_value='<?=$dir?>' theme_name ='<?=$theme_config['name']['ko']?>'>
+				<div class='inner'>
+					<img src='<?=$url?>' >
+					<span class='theme-name'><?=$name?></span>
+					<span class='view-overlay'><img src="<?=module('img/view.png')?>"/><p>VIEW</p></span>
+					<? if ( $dir == $active_theme ) { ?><span class='active-overlay'><img src="<?=module('img/selected.png')?>"/><p>SELECTED</p></span> <? } ?>
+				</div>
 			</div>
 			
 		<?}?>
