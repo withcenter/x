@@ -24,8 +24,8 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			<div class='logo-wrapper'>
 				<div class='logo'><a href='<?=G5_URL?>'><img src='<?=x::url_theme()?>/img/logo.png'/></a></div>
 				<div class='text-info tablet'>
-					<span class='info call-us'>문의 070-7529-1749 /</span>
-					<a href='<?=G5_BBS_URL?>/board.php?bo_table=qna' class='info text'>질문과 답변 /</a>
+					<span class='info call-us'>문의 070-7529-1749</span>
+					<a href='<?=G5_BBS_URL?>/board.php?bo_table=qna' class='info text'>/ 질문과 답변 /</a>
 					<a href='<?=$log_href?>' class='info text'><?=$login_msg?> /</a>
 					<a href='<?=$profile_msg_url?>' class='info text'><?=$profile_msg?></a>
 					<?if ( admin() ){?>
@@ -48,8 +48,8 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			</div>
 			<div style='clear:both;'></div>
 			<div class='text-info web-browser'>
-				<span class='info call-us'>문의 070-7529-1749 /</span>
-				<a href='<?=G5_BBS_URL?>/board.php?bo_table=qna' class='info text'>질문과 답변 /</a>
+				<span class='info call-us'>문의 070-7529-1749</span>
+				<a href='<?=G5_BBS_URL?>/board.php?bo_table=qna' class='info text'>/ 질문과 답변 /</a>
 				<a href='<?=$log_href?>' class='info text'><?=$login_msg?> /</a>
 				<a href='<?=$profile_msg_url?>' class='info text'><?=$profile_msg?> </a>
 				<?if ( admin() ){?>
