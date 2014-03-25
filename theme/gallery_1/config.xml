@@ -35,7 +35,7 @@
 				<en>Menu Top Right</en>
 				<ko>상단 오른쪽 메뉴</ko>
 			</name>
-			<max>5</max>
+			<max>0</max>
 		</right>
 		<bottom>
 			<name>
