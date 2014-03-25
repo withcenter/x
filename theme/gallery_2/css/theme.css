@@ -97,6 +97,14 @@ body {
 	color: #ffffff;
 }
 
+.login-panel a.logout-link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 234px;
+	height: 100px;
+}
+
 .login-panel > div {
 	float: left;
 	text-align: center;

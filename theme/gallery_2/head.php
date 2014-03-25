@@ -28,7 +28,7 @@
 						if ( login() ) {
 							$register_link = g::url()."/bbs/member_confirm.php?url=register_form.php";
 							$register_text = "정보수정";
-							$login_text = "로그아웃";
+							$login_text = "<a href='".G5_BBS_URL."/logout.php' class='logout-link'></a>로그아웃";
 						}
 						else {
 							$register_link = g::url()."/bbs/register.php";
@@ -39,7 +39,7 @@
 		
 			<td class='login-panel-td' align='right'>
 				<div class='login-panel'>
-					<div class='login-button <? if ( login() ) echo "logout-button"?>'>
+					<div class='login-button <? if ( login() ) echo "logout-button"; else echo "login-btn"?>'>
 						<img src="<?=x::theme_url('img/top_icon1.png')?>"/>
 						<p><?=$login_text?></p>
 					</div>

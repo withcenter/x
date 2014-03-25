@@ -1,6 +1,6 @@
 $(function(){
 	var show_button, hide_button;
-	$(".login-button").click(function(){
+	$(".login-btn").click( function() {
 		show_login();
 	});
 	
