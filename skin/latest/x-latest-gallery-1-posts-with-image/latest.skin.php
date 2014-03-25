@@ -33,4 +33,27 @@ if ( ! $GLOBALS[$latest_skin_url] ++ ) { ?><link rel="stylesheet" href="<?php ec
 	<?$i++;}?>
 		<div style='clear: left'></div>
 </div>
+<? } else { ?>
+<div class='latest-gallery-posts-1-with-image'>
+		<?
+			$no_subject = "Maecenas A Risus Sed Felis";
+			$no_content = "Morbi placerat enim nec aliquam rutrum. Donec accumsan risus id.";
+		for ( $i = 1; $i <= 4; $i++ ) {
+			$img = "<img src='$latest_skin_url/img/no_middle_$i.png'/>";
+		?>		
+		<div class="post-item <? if ($i == 1) echo 'left-item'?>">
+			<div class='post-image'>
+				<a href="javascript:void(0)"><?=$img?></a>
+			</div>
+			
+			<div class='post-content-container'>
+				<div class='post-subject'><a href="javascript:void(0)"><?=$no_subject?></a></div>
+				<div class='post-content'><a href="javascript:void(0)"><?=$no_content?></a></div>
+			</div>
+		</div>
+		
+
 <? } ?>
+		<div style='clear: left'></div>
+</div>
+<?}?>

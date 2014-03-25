@@ -34,7 +34,27 @@
 						}
 					}
 					else {
-						echo "<img src='".x::url_theme()."/img/no_image_banner1.png' />";
+						for ( $i = 1; $i <= 5 ; $i++) { 
+								$no_banners[] = array(
+									'src' => x::theme_url('img/no_banner_'.$i.'.png'),
+									'subject' => "Quisque Viverra Velit Porta Tempus",
+									'content' => "Quisque viverra velit in porta tempus. Etiam ut quam eget magna adipiscing commodo. Nulla at enim pharetra, ultricies felis ac, pharetra lorem. Vestibulum fermentum ligula eu massa imperdiet semper. Donec vitae urna tincidunt, convallis turpis sed, convallis odio.<br><br>Curabitur feugiat tellus imperdiet dolor suscipit ullamcorper ut iaculis quam. Sed ornare massa vitae dolor rutrum laoreet. Fusce eu purus malesuada, vulputate tortor et, egestas."
+								);
+						}
+						$selected = 0;
+						foreach ( $no_banners as $banner ) {					
+							if ( ! $selected ++ ) $first_image = 'selected';
+							else $first_image = '';
+							
+							$url = "javascript:void(0)";
+							echo "<div class='banner-image-container image_$selected $first_image' image_num='$selected'><div class='banner-image'>";
+							echo "<a href='$url' target='_blank'><img src='$banner[src]''></a></div>";
+							echo "<div class='banner-content-container'><a href='$url' target='_blank'><span class='banner-content'><p class='banner-text'><div class='banner-subject'>".$banner['subject']."</div><div class='banner-inner-contents'>".$banner['content']."</div></p></span></a>";
+							echo "<div class='arrow-left-inner'></div>";
+							echo "<div class='arrow-left-outer'></div>";
+							echo "</div>";
+							echo "<a href='$url' class='read-more'>READ MORE ></a></div>";
+						}
 					}
 
 					echo "<div style='clear: left'></div>";

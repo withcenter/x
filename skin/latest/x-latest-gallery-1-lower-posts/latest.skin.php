@@ -33,4 +33,28 @@ if ( ! $GLOBALS[$latest_skin_url] ++ ) { ?><link rel="stylesheet" href="<?php ec
 	<?$i++;}?>
 		<div style='clear: left'></div>
 </div>
-<? } ?>
+<? } else { ?>
+<div class='latest-gallery-1-lower-posts'>
+	<?
+		$no_subject = "Maecenas Risus Felis Rhoncus";
+		$no_content = "Integer convallis justo sit amet libero facilisis, vel dapibus metus imperdiet. Nunc eu ligula rhoncus, ullamcorper quam at, rutrum nulla. In sed erat convallis, iaculis erat nec, adipiscing urna. Fusce ut elit nec quam lobortis blandit. Ut vestibulum felis sit amet odio eleifend molestie. Aliquam nec eros vel arcu congue luctus vitae et dui.";
+		for ( $i=1; $i<=2; $i++ ) { 
+			$img = "<img src='$latest_skin_url/img/no_bottom_$i.png'/>";
+	?>
+		<div class="post-item <? if ($i%2==1) echo 'left-item'?>">
+			<div class='post-image'>
+				<a href="javascript:void(0)"><?=$img?></a>
+			</div>
+			<div class='post-content-container'>
+				<div class='post-subject'><a href="javascript:void(0)"><?=$no_subject?></a></div>
+				<div class='post-content'><a href="javascript:void(0)"><?=$no_content?></a></div>
+			</div>
+			<div style='clear: left'></div>		
+		</div>		
+		
+		
+	<?}?>
+	
+	<? } ?>
+		<div style='clear: left'></div>
+</div>
