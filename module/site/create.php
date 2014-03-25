@@ -28,7 +28,8 @@
 							<option value=''></option>
 							<option value='travel'>여행</option>
 							<option value='community'>커뮤니티</option>
-							<option value='gallery'>하숙집/회사/범용</option>
+							<option value='gallery1'>하숙집/회사/식당/범용1</option>
+							<option value='gallery2'>하숙집/회사/식당/범용2</option>
 							<option value='blog'>블로그</option>
 						</select>	
 					</div>
