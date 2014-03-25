@@ -39,8 +39,8 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			</div>
 			<div class='right_main_menus above-400px'>
 				<ul>
-					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/write.php?bo_table=ms_www_1'>사이트<br /> 제작의뢰</a></li>
-					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/write.php?bo_table=ms_www_1'>로고 배너<br /> 제작의뢰</a></li>
+					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/write.php?bo_table=quotation'>사이트<br /> 제작의뢰</a></li>
+					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/write.php?bo_table=quotation'>로고 배너<br /> 제작의뢰</a></li>
 					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_3'>사이트<br />갤러리</a></li>
 					<li><div class='extra-border'></div><a href='<?=g::url()?>/?page=template_main'>템플릿<br />갤러리</a></li>							
 				</ul>						
@@ -63,8 +63,8 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		</div>		
 			<div class='right_main_menus below-400px'>
 				<ul>
-					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/write.php?bo_table=ms_www_1'>사이트<br /> 제작의뢰</a></li>
-					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/write.php?bo_table=ms_www_1'>로고 배너<br /> 제작의뢰</a></li>
+					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/write.php?bo_table=quotation'>사이트<br /> 제작의뢰</a></li>
+					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/write.php?bo_table=quotation'>로고 배너<br /> 제작의뢰</a></li>
 					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/write.php?bo_table=ms_www_3'>사이트<br />갤러리</a></li>
 					<li><div class='extra-border'></div><a href='j<?=g::url()?>/?page=template_main'>템플릿<br />갤러리</a></li>						
 				</ul>						
