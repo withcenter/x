@@ -11,7 +11,7 @@
 	<div class='post-items'>
 		<? foreach ( $posts as $post ) {
 			//$url = "bbs/board.php?bo_table=".$post['bo_table']."&wr_id=".$post['wr_id'];
-			$url = G5_BBS_URL.'/board.php?bo_table=quotation';
+			$url = G5_BBS_URL.'/board.php?bo_table=ms_www_1';
 		?>
 			<p class='post-item'><img src="<?=x::theme_url('img/bullet.png')?>"><a href="<?=$url?>"><?=cut_str($post['wr_subject'], 20, '...')?></a></p>
 		<?}?>
