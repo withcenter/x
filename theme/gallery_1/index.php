@@ -30,7 +30,7 @@
 							echo "<div class='arrow-left-inner'></div>";
 							echo "<div class='arrow-left-outer'></div>";
 							echo "</div>";
-							echo "<a href='$url' class='read-more'>READ MORE ></a></div>";
+							echo "<a href='$url' class='read-more'>자세히 보기 &gt;</a></div>";
 						}
 					}
 					else {
