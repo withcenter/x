@@ -66,8 +66,8 @@
 					<?}?>				
 				</div>
 		
-				<div class='previous-banner'> < </div>
-				<div class='next-banner'> > </div>
+				<div class='previous-banner'> &lt; </div>
+				<div class='next-banner'> &gt; </div>
 
 			</div>
 		</div>
