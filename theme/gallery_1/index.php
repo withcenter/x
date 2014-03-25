@@ -9,14 +9,14 @@
 					'subject' => x::meta("banner{$i}_subject"),
 					'content' => x::meta("banner{$i}_content")
 				);
-			}
+			} 
 		}
 		$total_banners = count($banners);		
 	?>	
 		<div class='banner' total_banners="<?=$total_banners?>" >
 			<div class='inner' style="position: relative;">
 				<?
-					
+					 
 					if ( $banners ) {
 						$selected = 0;
 						foreach ( $banners as $banner ) {					

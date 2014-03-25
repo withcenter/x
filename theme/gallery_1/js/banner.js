@@ -28,7 +28,7 @@ $(function(){
 		var banner_page = ".image_"+banner_num;	
 		$(banner_page).addClass('selected');
 		$('.page_num').removeClass('selected_num');
-		$('.page_'+banner_num).addClass('selected_num');
+		$('.page_'+banner_num).addClass('selected_num'); 
 	}
 	
 	function clicked_banner( banner_num ) {
