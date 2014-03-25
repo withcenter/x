@@ -53,8 +53,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 				<a href='<?=$log_href?>' class='info text'><?=$login_msg?> /</a>
 				<a href='<?=$profile_msg_url?>' class='info text'><?=$profile_msg?> </a>
 				<?if ( admin() ){?>
-					<a class='info text' href='<?=x::url_admin()?>'>/ X-ADMIN</a>
+						<a class='info text' href='<?=url_site_config()?>'>/ 사이트 관리</a>
 					<? if ( super_admin() ) {?>
+						<a class='info text' href='<?=x::url_admin()?>'>/ X-ADMIN</a>
 						<a class='info text' href='<?=g::url()?>/adm'>/ ADMIN</a>
 					<? }?>
 				<?}?>
