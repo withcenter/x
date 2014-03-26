@@ -68,7 +68,7 @@
 			<div class='theme'>
 				<img src='$url_preview'><br>
 				{$theme_config[name][L]}<br>
-				<a href='?module=update&action=ftp_install&theme=n&host=$host&dir=$dir&source_link=$source_link'>{$installed}</a>
+				<a href='?module=update&action=main_server_ftp_install&theme=n&host=$host&dir=$dir&source_link=$source_link'>{$installed}</a>
 <br>
 				{$theme_config[short][L]}<br>
 			</div>
