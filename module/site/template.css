@@ -29,7 +29,7 @@ body {
 }
 
 .template .theme-thumb {
-	width: 315px;
+	width: 33%;
 	height: 230px;
 	cursor: pointer;
 	float: left;
@@ -52,8 +52,8 @@ body {
 	position: absolute;
 	top: 0;
 	left: 10px;
-	height: 230px;
-	width: 315px;
+	height: 100%;
+	width: 100%;
 	text-align: center;
 	display: none;
 }
@@ -79,13 +79,25 @@ body {
 	position: absolute;
 	top: 0;
 	left: 10px;
-	height: 230px;
-	width: 315px;
+	height: 100%;
+	width: 100%;
 	text-align: center;
 }
 
 .template .active-theme .theme-name {
 	display: none;
+}
+
+@media (max-width: 640px) {
+	.template .theme-thumb {
+		width: 50%;
+	}
+}
+
+@media (max-width: 400px) {
+	.template .theme-thumb {
+		width: 100%;
+	}
 }
 
 

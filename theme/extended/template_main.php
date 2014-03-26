@@ -37,5 +37,5 @@ foreach ( $dirs as $dir ) {
 
 <?}?>
 	</table>
-	<div style='clear: left;'></div>
+
 </div>
