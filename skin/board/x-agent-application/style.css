@@ -379,14 +379,55 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 	background-color: #37566c;
 }
 
-#application-form .input_wrapper .captcha {
+#application-form .input_wrapper {
 	float: left;
 	width: 63%;
+	background: #fafafa;
+}
+
+#application-form .input_wrapper .inner_wrapper {
+	padding: 19px;
+	border: solid 1px #d9d9d9;
 }
 
 #application-form .btn_confirm {
 	float: left;
 	width: 37%;
+}
+
+#captcha #captcha_key {
+	margin-left: 120px;
+	float: right;
+	width: 230px;
+	height: 43px;
+	background: #ffffff !important;
+	border: solid 1px #696969;
+}
+
+#captcha #captcha_img {
+	padding: 18px 30px;
+	background: #ffffff;
+	float: left;
+}
+
+#captcha #captcha_mp3 {
+	width: 106px;
+	height: 38px;
+	left: 170px;
+	float: left;
+}
+
+#captcha #captcha_reload {
+	width: 106px;
+	height: 38px;
+	left: 170px;
+	top: 40px;
+	float: left;
+}
+		
+#captcha #captcha_info {
+	float: right;
+	margin-right: 25px;
 }
 
 /* 계약 확인 */
@@ -538,6 +579,27 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 	}
 	#application-form  .application-table tr td input[name='wr_4'] {
 		margin-bottom: 5px;
+	}
+}
+
+@media (max-width: 910px ) {
+	#captcha #captcha_key {
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 836px ) {
+	input#btn_submit {
+		margin-bottom: 10px;
+	}
+}
+
+@media (max-width: 730px ) {
+	#captcha #captcha_key {
+		margin: 10px 10px 0 0;
+	}
+	#captcha #captcha_info {
+		margin-right: 40px;
 	}
 }
 

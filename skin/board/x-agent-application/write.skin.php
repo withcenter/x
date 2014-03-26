@@ -140,16 +140,18 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
 			</ul>
 			<div class='terms-agree'><input type='checkbox' name='wr_10' value=1 id='agreement' <?=$wr_10?"checked=1":""?>/> 동의 합니다. </div>
 	</div>
-	<?php if ($is_guest) { //자동등록방지  ?>
+	<?php/** if ($is_guest) { //자동등록방지  ?>
         <div class='margin'><span class='item-title item-extra captcha-title'>보안문자 입력</span><?php echo $captcha_html ?></div>
-    <?php } ?>
+    <?php } */?>
 	
 	<?php if ($is_secret) {?>
 		<div class='margin-bottom'><span class='item-title item-extra'>비밀번호</span> <input type="password" name="wr_password" id="wr_password" <?php echo $password_required ?> class="frm_input <?php echo $password_required ?>" maxlength="20"/></div>
 	<? }?>
 	<div class='captcha_submit'>
 		<div class='input_wrapper captcha'>
-			<?php echo captcha_html(); ?>
+			<div class='inner_wrapper'>
+				<?php echo captcha_html(); ?>
+			</div>
 		</div>
 		<div class="btn_confirm">
 			<input type="image" value="신청하기" id="btn_submit" accesskey="s" src="<?=$board_skin_url?>/img/template_submit.png">
@@ -158,7 +160,20 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
 		<div style="clear: both"></div>
 	</div>
     </form>
+	<style>
 
+		#captcha #captcha_mp3 span {
+			background: url("<?=$board_skin_url?>/img/sound_icon.png");
+			width: 106px;
+			height: 38px;
+		}
+		
+		#captcha #captcha_reload span {
+			background: url("<?=$board_skin_url?>/img/reload_icon.png");
+			width: 106px;
+			height: 38px;
+		}
+	</style> 
     <script>
     <?php if($write_min || $write_max) { ?>
     // 글자수 제한
