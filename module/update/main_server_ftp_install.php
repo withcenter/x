@@ -16,6 +16,7 @@ $project_name = $ar[count($ar)-1];
 <form action='?' method='POST'>
 <input type='hidden' name='module' value='<?=$module?>'>
 <input type='hidden' name='action' value='<?=$action?>_submit'>
+<input type='hidden' name='source_link' value='<?=$source_link?>'>
 
 
 
