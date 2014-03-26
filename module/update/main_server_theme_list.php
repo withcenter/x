@@ -47,7 +47,7 @@
 		$url_config = "$u[scheme]://$git_raw_host$u[path]/master/config.xml";
 
 		
-		//di($url_config);
+		//di($url_config); // load_config();
 		$theme_config = load_xml( $url_config );
 		
 		
@@ -57,7 +57,7 @@
 
 
 		if ( in_array( $pname, $in['dirs'] ) ) {
-			$installed = "설치됨";
+			$installed = lang("Un-Install", "설치됨-삭제하기");
 		}
 		else {
 			$installed = lang("INSALL", "설치하기");
