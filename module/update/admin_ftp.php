@@ -1,4 +1,5 @@
-
+<link rel="stylesheet" href="<?=module("$module.css")?>">
+<?include 'menu_theme.php'?>
 <?php
 
 	$cwd = getcwd();
@@ -7,7 +8,6 @@
 	
 	$var = "&dir=".urlencode($dir)."&host=".urlencode($host);
 ?>
-
-<div class='list'>
+<div class='admin-ftp'>
 	<iframe src="<?=URL_EXTENDED?>/x/?module=update&action=ftp_delete&theme=n&<?=$var?>"></iframe>
 </div>

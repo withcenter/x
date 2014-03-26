@@ -25,3 +25,6 @@ include_once x::dir() . '/etc/procedural-function.php';
 
 include_once x::dir() . '/etc/constant.php';
 
+
+include_once x::dir() . '/etc/php-version-compatibilities.php';
+
