@@ -1,10 +1,14 @@
 [
-<a href='?module=update&action=admin_theme'>테마 목록</a> |
+<a href='?module=update&action=admin_theme'>
+	<?=lang("THEME LIST", "테마 목록")?>
+</a>
+ |
 
-<a href='?module=update&action=admin_theme_installed'>추가된 테마</a> |
+<a href='?module=update&action=admin_theme_installed'><?=lang("INSTALLED THEME", "추가된 테마")?></a> |
 
 
-업데이트 가능한 테마 
+<?=lang("THEME Updatable", "업데이트 가능한 테마")?>
+
  ]
 
 <br>

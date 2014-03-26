@@ -12,7 +12,15 @@
 </head>
 <body>
 <div class='theme-list'>
-<div>GITHUB.COM 으로 부터 자료를 다운로드 중입니다. 다운로드 시간이 걸릴 수 있으므로 기다려 주십시오.</div>
+<div>
+<?php
+	
+?>
+	<?=lang(
+		"Please, wait for sometime. Themes are being downloaded from GITHUB.COM",
+		"GITHUB.COM 으로 부터 자료를 다운로드 중입니다. 다운로드 시간이 걸릴 수 있으므로 기다려 주십시오."
+		)?>
+		</div>
 <?php
 	$url = URL_EXTENDED . '/x/etc/rss-update-list.php';
 	
