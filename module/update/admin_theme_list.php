@@ -30,10 +30,19 @@
 		@$theme_config = load_config( $url_config );
 		
 		if ( empty($theme_config) ) continue;
+		
+		$url_install = "?module=update&action=admin_ftp&mode=install&dir=theme";
+		
 		echo "
 			<div class='theme'>
 				<img src='$u[scheme]://$host$u[path]/master/preview.jpg'><br>
-				{$theme_config[name][L]}<br>
+				{$theme_config[name][L]}
+
+				[ 업데이트 하기 | <a href=''>추가 하기</a> ]
+				
+				
+				
+				<br>
 				{$theme_config[short][L]}<br>
 			</div>
 		";
