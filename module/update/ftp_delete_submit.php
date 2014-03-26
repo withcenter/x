@@ -1,4 +1,5 @@
 <?php
+define('NET_SSH2_LOGGING', 2);
 
 
 set_include_path( x::dir() . '/module/update/phpseclib');
@@ -10,6 +11,8 @@ include('Net/SFTP.php');
 
 $sftp = new Net_SFTP($host);
 if (!$sftp->login($id, $password)) {
+echo "sftp->login failed()...<br>";
+	echo $sftp->getLog();
     exit('Login Failed');
 }
 

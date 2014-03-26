@@ -1,8 +1,8 @@
 <?php
 
-	$cwd = getcwd();
-	$host = $_SERVER['HTTP_HOST'];
-	$dir = "$cwd/$dir";
+//	$cwd = getcwd();
+//	$host = $_SERVER['HTTP_HOST'];
+//	$dir = "$cwd/$dir";
 	
 	
 ?>

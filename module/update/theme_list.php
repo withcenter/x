@@ -60,14 +60,16 @@
 			$installed = "설치됨";
 		}
 		else {
-			$installed = "설치하기";
+			$installed = lang("INSALL", "설치하기");
 		}
 
+		$source_link = urlencode( $p['link'] );
 		echo "
 			<div class='theme'>
 				<img src='$u[scheme]://$host$u[path]/master/preview.jpg'><br>
 				{$theme_config[name][L]}<br>
-				{$installed}<br>
+				<a href='?module=update&action=ftp_install&source_link=$source_link'>{$installed}</a>
+<br>
 				{$theme_config[short][L]}<br>
 			</div>
 		";
