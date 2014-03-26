@@ -1,6 +1,5 @@
 <?php
-
-
+include_once "gnuboard.php";
 
 /**
  *  @file class/x.php
@@ -9,7 +8,8 @@
  *  그누보드 확장 팩 라이브러리
  *  
  */
-class x extends gnuboard{
+class x extends gnuboard
+{
 
 	static $config;
 	static $hook_list;
