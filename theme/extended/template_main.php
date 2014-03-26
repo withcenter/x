@@ -1,8 +1,11 @@
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/template_main.css' />
 <div class='template_main'>
 	<div class='template_main_title'><div class='inner'>템플릿 갤러리</div></div>
+	<table cellspacing='0' cellpadding='0' width='100%' class='template_table'>
+		<tr valign='top'>
 <?php
 $dirs = file::getDirs(X_DIR_THEME);
+	$i = 0;
 foreach ( $dirs as $dir ) {
 	$path = X_DIR_THEME . "/$dir/config.xml";
 	if ( ! file_exists($path) ) continue;
@@ -17,7 +20,7 @@ foreach ( $dirs as $dir ) {
 	if ( in_array( 'pc', $type ) ) {
 								
 		$url = x::url().'/theme/'.$dir.'/preview.jpg';
-?>
+?>		<td>
 			<div class='template_photo'>
 				<img src='<?=$url?>' />
 				<div class='template_title'>
@@ -26,8 +29,13 @@ foreach ( $dirs as $dir ) {
 				</div>
 				
 			</div>
-		
+		</td>
+	<?	if ( $i++ % 3 == 2) echo "</tr><tr valign='top'>";
+		else echo "<td width='10'></td>"?>
 <?}?>	
+
+
 <?}?>
+	</table>
 	<div style='clear: left;'></div>
 </div>
