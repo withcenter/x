@@ -1,5 +1,5 @@
 [
-<a href='?module=update&action=admin_theme'>
+<a href='?module=update&action=admin_theme_list'>
 	<?=lang("THEME LIST", "테마 목록")?>
 </a>
  |
