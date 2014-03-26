@@ -259,50 +259,102 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 /* write.skin.php */
 #application-form {
 	position: relative;
-	border: 1px solid #d5d5d5;
-	padding: 20px;
-	border-radius: 2px;
+	color: #555555;
 }
 
 .application-title {
-	border: 1px solid #666666;
 	font-family: '맑은 고딕', AppleGothic;
-	padding: 10px;
-	border-radius: 2px;
 	margin-bottom: 10px;
-	font-size: 11pt;
-	font-weight: bold;
-	color: #3e6271;
+	font-size: 20px;
+	color: #24a1b3;
+	border-bottom: solid 1px #696969;
+	width: 200px;
 }
+
+.application-title .inner {
+	border-bottom: solid 2px #696969;
+	width: 180px;
+	padding-bottom: 7px;
+}
+
 #application-form  .application-table tr td  {
-	padding: 5px 0;
+	padding: 9px 10px;
 }	
 #application-form  .application-table tr td input[type='text'] {
-	width: 200px;
-	padding: 5px 10px;
+	padding: 1% 2%;
+	border: solid 1px #696969;
+	width: 96%;
 }
+
+#application-form  .application-table tr td input[name='wr_4'],#application-form  .application-table tr td input[name='wr_5'] {
+	width: 45.45%;
+}
+
 #application-form  .application-table tr td select {
-	padding: 5px 10px;
+	padding: 1% 1%;
+	width: 100%;
+	border: solid 1px #696969;
+}
+
+#application-form  .item-title {
+	font-family: '맑은 고딕', AppleGothic;
+	font-size: 11pt;
+	color: #60583c;
+}
+#application-form  .item-extra {
+	width: 160px;
+	display: inline-block;
+}
+#application-form .captcha-title {
+	position: relative;
+	top: -30px;
+}
+#application-form  .margin{
+	margin: 20px 0 10px 0;
+}
+
+#application-form  .margin-bottom {
+	margin-bottom: 30px;
+}
+#application-form  .application-table tr .item-underline {
+	padding-top: 30px;
+}
+
+#application-form  .application-table tr td textarea[name='wr_content'] {
+	width: 94%;
+	height: 150px;
+	resize: none;
+	padding: 3%;
+	border: solid 1px #696969;
+}
+
+#application-form  .application-table tr td  .item-message {
+	margin-top: 10px;
+	color: #cb4154;
+	font-size: 10pt;
 }
 .show-template-frame {
 	width: 100%;
-	height: 300px;
+
 }
 
-.popup-preview{
+.popup-up{
 	position: absolute;
 	left: 0;
+	width: 100%;
+}
+.popup-preview {
 	border: 1px solid #727272;
 	text-align: center;
-	background-color: #d5d5d5;
+	background-color: #e7e7e7;
 	border-radius: 3px;
+	width: 642px;
+	margin: 0 auto;
 }
 
 .popup-preview .inner {
 	padding: 20px;
 	border: 1px solid #ffffff;
-	width: 600px;
-	height: 700px;
 	border-radius: 3px;
 }
 
@@ -311,4 +363,186 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 	max-height: 700px;
 	vertical-align: 
 	
+}
+.popup-preview .inner .select-theme, .popup-preview .inner .close-select-theme {
+	display: inline-block;
+	background-color: #517995;
+	padding: 7px 10px;
+	width: 70px;
+	border-radius: 4px;
+	color: #ffffff;
+	margin: 20px 0 0 10px;
+	cursor: pointer;
+}
+
+.popup-preview .inner .select-theme:hover, .popup-preview .inner .close-select-theme:hover {
+	background-color: #37566c;
+}
+
+#application-form .input_wrapper .captcha {
+	float: left;
+	width: 63%;
+}
+
+#application-form .btn_confirm {
+	float: left;
+	width: 37%;
+}
+
+/* 계약 확인 */
+.terms-conditions {
+	background-color: #fafafa;
+	padding: 20px;
+	border: solid 1px #d9d9d9;
+	margin-bottom: 20px;
+}
+.terms-conditions  .title {
+	color: #313131;
+	font-family: '맑은 고딕', AppleGothic;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+	font-size: 16px;
+}
+.terms-conditions  ul {
+	padding-left: 20px;
+	margin: 0;
+}
+.terms-conditions  ul  li {
+	line-height: 180%;
+	color: #555555;
+	font-size: 14px;
+}
+.terms-conditions .terms-agree {
+	margin-top: 30px;
+	color: #313131;
+	font-size: 14px;
+}
+
+/* list.skin.php */
+.list-application {
+
+}
+
+.list-application .banner-image {
+	float: left;
+}
+
+.list-application .application-button {
+	display: inline-block;
+	font-family: '맑은 고딕', AppleGothic;
+	font-size: 12pt;
+	color: #ffffff;
+	background-color: #60583c;
+	padding: 7px 20px 10px 20px;
+	border-radius: 4px;
+	float: right;
+}
+
+.list-application .application-button:hover {
+	text-decoration: none;
+}
+
+.x-agent-application-list {
+	margin: 10px 0;
+	border-radius: 3px;
+}
+
+.x-agent-application-list .title {
+	font-family: '맑은 고딕', AppleGothic;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #6c8499;
+	margin: 20px 0 10px 0;
+}
+
+.x-agent-application-list .row {
+	height: 30px;
+	line-height: 30px;
+	position: relative;
+	padding: 0 10px;
+}
+
+.x-agent-application-list .row:last-child {
+	border-bottom: 0;
+}
+
+.x-agent-application-list .row a {
+	font-family: '맑은 고딕', AppleGothic;
+}
+
+.x-agent-application-list .row a:hover {
+	text-decoration: none;
+}
+
+.x-agent-application-list .row img {
+	position: relative;
+	top: -1px;
+}
+
+.x-agent-application-list .background {
+	background-color: #f2f2f2;
+}
+
+.application-view .title {
+	float: left;
+	position: relative;
+	font-family: '맑은 고딕', AppleGothic;
+	font-weight: bold;
+	font-size: 12pt;
+	color: #9c9c9c;
+	top: 8px;
+}
+.application-view .title span {
+	color: #476783;
+}
+.application-view .top-button {
+	float: right;
+}
+
+.application-view-table {
+	margin: 20px 0;
+}
+.application-view-table tr td {
+	padding: 5px 10px 5px 0;
+	color: #444444;
+}
+
+.application-view-table tr td .sub-title {
+	background-color: #afafaf;
+	color: #ffffff;
+	display: inline-block;
+	padding: 7px 10px;
+	width: 120px;
+	border-radius: 3px;
+}
+.application-view-table tr td textarea {
+	width: 94%;
+	height: 250px;
+	resize: none;
+	border-radius: 3px;
+	padding: 3%;
+}
+
+.name-title {
+	width: 175px;
+}
+
+#application-form .select_theme {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+@media (max-width: 960px) {
+	#application-form  .application-table tr td input[name='wr_4'], #application-form  .application-table tr td input[name='wr_5'] {
+		width: 96%;
+	}
+	#application-form  .application-table tr td input[name='wr_4'] {
+		margin-bottom: 5px;
+	}
+}
+
+@media (max-width: 500px) {
+	.name-title {
+		width: 100px;
+	}
 }

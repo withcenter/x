@@ -17,22 +17,28 @@
 				<div class='lower-left'>
 					<div class='inner'>
 						<div class='lower-title'>
-							사이트 갤러리
+							<a href='<?=G5_BBS_URL?>/board.php?bo_table=site_gallery'>사이트 갤러리</a>
 						</div>		
-						<div class='bottom-bar'></div>						
+						<div class='bottom-bar'></div>
+						<?=latest('x-latest-site-gallery', 'ms_www_3', 3)?>
+						<? /*
 						<div class='left-first-image-wrapper'><img src = '<?=x::url_theme()?>/img/lower-left.png' class='lower_left_image_web'/></div>
 						<img src = '<?=x::url_theme()?>/img/lower-left_400px.png' class='lower_left_image_mobile'/>
+						*/?>
 					</div>
 				</div>
 				<div class='lower-middle'>
 					<div class='inner'>
 						<div class='lower-middle-title'>
-							템플릿 갤러리
+							<a href='<?=g::url()?>/?page=template_main'>템플릿 갤러리</a>
 						</div>
 						<div class='bottom-bar'></div>
+						<? include 'template_firstpage.php'; ?>
+						<? /*
 						<div class='lower-middle-1'><img src="<?=x::theme_url('img/middle_lower_1.png')?>"/></div>
 						<div class='lower-middle-2'><img src="<?=x::theme_url('img/middle_lower_2.png')?>"/></div>
-						<div class='lower-middle-3'><img src="<?=x::theme_url('img/middle_lower_3.png')?>"/></div>			
+						<div class='lower-middle-3'><img src="<?=x::theme_url('img/middle_lower_3.png')?>"/></div>
+						*/?>
 						</div>
 				</div>
 				<div class='lower-right'>

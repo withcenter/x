@@ -13,18 +13,23 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
 			<?if( file_exists( path_logo() ) ) { ?>
 					<img src="<?=url_logo()?>" class='registration-logo'>
 			<?} else {
-				if ( meta('theme') != 'blog' )  {?>
+				if ( meta('theme') == 'blog' )  {}
+				else if ( meta('theme') == 'extended' ) {?>
+					<img src="<?=x::url_theme()?>/img/logo.png" class='registration-logo'/>	
+			<? } else {?>
 					<img src="<?=$member_skin_url?>/img/logo.png" class='registration-logo'/>	
 				<? }?>
 			<?}?>
 		</a>
-		<span class='logo-text'>
-		<?
-			global $g5;
-			if( !$site_title = x::meta('title') ) $site_title = $g5['title'];
-			echo $site_title;
-		?>
-		</span>
+		<? if ( meta('theme') != 'extended' ) {?>
+			<span class='logo-text'>
+			<?
+				global $g5;
+				if( !$site_title = x::meta('title') ) $site_title = $g5['title'];
+				echo $site_title;
+			?>
+			</span>
+		<? }?>
 	</div>
 
 	<div class='result_skin_wrapper'><div class='inner'>

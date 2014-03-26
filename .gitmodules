@@ -1,0 +1,3 @@
+[submodule "theme/theme-basic"]
+	path = theme/theme-basic
+	url = https://github.com/withcenter/theme-basic

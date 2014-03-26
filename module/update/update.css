@@ -1,16 +1,28 @@
-.list .theme {
-	width: 33.33%;
-	
+
+.list iframe {
+	width: 100%;
+	min-height: 768px;
 }
-.list .theme img {
-	width:100%;
+
+
+.theme-list {
+	font-size: 9pt;
+}
+
+.theme-list .theme {
+	width: 45%;
+	float: left;
+}
+.theme-list .theme img {
+	width: 100%;
 }
 
 
 /* admin_theme_installed */
 .installed .theme {
-	margin-bottom: 2em;
-	width: 33.33%;	
+	float: left;
+	margin: 1em;
+	width: 45%;
 }
 .installed .theme img {
 	width:100%;

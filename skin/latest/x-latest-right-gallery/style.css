@@ -9,11 +9,13 @@
 	padding: 20px 15px 20px 25px;
 	background: #000000;
 	background-color: rgba(0,0,0,0.6);
-	color: #ffffff;
+	color: #e6e6e6;
 	width: 193px;
 	height: 328px;
 	text-align: center;
 	display: none;
+
+	position: relative;
 }
 
 .latest-right-gallery .right-posts-subject {
@@ -34,4 +36,12 @@
 .latest-right-gallery a {
 	text-decoration: none;
 	color: #e6e6e6;
+}
+
+.latest-right-gallery a.read_more {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 233px;
+	height: 368px;
 }

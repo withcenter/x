@@ -28,15 +28,13 @@
 							<option value=''></option>
 							<option value='travel'>여행</option>
 							<option value='community'>커뮤니티</option>
-							<? /*
-							<option value='shopping'>쇼핑</option>
-							<option value='academy'>어학원</option>
-							*/?>
+							<option value='gallery1'>하숙집/회사/식당/범용1</option>
+							<option value='gallery2'>하숙집/회사/식당/범용2</option>
 							<option value='blog'>블로그</option>
 						</select>	
 					</div>
 					
-					<input type='submit' value='생성'>
+					<input style='position: relative; top: -33px; cursor: pointer;' type='submit' value='생성'>
 					<div style='clear:right;'></div>
 			</form>
 	</div>

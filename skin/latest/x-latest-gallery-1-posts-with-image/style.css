@@ -1,0 +1,59 @@
+
+.latest-gallery-posts-1-with-image .post-image {
+	border: solid 1px #2ca3b4;
+}
+
+.latest-gallery-posts-1-with-image .post-item {
+	float: left;
+	width: 215px;
+	height: 210px;
+	margin-left: 10px;
+	border: solid 1px #2ca3b4;
+	padding: 9px;
+	margin-bottom: 10px;
+}
+
+.latest-gallery-posts-1-with-image .post-item.left-item {
+	margin: 0;
+}
+
+.latest-gallery-posts-1-with-image .post-image {
+	width: 213px;
+	height: 128px;
+	border: solid 1px #2ca3b4;
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+
+.latest-gallery-posts-1-with-image .post-image img {
+	width: 100%;
+}
+
+.latest-gallery-posts-1-with-image .post-item .post-content-container a {
+	text-decoration: none;
+}
+
+.latest-gallery-posts-1-with-image .post-item .post-content-container {
+	padding: 0 10px;
+	word-break: break-all;
+}
+
+.latest-gallery-posts-1-with-image .post-item .post-subject {
+	height: 15px;
+	line-height: 15px;
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+
+.latest-gallery-posts-1-with-image .post-item .post-subject a {
+	font-weight: bold;
+	font-size: 13px;
+	color: #25828f;
+}
+
+.latest-gallery-posts-1-with-image .post-item .post-content {
+	padding: 0;
+	height: 30px;
+	line-height: 15px;
+	overflow: hidden;
+}

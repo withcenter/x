@@ -1,14 +1,92 @@
-.template .theme-thumb {
-	border: 1px solid #666666;
-	width: 150px;
-	height: 150px;
-	overflow: hidden;
+body {
+	margin: 0 !important;
 }
-.template .theme-thumb  img {
-	width: 100%;
+.template .theme-thumb {
+	position: relative;
 }
 
-.template .inactive {
-	float: left;
+.template .theme-thumb .theme-name {
+	font-size: 9pt;
+	font-family: '맑은 고딕', AppleGothic;
+	width: 100%;
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	background-color: rgba(0,0,0,0.7);
+	color: #ffffff;
+	position: absolute;
+	padding-left: 10px;
+	bottom: 0;
 }
+
+.template .theme-thumb .active-theme {
+	font-weight: bold;
+	color: #ead582;
+	background-color: #484848;
+	font-size: 10pt;
+	line-height: 25px;
+	height: 25px;
+}
+
+.template .theme-thumb {
+	width: 315px;
+	height: 230px;
+	cursor: pointer;
+	float: left;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+.template .theme-thumb .inner {
+	padding-left: 10px;
+}
+
+.template .theme-thumb  img {
+	width: 100%;
+
+
+}
+
+.template .view-overlay {
+	background-color: rgba(242,132,12,0.9);
+	position: absolute;
+	top: 0;
+	left: 10px;
+	height: 230px;
+	width: 315px;
+	text-align: center;
+	display: none;
+}
+
+.template .view-overlay.selected {
+	display: block;
+}
+
+.template .view-overlay img, .template .active-overlay img {
+	margin-top: 25%;
+	max-width: 56px;
+	max-height: 56px;
+}
+
+.template .view-overlay p, .template .active-overlay p {
+	font-family: '맑은 고딕', AppleGothic;
+	color: #ffffff;
+}
+
+.template .active-overlay {
+	display: block;
+	background-color: rgba(36,161,179,0.9);
+	position: absolute;
+	top: 0;
+	left: 10px;
+	height: 230px;
+	width: 315px;
+	text-align: center;
+}
+
+.template .active-theme .theme-name {
+	display: none;
+}
+
+
 

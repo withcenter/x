@@ -1,3 +1,37 @@
+<? function set_posts( $name ) {
+	global $cfgs;
+	
+	ob_start();
+	if ( x::site() ) {
+		$cfgs = x::forums();
+		if ( ! empty( $cfgs ) ) {
+	?>
+	<select name='<?=$name?>'>
+		<option value=''>게시판을 선택하세요</option>
+		<option value=''></option>
+		<? foreach ( $cfgs as $c ) { 
+			if ( $c['bo_table'] == meta($name) ) $selected = 'selected';
+			else $selected = null;
+		?>
+			<option value="<?=$c['bo_table']?>" <?=$selected?>><?=$c['bo_subject']?></option>
+		<? } ?>
+	</select>
+	<script>
+	$(function(){
+		$("[name='<?=$name?>']").change(function(){
+			$("[name='<?=$name?>_bo_table']").val($(this).val());
+		});
+	});
+	</script>
+	<?
+		}
+	}?>
+	<input type='text' name='<?=$name?>_bo_table' value="<?=x::meta($name."_name")?>" placeholder=" 게시판 아이디 직접 입력" style='height: 23px; width: 140px; line-height: 23px; padding: 0 10px;' />
+<?
+	return $content = ob_get_clean();
+}
+?>
+
 <div class='config-wrapper'>
 <div class='config-title'>
 	<span class='config-title-info'>메인 롤링 배너</span>
@@ -11,7 +45,7 @@
 </div>
 <table cellspacing='0' cellpadding='10' class='image-config' width='100%'>
 	<tr valign='top'>
-		<td colspan='2'>
+		<td colspan='3'>
 			<div class='image-title'>
 				<img src='<?=module('img/img-icon.png')?>'>사이트 로고				
 			</div>
@@ -29,20 +63,6 @@
 				<input type='checkbox' name='<?=code_logo()?>_remove' value='y'><span class='title-small'>이미지 제거</span>
 			</div>
 		</td>
-		<td>
-			<div class='image-title'><img src='<?=module('img/img-icon.png')?>'>사이트 하단 로고</div>
-			<div class='image-upload'>
-			<?
-				if( file_exists( x::path_file( "gallery_footer_logo" ) ) ) echo "<img src='".x::url_file( "gallery_footer_logo" )."'>";
-				else {
-			?>
-					<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/<?=$module?>/img/no-image.png'><br>[가로 72px X 세로 103px]</div>
-				<?}?>
-				<input type='file' name='gallery_footer_logo'>
-					<input type='checkbox' name='gallery_footer_logo_remove' value='y'><span class='title-small'>이미지 제거</span>
-						<span class='title-small'>하단문구제목</span><input type='text' name='gallery_footer_tagline' value='<?=x::meta('gallery_footer_tagline')?>' />
-			</div>	
-		</td>
 	</tr>
 	<?
 		for ( $i=1; $i<=5; $i ++ ) {
@@ -59,9 +79,9 @@
 				<?}?>
 				<input type='file' name='banner<?=$i?>'>
 					<input type='checkbox' name='banner<?=$i?>_remove' value='y'><span class='title-small'>이미지 제거</span>
-				<div class='title'>BANNER <?=$i?> SUBJECT</div>
+				<div class='title'>배너 <?=$i?> 제목</div>
 				<input type='text' name='banner<?=$i?>_subject' value='<?=stripslashes(x::meta("banner{$i}_subject"))?>'>				
-				<div class='title'>BANNER <?=$i?> CONTENT</div>
+				<div class='title'>배너 <?=$i?> 내용</div>
 				<textarea name='banner<?=$i?>_content'><?=stripslashes(x::meta("banner{$i}_content"))?></textarea>
 				<div class='title'>배너<?=$i?> 링크</div>
 				<input type='text' name='banner<?=$i?>_url' value='<?=x::meta("banner{$i}_url")?>'>

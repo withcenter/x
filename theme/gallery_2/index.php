@@ -16,7 +16,7 @@
 			}
 		}
 		
-		$total_banners = count($banners);
+		if ( $total_banners = count($banners) ) {
 	?>	
 		<div class='banner' total_banners="<?=$total_banners?>" >
 			<div class='inner' style="position: relative; height: 318px; width: 968px;">
@@ -66,27 +66,30 @@
 					<?}?>				
 				</div>
 		
-				<div class='previous-banner'> < </div>
-				<div class='next-banner'> > </div>
+				<div class='previous-banner'> &lt; </div>
+				<div class='next-banner'> &gt; </div>
 
 			</div>
 		</div>
-
+	<? }
+		else {?>
+			<div style='margin-bottom:10px;'><img src='<?=x::url_theme()?>/img/no_banner_image.png' /></div>
+	<?	}?>
 <div class='posts-container'>
 	<div class='left-posts-container'>
-		<?=latest( 'x-latest-left-gallery', bo_table(2) , 3, 40 )?>
+		<?=latest( 'x-latest-left-gallery', bo_table(1) , 3, 40 )?>
 	</div>
 	<div class='right-posts-container'>
 		<div class='right-panel-posts'>
 			<div class='right-posts-1'>
-				<?=latest( 'x-latest-gallery-posts', bo_table(1), 10, 40 )?>
+				<?=latest( 'x-latest-gallery-posts', bo_table(2), 10, 40 )?>
 			</div>
 			<div class='right-posts-2'>
-				<?=latest( 'x-latest-gallery-posts', bo_table(4), 5, 40 )?>
-			</div>
+				<?=latest( 'x-latest-gallery-posts', bo_table(3), 5, 40 )?>
+			</div> 
 		</div>
 		<div class='right-gallery-post'>
-			<?=latest( 'x-latest-right-gallery', bo_table(5) , 1, 40 )?>
+			<?=latest( 'x-latest-right-gallery', bo_table(4), 1, 40 )?>
 		</div>
 		<div style='clear: left'></div>
 	</div>

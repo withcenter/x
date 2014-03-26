@@ -43,16 +43,28 @@ function reset_theme()
 		$_theme_list = array();
 		$dirs = file::getDirs(X_DIR_THEME);
 		foreach ( $dirs as $dir ) {
-			$path = X_DIR_THEME . "/$dir/config.php";
+			$path = X_DIR_THEME . "/$dir/config.xml";
 			if ( ! file_exists($path) ) continue;
-			$theme_config = array();
-			include $path;
+			$theme_config = load_xml( $path );
 			if ( empty($theme_config['name']) ) continue;
 			$theme_config['dir'] = $dir;
 			$_theme_list[] = $theme_config;
 		}
 	}
+	
 	reset( $_theme_list );
+}
+
+/**
+ * @code
+	$themes = get_themes();
+ * @endcode
+ */
+function get_themes()
+{
+	global $_theme_list;
+	reset_theme();
+	return $_theme_list;
 }
 
 function next_theme()
@@ -80,7 +92,8 @@ function get_theme_element($key)
 
 function theme_name()
 {
-	return get_theme_element('name');
+	$name = get_theme_element('name');
+	return $name[L];
 }
 function theme_type()
 {

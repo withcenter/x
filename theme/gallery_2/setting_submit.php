@@ -6,3 +6,7 @@
 	}
 	
 	x::meta("gallery_footer_tagline", $in["gallery_footer_tagline"]);
+	x::meta("gallery_forum_left", $in["gallery_forum_left"] );
+	x::meta("gallery_forum_right", $in["gallery_forum_left"] );
+	x::meta("gallery_forum_list_1", $in["gallery_forum_list_1"] );	
+	x::meta("gallery_forum_list_2", $in["gallery_forum_list_2"] );	

@@ -24,24 +24,30 @@
 			</td>
 		</tr>
 		<tr>
+				<?
+						if ( login() ) {
+							$register_link = g::url()."/bbs/member_confirm.php?url=register_form.php";
+							$register_text = "정보수정";
+							$login_text = "<a href='".G5_BBS_URL."/logout.php' class='logout-link'></a>로그아웃";
+						}
+						else {
+							$register_link = g::url()."/bbs/register.php";
+							$register_text = "회원가입";
+							$login_text = "로그인";
+						}
+					?>
+		
 			<td class='login-panel-td' align='right'>
 				<div class='login-panel'>
-					<div class='login-button'>
+					<div class='login-button <? if ( login() ) echo "logout-button"; else echo "login-btn"?>'>
 						<img src="<?=x::theme_url('img/top_icon1.png')?>"/>
-						<p>로그인</p>
+						<p><?=$login_text?></p>
 					</div>
-					<?
-						if ( login() ) $register_link = g::url()."/bbs/member_confirm.php?url=register_form.php";
-						else $register_link = g::url()."/bbs/register.php";
-					?>
+					
 					<div class='register-edit-button'>
 						<a href='<?=$register_link?>'><img src="<?=x::theme_url('img/top_icon2.png')?>"/></a>
-						<a href='<?=$register_link?>'><p>회원가입</p></a>
+						<a href='<?=$register_link?>'><p><?=$register_text?></p></a>
 					</div>
-					<!--<div class='statistics-button'>
-						<img src="<?=x::theme_url('img/top_icon2.png')?>"/>
-						<p>회원가입</p>
-					</div>-->
 					<div class='search-button'>
 						<img src="<?=x::theme_url('img/top_icon3.png')?>"/>
 						<p>검색</p>
@@ -49,10 +55,6 @@
 					<div class='login-container'>
 						<div class='triangle'></div>
 						<?=outlogin('x-outlogin-gallery-2')?>
-					</div>
-					<div class='statistics-container'>
-						<div class='triangle'></div>
-						<?=visit('x-visit-gallery-2')?>
 					</div>
 					<div class='search-container'>
 						<div class='triangle'></div>
@@ -85,12 +87,16 @@
 	
 ?>
 <style>
-.top-menu ul a[href*="<?=$_bo_table?>"] {
+<? if ( $wr_id && $bo_table)  $selected_menu = "&wr_id=".$wr_id;
+	else if ( $bo_table && empty($wr_id) ) $selected_menu = "bo_table=".$bo_table;
+	else $selected_menu = null;
+?>
+.top-menu ul a[href*="<?=$selected_menu?>"] {
 	background: #3e665f;
 	border-radius: 3px;
 }
 
-.menu-panel ul a[href*="<?=$_bo_table?>"] {
+.menu-panel ul a[href*="<?=$selected_menu?>"] {
 	border-bottom: solid 1px #ffffff;
 }
 </style>

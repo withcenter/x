@@ -6,17 +6,17 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
 ?>
 
 <!-- 로그인 시작 { -->
-<div id="extended_login" class="extended_skin">
+<div id="extended_login" class="extended extended_skin">
 <div class='inner'>
-   <div class='title login'><?php echo $g5['title'] ?></div>
-   <div class='title register'><a href='<?=G5_BBS_URL?>/register.php'>회원가입</a></div>
-
+	<div class='title login'><?php echo $g5['title'] ?></div>
+	<div class='title register'><a href='<?=G5_BBS_URL?>/register.php'>회원가입</a></div>
+	<div style='clear:both'></div>
     <form name="flogin" action="<?php echo $login_action_url ?>" onsubmit="return flogin_submit(this);" method="post">
     <input type="hidden" name="url" value='<?php echo $login_url ?>'>
 
     <fieldset id="extended_login_fields">
         <div class='label' for="login_id" class="login_id">회원아이디</div>
-        <input type="text" name="mb_id" id="login_id" required class="frm_input required" size="20" maxLength="20">
+        <input type="text" name="mb_id" id="login_id" required class="frm_input required" size="20" maxLength="20" autocomplete='off'>
         <div class='label' for="login_pw" class="login_pw">비밀번호</div>
         <input type="password" name="mb_password" id="login_pw" required class="frm_input required" size="20" maxLength="20">
 		<div class='checkbox_wrapper'>
@@ -28,7 +28,26 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
     </form>
 </div>
 </div>
+<!--[if IE 7]>
+		<style>						
+			#extended_login .inner{
+					width:324px;
+			}
+			
+			.extended input[type='submit'], .extended .checkbox_wrapper{
+				width:49.5%;
+			}		
+			
+			.extended input[type='checkbox']{
+				margin-top:9px;
+				float:left;
+			}
 
+			.extended .checkbox_wrapper .checkbox_label{								
+				float:left;
+			}		
+		</style>
+<![endif]-->
 <script>
 $(function(){
     $("#login_auto_login").click(function(){

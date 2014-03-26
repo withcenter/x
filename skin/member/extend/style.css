@@ -307,19 +307,25 @@
 	line-height: 20px;
 }
 
+/**fixed height for container on this page**/
+.layout .container{
+	height:730px;
+}
+
 /**EDIT for mb_login**/
-#extended_login{
-	border:1px solid #d9d9d9;
-	background-color:#fafafa;
+#extended_login{	
 	height:338px;
 	/*width:44.3%;*/
 	width:430px;
-	margin:auto;
+	margin:60px auto 0 auto;
 }
 
 #extended_login .inner{
+	border:1px solid #d9d9d9;
+	background-color:#fafafa;
 	padding:22px 12.37% 40px 12.37%;
 }
+
 
 #extended_login .inner .title{
 	width:50%;
@@ -327,7 +333,11 @@
 	text-align:center;
 	font-size:1.5em;
 	font-weight:bold;	
-	margin-bottom:30px;
+	margin-bottom:25px;
+	padding-bottom:5px;
+	height:20px;
+	line-height:25px;
+	overflow:hidden;	
 }
 
 #extended_login .inner .title.login {
@@ -336,7 +346,7 @@
 }
 
 #extended_login .inner .title.register {	
-	padding-bottom:2px;
+	padding-bottom:7px;
 	border-bottom:1px solid #696969;
 }
 
@@ -351,7 +361,6 @@
 	color:#333333;
 }
 
-
 #extended_login #extended_login_fields input[type='text']:focus, #extended_login #extended_login_fields input[type='password']:focus{
 	border:1px solid #f2860c;
 	outline: none;
@@ -359,16 +368,16 @@
 
 #extended_login #extended_login_fields input[type='text'], #extended_login #extended_login_fields input[type='password']{
 	width:94%;	
-	padding:10px 3%;
+	padding:8px 3%;
 	margin-bottom:10px;
 	background:#ffffff!important;
 }
 
 #extended_login #extended_login_fields input[type='password']{
-	margin-bottom:32px;
+	margin-bottom:40px;
 }
 
-#extended_login #extended_login_fields .checkbox_wrapper{
+.extended .checkbox_wrapper{
 	width:50%;
 	float:left;
 	height:40px;
@@ -390,18 +399,18 @@
 
 }
 
-#extended_login #extended_login_fields input[type='checkbox']{
+.extended input[type='checkbox']{
 	margin:-4px 0 0 10px;
 }
 
-#extended_login #extended_login_fields .checkbox_wrapper .checkbox_label{
+.extended .checkbox_wrapper .checkbox_label{
 	display:inline-block;	
 	color:#ffffff;
 	font-size:1.2em;
 	margin:13px 0 0 5px;
 }
 
-#extended_login #extended_login_fields input[type='submit']{
+.extended input[type='submit']{
 	width:50%;
 	float:left;	
 	border:0;
@@ -424,9 +433,15 @@
 
 }
 
-@media all and (max-width:450px){
+@media all and (max-width:640px){
 	#extended_login{
-		width:99%;
+		width:100%;
+	}
+}
+
+@media all and (max-width:400px){
+	#extended_login{
+		width:89%;
 	}
 }
 
@@ -439,13 +454,14 @@
 .extended_register_form .inner{
 	border:1px solid #d9d9d9;
 	background-color:#fafafa;
-	padding:20px 58px 38px 58px;
+	position:relative;
+	padding:20px 7% 38px 7%;
 }
 
 
 .extended_register_form .inner .title_wrapper{
 	width:270px;
-	margin:auto;
+	margin:auto;	
 }
 .extended_register_form .inner .title{
 	width:50%;
@@ -453,7 +469,11 @@
 	text-align:center;
 	font-size:1.5em;
 	font-weight:bold;	
-	margin-bottom:30px;
+	height:20px;
+	line-height:25px;
+	overflow:hidden;
+	margin-bottom:30px;	
+	padding-bottom:5px;
 }
 
 .extended_register_form .inner .title.register {
@@ -462,13 +482,47 @@
 }
 
 .extended_register_form .inner .title.login {	
-	padding-bottom:2px;
+	padding-bottom:7px;
 	border-bottom:1px solid #696969;
 }
 
 .extended_register_form .inner .title.login a{
 	color:#696969;
 	text-decoration:none;
+}
+
+.extended_register_form .inner .label{
+	color:#333333;
+	margin-bottom:5px;
+	font-size:1.3em;
+}
+
+.extended_register_form .inner .input_wrapper.nickname{
+	position:relative;
+}
+
+.extended_register_form .inner .input_wrapper.nickname .triangle{
+	position:absolute;
+	top:-5px;
+	left:5px;
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;	
+	border-bottom: 5px solid orange;
+}
+
+.extended_register_form .inner .input_wrapper.nickname .notice{
+	display:none;
+	width:90%;
+	padding:10px 5%;
+	position:absolute;
+	bottom:-50px;
+	left:0;
+	color:blue;
+	border:1px solid orange;
+	border-radius:3px;
+	background-color:#fafafa;
 }
 
 .extended_register_form .inner .left{
@@ -494,4 +548,94 @@
 .extended_register_form .inner input[type='text']:focus, .extended_register_form .inner input[type='password']:focus{
 	border:1px solid #f2860c;
 	outline: none;
+}
+
+.extended_register_form .inner  .cancel_wrapper .register_cancel{
+	display:inline-block;
+	color:#ffffff;
+	font-size:1.2em;	
+	text-decoration:none;
+	width:100%;
+	padding:12px 0;	
+}
+
+.extended_register_form .inner  .cancel_wrapper{		
+	width:50%;
+	float:left;
+	height:40px;
+	white-space:nowrap;
+	text-align:center;
+	overflow:hidden;
+	
+	
+	/**gradient bg color**/
+	background: #cccccc; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2NjY2NjYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiY2JjYmMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #cccccc 0%, #bcbcbc 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cccccc), color-stop(100%,#bcbcbc)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #cccccc 0%,#bcbcbc 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #cccccc 0%,#bcbcbc 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #cccccc 0%,#bcbcbc 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #cccccc 0%,#bcbcbc 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#bcbcbc',GradientType=0 ); /* IE6-8 */
+}
+
+.extended_register_form .inner .input_wrapper.captcha{
+	text-align:center;
+}
+
+@media all and (max-width:850px){
+	.extended_register_form{
+		width:100%;
+	}
+}
+
+@media all and (max-width:640px){
+	.layout .container{
+		height:auto;
+		margin-bottom:10px;	
+	}
+
+	.extended_register_form .inner{
+		padding:20px 15% 38px 15%;
+	}
+
+	.extended_register_form .inner .left{
+		width:100%;
+		padding:0;
+	}
+
+	.extended_register_form .inner .right{
+		width:100%;
+		padding:0;
+	}
+	
+	
+	.extended_register_form .inner .input_wrapper.captcha{
+		position:absolute;
+		bottom:90px;
+		left:0;
+		width:100%;
+		text-align:center;
+	}
+	
+	.input_wrapper.cell_num{
+		padding-bottom:70px;
+	}
+	
+}
+
+@media all and (max-width:400px){
+	.extended_register_form .inner{
+		padding:20px 10.8% 38px 10.8%;
+	}
+
+	.extended_register_form{
+		width:89.5%;
+	}
+	
+	.extended_register_form .inner .title_wrapper{
+		width:100%;
+	}
 }

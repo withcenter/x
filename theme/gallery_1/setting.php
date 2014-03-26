@@ -1,47 +1,10 @@
-<?php
-function setTopMenu( $name ) {
-	global $cfgs;
-	
-	ob_start();
-	if ( x::site() ) {
-		$cfgs = x::forums();
-		if ( ! empty( $cfgs ) ) {
-	?>
-	<select name='<?=$name?>'>
-		<option value=''>게시판을 선택하세요</option>
-		<option value=''></option>
-		<? foreach ( $cfgs as $c ) { 
-			if ( $c['bo_table'] == x::meta($name) ) $selected = 'selected';
-			else $selected = null;
-		?>
-			<option value="<?=$c['bo_table']?>" <?=$selected?>><?=$c['bo_subject']?></option>
-		<? } ?>
-	</select>
-	<script>
-	$(function(){
-		$("[name='<?=$name?>']").change(function(){
-			$("[name='<?=$name?>_bo_table']").val($(this).val());
-		});
-	});
-	</script>
-	<?
-		}
-	}?>
-	<input type='text' name='<?=$name?>_bo_table' value="<?=x::meta($name."_name")?>" placeholder=" 게시판 아이디 직접 입력" style='height: 23px; width: 140px; line-height: 23px; padding: 0 10px;' />
-<?
-	return $content = ob_get_clean();
-}
-?>
-
-
-
   <div class='config-wrapper'>
 	<div class='config-title'>
 		<span class='config-title-info'>전화번호</span>
 		<span class='config-title-notice'>
 			<span class='user-google-guide-button' page = 'google_doc_community_2_2' document_name = 'https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub#h.5bu4gi87qhep'>[설명 보이기]</span>
 			<img src='<?=module('img/setting_2.png')?>'>
-		</span>
+		</span> 
 	</div>
 	<div class='config-container'>
 	<div class='hidden-google-doc google_doc_community_2_2'>	
@@ -105,10 +68,12 @@ function setTopMenu( $name ) {
 					<input type='file' name='banner<?=$i?>'>
 						<input type='checkbox' name='banner<?=$i?>_remove' value='y'><span class='title-small'>이미지 제거</span>
 					
-					<div class='title'>배너<?=$i?>의 문구</div>
-					<textarea name='banner<?=$i?>_text'><?=stripslashes(x::meta("banner{$i}_text"))?></textarea>
-					<div class='title'>배너<?=$i?> 링크</div>
-					<input type='text' name='banner<?=$i?>_url' value='<?=x::meta("banner{$i}_url")?>'>
+				<div class='title'>배너 <?=$i?> 제목</div>
+				<input type='text' name='banner<?=$i?>_subject' value='<?=stripslashes(x::meta("banner{$i}_subject"))?>'>				
+				<div class='title'>배너 <?=$i?> 내용</div>
+				<textarea name='banner<?=$i?>_content'><?=stripslashes(x::meta("banner{$i}_content"))?></textarea>
+				<div class='title'>배너<?=$i?> 링크</div>
+				<input type='text' name='banner<?=$i?>_url' value='<?=x::meta("banner{$i}_url")?>'>
 				</div>
 			</td>
 			

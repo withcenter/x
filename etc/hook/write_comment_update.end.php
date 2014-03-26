@@ -28,7 +28,7 @@
 			'wr_name'				=> $wr_name,
 			'wr_email'				=> $wr_email,
 			'wr_home_page'		=> $wr_homepage,
-			'wr_ip'						=> '{$_SERVER['REMOTE_ADDR']}',
+			'wr_ip'						=> "{$_SERVER['REMOTE_ADDR']}",
 			'wr_1'						=> '$wr_1',
                      'wr_2' => '$wr_2',
                      'wr_3' => '$wr_3',
