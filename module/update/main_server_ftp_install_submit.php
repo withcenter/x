@@ -64,7 +64,6 @@ foreach (glob($data_path.$project_name."/*.*") as $filename) $sftp->put($filenam
 
 // upload the master folder  using phpseclib
 
-*/
 
 
 
