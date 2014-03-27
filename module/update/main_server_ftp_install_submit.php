@@ -8,6 +8,8 @@ $url = "$git_zip_host_url$pu[path]/zip/master";
 //di($url);
 /** sample
 
+<?php
+
 	$file = file_get_contents('https://github.com/thruthesky/office/archive/master.zip');
 	file_put_contents('c:/work/sapcms_1_2/gnu_x/data/office.zip', $file);
 
@@ -20,7 +22,13 @@ $url = "$git_zip_host_url$pu[path]/zip/master";
 		echo 'failed';
 	}
 	
-	rename( 'c:/work/sapcms_1_2/gnu_x/data/office-master', 'c:/work/sapcms_1_2/gnu_x/data/office' );
+	if ( file_exists('c:/work/sapcms_1_2/gnu_x/data/office' ) ) echo "Folder Theme Already Exists";
+	else rename( 'c:/work/sapcms_1_2/gnu_x/data/office-master', 'c:/work/sapcms_1_2/gnu_x/data/office' );
+	
+	unlink ( 'c:/work/sapcms_1_2/gnu_x/data/office.zip' );
+	
+?>
+
 	
 http://ca2.php.net/file_get_contents
 */
