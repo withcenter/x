@@ -23,7 +23,7 @@ fclose($file);
 
 // write data from remote file
 $file = fopen ( $theme_file_path, 'wb');
-fwrite ( $content );
+fwrite ( $file, $content );
 fclose ( $file );
 
 
