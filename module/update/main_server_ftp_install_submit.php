@@ -6,7 +6,14 @@ $git_zip_host_url = "https://codeload.github.com";
 $url = "$git_zip_host_url$pu[path]/zip/master";
 
 //di($url);
+/** sample
+<?php
+	$file_name = 'samplefilename.zip'
+	$file = file_get_contents($url);
+	file_put_contents(x::url()."/module/update/$file_name", $file);
+?>
 
+*/
 
 
 
