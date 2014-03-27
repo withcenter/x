@@ -55,6 +55,7 @@ if ($sftp->login($id, $password)) {
 }
 else {
 	echo $sftp->getLog();
+	di ( $ssh->getLastSFTPError() );
     exit('Login Failed');
 }
 
