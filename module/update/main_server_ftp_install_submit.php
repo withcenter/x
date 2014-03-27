@@ -55,7 +55,9 @@ if ($sftp->login($id, $password)) {
 	foreach (glob($data_path.$project_name."/*.*") as $filename) $sftp->put($filename, $dir.$project_name, NET_SFTP_LOCAL_FILE);
 }
 else {
+	echo "<pre>";
 	echo $sftp->getLog();
+	echo "</pre>";
     exit('Login Failed');
 }
 
