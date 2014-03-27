@@ -50,6 +50,7 @@ include_once('phpseclib/Crypt/Hash.php');
 
 define('NET_SSH2_LOGGING', 2);
 $sftp = new Net_SFTP($host, 22);
+di ( $in );
 if ($sftp->login($id, $password)) {
 	foreach (glob($data_path.$project_name."/*.*") as $filename) $sftp->put($filename, $dir.$project_name, NET_SFTP_LOCAL_FILE);
 }
