@@ -4,7 +4,7 @@ $git_zip_host_url = "https://codeload.github.com";
 $url = "$git_zip_host_url$pu[path]/zip/master";
 
 $data_path = G5_PATH.'/data/tmp/';
-if ( is_dir ( $data_path.$project_name ) file::delete_folder ( $data_path.$project_name );
+if ( is_dir ( $data_path.$project_name ) ) file::delete_folder ( $data_path.$project_name );
 
 $theme_file_path = $data_path.$project_name.'.zip';
 
