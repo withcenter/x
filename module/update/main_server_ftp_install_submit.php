@@ -48,35 +48,14 @@ include_once('phpseclib/Math/BigInteger.php');
 include_once('phpseclib/Crypt/Random.php');
 include_once('phpseclib/Crypt/Hash.php');
 
-
+define('NET_SSH2_LOGGING', 2);
 $sftp = new Net_SFTP($host);
 if (!$sftp->login($id, $password)) {
+	echo $sftp->getLog();
     exit('Login Failed');
 }
 foreach (glob($data_path.$project_name."/*.*") as $filename) $sftp->put($filename, $dir.$project_name, NET_SFTP_LOCAL_FILE);
 
-	
-/** sample
-
-CODE 1: (Binary Safe based on php.net ) file_get_contents, http://ca2.php.net/file_get_contents
-	$file = file_get_contents($url);
-	$data_path = G5_PATH.'/data/tmp/';
-	$file_path = $data_path.$project_name.'.zip';
-	file_put_contents($file_path, $file);
-	
-	$zip = new ZipArchive;
-	if ($zip->open($file_path) == TRUE) {
-		$zip->extractTo($data_path);
-		$zip->close();
-		echo 'File Extracted';
-	} else {
-		echo 'File Extraction Failed';
-	}
-
-	rename( $data_path.$project_name.'-master', $data_path.$project_name );
-	
-	unlink ( $file_path );
- 
 // download $url and save it into a file(templorary folder like G5/data folder or /tmp foder) or variable.
 
 
@@ -85,7 +64,6 @@ CODE 1: (Binary Safe based on php.net ) file_get_contents, http://ca2.php.net/fi
 
 // upload the master folder  using phpseclib
 
-*/
 
 
 
