@@ -264,23 +264,38 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
 	
 	var iframe_height;
 	function callback_preview( src, theme, theme_name ) {
-		$(".popup-preview").remove();
-		$("#application-form").prepend("<div class='popup'><div class='popup-preview'><div class='inner'><img src='" + src + "' />" + 
+		$(".popup").remove();
+		$(".dark-bg").remove();
+		
+		var user_scroll = $(window).scrollTop()-130;
+		var popup_style = " style='position:absolute;top:" + user_scroll + "px;left:0;'"
+		$("#application-form").prepend("<div class='dark-bg'></div><div class='popup'><div class='popup-preview' " + popup_style + "><div class='inner'><img src='" + src + "' />" + 
 		"<div><span class='select-theme'>선택하기</span><span class='close-select-theme'>창 닫기</span></div></div>" +
 		"</div></div>" );
-		$("html, body").animate({ scrollTop: 150 }, 600);
+				
+		var popup_margin_left = ( ( $('#application-form').width() - $(".popup-preview").width() ) / 2 );
+		$(".popup-preview").css('margin-left', popup_margin_left + 'px');		
+		//$("html, body").animate({ scrollTop: 150 }, 600);
+		
+		$(".dark-bg").click(function(){
+			$(".popup").remove();
+			$(".dark-bg").remove();
+		});
 		
 		$(".close-select-theme").click(function() {
-			$(".popup-preview").remove();
+			$(".popup").remove();
+			$(".dark-bg").remove();
 		});
+		
 		$(".select-theme").click(function() {
 			$("input[name='wr_7']").val ( theme );
 			$(".sel-template-msg").html("<b>" + theme_name + "</b> 이 선택 됨");
 			var old_src = $(".show-template-frame").prop("src", '<?=x::url()?>/?module=site&action=template&theme=n&active_theme=' + theme);
 			
 			callback_iframe_resize ( iframe_height + 350 );
-			
-			$(".popup-preview").remove();
+						
+			$(".popup").remove();
+			$(".dark-bg").remove();
 		});
 	}
 	
