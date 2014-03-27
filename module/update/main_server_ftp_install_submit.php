@@ -50,11 +50,14 @@ include_once('phpseclib/Crypt/Hash.php');
 
 define('NET_SSH2_LOGGING', 2);
 $sftp = new Net_SFTP($host);
-if (!$sftp->login($id, $password)) {
+if ($sftp->login($id, $password)) {
+	foreach (glob($data_path.$project_name."/*.*") as $filename) $sftp->put($filename, $dir.$project_name, NET_SFTP_LOCAL_FILE);
+}
+else {
 	echo $sftp->getLog();
     exit('Login Failed');
 }
-foreach (glob($data_path.$project_name."/*.*") as $filename) $sftp->put($filename, $dir.$project_name, NET_SFTP_LOCAL_FILE);
+
 
 // download $url and save it into a file(templorary folder like G5/data folder or /tmp foder) or variable.
 
