@@ -338,24 +338,24 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 
 }
 
-.popup-up{
-	position: absolute;
+.popup{
+	/*position: absolute;
 	left: 0;
-	width: 100%;
+	width: 100%;*/		
+	width:100%;
 }
 .popup-preview {
-	border: 1px solid #727272;
-	text-align: center;
-	background-color: #e7e7e7;
-	border-radius: 3px;
-	width: 642px;
-	margin: 0 auto;
+	border: 1px solid #727272;	
+	border-radius: 3px;	
 }
 
 .popup-preview .inner {
 	padding: 20px;
-	border: 1px solid #ffffff;
+	border: 1px solid #ffffff;	
+	background-color: #e7e7e7;
 	border-radius: 3px;
+	margin: 0 auto;
+	max-width:642px;	
 }
 
 .popup-preview img {
@@ -571,6 +571,35 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 #application-form .select_theme {
 	margin: 0 !important;
 	padding: 0 !important;
+}
+
+/** popup absolute fixes**/
+#application-form{
+	position:relative;	
+}
+.popup{
+	
+}
+
+.popup .popup-preview{
+	position:absolute;	
+	max-width: 642px;
+	z-index:200;
+}
+
+.popup img{
+	width:100%;
+}
+
+.dark-bg{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:black;
+	opacity:.8;
+	z-index:100;
 }
 
 @media (max-width: 960px) {
