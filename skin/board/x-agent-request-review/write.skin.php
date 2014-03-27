@@ -46,7 +46,7 @@ $application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하�
 			<td><span class='item-title'>작성자 이름</span></td>
 			<td>
 				<? if ( login() ) {?>
-					<?=$member['mb_id']." (".$member['mb_nick'].")"?>
+					<div class='member_name'><?=$member['mb_id']." (".$member['mb_nick'].")"?></div>
 					<input type='hidden' name='wr_name' value='<?=$member['mb_id']."(".$member['mb_nick'].")"?>' />
 				<? }
 					else {?>

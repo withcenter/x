@@ -582,6 +582,10 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 	padding: 0 !important;
 }
 
+#application-form .member_name {
+	padding: 2% 0 0 2%;
+}
+
 @media (max-width: 960px) {
 	#application-form  .application-table tr td input[name='wr_3'], #application-form  .application-table tr td input[name='wr_4'] {
 		width: 96%;
