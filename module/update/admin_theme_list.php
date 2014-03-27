@@ -17,7 +17,7 @@
 
 ?>
 <div class='list'>
-    <iframe src="<?=URL_EXTENDED?>/x/?module=update&action=main_server_theme_list&theme=n&<?=$var?>"></iframe>
+    <iframe src="http://g5x2.org/x/?module=update&action=main_server_theme_list&theme=n&<?=$var?>"></iframe>
 </div>
 
  
