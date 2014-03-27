@@ -10,19 +10,6 @@ $theme_file_path = $data_path.$project_name.'.zip';
 $theme_file = file_get_contents($url);
 file_put_contents($theme_file_path, $theme_file);
 
-//FTP file/directory upload/transfer
-include('phpseclib/NET/SFTP.php');
-include_once('phpseclib/Math/BigInteger.php');
-include_once('phpseclib/Crypt/Random.php');
-include_once('phpseclib/Crypt/Hash.php');
-
-$sftp = new Net_SFTP($host);
-if (!$sftp->login($id, $password)) {
-    exit('Login Failed');
-}
-
-$sftp->put($theme_file_path, $dir.$project_name, NET_SFTP_LOCAL_FILE)
-
 // extract
 $zip = new ZipArchive;
 if ($zip->open($theme_file_path) == TRUE) {
@@ -42,6 +29,7 @@ include('phpseclib/NET/SFTP.php');
 include_once('phpseclib/Math/BigInteger.php');
 include_once('phpseclib/Crypt/Random.php');
 include_once('phpseclib/Crypt/Hash.php');
+
 
 $sftp = new Net_SFTP($host);
 if (!$sftp->login($id, $password)) {
