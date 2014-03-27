@@ -5,35 +5,54 @@ $pu = parse_url( $source_link );
 $git_zip_host_url = "https://codeload.github.com";
 $url = "$git_zip_host_url$pu[path]/zip/master";
 
-//di($url);
+
+$file = file_get_contents($url);
+$data_path = G5_PATH.'/data/tmp/';
+
+// file download and save to data/tmp
+$file_path = $data_path.$project_name.'.zip';
+file_put_contents($file_path, $file);
+
+// extract
+$zip = new ZipArchive;
+if ($zip->open($file_path) == TRUE) {
+	$zip->extractTo($data_path);
+	$zip->close();
+	echo 'File Extracted';
+} else {
+	echo 'File Extraction Failed';
+}
+
+// rename
+rename( $data_path.$project_name.'-master', $data_path.$project_name );
+
+// delete
+unlink ( $file_path );
+
+	
 /** sample
 
-<?php
+	$file = file_get_contents($url);
+	$data_path = G5_PATH.'/data/tmp/';
+	$file_path = $data_path.$project_name.'.zip';
+	file_put_contents($file_path, $file);
 
-	$file = file_get_contents('https://github.com/thruthesky/office/archive/master.zip');
-	file_put_contents('c:/work/sapcms_1_2/gnu_x/data/office.zip', $file);
-
+	
 	$zip = new ZipArchive;
-	if ($zip->open('c:/work/sapcms_1_2/gnu_x/data/office.zip') === TRUE) {
-		$zip->extractTo('c:/work/sapcms_1_2/gnu_x/data/');
+	if ($zip->open($file_path) == TRUE) {
+		$zip->extractTo($data_path);
 		$zip->close();
-		echo 'ok';
+		echo 'File Extracted';
 	} else {
-		echo 'failed';
+		echo 'File Extraction Failed';
 	}
-	
-	if ( file_exists('c:/work/sapcms_1_2/gnu_x/data/office' ) ) echo "Folder Theme Already Exists";
-	else rename( 'c:/work/sapcms_1_2/gnu_x/data/office-master', 'c:/work/sapcms_1_2/gnu_x/data/office' );
-	
-	unlink ( 'c:/work/sapcms_1_2/gnu_x/data/office.zip' );
-	
-?>
 
+	rename( $data_path.$project_name.'-master', $data_path.$project_name );
+	
+	unlink ( $file_path );
+ 
 	
 http://ca2.php.net/file_get_contents
-*/
-
-
 
 // download $url and save it into a file(templorary folder like G5/data folder or /tmp foder) or variable.
 
@@ -42,5 +61,8 @@ http://ca2.php.net/file_get_contents
 
 
 // upload the master folder  using phpseclib
+
+*/
+
 
 
