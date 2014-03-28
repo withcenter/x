@@ -64,7 +64,7 @@ echo $sftp->pwd();
 
 foreach (glob($data_path.$project_name."/*.*") as $filename) {
 	echo "<br>$filename - save to: ".$sftp->pwd();
-	$sftp->put($filename, 'test', NET_SFTP_LOCAL_FILE);
+	$sftp->put('READMME.md', 'test', NET_SFTP_LOCAL_FILE);
 }
 	
 
