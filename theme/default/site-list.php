@@ -15,7 +15,7 @@
 		
 		echo "
 			<div>
-				<a href='$url' target='_blank'>$row[domain] : $title , $theme</a>
+				<a href='$url' target='_blank'>$row[domain] - $row[mb_id] : $title , $theme</a>
 			</div>
 		";
 	}

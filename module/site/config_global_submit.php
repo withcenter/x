@@ -24,6 +24,8 @@ meta_set( 'theme_sidebar' , $in['theme_sidebar'] );
 meta_set( 'member_skin' , $in['member_skin'] );
 
 
+meta_set( 'user_agreement' , $in['user_agreement'] );
+meta_set( 'user_information_agreement' , $in['user_information_agreement'] );
 
 /* config_global_search.php */
 meta_set( 'search_all_site' , $in['search_all_site'] );

@@ -64,6 +64,7 @@
 		
 		<?php
 		
+			include 'config_global_agreement.php';
 			include 'config_global_member_skin.php';
 
 			

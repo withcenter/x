@@ -1,5 +1,7 @@
 <?php
-add_stylesheet("<link rel='stylesheet' type='text/css' href='".x::url()."/module/".$module."/site.css' />");
+	include x::dir() . '/etc/share/site_limit_per_member.php';
+
+	add_stylesheet("<link rel='stylesheet' type='text/css' href='".x::url()."/module/".$module."/site.css' />");
 	
 	
 

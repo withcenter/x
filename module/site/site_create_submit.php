@@ -1,6 +1,5 @@
 <?php
-	if ( ! login() ) return jsBack( ln("Please, login first", "회원 로그인을 하십시오.") );
-	if ( empty($sub_domain) ) return jsBack("사이트 주소를 입력해 주세요");
+	include x::dir() . '/etc/share/site_limit_per_member.php';if ( empty($sub_domain) ) return jsBack("사이트 주소를 입력해 주세요");
 	if ( strlen($sub_domain) > 14 ) return jsBack('사이트 주소는 영문14자리 이하로 해 주세요.');
 	// if ( strpos($sub_domain, ".") || !str_replace('.', '', $sub_domain) ) return jsBack('사이트 주소에는 .이 들어갈 수 없습니다.'); // 이 코드는 아래와 중복 됨.
 	if ( ! preg_match("/^[0-9a-zA-Z]+$/", $sub_domain) ) return jsBack ( "사이트 주소에는 한글 및 특수 문자를 입력 할 수 없습니다." );
