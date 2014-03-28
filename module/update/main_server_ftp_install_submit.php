@@ -51,8 +51,8 @@ include('phpseclib/Net/SFTP.php');
 define('NET_SSH2_LOGGING', 2);
 $sftp = new Net_SFTP($host);
 di ( $in );
-if ($sftp->login($id, $password)) {
-	foreach (glob($data_path.$project_name."/*.*") as $filename) $sftp->put($filename, $dir.$project_name, NET_SFTP_LOCAL_FILE);
+if ($sftp->login('arvin1', '1234')) {
+	//foreach (glob($data_path.$project_name."/*.*") as $filename) $sftp->put($filename, $dir.$project_name, NET_SFTP_LOCAL_FILE);
 }
 else {
 	echo "<pre>";
