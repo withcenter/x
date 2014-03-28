@@ -46,8 +46,6 @@ unlink ( $theme_file_path );
 include_once('phpseclib/Net/SFTP.php');
 
 
-if ( is_dir ( $dir . '/theme/'.$project_name ) ) file::delete_folder ( $dir . '/theme/'.$project_name );
-
 
 $sftp = new Net_SFTP($host);
 if ( !$sftp->login ( $id, $password ) ) {
@@ -56,7 +54,7 @@ if ( !$sftp->login ( $id, $password ) ) {
 
 echo $sftp->pwd();
 $sftp->chdir( $dir.'/theme');
-$sftp->mkdir( $project_name );
+if ( !is_dir ( $project_name ) ) $sftp->mkdir( $project_name );
 $sftp->chdir( $project_name );
 echo $sftp->pwd();
 
