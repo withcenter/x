@@ -48,6 +48,12 @@ include_once('phpseclib/Math/BigInteger.php');
 include_once('phpseclib/Crypt/Random.php');
 include_once('phpseclib/Crypt/Hash.php');
 
+$sftp = new Net_SFTP ( '1.235.193.105' );
+if ( !$sftp->login ( 'root', 'ftpivo2011' ) ) {
+	exit ( 'Login Failed' );
+}
+
+/*
 define('NET_SSH2_LOGGING', 2);
 $sftp = new Net_SFTP($host);
 di ( $in );
@@ -61,7 +67,7 @@ else {
     exit('Login Failed');
 }
 
-
+*/
 // download $url and save it into a file(templorary folder like G5/data folder or /tmp foder) or variable.
 
 
