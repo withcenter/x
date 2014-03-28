@@ -43,10 +43,10 @@ unlink ( $theme_file_path );
 
 
 //FTP file/directory upload/transfer
-include('Net/SFTP.php');
-//include_once('phpseclib/Math/BigInteger.php');
-//include_once('phpseclib/Crypt/Random.php');
-//include_once('phpseclib/Crypt/Hash.php');
+include_once('phpseclib/Net/SFTP.php');
+include_once('phpseclib/Math/BigInteger.php');
+include_once('phpseclib/Crypt/Random.php');
+include_once('phpseclib/Crypt/Hash.php');
 
 define('NET_SSH2_LOGGING', 2);
 $sftp = new Net_SFTP($host);
