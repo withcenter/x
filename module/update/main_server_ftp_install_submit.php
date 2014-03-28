@@ -62,13 +62,12 @@ $sftp->mkdir( $project_name );
 $sftp->chdir( $project_name );
 echo $sftp->pwd();
 
-$i = 1;
 foreach (glob($data_path.$project_name."/*.*") as $filename) {
-	echo "<br>$filename - save to: ".$sftp->pwd();
+	$pathinfo = pathinfo ( $filename );
+	echo "<br>$filename - save to: ".$sftp->pwd()."/".$pathinfo['filename'];
 	
-	$sftp->put( $i.".txt", $filename, NET_SFTP_LOCAL_FILE);
 	
-	$i++;
+	$sftp->put( $pathinfo['filename'], $filename, NET_SFTP_LOCAL_FILE);
 }
 
 
