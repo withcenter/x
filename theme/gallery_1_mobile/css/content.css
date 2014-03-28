@@ -23,6 +23,7 @@
 
 .banner .banner-image-container .banner-text {	
 	padding:19px;
+	height:176px;
 }
 
 .banner .banner-image-container .banner-text .subject{
@@ -114,7 +115,20 @@
 }
 
 /**widgets**/
-.widget_container .widgets > div{
+.widget_container .widgets{
+	margin-bottom:10px;
+	width:100%;	
+}
+
+.widget_container .widgets .item{
 	float:left;
-	width:50%;
+	width:49.5%;
+}
+
+.widget_container .widgets .item.left{
+	margin-right:.5%;
+}
+
+.widget_container .widgets .item.right{
+	margin-left:.5%;
 }

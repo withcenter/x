@@ -10,16 +10,26 @@ $(function(){
 	});
 	
 	var do_search = false;
-	$('#gallery_1_search_submit_mobile').click(function(){
+	$('#gallery_1_search_submit_mobile').click(function(){			
+		if( $('.login_icon_wrapper').hasClass('selected') ){
+			$('.login_icon_wrapper').removeClass('selected');
+		}
 		if( $(this).hasClass('selected') ) $(this).removeClass('selected');
 		else $(this).addClass('selected');	
 		$('.gallery_1_search_text_mobile_wrapper').toggle();
-		if( !do_search ) return false;		
-		//do_search.toggle();
+		$('.gallery_mobile_outlogin_wrapper').hide();
+		
+		if( $('#gallery_1_search_text_mobile').val() == '' ){
+			return false;
+		}
 	});
 	
 	$('.login_icon_wrapper').click(function(){
+		if( $('#gallery_1_search_submit_mobile').hasClass('selected') ){
+			$('#gallery_1_search_submit_mobile').removeClass('selected');
+		}		
 		$('.gallery_mobile_outlogin_wrapper').toggle();
+		$('.gallery_1_search_text_mobile_wrapper').hide();
 		if( $(this).hasClass('selected') ) $(this).removeClass('selected');
 		else $(this).addClass('selected');
 	});

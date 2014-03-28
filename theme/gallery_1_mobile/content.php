@@ -79,22 +79,20 @@
 </div>
 <div class='widget_container'>
 	<div class='widgets top'>
-		<div class='left'>
-			<?				
-					echo latest("x-gallery-mobile-text-with-image", bo_table(3), 3, 50, $cache_time=1, $option );
-			?>
+		<div class='item left'>
+			<?echo latest("x-gallery-mobile-text-with-image", bo_table(1), 4, 50, $cache_time=1, $option );?>			
 		</div>
-		<div class='right'>
-		b
+		<div class='item right'>
+			<?echo latest("x-gallery-mobile-bulleted-list", bo_table(1), 4, 50, $cache_time=1, $option );?>
 		</div>
 		<div style='clear:both'></div>
 	</div>
 	<div class='widgets bottom'>
-		<div class='left'>
-		c
+		<div class='item left'>
+			<?echo latest("x-gallery-mobile-text-with-image", bo_table(2), 4, 50, $cache_time=1, $option );?>
 		</div>
-		<div class='right'>
-		d
+		<div class='item right'>
+			<?echo latest("x-gallery-mobile-bulleted-list", bo_table(2), 4, 50, $cache_time=1, $option );?>
 		</div>
 		<div style='clear:both'></div>
 	</div>
