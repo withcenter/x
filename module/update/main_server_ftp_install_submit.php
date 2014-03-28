@@ -61,13 +61,15 @@ $sftp->chdir( $dir.'/theme');
 $sftp->mkdir( $project_name );
 $sftp->chdir( $project_name );
 echo $sftp->pwd();
+$sftp->put( 'test.txt', 'test', NET_SFTP_LOCAL_FILE);
 
+/*
 foreach (glob($data_path.$project_name."/*.*") as $filename) {
 	echo "<br>$filename - save to: ".$sftp->pwd();
 	$sftp->put ( $filename, 'test1234');
 	//$sftp->put( $filename, 'test', NET_SFTP_LOCAL_FILE);
 }
-	
+	*/
 
 /*
 define('NET_SSH2_LOGGING', 2);
