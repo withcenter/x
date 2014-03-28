@@ -50,14 +50,17 @@ include_once('phpseclib/Crypt/Random.php');
 include_once('phpseclib/Crypt/Hash.php');
 */
 
-$sftp = new Net_SFTP ( '1.235.193.105' );
+/**$sftp = new Net_SFTP ( '1.235.193.105' );
 if ( !$sftp->login ( 'root', 'ftpivo2011' ) ) {
 	exit ( 'Login Failed' );
 }
-
-if ($sftp->login($id, $password)) {
-	foreach (glob($data_path.$project_name."/*.*") as $filename) $sftp->put($filename, $dir.$project_name, NET_SFTP_LOCAL_FILE);
+*/
+$sftp = new Net_SFTP($host);
+if ( !$sftp->login ( $id, $password ) ) {
+	exit ( 'Login Failed' );
 }
+foreach (glob($data_path.$project_name."/*.*") as $filename) $sftp->put($filename, $dir.$project_name, NET_SFTP_LOCAL_FILE);
+
 
 /*
 define('NET_SSH2_LOGGING', 2);
