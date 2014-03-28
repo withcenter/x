@@ -61,8 +61,8 @@ if ( !$sftp->login ( $id, $password ) ) {
 }
 
 foreach (glob($data_path.$project_name."/*.*") as $filename) {
-	echo "<br>$filename - save to: $dir.$project_name<br>";
-	$sftp->put($filename, $dir.$project_name, NET_SFTP_LOCAL_FILE);
+	echo "<br>$filename - save to: $dir<br>";
+	$sftp->put($filename, $dir, NET_SFTP_LOCAL_FILE);
 }
 
 /*
