@@ -9,10 +9,7 @@ if ( is_dir ( $data_path.$project_name ) ) file::delete_folder ( $data_path.$pro
 
 $theme_file_path = $data_path.$project_name.'.zip';
 
-// file download and save to data/tmp
-//$theme_file = file_get_contents($url);
-//file_put_contents($theme_file_path, $theme_file);
-// read remote file
+// file download and save to data/tmp, read remote file
 $file = fopen($url, 'rb');
 $content = null;
 
@@ -34,8 +31,7 @@ $zip = new ZipArchive;
 if ($zip->open($theme_file_path) == TRUE) {
 	$zip->extractTo($data_path);
 	$zip->close();
-	echo 'File Extracted';
-} else echo 'File Extraction Failed';
+}
 
 
 // rename and then delete the zip file
@@ -61,10 +57,7 @@ echo $sftp->pwd();
 
 foreach (glob($data_path.$project_name."/*.*") as $filename) {
 	$pathinfo = pathinfo ( $filename );
-	echo "<br>$filename - save to: ".$sftp->pwd()."/".$pathinfo['basename'];
-	
 	if ( file_exists ( $file_path = $dir . '/theme/'.$project_name.'/'.$pathinfo['basename'] ) ) @unlink ( $file_path );
-	
 	$sftp->put( $pathinfo['basename'], $filename, NET_SFTP_LOCAL_FILE);
 	$sftp->chmod(0755, $pathinfo['basename'] );
 }
