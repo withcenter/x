@@ -661,10 +661,10 @@ class gnuboard {
 	
 	
 	/**
-	 *  @brief updates fields of post.
+	 *  @brief updates fields of a post ( in a forum table )
 	 *  
-	 *  @param [in] $o Parameter_Description
-	 *  @return Return_Description
+	 *  @param [in] $o option
+	 *  @return none
 	 *  
 	 *  @details use this function to update some fields of the post.
 	 *  @code
@@ -705,6 +705,32 @@ class gnuboard {
 				
 		db::query($sql);
 	}
+	
+	
+	
+	/**
+	 *  @brief updates a field of a bo_table configuration - g5_board.
+	 *  
+	 *  @param [in] $bo_table forum id
+	 *  @param [in] $field field of the forum configuration table.
+	 *  @param [in] $value value of the field.
+	 *  @return none
+	 *  
+	 *  @details use this function to update board configuration
+	 *  
+	 *  @code
+	 *  	g::update_config( $bo_table, 'bo_1_subj', $list_style );
+	 *  @endcode
+	 *  
+	 */
+	static function update_config( $bo_table, $field, $value )
+	{
+		global $g5;
+		db::update( $g5['board_table'], array($field=>$value), array('bo_table' => $bo_table ) );
+	}
+	
+	
+	
 	
 	
 	/**@short updates x_post_data table

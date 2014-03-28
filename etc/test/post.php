@@ -5,6 +5,8 @@
 	$max = 100;
 	$bo_table = $argv[1];
 	$domain = $argv[2];
+	if ( $argv[3] ) $max = $argv[3];
+	
 	if ( empty( $bo_table ) || empty( $domain )) {
 		echo "
 		Pleaes input 'bo_table' as first arguemnt and 'domain' as second argument.
