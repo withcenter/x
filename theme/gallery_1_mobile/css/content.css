@@ -23,7 +23,7 @@
 
 .banner .banner-image-container .banner-text {	
 	padding:19px;
-	height:176px;
+	height:140px;
 	line-height:14px;
 	overflow:hidden;
 }
@@ -32,6 +32,11 @@
 	font-size:1.5em;
 	font-weight:bold;
 	margin-bottom:12px;
+	width:80%;
+	overflow:hidden;
+	height:20px;
+	line-height:22px;
+	word-break:break-all;
 }
 
 .banner .banner-image-container .banner-text .subject a{

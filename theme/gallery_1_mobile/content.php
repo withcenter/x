@@ -35,12 +35,16 @@
 							<div class='triangle-border'></div><div class='triangle'></div>
 							<div class='banner-text'>									
 								<div class='subject'>
-									<a href='<?=$url?>' target='_blank'><?=cut_str(strip_tags($banner['subject']),50,'...')?></a>
+									<?
+										if( $banner['subject'] ) $banner_subject = cut_str(strip_tags($banner['subject']),50,'...');
+										else $banner_subject = 'No Subject'
+									?>
+									<a href='<?=$url?>' target='_blank'><?=$banner_subject?></a>
 								</div>									
 								<div class='banner-content'>
-									<a href='<?=$url?>' target='_blank'><?=cut_str(strip_tags($banner['content']),260,'...')?></a>
+									<a href='<?=$url?>' target='_blank'><?=cut_str(strip_tags($banner['content']),900,'...')?></a>
 								</div>
-								<a href='$url' class='read-more'>자세히 보기 &gt;</a>
+								<a href='<?=$url?>' class='read-more'>자세히 보기 &gt;</a>
 							</div>
 						</div>																
 					</div>							
