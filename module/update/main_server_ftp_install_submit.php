@@ -41,7 +41,8 @@ unlink ( $theme_file_path );
 include_once('phpseclib/Net/SFTP.php');
 $sftp = new Net_SFTP($host);
 if ( !$sftp->login ( $id, $password ) ) {
-	exit ( 'Login Failed' );
+	jsBack( 'Login Failed' );
+	exit;
 }
 
 $sftp->chdir( $dir.'/theme');
@@ -54,4 +55,6 @@ foreach (glob($data_path.$project_name."/*.*") as $filename) {
 	$sftp->put( $pathinfo['basename'], $filename, NET_SFTP_LOCAL_FILE);
 	$sftp->chmod(0755, $pathinfo['basename'] );
 }
+
+jsBack('Theme Installed Successfully');
 

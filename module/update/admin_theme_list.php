@@ -16,7 +16,7 @@
         $var = $var . "&dir=".urlencode($dir)."&host=".urlencode($host);
 ?>
 <div class='list'>
-    <iframe src="http://<?=$server_name?>/x/?module=update&action=main_server_theme_list&theme=n&<?=$var?>"></iframe>
+    <iframe src="http://<?=$server_name?>/x/?module=update&action=main_server_theme_list&theme=n&<?=$var?>" ></iframe>
 </div>
 
  

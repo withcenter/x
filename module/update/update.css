@@ -2,6 +2,7 @@
 .list iframe {
 	width: 100%;
 	min-height: 768px;
+	border: 0;
 }
 
 
@@ -35,5 +36,10 @@
 .admin-ftp iframe {
 	width: 100%;
 	min-height: 768px;
+}
+
+/* admin ftp install */
+.ftp_install img {
+	display: none;
 }
 
