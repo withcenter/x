@@ -1,0 +1,44 @@
+.gallery_bulleted_list{
+	border:1px solid #2ca3b4;
+	padding:10px 10px 31px 10px;
+}
+
+
+.gallery_bulleted_list .bulleted_list_title{
+	font-weight:bold;
+	margin-bottom:13px;
+	font-family:Dotum;
+	color:#25828f;
+	font-size:1.2em;
+	height:15px;
+	line-height:17px;
+	overflow:hidden;
+	word-break:break-all;
+}
+
+.gallery_bulleted_list ul{
+	list-style:none;
+	padding:0;
+	margin:0;	
+}
+
+.gallery_bulleted_list ul li{
+	margin-bottom:3px;
+	position:relative;
+	padding-left:25px;
+	line-height:17px;
+	height:30.25px;
+	margin-bottom:6px;
+	overflow:hidden;
+}
+
+.gallery_bulleted_list ul li img{
+	position:absolute;
+	top:4px;
+	left:8px;
+}
+
+.gallery_bulleted_list ul li a{	
+	text-decoration:none;
+	font-family:Dotum;
+}
