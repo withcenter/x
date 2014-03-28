@@ -24,6 +24,8 @@
 .banner .banner-image-container .banner-text {	
 	padding:19px;
 	height:176px;
+	line-height:14px;
+	overflow:hidden;
 }
 
 .banner .banner-image-container .banner-text .subject{
