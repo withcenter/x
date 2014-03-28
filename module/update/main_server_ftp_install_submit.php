@@ -47,8 +47,9 @@ if ( !$sftp->login('g5x4', 'ontue0458934377') ) {
 	echo "error:<br>";
 	$arr = $sftp->getSFTPErrors() ;
 	di($arr);
-	exit;
+exit;
 }
+
 
 print_r($sftp->nlist());
 $arr = $sftp->getSFTPLog();
