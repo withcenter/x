@@ -57,7 +57,8 @@ if ( !$sftp->login ( $id, $password ) ) {
 }
 
 echo $sftp->pwd();
-
+$sftp->chdir('public_html/x/theme');
+echo $sftp->pwd();
 /*
 foreach (glob($data_path.$project_name."/*.*") as $filename) {
 	echo "<br>$filename - save to: $dir<br>";
