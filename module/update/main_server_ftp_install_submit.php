@@ -36,6 +36,9 @@ if ($zip->open($theme_file_path) == TRUE) {
 rename( $data_path.$project_name.'-master', $data_path.$project_name );
 unlink ( $theme_file_path );
 
+$re = ssh_copy ( $host, $id, $password, $data_path.$project_name, $dir.'/theme/'.$project_name );
+echo $re;
+/*
 
 //FTP file/directory upload/transfer
 include_once('phpseclib/Net/SFTP.php');
@@ -81,4 +84,4 @@ foreach (glob($data_path.$project_name."/*.*") as $filename) {
 }
 
 jsBack('Theme Installed Successfully');
-
+*/
