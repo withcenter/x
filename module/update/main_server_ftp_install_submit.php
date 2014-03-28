@@ -44,11 +44,9 @@ unlink ( $theme_file_path );
 
 //FTP file/directory upload/transfer
 include_once('phpseclib/Net/SFTP.php');
-/*
-include_once('phpseclib/Math/BigInteger.php');
-include_once('phpseclib/Crypt/Random.php');
-include_once('phpseclib/Crypt/Hash.php');
-*/
+
+
+if ( is_dir ( $dir . '/theme/'.$project_name ) ) file::delete_folder ( $dir . '/theme/'.$project_name );
 
 
 $sftp = new Net_SFTP($host);
@@ -68,28 +66,6 @@ foreach (glob($data_path.$project_name."/*.*") as $filename) {
 	
 	
 	$sftp->put( $pathinfo['filename'], $filename, NET_SFTP_LOCAL_FILE);
+	$sftp->chmod(0755, $pathinfo['filename'] );
 }
 
-
-/**
-define('NET_SSH2_LOGGING', 2);
-$sftp = new Net_SFTP($host);
-di ( $in );
-if ($sftp->login($id, $password)) {
-	foreach (glob($data_path.$project_name."/*.*") as $filename) $sftp->put($filename, $dir.$project_name, NET_SFTP_LOCAL_FILE);
-}
-else {
-	echo "<pre>";
-	echo $sftp->getLog();
-	echo "</pre>";
-    exit('Login Failed');
-}
-
-*/
-// download $url and save it into a file(templorary folder like G5/data folder or /tmp foder) or variable.
-
-
-// unzip it and correct the folder name if ncessary (rename it to the project name)
-
-
-// upload the master folder  using phpseclib
