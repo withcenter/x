@@ -1,4 +1,3 @@
-
 <?php
 $pu = parse_url( $source_link );
 $git_zip_host_url = "https://codeload.github.com";
@@ -25,7 +24,6 @@ fwrite ( $file, $content );
 fclose ( $file );
 
 
-
 // extract
 $zip = new ZipArchive;
 if ($zip->open($theme_file_path) == TRUE) {
@@ -41,19 +39,14 @@ unlink ( $theme_file_path );
 
 //FTP file/directory upload/transfer
 include_once('phpseclib/Net/SFTP.php');
-
-
-
 $sftp = new Net_SFTP($host);
 if ( !$sftp->login ( $id, $password ) ) {
 	exit ( 'Login Failed' );
 }
 
-echo $sftp->pwd();
 $sftp->chdir( $dir.'/theme');
 if ( !is_dir ( $project_name ) ) $sftp->mkdir( $project_name );
 $sftp->chdir( $project_name );
-echo $sftp->pwd();
 
 foreach (glob($data_path.$project_name."/*.*") as $filename) {
 	$pathinfo = pathinfo ( $filename );
