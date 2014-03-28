@@ -43,7 +43,7 @@ unlink ( $theme_file_path );
 
 
 //FTP file/directory upload/transfer
-include_once('Net/SFTP.php');
+include_once('phpseclib/Net/SFTP.php');
 //include_once('phpseclib/Math/BigInteger.php');
 //include_once('phpseclib/Crypt/Random.php');
 //include_once('phpseclib/Crypt/Hash.php');
