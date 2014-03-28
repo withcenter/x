@@ -9,5 +9,5 @@
 	$var = "&dir=".urlencode($dir)."&host=".urlencode($host);
 ?>
 <div class='admin-ftp'>
-	<iframe src="http://g5x2.org/x/?module=update&action=main_server_ftp_delete&theme=n&<?=$var?>"></iframe>
+	<iframe src="http://<?=$server_name?>/x/?module=update&action=main_server_ftp_delete&theme=n&<?=$var?>"></iframe>
 </div>
