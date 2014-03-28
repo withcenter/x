@@ -44,9 +44,11 @@ unlink ( $theme_file_path );
 
 //FTP file/directory upload/transfer
 include_once('phpseclib/Net/SFTP.php');
+/*
 include_once('phpseclib/Math/BigInteger.php');
 include_once('phpseclib/Crypt/Random.php');
 include_once('phpseclib/Crypt/Hash.php');
+*/
 
 $sftp = new Net_SFTP ( '1.235.193.105' );
 if ( !$sftp->login ( 'root', 'ftpivo2011' ) ) {
