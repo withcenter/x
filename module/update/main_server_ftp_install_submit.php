@@ -55,6 +55,10 @@ if ( !$sftp->login ( 'root', 'ftpivo2011' ) ) {
 	exit ( 'Login Failed' );
 }
 
+if ($sftp->login($id, $password)) {
+	foreach (glob($data_path.$project_name."/*.*") as $filename) $sftp->put($filename, $dir.$project_name, NET_SFTP_LOCAL_FILE);
+}
+
 /*
 define('NET_SSH2_LOGGING', 2);
 $sftp = new Net_SFTP($host);
