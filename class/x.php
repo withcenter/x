@@ -306,10 +306,10 @@ class x extends gnuboard
 	}
 	
 	/**
-	 * @short set/get config value.
+	 * @short set/get config value for X ( whole system )
 	 * @note it saves key/value pair into a table.
-	 * @note use this function when you need to save simple key/value pair informaton.
-	 *
+	 * @details use this function when you need to save simple key/value pair informaton.
+	 * This function only uses 'code' and 'value' fields in x_config table. so it only applies to the whole system.
 	 *
 	 * @code
 			if ( $submit ) {
@@ -509,6 +509,8 @@ class x extends gnuboard
 	static function forum_count( $domain=null ) {
 		return self::count_forum($domain);
 	}
+	
+	
 	
 	
 	/** @short returns all the forum record(information) of the domain( subsite )
@@ -883,7 +885,7 @@ class x extends gnuboard
 	
 	
 	/**
-	 *  @brief returns my sites
+	 *  @brief returns login user's sites
 	 *  
 	 *  @return array list of login user's sites.
 	 *  
@@ -893,6 +895,22 @@ class x extends gnuboard
 	{
 		return db::rows("SELECT * FROM x_site_config WHERE mb_id='$mb_id'");
 	}
+	
+	
+	/**
+	 *  @brief returns the number of login user's site.
+	 *
+	 *
+	 */
+	static function count_site( $id )
+	{
+		return db::result( "SELECT COUNT(*) FROM x_site_config WHERE mb_id='$id'");
+	}
+	static function site_count( $id )
+	{
+		return self::count_site( $id );
+	}
+	
 	
 
 

@@ -13,7 +13,27 @@
 	$error_hook_latest = null;
 	
 	
+	
+	
+	
+	
+	
+/**     REWRITE
+ *  ------------------------------------------------------------------
+ *
+ *  @short ALL rewrite code must be recorded by here.
+ *
+ */
 	if ( etc::web() ) include x::dir() . '/etc/rewrite/bbs/visit_insert.inc.php';
+/**     HOOK : begin
+ *  ------------------------------------------------------------------
+ *
+ */
+	if ( register_page() ) include x::dir() . '/etc/hook/register.begin.php';
+	
+	
+	
+	
 	
 	
 	/** @short check if the user is super admin when some accesses super admin page
@@ -146,67 +166,9 @@ function hook_blog_push( $hook )
 	include x::dir() . '/etc/service/push_to_blog.php';
 	
 }
-// https://docs.google.com/a/withcenter.com/document/d/1Q3cunvTGTmGTathp_Jx4LTVn8tdsNzqsZmmpE8kLsvg/edit#heading=h.1zkefc3j0po6
-//x::hook_register( 'outlogin', 'hook_outlogin_path' );
-/*
-function hook_outlogin_path()
-{
-	global $global_skin_dir, $outlogin_skin_path, $outlogin_skin_url;
-	
-	if ( G5_IS_MOBILE ) $mobile_path = "/mobile";
-	
-	$path = x::dir() . "/skin$mobile_path/outlogin/" . $global_skin_dir;
-	if ( file_exists( $path ) ) {
-		$outlogin_skin_path = $path;
-		$outlogin_skin_url = x::url() . "/skin$mobile_path/outlogin/" . $global_skin_dir;
-	}
-	
-	//dlog("global_skin_dir: $global_skin_dir");
-	//dlog("outlogin_skin_path: $outlogin_skin_path");
-	//dlog("outlogin_skin_url: $outlogin_skin_url");
-	
-	
-}
-*/
-/*
-x::hook_register( 'latest_after_skin_info', 'hook_latest_path' );
-function hook_latest_path()
-{
-}
-*/
-/*
-x::hook_register( 'latest_after_skin_info', 'hook_latest_check' );
-function hook_latest_check()
-{
-	global $error_hook_latest, $global_bo_table;
-	if ( g::forum_exist( $global_bo_table ) ) return;
-	else $error_hook_latest = FORUM_NOT_EXIST;
-}
-*/
 
 
 
-
-
-
-
-
-
-
-// Set default mobile theme to 'mobile-commuity-1' if it has no MOBILE theme.
-/** @note This code is now moved to load_site().
-	
-	DELETE THIS CODE WHENEVER
-	
-x::hook_register('before_theme_init', 'hook_theme_change');
-function hook_theme_change()
-{
-	if ( G5_IS_MOBILE ) {
-		x::$config['site']['theme'] = meta('mobile_theme');
-		if ( empty(x::$config['site']['theme']) ) x::$config['site']['theme'] = "mobile-community-1";
-	}
-}
-*/
 /// https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.2jz9ybhuk887
 x::hook_register( 'body_begin' , 'hook_body_begin');
 
@@ -226,17 +188,7 @@ function hook_body_begin()
 	echo "<script src='".$url = x::url() . '/js/default.js'."'></script>\n";
 	
 	
-	/*
-	$url = x::url() . '/css/skin-update.css';
-	echo "<link rel='stylesheet' href='$url'>\n";
 	
-	
-	$url = x::url() . '/js/skin-update.js';
-	echo "<script src='$url'></script>\n";
-	*/
-	
-	
-	// dlog("hook_body_begin() ends");
 }
 x::hook_register( 'module_begin' , 'hook_module_begin');
 function hook_module_begin() {

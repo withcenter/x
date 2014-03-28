@@ -256,6 +256,10 @@ function login_page() {
 }
 
 
+function register_page() {
+	return strpos($_SERVER['PHP_SELF'], 'register.php') !== false;
+}
+
 
 function member_confirm_page() {
 	return strpos($_SERVER['PHP_SELF'], 'member_confirm.php') !== false;
@@ -325,3 +329,7 @@ function load_xml( $path )
 }
 
 
+function config( $code, $value=null )
+{
+	return x::config( $code, $value );
+}

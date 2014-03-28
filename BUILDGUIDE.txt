@@ -1,0 +1,40 @@
+
+
+
+@doc @update
+
+훅 스크립트를 만들 때,
+
+
+begin 과 end 부분은 따로 패치를 하지 않는다.
+
+common.php -> x.php -> begin.php 순서로 이동하기 때문에 begin.php 에서 훅 스크립트를 로드하고
+
+
+
+tail.php 나 tail_sub.php 에서  end 부분의 훅 스크립트를 로드하면 된다.
+
+
+예를 들면, g5/bbs/register.php 와 같다.
+
+
+이와 같이 모든 스크립트에서 begin 과 end 부분은 패치를 할 필요가 없다.
+
+이 분에 대해서 업데이트를 하도록 한다.
+
+
+
+@doc
+
+
+rewrite 의 경우는 훅과 틀리게 코드 전체를 다시 작성하는 것이다.
+
+따라서 원본 스크립트에서는 그냥 return 을 해야한다.
+
+예를 들면 g5/bbs/visit_insert.inc.php 와 같다.
+
+rewrite 의 경우 G5 소스가 업데이트되면 같이 업데이트를 해야하므로 유심히 살펴보아야 한다.
+
+
+
+
