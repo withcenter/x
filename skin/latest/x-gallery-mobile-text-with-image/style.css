@@ -1,0 +1,111 @@
+.skin-update{
+	height:100%;
+}
+
+.gallery_1_mobile_list_with_image {
+	overflow: hidden;
+	height:100%;
+	border:1px solid #bbbbbb;
+}
+
+.gallery_1_mobile_list_with_image .timed_list_title{
+	font-weight:bold;
+	padding: 2px 10px 1px 10px;
+	height: 25px;
+	line-height: 25px;
+	border-bottom:1px solid #bbbbbb;
+	background-color: #fcfcfc;
+	position:relative;
+}
+
+.gallery_1_mobile_list_with_image .timed_list_title a{
+	color:#444444;
+}
+
+.gallery_1_mobile_list_with_image .timed_list_title a:hover {
+	text-decoration: none;
+}
+
+.gallery_1_mobile_list_with_image .timed_list_title img{
+	position:relative;
+	top:-2px;	
+	left:-2px;
+	margin-right:2px;
+}
+
+.gallery_1_mobile_list_with_image .timed_list_title .more-button {
+	float: right;
+	font-weight: normal;
+	margin-top: 2px;
+}
+.gallery_1_mobile_list_with_image .timed_list_title .more-button a {
+	color:#808080;
+	font-size: 9pt;
+	position:absolute;
+	top:4px;
+	right:10px;
+}
+
+.gallery_1_mobile_list_with_image .comment_and_time{
+	float:right;
+	text-align: right;
+}
+
+.gallery_1_mobile_list_with_image  .timed_list_image {
+	margin-right: 10px;
+	border:1px solid  #cccccc;
+	height:30px;
+	width:38px;
+	background-color:#e5e5e5;
+} 
+
+
+.gallery_1_mobile_list_with_image .comment_and_time .time{	
+	width:35px;
+	text-align:center;
+	margin-left:10px;
+}
+
+.gallery_1_mobile_list_with_image a{
+	text-decoration:none;
+}
+
+.gallery_1_mobile_list_with_image .comment_count.no-comment{
+	color:#808080;
+}
+
+.gallery_1_mobile_list_with_image .comment_count{
+	color:#cc4235;
+}
+
+/******************/
+.gallery_1_mobile_list_with_image .subject{
+	height:15px;
+	overflow:hidden;	
+	line-height:15px;
+	font-weight: bold;	
+	word-break:break-all;
+}
+.gallery_1_mobile_list_with_image .subject a {
+	color: #494949;
+}
+
+.gallery_1_mobile_list_with_image .contents_wrapper {
+	height:15px;
+	overflow:hidden;	
+	line-height:15px;
+	width:100%;	
+	word-break:break-all;
+}
+
+.gallery_1_mobile_list_with_image .contents_wrapper a{
+	color: #808080;
+}	
+
+.gallery_1_mobile_list_with_image  td{
+	padding-top:10px;	
+}
+
+.gallery_1_mobile_list_with_image table{
+	padding:0 10px 10px 10px;
+}

@@ -1,0 +1,262 @@
+.login-box-gallery-mobile {
+	font-family: Dotum;
+	background: #526e96;
+	color: #ffffff;	
+	width:100%;		
+	position:relative;
+}
+
+.login-box-gallery-mobile .triangle{
+	position:absolute;
+	right:60px;
+	top:-5px;
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	
+	border-bottom: 5px solid #526e96;
+}
+
+.login-box-gallery-mobile .login-box-middle{	
+	padding:20px 10px 17px 20px;
+}
+
+
+.login-box-gallery-mobile .login-box-middle .login-input{	
+	width:100%;
+	float:left;
+}
+
+.login-box-gallery-mobile .login-box-middle .submit-button{	
+	width:80px;	
+	text-align:right;
+}
+
+.login-box-gallery-mobile.logout-box-gallery-mobile {
+	width:100%;
+	font-size:1.2em;	
+}
+
+#header .login-box-gallery-mobile.logout-box-gallery-mobile  a{
+	color:#d8d8d8;
+}
+
+.login-box-gallery-mobile  input[type='text'], .login-box-gallery-mobile input[type='password'] {
+	width: 97%;
+	padding:9px 1.5%;
+	border:1px solid #6cbfcb;
+}
+.login-box-gallery-mobile .login-user {
+	margin-bottom: 10px;
+}
+
+.login-box-gallery-mobile .register_autologin {	
+	font-size:1.2em;
+	margin-top:14px;
+	text-align:right;
+}
+
+
+.login-box-gallery-mobile  .dot {
+	position: relative;
+	top: -2px;
+
+}
+
+/**autologin password-lost register**/
+.login-box-gallery-mobile .register_autologin .auto_login {	
+	color: #ffffff;
+	float:left;	
+	margin-top:3px;	
+}
+
+.login-box-gallery-mobile .register_autologin .auto_login  #auto_login{	
+	position:relative;
+	top:-3px;
+	margin-right:4px;
+}
+.login-box-gallery-mobile .register_autologin #ol_password_lost {	
+	margin-left: 25px;
+	color: #ffffff;	
+}
+
+.login-box-gallery-mobile .register_autologin .login-reg {	
+	color: #ffffff!important;
+	position: relative;	
+	margin-left:18px;
+	font-weight:bold;
+}
+
+/* outlogin.skin.2.php */
+.logout-box-gallery-mobile{	
+	position: relative;	
+	font-size: 9pt;
+	color: #ffffff;
+	padding-bottom:10px;
+}
+
+.logout-box-gallery-mobile .inner{
+	padding:10px;
+}
+
+.logout-box-gallery-mobile #ol_after_info {
+	background-color: #0e5565;
+	color: #ffffff;
+	display: inline-block;
+	padding: 0 10px;
+	height: 22px;
+	line-height: 23px;
+}
+.logout-box-gallery-mobile.admin-mode {
+	position: absolute;
+	bottom: 15px;
+	right: 3px;
+}
+
+.logout-box-gallery-mobile .admin-mode a{
+	margin-right: 10px;
+}
+
+.logout-box-gallery-mobile .user-info {
+	width: 100%;
+	float: left;
+}
+
+.logout-box-gallery-mobile .user-admin {
+	border-top: solid 1px #0a101a;
+	padding:5px 0;
+}
+
+.logout-box-gallery-mobile .user-admin  img{
+	margin:0 7px 0 2px;
+}
+
+.logout-box-gallery-mobile.user-meta {
+	padding-top: 4px;
+	padding-bottom: 0;	
+	position: relative;	
+}
+
+.logout-box-gallery-mobile.no_of_unreaded_message {
+	border-radius: 10px;
+	display: inline-block;
+	width: 11px;
+	height: 15px;
+	line-height: 16px;
+	background-color: #444444;
+	color: #ffffff;
+	padding-left: 4px;
+}
+
+.logout-box-gallery-mobile#ol_after_logout {
+	display: inline-block;
+	width: 80px;
+	height: 24px;
+	background-color: #0e5565;
+	font-weight: bold;
+	line-height: 24px;
+	text-align: center;
+	color: #ffffff;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
+.logout-box-gallery-mobile a:hover {
+	text-decoration: none;
+}
+
+.login-box-gallery-mobile .user-admin {
+	margin-top: 2px;
+}
+
+.login-box-gallery-mobile .user-admin span.user-icon-points {
+	display: inline-block;
+	width: 50px;
+	float: left;
+}
+.login-box-gallery-mobile .user-meta span.user-message, .login-box-gallery-mobile  .user-meta span.user-points {
+	display: inline-block;
+	padding:5px 0;
+}
+
+.login-box-gallery-mobile .user-meta span.user-message img, .login-box-gallery-mobile  .user-meta span.user-points img {
+	position: relative;
+	top: -2px;
+
+}
+
+.user-meta span.user-points img {
+	margin-right:5px;
+}
+
+.login-box-gallery-mobile .user-admin .user-scrap {
+	float:none;
+}
+
+.login-box-gallery-mobile .user-admin span.edit_profile {
+	border:1px solid red;
+}
+
+.login-box-gallery-mobile .user-admin span.admin_link {
+	display: inline-block;
+	width: 50px;
+	float: right;
+	text-align: right;
+}
+
+.login-box-gallery-mobile .logout-inner {
+	padding:10px 10px 0 10px;
+}
+
+.login-box-gallery-mobile .log_out {
+	text-align:right;
+}
+
+.login-box-gallery-mobile .user-logged-name {
+	margin-top: 6px;
+	text-align: left;	
+	font-size: 1.2em;
+	color: #ffffff;
+	height:16px;
+	word-break:break-all;
+	overflow:hidden;
+}
+
+/**submit**/
+.login-box-gallery-mobile #ol_submit{
+	
+}
+/* for log in */
+@media all and ( max-width: 342px ) {
+	.login-box-gallery-mobile .register_autologin a{
+		display:block;
+	}
+}
+
+@media all and ( max-width: 250px ) {
+	.login-box-gallery-mobile .register_autologin{
+		text-align:left;
+	}
+	
+	.login-box-gallery-mobile .register_autologin #ol_password_lost, .login-box-gallery-mobile .register_autologin .login-reg{
+		margin:0;
+	}
+	
+	.login-box-gallery-mobile .register_autologin .auto_login{
+		float:none;
+		display:block;
+	}
+}
+
+/* for log out */
+@media all and ( max-width: 285px ) {
+	
+	.logout-box-gallery-mobile{
+		font-size:.9em!important;
+	}
+	
+	.logout-box-gallery-mobile .user-info img{
+		display:none;
+	}
+}

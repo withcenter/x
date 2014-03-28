@@ -1,0 +1,120 @@
+/*BANNER*/
+.banner {	
+	margin-bottom: 10px;	
+	width:100%;	
+	overflow: hidden;		
+}
+
+.banner .inner{	
+	border: solid 2px #25828f;
+}
+
+.banner a {
+	text-decoration: none;
+}
+
+.banner .banner-image-container {	
+	display: none;
+}
+
+.banner .banner-image-container.selected {
+	display: block;
+}
+
+.banner .banner-image-container .banner-text {	
+	padding:19px;
+}
+
+.banner .banner-image-container .banner-text .subject{
+	font-size:1.5em;
+	font-weight:bold;
+	margin-bottom:12px;
+}
+
+.banner .banner-image-container .banner-text .subject a{
+	color:#2ca3b4;
+	text-decoration:none;
+}
+
+.banner .banner-image {
+	width: 100%;
+	max-height: 226px;
+	overflow:hidden;	
+}
+
+.banner .banner-image img {
+	width: 100%;	
+}
+
+.banner .banner-content-container {
+	width: 100%;	
+	border-top: solid 2px #25828f;
+	position: relative;
+}
+
+.banner .banner-content-container .triangle-border{
+	position:absolute;
+	top:-19px;
+	right:68px;
+	width: 0; 
+	height: 0; 
+	border-left: 18px solid transparent;
+	border-right: 18px solid transparent;
+	
+	border-bottom: 19px solid #25828f;
+
+}
+
+.banner .banner-content-container .triangle{
+	position:absolute;
+	top:-17px;
+	right:70px;
+	width: 0; 
+	height: 0; 
+	border-left: 16px solid transparent;
+	border-right: 16px solid transparent;
+	
+	border-bottom: 17px solid #ffffff;
+
+}
+
+.banner .banner-content-container  a{
+	
+}
+
+.banner .read-more {
+	position: absolute;
+	top:19px;
+	right: 17px;
+	color: #999999;
+}
+
+.banner .arrow-left-inner {
+	position: absolute;
+	top: 59px;
+	left: -20px;	
+	width: 0; 
+	height: 0; 
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent; 
+	border-right: 20px solid #ffffff; 
+	z-index: 999;
+}
+
+.banner .arrow-left-outer {
+	position: absolute;
+	top: 56px;
+	left: -23px;	
+	width: 0; 
+	height: 0; 
+	border-top: 23px solid transparent;
+	border-bottom: 23px solid transparent; 
+	border-right: 23px solid #25828f; 
+	z-index: 998;
+}
+
+/**widgets**/
+.widget_container .widgets > div{
+	float:left;
+	width:50%;
+}
