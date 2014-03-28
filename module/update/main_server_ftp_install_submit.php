@@ -39,9 +39,32 @@ unlink ( $theme_file_path );
 
 //FTP file/directory upload/transfer
 include_once('phpseclib/Net/SFTP.php');
+
+define('NET_SFTP_LOGGING', NET_SFTP_LOG_COMPLEX); // or NET_SFTP_LOG_SIMPLE
+
+$sftp = new Net_SFTP('workserver.org');
+if ( !$sftp->login('g5x4', 'ontue0458934377') ) {
+	echo "error:<br>";
+	$arr = $sftp->getSFTPErrors() ;
+	di($arr);
+	exit;
+}
+
+print_r($sftp->nlist());
+$arr = $sftp->getSFTPLog();
+di($arr);
+
+exit;
+
+
+define('NET_SSH2_LOGGING', NET_SSH2_LOG_SIMPLE);
+
 $sftp = new Net_SFTP($host);
 if ( !$sftp->login ( $id, $password ) ) {
-	jsBack( 'Login Failed' );
+	//jsBack( 'Login Failed' );
+	$arr = $sft->getSFTPLog();
+	di($arr);
+	echo "log: $log";
 	exit;
 }
 
