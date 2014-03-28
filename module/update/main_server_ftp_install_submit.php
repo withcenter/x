@@ -43,13 +43,13 @@ unlink ( $theme_file_path );
 
 
 //FTP file/directory upload/transfer
-include_once('phpseclib/Net/SFTP.php');
-include_once('phpseclib/Math/BigInteger.php');
-include_once('phpseclib/Crypt/Random.php');
-include_once('phpseclib/Crypt/Hash.php');
+include_once('Net/SFTP.php');
+//include_once('phpseclib/Math/BigInteger.php');
+//include_once('phpseclib/Crypt/Random.php');
+//include_once('phpseclib/Crypt/Hash.php');
 
 define('NET_SSH2_LOGGING', 2);
-$sftp = new Net_SFTP($host, 22);
+$sftp = new Net_SFTP($host);
 di ( $in );
 if ($sftp->login($id, $password)) {
 	foreach (glob($data_path.$project_name."/*.*") as $filename) $sftp->put($filename, $dir.$project_name, NET_SFTP_LOCAL_FILE);
