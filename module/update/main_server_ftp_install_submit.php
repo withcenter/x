@@ -60,10 +60,11 @@ echo $sftp->pwd();
 
 foreach (glob($data_path.$project_name."/*.*") as $filename) {
 	$pathinfo = pathinfo ( $filename );
-	echo "<br>$filename - save to: ".$sftp->pwd()."/".$pathinfo['filename'];
+	echo "<br>$filename - save to: ".$sftp->pwd()."/".$pathinfo['basename'];
 	
+	if ( file_exists ( $file_path = $dir . '/theme/'.$project_name.'/'.$pathinfo['basename'] ) ) @unlink ( $file_path );
 	
-	$sftp->put( $pathinfo['filename'], $filename, NET_SFTP_LOCAL_FILE);
-	$sftp->chmod(0755, $pathinfo['filename'] );
+	$sftp->put( $pathinfo['basename'], $filename, NET_SFTP_LOCAL_FILE);
+	$sftp->chmod(0755, $pathinfo['basename'] );
 }
 
