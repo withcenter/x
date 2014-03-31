@@ -209,6 +209,11 @@
 	float: right;
 }
 
+.skin-gallery-container .title .more-button img, .template-gallery-container .title .more-button img{
+	position: relative;
+	top: -1px;
+}
+
 .skin-gallery-container .title .more-button a, .template-gallery-container .title .more-button a {
 	color: #5b9fb9;
 	font-size: 11px;
