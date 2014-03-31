@@ -1,4 +1,4 @@
-<div class='title'>Template Gallery<span class='more-button'><a href="?page=template_main">MORE ></a></div>
+<div class='title'>Template Gallery<span class='more-button'><a href="?page=template_main">MORE <img src="<?=x::theme_url('img/more-button.png')?>"/></a></div>
 	<table cellspacing='0' cellpadding='0' width='100%' class='template_table'>
 		<tr valign='top'>
 <?php
