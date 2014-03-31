@@ -152,20 +152,20 @@
 }
 
 .skin_gallery .skin {
-	width: 50%;
-	overflow: hidden;
-	position: relative;
+	width: 25%;
 	margin-bottom: 8px;
 	float: left;
+
 }
 
 .skin_gallery .skin .inner-skin {
 	margin: 0 5px;
 	position :relative;
-	height: 250px;
+	height: 100px;
 	overflow: hidden;
 	border: solid 1px #5b9fb9;
 }
+
 
 .skin_gallery .skin .inner-skin .skin_name {
 	position: absolute;
@@ -174,10 +174,10 @@
 	height: 100%;
 	width: 100%;
 	background-color: rgba(91,159,185,0.9);
-	padding: 25px 0;
+	padding: 5px 0;
 	color: #ffffff;
 	text-align: center;
-	font-size: 17pt;
+	font-size: 11pt;
 	display: none;
 }
 
@@ -327,6 +327,10 @@
 	.layout .header .right_main_menus a{
 		padding:16px 37.2% 16px 8.4%;
 	}
+	
+	.skin_gallery .skin {
+		width: 33%;
+	}
 
 }
 
@@ -366,6 +370,10 @@
 		width: 100%;
 	}
 	
+	.skin_gallery .skin {
+		width: 50%;
+	}
+	
 	.template-gallery-container .template_photo {
 		max-width: 100%;
 		max-height: 150px;
@@ -381,12 +389,12 @@
 	}
 	
 	.template-gallery-container {
-		width: 100%;
+		width: auto;
 		margin: 0 0 20px 0;
 	}
 
 	.skin-gallery-container {
-		width: 100%;
+		width: auto;
 		margin: 0 0 10px 0;
 	}
 	
