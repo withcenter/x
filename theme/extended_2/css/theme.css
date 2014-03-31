@@ -204,11 +204,11 @@
 	width: 100%;
 }
 
-.skin-gallery-container .title .more-button {
+.skin-gallery-container .title .more-button, .template-gallery-container .title .more-button {
 	float: right;
 }
 
-.skin-gallery-container .title .more-button a {
+.skin-gallery-container .title .more-button a, .template-gallery-container .title .more-button a {
 	color: #5b9fb9;
 	font-size: 11px;
 	font-weight: normal;

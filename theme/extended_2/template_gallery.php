@@ -1,4 +1,4 @@
-<div class='title'>Template Gallery</div>
+<div class='title'>Template Gallery<span class='more-button'><a href="?page=template_main">MORE ></a></div>
 	<table cellspacing='0' cellpadding='0' width='100%' class='template_table'>
 		<tr valign='top'>
 <?php

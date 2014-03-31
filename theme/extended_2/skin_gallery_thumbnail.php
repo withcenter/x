@@ -1,4 +1,4 @@
-<div class='title'>Skin Gallery <span class='more-button'><a href="<?='?page=skin_gallery'?>">MORE ></a></span></div>
+<div class='title'>Skin Gallery <span class='more-button'><a href="?page=skin_gallery">MORE ></a></span></div>
 	<table cellspacing='0' cellpadding='0' width='100%' class='skin_gallery'>
 		<tr valign='top'>
 <?php
