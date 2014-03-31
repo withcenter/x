@@ -40,6 +40,7 @@
 		$theme['pname']			= $pname;
 		$themes[] = $theme;
 	}
+
 	
-	echo json_encode( $themes );
+	echo "$in[callback](" . json_encode( $themes ) . ")";
 	
