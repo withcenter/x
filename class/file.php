@@ -27,7 +27,7 @@ class file {
 	static function read($filename)
 	{
 		global $global_file_error_code;
-		@$handle = fopen($filename, "r");
+		@$handle = fopen($filename, "rb");
 		if ( ! $handle ) {
 			$global_file_error_code = self::FILE_NOT_FOUND;
 			return null;
@@ -78,7 +78,7 @@ class file {
 	{
 		// Let's make sure the file exists and is writable first.
 		
-			if (!$handle = fopen($filename, 'w')) {
+			if (!$handle = fopen($filename, 'wb')) {
 				return -1;
 			}
 			// Write $somecontent to our opened file.
@@ -197,6 +197,7 @@ class file {
 			file::delete_folder($folder);
 		@endcode
 	 */
+	/*
 	static function delete_folder($folder)
 	{
 		foreach(new RecursiveIteratorIterator(new RecursiveDirectoryIterator($folder, FilesystemIterator::SKIP_DOTS), RecursiveIteratorIterator::CHILD_FIRST) as $path) {
@@ -205,6 +206,24 @@ class file {
 		}
 		rmdir($folder);
 	}
+	*/
+	static function delete_folder($dirPath) {
+    if (is_dir($dirPath)) {
+        $objects = scandir($dirPath);
+        foreach ($objects as $object) {
+            if ($object != "." && $object !="..") {
+                if (filetype($dirPath . DIRECTORY_SEPARATOR . $object) == "dir") {
+                    self::delete_folder($dirPath . DIRECTORY_SEPARATOR . $object);
+                } else {
+                    unlink($dirPath . DIRECTORY_SEPARATOR . $object);
+                }
+            }
+        }
+    reset($objects);
+    rmdir($dirPath);
+    }
+}
+
 	
 	
 	/** @brief 파일을 검색해서 리턴한다.
@@ -363,6 +382,23 @@ class file {
 			echo "Exception : " . $e;
 		}
 	}
+	
+	/** @short returns content of the url in binary safe
+	 *
+	 */
+	static function download( $url )
+	{
+		$file = fopen($url, 'rb');
+		$content = null;
+
+		while ( !feof ( $file ) ) {
+			$content .= fread($file, 4096);
+		}
+		fclose($file);
+		return $content;
+	}
+	
+	
 
 	
 }

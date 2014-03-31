@@ -1,3 +1,17 @@
+var trace_count = 0;
+function trace( msg )
+{
+	try {
+		trace_count ++;
+		console.log("TRACE[" + trace_count + "] " + msg);
+	}
+	catch ( e ) {
+		// e.message
+	}
+}
+
+
+
 /** @short skin update
  *
  */

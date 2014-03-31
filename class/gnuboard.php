@@ -978,7 +978,7 @@ class gnuboard {
 		}
 	}
 	
-	/**
+	/** @short returns posts
 	 *
 	 *
 	 * @param $option mixed

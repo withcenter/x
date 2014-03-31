@@ -624,18 +624,24 @@ EOH;
 
 	/** @short loads local or remote XML file and returns in assoc after parseing
 	 *
+	 * @warning Do not parse RSS data with this function.
+	 * it will create error if there is only 1 item exists and description with CDATA may not be parsed.
 	 */
 	static function load_and_parse_xml_into_assoc( $path )
 	{
 		$lines = file( $path );
 		if ( $lines ) {
 			$lines = implode('', $lines);
+			
 			$xml = new SimpleXMLElement($lines);
 			$json = self::xml2json($lines);
-			return json_decode($json,true) ;
+			$ret = json_decode($json,true) ;
+			return $ret;
 		}
 		else return array();
 	}
+	
+	
 	
 	
 	

@@ -12,3 +12,10 @@
  ]
  
 
+<br>
+
+[
+<a href='?module=update&action=admin_theme_list_new'>New <?=lang("THEME LIST", "테마 목록")?></a>
+
+]
+
