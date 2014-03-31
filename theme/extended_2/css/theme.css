@@ -169,16 +169,17 @@
 
 .skin_gallery .skin .inner-skin .skin_name {
 	position: absolute;
-	top: 0;
+	bottom: 0;
 	left: 0;
-	height: 100%;
 	width: 100%;
-	background-color: rgba(91,159,185,0.9);
-	padding: 5px 0;
+	background-color: rgba(0,0,0,0.8);
+	padding: 5px;
 	color: #ffffff;
-	text-align: center;
-	font-size: 11pt;
-	display: none;
+	font-size: 12px;
+	overflow: hidden;
+	height: 12px;
+	word-break: break-all;
+	line-height: 15px;
 }
 
 .skin_gallery .skin img {

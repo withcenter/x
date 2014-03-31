@@ -6,13 +6,6 @@ $(function(){
 		$(this).find('.template_info').hide();
 	});
 	
-	$(".skin_gallery .skin").mouseenter(function(){
-		$(this).find('.skin_name').show();
-	});
-	$(".skin_gallery .skin").mouseleave(function(){
-		$(this).find('.skin_name').hide();
-	});
-	
 	var float_timeout;
 	$(window).scroll(function(e){
 	clearTimeout(float_timeout);
