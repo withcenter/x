@@ -50,6 +50,50 @@ function ajax_load(href, callback)
 
 
 
+/** @short returns ajax-loaded data from webserver.
+ *  
+ *  @details it can be used to call a function in a different domain.
+ *
+ *  @code
+		var url = "<?=URL_THEME_UPDATE_SERVER?>/x/index.php";
+		var data = "module=update&action=ajax_main_server_theme_list&theme=n&<?=$var?>";
+		ajax_cross_domain_load( {
+			type: 'POST',
+			url: url,
+			data: data,
+			callback: callback_ajax_load
+		} );
+ *  @endcode
+ *  
+ *
+ */
+function ajax_cross_domain_call( option )
+{
+
+	if ( typeof option.type == 'undefined' ) option.type = 'GET';
+	option.contentType		= "application/json";
+	option.dataType			= 'jsonp';
+	option.crossDomain		= true;
+	if ( typeof option.data == 'undefined' ) {
+		option.data	= null;
+	}
+	if ( typeof option.callback != 'undefined' ) {
+		option.jsonpCallback	= option.callback;
+		if ( option.data != null ) option.data += "&";
+		option.data += "callback=" + option.callback;
+		delete option.callback;
+	}
+	option.success = function( res ) {
+		// success function
+	}
+	
+	/** */
+	$.ajax( option );
+}
+
+
+
+
 /**
  *
 	https://docs.google.com/a/withcenter.com/document/d/17zGlMQgCqdLm7iQxKNFjB7s1NMMpCXSbHLlKIvWad4A/edit#heading=h.i4tdtwn1fawf	

@@ -25,8 +25,10 @@
 		$pname = $a[ count($a) - 1 ];
 
 
-		if ( in_array( $pname, $in['dirs'] ) ) $installed = 'yes';
-		else $installed = 'no';
+		if ( $in['dirs'] ) {
+			if ( in_array( $pname, $in['dirs'] ) ) $installed = 'yes';
+			else $installed = 'no';
+		}
 
 		$source_link = urlencode( $project_url );
 		
@@ -40,6 +42,7 @@
 		$theme['pname']			= $pname;
 		$themes[] = $theme;
 	}
+
 	
-	echo json_encode( $themes );
-	
+	echo "$in[callback](" . json_encode( $themes ) . ")";
+
