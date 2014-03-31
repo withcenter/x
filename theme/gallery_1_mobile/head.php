@@ -9,8 +9,6 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 <div class='layout'>
 	<div class='header'>
 		<div class='inner'>
-			<table width='100%' cellpadding=0 cellspacing=0><tr valign='top'>
-				<td width=210>
 					<div id="gallery_1_logo">
 						<a href="<?php echo G5_URL ?>">
 						<?if( file_exists( path_logo() ) ) { ?>
@@ -20,8 +18,6 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 						<?}?>
 						</a>
 					</div>
-				</td>
-				<td>
 					<div class='search_and_top_wrapper'>
 						<div class='top'>
 							<?include 'top.php'?>
@@ -38,17 +34,15 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 							<input type="hidden" name="sop" value="and">
 							<label for="sch_stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
 							*/?>
-							<table cellpadding=0 cellspacing=0 width='100%'>
-							<tr>
-								<td>									
-									<input type="image" src='<?=x::url_theme()?>/img/search.png' id="gallery_1_search_submit_mobile">									
-									<div class='login_icon_wrapper'>
-										<img src='<?=x::url_theme()?>/img/login_icon.png' id="gallery_1_login_mobile">
-									</div>
-									<div style='clear:both;'></div>
-								</td>
-							</tr>					
-							</table>							
+							<div class = 'search_and_login_wrapper'>
+								<div class='login triangle'></div>
+								<div class='login_icon_wrapper'>
+									<img src='<?=x::url_theme()?>/img/login_icon.png' id="gallery_1_login_mobile">
+								</div>
+								<div class='search triangle-border'></div><div class='search triangle'></div>
+								<input type="image" src='<?=x::url_theme()?>/img/search.png' id="gallery_1_search_submit_mobile">								
+								<div style='clear:both'></div>
+							</div>
 												
 						<!--[if lte IE 8]>
 							<style>						
@@ -56,23 +50,17 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 									line-height:41px;	
 								}
 							</style>
-						<![endif]-->
+						<![endif]-->						
 					</div><!--/search_and_top_wrapper-->
-				</td>
-				</tr>
-				<tr valign='top'>
-					<td colspan=2>
+					<div style='clear:both'></div>
 						<div class='gallery_1_search_text_mobile_wrapper'>
-							<div class='inner'>
-								<div class='triangle-border'></div><div class='triangle'></div>
+							<div class='inner'>								
 								<input type="text" name="key" id="gallery_1_search_text_mobile" maxlength="20" placeholder='검색어를 입력해 주세요.' autocomplete='off'>
 							</div>
 						</div>
-					</td>
 					</form>				
 					</fieldset>	
-				</tr>				
-			</table>			
+			<div style='clear:both'></div>
 		</div>		
 		<div class='gallery_mobile_outlogin_wrapper'>			
 			<?=outlogin('x-outlogin-gallery-mobile');?>			

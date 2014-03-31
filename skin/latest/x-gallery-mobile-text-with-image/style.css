@@ -6,7 +6,8 @@
 .gallery_1_mobile_list_with_image  .image_wrapper {
 	margin-right: 10px;	
 	height:41px;
-	width:59px;	
+	width:59px;
+	padding-top:10px;
 } 
 
 .gallery_1_mobile_list_with_image  .image_wrapper img {
@@ -20,6 +21,7 @@
 	overflow:hidden;	
 	line-height:17px;
 	width:100%;	
+	padding-top:10px;
 	word-break:break-all;
 }
 
@@ -29,7 +31,7 @@
 }	
 
 .gallery_1_mobile_list_with_image  td{
-	padding-top:10px;	
+	
 }
 
 .gallery_1_mobile_list_with_image table{

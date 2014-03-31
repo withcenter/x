@@ -6,7 +6,6 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 <link rel="stylesheet" href="<?php echo $outlogin_skin_url ?>/style.css">
 
 <div class='login-box-gallery-mobile logout-box-gallery-mobile'>
-<div class='triangle'></div>
 <div class='logout-inner'>
 	<table width='100%' cellpadding=0 cellspacing=0><tr valign='top'>
 	<td>

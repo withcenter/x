@@ -84,20 +84,30 @@
 <div class='widget_container'>
 	<div class='widgets top'>
 		<div class='item left'>
-			<?echo latest("x-gallery-mobile-text-with-image", bo_table(1), 4, 50, $cache_time=1, $option );?>			
+			<?echo latest("x-gallery-mobile-text-with-image", bo_table(1), 4, 50);?>			
 		</div>
 		<div class='item right'>
-			<?echo latest("x-gallery-mobile-bulleted-list", bo_table(1), 4, 50, $cache_time=1, $option );?>
+			<?echo latest("x-gallery-mobile-bulleted-list", bo_table(1), 4, 50);?>
 		</div>
 		<div style='clear:both'></div>
 	</div>
 	<div class='widgets bottom'>
 		<div class='item left'>
-			<?echo latest("x-gallery-mobile-text-with-image", bo_table(2), 4, 50, $cache_time=1, $option );?>
+			<?echo latest("x-gallery-mobile-text-with-image", bo_table(2), 4, 50);?>
 		</div>
 		<div class='item right'>
-			<?echo latest("x-gallery-mobile-bulleted-list", bo_table(2), 4, 50, $cache_time=1, $option );?>
+			<?echo latest("x-gallery-mobile-bulleted-list", bo_table(2), 4, 50);?>
 		</div>
 		<div style='clear:both'></div>
+	</div>
+	<div class='widgets smart_phone'>
+		<div>
+			<?echo latest("x-gallery-mobile-image-with-caption", bo_table(2), 2, 20);?>			
+		</div>
+	</div>
+	<div class='widgets smart_phone'>
+		<div>
+			<?echo latest("x-gallery-mobile-image-with-caption-bottom", bo_table(2), 2, 20);?>			
+		</div>
 	</div>
 </div>

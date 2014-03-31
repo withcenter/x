@@ -47,7 +47,7 @@
 </div><!--layout-->
 
 <style>
-	.footer-wrapper {
+	.footer-wrapper .footer-menu-copyright {
 		background: url('<?=x::theme_url("img/footer_bg.png")?>');
 	}
 </style>
