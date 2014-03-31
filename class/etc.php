@@ -636,6 +636,141 @@ EOH;
 		}
 		else return array();
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	/**
+	 *  @brief returns true if the user's web browser is Internet Exploer.
+	 *  
+	 *  @return boolean
+	 *  
+	 *  @details Use this function to identify IE or not.
+	 */
+	static function is_ie()
+	{
+		return strpos($_SERVER['HTTP_USER_AGENT'], "MSIE");
+	}
+	
+	/** @short returns true if the browser is IE 6,7,8.
+	 *
+	 *
+	 */
+	static function ie_6_7_8()
+	{
+		$ua = $_SERVER['HTTP_USER_AGENT'];
+		$IE6 = strpos($ua, "MSIE 6");
+		$IE7 = strpos($ua, "MSIE 7");
+		$IE8 = strpos($ua, "MSIE 8");
+		if ( $IE6 || $IE7 || $IE8 ) return true;
+		else return false;
+	}
+	
+	/**
+	 *  @brief alias of ie_6_7_8
+	 *  
+	 *  @return boolean
+	 *  
+	 *  @details same as ie_6_7_8()
+	 *  
+	 *  
+	 *  
+	 *  
+	 *  @warning If you use like below, it checks only old IE or not. which mean Chrome, Opera, FF are included on the result.
+
+		if ( etc::old_ie() ) {
+			....
+		}
+		else {
+			// false if new IE or FF, etc.
+		}
+
+	 */
+	static function old_ie()
+	{
+		return self::ie_6_7_8();
+	}
+	
+	/** @short return true if the IE is version 9. */
+	static function ie_9()
+	{
+		$ua = $_SERVER['HTTP_USER_AGENT'];
+		return strpos($ua, "MSIE 9");
+	}
+	/**
+	 *  @brief return true if the user's web browser is IE and is not version of 6, 7, 8.
+	 *  
+	 *  @return boolean
+	 *  
+	 *  
+	 *  @details if the web browser is not IE, it always returns false.
+	 *
+	 */
+	static function new_ie()
+	{
+		/// IE 가 아니면 거짓을 리턴.
+		if ( ! self::is_ie() ) return false;
+		
+		return ! self::ie_6_7_8();
+	}
+	
+	
+	
+	
+	/**
+	 *  @brief returns web browser information.
+	 *  
+	 *  @return array
+	 *  
+	 *  @details use this function to get web browser information.
+	 *  
+		@code
+			$browser = etc::browser();
+			if ( $browser['name'] == 'msie' || $browser['name'] == 'firefox' ) {
+				....
+			}
+		@endcode
+	 */
+	static function browser()
+	{
+		$browser = array(
+			'version'   => '0.0.0',
+			'majorver'  => 0,
+			'minorver'  => 0,
+			'build'     => 0,
+			'name'      => 'unknown',
+			'useragent' => ''
+		);
+
+		$browsers = array(
+			'firefox', 'msie', 'opera', 'chrome', 'safari', 'mozilla', 'seamonkey', 'konqueror', 'netscape',
+			'gecko', 'navigator', 'mosaic', 'lynx', 'amaya', 'omniweb', 'avant', 'camino', 'flock', 'aol'
+		);
+		if (isset($_SERVER['HTTP_USER_AGENT'])) {
+			$browser['useragent'] = $_SERVER['HTTP_USER_AGENT'];
+			$user_agent = strtolower($browser['useragent']);
+			foreach($browsers as $_browser) {
+				if (preg_match("/($_browser)[\/ ]?([0-9.]*)/", $user_agent, $match)) {
+					$browser['name'] = $match[1];
+					$browser['version'] = $match[2];
+					@list($browser['majorver'], $browser['minorver'], $browser['build']) = explode('.', $browser['version']);
+					break;
+				}
+			}
+		}
+		return $browser;
+	}
+	
+	
 } // eo etc class
 
 

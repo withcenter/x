@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="<?=x::url_theme()?>/css/theme.css">
 <!-- 상단 시작 { -->
 
+
 <div id="hd">
     <h1 id="hd_h1"><?php echo $g5['title'] ?></h1>
 

@@ -1,10 +1,19 @@
+<? if ( etc::old_ie() ) { ?>
+<style>
+.list-type table {
+	width:240px !important;
+}
+</style>
+<? } ?>
+
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
-
-
-if ( $list_style ) {
+if ( $list_style ) { /* change ? */
 	set_cookie("list_style_$bo_table", $list_style, 60 * 60 * 24 * 365);
+	if ( admin() ) {
+		g::update_config( $bo_table, 'bo_1_subj', $list_style );
+	}
 }
 else {
 	$list_style = get_cookie("list_style_$bo_table");
@@ -67,6 +76,10 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 			<div class="list-type">
 						<table cellpadding=0 cellspacing=0'>
 							<tr>
+								<? if ( admin() ) { ?>
+									<td><a href='javascript:alert("<?=ln("If you, logged as super admin, change the list style, then it changes for all user.", "관리자로 로그인하여 리스트 스타일을 변경하면 모든 사용자에게도 동일하게 적용됩니다.")?>");'><?=ln("@ Setting", "@ 설정")?></a></td>
+									<td width='6'>&nbsp;</td>
+								<? } ?>
 								<td><a href='<?=g::url_forum_list()?>&list_style=text'><img src="<?=$board_skin_url?>/img/text.png"></a></td>
 								<td width='6'>&nbsp;</td>
 								<td><a href='<?=g::url_forum_list()?>&list_style=text'><?=ln("Text<br>View", "텍스트<br>보기")?></a></td>

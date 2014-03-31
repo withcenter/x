@@ -372,11 +372,6 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 	color: #b9b9b9;
 }
 
-/**for IE7 compatibility**/
-.list-type table {
-	width:140px;
-}
-
 
 @media all and ( min-width: 800px ) {
 	.tbl_wrap {

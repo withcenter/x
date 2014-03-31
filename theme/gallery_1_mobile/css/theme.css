@@ -1,0 +1,31 @@
+.layout{
+	width:100%;
+	margin-top:10px;
+	font-family:dotum;
+}
+
+.layout .body-wrapper{
+	max-width:970px;
+	margin:auto;
+}
+
+.layout .header{
+	max-width:970px;
+	margin:auto;
+}
+
+.layout .header > .inner{
+	max-width:970px;
+	margin:0 auto 10px auto;
+}
+
+/*medias*/
+@media all and ( max-width: 535px ) {	
+	.footer .footer-menu-copyright {	
+		width:50%!important;	
+	}
+
+	.footer .footer-search-logo {	
+		width:50%!important;	
+	}
+}
