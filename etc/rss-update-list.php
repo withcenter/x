@@ -27,6 +27,7 @@ if ($row['bo_read_level'] >= 2) {
 }
 
 // RSS 사용 체크
+
 if (!$row['bo_use_rss_view']) {
     echo 'RSS 보기가 금지되어 있습니다.';
     exit;
@@ -40,7 +41,7 @@ $sql = " select gr_subject from {$g5['group_table']} where gr_id = '{$row['gr_id
 $row = sql_fetch($sql);
 $subj1 = specialchars_replace($row['gr_subject'], 255);
 
-echo '<?phpxml version="1.0" encoding="utf-8" ?>'."\n";
+echo '<?php xml version="1.0" encoding="utf-8" ?>'."\n";
 ?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel>

@@ -1633,3 +1633,39 @@ form.config_menu select, form.config_menu input {
 .config-wrapper select[name='select_bo_table']{
 	width:100px;
 }
+
+/* admin_site_config.php */
+.admin-site-config {
+	border: 1px solid #d5d5d5;
+	padding: 10px;
+	border-radius: 3px;
+}
+
+.admin-site-config .sub-title {
+	display: inline-block;
+	background-color: #666666;
+	color: #ffffff;
+	height: 25px;
+	line-height: 25px;
+	border-radius: 3px;
+	margin-right :10px;
+	width: 160px;
+	text-align: center;
+}
+.admin-site-config input[type='text'] {
+	padding: 5px 10px;
+	width: 160px;
+}
+
+.admin-site-config input[type='submit'] {
+	float: right;
+	display: inline-block;
+	width: 100px;
+	height: 25px;
+	line-height: 25px;
+	color: #ffffff;
+	background-color: #666666;
+	border: 0;
+	cursor: pointer;
+	border-radius: 3px;
+}
