@@ -5,21 +5,16 @@
 		return;
 	}
 ?>
-    </div>
-</div>
-
-<!-- } 콘텐츠 끝 -->
-
-<hr>
-
-<!-- 하단 시작 { -->
-<div id="ft">
-    <div id="ft_copy">
-        <p>
-            Copyright &copy; <b><?=etc::domain()?></b> All rights reserved.<br>
-        </p>
-    </div>
-</div>
+				</div>
+			</td>
+			<?php
+			if(x::meta('theme_sidebar') == 'right') {?>
+				<td width=10></td>
+				<?=$sidebar_content?>
+			<?}?>
+		</tr>
+	</table>		
+</div>	
 
 <?php
 if(G5_USE_MOBILE && !G5_IS_MOBILE) {

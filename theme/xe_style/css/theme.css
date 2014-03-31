@@ -1,94 +1,88 @@
 body {
-	font-size:9pt !important;
+	background-color: #fcfcfc;
 }
 
-#logo {
-	padding:0!important;
+#xe-style-hd  {
+	font-size: 9pt;
+	font-family: dotum;
+}
+#xe-style-hd > .xe-top {
+	background-color: #f7f7f7;
+	border-bottom: 1px solid #dddddd;
+	height: 30px;
+	line-height: 30px;
 }
 
-#logo a {
-	font-size: 2em;
-	font-weight: bold;
-	letter-spacing: 3px;
-	color: #494949;
+#xe-style-hd > .xe-top > .inner {
+	width: 970px;
+	margin: 0 auto;
 }
 
-#logo a .x {
-	color: #FF4000;
+#xe-style-hd > .xe-top > .inner  a {
+	color: #555555;
+}
+#xe-style-hd > .xe-top > .inner > .left {
+	float: left;
 }
 
-
-#hd_sch {
-	left:270px!important;
-}
-#hd_sch #sch_stx {
-	width: 240px!important;
-}
-#aside {
-	float:left;
+#xe-style-hd > .xe-top > .inner > .right {
+	float: right;
 }
 
-#container {
-	border-right: 0;
-	border-left: 1px solid #dde4e9;
-	padding-top:0 !important;
-	padding-bottom:0 !important;
+/* logo_search.php */
+.logo_search table {
+	width: 970px;
+	margin: 15px auto;
 }
 
 
-.left-menu {
-	list-style:none;
-	padding: 0;
-	margin: 0;
+.logo_search table tr td .main-top-search-form {
+	border: 2px solid #222000;
+	height: 30px; 
+	position: relative;
+	overflow: hidden;
 }
-.left-menu > div {
-	width: 140px;
+
+.logo_search table tr td  .search-bar-bottom {
+	margin-top: 8px;
+	padding: 0 5px;
 }
-.left-menu a {
+
+.logo_search table tr td .main-top-search-form  input[type='image']{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.logo_search table tr td .main-top-search-form  input[type='text'] {
+	padding: 8px 10px; 
+	width: 330px;
+	position: relative;
+	border: 0;
+}
+.logo_search table tr td  .main-top-right {
+	padding: 0 10px 0 20px;
+}
+
+/* menu.php */
+#xe-style-hd .main-menu  {
+	margin-bottom: 10px;
+}
+#xe-style-hd .main-menu .inner{
+	width: 970px;
+	margin: 0 auto;
+	background-image:url('img/');
+	background-repeat:repeat-x;
+	height: 35px;
+	border-left: 1px solid #3d3d3d;
+	border-right: 1px solid #3d3d3d;
+}
+
+#xe-style-hd .main-menu .inner a {
 	display: inline-block;
-	padding: 1em;
-	background-color: #e9e9e9;
-	width: 100%;
-}
-
-
-#ft p {
-	padding: 2em!important;
-	color: white;
-	text-align:center;
-}
-
-
-
-.page-header {
-	margin: 0.4em 0;
-	padding: 1em;
-	border-top: 1px solid #cdcdcd;
-	border-bottom: 1px solid #cdcdcd;
-	font-size: 1.6em;
+	height: 35px;
+	line-height: 35px;
+	color: #ffffff;
 	font-weight: bold;
-	background-color: #efefef;
-	letter-spacing: 0.1em;
-}
-
-
-
-#wrapper > .data {
-	line-height: 1.4em;
-}
-
-
-
-.site-create-submit {
-	padding: 0.4em 2em !important;
-}
-
-
-
-#index-page > .content {
-	padding: 1em 2em;
-}
-
-#index-page td > .content {
-	padding: 1em 2em;
+	padding: 0 15px;
 }
