@@ -4,7 +4,20 @@
 	<tr valign='top'>
 		<td class='left-content'>
 			<div class='left-main-banner'>
-				<img src="<?=x::theme_url('img/left_main_banner.png')?>"/>
+				<img src="<?=x::theme_url('img/left_main_banner.png')?>" usemap="main_banner_map"/>
+				<map name="main_banner_map">
+					<!--top left-->
+					<area shape="rect" coords="48,368,139,391" href="javascript:void(0)"/>
+					
+					<!--top right-->
+					<area shape="rect" coords="205,360,326,389" href="javascript:void(0)"/>
+
+					<!--bottom left-->
+					<area shape="rect" coords="37,433,154,458" href="javascript:void(0)"/>						
+					
+					<!--bottom right-->
+					<area shape="rect" coords="206,433,325,460" href="javascript:void(0)"/>						
+				</map>
 			</div>
 		</td>
 		<td width='20' class='content-divider'></td>
