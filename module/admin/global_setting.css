@@ -2,3 +2,42 @@
 	font-size: 2em;
 	margin: 10px 0;
 }
+
+.admin-global-setting {
+	border: 1px solid #d5d5d5;
+	padding: 10px;
+	border-radius: 3px;
+}
+
+.admin-global-setting .sub-title {
+	color: #ffffff;
+	background-color: #666666;
+	height: 25px;
+	line-height: 25px;
+	width: 170px;
+	padding: 0 10px;
+	border-radius: 3px;
+	margin-right: 10px;
+	display: inline-block;
+	text-align: center;
+}
+.admin-global-setting input[type='text'] {
+	padding: 4px 10px;
+	width: 50px;
+	position: relative;
+	top: -1px;
+}
+
+.admin-global-setting input[type='submit'] {
+	width: 80px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	cursor: pointer;
+	background-color: #666666;
+	color: #ffffff;
+	border-radius: 3px;
+	display: inline-block;
+	border: 0;
+	float: right;
+}
