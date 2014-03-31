@@ -19,8 +19,14 @@
 // <iframe src="<?=URL_EXTENDED?>/x/?module=update&action=ajax_main_server_theme_list&theme=n&<?=$var?>" ></iframe>
 
 
-var url = "<?=URL_UPDATE_SERVER?>/x/index.php?module=update&action=ajax_main_server_theme_list&theme=n&<?=$var?>";
-ajax_load( url, callback_ajax_load );
+var url = "<?=URL_THEME_UPDATE_SERVER?>/x/index.php";
+var data = "module=update&action=ajax_main_server_theme_list&theme=n&<?=$var?>";
+ajax_cross_domain_call( {
+	type: 'POST',
+	url: url,
+	data: data,
+	callback: 'callback_ajax_load'
+} );
 trace( url );
 function callback_ajax_load( re )
 {

@@ -42,4 +42,10 @@ define( 'X_UPDATE_TABLE', 'theme');
 
 
 define( 'URL_UPDATE_SERVER', URL_EXTENDED );
+define( 'URL_THEME_UPDATE_SERVER', 'http://www.extended.kr' );				/** For theme only */
+
+
+
+
+
  
