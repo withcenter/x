@@ -1,0 +1,22 @@
+.x-latest-forums-extended-2 ul {
+	list-style: none;
+	margin: 15px 0 0 0;
+	padding: 0 0 5px 0;
+}
+
+.x-latest-forums-extended-2 a {
+	text-decoration: none;
+}
+
+.x-latest-forums-extended-2 ul span.content {
+	display: block;
+	overflow: hidden;
+	height: 15px;
+	line-height: 15px;
+	margin-top: 6px;
+	word-break: break-all;
+}
+
+.x-latest-forums-extended-2 ul span.content img {
+	margin-right: 10px;
+}

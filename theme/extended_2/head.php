@@ -3,6 +3,8 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 ?>
 <link rel="stylesheet" href="<?=x::theme_url()?>/css/header.css">
 <link rel="stylesheet" href="<?=x::theme_url()?>/css/theme.css">
+<link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/template_main.css' />
+<script src="<?=x::theme_url()?>/js/theme.js"></script>
 <?//echo member();?>
 <?
 		if( $member['mb_id'] ) {
@@ -20,8 +22,12 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	?>
 	<!--‘X’ 빌더 소개 질문과답변 자유게시판 다운로드 설치 사이트 -->
 <div class ='layout'>
-	<div class='header'>
+	<div class='header' style='background: url("<?=x::theme_url('img/bg_pattern.png')?>")'>
 		<div class='inner'>
+			<div class='login-signup'>
+				<? if ( login() ) { ?><a href='<?=G5_BBS_URL?>/login.php'>Welcome <?=$member['mb_nick']?></a>, <a href='<?=G5_BBS_URL?>/member_confirm.php?url=register_form.php'>Profile</a><?}
+				else {?><a href='<?=G5_BBS_URL?>/login.php'>LOGIN</a> | <a href='<?=G5_BBS_URL?>/register.php'>SIGN UP</a><?}?>
+			</div>
 			<div class='logo-wrapper'>
 				<div class='logo'><a href='<?=G5_URL?>'><img src='<?=x::url_theme()?>/img/logo.png'/></a></div>
 			</div>
@@ -82,6 +88,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	<![endif]-->
 	<div class='container_wrapper'>
 		<div class='container'>
+			<div class='call_us_bubble' style='background: url("<?=x::theme_url('img/call_us.png')?>")'>
+				CALL US!<br>070-7529-1749
+			</div>
 	
 <script>
 	$(function(){

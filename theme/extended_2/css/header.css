@@ -3,6 +3,27 @@
 	float:left;
 }
 
+.header .inner {
+	position: relative;
+}
+
+.header .inner .login-signup {
+	position: absolute;
+	right: 0;
+	top: -30px;
+	padding: 16px;
+	background: #5b9fb9;
+	border: solid 1px #487f94;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	color: #ffffff;
+}
+
+.header .inner .login-signup a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
 .header  .logo img{
 	/*width:100%;*/
 }
@@ -30,7 +51,7 @@
 }
 
 .header .right_main_menus{
-	margin-top: 3.5%;
+	margin-top: 3%;
 	width: 64%;
 	float:left;
 }
