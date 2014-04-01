@@ -2,13 +2,15 @@
 	<table cellpadding=0 cellspacing=0 border=0>
 		<tr valign='top'>
 			<td width='30%'>
-				<a href="<?php echo G5_URL ?>">
-					<?if( file_exists( path_logo() ) ) { ?>
-							<img src="<?=url_logo()?>">
-					<?} else {?>
-							<img src='<?=x::url_theme()?>/img/logo.png'>
-					<?}?>
-				</a>
+				<div class='logo'>
+					<a href="<?php echo G5_URL ?>">
+						<?if( file_exists( path_logo() ) ) { ?>
+								<img src="<?=url_logo()?>">
+						<?} else {?>
+								<img src='<?=x::url_theme()?>/img/logo.png'>
+						<?}?>
+					</a>
+				</div>
 			</td>
 			<td width='40%'>
 				<form method="get" action="<?=x::url()?>" autocomplete='off'> 
