@@ -1,7 +1,6 @@
 .layout{
 	width:100%;	
 	font-family:dotum;
-	min-height: 500px;
 }
 
 .layout .header{
@@ -26,6 +25,7 @@
 	height: auto;
 	margin:auto;	
 	position: relative;
+	min-height: 500px;
 }
 
 .container .call_us_bubble {
