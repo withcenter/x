@@ -4,7 +4,7 @@
 			'bo_table'			=> 'theme',
 			'select'			=> 'wr_id, wr_subject, wr_content, wr_name, wr_datetime, wr_option, wr_link1',
 			'limit'				=> 1000,
-		), true
+		)
 	);
 	
 
