@@ -8,7 +8,6 @@
 <div class='ftp_install'>
 	<div class='ftp_install_fields'>
 	<h1>FTP INSTALL</h1>
-		Source Link : <?=$source_link?><br>
 		Host : <input type='text' name='host' value='<?=$host?>'>
 		<br>
 		X Folder : <input type='text' name='dir' value='<?=$dir?>'>/theme/<?=$pname?> to install...<br>

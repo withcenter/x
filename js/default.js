@@ -64,7 +64,22 @@ function ajax_load(href, callback)
 			callback: callback_ajax_load
 		} );
  *  @endcode
+ *
+ * @note the callback function will be called with json data.
+ * Since the input data is already JSON, so no need to be parsed.
+ *
+ *  @code example of callback
+ * 		function callback_ajax_load( re )
+			{
+				var len = re.length;
+			}
+ *  @endcode
  *  
+ *  @note the PHP must return javascript function call with JSON data.
+ *
+ *  @code example of return from PHP
+		callback_ajax_load([{"url_preview":"https:\/\/raw.githubusercontent.com\/thruthesky\/office\/master\/preview.jpg","name":"\uc0ac\ubb34\uc2e4 \ud14c\uc2a4\ud2b8 \ud14c\ub9c8","installed":"no","short":"\ubbf8\uc644\uc131 \uc0ac\ubb34\uc2e4 \uc6a9 \ud14c\ub9c8\uc785\ub2c8\ub2e4.","source_link":"https%3A%2F%2Fgithub.com%2Fthruthesky%2Foffice","pname":"office"},{"url_preview":"https:\/\/raw.githubusercontent.com\/thruthesky\/thuthesky-test\/master\/preview.jpg","name":"thruthesky \ud14c\uc2a4\ud2b8 \ud14c\ub9c8","installed":"no","short":"\ud14c\uc2a4\ud2b8 \ud14c\ub9c8\uc785\ub2c8\ub2e4. \uc0ac\uc6a9\ud558\uc9c0 \ub9c8\uc138\uc694.","source_link":"https%3A%2F%2Fgithub.com%2Fthruthesky%2Fthuthesky-test","pname":"thuthesky-test"}])
+ *  @endcode
  *
  */
 function ajax_cross_domain_call( option )

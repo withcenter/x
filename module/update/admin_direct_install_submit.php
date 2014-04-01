@@ -32,6 +32,7 @@
 		$zip->close();
 	}
 
+	file::delete_folder( $dir_project );
 	rename ( "$dir_tmp/$pname-master", $dir_project );
 
 	

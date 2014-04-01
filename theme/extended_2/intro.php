@@ -1,1 +1,0 @@
-<iframe style='width: 100%; height: 24500px;' frameborder=0 border=0 src="https://docs.google.com/document/d/1cqG9sghuNGyrSKsZBaV4dmretcA6tb_WfOD1jlyldLk/pub?embedded=true"></iframe>

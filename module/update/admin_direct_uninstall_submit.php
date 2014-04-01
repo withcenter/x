@@ -1,7 +1,11 @@
 <?php
-	$dir_theme	= x::dir() . '/theme';
-	$dir_project 	= $dir_theme .'/'. $pname;
-	file::delete_folder ( $dir_project );
+
+	if ( $type == 'theme' ) {
+		$folder	= x::dir() . '/theme/'. $name;
+	}
+	
+	
+	file::delete_folder ( $folder );
 	
 	
 	echo "UN-INSTALLED";
