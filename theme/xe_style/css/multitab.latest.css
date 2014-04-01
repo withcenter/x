@@ -34,7 +34,7 @@
 	color: #ffffff;
 }
 
-.multi-tab-latest .tab-menu  a:hover, .tab-selected a {
+.multi-tab-latest .tab-menu  a:hover {
 	text-decoration: none;
 }
 
