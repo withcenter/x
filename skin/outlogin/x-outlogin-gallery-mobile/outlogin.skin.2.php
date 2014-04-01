@@ -52,7 +52,7 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 			</div>
 			</div>
 	</td>
-	<td width='95'>
+	<td class='logout-btn-td'>
 		<div class='log_out'>
 			<a href="<?php echo G5_BBS_URL ?>/logout.php"><img src='<?=$outlogin_skin_url?>/signout_button.png'/></a>
 		</div>

@@ -1,12 +1,19 @@
 .layout .header .search_and_top_wrapper{
 	float:right;
 	position:relative;
-	text-align:right;	
+	text-align:right;
+	width:50%;
 }
 
 
 .layout .header .inner #gallery_1_logo{
+	float:left;	
+	width:50%;
+}
+
+.layout .header .inner #gallery_1_logo img{
 	float:left;
+	max-width:210px;	
 }
 
 .layout .header .top{
