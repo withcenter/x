@@ -4,9 +4,10 @@
 			'bo_table'			=> 'theme',
 			'select'			=> 'wr_id, wr_subject, wr_content, wr_name, wr_datetime, wr_option, wr_link1',
 			'limit'				=> 1000,
-		)
+		), true
 	);
 	
+
 	foreach ( $posts as $p ) {
 		$project_url = $p['wr_link1'];
 		$u = parse_url($project_url);
