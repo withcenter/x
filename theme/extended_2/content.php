@@ -25,7 +25,7 @@
 			<div class='right-forum-container forum_one' >
 				<div class='inner'>
 					<div>
-						<?=latest('x-latest-forums-extended-2', bo_table(1), 8, 20)?>
+						<?=latest('x-latest-forums-extended-2', bo_table(4), 8, 20)?>
 					</div>
 				</div>
 			</div>
