@@ -82,7 +82,7 @@
 	</div>
 </div>
 <div class='widget_container'>
-	<div class='widgets top'>
+	<div class='widgets tablet top'>
 		<div class='item left'>
 			<?echo latest("x-gallery-mobile-text-with-image", bo_table(1), 4, 50);?>			
 		</div>
@@ -91,7 +91,7 @@
 		</div>
 		<div style='clear:both'></div>
 	</div>
-	<div class='widgets bottom'>
+	<div class='widgets tablet bottom'>
 		<div class='item left'>
 			<?echo latest("x-gallery-mobile-text-with-image", bo_table(2), 4, 50);?>
 		</div>

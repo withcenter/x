@@ -1,4 +1,4 @@
-<div class='title'>Skin Gallery <span class='more-button'><a href="?page=skin_gallery">MORE <img src="<?=x::theme_url('img/more-button.png')?>"/></a></span></div>
+<div class='title'>스킨 갤러리 <span class='more-button'><a href="?page=skin_gallery">자세히 <img src="<?=x::theme_url('img/more-button.png')?>"/></a></span></div>
 	<table cellspacing='0' cellpadding='0' width='100%' class='skin_gallery'>
 		<tr valign='top'>
 <?php

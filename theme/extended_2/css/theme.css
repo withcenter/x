@@ -25,6 +25,7 @@
 	height: auto;
 	margin:auto;	
 	position: relative;
+	min-height: 500px;
 }
 
 .container .call_us_bubble {
