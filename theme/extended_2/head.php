@@ -35,9 +35,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 				<ul>
 					<li><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_1&wr_id=1'>X 빌더 소개 </a></li>
 					<li><a href='<?=G5_BBS_URL?>/write.php?bo_table=ms_www_2'>질문과답변</a></li>
-					<li><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_3'>자유게시판</a></li>
-					<li><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_4'>다운로드</a></li>
-					<li><a href='<?=g::url()?>/?page=template_main'>설치 사이트 </a></li>	
+					<li><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_4'>자유게시판</a></li>
+					<li><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_5'>다운로드</a></li>
+					<li><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_3'>설치 사이트 </a></li>	
 				</ul>						
 				<div style='clear:both;'></div>
 			</div>
@@ -47,9 +47,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 				<ul>
 					<li><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_1&wr_id=1'>X 빌더 소개 </a></li>
 					<li><a href='<?=G5_BBS_URL?>/write.php?bo_table=ms_www_2'>질문과답변</a></li>
-					<li><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_3'>자유게시판</a></li>
-					<li><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_4'>다운로드</a></li>
-					<li><a href='<?=g::url()?>/?page=template_main'>설치 사이트 </a></li>						
+					<li><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_4'>자유게시판</a></li>
+					<li><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_5'>다운로드</a></li>
+					<li><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_3'>설치 사이트 </a></li>						
 				</ul>						
 				<div style='clear:both;'></div>
 			</div>
