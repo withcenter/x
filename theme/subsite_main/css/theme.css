@@ -1,0 +1,530 @@
+a:hover {
+	text-decoration: none;
+}
+
+#website-wrapper{
+	border-top:4px solid #64bbc5;
+	background-image:url('/x/theme/subsite_main/img/bg.png');
+	font-family:arial;	
+	width:100%;
+}
+
+#website-wrapper .left-main {
+	padding: 15px 0 0 10px;
+}
+#wrapper{
+	border:0;
+}
+
+#banner-wrapper {
+	margin-bottom: 20px;
+}
+#banner-wrapper  img {
+	border: 0;
+}
+
+
+#wrapper #container{
+	border:0;
+	margin-top:20px;
+	padding:0;
+	width:730px;	
+}
+
+#logo {
+	position:absolute;
+	top:24px;
+	left:10px;
+	padding:0!important;
+}
+#logo .text {
+	margin-left: 2em;
+	line-height: 20px;
+}
+
+
+#hd-wrapper{
+	width: 100%;
+	margin:auto;
+}
+#hd-wrapper #menu-top{
+	height:100px;
+	background-color:#f5f8f9;
+	position:relative;
+}
+#hd-wrapper #menu-top  .inner {
+	width: 970px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#hd-wrapper #menu-top ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#hd_sch {
+	left:270px!important;
+}
+#hd_sch #search_txtbox {
+	width: 240px!important;
+}
+
+#wrapper{
+	background-color:white;
+}
+
+#container {
+	border-right: 0;
+	border-left: 1px solid #dde4e9;
+	width: 100% !important;
+	float: none!important;
+}
+
+#search-wrapper{
+	background-color:#7997c4;
+	height:19px;
+	bottom:0;
+	left:0;
+	position:relative;
+	height: 40px;
+}
+
+#search-wrapper .sub-menu a {
+	font-family: '맑은 고딕', AppleGothic;
+	color:#ffffff;
+	height: 40px;
+	line-height: 40px;
+	display: inline-block;
+	padding: 0 10px;
+	font-size: 1.250em;
+}
+
+#search-wrapper .sub-menu a:hover {
+	text-decoration: none;
+}
+
+#search-wrapper #search-box{
+	position:absolute;
+	top:4px;
+	right:0;
+}
+
+#search-wrapper #search-box #search_txtbox{
+	padding:9px 9px 9px 0;
+	width:274px;
+	border:0;
+	background-color:#f7f7f7;
+}
+
+/*PLACEHOLDER CSS*/
+::-webkit-input-placeholder {
+   color: #cccccc; 
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #cccccc; 
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #cccccc;  
+}
+
+:-ms-input-placeholder {  
+   color: #cccccc;    
+}
+/**************/
+fieldset{
+	border:none!important;
+	padding:0!important;
+}
+
+#search-wrapper #search-box #search_txtbox{
+	padding:9px;
+	height:14px;
+	width:274px;
+	border:0;
+}
+
+#search-wrapper #search-box #search_submit{
+	padding:4px 10px;
+	background-color: #7299ae;
+	position:absolute;
+	right:5px;
+	top:4px;
+	border:0;
+}
+
+#search-wrapper  .inner {
+	margin: 0 auto;
+	width: 970px;
+	position: relative;
+}
+
+#howto-steps{
+	margin-bottom:10px;
+	line-height: 1.6em;
+}
+
+#howto-steps td{
+	width:33.3%;
+}
+
+#howto-steps .steps{
+	position:relative;
+	border-right: 2px solid #ececec;	
+}
+
+#howto-steps .steps.third{	
+	border:0;	
+}
+
+#howto-steps .steps img{
+	position:absolute;
+	top:27px;;
+}
+
+#howto-steps .steps .step1-img{	
+	right:107px;
+	top: 17px;
+}
+
+#howto-steps .steps .step2-img{
+	right:91px;
+}
+
+#howto-steps .steps .step3-img{
+	right:90px;
+}
+
+#howto-steps .steps .description{
+	padding:105px 27px 10px 27px;
+	color:#565656;	
+	text-align:center;	
+}
+
+
+#create-your-site{
+	border:1px solid #a6603a;		
+	max-width:440px;
+	height:40px;
+	margin: 20px auto;
+	box-shadow: inset 0 0 0 1px #f6a76d;
+}
+
+#create-your-site  {
+	text-align: center;
+}
+#create-your-site  img {
+	border: 0;
+}
+
+	
+.post-content{
+	position:relative;
+	float:left;
+	width:222px;
+}
+
+.post-content.with-margin{
+	margin-left:28px;
+}
+
+.post-content .top-image{
+	position:absolute;
+	left:0;
+	top:0;
+}
+
+/*FOOTER*/
+#footer {
+	width: 100%;
+	margin-top:260px;
+	border-top:1px solid #dddddd;
+	text-align: center;
+	padding: 10px 0;
+	line-height: 170%;
+	color: #797979;
+	font-size: 1em;
+	font-family: '맑은 고딕', AppleGothic;
+	position:relative;
+}
+#footer .mobile_view{
+	position:absolute;
+	right:10px;
+	top:10px;
+	color: #797979;
+}
+/*
+ #footer{
+	margin-top:260px;
+	border-top:1px solid #dddddd;
+	padding:10px 17px;
+	color:#959595;
+	font-size: 1em;
+}
+
+#footer #bottom-menus, #footer #copyright{
+	display:inline-block;
+}
+
+#footer #bottom-menus a{
+	text-decoration:none;
+	display:inline-block;
+	padding:0 4px 14px 4px;
+	color:#959595;
+}
+
+#footer #copyright{
+	float:right;
+}
+*/
+/*skin/latest/community*/
+
+.lt .lt_title .dots{
+	display:none;
+}
+
+.lt .lt_title{	
+	background-image:url('../img/directions-blue.png')!important;	
+}
+
+/*new_sites*/
+.left-menu-wrapper {
+	width:190px;
+	overflow:hidden;
+	margin: 10px 0 24px 0;
+}
+
+.left-menu-wrapper .inner{
+	padding:0 10px 10px 10px;
+}
+
+.left-menu-wrapper > .header{
+	color:#565656;
+	position:relative;
+	font-size:1.4em;
+	font-weight:bold;
+	border-bottom:1px solid #cecece; 
+	padding:0 0 6px 30px;
+	font-family: '맑은 고딕', AppleGothic;
+	position: relative;
+	top: -2px;
+}
+
+.left-menu-wrapper > .header img{
+	position:absolute;
+	left:0;
+	top:2px;
+}
+
+.left-menu-wrapper .info-wrapper{	
+	white-space:nowrap;
+	border-bottom:1px solid #cecece; 
+	padding:0 0 10px 0;	
+	overflow:hidden;
+}
+
+.left-menu-wrapper .info-wrapper .top-info{
+	margin:10px 0;
+	font-style:italic;
+}
+
+.left-menu-wrapper .info-wrapper .top-info a, .left-menu-wrapper .info-wrapper .other-info a{
+	text-decoration:none;
+	color:#a1a1a1;
+}
+
+.left-menu-wrapper .info-wrapper .other-info{
+	margin-left:15px;
+}
+
+.left-menu-wrapper .view-more{
+	margin-top: 10px;
+	float:right;	
+}
+
+.left-menu-wrapper .view-more a{
+	color:#616161;
+	text-decoration:none;
+}
+
+#container #howto-steps {
+	font-family: '맑은 고딕', AppleGothic;
+}
+#container #howto-steps .steps .title {
+	font-size: 1.3em;
+	color: #004475;
+	margin-bottom: 11px;
+	position: relative;
+}
+#container #howto-steps .steps .instruction, #container #howto-steps .steps .instruction a {
+	font-size: 1em;
+	color: #3e3e3e;
+}
+
+/* newest.site.list.php */
+.bottom-content .newest-site-list, .bottom-content .latest-posts {
+	font-family: '맑은 고딕', AppleGothic;
+	max-width: 222px;
+}
+
+.bottom-content  .title {
+	height: 29px;
+	border-bottom: 1px solid #d5d5d5;
+	line-height: 29px;
+	font-size: 1.125em;
+	margin-bottom: 11px;
+	font-weight: bold;
+	padding-bottom: 4px;
+}
+.bottom-content  a:hover {
+	text-decoration: none;
+}
+
+.bottom-content  .title a {
+	color: #565656
+}
+.bottom-content  .title img {
+	position: relative;
+	top: -2px;
+	margin-right: 6px;
+}
+
+.bottom-content .row {
+	height: 20px;
+	line-height: 20px;	
+	padding: 0 10px;
+	overflow: hidden;
+}
+
+.bottom-content .row .dot {
+	position: relative;
+	top: -2px;
+}
+
+.bottom-content .row  a {
+	color: #565656;
+	font-size: 1.063em;
+}
+
+
+
+
+#top-menu{
+	position:absolute;
+	right:0;
+	font-family: '맑은 고딕', AppleGothic;
+}
+
+#top-menu .menu-list{
+	text-align:center;
+	float:left;	
+	font-size:1.3em;
+	font-weight:normal;
+	position:relative;
+}
+
+#top-menu .menu-list a{
+	display:block;
+	color: #7997c4;
+	text-decoration:none;
+	padding:40px 8px 5px 8px;
+}
+
+#top-menu .menu-list .selected{
+	background-color:#64bbc5;
+	color: #ffffff;
+}
+
+#top-menu .menu-list:hover{
+	background-color:#64bbc5;
+}
+
+#top-menu .menu-list:hover a {
+	color: #ffffff;
+}
+
+
+#create-site {
+	margin: 3em 0;
+	padding: 0.2em;
+	border-radius: 2px;
+	box-shadow: 0 0 1px 2px #dfdfdf;
+}
+
+#create-site a {
+	display: block;
+	padding: 1em;
+	border-radius: 2px;
+	background-color: #f7f7f7;
+	font-size: 1.8em;
+	font-family: Malgun Gothic,AppleGothic;
+	color: #393939;
+	text-align:center;
+}
+
+
+
+#create-site a:hover {
+	background-color: #f3f3f3;
+	color: black;
+}
+
+
+/* service */
+.page {
+	padding: 3em !important;
+	background-color: #efefef !important;
+	font-family: Malgun Gothic;
+	line-height: 2em;
+	letter-spacing: 1px;
+}
+.page > .title {
+	margin-bottom: 1em;
+	color: #498977;
+}
+
+.page > .title.first {
+	font-size: 1.4em;
+}
+
+.page > .title.second {
+	font-size: 1.7em;
+}
+
+.page > .title.third {
+	font-size: 1.4em;
+}
+
+.page > .text {
+	margin-bottom: 3em;
+}
+
+
+/* login.php CSS 조정 */
+#mb_login #login_fs .login_id {
+	position: absolute;
+	top: 5px;
+	left: 10px;
+}
+#mb_login #login_fs #login_auto_login {
+	margin-left: 10px;
+}
+#mb_login #login_fs  {
+	margin-left: 90px;
+	margin-bottom: 20px;
+}
+#mb_login #login_fs .login_pw {
+	position: absolute;
+	top: 30px;
+	left: 10px;
+}
+
+#mb_login #login_fs .btn_submit {
+	position: absolute;
+	top: 0px;
+}
+
+

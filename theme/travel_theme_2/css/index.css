@@ -1,0 +1,110 @@
+.main-content{
+	margin-bottom:10px;
+}
+
+.travel_images_with_caption_wrapper{	
+	height:419px;
+	width:530px;
+	float:left;
+}
+
+.right-widgets{
+	width:210px;
+	float:left;		
+}
+
+.right-widgets .travel_posts_with_image_right{
+	margin:0 0 12px 10px;
+	height:208px;
+	width:210px;
+}
+
+.right-widgets .travel_2_timezone{
+	border:1px solid #bbbbbb;
+	margin:0 0 10px 10px;	
+	height:99px;
+	width:208px;
+	line-height:11px;
+}
+
+.right-widgets .travel_2_timezone .header{	
+	padding:0 8px;
+	border-bottom:1px solid #bbbbbb;
+	background-color:#fcfcfc;
+	height: 28px;
+	line-height: 28px;
+	color: #444444;
+}
+
+.right-widgets .travel_2_timezone .header img{	
+	position:relative;
+	top:-2px;
+}
+
+.right-widgets .travel_2_timezone > .header .title{	
+	display:inline-block;
+	margin:0 0 0 8px;
+
+}
+
+.right-widgets .travel_2_timezone .timezones{
+	padding:2px 10px;
+	font-size: 9pt;
+}
+.right-widgets .travel_2_timezone .timezones > .row {
+	font-size: 9pt;
+	color: #444444;
+}
+.right-widgets .travel_2_timezone .timezones > .first-row {
+	margin: 7px 0; 
+}
+.right-widgets .travel_2_timezone .timezones .sub-item {
+	
+	background-color: #666666;
+	color: #ffffff;
+	height: 22px;
+	line-height: 23px;
+	width: 70px;
+	text-align: center;
+	display: inline-block;
+	margin-right: 10px;
+	border-radius: 3px;
+}
+.right-widgets .travel_2_right_banner{
+	height:88px;
+	border:1px solid #bbbbbb;
+	background-color:#e6e6e6;
+	width:208px;
+	margin-left:10px;
+	overflow:hidden;
+}
+
+.right-widgets .travel_2_right_banner img{
+	width:100%;
+}
+
+/*****************************/
+.lower-posts{
+	margin-bottom:10px;
+}
+
+.lower-posts .travel_left_posts{	
+	width:260px;
+	float:left;
+	height:168px;
+	margin-bottom: 2px;
+}
+
+.lower-posts .travel_middle_posts{
+	margin-left:10px;	
+	width:260px;
+	float:left;
+	height:168px;
+}
+
+.lower-posts .travel_right_posts{	
+	margin-left:10px;
+	width:210px;
+	float:left;
+	height:168px;
+}

@@ -1,0 +1,37 @@
+.new-posts, .popular-posts {
+	padding: 10px;
+	margin-bottom: 10px;
+}
+.new-posts a:hover, .popular-posts a:hover {
+	text-decoration: none;
+}
+
+.new-posts .title, .popular-posts .title {
+	font-weight: bold;
+	border-bottom: 1px solid #cacaca;
+	font-size: 11pt;
+	padding-bottom: 9px;
+	margin-bottom: 8px;
+}
+
+.new-posts  .title .new-post-icon , .popular-posts  .title .new-post-icon  {
+	margin-right: 10px;
+}
+
+.new-posts .row, .popular-posts .row {
+	height: 20px;
+	line-height: 20px;
+	padding: 0 15px 0 10px;
+	overflow: hidden;
+	position: relative;
+	font-size: 10pt;	
+}
+.new-posts .row > .dot-icon, .popular-posts .row > .dot-icon {
+	position: absolute;
+	left: 0;
+	top: 5px;
+}
+.new-posts .row  a, .popular-posts .row  a {
+	color: #7a7a7a;
+	margin-left:5px;
+}

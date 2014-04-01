@@ -1,0 +1,80 @@
+.template_main  .template_main_title {
+	width: 160px;
+	border-bottom: solid 1px #696969;
+}
+
+.template_main  .template_main_title .inner {
+	font-family: '맑은 고딕', AppleGothic;
+	font-size: 15pt;
+	color: #24a1b3;
+	width: 140px;
+	padding-bottom: 8px;
+	border-bottom: solid 2px #696969;
+}
+
+.template_main table.template_table {
+	border-collapse: seperate;
+	border-spacing: 0 10px;
+}
+
+.template_table td {
+	position: relative;
+	overflow: hidden;
+}
+
+.template_table td.template_photo_td {
+	width: 33%;
+}
+
+.template_main .template_photo {
+	max-height: 230px;
+	float: left;
+	padding: 3px;
+	overflow: hidden;
+}
+.template_main .template_photo img {
+	width: 100%;
+}
+
+.template_main .template_photo .template_title {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 30px;
+	line-height: 30px;
+	color: #ffffff;
+	background-color: rgba(0,0,0,0.7);
+	width: 100%;
+	padding-left: 10px;
+}
+
+.template_main .template_photo .template_title .template_demo {
+	display: block;
+	float: right;
+	background-color: rgba(0,0,0,0.9);
+	margin-right: 10px;
+	padding: 0 20px;
+}
+
+.template_main .template_photo .template_title a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.template_main .template_photo .template_title .template_demo:hover {
+	background-color: rgba(244,134,12,0.9);
+}
+
+@media (max-width: 400px) {
+	.template_table td {
+		display: block;
+	}
+	
+	.template_main .template_photo {
+		width: 100%;
+	}
+	
+	.template_table td.template_photo_td {
+		width: 100%;
+	}
+}

@@ -1,0 +1,91 @@
+.header  .logo-wrapper{
+	width:45%;
+	float:left;
+}
+
+.header  .logo img{
+	/*width:100%;*/
+}
+
+.header  .text-info{	
+	font-size:1.1em;
+	font-weight:bold;
+	margin:4px 0 10px 0;	
+}
+
+.header  .text-info a{
+	text-decoration:none;
+}
+
+.header  .text-info.tablet{	
+	display:none;
+}
+
+.header  .text-info .info.call-us{
+	color:#fc2847;	
+}
+
+.header  .text-info .info.text{
+	color:#696969;	
+}
+
+.header .right_main_menus{
+	width:55%;
+	float:left;
+}
+
+.header .right_main_menus.below-400px{
+	display:none;
+}
+
+.header .right_main_menus.below-400px ul{
+	margin:0 2.5%;
+}
+
+.header .right_main_menus ul{
+	text-decoration:none;
+	padding:0;
+	margin:0;
+}
+
+.header .right_main_menus ul li{	
+	padding:0;
+	margin:0;
+	display:inline-block;
+	float:left;	
+	width:25%;
+	position:relative;
+}
+
+.header .right_main_menus ul li .extra-border{	
+	border-left:3px solid #696969;
+	position:absolute;
+	left:0;
+	top:0;
+	height:44px;
+}
+
+
+.header .right_main_menus ul li:hover a{	
+	border-color:#f2860c;
+}
+
+.header .right_main_menus ul li:hover .extra-border{	
+	border-color:#f2860c;
+}
+
+.header .right_main_menus a{
+	font-size:1.2em;
+	font-weight:bold;
+	color:#646464;
+	text-align:center;
+	height:28px;
+	line-height:15px;
+	overflow:hidden;
+	word-break:break-all;
+	text-decoration:none;
+	display:inline-block;
+	border-left:1px solid #696969;
+	padding:16px 16.29% 20px 16.29%;	
+}
+

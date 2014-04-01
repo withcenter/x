@@ -1,0 +1,29 @@
+.footer{
+	min-width:970px;
+	line-height: 1.6em;
+}
+
+.footer .copyright{
+	margin-top: 20px;
+	width:100%;	
+	background-color:#e6e6e6;
+	min-height: 110px;
+}
+
+.footer .copyright .inner{
+	max-width:970px;
+	margin:auto;	
+	position:relative;
+}
+
+.footer .copyright .inner .foot-logo{
+	position:absolute;
+	left:20px;
+	top:19px;
+}
+
+.footer .copyright .inner .text-info{	
+	color:#404040;
+	text-align:center;
+	padding:26px 0 27px 0;
+}

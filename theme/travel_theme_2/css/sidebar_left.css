@@ -1,0 +1,96 @@
+﻿/**SIDEBAR LEFT*/
+.layout .left {
+	font-family: Gulim;
+}
+
+/**SIDEBAR LOGIN*/
+.layout .left .login-sidebar {
+	margin-bottom: 10px;
+}
+
+/** COMPANY BANNNER */
+.layout .left .travel2-company-banner {
+	border: 1px solid #bbbbbb;
+	height: 114px;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+.layout .left .travel2-company-banner img {
+	width: 100%;
+}
+
+/**POSTS LEFT 1 */
+.layout .left .posts-left-1 {
+	margin-bottom: 12px;	
+	height:319px;
+}
+
+/**SIDEBARS LEFT (BANNER) */
+.layout .left .banner-left {
+	border: solid 1px #bbbbbb;
+	margin-bottom: 10px;
+	height:88px;
+	overflow:hidden;
+	background-color:#e6e6e6;
+}
+
+.layout .left .banner-left img {
+	width: 100%;	
+}
+
+/**EXCHANGE RATE*/
+.layout .left .exchange-rate-wrapper {	
+	height:168px;
+	border: 1px solid #bbbbbb;
+}
+
+.layout .left .exchange-rate-wrapper .title {
+	background: #fafafa;
+	border-bottom: 1px solid #bbbbbb;
+	padding: 7px 9px;
+}
+
+.layout .left .exchange-rate-wrapper .title a {
+	color:#444444;
+}
+
+.layout .left .exchange-rate-wrapper .title a:hover {
+	text-decoration: none;
+}
+
+.layout .left .exchange-rate-wrapper .title img {	
+	margin-right: 10px;
+	position:relative;
+	top:-2px;
+}
+.layout .left .exchange-rate  .exchange-info {
+	padding: 5px 8px;
+}
+
+.layout .left .exchange-rate td{
+	padding-bottom:13px;
+}
+
+.layout .left .exchange-rate td img{
+	margin-right:6px;
+	position:relative;
+	top:-2px;
+}
+
+.layout .left .exchange-rate .header-title  td {
+	color: #1e323f;
+	font-size: 9pt;
+	padding-top: 2px;
+}
+
+.layout .left .exchange-rate  tr td.exchange-date > span {
+	float: left;
+}
+
+.layout .left .exchange-rate  tr td .bottom-title {
+	display: inline-block;
+	padding: 0 7px;
+	margin-right: 4px;
+	color: #1d3543;
+}

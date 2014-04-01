@@ -1,0 +1,66 @@
+.layout .container .banner{
+	width: 748px;
+	height: 238px;
+	overflow: hidden;	
+	position: relative;	
+	font-family: dotum;
+	border: solid 1px #bbbbbb;
+	margin-bottom: 10px;
+}
+
+.layout .container .banner-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display:none;
+	width:100%;
+}
+
+.layout .container .banner-image img{
+	width:100%;
+}
+
+.layout .container .banner-image.selected {
+	display: block;
+}
+
+.layout .container .banner .banner-content {
+	position: absolute;
+	top: 189px;
+	left: 0;
+	height: 50px;
+	width: 750px;
+	background: #898989;
+	zoom: 1;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+}
+
+.layout .container .banner p {
+	padding: 18px 16px;
+	color: #ffffff;
+	font-size: 15px;
+	overflow: hidden;
+	width: 636px;
+	white-space: nowrap;
+}
+
+.layout .container .banner .banner-more {
+	position: absolute;
+	top: 189px;
+	right: 0;
+	padding: 18px 16px;
+}
+
+.layout .container .banner .banner-more a{
+	text-decoration:none;
+	color: #ffffff;	
+	font-size: 15px;
+	font-weight: bold;
+}
+.travel2-company-banner {
+	height: 116px;
+}
+.travel2-company-banner img {
+	height: 100%;
+}
