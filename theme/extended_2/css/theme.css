@@ -1,6 +1,7 @@
 .layout{
 	width:100%;	
 	font-family:dotum;
+	min-height: 300px;
 }
 
 .layout .header{

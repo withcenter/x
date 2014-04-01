@@ -13,8 +13,10 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 						<div><b>이메일</b> philgohelp@gmail.com | <b>주소</b> 경상남도 김해시 한림면 신천리 284| <b>사업자 종목</b> 홈페이지 운영 상담 | <b>개인정보관리책임자</b> 송재호</div>
 						<div class='bottom_text'><i>본 사이트 "위세너" 회사에 의해 운영되고 있으며, "공정거래위원회"에서 제시하는 "전자상거래표준약관"을 따르고,</i></div>
 						<div><i>전자상거래소비자보호법에 따라 사이트 이용의 안전을 위해 보증보험에 가입을 하였습니다.</i></div>
+						<? if ( super_admin() ) {?>
+							<a href='<?=url_site_config()?>'>사이트 관리</a>
+						<? }?>
 					</span>
-					
 				</div>
 			</div>
 		</div>
