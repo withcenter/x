@@ -24,5 +24,12 @@ $(function(){
 		}, 300);		
 	});
 	
+	$("li.more-menu").click(function(){
+		$(".menu-more-640px").slideToggle();
+	});
+	
+	$(".menu-more-640px").click(function() {
+		$(".menu-more-640px").slideToggle();
+	});
 	
 });
