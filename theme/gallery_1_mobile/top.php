@@ -14,4 +14,4 @@
 <? } ?>
 
 <a href='<?=url_language_setting()?>'>언어변경</a>
-<a class='last_menu' href='<?=g::url()?>?device=mobile'>모바일</a>
+<a class='last_menu' href='<?=g::url()?>?device=pc'>PC</a>

@@ -25,19 +25,20 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	<div class='header' style='background: url("<?=x::theme_url('img/bg_pattern.png')?>")'>
 		<div class='inner'>
 			<div class='login-signup'>
-				<? if ( login() ) { ?><a href='<?=G5_BBS_URL?>/login.php'>Welcome <?=$member['mb_nick']?></a>, <a href='<?=G5_BBS_URL?>/member_confirm.php?url=register_form.php'>Profile</a><?}
-				else {?><a href='<?=G5_BBS_URL?>/login.php'>LOGIN</a> | <a href='<?=G5_BBS_URL?>/register.php'>SIGN UP</a><?}?>
+				<? if ( login() ) { ?><a href='<?=$profile_msg_url?>'><?=$member['mb_nick']?> 로그인</a> | <a href='<?=$log_href?>'>로그아웃</a><?}
+				else {?><a href='<?=$log_href?>'>로그인</a> | <a href='<?=$profile_msg_url?>'>회원가입</a><?}?>
 			</div>
 			<div class='logo-wrapper'>
 				<div class='logo'><a href='<?=G5_URL?>'><img src='<?=x::url_theme()?>/img/logo.png'/></a></div>
 			</div>
 			<div class='right_main_menus above-400px'>
 				<ul>
-					<li><a href='<?=G5_BBS_URL?>/write.php?bo_table=quotation'>‘X’ 빌더 소개 </a></li>
-					<li><a href='<?=G5_BBS_URL?>/write.php?bo_table=ms_www_2'>질문과답변</a></li>
-					<li><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_3'>자유게시판</a></li>
-					<li><a href='<?=g::url()?>/?page=ms_www_4'>다운로드</a></li>
-					<li><a href='<?=g::url()?>/?page=template_main'>설치 사이트 </a></li>	
+					<li class='more-menu'><a href='javascript:void(0)'>More</a><li>
+					<li><a href='<?=g::url()?>/?page=intro'>X 빌더소개 </a></li>
+					<li class='menu-2'><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_4'>자유토론</a></li>
+					<li class='menu-3'><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_2'>질문답변</a></li>
+					<li class='menu-4'><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_5'>다운로드</a></li>
+					<li><a href='<?=g::url()?>/?page=template_main'>템플릿</a></li>	
 				</ul>						
 				<div style='clear:both;'></div>
 			</div>
@@ -45,15 +46,23 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		</div>		
 			<div class='right_main_menus below-400px'>
 				<ul>
-					<li><a href='<?=G5_BBS_URL?>/write.php?bo_table=quotation'>‘X’ 빌더 소개 </a></li>
-					<li><a href='<?=G5_BBS_URL?>/write.php?bo_table=ms_www_2'>질문과답변</a></li>
-					<li><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_3'>자유게시판</a></li>
-					<li><a href='<?=g::url()?>/?page=ms_www_4'>다운로드</a></li>
-					<li><a href='<?=g::url()?>/?page=template_main'>설치 사이트 </a></li>						
+					<li class='more-menu'><a href='javascript:void(0)'>More</a><li>
+					<li><a href='<?=g::url()?>/?page=intro'>X 빌더소개 </a></li>
+					<li><a href='<?=g::url()?>/?page=template_main'>템플릿</a></li>						
 				</ul>						
 				<div style='clear:both;'></div>
 			</div>
 			<div style='clear:both;'></div>
+	</div>
+	<div class='menu-more-640px'>
+		<div class='inner'>
+			<ul>
+				<li><a href='<?=G5_BBS_URL?>/write.php?bo_table=ms_www_2'>질문과답변</a></li>
+				<li><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_3'>자유게시판</a></li>
+				<li class='last-menu'><a href='<?=g::url()?>/?page=ms_www_4'>다운로드</a></li>
+			</ul>
+		<div class='close-menu'>X</div>
+		</div>
 	</div>
 	<!--[if lte IE 8]>
 		<style>
@@ -89,7 +98,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	<div class='container_wrapper'>
 		<div class='container'>
 			<div class='call_us_bubble' style='background: url("<?=x::theme_url('img/call_us.png')?>")'>
-				CALL US!<br>070-7529-1749
+				고객센터<br>070-7529-1749
 			</div>
 	
 <script>

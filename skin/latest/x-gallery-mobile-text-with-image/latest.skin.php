@@ -18,16 +18,18 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 			//if ( !$imgsrc ) $img = $latest_skin_url.'/img/no-image.png';
 			//else $img = $imgsrc['src'];
 			if( $imgsrc ) $img = $imgsrc['src'];
-			else $img = $latest_skin_url.'/img/no-image.png';
-			
-			
-			echo "<td width=59'><div class='image_wrapper'><a href='".$list[$i]['href']."'><img src='$img'/></a></div></td>";
-			        
-            echo "<td>					
-					<div class='contents_wrapper'><a href='".$list[$i]['href']."'>".cut_str(strip_tags($list[$i]['wr_content']), 120, '...')."</a></div>			
-				</td>";
+			else $img = $latest_skin_url.'/img/no-image.png';						
+			?>
+			<td width='59'>
+				<div class='image_wrapper'>
+					<a href="<?=$list[$i]['href']?>"><img src='<?=$img?>'/></a>
+				</div>
+			</td>			       
+            <td>					
+				<div class='contents_wrapper'><a href='<?=$list[$i]['href']?>'><?=cut_str(strip_tags($list[$i]['wr_content']), 120, '...')?></a></div>			
+			</td>
 				
-             ?>	
+             
 	</tr>	
     <?php }  ?>
     <?php if(count($list) == 0) { //게시물이 없을 때  ?>

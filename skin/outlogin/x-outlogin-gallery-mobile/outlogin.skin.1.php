@@ -6,7 +6,6 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 <link rel="stylesheet" href="<?php echo $outlogin_skin_url ?>/style.css">
 
 <div class='login-box-gallery-mobile'>
-	<div class='triangle'></div>
 	<div class='login-box-middle'>	
 		<form name="foutlogin" action="<?php echo $outlogin_action_url ?>" onsubmit="return fhead_submit(this);" method="post" autocomplete="off">
 			<input type="hidden" name="url" value="<?php echo $outlogin_url ?>">

@@ -1,12 +1,23 @@
 .layout .header .search_and_top_wrapper{
 	float:right;
 	position:relative;
-	text-align:right;	
+	text-align:right;
+	width:50%;
 }
 
 
+.layout .header .inner #gallery_1_logo{
+	float:left;	
+	width:50%;
+}
+
+.layout .header .inner #gallery_1_logo img{
+	float:left;
+	max-width:210px;	
+}
+
 .layout .header .top{
-	margin-bottom:10px;
+	margin-bottom:10px;	
 }
 
 .layout .header .top a{
@@ -18,12 +29,24 @@
 	margin-right:0;
 }
 
+.layout .header  .search_and_top_wrapper .login.triangle{
+	position:absolute;
+	right:60px;
+	bottom:-10px;
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;	
+	border-bottom: 5px solid #526e96;
+	display:none;
+}
+
 .layout .header  .search_and_top_wrapper .login_icon_wrapper{
 	display:inline-block;
 	width:40px;
 	height:40px;
 	position:relative;
-	float:right;
+	float:left;
 	margin-right:5px;
 	background-color:#ff8866;
 	cursor:pointer;
@@ -51,27 +74,29 @@
 	margin-top:10px;
 }
 
-.layout .header  .gallery_1_search_text_mobile_wrapper .inner .triangle-border{
+.layout .header  .search_and_login_wrapper .search.triangle-border{
 	position:absolute;
-	right:8px;
-	top:-7px;
+	right:15px;
+	bottom:-11px;
 	width: 0; 
 	height: 0; 
 	border-left: 6px solid transparent;
 	border-right: 6px solid transparent;	
-	border-bottom: 6px solid #526e96;	
+	border-bottom: 6px solid #526e96;
+	display:none;
 }
 
-.layout .header  .gallery_1_search_text_mobile_wrapper .inner .triangle{
+.layout .header  .search_and_login_wrapper .search.triangle{
 	position:absolute;
-	right:10px;
-	top:-4px;
+	right:17px;
+	bottom:-12px;
 	width: 0; 
 	height: 0; 
 	border-left: 4px solid transparent;
 	border-right: 4px solid transparent;	
 	border-bottom: 4px solid #ffffff;
 	z-index:1;
+	display:none;
 }
 
 .layout .header  #gallery_1_search_text_mobile{
@@ -83,10 +108,16 @@
 	/*display:none;*/
 }
 
+.layout .header .search_and_login_wrapper{
+	width:85px;
+	float:right;
+	position:relative;
+}
+
 .layout .header .search_and_top_wrapper #gallery_1_search_submit_mobile{
 	background-color:#ff8866;
 	padding:8px 8px 8px 8px;
-	float:right;
+	float:left;	
 }
 
 .layout .header .search_and_top_wrapper #gallery_1_search_submit_mobile.selected{
