@@ -33,9 +33,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			</div>
 			<div class='right_main_menus above-400px'>
 				<ul>
-					<li><a href='<?=g::url()?>/?page=intro'>X 빌더 소개 </a></li>
-					<li><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_4'>자유게시판</a></li>
-					<li><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_2'>질문과답변</a></li>
+					<li><a href='<?=g::url()?>/?page=intro'>X 빌더소개 </a></li>
+					<li><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_4'>자유토론</a></li>
+					<li><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_2'>질문답변</a></li>
 					<li><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_5'>다운로드</a></li>
 					<li><a href='<?=g::url()?>/?page=template_main'>템플릿</a></li>	
 				</ul>						
@@ -45,7 +45,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		</div>		
 			<div class='right_main_menus below-400px'>
 				<ul>
-					<li><a href='<?=g::url()?>/?page=intro'>X 빌더 소개 </a></li>
+					<li><a href='<?=g::url()?>/?page=intro'>X 빌더소개 </a></li>
 					<li><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_2'>질문과답변</a></li>
 					<li><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_4'>자유게시판</a></li>
 					<li><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_5'>다운로드</a></li>
