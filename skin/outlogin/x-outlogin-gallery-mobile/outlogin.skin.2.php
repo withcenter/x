@@ -10,38 +10,36 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 	<table width='100%' cellpadding=0 cellspacing=0><tr valign='top'>
 	<td>
 		<div class='user-info'>
-		<? if ($is_admin != 'super') {  ?>
-				<div class='user-logged-name'>Welcome, <?=$nick?></div>
-		<? }?>
-				<div class='user-admin'>		
-					<img src='<?=$outlogin_skin_url?>/user-image.png'/>
-					<span class='edit-prof'><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=register_form.php">내 프로필</a></span>
-					<? if ($is_admin == 'super') {  ?>
-						<span class='admin_link'><a href="<?=x::url_admin()?>">X ADMIN</a><br><a href="<?php echo G5_ADMIN_URL ?>">ADMIN</a></span>
-					<? }
-						else {?>
-						<span class='user-scrap'>
-								<a href="<?php echo G5_BBS_URL ?>/scrap.php" target="_blank" class='user-scrap'>스크랩</a>
-						</span>
-					<?}
-					?>
-					<div style='clear: both'></div>
+		<? if ( super_admin() ) {  ?>
+				<div class='top'>
+					<div class='left'>
+						<div><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=register_form.php">내 프로필</a></div>
+					</div>
+					<div class='right'>
+						<?if ( admin() ){?>
+						<div><a class='info text' href='<?=x::url_admin()?>'>X-ADMIN</a></div>
+						<? if ( super_admin() ) {?>
+						<div><a class='info text' href='<?=g::url()?>/adm'>ADMIN</a></div>
+						<? }?>						
+					<?}?>					
+					</div>
+					<div style='clear;both'></div>
 				</div>
+		<? }?>
 			
 			<div class='user-meta'>
 				<span class='user-icon-points'>
 					<span class='user-message'>
-					<?if( !$memo_not_read ){ ?>
 						<img src='<?=$outlogin_skin_url?>/msg-icon.png'/>
-					<?}else{?>
-						<img src='<?=$outlogin_skin_url?>/msg-icon-b.png'/>
-					<?}?>
-						<a href="<?php echo G5_BBS_URL ?>/memo.php" target="_blank" class='user_memo'>쪽지 <span class='memo-not-read'>[<?=$memo_not_read?>] </span></a>
+						<?
+						if( !$memo_not_read ) $no_msgs = 'no-msg';
+						?>
+						<a href="<?php echo G5_BBS_URL ?>/memo.php" target="_blank" class='user_memo'>쪽지 <span class='memo-not-read <?=$no_msgs?>'>[<?=$memo_not_read?>] </span></a>
 				
 					</span>
 					<br>
 					<span class='user-points'>
-						<img src='<?=$outlogin_skin_url?>/paper.png'/>
+						<img src='<?=$outlogin_skin_url?>/star.png'/>
 						<? if ( admin() ) {?>
 							<a href="<?=url_site_config()?>" class='user-win'>사이트 관리</a>
 						<? }
@@ -60,6 +58,7 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 		</div>
 	</td>
 	</tr></table>
+	<div class='user-logged-name'><?=$nick?> IS LOGGED IN</div>
 </div>
 </div> 
 
