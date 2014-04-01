@@ -1,4 +1,6 @@
 <?php
+
+	include "menu.php";
 	
 	$a = explode('/', $source_link);
 	$pname = $a[ count($a) - 1 ];

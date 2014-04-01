@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="<?=module("$module.css")?>">
-<?include 'menu_theme.php'?>
+<?include 'menu.php'?>
 <div class='installed'>
 <?php
 $dirs = file::getDirs(X_DIR_THEME);

@@ -8,9 +8,9 @@
 <div class='ftp_install'>
 	<div class='ftp_install_fields'>
 	<h1>FTP INSTALL</h1>
-		Host : <input type='text' name='host' value='<?=$host?>'>
+		Host : <input type='text' name='host' value='<?=etc::domain()?>'>
 		<br>
-		X Folder : <input type='text' name='dir' value='<?=$dir?>'>/theme/<?=$pname?> to install...<br>
+		X Folder : <input type='text' name='dir' value='<?=x::dir()?>' style='width: 180px;'><br>
 
 		FTP ID: <input type='text' name='id'><br>
 		FTP Password: <input type='text' name='password'><br>
