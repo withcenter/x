@@ -37,7 +37,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 					<li><a href='<?=G5_BBS_URL?>/write.php?bo_table=ms_www_2'>질문과답변</a></li>
 					<li><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_4'>자유게시판</a></li>
 					<li><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_5'>다운로드</a></li>
-					<li><a href='<?=g::url()?>/?page=template_main'>템플릿 갤러리</a></li>	
+					<li><a href='<?=g::url()?>/?page=template_main'>템플릿갤러리</a></li>	
 				</ul>						
 				<div style='clear:both;'></div>
 			</div>
@@ -49,7 +49,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 					<li><a href='<?=G5_BBS_URL?>/write.php?bo_table=ms_www_2'>질문과답변</a></li>
 					<li><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_4'>자유게시판</a></li>
 					<li><a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_5'>다운로드</a></li>
-					<li><a href='<?=g::url()?>/?page=template_main'>템플릿 갤러리</a></li>						
+					<li><a href='<?=g::url()?>/?page=template_main'>템플릿갤러리</a></li>						
 				</ul>						
 				<div style='clear:both;'></div>
 			</div>
