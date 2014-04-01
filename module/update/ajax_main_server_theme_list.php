@@ -7,6 +7,7 @@
 		)
 	);
 	
+
 	foreach ( $posts as $p ) {
 		$project_url = $p['wr_link1'];
 		$u = parse_url($project_url);
