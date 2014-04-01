@@ -36,15 +36,15 @@
 	$sidebar_content = ob_get_clean();
 ?>
 <!-- 콘텐츠 시작 { -->
-<div id="wrapper">
-	<table cellpadding=0 cellspacing=0 border=1 width='100%'>
+<div class="main-container">
+	<table cellpadding=0 cellspacing=0 border=0>
 		<tr valign='top'>
 		<?php
 		if(x::meta('theme_sidebar') == 'left') {?>
 			<?=$sidebar_content?>
 			<td width=10></td>
 		<?}?>
-			<td>
+			<td width=600>
 				<div>
 					<?php if ((!$bo_table || $w == 's' ) && !defined("_INDEX_")) { ?><div id="container_title"><?php echo $g5['title'] ?></div><?php } ?>
 

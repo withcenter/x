@@ -3,7 +3,7 @@
 	background: #526e96;
 	color: #ffffff;	
 	width:100%;		
-	position:relative;
+	position:relative;	
 }
 
 .login-box-gallery-mobile .login-box-middle{	
@@ -23,7 +23,7 @@
 
 .login-box-gallery-mobile.logout-box-gallery-mobile {
 	width:100%;
-	font-size:1.2em;	
+	font-size:1em;	
 }
 
 #header .login-box-gallery-mobile.logout-box-gallery-mobile  a{
@@ -88,6 +88,30 @@
 	padding:10px;
 }
 
+.logout-box-gallery-mobile .logout-inner a{
+	color: #ffffff;	
+}
+
+.logout-box-gallery-mobile .logout-inner .logout-btn-td{
+	width:95px;
+}
+
+.logout-box-gallery-mobile .logout-inner .top{
+	padding-bottom:10px;
+	height:15px;	
+}
+
+.logout-box-gallery-mobile .logout-inner .top .left{
+	float:left;
+	width:50%;	
+}
+
+.logout-box-gallery-mobile .logout-inner .top .right{
+	float:left;
+	width:50%;
+	text-align:right;	
+}
+
 .logout-box-gallery-mobile #ol_after_info {
 	background-color: #0e5565;
 	color: #ffffff;
@@ -120,7 +144,8 @@
 	margin:0 7px 0 2px;
 }
 
-.logout-box-gallery-mobile.user-meta {
+.logout-box-gallery-mobile .user-meta {
+	border-top:1px solid #48586e;
 	padding-top: 4px;
 	padding-bottom: 0;	
 	position: relative;	
@@ -174,6 +199,10 @@
 
 }
 
+.login-box-gallery-mobile .user-meta span.user-message .memo-not-read.no-msg{
+	color:#c7c7c7;
+}
+
 .user-meta span.user-points img {
 	margin-right:5px;
 }
@@ -194,7 +223,7 @@
 }
 
 .login-box-gallery-mobile .logout-inner {
-	padding:10px 10px 0 10px;
+	padding:20px 10px 10px 20px;
 }
 
 .login-box-gallery-mobile .log_out {
@@ -202,11 +231,11 @@
 }
 
 .login-box-gallery-mobile .user-logged-name {
-	margin-top: 6px;
-	text-align: left;	
-	font-size: 1.2em;
-	color: #ffffff;
-	height:16px;
+	border-top: 1px solid #48586e;
+	padding-top: 6px;
+	margin-right:95px;
+	text-align: left;		
+	color: #ffffff;	
 	word-break:break-all;
 	overflow:hidden;
 }
@@ -246,5 +275,38 @@
 	
 	.logout-box-gallery-mobile .user-info img{
 		display:none;
+	}
+}
+
+@media all and ( max-width: 285px ) {
+	
+	.logout-box-gallery-mobile{
+		font-size:.9em!important;
+	}
+	
+	.logout-box-gallery-mobile .user-info img{
+		display:none;
+	}
+}
+
+@media all and ( max-width: 260px ) {
+	.log_out {
+		width:70px;
+	}
+	
+	.logout-btn-td{
+		width:70px!important;
+	}
+	
+	.log_out img{
+		width:100%;
+	}
+	
+	.layout .header .user-meta{
+		margin-right:10px!important;
+	}
+	
+	.login-box-gallery-mobile .user-logged-name{
+		margin-right:80px!important;
 	}
 }

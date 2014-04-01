@@ -46,3 +46,27 @@
 .gallery_mobile_images_with_captions_bottom .container .images_with_captions .content a{
 	text-decoration:none;
 }
+
+@media all and ( max-width: 360px ) {	
+	.gallery_mobile_images_with_captions_bottom .container .images_with_captions .content{	
+		height:132px;
+	}
+}
+
+@media all and ( max-width: 336px ) {	
+	.gallery_mobile_images_with_captions_bottom .container .images_with_captions .content{	
+		height:111px;
+	}
+}
+
+@media all and ( max-width: 310px ) {	
+	.gallery_mobile_images_with_captions_bottom .container .images_with_captions .content{	
+		height:90px;
+	}
+}
+
+@media all and ( max-width: 270px ) {	
+	.gallery_mobile_images_with_captions_bottom .container .images_with_captions .content{	
+		height:71px;
+	}
+}
