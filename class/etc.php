@@ -629,7 +629,7 @@ EOH;
 	 */
 	static function load_and_parse_xml_into_assoc( $path )
 	{
-		$lines = file( $path );
+		@$lines = file( $path );
 		if ( $lines ) {
 			$lines = implode('', $lines);
 			
