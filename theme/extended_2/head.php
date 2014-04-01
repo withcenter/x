@@ -25,8 +25,8 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	<div class='header' style='background: url("<?=x::theme_url('img/bg_pattern.png')?>")'>
 		<div class='inner'>
 			<div class='login-signup'>
-				<? if ( login() ) { ?><a href='<?=G5_BBS_URL?>/login.php'>Welcome <?=$member['mb_nick']?></a>, <a href='<?=G5_BBS_URL?>/member_confirm.php?url=register_form.php'>Profile</a><?}
-				else {?><a href='<?=G5_BBS_URL?>/login.php'>LOGIN</a> | <a href='<?=G5_BBS_URL?>/register.php'>SIGN UP</a><?}?>
+				<? if ( login() ) { ?>Welcome <a href='<?=$profile_msg_url?>'><?=$member['mb_nick']?></a> | <a href='<?=$log_href?>'>LOGOUT</a><?}
+				else {?><a href='<?=$log_href?>'>LOGIN</a> | <a href='<?=$profile_msg_url?>'>SIGN UP</a><?}?>
 			</div>
 			<div class='logo-wrapper'>
 				<div class='logo'><a href='<?=G5_URL?>'><img src='<?=x::url_theme()?>/img/logo.png'/></a></div>
