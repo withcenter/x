@@ -17,4 +17,18 @@ $(function(){
 			current_row++;
 		}
 	});
+	
+	$(".footer-view").click(function(){
+		$(".site-title, .menu-links, .prev-nav, .footer-full-links, .footer-view-clicked").toggle();
+		$(".inner-footer-links").addClass('clicked');
+		$(".footer-links").css('background','#2d3b64');
+		$(".clicked_info").css('display','block');
+	});
+	
+	$(".footer-view-clicked").click(function(){
+		$(".site-title, .menu-links, .prev-nav, .footer-full-links, .footer-view-clicked").toggle();	
+		$(".inner-footer-links").removeClass('clicked');
+		$(".footer-links").css('background','#47547a');
+		$(".clicked_info").css('display','none');
+	});
 });
