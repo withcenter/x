@@ -1,0 +1,49 @@
+<?php
+	if ( empty($type) || empty($source_link) ) {
+		echo json_encode( array('code'=>'-2', 'message'=>"no type or source_link provided") );
+		exit;
+	}
+
+	$a = explode('/', $source_link);
+	$name = $a[ count($a) - 1 ];
+
+	$pu = parse_url( urldecode($source_link) );
+	$url_git_code_server	= "https://codeload.github.com";
+	$url_download		= "$url_git_code_server$pu[path]/zip/master";
+	$path_tmp		= g::dir() . '/data/tmp';
+	$path_tmp_project	= $path_tmp. '/' . $name;
+	$path_tmp_zip		= "$dir_tmp_project.zip";
+
+
+
+di("step 0 : $path_tmp_project");
+exit;
+	if ( is_dir( $path_tmp_project ) ) file::delete_folder( $path_tmp_project );
+
+	di("step 1");
+exit;
+
+	$path_project		= x::dir() . "/$type/$name";
+
+	$content = file::download( $url_download );
+	di("step 2");
+
+	@$re = file::write( $path_tmp_zip, $content );
+	if ( $re ) {
+		echo json_encode( array('code'=>'-1', 'message'=>"Error on writing zip file to : $path_tmp_zip") );
+		exit;
+	}
+	
+	di("step 3");
+
+	
+	$zip = new ZipArchive;
+	if ($zip->open($path_tmp_zip) == TRUE) {
+		$zip->extractTo($dir_tmp_project);
+		$zip->close();
+	}
+	di("step 4");
+
+
+
+//	ssh::copy( $host, $id, $password, $path_tmp_project 
