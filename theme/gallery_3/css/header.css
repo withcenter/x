@@ -75,7 +75,7 @@
 }
 
 .header .mobile-menu {
-	display: none;
+	display: none;	
 }
 
 .mobile-main-menu {
@@ -84,11 +84,18 @@
 	list-style: none;
 }
 
+.mobile-menu-top {
+	max-width: 960px;
+	margin: 0 auto;
+	display: none;	
+	border-bottom: solid 1px #a3a3a3;
+}
+
 .mobile-menu {
 	max-width: 960px;
 	margin: 0 auto;
-	display: none;
-	border-bottom: solid 1px #dedede;
+	display: none;	
+	border-bottom: solid 3px #dedede;
 }
 
 .mobile-main-menu {
@@ -260,7 +267,7 @@ li.menu-title .dropdown-icon {
 		left: 38%;
 	}
 	
-	.header .mobile-menu {
+	.header .mobile-menu, .header .mobile-menu-top{
 		position: absolute;
 		top: 0;
 		left: 0;

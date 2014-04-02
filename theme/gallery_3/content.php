@@ -25,7 +25,7 @@
 				$fake_first_image_subject = $banners[0]['subject'];
 				$fake_first_image_content = $banners[0]['content'];
 				?>			
-			<img class='height_support_image' src='<?=$fake_first_image?>'/>
+			<img class='height_support_image' src='<?=$fake_first_image?>'/>			
 			<div class='inner'>			
 				<div class='banner'>	
 					<div class='banner_holder'>
@@ -80,3 +80,11 @@
 				</div>
 			</div><!--/inner-->
 		</div><!--banner-container-->
+		<div class='lower_commands'>
+			<?for( $i = 1; $i <= $total_banners; $i++ ){?>
+				<div class='bullet' banner_num='<?=$i?>'>
+					<img class='off' src = '<?=x::url_theme()?>/img/change_banner_bottom.png'/>					
+					<img class='on' src = '<?=x::url_theme()?>/img/change_banner_bottom_selected.png'/>					
+				</div>
+			<?}?>
+		</div>

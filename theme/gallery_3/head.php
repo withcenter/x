@@ -57,7 +57,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 					<a href="javascript: void(0)" class='top-search-button'></a>
 				</div>
 				<div style='clear: left'></div>
-				<div class='mobile-menu'><a href="javascript: void(0)" class='mobile-menu-button'><img src="<?=x::theme_url('img/menu_dropdown.gif')?>" width=50 height=50/></a></div>
+				<div class='mobile-menu-top'><a href="javascript: void(0)" class='mobile-menu-button'><img src="<?=x::theme_url('img/menu_dropdown.gif')?>" width=50 height=50/></a></div>
 			</div>
 		</div><!--inner-header-->
 	</div><!--header-->
