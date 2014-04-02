@@ -9,6 +9,7 @@
 
 .layout .header {
 	border-bottom: solid 1px #a4a4a4;
+	z-index: 999;
 }
 
 .layout .header .inner-header {
@@ -18,11 +19,19 @@
 }
 
 .layout .content {
+<<<<<<< HEAD
 	
+=======
+	z-index: 999;
+>>>>>>> 1c9594b8b7d8875b077e66421a80554f0ddde275
 }
 
 
 .layout .content .inner-content {
 	max-width: 960px;
 	margin: 0 auto;
+}
+
+.layout .footer {
+	z-index: 999;
 }
