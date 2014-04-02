@@ -105,8 +105,8 @@
 
 li.menu-title .dropdown-icon {
 	position: absolute;
-	right: 5px;
-	top: 4px;
+	right: 15px;
+	top: 7px;
 }
 
 .mobile-main-menu li a, .mobile-main-menu li {
@@ -120,6 +120,37 @@ li.menu-title .dropdown-icon {
 	border-bottom: 1px solid #1e333f;
 	padding-left: 40px;
 	display: none;
+}
+
+/*HIDDEN MOBILE NAVIGATION*/
+.hidden-mobile-navigation {
+	background: #ffffff;
+	height: 100%;
+	width: 100%;
+	z-index: 10000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.close-mobile-navigation {
+	width: 100%;
+	height: 42px;
+	background: #0091dc;
+	cursor: pointer;
+	text-align: right;
+	padding: 2px 0;
+}
+
+.close-mobile-navigation img {
+	width: 24px;
+	height: 24px;
+	margin: 12px 17px 0 0;
+}
+
+.hidden-mobile-navigation .inner {
+	padding: 20px;
 }
 	
 /* SEARCH */
@@ -178,6 +209,44 @@ li.menu-title .dropdown-icon {
 	position: absolute;
 	bottom: -1px;
 	right: 20px;
+}
+
+.hidden-mobile-menu, .hidden-top-menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.hidden-mobile-menu li {
+	margin-bottom: 18px;
+}
+
+.hidden-mobile-menu li a {
+	width: 110px;
+	color: #aaaeb2;
+	font-size: 16px;
+	border-bottom: 4px solid #e1e1e1;
+	padding: 0 0 12px;
+	display: inline-block;
+	font-weight: 600;
+	text-decoration: none;
+	line-height: 140%;
+}
+
+.hidden-top-menu {
+	width: 110px;
+	border: 1px solid #e1e1e1;
+	border-top: 0;
+}
+
+.hidden-top-menu li a {
+	display: block;
+	padding: 6px 8px;
+	color: #293848;
+}
+
+.hidden-top-menu li {
+	border-top: 1px solid #e1e1e1;
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
@@ -266,6 +335,13 @@ li.menu-title .dropdown-icon {
 		left: 0;
 		display: block;
 	}
+
+	.header .mobile-menu img {
+		width: 51px;
+		height: 49px;
+		border: 0;
+		vertical-align: middle;
+	}
 	
 	.search-container {
 		height: 110px;
@@ -287,5 +363,21 @@ li.menu-title .dropdown-icon {
 	
 	.mobile-menu {
 		display: block;
+	}
+	
+	.header .inner-header {
+		border-bottom: 1px solid #a3a3a3;
+	}
+	
+	.layout .header {
+		border-bottom: none !important;
+	}
+}
+
+@media only screen and (max-width: 280px) {
+	.header .logo a {
+		top: 8px;
+		position: absolute;
+		left: 32%;
 	}
 }

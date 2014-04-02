@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="<?=x::theme_url()?>/css/tail.css">
+<script src="<?=x::theme_url()?>/js/tail.js"></script>
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 ?>
@@ -8,8 +9,20 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		<div class='inner-footer'>
 			<div class='footer-links'>
 				<div class='inner-footer-links'>
-				
+					<span class='site-title'> <?=x::meta('title')?></span>
+			
+				<div class='menu-links'>
+					<ul>
+						<?="<li class='first-menu'>" . implode( "</li><li>", x::menu_links('left') ) . "</li>"?>
+					</ul>
 				</div>
+				<div class='prev-nav'>
+					<img src="<?=x::theme_url('img/footer_prev.gif')?>" class='footer-prev'/>
+					<img src="<?=x::theme_url('img/footer_next.gif')?>" class='footer-next'/>
+					<span>view all</span><img src="<?=x::theme_url('img/footer_view_all.gif')?>" class='footer-view'/>
+				</div>
+				<div style='clear: left'></div>
+			</div>
 			</div>
 			<div class='footer-menu-copyright'>
 				<div class='footer-menu-social'>

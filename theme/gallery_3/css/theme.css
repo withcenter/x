@@ -9,6 +9,7 @@
 
 .layout .header {
 	border-bottom: solid 1px #a4a4a4;
+	z-index: 999;
 }
 
 .layout .header .inner-header {
@@ -18,11 +19,15 @@
 }
 
 .layout .content {
-	min-height: 500px;
+	z-index: 999;
 }
 
 
 .layout .content .inner-content {
 	max-width: 960px;
 	margin: 0 auto;
+}
+
+.layout .footer {
+	z-index: 999;
 }
