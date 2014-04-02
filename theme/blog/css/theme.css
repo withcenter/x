@@ -123,12 +123,16 @@
 	border-top: 1px solid #d5d5d5;
 }
 
-#aside .menu-name a{
+#aside .menu-name  a{
 	display: inline-block;
 	height: 25px;
 	line-height: 25px;
 	padding-left: 10px;
 	width: 200px;
+}
+
+#aside .categories ul li a {
+font-size: 9pt;
 }
 
 #aside .menu-name a:hover {
@@ -214,7 +218,6 @@
 
 #aside .categories ul li a {
 	font-family: Helvetica;
-	font-size: 12pt;
 	color: #565656;
 	text-decoration: none;
 }

@@ -32,14 +32,10 @@
 	<div class='small-title'>메뉴</div>
 	<ul>
 	<? 
-		$menu_1 = x::meta('menu_1');
-		if ( empty($menu_1) ) $menu_1 = x::meta('menu_1', bo_table( 1 ) );
-		for ( $i = 1; $i <= 10; $i++ ) { 
-		$option = db::row("SELECT bo_subject FROM $g5[board_table] WHERE bo_table='".x::meta('menu_'.$i)."'");
-		${'menu_'.$i} = meta('menu_'.$i);
-		if ( ${'menu_'.$i} ) {
-			?><li class='menu-name'><a style='font-size: 9pt;' href='<?=g::url()?>/bbs/board.php?bo_table=<?=x::meta('menu_'.$i)?>'><?=$option['bo_subject']?></a></li>
-		<?}}?>
+		$sidemenus = x::menu_links();
+		foreach ( $sidemenus as $sm ) {?>
+			<li class='menu-name'><?=$sm?></li>
+		<? }?>
 	</ul>	
 </div>
 
@@ -82,5 +78,4 @@ if( empty( $menu_1 ) ) $menu_1 = bo_table(1);
 	</form>
 	</fieldset>
 </div>
-
 

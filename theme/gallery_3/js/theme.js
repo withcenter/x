@@ -15,6 +15,10 @@ $(function(){
 	
 	$(".mobile-main-menu li.menu-title").click(function(){
 		$(".mobile-main-menu li.sub").toggle();
+		var imgsrc = $(".arrow_icon").attr('src');
+		var imgpath = imgsrc.substring(imgsrc.lastIndexOf('/'),0);
+		if ( imgsrc == imgpath+"/arrow_down.png" ) $(".arrow_icon").attr('src', imgpath+"/arrow_up.png");
+		else $(".arrow_icon").attr('src', imgpath+"/arrow_down.png");
 	});
 	
 /***************BANNER_CLICK******************/	
@@ -104,6 +108,18 @@ $(function(){
 			do_rotate();
 		},4000);
 	});
+	
+	
+	$('.mobile-menu-button').click(function(){
+		$(".hidden-mobile-navigation").css('left',$(window).width()).css('display','block').animate({left: 0},200);
+	});
+	
+	$('.close-mobile-navigation').click(function(){
+		$(".hidden-mobile-navigation").animate({left: $(window).width()},200);
+		$(".hidden-mobile-navigation").promise().done(function(){ $(".hidden-mobile-navigation").css('display','none');	});
+	});
+	
+	
 });
 
 function do_rotate(){
@@ -123,4 +139,8 @@ function do_rotate(){
 		if( curr_banner == 1 )
 		$('.banner').css("left","-100%");
 	});
+
 }
+
+	
+

@@ -27,7 +27,7 @@
 				<en>Menu Left</en>
 				<ko>왼쪽 메뉴</ko>
 			</name>
-			<max>0</max>
+			<max>30</max>
 		</left>
 		<right>
 			<name>
