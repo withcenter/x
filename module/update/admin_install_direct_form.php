@@ -35,7 +35,7 @@ ZipArchive :
 <? if ( $is_error ) { ?>
 	Fix error above.
 <? } else { ?>
-<a href='?module=update&action=admin_direct_install_submit&source_link=<?=$source_link?>&theme=y' style="display:inline-block; padding: 1em; border: 1px solid grey; background-color: #efefef;">
+<a href='?module=update&action=admin_install_direct_submit&source_link=<?=$source_link?>&theme=y' style="display:inline-block; padding: 1em; border: 1px solid grey; background-color: #efefef;">
 	INSTALL Directly into your web server</a>
 <? } ?>
 
