@@ -6,5 +6,9 @@
  *
  */
 	$wo = &$widget_option;
-	include x::dir() . "/widget/$wo[name]/$wo[name].php";
+?>
+<div class="widget">
+	<?php include x::dir() . "/widget/$wo[name]/$wo[name].php"; ?>
+</div>
+
 	
