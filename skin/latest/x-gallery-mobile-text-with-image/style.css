@@ -2,12 +2,18 @@
 	overflow: hidden;
 	border:1px solid #2ca3b4;
 }
+.gallery_1_mobile_list_with_image a:hover {
+	text-decoration: none;
+}
+
+.gallery_1_mobile_list_with_image  table tr td {
+	padding-top: 10px;
+}
 
 .gallery_1_mobile_list_with_image  .image_wrapper {
 	margin-right: 10px;	
 	height:41px;
 	width:59px;
-	padding-top:10px;
 } 
 
 .gallery_1_mobile_list_with_image  .image_wrapper img {
@@ -15,13 +21,24 @@
 } 
 
 /******************/
-.gallery_1_mobile_list_with_image .contents_wrapper {
-	margin-top:5px;
-	height:30px;
+.gallery_1_mobile_list_with_image .subject {
+	height:19px;
 	overflow:hidden;	
-	line-height:17px;
+	line-height:19px;
 	width:100%;	
-	padding-top:10px;
+	word-break:break-all;
+	margin: 1px 0 2px 0;
+}
+
+.gallery_1_mobile_list_with_image .subject a {
+	color: #244158;
+	font-weight: bold;
+}
+.gallery_1_mobile_list_with_image .contents_wrapper {
+	height:19px;
+	overflow:hidden;	
+	line-height:19px;
+	width:100%;	
 	word-break:break-all;
 }
 
