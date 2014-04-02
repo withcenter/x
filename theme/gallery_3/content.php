@@ -1,6 +1,4 @@
 <link rel="stylesheet" href="<?=x::theme_url()?>/css/content.css">
-
-<script src='<?=x::url_theme()?>/js/banner.js' /></script>
 <?
 		$banners = array();
 		for ( $i = 1; $i <= 5 ; $i++) { 
