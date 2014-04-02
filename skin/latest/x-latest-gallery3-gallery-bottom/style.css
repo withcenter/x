@@ -1,0 +1,37 @@
+.bottom-left, .bottom-middle, .bottom-right {
+	float: left;
+	position: relative;
+}
+
+.bottom-left a, .bottom-middle a, .bottom-right a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.bottom-left img, .bottom-middle img, .bottom-right img {
+	width: 100%;
+	border: solid 1px #c0c0c0;
+}
+
+.bottom-left-container, .bottom-middle-container, .bottom-right-container {
+	padding: 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
+.bottom-left-subject, .bottom-middle-subject, .bottom-right-subject {
+	margin-bottom: 10px;
+	height: 12px;
+	overflow: hidden;
+}
+
+.bottom-left-content, .bottom-middle-content, .bottom-right-content {
+	font-size: 20px;
+	font-weight: 800;
+	line-height: 140%;
+	max-width: 50%;
+	height: 110px;
+	overflow: hidden;
+}

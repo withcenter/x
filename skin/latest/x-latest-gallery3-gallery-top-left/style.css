@@ -1,0 +1,41 @@
+.latest-top-left .top-left {
+	padding: 7px 8px 7px 7px;
+	background: #343434;
+}
+
+.top-left a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.top-left-container {
+	position: relative;
+}
+
+.latest-top-left .top-left img {
+	width: 100%;
+	z-index: 1;
+}
+
+.latest-top-left .top-left-subject {
+	position: absolute;
+	bottom: 75px;
+	left: 0;
+	padding: 10px 7px;
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: bold;
+	height: 20px;
+	line-height: 15px;
+	overflow: hidden;
+}
+
+.latest-top-left .top-left-content {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.7);
+	z-index: 2;
+	padding: 10px 7px 20px 7px;
+	color: #ffffff;
+}
