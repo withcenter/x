@@ -1,0 +1,37 @@
+.latest-top-right .top-right {
+	background: #343434;
+	position: relative;
+}
+
+.latest-top-right .top-right a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.top-right-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #ffffff;
+	padding: 20px;
+	line-height: 140%;
+	word-break: break-all;
+}
+
+
+.latest-top-right .top-right img {
+	width: 100%;
+	z-index: 1;
+	border: solid 1px #c0c0c0;
+}
+
+.latest-top-right .top-right-subject {
+	margin-bottom: 10px;
+}
+
+.latest-top-right .top-right-content {
+	font-size: 20px;
+	font-weight: 800;
+	line-height: 140%;
+	max-width: 50%;
+}
