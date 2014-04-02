@@ -27,7 +27,7 @@ ajax_cross_domain_call( {
 	data: data,
 	callback: 'callback_ajax_load'
 } );
-trace( url );
+//trace( url );
 function callback_ajax_load( re )
 {
 	var themes = re;

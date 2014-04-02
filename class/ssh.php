@@ -17,7 +17,7 @@ class ssh
 	 *  
 	 *  @details Use this function to upload files.
 	 */
-	static function ssh_copy( $host, $id, $pw, $path_src, $path_dst )
+	static function copy( $host, $id, $pw, $path_src, $path_dst )
 	{
 		@$connection = ssh2_connect($host, 22);
 		if ( ! $connection ) return self::CONNECTION_FAILED;
