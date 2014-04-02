@@ -1,4 +1,5 @@
 <?php
+	set_time_limit( 600 );
 	if ( empty($dir) || empty($type) || empty($source_link) ) {
 		echo json_encode( array('code'=>'-2', 'message'=>"Wrong input. one of following variable is not provided: path, type, source_link.") );
 		exit;
@@ -22,7 +23,6 @@
 	//di("step 1"); exit;
 
 	$path_target = "$dir/$type/$name";
-
 	$content = file::download( $url_download );
 	//di("step 2");
 
@@ -45,14 +45,15 @@
 
 
 	include x::dir() . '/class/ssh.php';
-	di( "ssh::copy( $host, $id, $password, $path_tmp_project/$name-master, $path_target );");
+//	di( "ssh::copy( $host, $id, $password, $path_tmp_project/$name-master, $path_target );");
 	$re = ssh::copy( $host, $id, $password, "$path_tmp_project/$name-master", $path_target );
 	switch ( $re ) {
 		case ssh::SUCCESS		: $message="sucess"; break;
-		case ssh::CONNECTION_FAILED	: $message="connection failed"; break;
-		case ssh::LOGIN_FAILED		: $message="login failed"; break;
+		case ssh::CONNECTION_FAILED	: $message="Connection failed. Please check the host (or IP)"; break;
+		case ssh::LOGIN_FAILED		: $message="Login failed. Please check the ID and Password"; break;
 		case ssh::SEND_FAILED		: $message="send_failed"; break;
 		case ssh::SOURCE_NOT_FOUND	: $message="source file or directory not found"; break;
+		case ssh::FOLDER_CREATE_FAILED	: $message="fail on creating directory."; break;
 	}
 
 	echo json_encode( array( 'code' => $re, 'message' => $message ) );
