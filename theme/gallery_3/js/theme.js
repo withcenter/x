@@ -25,7 +25,7 @@ $(function(){
 	
 /***************BANNER_CLICK******************/	
 	banner_count = $(".banner-container .banner img").length -2;
-	
+	console.log(banner_count);
 	var total_width_percentage = 100 * banner_count;	
 	$(".banner-container .banner img[banner_num='" + curr_banner + "']").addClass('selected_banner');
 	
@@ -46,7 +46,7 @@ $(function(){
 		}
 		
 		$('.banner').promise().done(function(){			
-			if( curr_banner == 3 )
+			if( curr_banner == banner_count )
 			$('.banner').css("left", "-" + total_width_percentage + "%");
 		});
 		console.log(curr_banner);

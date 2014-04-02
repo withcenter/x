@@ -17,11 +17,15 @@
 		<div class='banner-container'>
 				<?
 				$fake_last_image = g::thumbnail_from_image_tag( "<img src='".$banners[count($banners)-1]['src']."'/>;", bo_table(1), 448, 238);
-				$fake_last_image_subject = $banners[$total_banners-1]['subject'];
-				$fake_last_image_content = $banners[$total_banners-1]['content'];
+				if( $banners[$total_banners-1]['subject'] ) $fake_last_image_subject = $banners[$total_banners-1]['subject'];
+				else $fake_last_image_subject = "No Subject";
+				if( $banners[$total_banners-1]['content'] ) $fake_last_image_content = $banners[$total_banners-1]['content'];
+				else $fake_last_image_content = "No Content";
 				$fake_first_image = g::thumbnail_from_image_tag( "<img src='".$banners[0]['src']."'/>;", bo_table(1), 448, 238);
-				$fake_first_image_subject = $banners[0]['subject'];
-				$fake_first_image_content = $banners[0]['content'];
+				if( $banners[0]['subject'] ) $fake_first_image_subject = $banners[0]['subject'];
+				else $fake_first_image_subject = "No Subject";
+				if( $banners[0]['content'] ) $fake_first_image_content = $banners[0]['content'];
+				else $fake_first_image_content = "No Content"
 				?>							
 			<div class='inner'>			
 				<div class='banner'>	
@@ -35,21 +39,28 @@
 					<? 				
 					$count = 1;
 					foreach ( $banners as $banner ) {				
-						$banner['src'] = g::thumbnail_from_image_tag( "<img src='$banner[src]'>", bo_table(1), 448, 238);
+						$banner['src'] = g::thumbnail_from_image_tag( "<img src='$banner[src]'>", bo_table(1), 448, 238);						
+						if( $banner['href'] ) $banner_href = $banner['href'];
+						else $banner_href = 'javascript:void(0)';
+						if( $banner['subject'] ) $banner_subject = cut_str($banner['subject'],40,'...');
+						else $banner_subject = "No Subject";
+						if( $banner['content'] ) $banner_content = cut_str($banner['content'],100,'...');
+						else $banner_content = "No Content";
 						?>
 						<div class='banner_holder'>
-							<a href='<?=$banner['href']?>'>
+							<a href='<?=$banner_href?>'>
 								<img banner_num = <?=$count?> src='<?=$banner['src']?>'/>
 							</a>
 							<div class='text_content'>
 								<div class = 'banner_subject'>
-									<a href='<?=$banner['href']?>'>
-										<?=cut_str($banner['subject'],40,'...')?>
+									<a href='<?=$banner_href?>'>
+										<?=$banner_subject?>
 									</a>
 								</div>
 								<div class = 'banner_content'>
-									<a href='<?=$banner['href']?>'>
-										<?=cut_str($banner['content'],100,'...')?>
+								
+									<a href='<?=$banner_href?>'>
+										<?=$banner_content?>
 									</a>
 								</div>
 							</div>	
