@@ -25,11 +25,16 @@
  *
  */
 	if ( etc::web() ) include x::dir() . '/etc/rewrite/bbs/visit_insert.inc.php';
+	
+	
+	
+	
 /**     HOOK : begin
  *  ------------------------------------------------------------------
  *
  */
 	if ( register_page() ) include x::dir() . '/etc/hook/register.begin.php';
+	if ( board_page() ) include x::dir() . '/etc/hook/board.begin.php';
 	
 	
 	

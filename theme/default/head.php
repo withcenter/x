@@ -93,7 +93,15 @@
 				<li><a href='<?=G5_URL?>/adm'><?=ln('G5 Admin Page', 'G5 관리자 페이지');?></a></li>
 			<? } ?>
 		</ul>
-		
+		<?php
+			include widget(
+				array(
+					'code'				=> 'side',
+					'no'					=> 5,
+					'name'				=> array( 'sample', 'post_latest', 'post_latest_comment', 'post_best' )
+				)
+			);
+		?>
     </div>
     <div id="container" class='data'>
 		<?php if ((!$bo_table || $w == 's' ) && !defined("_INDEX_")) { ?><div id="container_title"><?php echo $g5['title'] ?></div><?php } ?>

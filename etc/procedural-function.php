@@ -270,6 +270,13 @@ function password_page() {
 }
 
 
+function board_page() {
+	return strpos($_SERVER['PHP_SELF'], 'board.php') !== false;
+}
+
+
+
+
 
 /**
  *  @brief checks admin permission
@@ -373,3 +380,8 @@ function config( $code, $value=null )
                 return $re;
         }
 }
+
+
+
+
+
