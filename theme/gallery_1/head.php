@@ -4,7 +4,6 @@
 <script src='<?=x::url_theme()?>/js/theme.js' /></script>
 
 
-
 <?
 	$theme_sidebar = x::meta('theme_sidebar');
 	if ( empty($theme_sidebar) || $theme_sidebar == 'left') {
@@ -24,7 +23,8 @@
 		float: <?=$content?>;
 	}
 </style>
-<div class='layout'>	
+
+<div class='layout'>
 	<div class='header'>
 		<div class='inner'>
 			<table width='100%' cellpadding=0 cellspacing=0><tr valign='top'>

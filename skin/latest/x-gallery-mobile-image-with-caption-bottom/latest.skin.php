@@ -23,7 +23,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 						</div>
 						<div class='caption'>
 							<div class='subject'><a href='<?=$li['href']?>'><?=$li['subject']?></a></div>
-							<div class='content'><a href='<?=$li['href']?>'><?=cut_str(get_text(strip_tags($li['wr_content'])),"220","...")?></a></div>
+							<div class='content'><a href='<?=$li['href']?>'><?=cut_str(get_text(strip_tags($li['wr_content'])),220,"...")?></a></div>
 						</div>
 						<div style='clear:both'></div>
 					</div>					
@@ -33,20 +33,26 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 	}
 	else {
 		for ( $i = 0; $i < 2; $i++ ) {?>
-			<div class='container <?=$nomargin?>'>
-				<div class='images_with_captions'>
-						<div class='caption_image'>					
-						<? $imgsrc['src'] = $latest_skin_url.'/img/no-image.png';
-														
-							$img = "<img src='$imgsrc[src]'/>";						
-							echo "<div class='img-wrapper'><a href='".url_site_config()."'>".$img."</a></div>";
-						?>
+			<div class='container'>
+					<div class='images_with_captions'>
+						<div class='caption_image'>	
+							<div class='inner'>
+								<?						
+															
+								$imgsrc['src'] = $latest_skin_url.'/img/no-image.png';	
+															
+								$img = "<img src='$imgsrc[src]'/>";						
+								echo "<div class='img-wrapper'><a href='".G5_BBS_URL."/write.php?bo_table=".$bo_table."'>".$img."</a></div>";
+								?>
+							</div>
 						</div>
-					<div class='caption'>
-						<div class='subject'><a href='<?=url_site_config()?>'>글을 등록해 주세요</a></div>
-					</div>						
-				</div>
-			</div>		
+						<div class='caption'>
+							<div class='subject'><a href='<?=G5_BBS_URL?>/write.php?bo_table=<?=$bo_table?>'>글을 등록해 주세요.</div>
+							<div class='content'><a href='<?=G5_BBS_URL?>/write.php?bo_table=<?=$bo_table?>'>글을 등록해 주세요.</a></div>
+						</div>
+						<div style='clear:both'></div>
+					</div>					
+				</div>		
 	<?
 		}
 	}	
