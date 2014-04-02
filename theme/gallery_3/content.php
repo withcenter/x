@@ -100,15 +100,12 @@
 <style>		
 	.banner-container .banner_holder{
 		display:inline;
+		padding-right:4px;
 	}
 	
 	.banner-container .commands .button{
 		width:30px;
 		float:left;
-	}
-	
-	.content .banner-container img{
-		
 	}
 </style>
 <?}?>
