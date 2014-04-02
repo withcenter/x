@@ -1,9 +1,6 @@
 <?php
 	set_time_limit( 600 );
-	if ( empty($dir) || empty($type) || empty($source_link) ) {
-		echo json_encode( array('code'=>'-2', 'message'=>"Wrong input. one of following variable is not provided: path, type, source_link.") );
-		exit;
-	}
+	if ( empty($dir) || empty($type) || empty($source_link) ) json_exit ( array('code'=>'-2', 'message'=>"Wrong input. one of following variable is not provided: path, type, source_link.") );
 
 
 	$pu = parse_url( urldecode($source_link) );
@@ -27,10 +24,7 @@
 	//di("step 2");
 
 	@$re = file::write( $path_tmp_zip, $content );
-	if ( $re ) {
-		echo json_encode( array('code'=>'-1', 'message'=>"Error on writing zip file to : $path_tmp_zip") );
-		exit;
-	}
+	if ( $re ) json_exit ( array('code'=>'-1', 'message'=>"Error on writing zip file to : $path_tmp_zip") );
 	
 	//di("step 3");
 
@@ -56,7 +50,13 @@
 		case ssh::FOLDER_CREATE_FAILED	: $message="fail on creating directory."; break;
 	}
 
-	echo json_encode( array( 'code' => $re, 'message' => $message ) );
+	json_exit( array( 'code' => $re, 'message' => $message ) );
 
 
+function json_exit( $json )
+{
+	global $in;
+	$json = json_encode($json);
+	echo "$in[callback]($json)";
+}
 
