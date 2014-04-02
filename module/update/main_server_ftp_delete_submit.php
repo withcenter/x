@@ -2,9 +2,10 @@
 //FTP file/directory upload/transfer
 include_once('phpseclib/Net/SFTP.php');
 
-$sftp = new Net_SFTP($host);
+$sftp = new Net_SFTP( $host );
 if ( !$sftp->login ( $id, $password ) ) {
-	exit ( 'Login Failed' );
+	echo "Login Failed: Please check FTP host, ID, Passwod.";
+	exit;
 }
 
 // recursive delete
