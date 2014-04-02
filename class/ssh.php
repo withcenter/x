@@ -7,13 +7,13 @@ class ssh
 	
 	/**
 	 *  @brief copy local files to remote server.
-	 *  
+	 *
 	 *  @param [in] $host host of ssh
 	 *  @param [in] $id id of ssh
 	 *  @param [in] $pw password of ssh
 	 *  @param [in] $path_src source file or source folder to be uploaded.
 	 *  @param [in] $path_dst target file or target folder to be created ( or replaced ).
-	 *  @return Return_Description
+	 *  @return string
 	 *  
 	 *  @details Use this function to upload files.
 	 */
