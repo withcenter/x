@@ -1,4 +1,4 @@
-<div class='title'>템플릿 갤러리<span class='more-button'><a href="?page=template_main">자세히 <img src="<?=x::theme_url('img/more-button.png')?>"/></a></div>
+<div class='title'><a href="?page=template_main">템플릿 갤러리</a><span class='more-button'><a href="?page=template_main">자세히 <img src="<?=x::theme_url('img/more-button.png')?>"/></a></span></div>
 	<table cellspacing='0' cellpadding='0' width='100%' class='template_table'>
 		<tr valign='top'>
 <?php
