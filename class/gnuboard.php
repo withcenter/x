@@ -1039,7 +1039,7 @@ class gnuboard {
 	 *  @note see sql::cond to know how to use Expression
 	 *  @return array. the return value is the same as that of latest.lib.php
 	 */
-	static function posts( $option )
+	static function posts( $option, $return_sql = false )
 	{
 		global $g5;
 		
@@ -1087,6 +1087,7 @@ class gnuboard {
 			ORDER BY $order_by
 			LIMIT $limit
 		";
+		if ( $return_sql ) return $sql;
 		$rows = db::rows( $sql );
 		return $rows;
 	}

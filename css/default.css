@@ -58,3 +58,13 @@
 
 
 /* Style for member confirm page */
+
+
+
+
+/* Style for deocation */
+.notice {
+	margin: 1em 0;
+	padding: 1em;
+	background-color: #efefef;
+}

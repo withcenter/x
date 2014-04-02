@@ -8,11 +8,7 @@
 <div class='ftp_install'>
 	<div class='ftp_install_fields'>
 	<h1>FTP UN-INSTALL</h1>
-		Source Link : <?=$source_link?><br>
-		Host : <input type='text' name='host' value='<?=$host?>'>
-		<br>
-		X Folder : <input type='text' name='dir' value='<?=$dir?>'>/theme/<?=$pname?> to install...<br>
-
+		Host : <input type='text' name='host' value='<?=$host?>'><br>
 		FTP ID: <input type='text' name='id'><br>
 		FTP Password: <input type='text' name='password'><br>
 		Port : 22 - SFTP

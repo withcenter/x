@@ -1,8 +1,20 @@
 <?php
-	$dir_theme	= x::dir() . '/theme';
-	$dir_project 	= $dir_theme .'/'. $pname;
-	file::delete_folder ( $dir_project );
+
+	include "menu.php";
+
+	if ( empty($type) || empty($name) ) {
+		echo "ERROR: check type and name";
+		exit;
+	}
+	
+
+	if ( $type == 'theme' ) {
+		$folder	= x::dir() . '/theme/'. $name;
+	}
 	
 	
-	echo "UN-INSTALLED";
+	file::delete_folder ( $folder );
+	
+	
+	echo "<div class='notice'>UN-INSTALLED</div>";
 	

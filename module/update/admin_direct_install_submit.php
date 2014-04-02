@@ -1,4 +1,6 @@
 <?php
+
+	include "menu.php";
 	
 	$a = explode('/', $source_link);
 	$pname = $a[ count($a) - 1 ];
@@ -32,6 +34,7 @@
 		$zip->close();
 	}
 
+	file::delete_folder( $dir_project );
 	rename ( "$dir_tmp/$pname-master", $dir_project );
 
 	

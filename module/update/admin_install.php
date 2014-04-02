@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="<?=module("$module.css")?>">
-<?include 'menu_theme.php'?>
+<?include 'menu.php'?>
 <?php
 	$a = explode('/', $source_link);
 	$pname = $a[ count($a) - 1 ];
@@ -14,13 +14,28 @@
 	}
 ?>
 
-<table>
+<p>
+</p>
+
+
+
+<div class='notice'>
+	Type : <?=$type?>, name: <?=$pname?><br>
+	Source Link : <?=$source_link?>
+</div>
+
+
+
+		
+		
+
+<table width='100%'>
 	<tr valign='top'>
-		<td>
+		<td width='50%'>
 			<?include 'admin_ftp_install_form.php'?>
 		</td>
 		<? if ( $writable ) { ?>
-		<td>
+		<td width='50%'>
 			<?include 'admin_direct_install_form.php'?>
 		</td>
 		<? } ?>

@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="<?=module("$module.css")?>">
-<?include 'menu_theme.php'?>
+<?include 'menu.php'?>
 <?php
 	$themes = get_themes();
 	$dirs = array();
@@ -30,25 +30,18 @@ ajax_cross_domain_call( {
 trace( url );
 function callback_ajax_load( re )
 {
-	var themes;
-	try {
-		themes = JSON.parse( re );
-	}
-	catch ( e ) {
-		alert( re );
-		return;
-	}
-
+	var themes = re;
+	
 	$('.loader').slideUp('fast');
 	
 	for (var  i = 0; i < themes.length; i ++ ) {
 		if ( themes[i].installed == 'yes' ) {
-			install = "<?=ln("UN-INSTALL", "삭제하기")?>";
-			url = "?module=update&action=uninstall&theme=" + themes[i].pname;
+			install = "<?=ln("Already Installed. UN-INSTALL", "이미 설치됨 .삭제하기")?>";
+			url = "?module=update&action=admin_uninstall&type=theme&name=" + themes[i].pname;
 		}
 		else {
 			install = "<?=ln("INSTALL", "설치하기")?>";
-			url = "?module=update&action=install&source_link=" + themes[i].source_link;
+			url = "?module=update&action=admin_install&source_link=" + themes[i].source_link;
 		}
 		install = "<div class='install'><a href='"+url+"'><b>" + install + "</b></a></div>";
 		$('.list').append(

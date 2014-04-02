@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="<?=module("$module.css")?>">
-<?include 'menu_theme.php'?>
+<?include 'menu.php'?>
 <?php
 	$a = explode('/', $source_link);
 	$pname = $a[ count($a) - 1 ];
@@ -13,6 +13,10 @@
 		}
 	}
 ?>
+
+<div class='notice'>Type : <?=$type?>, name: <?=$name?></div>
+
+
 
 <table>
 	<tr valign='top'>
