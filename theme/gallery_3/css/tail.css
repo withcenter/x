@@ -23,7 +23,7 @@
 	height: 23px;
 	font-size: 12px;
 	width: 10%;
-	padding: 7px 10px 0 0;
+	padding: 6px 10px 0 0;
 	border-right: 1px solid #151c2e;
 	line-height: 140%;
 	overflow: hidden;
@@ -31,7 +31,7 @@
 
 
 .inner-footer-links .menu-links {
-	width: 70%;
+	width: 74.5%;
 	float: left;
 	height: 15px;
 	overflow: hidden;
@@ -62,7 +62,7 @@
 .inner-footer-links .prev-nav {
 	margin: 0;
 	padding: 0;
-	width: 6%;
+	width: 10%;
 	float: left;
 	max-height: 30px;
 	position: relative;
@@ -73,9 +73,10 @@
 	margin: 0;
 	float: left;
 	min-width: 29px;
-	max-height: 31px;
+	max-height: 30px;
 	position: absolute;
 	top: -1px;
+	
 }
 
 .inner-footer-links .prev-nav .footer-next {
@@ -83,21 +84,18 @@
 }
 
 .inner-footer-links .prev-nav .footer-view {
-	height: 32px;
+	position: absolute;
+	top: -1px;
 	left: 58px;
-	z-index: 100;
+	width: 80px;
+	height: 30px;
+	color: #adb8bf;
 }
 
 .inner-footer-links .prev-nav span {
 	position: absolute;
-	right: -60px;
+	left: 10px;
 	top: 8px;
-	z-index: 200;
-	color: #adb8bf;
-	overflow: hidden;
-	width: 50px;
-	height: 12px;
-	line-height: 140%;
 }
 
 .footer .footer-menu-copyright {
