@@ -1,0 +1,54 @@
+.banner {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+}
+
+.content .banner-image-container {
+	position: absolute;
+	top: 0;
+	max-width: 958px;
+	float: left;
+	border: solid 1px #c3c3c3;
+	overflow: hidden;
+	display: none;
+}
+
+.content .banner-image-container.selected {
+	display:block;
+}
+
+.content .banner-image-container .banner-content-container {
+	position: absolute;
+	top: 0;
+	display: none;
+}
+
+
+.content .banner-image img {
+	width: 100%;
+}
+
+.content .banner-container{			
+	max-width:958px;
+	margin:auto;			
+	height:238px;			
+	position:relative;
+	overflow:hidden;						
+}
+
+.content .banner-container .banner{			
+	position:absolute;
+	left:0;
+	top:0;
+	white-space:nowrap;
+	width:100%;			
+}
+
+.content .banner-container img{
+	width:100%;
+	display:inline;
+	float: none;
+}

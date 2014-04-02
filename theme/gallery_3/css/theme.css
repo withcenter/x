@@ -1,0 +1,28 @@
+/* LAYOUT / STRUCTURE */
+.layout {
+	width: 100%;	
+}
+
+.layout, .layout a {
+	font-family: dotum;
+}
+
+.layout .header {
+	border-bottom: solid 1px #a4a4a4;
+}
+
+.layout .header .inner-header {
+	max-width: 960px;
+	margin: 0 auto;
+
+}
+
+.layout .content {
+	min-height: 500px;
+}
+
+
+.layout .content .inner-content {
+	max-width: 960px;
+	margin: 0 auto;
+}
