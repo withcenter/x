@@ -1,7 +1,12 @@
-.banner-container{
+.content .banner-container{
 	position:relative;
 	border:1px solid #c0c0c0;
 	border-top:0;
+	overflow:hidden;
+	margin-bottom:10px;
+	max-width:958px;
+	margin: 0 auto 10px auto;
+	position:relative;	
 }
 
 .banner-container .commands{
@@ -32,17 +37,11 @@
 
 .height_support_image{
 	opacity:0;
-}
-
-.content .banner-container{			
-	max-width:958px;
-	margin:auto;				
-	position:relative;
-	overflow:hidden;					
+	display:none;
 }
 
 .content .banner-container .banner{			
-	position:absolute;	
+	position:relative;	
 	top:0;
 	left:-100%;
 	white-space:nowrap;
@@ -62,12 +61,14 @@
 	width:50%;
 	margin-right:5%;
 	float:left;
-	word-break:break-all;
+	word-break:break-all;	
 }
 
-.banner-container .banner_holder .text_content .banner_subject{	
+.banner-container .banner_holder .text_content .banner_subject{
+	width:160%;
+	overflow:hidden;
 	font-size:2em;
-	padding:10px 0 0 20px;
+	padding:10px 20px 0 20px;
 	margin-bottom:20px;
 	font-weight:bold;
 }
@@ -75,7 +76,7 @@
 .banner-container .banner_holder .text_content .banner_content{
 	white-space:normal;
 	font-size:1.5em;
-	padding:10px 0 45px 20px;
+	padding:10px 20px 45px 20px;
 	font-weight:bold;
 }
 
@@ -83,4 +84,57 @@
 .content .banner-container img{
 	width:45%;	
 	float:right;
+}
+
+.lower_commands{
+	display:none;
+	text-align:center;
+	margin:20px 0 20px 0;
+}
+
+.lower_commands .bullet{
+	width:8px;
+	height:7px;
+	display:inline-block;
+	cursor:pointer;
+}
+
+.lower_commands .bullet .on{
+	display:none;
+}
+
+@media all and ( max-width: 767px ) {	
+	.banner-container .banner_holder .text_content{
+		width:100%;
+		margin:0;
+		float:none;			
+		font-size:.7em;		
+	}
+	
+	.banner-container .commands{
+		display:none;
+	}
+	
+	.content .banner-container img{
+		width:100%;	
+		float:none;
+	}
+	
+	.banner-container{		
+		margin:0;
+	}
+	
+	.banner-container .banner_holder .text_content .banner_subject{
+		margin-bottom:0;
+		width:80%;
+	}
+	
+	.banner-container .banner_holder .text_content .banner_content{
+		padding:0 20px 10px 20px;
+		font-weight:normal;
+	}
+	
+	.lower_commands{
+		display:block;
+	}
 }
