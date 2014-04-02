@@ -94,7 +94,6 @@
 			<? } ?>
 		</ul>
 		<?php
-			include widget( array( 'code' => 'side-sample', 'name' => 'sample' ) );
 			include widget( array( 'code' => 'side-post-latest', 'name' => 'post-latest' ) );
 			for( $i=1; $i<=5; $i++ ) {
 				include widget( array( 'code' => "side-sample-$i", 'name' => 'none' ) );
