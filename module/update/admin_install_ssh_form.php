@@ -2,8 +2,10 @@
 <form action='?' method='POST' class='ftp_install_form'>
 <input type='hidden' name='module' value='<?=$module?>'>
 <input type='hidden' name='action' value='<?=$action?>_submit'>
+<input type='hidden' name='theme' value='y'>
 <input type='hidden' name='source_link' value='<?=$source_link?>'>
-<input type='hidden' name='project_name' value='<?=$pname?>'>
+<input type='hidden' name='type' value='<?=$type?>'>
+<input type='hidden' name='name' value='<?=$name?>'>
 
 <div class='ftp_install'>
 	<h1>SSH INSTALL</h1>
