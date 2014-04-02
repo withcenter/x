@@ -23,11 +23,11 @@
 		
 		if ( empty($theme_config) ) continue;
 		$a = explode('/', $project_url);
-		$pname = $a[ count($a) - 1 ];
+		$name = $a[ count($a) - 1 ];
 
 
 		if ( $in['dirs'] ) {
-			if ( in_array( $pname, $in['dirs'] ) ) $installed = 'yes';
+			if ( in_array( $name, $in['dirs'] ) ) $installed = 'yes';
 			else $installed = 'no';
 		}
 
@@ -40,7 +40,7 @@
 		$theme['installed']			= $installed;
 		$theme['short']				= $theme_config['short'][L];
 		$theme['source_link']		= $source_link;
-		$theme['pname']			= $pname;
+		$theme['name']			= $name;
 		$themes[] = $theme;
 	}
 

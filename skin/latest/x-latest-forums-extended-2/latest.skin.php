@@ -4,10 +4,10 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
 <link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css">
 
-<!-- <?php echo $bo_subject; ?> 최신글 시작 { -->
 <div class="x-latest-forums-extended-2">
-    <div class="title">		
-		<?php echo $bo_subject; ?>		
+    <div class="title">
+		<a href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$bo_table?>'><?=$bo_subject?></a>
+		<span class='more-button'><a href="?page=template_main">자세히 <img src="<?=$latest_skin_url?>/img/more-button.png" /></a></span>
 	</div>
     <ul>
     <?php for ($i=0; $i<count($list); $i++) {?>

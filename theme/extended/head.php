@@ -52,15 +52,15 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 				<a href='<?=G5_BBS_URL?>/board.php?bo_table=ms_www_2' class='info text'>질문과 답변 /</a>
 				<a href='<?=$log_href?>' class='info text'><?=$login_msg?> /</a>
 				<a href='<?=$profile_msg_url?>' class='info text'><?=$profile_msg?> </a>
-				<?if ( admin() ){?>
+				<? if ( admin() ) { ?>
 						<a class='info text' href='<?=url_site_config()?>'>/ 사이트 관리</a>
-					<? if ( super_admin() ) {?>
+					<? if ( super_admin() ) { ?>
 						<a class='info text' href='<?=x::url_admin()?>'>/ X-ADMIN</a>
 						<a class='info text' href='<?=g::url()?>/adm'>/ ADMIN</a>
-					<? }?>
-				<?}?>
-			</div>			
-		</div>		
+					<? } ?>
+				<? } ?>
+			</div>
+		</div>
 			<div class='right_main_menus below-400px'>
 				<ul>
 					<li><div class='extra-border'></div><a href='<?=G5_BBS_URL?>/write.php?bo_table=quotation'>사이트<br /> 제작의뢰</a></li>

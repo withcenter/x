@@ -90,10 +90,11 @@
 
 
 
-.right-content .inner .title {
+.right-content .inner .title > a{
 	color: #49ac8d;
 	font-size: 1.2em;
 	font-weight: bold;
+	text-decoration: none;
 }
 
 

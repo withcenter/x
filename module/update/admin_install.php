@@ -32,11 +32,11 @@
 <table width='100%'>
 	<tr valign='top'>
 		<td width='50%'>
-			<?include 'admin_ftp_install_form.php'?>
+			<?include 'admin_install_ssh_form.php'?>
 		</td>
 		<? if ( $writable ) { ?>
 		<td width='50%'>
-			<?include 'admin_direct_install_form.php'?>
+			<?include 'admin_install_direct_form.php'?>
 		</td>
 		<? } ?>
 	</tr>

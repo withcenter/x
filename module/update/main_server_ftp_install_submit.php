@@ -36,52 +36,12 @@ if ($zip->open($theme_file_path) == TRUE) {
 rename( $data_path.$project_name.'-master', $data_path.$project_name );
 unlink ( $theme_file_path );
 
-$re = ssh_copy ( $host, $id, $password, $data_path.$project_name, $dir.'/theme/'.$project_name );
+$re = ssh::copy ( $host, $id, $password, $data_path.$project_name, $dir.'/theme/'.$project_name );
+if ( $re == ssh::CONNECTION_FAILED ) {
+	echo "Connection failed. Please check the host : $host";
+}
+else if ( $re == ssh::LOGIN_FAILED ) {
+	echo "Login failed. Please check the ID and Password";
+}
+
 echo $re;
-/*
-
-//FTP file/directory upload/transfer
-include_once('phpseclib/Net/SFTP.php');
-
-define('NET_SFTP_LOGGING', NET_SFTP_LOG_COMPLEX); // or NET_SFTP_LOG_SIMPLE
-
-$sftp = new Net_SFTP('workserver.org');
-if ( !$sftp->login('g5x4', 'ontue0458934377') ) {
-	echo "error:<br>";
-	$arr = $sftp->getSFTPErrors() ;
-	di($arr);
-exit;
-}
-
-
-print_r($sftp->nlist());
-$arr = $sftp->getSFTPLog();
-di($arr);
-
-exit;
-
-
-define('NET_SSH2_LOGGING', NET_SSH2_LOG_SIMPLE);
-
-$sftp = new Net_SFTP($host);
-if ( !$sftp->login ( $id, $password ) ) {
-	//jsBack( 'Login Failed' );
-	$arr = $sft->getSFTPLog();
-	di($arr);
-	echo "log: $log";
-	exit;
-}
-
-$sftp->chdir( $dir.'/theme');
-if ( !is_dir ( $project_name ) ) $sftp->mkdir( $project_name );
-$sftp->chdir( $project_name );
-
-foreach (glob($data_path.$project_name."/*.*") as $filename) {
-	$pathinfo = pathinfo ( $filename );
-	if ( file_exists ( $file_path = $dir . '/theme/'.$project_name.'/'.$pathinfo['basename'] ) ) @unlink ( $file_path );
-	$sftp->put( $pathinfo['basename'], $filename, NET_SFTP_LOCAL_FILE);
-	$sftp->chmod(0755, $pathinfo['basename'] );
-}
-
-jsBack('Theme Installed Successfully');
-*/

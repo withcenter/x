@@ -1,3 +1,24 @@
+.x-latest-forums-extended-2 .title {
+	position: relative;
+}
+.x-latest-forums-extended-2 .title a {
+color: #49ac8d;
+font-size: 1em;
+font-weight: bold;
+}
+
+.x-latest-forums-extended-2  .title .more-button {
+	position: absolute;
+	right: 0;
+}
+
+.x-latest-forums-extended-2  .title .more-button a {
+color: #5b9fb9;
+font-size: 11px;
+font-weight: normal;
+text-decoration: none;
+}
+
 .x-latest-forums-extended-2 ul {
 	list-style: none;
 	margin: 15px 0 0 0;

@@ -94,13 +94,11 @@
 			<? } ?>
 		</ul>
 		<?php
-			include widget(
-				array(
-					'code'				=> 'side',
-					'no'					=> 5,
-					'name'				=> array( 'sample', 'post_latest', 'post_latest_comment', 'post_best' )
-				)
-			);
+			include widget( array( 'code' => 'side-sample', 'name' => 'sample' ) );
+			include widget( array( 'code' => 'side-post-latest', 'name' => 'post-latest' ) );
+			for( $i=1; $i<=5; $i++ ) {
+				include widget( array( 'code' => "side-sample-$i", 'name' => 'none' ) );
+			}
 		?>
     </div>
     <div id="container" class='data'>

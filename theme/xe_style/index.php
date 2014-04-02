@@ -12,3 +12,8 @@
 		include x::theme('multitab.latest');
 	?>
 </div>
+<div class='main-middle-tab-latest'>
+	<?php
+		include x::theme('multitab.middle.latest');
+	?>
+</div>

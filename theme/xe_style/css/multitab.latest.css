@@ -15,6 +15,7 @@
 	float: left;
 	text-align: center;
 	border-left: 1px solid #d9d9d9;
+	background-color: #f8f8f8;
 }
 .multi-tab-latest .tab-menu  li:first-child {
 	border-left: 0;
@@ -30,8 +31,9 @@
 	font-family: '맑은 고딕', AppleGothic;
 }
 
-.multi-tab-latest .tab-menu  li:hover a, .tab-selected a{
+.tab-selected a{
 	color: #ffffff;
+	text-decoration: none;
 }
 
 .multi-tab-latest .tab-menu  a:hover {
@@ -40,13 +42,106 @@
 
 .multi-tab-latest .tab-submenu-content {
 	display:none;
+	position: relative;
 }
 
+.tab-selected-text {
+	color: #ffffff !important;
+}
 .multi-tab-latest .tab-submenu-content[tab-submenu='menu0'] {
-	display: block;	
+	display: block;
 }
 
-.multi-tab-latest .tab-menu  li[tab-menu='menu0'] a {
-	color: #ffffff;
+.multi-tab-latest .tab-submenu-content a {
+	text-decoration: none;
 }
 
+.multi-tab-latest .tab-submenu-content .top-subjects  {
+	padding: 14px;
+}
+
+.multi-tab-latest .tab-submenu-content .bottom-subjects {
+	padding: 0 14px 14px 14px;
+}
+
+.multi-tab-latest .tab-submenu-content .top-subjects div, .multi-tab-latest .tab-submenu-content .bottom-subjects div {
+	line-height: 22px;
+	height: 22px;
+	overflow: hidden;
+	position: relative;
+}
+.multi-tab-latest .tab-submenu-content .top-subjects div > span, .multi-tab-latest .tab-submenu-content .bottom-subjects div  >span{
+	position: absolute;
+	right: 0;
+	font-weight: normal;
+	font-size: 8.7pt;
+	color: #858585;
+	top: -3px;
+}
+
+.multi-tab-latest .tab-submenu-content .top-subjects div a, .multi-tab-latest .tab-submenu-content .bottom-subjects div  a {
+	color: #555555;
+}
+.multi-tab-latest .tab-submenu-content .top-subjects div img, .multi-tab-latest .tab-submenu-content .bottom-subjects div  img {
+	margin-right: 6px;
+}
+
+.multi-tab-latest .first-row {
+	font-weight: bold;
+}
+
+.multi-tab-latest  .tab-submenu-content .post-ranking > .title {
+	font-family: '맑은 고딕', AppleGothic;
+	color: #333333;
+	font-size: 13px;
+}
+
+/* multitab.latest.php */
+.multi-tab-latest .tab-submenu-content  .post-ranking {
+	position: absolute;
+	left: 403px;
+	top: 13px;
+}
+
+.multi-tab-latest .tab-submenu-content  .post-ranking .title {
+	margin-bottom: 8px;
+	font-weight: bold;
+}
+
+.multi-tab-latest .tab-submenu-content  .post-ranking  .row {
+	line-height: 21px;
+	height: 21px; 
+	overflow: hidden;
+	font-size: 11px;
+	position: relative;
+	width: 184px;
+}
+
+.multi-tab-latest .tab-submenu-content  .post-ranking  .row a {
+	color: #555555;
+}
+
+.multi-tab-latest .tab-submenu-content  .post-ranking  .row:hover {
+	background-color: #ffffff;
+}
+
+.multi-tab-latest .tab-submenu-content  .post-ranking  .row .rank-number {
+	margin-right: 7px;
+	position: relative;
+	top: -1px;
+}
+
+.multi-tab-latest .tab-submenu-content  .post-ranking  .row  .new_icon {
+	position: absolute;
+	right: 0;
+	top: 7px;
+}
+
+.rank-first-row a {
+	font-weight: bold !important;
+	font-size: 13px !important;
+}
+
+.multi-tab-latest .tab-menu  li:hover {
+	background-color: #f2f2f2;
+}
