@@ -78,9 +78,4 @@ if( empty( $menu_1 ) ) $menu_1 = bo_table(1);
 	</form>
 	</fieldset>
 </div>
-<style>
-	.menu-name  a{
-		font-size: 9pt;
-	}
-</style>
 
