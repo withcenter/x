@@ -22,14 +22,13 @@
 				$fake_first_image = g::thumbnail_from_image_tag( "<img src='".$banners[0]['src']."'/>;", bo_table(1), 448, 238);
 				$fake_first_image_subject = $banners[0]['subject'];
 				$fake_first_image_content = $banners[0]['content'];
-				?>			
-			<img class='height_support_image' src='<?=$fake_first_image?>'/>			
+				?>							
 			<div class='inner'>			
 				<div class='banner'>	
 					<div class='banner_holder'>
 						<img src='<?=$fake_last_image?>'/>
 						<div class='text_content'>
-							<div class = 'banner_subject'><?=$fake_last_image_subject?></div>
+							<div class = 'banner_subject'><?=cut_str($fake_last_image_subject,40,'...')?></div>
 							<div class = 'banner_content'><?=cut_str($fake_last_image_content,100,'...')?></div>
 						</div>						
 					</div>
@@ -45,7 +44,7 @@
 							<div class='text_content'>
 								<div class = 'banner_subject'>
 									<a href='<?=$banner['href']?>'>
-										<?=$banner['subject']?>
+										<?=cut_str($banner['subject'],40,'...')?>
 									</a>
 								</div>
 								<div class = 'banner_content'>
@@ -62,7 +61,7 @@
 					<div class='banner_holder'>
 						<img src='<?=$fake_first_image?>'/>
 						<div class='text_content'>						
-							<div class = 'banner_subject'><?=$fake_first_image_subject?></div>
+							<div class = 'banner_subject'><?=cut_str($fake_first_image_subject,40,'...')?></div>
 							<div class = 'banner_content'><?=cut_str($fake_first_image_content,100,'...')?></div>
 						</div>	
 					</div>
@@ -86,3 +85,19 @@
 				</div>
 			<?}?>
 		</div>
+<?if ( preg_match('/msie 7/i', $_SERVER['HTTP_USER_AGENT'] ) ) {?>
+<style>		
+	.banner-container .banner_holder{
+		display:inline;
+	}
+	
+	.banner-container .commands .button{
+		width:30px;
+		float:left;
+	}
+	
+	.content .banner-container img{
+		
+	}
+</style>
+<?}?>

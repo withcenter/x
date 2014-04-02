@@ -7,12 +7,13 @@
 	max-width:958px;
 	margin: 0 auto 10px auto;
 	position:relative;	
+	white-space:nowrap;
 }
 
 .banner-container .commands{
 	position:absolute;
 	left:20px;
-	bottom:12px;
+	bottom:12px;	
 }
 
 .banner-container .commands .stop_and_play{
@@ -35,16 +36,10 @@
 	cursor:pointer;
 }
 
-.height_support_image{
-	opacity:0;
-	display:none;
-}
-
 .content .banner-container .banner{			
 	position:relative;	
 	top:0;
-	left:-100%;
-	white-space:nowrap;
+	left:-100%;	
 	width:100%;	
 }
 
@@ -67,17 +62,20 @@
 .banner-container .banner_holder .text_content .banner_subject{
 	width:160%;
 	overflow:hidden;
-	font-size:2em;
+	font-size:2.5em;
 	padding:10px 20px 0 20px;
-	margin-bottom:20px;
+	margin:40px 0 4px 0;
 	font-weight:bold;
 }
 
 .banner-container .banner_holder .text_content .banner_content{
 	white-space:normal;
-	font-size:1.5em;
-	padding:10px 20px 45px 20px;
+	font-size:1.2em;
+	padding:10px 20px 0 20px;
 	font-weight:bold;
+	height:40px;
+	line-height:21px;
+	overflow:hidden;
 }
 
 
@@ -107,8 +105,7 @@
 	.banner-container .banner_holder .text_content{
 		width:100%;
 		margin:0;
-		float:none;			
-		font-size:.7em;		
+		float:none;					
 	}
 	
 	.banner-container .commands{
@@ -125,13 +122,16 @@
 	}
 	
 	.banner-container .banner_holder .text_content .banner_subject{
-		margin-bottom:0;
+		margin:0;
 		width:80%;
+		font-size:1.2em;
 	}
 	
 	.banner-container .banner_holder .text_content .banner_content{
-		padding:0 20px 10px 20px;
+		padding:0 20px 10px 20px;		
 		font-weight:normal;
+		line-height:23px;
+		font-size:1.2em;		
 	}
 	
 	.lower_commands{

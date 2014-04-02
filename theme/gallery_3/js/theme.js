@@ -21,6 +21,8 @@ $(function(){
 		else $(".arrow_icon").attr('src', imgpath+"/arrow_down.png");
 	});
 	
+	//alert($(".banner-container .banner").width());
+	
 /***************BANNER_CLICK******************/	
 	banner_count = $(".banner-container .banner img").length -2;
 	
