@@ -1,54 +1,86 @@
-.banner {
-	position: relative;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-
+.banner-container{
+	position:relative;
+	border:1px solid #c0c0c0;
+	border-top:0;
 }
 
-.content .banner-image-container {
-	position: absolute;
-	top: 0;
-	max-width: 958px;
-	float: left;
-	border: solid 1px #c3c3c3;
-	overflow: hidden;
-	display: none;
+.banner-container .commands{
+	position:absolute;
+	left:20px;
+	bottom:12px;
 }
 
-.content .banner-image-container.selected {
+.banner-container .commands .stop_and_play{
+	display:none;
+}
+
+.banner-container .commands .stop_and_play.shown{
 	display:block;
 }
 
-.content .banner-image-container .banner-content-container {
-	position: absolute;
-	top: 0;
-	display: none;
+.banner-container .commands .button{
+	display:inline-block;
+	float:left;
+	margin-right:10px;	
 }
 
+.banner-container .commands .button img{
+	height:30px;
+	width:30px;	
+	cursor:pointer;
+}
 
-.content .banner-image img {
-	width: 100%;
+.height_support_image{
+	opacity:0;
 }
 
 .content .banner-container{			
 	max-width:958px;
-	margin:auto;			
-	height:238px;			
+	margin:auto;				
 	position:relative;
-	overflow:hidden;						
+	overflow:hidden;					
 }
 
 .content .banner-container .banner{			
-	position:absolute;
-	left:0;
+	position:absolute;	
 	top:0;
+	left:-100%;
 	white-space:nowrap;
-	width:100%;			
+	width:100%;	
 }
 
-.content .banner-container img{
+
+.banner-container .banner_holder{
+	display:inline-block;
+	margin-right:-4px;
 	width:100%;
-	display:inline;
-	float: none;
+	position:relative;
+	vertical-align:top;
+}
+
+.banner-container .banner_holder .text_content{
+	width:50%;
+	margin-right:5%;
+	float:left;
+	word-break:break-all;
+}
+
+.banner-container .banner_holder .text_content .banner_subject{	
+	font-size:2em;
+	padding:10px 0 0 20px;
+	margin-bottom:20px;
+	font-weight:bold;
+}
+
+.banner-container .banner_holder .text_content .banner_content{
+	white-space:normal;
+	font-size:1.5em;
+	padding:10px 0 45px 20px;
+	font-weight:bold;
+}
+
+
+.content .banner-container img{
+	width:45%;	
+	float:right;
 }
