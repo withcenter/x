@@ -1,6 +1,8 @@
+
 .latest-top-left .top-left {
 	padding: 7px 8px 7px 7px;
 	background: #343434;
+	overflow: hidden;
 }
 
 .top-left a {
@@ -30,12 +32,17 @@
 	overflow: hidden;
 }
 
+.latest-top-left .top-left-content a {
+	padding: 0 10px;
+}
+
 .latest-top-left .top-left-content {
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	background: rgba(0,0,0,0.7);
 	z-index: 2;
-	padding: 10px 7px 20px 7px;
+	padding: 10px 0 20px 0;
 	color: #ffffff;
+	width: 100%;
 }

@@ -24,7 +24,10 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 			$img = $imgsrc['src'];
 		} elseif ( $image_from_tag = g::thumbnail_from_image_tag( $list[0]['wr_content'], $bo_table, 307, 233 )) {
 			$img = $image_from_tag;
-		} else $img = $latest_skin_url."/img/no_image.png";
+		} else {
+			$image_from_tag = g::thumbnail_from_image_tag( "<img src='$latest_skin_url/img/no_image.png'/>", $bo_table, 307, 233 );
+			$img = $image_from_tag;
+		}
 	}
 	else $img = $latest_skin_url."/img/default_banner.png";
 	?>
