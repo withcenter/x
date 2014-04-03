@@ -36,6 +36,18 @@
 	overflow: hidden;
 }
 
+.inner-footer-links .open-footer-info {
+	display: inline-block;
+	float: left;
+	color: #ffffff;
+	height: 23px;
+	font-size: 12px;
+
+	padding: 6px 0 0 0;
+	line-height: 140%;
+	overflow: hidden;
+}
+
 
 .inner-footer-links .menu-links {
 	width: 77%;
@@ -164,6 +176,7 @@
 	padding: 10px;
 	font-size: 14px;
 	color: #ffffff;
+	position: relative;
 }
 
 .footer-full-links .inner > div {
@@ -238,6 +251,29 @@
 	display: none;
 }
 
+
+.open-footer {
+	position: absolute;
+	right: 18px;
+	top: 3px;
+	width: 23px;
+	height: 23px;
+	display: none;
+}
+
+.open-footer-info {
+	display: none !important;
+}
+
+.close_mobile_footer {
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	height: 24px;
+	width: 24px;
+	cursor: pointer;
+}
+
 @media only screen and (max-width: 1000px) {
 	.inner-footer-links .menu-links ul li {
 		width: 25%;
@@ -259,5 +295,43 @@
 		position: absolute;
 		top: -2px;
 		right: 0;
+	}
+	
+	.footer-full-links {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 10000;
+	}
+	
+	.footer-full-links .inner > div {
+		clear: left;
+		width: 100%;
+	}
+	
+	.footer-full-links .inner > div li {
+		border-top: solid 1px #404e74;
+	}
+	
+	.footer-full-links .inner > div li.first-menu {
+		border: 0;
+	}
+	
+	.footer-full-links .inner > div li a {
+		display: block;
+		padding: 5px 0;
+	}
+	
+	.footer-view-clicked, .clicked_info, .site-title, .menu-links, .prev-nav {
+		display: none !important;
+	}
+	
+	.open-footer {
+		display: block;
+	}
+	
+	.open-footer-info {
+		display: block !important;
 	}
 }

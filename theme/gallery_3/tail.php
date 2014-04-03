@@ -9,7 +9,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		<div class='inner-footer'>
 			<div class='footer-full-links'>
 				<div class='inner' style='position: relative'>
-					<span class='full-link-title'>VIEW ALL</span>
+					<span class='full-link-title'>VIEW ALL<img src="<?=x::theme_url('img/close_footer.png')?>" class='close_mobile_footer'/></span>
 					<div class='main-menu-links'>
 						<span class='links-titles'>Main</span>
 						<ul>
@@ -51,13 +51,17 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 					<div class='prev-nav'>
 						<img src="<?=x::theme_url('img/footer_prev.gif')?>" class='footer-prev'/>
 						<img src="<?=x::theme_url('img/footer_next.gif')?>" class='footer-next'/>
-						<a href="javascript:void(0)" style='background: url(<?=x::theme_url('img/footer_view_all.gif')?>) 80px 30px' class='footer-view'/><span>view all</span></a>
+						<a href="javascript:void(0)" style='background: url(<?=x::theme_url('img/footer_view_all.gif')?>) 80px 30px' class='footer-view'><span>view all</span></a>
 						<div style="clear: left"></div>
 					</div>
 					
 					<!--clicked-->
 					<span class='clicked_info'>VIEW ALL</span>
-					<a href="javascript:void(0)" style='background: url(<?=x::theme_url('img/footer_view_close.gif')?>) 80px 30px' class='footer-view-clicked'/><span>Close</span></a>
+					<a href="javascript:void(0)" style='background: url(<?=x::theme_url('img/footer_view_close.gif')?>) 80px 30px' class='footer-view-clicked'><span>Close</span></a>
+					
+					<!--mobile footer view all -->
+					<span class='open-footer-info'>MOBILE VIEW LINKS</span>		
+					<a href="javascript:void(0)" style='background: url(<?=x::theme_url('img/open_footer.gif')?>) 23px 23px' class='open-footer'></a>
 				<div style='clear: left'></div>
 			</div>
 			</div>
