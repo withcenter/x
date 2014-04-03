@@ -31,6 +31,7 @@
 	height: 20px;
 	line-height: 15px;
 	overflow: hidden;
+	text-shadow: 1px 1px #000000;
 }
 
 .latest-top-left .top-left-content a {
@@ -46,6 +47,7 @@
 	padding: 10px 0 20px 0;
 	color: #ffffff;
 	width: 100%;
+	text-shadow: 1px 1px #000000;
 }
 
 .latest-top-left .read_more {
