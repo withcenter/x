@@ -24,7 +24,8 @@ ajax_cross_domain_call( {
 //trace( url );
 function callback_ajax_call( re )
 {
-	alert( re );
+	alert( re.code );
+	alert( re.message );
 }
 </script>
 
