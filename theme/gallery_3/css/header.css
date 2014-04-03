@@ -174,7 +174,7 @@ li.menu-title .dropdown-icon {
 	margin-top:37px;
 	width:50%;
 	float:left;
-	max-width:230px;	
+	max-width:350px;	
 }
 
 .hidden-mobile-navigation .right .hidden_categ_wrapper{
@@ -374,6 +374,10 @@ li.menu-title .dropdown-icon {
 
 .categ_wrapper .categ_list .categ_item{	
 	padding:3px 0;
+	word-break:break-all;
+	height:15px;
+	line-height:17px;
+	overflow:hidden;
 }
 
 .categ_wrapper .categ_list .categ_item a{
