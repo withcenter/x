@@ -8,6 +8,38 @@ class ssh
 	const SEND_FAILED = -3;
 	const SOURCE_NOT_FOUND = -4;
 	const FOLDER_CREATE_FAILED = -5;
+
+
+	/**
+	 *  @brief returns success message and error message after 'excuting' command on remote ssh server.
+	 *  @param $comamnd is the command the run. example: rm -rf /hom/tes/tmp
+	 *
+	 *  @return mixed integer or array.
+	 *  @note since the result of success or not may be depending on the returned message, this function returns array with sucess and error message.
+	 */
+	static function command( $host, $id, $pw, $command )
+	{
+		@$connection = ssh2_connect($host, 22);
+		if ( ! $connection ) return self::CONNECTION_FAILED;
+		@$re = ssh2_auth_password($connection, $id, $pw);
+		if ( ! $re ) return self::LOGIN_FAILED;
+		$stream = ssh2_exec( $connection, $command );
+		$errorStream = ssh2_fetch_stream($stream, SSH2_STREAM_STDERR);
+		
+		// Enable blocking for both streams
+		stream_set_blocking($errorStream, true);
+		stream_set_blocking($stream, true);
+
+		$success = stream_get_contents($stream);
+		$error = stream_get_contents($errorStream);
+
+		// Close the streams        
+		fclose($errorStream);
+		fclose($stream);
+		
+		return array( $success, $error );
+	}
+
 	
 	/**
 	 *  @brief copy local files to remote server.
