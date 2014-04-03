@@ -8,8 +8,10 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	<div class='footer'>
 		<div class='inner-footer'>
 			<div class='footer-full-links'>
-				<div class='inner' style='postion: relative'>
-		
+				<div class='inner' style='position: relative'>
+					<ul>
+							<?="<li class='first-menu'>" . implode( "</li><li>", x::menu_links('left') ) . "</li>"?>
+					</ul>
 				</div>
 			</div>
 			<div class='footer-links'>
@@ -27,10 +29,11 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 						<img src="<?=x::theme_url('img/footer_prev.gif')?>" class='footer-prev'/>
 						<img src="<?=x::theme_url('img/footer_next.gif')?>" class='footer-next'/>
 						<a href="javascript:void(0)" style='background: url(<?=x::theme_url('img/footer_view_all.gif')?>) 80px 30px' class='footer-view'/><span>view all</span></a>
+						<div style="clear: left"></div>
 					</div>
 					
 					<!--clicked-->
-					<span class='clicked_info'>RELATED SITES</span>
+					<span class='clicked_info'>VIEW ALL</span>
 					<a href="javascript:void(0)" style='background: url(<?=x::theme_url('img/footer_view_close.gif')?>) 80px 30px' class='footer-view-clicked'/><span>Close</span></a>
 				<div style='clear: left'></div>
 			</div>
