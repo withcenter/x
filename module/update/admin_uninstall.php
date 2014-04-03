@@ -21,12 +21,13 @@
 <table>
 	<tr valign='top'>
 		<td>
-			<?include 'admin_ftp_uninstall_form.php'?>
+			<?include 'admin_uninstall_ssh_form.php'?>
 		</td>
 		<? if ( $writable ) { ?>
 		<td>
-			<?include 'admin_direct_uninstall_form.php'?>
+			<?include 'admin_uninstall_direct_form.php'?>
 		</td>
 		<? } ?>
 	</tr>
 </table>
+
