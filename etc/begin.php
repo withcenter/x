@@ -187,7 +187,12 @@ function hook_body_begin()
 	if ( $done_head_begin_skin_update ) return;
 	else $done_head_begin_skin_update = 1;
 	
-	
+	$x_url = x::url();
+	echo "
+		<script>
+			var x_url = '$x_url';
+		</script>
+	";
 	
 	echo "<link rel='stylesheet' type='text/css' href='" . x::url() . "/css/default.css' />\n";
 	echo "<script src='".$url = x::url() . '/js/default.js'."'></script>\n";

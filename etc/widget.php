@@ -1,14 +1,18 @@
 <?php
 /**
  *
- *  @note $wo is available in all the widget.
+ *  @note $wc is available in all the widget.
  *		It has code, name and configuration.
  *
  */
-	$wo = &$widget_option;
+	$wc = &$widget_config;
+	x::hook("widget_begin: code=$wc[code], name=$wc[name]");
 ?>
-<div class="widget">
-	<?php include x::dir() . "/widget/$wo[name]/$wo[name].php"; ?>
+<div class="widget" code="<?=$wc['code']?>">
+	<?php
+		include x::dir() . "/widget/$wc[name]/config.php";
+		include x::dir() . "/widget/$wc[name]/$wc[name].php";
+	?>
 </div>
-
+<?php x::hook("widget_end"); ?>
 	

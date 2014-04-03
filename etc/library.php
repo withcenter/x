@@ -1,8 +1,8 @@
 <?php
-$widget_option = array();
+$widget_config = array();
 function widget( $option )
 {
-	$GLOBALS['widget_option'] = $option;
+	$GLOBALS['widget_config'] = $option;
 	return x::dir() . '/etc/widget.php';
 }
 
@@ -10,8 +10,8 @@ function widget( $option )
 $widget_css = array();
 function widget_css( $name=null )
 {
-	global $wo, $widget_css;
-	if ( empty($name) ) $name = $wo['name'];
+	global $wc, $widget_css;
+	if ( empty($name) ) $name = $wc['name'];
 	if ( isset( $widget_css[ $name ] ) ) return;
 	else {
 		$widget_css[ $name ] = true;
@@ -24,8 +24,8 @@ function widget_css( $name=null )
 $widget_javascript = array();
 function widget_javascript( $name=null )
 {
-	global $wo, $widget_javascript;
-	if ( empty($name) ) $name = $wo['name'];
+	global $wc, $widget_javascript;
+	if ( empty($name) ) $name = $wc['name'];
 	if ( isset( $widget_javascript[ $name ] ) ) return;
 	else {
 		$widget_javascript[ $name ] = true;
@@ -33,4 +33,23 @@ function widget_javascript( $name=null )
 		echo "<script src='$src' /></script>";
 	}
 }
+
+
+
+function javascript_jquery()
+{
+	$x_url=x::url();
+	return <<<EOH
+	<!--[if lt IE 9]>
+		<script type='text/javascript' src='$x_url/js/jquery-1.11.0.min.js?version=1110'></script>
+	<![endif]-->
+	<!--[if gte IE 9]><!-->
+		<script type='text/javascript' src='$x_url/js/jquery-2.1.0.min.js?version=2010'></script>
+	<!--<![endif]-->
+EOH;
+}
+
+
+
+
 

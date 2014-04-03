@@ -47,9 +47,11 @@ class etc {
 	static function module($file,$url=false)
 	{
 		global $module;
-		if ( strpos( $file, '.' ) === false ) $file .= '.php';
+		
 		$pi = pathinfo($file);
 		if ( in_array( $pi['extension'], array('js', 'css', 'gif', 'jpg', 'png') ) ) $url = true;
+		else if ( strpos( $file, '.php' ) === false ) $file .= '.php';
+		
 		if ( $url ) $up = x::url();
 		else $up = x::dir();
 		$path =  "$up/module/$module/$file";
@@ -801,16 +803,6 @@ EOH;
              }
          }
 
-/**@short returns path a script under the current module folder
- *
- * @code
-		include_once module('forum_setting');
-	@endcode
- */
-function module($file,$url=false)
-{
-	return etc::module($file,$url);
-}
 
 
 function login_first()

@@ -95,6 +95,7 @@
 		</ul>
 		<?php
 			include widget( array( 'code' => 'side-post-latest', 'name' => 'post-latest' ) );
+			include widget( array( 'code' => 'side-post-comment-latest', 'name' => 'post-comment-latest' ) );
 			for( $i=1; $i<=5; $i++ ) {
 				include widget( array( 'code' => "side-sample-$i", 'name' => 'none' ) );
 			}

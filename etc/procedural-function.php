@@ -342,3 +342,14 @@ function config( $code, $value=null )
 }
 
 
+/**@short returns path a script under the current module folder
+ *
+ * @code
+		include_once module('forum_setting');
+	@endcode
+ */
+function module($file,$url=false)
+{
+	return etc::module($file,$url);
+}
+

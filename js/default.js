@@ -24,7 +24,7 @@ $(function(){
 	});
 	$('.skin-update-button').click(function() {
 		var code = $(this).attr('code');
-		var url = g5_url + '/x/?module=skin&action=update&theme=n&code=' + code;
+		var url = x_url + '?module=skin&action=update&theme=n&code=' + code;
 		layer_popup( url, 1, '680', '520');
 	});
 	
@@ -32,9 +32,13 @@ $(function(){
 	$('.widget').mouseenter(function(){
 		$(this).prepend("<div class='admin'>Admin</div>");
 	});
-	
 	$('.widget').mouseleave(function(){
 		$(this).children(".admin").remove();
+	});
+	$('body').on('click', '.widget > .admin',function() {
+		var code = $(this).parent().attr('code');
+		var url = x_url + '?module=widget&action=update&theme=n&code=' + code;
+		layer_popup( url, 1, '680', '520');
 	});
 	
 });

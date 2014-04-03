@@ -7,6 +7,10 @@
  */
 class g extends gnuboard {}
 class gnuboard {
+	const SELECT_DEFAULT = "idx,domain,bo_table,wr_id,wr_parent,wr_is_comment,wr_comment,ca_name,wr_datetime,wr_hit,wr_good,wr_nogood,wr_name,mb_id,wr_subject";
+	const SELECT_DEFAULT_WITH_CONTENT = "idx,domain,bo_table,wr_id,wr_parent,wr_is_comment,wr_comment,ca_name,wr_datetime,wr_hit,wr_good,wr_nogood,wr_name,mb_id,wr_subject,wr_content";
+	
+	
 	/**
 	 *  @brief gets installation dir
 	 *  
@@ -1067,7 +1071,7 @@ class gnuboard {
 		else $where = null;
 		
 		
-		if ( empty($o['select']) ) $o['select'] = "idx,domain,bo_table,wr_id,wr_parent,wr_is_comment,wr_comment,ca_name,wr_datetime,wr_hit,wr_good,wr_nogood,wr_name,mb_id,wr_subject";
+		if ( empty($o['select']) ) $o['select'] = self::SELECT_DEFAULT;
 		
 		
 		if ( isset( $o['order by'] ) ) $order_by = $o['order by'];
