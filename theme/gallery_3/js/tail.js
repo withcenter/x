@@ -30,11 +30,11 @@ $(function(){
 		$(".site-title, .menu-links, .prev-nav, .footer-full-links, .footer-view-clicked").toggle();
 		$(".footer-links").removeClass('selected').find(".inner-footer-links").removeClass('clicked').find(".footer-links").css('background','#47547a');
 		$(".clicked_info").css('display','none');
-		window.scrollTo(0, document.body.scrollHeight);
+		$('html body').animate({scrollTop:  $('html body').height()},0);
 	});
 	
 	$(".open-footer").click(function(){
-		$('html body').animate({scrollTop: 0},0);
+		$(window.opera?'html':'html body').animate({scrollTop: 0},0);
 		$(".footer-full-links").css('left',$(window).width()).css('display','block').css('height', $('html body').height()).animate({left: 0},200);
 	});
 	
