@@ -33,7 +33,7 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 	?>
 	
 	<div class='top-left'>
-		<a href="<?=$url?>" class='read_more'><img src="<?=$img?>"/></a>
+		<a href="<?=$url?>"><img src="<?=$img?>"/></a>
 		<div class='top-left-container'>
 			<? if ( $list ) {
 					$url = $list[0]['href'];
@@ -46,8 +46,9 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 				$content = "필고 갤러리 테마 No.2를 선택 하셨습니다.";
 			}
 			?>
-			<div class='top-left-subject'><a href="<?=$url?>" class='read_more'><?=$subject?></a></div>
-			<div class='top-left-content'><a href="<?=$url?>" class='read_more'><?=$content?></a></div>
-		</div>		
+			<div class='top-left-subject'><a href="<?=$url?>"><?=$subject?></a></div>
+			<div class='top-left-content'><a href="<?=$url?>"><?=$content?></a></div>
+		</div>
+		<a href="<?=$url?>" class='read_more'></a>
 	</div>
 </div>
