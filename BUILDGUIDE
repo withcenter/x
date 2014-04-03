@@ -18,3 +18,15 @@ else {
 	// 여기에 HTML FORM 문장을 출력
 }
 
+
+
+사용하기 쉽게 미리 만들어진 HTML FORM 코드가 있다.
+
+
+	include 'module/widget/config.subject.php';		// 제목이 필요한 경우,
+	include 'module/widget/config.css.php';			// CSS 가 필요한 경우,
+	
+@TODO
+	추가 옵션으로 해서, 기본 옵션만 보여주게 하고, 추가 옵션을 클릭하면 자세히 보여 줄 것.
+	
+	

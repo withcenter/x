@@ -1,12 +1,12 @@
 <?php
 	if ( $submit ) {
 		meta_set( "widget_config.$code", string::scalar( $in ) );
+		include x::dir() . "/widget/$name/config.php";
 		if ( $submit_value == 'Submit & Close' ) {
 			echo "<script>parent.location.reload();</script>";
 			exit;
 		}
 	}
-	
 	load_widget_config($code);
 	
 	
@@ -44,7 +44,10 @@ var x_url       = "<?=x::url()?>";
 <input type='hidden' name='submit' value='1'>
 
 <?php
+	
+	unset($submit);
 	include module('config.widget');
+	include x::dir() . "/widget/$widget_config[name]/config.php";
 	
 ?>
 
