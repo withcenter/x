@@ -15,7 +15,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 <div class='latest-bottom-gallery'>
 	
 	<?		
-	if ( $list ) {
+	if ( $list ) {	
 		if( $options ){
 			$gallery_info = array( 
 				array('bottom-left','bottom-middle','bottom-right'),
@@ -42,13 +42,16 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 	
 <? function latest_bottom_gallery( $name, $img, $list, $i ) { ?>
 	<div class='<?=$name?>'>
+	<?
+		if ( $list ) {
+			$url = $list[$i]['href'];
+			$subject = cut_str($list[$i]['wr_subject'],10);
+			$content = cut_str(strip_tags($list[$i]['wr_content']), 20);
+	?>
 		<div class='inner'>
 			<a href="<?=$url?>" class='read_more'><img src="<?=$img?>"/></a>
 			<div class='<?=$name?>-container'>
-				<? if ( $list ) {
-						$url = $list[$i]['href'];
-						$subject = cut_str($list[$i]['wr_subject'],10);
-						$content = cut_str(strip_tags($list[$i]['wr_content']), 20);
+				<? 
 				}
 				else {
 					$url = "javascript:void(0);";
@@ -63,3 +66,10 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 	</div>
 <?}?>
 </div>
+<?if ( preg_match('/msie 7/i', $_SERVER['HTTP_USER_AGENT'] ) ) {?>
+<style>
+	.bottom-left img, .bottom-middle img, .bottom-right img {
+		width:auto;
+	}
+</style>
+<?}?>

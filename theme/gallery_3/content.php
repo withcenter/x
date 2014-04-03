@@ -122,12 +122,12 @@
 		<div class='gallery-bottom'>
 			<?
 				$option = array(
-					"width_1"	=>	318,
-					"width_2"	=>	211,
-					"width_3"	=>	318,
-					"height_1"	=>	213,
-					"height_2"	=>	167,
-					"height_3"	=>	213
+					"width_1"	=>	335,
+					"width_2"	=>	284,
+					"width_3"	=>	335,
+					"height_1"	=>	225,
+					"height_2"	=>	225,
+					"height_3"	=>	225
 				);
 			?>
 			<?=latest('x-latest-gallery3-gallery-bottom', bo_table(3), 3, 25, $cache_time=1, $option)?></div>

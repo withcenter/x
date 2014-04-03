@@ -1,16 +1,18 @@
 .bottom-left, .bottom-middle, .bottom-right {
 	float: left;
 	position: relative;
+	word-break:break-all;
+	overflow:hidden;
 }
 
 .bottom-left a, .bottom-middle a, .bottom-right a {
 	color: #ffffff;
-	text-decoration: none;
+	text-decoration: none;	
 }
 
 .bottom-left img, .bottom-middle img, .bottom-right img {
 	width: 100%;
-	border: solid 1px #c0c0c0;
+	border: solid 1px #c0c0c0;	
 }
 
 .bottom-left-container, .bottom-middle-container, .bottom-right-container {
@@ -18,6 +20,8 @@
 	position: absolute;
 	top: 0;
 	left: 0;
+	word-break:break-all;
+	text-shadow: 1px 1px #000000;
 }
 
 
@@ -30,8 +34,6 @@
 .bottom-left-content, .bottom-middle-content, .bottom-right-content {
 	font-size: 20px;
 	font-weight: 800;
-	line-height: 140%;
-	max-width: 50%;
-	height: 110px;
+	line-height: 140%;	
 	overflow: hidden;
 }
