@@ -199,14 +199,14 @@ $(window).resize(function(){
 	
 	
 	$('.mobile-menu-button').click(function(){
-		$(".hidden-mobile-navigation").css('left',$(window).width()).css('display','block').animate({left: 0},200);		
+		$(".hidden-mobile-navigation").css('left',$(window).width()).css('display','block').animate({left: 0},300);		
 		$(".hidden-mobile-navigation").promise().done(function(){		
 				$(".content").hide();					
 		});		
 	});
 	
 	$('.close-mobile-navigation img').click(function(){
-		$(".hidden-mobile-navigation").animate({left: $(window).width()},200);
+		$(".hidden-mobile-navigation").animate({left: $(window).width()},300);
 		$(".hidden-mobile-navigation").promise().done(function(){
 			$(".hidden-mobile-navigation").css('display','none');				
 		});		
