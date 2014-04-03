@@ -390,14 +390,25 @@ li.menu-title .dropdown-icon {
 	background-color:#0d79be;
 	border-top:1px solid #136aa6;
 	border-bottom:1px solid #136aa6;
-	color:#ffffff;
 	font-size:1.2em;	
 }
 
 .categ_outer .bottom_item .text{
-	padding:0 20px;	
-	max-width:920px;
+	padding:0 10px;	
+	max-width:940px;
 	margin:auto;
+}
+
+.categ_outer .bottom_item .text .seperator{
+	display:inline-block;
+	padding:0 0 0 7px;	
+	color:#ffffff;
+}
+
+.categ_outer .bottom_item .text a{
+	color:#ffffff;
+	display:inline-block;
+	padding:5px;
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 768px) {

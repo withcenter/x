@@ -84,7 +84,24 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			}
 		?>
 		<div class='bottom_item'>
-			<div class='text'>I don't know what to put here...</div>
+			<div class='text'>
+				<? if ( login() ) { 
+					if (super_admin()) {  ?>
+						<a href="<?=x::url_admin()?>">X ADMIN</a><a href="<?php echo G5_ADMIN_URL ?>">ADMIN</a><span class='seperator'>•</span>
+					<?}
+					if ( admin() ) {?>
+						<a href='<?=url_site_config()?>'>사이트 관리</a><span class='seperator'>•</span>
+					<?}?>
+					<a href='<?=G5_BBS_URL?>/logout.php'>로그아웃</a><span class='seperator'>•</span>
+					<a href='<?=G5_BBS_URL?>/member_confirm.php?url=register_form.php'>회원정보수정</a><span class='seperator'>•</span>
+				<? } else { ?>
+					<a href='<?=G5_BBS_URL?>/login.php'>로그인</a><span class='seperator'>•</span>
+					<a href='<?=G5_BBS_URL?>/register.php'>회원가입</a><span class='seperator'>•</span>
+				<? } ?>
+
+				<a href='<?=url_language_setting()?>'>언어변경</a><span class='seperator'>•</span>
+				<a class='last_menu' href='<?=g::url()?>?device=mobile'>모바일</a>
+			</div>
 		</div>
 	</div><!--categ_outer-->
 	<div class='search-container'>
@@ -207,6 +224,10 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 <style>		
 	.categ_wrapper .categ_list{	
 		padding-bottom:15px;
+	}
+	
+	.categ_outer .bottom_item .text .seperator{
+		margin-bottom:5px;
 	}
 </style>
 <?}?>
