@@ -155,6 +155,60 @@
 	height: 395px;
 	color: #293848;
 	position: relative;
+	padding: 20px;
+}
+
+.footer-full-links .full-link-title {
+	display: block;
+	border-bottom: solid 1px #2d3b64;
+	padding: 10px;
+	font-size: 14px;
+	color: #ffffff;
+}
+
+.footer-full-links .inner > div {
+	float: left;
+
+}
+
+.footer-full-links .inner > div .links-titles {
+	display: block;
+	color: #ffffff;
+	padding: 10px;
+	font-size: 14px;
+	height: 12px;
+	line-height: 24px;
+	overflow: hidden;
+}
+
+.footer-full-links .inner > div ul {
+	min-height: 220px;
+	border-radius: 5px;
+	background: #37466e;
+	margin: 5px;
+	padding: 10px;
+	list-style: none;
+}
+
+.footer-full-links .inner > div ul a {
+	color: #adb8bf;
+	line-height: 140%;
+}
+
+.footer-full-links .inner > div ul a:hover {
+	color: #ffffff;
+}
+
+.inner .main-menu-links {
+	width: 30%;
+}
+
+.inner .top-menu-links, .footer-menu-links {
+	width: 15%;
+}
+
+.inner .scrolling-links {
+	width: 40%;
 }
 
 .footer-view-clicked {
@@ -198,6 +252,12 @@
 
 @media only screen and (max-width: 767px) {
 	.inner-footer-links .prev-nav {
+		right: 0;
+	}
+	
+	.footer-view-clicked {
+		position: absolute;
+		top: -2px;
 		right: 0;
 	}
 }

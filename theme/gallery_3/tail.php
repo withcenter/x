@@ -9,9 +9,32 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		<div class='inner-footer'>
 			<div class='footer-full-links'>
 				<div class='inner' style='position: relative'>
-					<ul>
+					<span class='full-link-title'>VIEW ALL</span>
+					<div class='main-menu-links'>
+						<span class='links-titles'>Main</span>
+						<ul>
+							<?="<li class='first-menu'>" . implode( "</li><li>", x::menu_links() ) . "</li>"?>
+						</ul>
+					</div>
+					<div class='top-menu-links'>
+						<span class='links-titles'>Top Right</span>
+						<ul>
+							<?="<li class='first-menu'>" . implode( "</li><li>", x::menu_links('top') ) . "</li>"?>
+						</ul>
+					</div>
+					<div class='footer-menu-links'>
+						<span class='links-titles'>Footer</span>
+						<ul>
+							<?="<li class='first-menu'>" . implode( "</li><li>", x::menu_links('bottom') ) . "</li>"?>
+						</ul>
+					</div>
+					<div class='scrolling-links'>
+						<span class='links-titles'>Footer Scrolling</span>
+						<ul>
 							<?="<li class='first-menu'>" . implode( "</li><li>", x::menu_links('left') ) . "</li>"?>
-					</ul>
+						</ul>
+					</div>
+					<div style='clear: left'></div>
 				</div>
 			</div>
 			<div class='footer-links'>
