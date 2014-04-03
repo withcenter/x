@@ -114,7 +114,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 					<?				
 					if( x::menu_links('top')[0] ){?>
 					<ul class='hidden-top-menu'>
-					<li class='first-menu'><?=implode( "</li><li>", x::menu_links('top') )?></li>>
+					<li class='first-menu'><?=implode( "</li><li>", x::menu_links('top') )?></li>
 					</ul>		
 					<?}?>
 			</div>
