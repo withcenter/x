@@ -366,10 +366,13 @@ li.menu-title .dropdown-icon {
 	width:10px;
 }
 
-.categ_wrapper .categ_list .categ_item{
-	color:#687481;
-	font-size:1.1em;
+.categ_wrapper .categ_list .categ_item{	
 	padding:3px 0;
+}
+
+.categ_wrapper .categ_list .categ_item a{
+	color:#687481;
+	font-size:1.2em;	
 }
 
 .categ_outer .bottom_item{
