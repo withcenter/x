@@ -10,8 +10,8 @@ function widget( $option )
 $widget_css = array();
 function widget_css( $name=null )
 {
-	global $wc, $widget_css;
-	if ( empty($name) ) $name = $wc['name'];
+	global $widget_config, $widget_css;
+	if ( empty($name) ) $name = $widget_config['name'];
 	if ( isset( $widget_css[ $name ] ) ) return;
 	else {
 		$widget_css[ $name ] = true;
@@ -24,8 +24,8 @@ function widget_css( $name=null )
 $widget_javascript = array();
 function widget_javascript( $name=null )
 {
-	global $wc, $widget_javascript;
-	if ( empty($name) ) $name = $wc['name'];
+	global $widget_config, $widget_javascript;
+	if ( empty($name) ) $name = $widget_config['name'];
 	if ( isset( $widget_javascript[ $name ] ) ) return;
 	else {
 		$widget_javascript[ $name ] = true;
@@ -33,6 +33,32 @@ function widget_javascript( $name=null )
 		echo "<script src='$src' /></script>";
 	}
 }
+
+/**
+ *  @brief loads widget configuration and saves into global $widget_config.
+ *
+ *
+ *  @note
+ *		first, it will set config from the parametas of widget(). it is set before this call.
+ *		second, it will merge config with previously set ( in meta data ).
+ *		third, it will save the configuration of config.xml into $widget_config['xml']
+ *		
+ *  @code
+		load_widget_config($code);
+ *  @endcode
+ */
+function load_widget_config($code)
+{
+	global $widget_config;
+	$cfg = string::unscalar(meta_get("widget_config.$code"));
+	if ( ! empty($cfg) ) {
+		foreach ( $cfg as $k => $v ) {
+			$widget_config[ $k ] = $v;
+		}
+	}
+	$widget_config['xml'] = load_xml( x::dir() . "/widget/$widget_config[name]/config.xml" );
+}
+
 
 
 
@@ -53,3 +79,14 @@ EOH;
 
 
 
+
+function load_config( $path )
+{
+	return etc::load_and_parse_xml_into_assoc( $path );
+}
+
+
+function load_xml( $path )
+{
+	return etc::load_and_parse_xml_into_assoc( $path );
+}

@@ -324,17 +324,6 @@ function page( $page )
 }
 
 
-function load_config( $path )
-{
-	return etc::load_and_parse_xml_into_assoc( $path );
-}
-
-
-function load_xml( $path )
-{
-	return etc::load_and_parse_xml_into_assoc( $path );
-}
-
 
 function config( $code, $value=null )
 {

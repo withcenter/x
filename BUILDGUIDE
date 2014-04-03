@@ -1,0 +1,20 @@
+To Doc
+-------
+
+위젯은
+
+config.xml
+config.php
+
+가 있는데,
+
+config.php 는 설정 페이지에서 자동으로 불려진다.
+config.php 는 설정페이지에 HTML 폼을 추가로 보여주는 것과 설정페이지가 저장이 될 때, HTML 폼 값을 저장하는 역활을 한다.
+
+if ( $submit ) {
+	// 여기에 저장
+}
+else {
+	// 여기에 HTML FORM 문장을 출력
+}
+

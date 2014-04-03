@@ -1,6 +1,7 @@
+
 <div class='item'>
 	<span class='caption'><?=ln("Widget", "위젯")?></span> :
-	<input type='text' name='widget' value="<?=meta($code, 'widget')?>" placeholder=" <?=ln('Select Widget', '위젯을 선택하십시오.')?>">
+	<input type='text' name='name' value="<?=$widget_config['name']?>" placeholder=" <?=ln('Select Widget', '위젯을 선택하십시오.')?>">
 
 	<span class='widget-open'><?=ln("Open Widget List", "위젯 목록 열기")?></span>
 	<span class='widget-close'><?=ln("Close Widget List", "위젯 목록 닫기")?></span>
@@ -35,17 +36,17 @@ $(function(){
 	});
 	
 	$(".widget-open").click(function(){
-		$("[name='widget']").click();
+		$("[name='name']").click();
 	});
 	
-	$("[name='widget']").click(function(){
+	$("[name='name']").click(function(){
 		$('.widget-list').slideDown('fast');
 		$(".widget-open").hide();
 		$(".widget-close").show();
 	});
 	$('.widget').click(function(){
 		var text = $(this).find('.folder').text();
-		$("[name='widget']").val( text );
+		$("[name='name']").val( text );
 		$(".widget-close").click();
 	});
 });
