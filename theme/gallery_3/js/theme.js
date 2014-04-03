@@ -67,13 +67,17 @@ if( $(".hidden_categ_wrapper").length ){
 	$(".hidden-mobile-menu li a[page='" + curr_page + "']").addClass('selected');
 	$(".hidden-mobile-navigation .right .hidden_categ_wrapper[page='" + curr_page + "']").show();
 	
-	$(".hidden-mobile-menu li a").click(function(){		
-		var curr_page = $(this).attr("page");
-		if( !$(".hidden-mobile-navigation .right .hidden_categ_wrapper[page='" + curr_page + "']").length ) return;
+	$(".hidden-mobile-menu li a").click(function(e){		
+		if( $(this).hasClass('selected') ) {
+			console.log('a');
+		}else {
+			e.preventDefault();
+		}
+		var curr_page = $(this).attr("page");		
 		$(".hidden-mobile-navigation .right .hidden_categ_wrapper").hide();				
 		$(".hidden-mobile-menu li a").removeClass('selected');
 		$(".hidden-mobile-menu li a[page='" + curr_page + "']").addClass('selected');
-		$(".hidden-mobile-navigation .right .hidden_categ_wrapper[page='" + curr_page + "']").show();
+		$(".hidden-mobile-navigation .right .hidden_categ_wrapper[page='" + curr_page + "']").show();		
 	});
 }
 /**HIDDEN MENU CATEGORY WHEN WIDTH IS 750px and HIDDEN MENU IS OPEN**/

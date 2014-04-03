@@ -302,6 +302,7 @@ li.menu-title .dropdown-icon {
 
 .hidden-mobile-menu li a.selected {	
 	border-bottom: 4px solid #0091dc;
+	color:#293848;
 }
 
 .hidden-top-menu {

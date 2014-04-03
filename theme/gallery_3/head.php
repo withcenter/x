@@ -130,7 +130,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			<div class='hidden-menu'>
 				<ul class='hidden-mobile-menu'>
 						<?foreach( $menu_list as $menu){?>
-							<li><a page = '<?=$menu['url']?>' href='javascript:void(0)'><?=$menu['name']?></a></li>
+							<li><a page = '<?=$menu['url']?>' href='<?=G5_BBS_URL."/board.php?bo_table=".$menu['url']?>'><?=$menu['name']?></a></li>
 						<?}?>
 				</ul>
 			</div>
@@ -211,13 +211,6 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	else if ( $bo_table && empty($wr_id) ) $selected_menu = "bo_table=".$bo_table;
 	else $selected_menu = null;
 	?>
-	.hidden-mobile-menu a[href*="<?=$selected_menu?>"] {
-		color: #293848;
-		font-size: 16px;
-		border-bottom: 4px solid #0091dc;
-		font-weight: 800;
-	}
-
 </style>
 
 <?if ( preg_match('/msie 7/i', $_SERVER['HTTP_USER_AGENT'] ) ) {?>
