@@ -302,12 +302,30 @@
 		top: 0;
 		left: 0;
 		width: 100%;
+		min-height: 100%;
 		z-index: 10000;
+		padding-bottom: 20px;
+	}
+
+	.footer-full-links .links-titles {
+		position: relative;
+		cursor: pointer;
+		padding: 20px !important;
+	}
+	
+	.footer-full-links .links-titles .footer_menu_arrow {
+		position: absolute;
+		right: 20px;
+		top: 27px;
 	}
 	
 	.footer-full-links .inner > div {
 		clear: left;
 		width: 100%;
+	}
+	
+	.footer-full-links .inner > div.closed {
+		border-bottom: solid 1px #2d3b64;
 	}
 	
 	.footer-full-links .inner > div ul {

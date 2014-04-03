@@ -59,7 +59,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 					$count = 1;
 					for( $i = 1; $i <= $categ_pages; $i++ ){
 					?>
-						<div style='width:10%; display:inline-block;vertical-align:top;'>
+						<div class='cat_item_wrapper'>
 					<?
 						for( $i2 = $i*5-5; $i2 < $i*5; $i2++ ){
 						if( $i2 == $total_categ ) {											
@@ -76,6 +76,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 							}?>
 						</div>
 						<?}?>								
+					<div style='clear:both'></div>
 				</div>
 			</div>
 				<?
@@ -201,3 +202,11 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	}
 
 </style>
+
+<?if ( preg_match('/msie 7/i', $_SERVER['HTTP_USER_AGENT'] ) ) {?>
+<style>		
+	.categ_wrapper .categ_list{	
+		padding-bottom:15px;
+	}
+</style>
+<?}?>

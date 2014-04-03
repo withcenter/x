@@ -67,9 +67,10 @@ if( $(".hidden_categ_wrapper").length ){
 	$(".hidden-mobile-menu li a[page='" + curr_page + "']").addClass('selected');
 	$(".hidden-mobile-navigation .right .hidden_categ_wrapper[page='" + curr_page + "']").show();
 	
-	$(".hidden-mobile-menu li a").click(function(){
-		$(".hidden-mobile-navigation .right .hidden_categ_wrapper").hide();
-		var curr_page = $(this).attr("page");		
+	$(".hidden-mobile-menu li a").click(function(){		
+		var curr_page = $(this).attr("page");
+		if( !$(".hidden-mobile-navigation .right .hidden_categ_wrapper[page='" + curr_page + "']").length ) return;
+		$(".hidden-mobile-navigation .right .hidden_categ_wrapper").hide();				
 		$(".hidden-mobile-menu li a").removeClass('selected');
 		$(".hidden-mobile-menu li a[page='" + curr_page + "']").addClass('selected');
 		$(".hidden-mobile-navigation .right .hidden_categ_wrapper[page='" + curr_page + "']").show();

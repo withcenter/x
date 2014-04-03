@@ -11,7 +11,7 @@
 
 .header .main-menu {
 	float: left;
-	margin: 0 0 0 35px;
+	margin: 0 0 -1px 35px;
 	list-style: none;
 	padding: 0;
 }
@@ -174,7 +174,7 @@ li.menu-title .dropdown-icon {
 	margin-top:37px;
 	width:50%;
 	float:left;
-	max-width:300px;	
+	max-width:350px;	
 }
 
 .hidden-mobile-navigation .right .hidden_categ_wrapper{
@@ -357,7 +357,7 @@ li.menu-title .dropdown-icon {
 
 .categ_wrapper .categ_list{	
 	vertical-align:top;
-	height:125px;
+	height:130px;
 }
 
 .categ_wrapper .categ_list .bar{
@@ -366,8 +366,18 @@ li.menu-title .dropdown-icon {
 	width:10px;
 }
 
+.categ_wrapper .categ_list .cat_item_wrapper{	
+	width:10%;
+	display:inline-block;
+	float:left;
+}
+
 .categ_wrapper .categ_list .categ_item{	
 	padding:3px 0;
+	word-break:break-all;
+	height:15px;
+	line-height:17px;
+	overflow:hidden;
 }
 
 .categ_wrapper .categ_list .categ_item a{
