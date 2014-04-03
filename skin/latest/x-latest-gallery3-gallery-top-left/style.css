@@ -3,6 +3,7 @@
 	padding: 7px 8px 7px 7px;
 	background: #343434;
 	overflow: hidden;
+	position: relative;
 }
 
 .top-left a {
@@ -45,4 +46,13 @@
 	padding: 10px 0 20px 0;
 	color: #ffffff;
 	width: 100%;
+}
+
+.latest-top-left .read_more {
+	z-index: 10000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
