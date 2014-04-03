@@ -11,25 +11,25 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 				<div class='inner' style='position: relative'>
 					<span class='full-link-title'>VIEW ALL<img src="<?=x::theme_url('img/close_footer.png')?>" class='close_mobile_footer'/></span>
 					<div class='main-menu-links'>
-						<span class='links-titles'>Main</span>
+						<span class='links-titles'>Main<img src="<?=x::theme_url('img/footer_menu_close.gif')?>" class='footer_menu_arrow'/></span>
 						<ul>
 							<?="<li class='first-menu'>" . implode( "</li><li>", x::menu_links() ) . "</li>"?>
 						</ul>
 					</div>
 					<div class='top-menu-links'>
-						<span class='links-titles'>Top Right</span>
+						<span class='links-titles'>Top Right<img src="<?=x::theme_url('img/footer_menu_close.gif')?>" class='footer_menu_arrow'/></span>
 						<ul>
 							<?="<li class='first-menu'>" . implode( "</li><li>", x::menu_links('top') ) . "</li>"?>
 						</ul>
 					</div>
 					<div class='footer-menu-links'>
-						<span class='links-titles'>Footer</span>
+						<span class='links-titles'>Footer<img src="<?=x::theme_url('img/footer_menu_close.gif')?>" class='footer_menu_arrow'/></span>
 						<ul>
 							<?="<li class='first-menu'>" . implode( "</li><li>", x::menu_links('bottom') ) . "</li>"?>
 						</ul>
 					</div>
 					<div class='scrolling-links'>
-						<span class='links-titles'>Footer Scrolling</span>
+						<span class='links-titles'>Footer Scrolling<img src="<?=x::theme_url('img/footer_menu_close.gif')?>" class='footer_menu_arrow'/></span>
 						<ul>
 							<?="<li class='first-menu'>" . implode( "</li><li>", x::menu_links('left') ) . "</li>"?>
 						</ul>

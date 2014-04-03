@@ -59,19 +59,24 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 					$count = 1;
 					for( $i = 1; $i <= $categ_pages; $i++ ){
 					?>
-						<div style='width:10%; display:inline-block;vertical-align:top;'>
+						<div class='cat_item_wrapper'>
 					<?
 						for( $i2 = $i*5-5; $i2 < $i*5; $i2++ ){
 						if( $i2 == $total_categ ) {											
 							break;
 						}
 						?>									
-							<div class='categ_item'><?=$categories[$i2]?></div>								
+							<div class='categ_item'>
+								<a href='<?=G5_BBS_URL."/board.php?bo_table=".$menu['url']?>&sca=<?=$categories[$i2]?>'>							
+									<?=$categories[$i2]?>
+								</a>
+							</div>
 						<?
 							$count++;
 							}?>
 						</div>
 						<?}?>								
+					<div style='clear:both'></div>
 				</div>
 			</div>
 				<?
@@ -102,23 +107,58 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			<?="<li class='sub'>" . implode( "</li><li class='sub'>", x::menu_links() ) . "</li>"?>
 		</ul>
 	</div>
-	<div class='hidden-mobile-navigation'>
+	<div class='hidden-mobile-navigation'>	
 		<div class='close-mobile-navigation'><img src="<?=x::theme_url('img/close_hidden.png')?>"/></div>
-		<div class='inner'>
+		<div class='left'>
 			<div class='hidden-menu'>
 				<ul class='hidden-mobile-menu'>
-					<?="<li class='first-menu'>" . implode( "</li><li>", x::menu_links() ) . "</li>"?>
+						<?foreach( $menu_list as $menu){?>
+							<li><a page = '<?=$menu['url']?>' href='javascript:void(0)'><?=$menu['name']?></a></li>
+						<?}?>
 				</ul>
 			</div>
 			<div class='hidden-menu'>				
 					<?				
 					if( x::menu_links('top')[0] ){?>
 					<ul class='hidden-top-menu'>
-					<li class='first-menu'><?=implode( "</li><li>", x::menu_links('top') )?></li>
+						<li class='first-menu'><?=implode( "</li><img src='".x::url_theme()."/img/blue_arrow.gif'><li>", 
+						x::menu_links('top') )?>
+						<img src='<?=x::url_theme()?>/img/blue_arrow.gif'>
+						</li>
 					</ul>		
 					<?}?>
 			</div>
 		</div>
+		<div class='right'>
+			<?foreach( $menu_list as $menu){?>			
+				<?
+				$categ = db::row("SELECT bo_category_list FROM ".$g5['board_table']." WHERE bo_table = '".$menu['url'] . "'");
+				if( $categ['bo_category_list'] ){
+				?>
+				<div class='hidden_categ_wrapper' page = '<?=$menu['url']?>'>
+				<div class='categ_title'>
+					<a href='<?=G5_BBS_URL."/board.php?bo_table=".$menu['url']?>'>
+						<?=$menu['name']?>
+					</a>
+				</div>
+				<?
+				$categories = explode( '|',$categ['bo_category_list'] );
+					foreach( $categories as $category ){
+						?>						
+							<div class='categ_item'>
+								<a href='<?=G5_BBS_URL."/board.php?bo_table=".$menu['url']?>&sca=<?=$category?>'>
+									<?=$category?>
+								</a>
+							</div>
+						<?
+						}?>
+					</div>
+				<?} 
+				
+				
+			}?>
+		</div>
+		<div style='clear:both'></div>
 	</div>
 	<div class='content'>
 		<div class='inner-content'>
@@ -162,3 +202,11 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	}
 
 </style>
+
+<?if ( preg_match('/msie 7/i', $_SERVER['HTTP_USER_AGENT'] ) ) {?>
+<style>		
+	.categ_wrapper .categ_list{	
+		padding-bottom:15px;
+	}
+</style>
+<?}?>

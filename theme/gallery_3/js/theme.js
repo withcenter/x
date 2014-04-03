@@ -1,6 +1,7 @@
 var banner_count = 0;
 var curr_banner = 1;
 $(function(){
+
 	$(".header .top-search .menu-dropdown-button").click(function(){
 		$(".header .top-menu").toggle();
 	});
@@ -60,7 +61,28 @@ $('.categ_outer').mouseleave(function(){
 		$(".categ_outer").slideUp();		
 	},200);
 });
-
+/**HIDDEN MENU CATEGORY**/
+if( $(".hidden_categ_wrapper").length ){
+	var curr_page = $(".hidden_categ_wrapper").attr('page');
+	$(".hidden-mobile-menu li a[page='" + curr_page + "']").addClass('selected');
+	$(".hidden-mobile-navigation .right .hidden_categ_wrapper[page='" + curr_page + "']").show();
+	
+	$(".hidden-mobile-menu li a").click(function(){		
+		var curr_page = $(this).attr("page");
+		if( !$(".hidden-mobile-navigation .right .hidden_categ_wrapper[page='" + curr_page + "']").length ) return;
+		$(".hidden-mobile-navigation .right .hidden_categ_wrapper").hide();				
+		$(".hidden-mobile-menu li a").removeClass('selected');
+		$(".hidden-mobile-menu li a[page='" + curr_page + "']").addClass('selected');
+		$(".hidden-mobile-navigation .right .hidden_categ_wrapper[page='" + curr_page + "']").show();
+	});
+}
+/**HIDDEN MENU CATEGORY WHEN WIDTH IS 750px and HIDDEN MENU IS OPEN**/
+$(window).resize(function(){
+	if( $(window).width() > 750 ){		
+		$(".hidden-mobile-navigation").hide();
+		$(".content").show();
+	}
+});
 	
 /***************BANNER_CLICK******************/	
 	banner_count = $(".banner-container .banner img").length -2;
@@ -178,12 +200,18 @@ $('.categ_outer').mouseleave(function(){
 	
 	
 	$('.mobile-menu-button').click(function(){
-		$(".hidden-mobile-navigation").css('left',$(window).width()).css('display','block').animate({left: 0},200);
+		$(".hidden-mobile-navigation").css('left',$(window).width()).css('display','block').animate({left: 0},300);		
+		$(".hidden-mobile-navigation").promise().done(function(){		
+				$(".content").hide();					
+		});		
 	});
 	
-	$('.close-mobile-navigation').click(function(){
-		$(".hidden-mobile-navigation").animate({left: $(window).width()},200);
-		$(".hidden-mobile-navigation").promise().done(function(){ $(".hidden-mobile-navigation").css('display','none');	});
+	$('.close-mobile-navigation img').click(function(){
+		$(".hidden-mobile-navigation").animate({left: $(window).width()},300);
+		$(".hidden-mobile-navigation").promise().done(function(){
+			$(".hidden-mobile-navigation").css('display','none');				
+		});		
+		$(".content").show();
 	});
 	
 	
