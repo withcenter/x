@@ -124,7 +124,7 @@
 				$option = array(
 
 					"width_1"	=>	335,
-					"width_2"	=>	284,
+					"width_2"	=>	281,
 					"width_3"	=>	335,
 					"height_1"	=>	225,
 					"height_2"	=>	225,

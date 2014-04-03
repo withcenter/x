@@ -37,12 +37,12 @@
 }
 
 .gallery-top-left .inner {
-	margin-right: 0.4%;
+	margin-right:3px;
 	margin-bottom: 1%;
 }
 
 .gallery-top-right .inner {
-	margin-left: 0.6%;
+	margin-left:3px;
 	margin-bottom: 1%;
 	border:1px solid #c0c0c0;
 }
@@ -60,16 +60,15 @@
 }
 
 .bottom-left .inner{
-	margin-right: 1%;
+	margin-right:4px;
 }
 
 .bottom-middle .inner {
-	margin-right: 1.25%;
-	margin-left: 1%;
+	margin:0 5px;
 } 
 
 .bottom-right .inner {
-	margin-left: 0.75%;
+	margin-left:3px;
 }
 
 @media only screen and (max-width: 767px) {
