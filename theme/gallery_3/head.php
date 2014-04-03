@@ -16,11 +16,15 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 							<img src="<?=x::theme_url('img/default_logo.png')?>">
 						<?}?>
 					</a>
-				</h1>
+				</h1>					
 					<ul class='main-menu'>
-						<?="<li class='first-menu'>" . implode( "</li><li>", x::menu_links() ) . "</li>"?>
+						<?//="<li class='first-menu'>" . implode( "</li><li>", x::menu_links() ) . "</li>"?>
+						<?$menu_list = x::menus();
+						foreach( $menu_list as $menu){?>
+							<li><a class='<?=$menu['url']?>' href='<?=G5_BBS_URL."/board.php?bo_table=".$menu['url']?>'><?=$menu['name']?></a></li>
+						<?}?>
 					</ul>
-			
+					
 				<div class='top-menu'>
 					<ul class='top-menu-ul'>
 						<?="<li class='first-menu'>" . implode( "</li><li>", x::menu_links('top') ) . "</li>"?>
@@ -31,10 +35,51 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 					<a href="javascript: void(0)" class='top-search-button'></a>
 				</div>
 				<div style='clear: left'></div>
-				<div class='mobile-menu-top'><a href="javascript: void(0)" class='mobile-menu-button'><img src="<?=x::theme_url('img/menu_dropdown.gif')?>" width=50 height=50/></a></div>
-			</div>
+				<div class='mobile-menu-top'><a href="javascript: void(0)" class='mobile-menu-button'><img src="<?=x::theme_url('img/menu_dropdown.gif')?>" width=50 height=50/></a></div>				
+			</div><!--header-960px-->
 		</div><!--inner-header-->
 	</div><!--header-->
+	<div class='categ_outer'>
+					<?
+					$menu_list = x::menus();
+					foreach( $menu_list as $menu){					
+						$categ = db::row("SELECT bo_category_list FROM ".$g5['board_table']." WHERE bo_table = '".$menu['url'] . "'");
+						if( $categ['bo_category_list'] ){
+						?>
+						<div class='categ_wrapper' page = <?=$menu['url']?>>
+							<div class='categ_title'>
+								<a href='<?=G5_BBS_URL."/board.php?bo_table=".$menu['url']?>'><?=$menu['name']?></a>
+							</div>
+								<div class='categ_list'>								
+									<div class='bar'></div>								
+									<?
+									$categories = explode( '|',$categ['bo_category_list'] );
+									$total_categ = count( $categories );
+									$categ_pages = ceil($total_categ/5);
+									$count = 1;
+									for( $i = 1; $i <= $categ_pages; $i++ ){
+									?>
+										<div style='width:10%; display:inline-block;vertical-align:top;'>
+									<?
+										for( $i2 = $i*5-5; $i2 < $i*5; $i2++ ){
+										if( $i2 == $total_categ ) {											
+											break;
+										}
+										?>									
+											<div class='categ_item'><?=$categories[$i2]?></div>								
+										<?
+											$count++;
+											}?>
+										</div>
+										<?}?>								
+								</div>
+						</div>
+						<?
+						}
+					}
+				?>
+				<div class='bottom_item'>I don't know what to put here...</div>
+				</div><!--categ_outer-->
 	<div class='search-container'>
 		<div class='search-field'>
 			<form name="fsearchbox" method="get" action="<?=x::url()?>" autocomplete='off'>
