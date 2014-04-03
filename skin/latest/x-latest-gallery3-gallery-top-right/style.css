@@ -22,8 +22,7 @@
 
 .latest-top-right .top-right img {
 	width: 100%;
-	z-index: 1;
-	border: solid 1px #c0c0c0;
+	z-index: 1;	
 }
 
 .latest-top-right .top-right-subject {
