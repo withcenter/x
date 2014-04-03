@@ -42,9 +42,6 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 	
 <? function latest_bottom_gallery( $name, $img, $list, $i ) { ?>
 	<div class='<?=$name?>'>
-		<div class='inner'>
-			<a href="<?=$url?>" class='read_more'><img src="<?=$img?>"/></a>
-			<div class='<?=$name?>-container'>
 				<? if ( $list ) {
 						$url = $list[$i]['href'];
 						$subject = cut_str($list[$i]['wr_subject'],10);
@@ -56,10 +53,14 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 					$content = "필고 갤러리 테마 No.2를 선택 하셨습니다.";
 				}
 				?>
-				<div class='<?=$name?>-subject'><a href="<?=$url?>" class='read_more'><?=$subject?></a></div>
-				<div class='<?=$name?>-content'><a href="<?=$url?>" class='read_more'><?=$content?></a></div>
+		<div class='inner'>
+			<a href="<?=$url?>" ><img src="<?=$img?>"/></a>
+			<div class='<?=$name?>-container'>
+				<div class='<?=$name?>-subject'><a href="<?=$url?>" ><?=$subject?></a></div>
+				<div class='<?=$name?>-content'><a href="<?=$url?>" ><?=$content?></a></div>
 			</div>
 		</div>
+		<a href='<?=$url?>' class='read_more'></a>
 	</div>
 <?}?>
 </div>
