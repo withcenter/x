@@ -11,7 +11,7 @@
 
 .header .main-menu {
 	float: left;
-	margin: 0 0 0 35px;
+	margin: 0 0 -1px 35px;
 	list-style: none;
 	padding: 0;
 }
