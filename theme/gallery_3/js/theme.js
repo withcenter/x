@@ -21,11 +21,9 @@ $(function(){
 		else $(".arrow_icon").attr('src', imgpath+"/arrow_down.png");
 	});
 	
-	//alert($(".banner-container .banner").width());
-	
 /***************BANNER_CLICK******************/	
 	banner_count = $(".banner-container .banner img").length -2;
-	console.log(banner_count);
+	
 	var total_width_percentage = 100 * banner_count;	
 	$(".banner-container .banner img[banner_num='" + curr_banner + "']").addClass('selected_banner');
 	
@@ -102,8 +100,9 @@ $(function(){
 	
 /***************BANNER_ROTATION******************/
 	var stopped = false;
-
+	
 	var banner_interval = setInterval(function(){
+	if( banner_count < 1 ) return;
 		do_rotate();
 	},4000);
 	

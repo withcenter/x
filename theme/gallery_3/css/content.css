@@ -43,6 +43,10 @@
 	width:100%;	
 }
 
+.content .banner-container .banner.no_banner{			
+	left:0;
+}
+
 
 .banner-container .banner_holder{
 	display:inline-block;

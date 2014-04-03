@@ -16,19 +16,25 @@
 	
 		<div class='banner-container'>
 				<?
-				$fake_last_image = g::thumbnail_from_image_tag( "<img src='".$banners[count($banners)-1]['src']."'/>;", bo_table(1), 448, 238);
-				if( $banners[$total_banners-1]['subject'] ) $fake_last_image_subject = $banners[$total_banners-1]['subject'];
-				else $fake_last_image_subject = "No Subject";
-				if( $banners[$total_banners-1]['content'] ) $fake_last_image_content = $banners[$total_banners-1]['content'];
-				else $fake_last_image_content = "No Content";
-				$fake_first_image = g::thumbnail_from_image_tag( "<img src='".$banners[0]['src']."'/>;", bo_table(1), 448, 238);
-				if( $banners[0]['subject'] ) $fake_first_image_subject = $banners[0]['subject'];
-				else $fake_first_image_subject = "No Subject";
-				if( $banners[0]['content'] ) $fake_first_image_content = $banners[0]['content'];
-				else $fake_first_image_content = "No Content"
+				if( $total_banners ){	
+					$fake_last_image = $banners[count($banners)-1]['src'];
+					if( $banners[$total_banners-1]['subject'] ) $fake_last_image_subject = $banners[$total_banners-1]['subject'];
+					else $fake_last_image_subject = "No Subject";
+					if( $banners[$total_banners-1]['content'] ) $fake_last_image_content = $banners[$total_banners-1]['content'];
+					else $fake_last_image_content = "No Content";
+					$fake_first_image = $banners[0]['src'];
+					if( $banners[0]['subject'] ) $fake_first_image_subject = $banners[0]['subject'];
+					else $fake_first_image_subject = "No Subject";
+					if( $banners[0]['content'] ) $fake_first_image_content = $banners[0]['content'];
+					else $fake_first_image_content = "No Content";
+				}
+				else{
+					$no_banner = "no_banner";
+				}
 				?>							
 			<div class='inner'>			
-				<div class='banner'>	
+				<div class='banner <?=$no_banner?>'>
+				<?if( $total_banners ){ ?>
 					<div class='banner_holder'>
 						<img src='<?=$fake_last_image?>'/>
 						<div class='text_content'>
@@ -38,8 +44,7 @@
 					</div>
 					<? 				
 					$count = 1;
-					foreach ( $banners as $banner ) {				
-						$banner['src'] = g::thumbnail_from_image_tag( "<img src='$banner[src]'>", bo_table(1), 448, 238);						
+					foreach ( $banners as $banner ) {										
 						if( $banner['href'] ) $banner_href = $banner['href'];
 						else $banner_href = 'javascript:void(0)';
 						if( $banner['subject'] ) $banner_subject = cut_str($banner['subject'],40,'...');
@@ -76,26 +81,39 @@
 							<div class = 'banner_content'><?=cut_str($fake_first_image_content,100,'...')?></div>
 						</div>	
 					</div>
-				</div>			
-				<div class='commands'>
-					<div class='left_btn button'><img src = '<?=x::url_theme()?>/img/left_btn.png'/></div>
-					<div class='button'>
-						<img class='stop_btn stop_and_play' src = '<?=x::url_theme()?>/img/stop_btn.png'/>
-						<img class='play_btn stop_and_play'src = '<?=x::url_theme()?>/img/play_btn.png'/>
+				<?} else {?>				
+					<div class='banner_holder'>
+						<img src='<?=x::url_theme()?>/img/no_image_banner1.png'/>
+						<div class='text_content'>						
+							<div class = 'banner_subject'>No Available Banners</div>
+							<div class = 'banner_content'>Please upload banner/s in config global</div>
+						</div>	
 					</div>
-					<div class='right_btn button'><img src = '<?=x::url_theme()?>/img/right_btn.png'/></div>
-					<div style='clear:both'></div>
+				<?}?>
 				</div>
+				<?if( $total_banners ){ ?>
+					<div class='commands'>
+						<div class='left_btn button'><img src = '<?=x::url_theme()?>/img/left_btn.png'/></div>
+						<div class='button'>
+							<img class='stop_btn stop_and_play' src = '<?=x::url_theme()?>/img/stop_btn.png'/>
+							<img class='play_btn stop_and_play'src = '<?=x::url_theme()?>/img/play_btn.png'/>
+						</div>
+						<div class='right_btn button'><img src = '<?=x::url_theme()?>/img/right_btn.png'/></div>
+						<div style='clear:both'></div>
+					</div>
+				<?}?>
 			</div><!--/inner-->
 		</div><!--banner-container-->
-		<div class='lower_commands'>
-			<?for( $i = 1; $i <= $total_banners; $i++ ){?>
-				<div class='bullet' banner_num='<?=$i?>'>
-					<img class='off' src = '<?=x::url_theme()?>/img/change_banner_bottom.png'/>					
-					<img class='on' src = '<?=x::url_theme()?>/img/change_banner_bottom_selected.png'/>					
-				</div>
-			<?}?>
-		</div>
+		<?if( $total_banners ){ ?>
+			<div class='lower_commands'>
+				<?for( $i = 1; $i <= $total_banners; $i++ ){?>
+					<div class='bullet' banner_num='<?=$i?>'>
+						<img class='off' src = '<?=x::url_theme()?>/img/change_banner_bottom.png'/>					
+						<img class='on' src = '<?=x::url_theme()?>/img/change_banner_bottom_selected.png'/>					
+					</div>
+				<?}?>
+			</div>
+		<?}?>
 		<div class='gallery-top'>
 			<div class='gallery-top-left'><div class='inner'><?=latest('x-latest-gallery3-gallery-top-left', bo_table(2), 1, 25)?></div></div>
 			<div class='gallery-top-right'><div class='inner'><?=latest('x-latest-gallery3-gallery-top-right', bo_table(3), 1, 25)?></div></div>
