@@ -120,7 +120,17 @@
 			<div style="clear: both"></div>
 		</div>
 		<div class='gallery-bottom'>
-			<?=latest('x-latest-gallery3-gallery-bottom', bo_table(2), 3, 25)?></div>
+			<?
+				$option = array(
+					"width_1"	=>	318,
+					"width_2"	=>	211,
+					"width_3"	=>	318,
+					"height_1"	=>	213,
+					"height_2"	=>	167,
+					"height_3"	=>	213
+				);
+			?>
+			<?=latest('x-latest-gallery3-gallery-bottom', bo_table(2), 3, 25, $cache_time=1, $option)?></div>
 		</div>
 <?if ( preg_match('/msie 7/i', $_SERVER['HTTP_USER_AGENT'] ) ) {?>
 <style>		

@@ -2,10 +2,7 @@
 
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 include_once(G5_LIB_PATH.'/thumbnail.lib.php');
-// thumbnail size
-isset($options['width'])		? $width = $options['width'] : $width = 300;
-isset($options['radius'])	? $height = $options['height'] : $height = 180;
-isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
+
 ?>
 <? if ( ! $GLOBALS[$latest_skin_url] ++ ) { ?><link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css"><?}?>
 
@@ -17,20 +14,29 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 
 <div class='latest-bottom-gallery'>
 	
-	<?
+	<?		
 	if ( $list ) {
-		$gallery_info = array( array('bottom-left','bottom-middle','bottom-right'),array(318, 211, 318), array(213, 167, 213));
+		if( $options ){
+			$gallery_info = array( 
+				array('bottom-left','bottom-middle','bottom-right'),
+				array($options['width_1'], $options['width_2'], $options['width_3']),
+				array($options['height_1'], $options['height_2'], $options['height_3'])
+			);
+		}
+		else{
+			$gallery_info = array( array('bottom-left','bottom-middle','bottom-right'),array(318, 211, 318), array(213, 167, 213));
+		}
 	for ($i = 0; $i<=2; $i++ ) {
 		$imgsrc = get_list_thumbnail($bo_table, $list[$i]['wr_id'], $gallery_info[1][$i], $gallery_info[2][$i]);
 		if ( $imgsrc['src'] ) {
 			$img = $imgsrc['src'];
 		} elseif ( $image_from_tag = g::thumbnail_from_image_tag( $list[$i]['wr_content'], $bo_table, $gallery_info[1][$i], $gallery_info[2][$i] )) {
 			$img = $image_from_tag;
-		} else $img = $latest_skin_url."/img/no_image.png";
+		} else $img = g::thumbnail_from_image_tag("<img src='".$latest_skin_url."/img/no-image.png'/>", $bo_table, $gallery_info[1][$i], $gallery_info[2][$i]);
 		echo latest_bottom_gallery($gallery_info[0][$i],$img,$list,$i);
 	} 
 		echo "<div style='clear: left'></div>";
-	}
+	}	
 	?>
 	
 	
