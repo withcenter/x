@@ -265,6 +265,12 @@
 	display: none !important;
 }
 
+
+
+.footer-full-links .links-titles .footer_menu_arrow {
+	display: none;
+}
+
 .close_mobile_footer {
 	position: absolute;
 	top: 5px;
@@ -272,9 +278,6 @@
 	height: 24px;
 	width: 24px;
 	cursor: pointer;
-}
-
-.footer-full-links .links-titles .footer_menu_arrow {
 	display: none;
 }
 
@@ -360,5 +363,9 @@
 	
 	.open-footer-info {
 		display: block !important;
+	}
+	
+	.close_mobile_footer {
+		display: block;
 	}
 }

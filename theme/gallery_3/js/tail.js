@@ -73,6 +73,8 @@ $(function(){
 		}
 		if( $(window).width() < 750 ){	
 			$(".opened-full").removeClass('opened-full').css('display','none');
+			$(".footer-links.selected").removeClass('selected');
+		
 		}
 		if ( ($(window).width() > '850' && $(window).width() <= '985') && (current_row == max_rows)) {
 			$('.inner-footer-links .menu-links ul').css("top", "+=21px");
