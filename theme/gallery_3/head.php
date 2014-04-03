@@ -78,7 +78,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 						}
 					}
 				?>
-				<div class='bottom_item'>I don't know what to put here...</div>
+				<div class='bottom_item'>
+					<div class='text'>I don't know what to put here...</div>
+				</div>
 				</div><!--categ_outer-->
 	<div class='search-container'>
 		<div class='search-field'>

@@ -264,6 +264,8 @@ li.menu-title .dropdown-icon {
 }
 
 .categ_wrapper{
+	max-width:920px;
+	margin:auto;
 	display:none;
 	padding:0 20px;
 	margin-top:20px;
@@ -299,7 +301,13 @@ li.menu-title .dropdown-icon {
 	border-top:1px solid #136aa6;
 	border-bottom:1px solid #136aa6;
 	color:#ffffff;
-	font-size:1.2em;
+	font-size:1.2em;	
+}
+
+.categ_outer .bottom_item .text{
+	padding:0 20px;	
+	max-width:920px;
+	margin:auto;
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
