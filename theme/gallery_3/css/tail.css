@@ -274,6 +274,10 @@
 	cursor: pointer;
 }
 
+.footer-full-links .links-titles .footer_menu_arrow {
+	display: none;
+}
+
 @media only screen and (max-width: 1000px) {
 	.inner-footer-links .menu-links ul li {
 		width: 25%;
@@ -314,6 +318,7 @@
 	}
 	
 	.footer-full-links .links-titles .footer_menu_arrow {
+		display: block;
 		position: absolute;
 		right: 20px;
 		top: 27px;
