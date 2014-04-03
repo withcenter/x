@@ -35,12 +35,14 @@ $(function(){
 	
 	$(".open-footer").click(function(){
 		$(window.opera?'html':'html body').animate({scrollTop: 0},0);
-		$(".footer-full-links").css('left',$(window).width()).css('display','block').css('height', $('html body').height()).animate({left: 0},200);
+		$(".footer-full-links").css('left',$(window).width()).css('display','block').animate({left: 0},200);
+		$(".footer-full-links").promise().done(function(){ $(".layout .content ").css('display','none')});
 	});
 	
 	$('.close_mobile_footer').click(function(){
+		$(".layout .content ").css('display','block');
 		$(".footer-full-links").animate({left: $(window).width()},200);
-		$(".footer-full-links").promise().done(function(){ $(".footer-full-links").css('display','none').css('height','100%');	});
+		$(".footer-full-links").promise().done(function(){ $(".footer-full-links").css('display','none');});
 	});
 	
 	function footer_max_rows() {

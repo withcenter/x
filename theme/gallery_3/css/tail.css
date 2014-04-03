@@ -268,7 +268,7 @@
 .close_mobile_footer {
 	position: absolute;
 	top: 5px;
-	right: 10px;
+	right: 5px;
 	height: 24px;
 	width: 24px;
 	cursor: pointer;
@@ -308,6 +308,10 @@
 	.footer-full-links .inner > div {
 		clear: left;
 		width: 100%;
+	}
+	
+	.footer-full-links .inner > div ul {
+		min-height: 0;
 	}
 	
 	.footer-full-links .inner > div li {
