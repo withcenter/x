@@ -115,8 +115,8 @@
 			</div>
 		<?}?>
 		<div class='gallery-top'>
-			<div class='gallery-top-left'><div class='inner'><?=latest('x-latest-gallery3-gallery-top-left', bo_table(2), 1, 25)?></div></div>
-			<div class='gallery-top-right'><div class='inner'><?=latest('x-latest-gallery3-gallery-top-right', bo_table(3), 1, 25)?></div></div>
+			<div class='gallery-top-left'><div class='inner'><?=latest('x-latest-gallery3-gallery-top-left', bo_table(1), 1, 25)?></div></div>
+			<div class='gallery-top-right'><div class='inner'><?=latest('x-latest-gallery3-gallery-top-right', bo_table(1), 1, 25)?></div></div>
 			<div style="clear: both"></div>
 		</div>
 		<div class='gallery-bottom'>
