@@ -43,6 +43,10 @@
 	width:100%;	
 }
 
+.content .banner-container .banner.no_banner{			
+	left:0;
+}
+
 
 .banner-container .banner_holder{
 	display:inline-block;
@@ -53,7 +57,7 @@
 }
 
 .banner-container .banner_holder .text_content{
-	width:50%;
+	width:48.2%;
 	margin-right:5%;
 	float:left;
 	word-break:break-all;	
@@ -81,7 +85,7 @@
 
 
 .content .banner-container img{
-	width:45%;	
+	width:46.8%;	
 	float:right;
 }
 

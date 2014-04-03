@@ -14,6 +14,17 @@ x::hook_register('end_before_html', 'hook_html_symbol');
 x::hook_register('end_before_html', 'hook_css_js_version');
 x::hook_register('end_before_html', 'hook_html_meta');
 
+/**     HOOK : end
+ *  ------------------------------------------------------------------
+ *
+ */
+if ( board_page() ) include x::dir() . '/etc/hook/board.end.php';
+
+
+
+
+
+
 
 function hook_html_meta()
 {

@@ -1089,8 +1089,24 @@ class gnuboard {
 		";
 		if ( $return_sql ) return $sql;
 		$rows = db::rows( $sql );
-		return $rows;
+		return self::pre($rows);
 	}
+	
+	
+	static function pre($rows)
+	{
+		$posts = array();
+		foreach( $rows as $row ) {
+			$post = $row;
+			$post['subject']	= &$post['wr_subject'];
+			$post['content']	= &$post['wr_content'];
+			$post['url']			= site_url($row['domain']) . "/bbs/board.php?bo_table=" . $row['bo_table'] . "&wr_id=".$row['wr_id'];
+			$posts[] = $post;
+		}
+		return $posts;
+	}
+	
+	
 	
 	static function posts_old( $o )
 	{

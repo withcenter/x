@@ -68,3 +68,19 @@
 	padding: 1em;
 	background-color: #efefef;
 }
+
+
+/** widget update */
+.widget {
+	position: relative;
+}
+
+.widget > .admin {
+	position:absolute;
+	right: 0px;
+	padding: 0.4em 0.8em;
+	background-color: black;
+	color:white;
+	cursor:pointer;
+}
+

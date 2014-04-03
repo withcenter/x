@@ -44,8 +44,9 @@ if ( $argv[1] == 'language' ) {
 	include x::dir() . "/etc/patch/index.php";
 	include x::dir() . "/etc/patch/database.php";
 	include x::dir() . "/etc/patch/jquery.php";
-	//include x::dir() . "/etc/patch/begin_end.php";
+
 	include x::dir() . "/etc/patch/head.php";
+	include x::dir() . "/etc/patch/head.sub.php";
 	include x::dir() . "/etc/patch/tail.php";
 	include x::dir() . "/etc/patch/tail.sub.php";
 
@@ -53,8 +54,9 @@ if ( $argv[1] == 'language' ) {
 	
 	include x::dir() . "/etc/patch/outlogin.lib.php";
 	include x::dir() . "/etc/patch/latest.lib.php";
-	include x::dir() . "/etc/patch/head.sub.php";
-	include x::dir() . "/etc/patch/create_default_forum.php";
+	
+	
+	
 	include x::dir() . "/etc/patch/visit_insert.inc.php";
 	include x::dir() . "/etc/patch/visit.lib.php";
 	include x::dir() . "/etc/patch/board.php";
@@ -66,7 +68,8 @@ if ( $argv[1] == 'language' ) {
 	include x::dir() . "/etc/patch/delete_comment.php";
 	include x::dir() . "/etc/patch/good.php";
 	
-	
+	include x::dir() . "/etc/patch/create_default_forum.php";
+
 	echo "\n-- PATCH SUCCESS --\n";
 	
 	
