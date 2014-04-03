@@ -23,6 +23,8 @@ $(function(){
 
 /**TOP MENU DROP DOWN ON HOVER**/
 $('.main-menu li a').mouseenter(function(){
+	if( !$(".categ_wrapper").length ) return;
+	
 	$(".categ_wrapper").hide();
 	clearTimeout(menu_timeout);
 	var curr_menu =  $(this).attr('class');

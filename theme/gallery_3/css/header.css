@@ -222,6 +222,8 @@ li.menu-title .dropdown-icon {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	width:30%;
+	display:inline-block;
 }
 
 .hidden-mobile-menu li {
