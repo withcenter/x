@@ -45,10 +45,10 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 			}
 			?>
 			
-		<a href="<?=$url?>" ><img src="<?=$img?>"/></a>
+		<img src="<?=$img?>"/>
 		<div class='top-right-container'>
-			<div class='top-right-subject'><a href="<?=$url?>" ><?=$subject?></a></div>
-			<div class='top-right-content'><a href="<?=$url?>" ><?=$content?></a></div>
+			<div class='top-right-subject'><a href="<?=$url?>" ><?=$subject?></div>
+			<div class='top-right-content'><a href="<?=$url?>" ><?=$content?></div>
 		</div>	
 		<a href="<?=$url?>" class='read_more'></a>
 	</div>

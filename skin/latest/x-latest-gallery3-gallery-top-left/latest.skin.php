@@ -44,10 +44,10 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 				$content = "필고 갤러리 테마 No.2를 선택 하셨습니다.";
 			}
 			?>
-		<a href="<?=$url?>"><img src="<?=$img?>"/></a>
+		<img src="<?=$img?>"/>
 		<div class='top-left-container'>
-			<div class='top-left-subject'><a href="<?=$url?>"><?=$subject?></a></div>
-			<div class='top-left-content'><a href="<?=$url?>"><?=$content?></a></div>
+			<div class='top-left-subject'><?=$subject?></div>
+			<div class='top-left-content'><?=$content?></div>
 		</div>
 		<a href="<?=$url?>" class='read_more'></a>
 	</div>
