@@ -7,7 +7,7 @@
 <a href='<?=url_site_config()?>'>Site Admin</a> |
 
 
-Theme : theme-sample
+Theme : theme-basic
 
 
 

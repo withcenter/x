@@ -1,6 +1,6 @@
 <div class="admin-uninstall-ssh">
 
-	<h1>SSH UN-INSTALL</h1>
+	<h1>SSH2(SFTP) UN-INSTALL</h1>
 
 	<form action='?' method='POST'>
 	<input type='hidden' name='module' value='<?=$module?>'>
@@ -12,8 +12,8 @@
 	Host : <input type='text' name='host' value='<?=etc::domain()?>'>
 	<br>
 	X Folder : <input type='text' name='dir' value='<?=x::dir()?>' style='width: 180px;'><br>
-	SSH(SFTP) ID: <input type='text' name='id'><br>
-	SSH(SFTP) Password: <input type='text' name='password'><br>
+	SSH2(SFTP) ID: <input type='text' name='id'><br>
+	SSH2(SFTP) Password: <input type='text' name='password'><br>
 	<br>
 	<input type='submit'>
 

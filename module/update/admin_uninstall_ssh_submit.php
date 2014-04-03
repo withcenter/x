@@ -1,10 +1,11 @@
 <?php
 
-$vars['type']			= $type;
 $vars['host']			= $host;
-$vars['dir']			= $dir;
 $vars['id']				= $id;
 $vars['password']		= $password;
+$vars['dir']			= $dir;
+$vars['type']			= $type;
+$vars['name']			= $name;
 
 $var = http_build_query( $vars );
 
@@ -27,8 +28,8 @@ $(function(){
 });
 function callback_ajax_call( re )
 {
-	alert( re.code );
-	alert( re.message );
+	//alert( re.code );
+	//alert( re.message );
 	if ( re.code == 0 ) {
 		$('.loader').remove();
 		$('.result.success').show();
