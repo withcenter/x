@@ -357,13 +357,19 @@ li.menu-title .dropdown-icon {
 
 .categ_wrapper .categ_list{	
 	vertical-align:top;
-	height:125px;
+	height:130px;
 }
 
 .categ_wrapper .categ_list .bar{
 	border-bottom:1px solid #adb8bf;
 	margin:10px 0;
 	width:10px;
+}
+
+.categ_wrapper .categ_list .cat_item_wrapper{	
+	width:10%;
+	display:inline-block;
+	float:left;
 }
 
 .categ_wrapper .categ_list .categ_item{	
