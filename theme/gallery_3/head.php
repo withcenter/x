@@ -138,7 +138,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 					<?				
 					if( x::menu_links('top')[0] ){?>
 					<ul class='hidden-top-menu'>
-						<li class='first-menu'><?=implode( "</li><img src='".x::url_theme()."/img/blue_arrow.gif'><li>", 
+						<li class='first-menu'><?=implode( "<img src='".x::url_theme()."/img/blue_arrow.gif'></li><li>", 
 						x::menu_links('top') )?>
 						<img src='<?=x::url_theme()?>/img/blue_arrow.gif'>
 						</li>
