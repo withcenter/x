@@ -58,6 +58,43 @@ function load_widget_config($code)
 	}
 	$widget_config['xml'] = load_xml( x::dir() . "/widget/$widget_config[name]/config.xml" );
 }
+$widget_config_form_name =  null;
+$widget_config_form_display_text = null;
+$widget_config_form_place_holder = null;
+function widget_config_form( $file, $form_name="form_name", $display_text="Display Text", $place_holder="Place Holder" )
+{
+	global $widget_config_form_name, $widget_config_form_display_text, $widget_config_form_place_holder;
+
+	$widget_config_form_name =  $form_name;
+	$widget_config_form_display_text = $display_text;
+	$widget_config_form_place_holder = $place_holder;
+	return "module/widget/config.$file.php";
+}
+
+
+
+function widget_config_extra_begin()
+{
+	global $widget_config;
+	
+	if ( $widget_config['widget-extra-display'] == 'OPEN' ) {
+		$display = 'none';
+		$text = "OPEN";
+	}
+	else {
+		$display = 'block';
+		$text = "CLOSE";
+	}
+	
+	echo "
+		<div class='widget-extra-button'>Extra Configuration : <span>$text</span></div>
+		<div class='widget-extra' style='display:$display;'>
+	";
+}
+function widget_config_extra_end()
+{
+	echo "</div>";
+}
 
 
 
