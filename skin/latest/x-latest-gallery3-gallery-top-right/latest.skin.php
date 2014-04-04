@@ -29,7 +29,7 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 			$img = $image_from_tag;
 		}
 	}
-	else $img = $latest_skin_url."/img/default_banner.png";
+	else $img = $latest_skin_url."/img/no_image.png";
 	?>
 	
 	<div class='top-right'>
@@ -41,7 +41,7 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 			else {
 				$url = "javascript:void(0);";
 				$subject = "회원님께서는 현재";
-				$content = "필고 갤러리 테마 No.2를 선택 하셨습니다.";
+				$content = "필고 갤러리 테마 No.3를 선택 하셨습니다.";
 			}
 			?>
 			
