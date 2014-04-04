@@ -1,5 +1,5 @@
 <?php
-	include widget_config_form('subject');
+	include widget_config_form('title');
 	include widget_config_form('forum', 3);
 	include widget_config_form('text', 'no', ln('No.', '글 갯수'), ln("Insert No of Posts", "출력할 글 개 수를 입력하세요."));
 	widget_config_extra_begin();

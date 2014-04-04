@@ -47,7 +47,7 @@ function widget_javascript( $name=null )
 		load_widget_config($code);
  *  @endcode
  */
-function load_widget_config($code)
+function load_widget_config($code, $name=null)
 {
 	global $widget_config;
 	$cfg = string::unscalar(meta_get("widget_config.$code"));
@@ -56,8 +56,14 @@ function load_widget_config($code)
 			$widget_config[ $k ] = $v;
 		}
 	}
+	
+	
+	/** @short use the default name */
+	if ( empty( $widget_config['name'] ) && $name ) $widget_config['name'] = $name;
+	
 	$widget_config['xml'] = load_xml( x::dir() . "/widget/$widget_config[name]/config.xml" );
 }
+
 $widget_config_form_name =  null;
 $widget_config_form_display_text = null;
 $widget_config_form_place_holder = null;

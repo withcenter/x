@@ -9,7 +9,8 @@
 			return jsGo("?module=$module&action=$action&code=$code&theme=n&done=1");
 		}
 	}
-	load_widget_config($code);
+	load_widget_config($code, $in['name']);
+	
 	
 	
 ?><!doctype html>

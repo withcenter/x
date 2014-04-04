@@ -37,7 +37,8 @@ $(function(){
 	});
 	$('body').on('click', '.widget > .admin',function() {
 		var code = $(this).parent().attr('code');
-		var url = x_url + '?module=widget&action=update&theme=n&code=' + code;
+		var name = $(this).parent().attr('name');
+		var url = x_url + '?module=widget&action=update&theme=n&code=' + code +"&name=" + name;
 		layer_popup( url, 1, '680', '520');
 	});
 	

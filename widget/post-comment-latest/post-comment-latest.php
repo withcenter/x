@@ -1,5 +1,5 @@
 <?php
-	if ( ! admin() ) return;
+
 	widget_css();
 	// widget_javascript();
 	
