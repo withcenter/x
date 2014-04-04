@@ -22,4 +22,14 @@ $(function(){
 	$(".popup-close").click(function() {
 		$(".popup-preview").css('display','none');
 	});
+	
+	$(".menu_portfolio").click(function() {
+		$('html, body').animate({scrollTop:$('#portfolio').position().top}, 'slow');
+		$('#portfolio').focus();
+	});
+	
+	$(".menu_services").click(function() {
+		$('html, body').animate({scrollTop:$('#services').position().top}, 'slow');
+		$('#services').focus();
+	});
 });

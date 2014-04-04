@@ -37,7 +37,7 @@
 </div>
 
 <!--SERVICE PACKAGES-->
-<div class='service-packages-wrapper'>
+<div class='service-packages-wrapper' id='services'>
 	<div class='service-packages'>
 		<span class='main-title'>Service Packages</span>
 		<div class='package'>
@@ -146,7 +146,7 @@
 </div>
 
 <!--TEMPLATE PREVIEW-->
-<div class='template-preview-wrapper'>
+<div class='template-preview-wrapper' id='portfolio'>
 	<div class='template-preview'>
 		<? include x::theme('template_preview') ?>
 	</div>
