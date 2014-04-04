@@ -23,12 +23,43 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 						foreach( $menu_list as $menu){?>
 							<li><a class='<?=$menu['url']?>' href='<?=G5_BBS_URL."/board.php?bo_table=".$menu['url']?>'><?=$menu['name']?></a></li>
 						<?}?>
-					</ul>
+					</ul>				
+				<div class='triangle-border'></div><div class='triangle'></div>
+				<div class='top-menu'>				
+				<?
+				if( super_admin() ){
+					$admin_margin = 'super_admin_margin';
+				}
+				?>
+					<ul class='top-menu-ul <?=$admin_margin?>'>
 					
-				<div class='top-menu'>
-					<ul class='top-menu-ul'>
-						<?="<li class='first-menu'>" . implode( "</li><li>", x::menu_links('top') ) . "</li>"?>
-					</ul>
+						<? 
+						$first_menu = "class='no-bg'";
+						if ( login() ) { 
+							$site_admin = "class='no-bg'";							
+							if ( super_admin() ) {  
+								$no_background_mobile = 'no-bg';
+								$site_admin	= null;
+								$first_menu = null;
+						?>
+								<li class='no-bg'><a href="<?=x::url_admin()?>">X ADMIN</a></li>
+								<li><a href="<?php echo G5_ADMIN_URL ?>">ADMIN</a></li>
+							<?}
+							if ( admin() ) {
+								$first_menu = null;
+							?>
+								<li <?=$site_admin?>><a href='<?=url_site_config()?>'>사이트 관리</a></li>
+							<?}?>
+							<li <?=$first_menu?>><a href='<?=G5_BBS_URL?>/logout.php'>로그아웃</a></li>
+							<li><a href='<?=G5_BBS_URL?>/member_confirm.php?url=register_form.php'>회원정보수정</a></li>
+						<? } else { ?>
+							<li <?=$first_menu?>><a href='<?=G5_BBS_URL?>/login.php'>로그인</a></li>
+							<li><a href='<?=G5_BBS_URL?>/register.php'>회원가입</a></li>
+						<? } ?>
+
+						<li><a href='<?=url_language_setting()?>'>언어변경</a></li>
+						<li class='last_item <?=$no_background_mobile?>'><a href='<?=g::url()?>?device=mobile'>모바일</a></li>						
+					</ul>								
 				</div>
 				<div class='top-search'>
 					<a href="javascript: void(0)" class='menu-dropdown-button'></a>
@@ -85,22 +116,14 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		?>
 		<div class='bottom_item'>
 			<div class='text'>
-				<? if ( login() ) { 
-					if (super_admin()) {  ?>
-						<a href="<?=x::url_admin()?>">X ADMIN</a><a href="<?php echo G5_ADMIN_URL ?>">ADMIN</a><span class='seperator'>•</span>
-					<?}
-					if ( admin() ) {?>
-						<a href='<?=url_site_config()?>'>사이트 관리</a><span class='seperator'>•</span>
-					<?}?>
-					<a href='<?=G5_BBS_URL?>/logout.php'>로그아웃</a><span class='seperator'>•</span>
-					<a href='<?=G5_BBS_URL?>/member_confirm.php?url=register_form.php'>회원정보수정</a><span class='seperator'>•</span>
-				<? } else { ?>
-					<a href='<?=G5_BBS_URL?>/login.php'>로그인</a><span class='seperator'>•</span>
-					<a href='<?=G5_BBS_URL?>/register.php'>회원가입</a><span class='seperator'>•</span>
-				<? } ?>
-
-				<a href='<?=url_language_setting()?>'>언어변경</a><span class='seperator'>•</span>
-				<a class='last_menu' href='<?=g::url()?>?device=mobile'>모바일</a>
+				<?
+				$menu_top_list = x::menu_links('top');
+				$count = 0;
+				foreach($menu_top_list as $menu_item){				
+				$count++;
+				?>
+				<?=$menu_item?><?if( $count < count($menu_top_list) ){?><span class='separator'>•</span><?}?>
+				<?}?>
 			</div>
 		</div>
 	</div><!--categ_outer-->
@@ -194,13 +217,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		background: url('<?=x::theme_url('img/main_menu_hover.png')?>') 100% no-repeat;
 	}
 	.top-menu-ul li, .footer-menu-ul li {
-		background: url('<?=x::theme_url('img/menu-divider.gif')?>') no-repeat 0 3px;
+		background: url('<?=x::theme_url('img/menu-divider.gif')?>') no-repeat 0 6px;
 	}
-	@media only screen and (max-width: 1024px) and (min-width: 768px) {
-		.header .top-menu {
-			background: url('<?=x::theme_url('img/menu_dropdown.png')?>') no-repeat right 0;
-		}
-	}
+	
 	@media only screen and (max-width: 767px) {
 		.header .top-search-button {
 			background: url('<?=x::theme_url('img/mobile_search.gif')?>');
@@ -219,8 +238,12 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		padding-bottom:15px;
 	}
 	
-	.categ_outer .bottom_item .text .seperator{
-		margin-bottom:5px;
+	.categ_outer .bottom_item .text .separator{
+		margin-bottom:5px;		
+	}
+	
+	.header .top-menu-ul li {
+		display:inline;
 	}
 </style>
 <?}?>

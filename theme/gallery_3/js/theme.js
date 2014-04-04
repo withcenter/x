@@ -4,6 +4,8 @@ $(function(){
 
 	$(".header .top-search .menu-dropdown-button").click(function(){
 		$(".header .top-menu").toggle();
+		$(".header .triangle-border").toggle();
+		$(".header .triangle").toggle();
 	});
 
 	$(".top-search-button").click(function(){
