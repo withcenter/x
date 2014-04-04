@@ -135,7 +135,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 					<input type='hidden' name='action' value='search' />
 					<input type='hidden' name='search_subject' value=1 />
 					<input type='hidden' name='search_content' value=1 />
-					<span><input class='key' type='text' name='key' placeholder='input search'><input type="image" src='<?=x::url_theme()?>/img/search_icon.gif' class='submit'/></span>
+					<span><input class='key' type='text' name='key' placeholder='검색어를 입력하세요...'><input type="image" src='<?=x::url_theme()?>/img/search_icon.gif' class='submit'/></span>
 				</div>
 			</form>
 			<img src="<?=x::theme_url('img/close_search.gif')?>" class='close-search'/>

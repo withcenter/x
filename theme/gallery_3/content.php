@@ -85,8 +85,8 @@
 					<div class='banner_holder'>
 						<img src='<?=x::url_theme()?>/img/no_image_banner1.png'/>
 						<div class='text_content'>						
-							<div class = 'banner_subject'>No Available Banners</div>
-							<div class = 'banner_content'>Please upload banner/s in config global</div>
+							<div class = 'banner_subject'>업로드한 배너 이미지가 없습니다.</div>
+							<div class = 'banner_content'><a href='<?=url_site_config()?>'>사이트 관리</a>를 클릭하여 배너를 등록해 주세요.</div>
 						</div>	
 					</div>
 				<?}?>
