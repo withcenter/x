@@ -185,11 +185,12 @@ $(window).resize(function(){
 		do_rotate();
 	},4000);
 	
-	$('.banner-container').mouseenter(function(){		
+	$('.banner-container').mouseenter(function(){	
 		clearInterval(banner_interval);
 	});
 	
 	$('.banner-container').mouseleave(function(){
+		if( banner_count < 1 ) return;
 		clearInterval(banner_interval);
 		if( !stopped ){
 			 banner_interval = setInterval(function(){
