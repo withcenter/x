@@ -19,13 +19,13 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 	
 	<?
 	if ( $list ) {
-		$imgsrc = get_list_thumbnail($bo_table, $list[0]['wr_id'], 537, 213);
+		$imgsrc = get_list_thumbnail($bo_table, $list[0]['wr_id'], 538, 213);
 		if ( $imgsrc['src'] ) {
 			$img = $imgsrc['src'];
-		} elseif ( $image_from_tag = g::thumbnail_from_image_tag( $list[0]['wr_content'], $bo_table, 537, 213 )) {
+		} elseif ( $image_from_tag = g::thumbnail_from_image_tag( $list[0]['wr_content'], $bo_table, 538, 213 )) {
 			$img = $image_from_tag;
 		} else {
-			$image_from_tag = g::thumbnail_from_image_tag( "<img src='$latest_skin_url/img/no_image.png'/>", $bo_table, 537, 213 );
+			$image_from_tag = g::thumbnail_from_image_tag( "<img src='$latest_skin_url/img/no_image.png'/>", $bo_table, 538, 213 );
 			$img = $image_from_tag;
 		}
 	}
