@@ -57,7 +57,7 @@
 }
 
 .gallery_container .gallery_item .content{
-	padding:4.125% 2.2% 8.2% 10%;	
+	padding:4.125% 6.1% 8.2% 6.1%;	
 	overflow:hidden;
 	position:relative;			
 }
@@ -109,7 +109,5 @@
 }
 
 .gallery_container .command .bullet [status='on']{
-	display:none;
-	position:relative;
-	top:1px;
+	display:none;	
 }

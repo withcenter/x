@@ -9,7 +9,7 @@
 	$dirs = file::getDirs(X_DIR_THEME);
 	$i = 1;
 	foreach ( $dirs as $dir ) {
-	
+	if( $i > 8 ) break;
 	$path = X_DIR_THEME . "/$dir/config.xml";
 	if ( ! file_exists($path) ) continue;	
 				
@@ -35,8 +35,8 @@
 								This is Description This is Description This is Description This is Description This is Description.
 							</div>
 						</div>
-						<div class='button button1'>Button 1</div>
-						<div class='button button2'>Button 2</div>
+						<div class='button button1'>Visit</div>
+						<div class='button button2'>View Detail</div>
 					</div>
 				</div>
 			</div>
@@ -47,8 +47,9 @@
 </div>
 	<div class='command'>
 	<?
-	$i = 1;
+	$i = 1;	
 	foreach ( $dirs as $dir ) {
+	if( $i > 8 ) break;
 	$path = X_DIR_THEME . "/$dir/config.xml";
 	if ( ! file_exists($path) ) continue;
 	
@@ -75,3 +76,17 @@
 		background:url('<?=x::url_theme()?>/img/gallery_bg.png');
 	}
 </style>
+
+<?if ( preg_match('/msie 7/i', $_SERVER['HTTP_USER_AGENT'] ) ) {?>
+<style>		
+	.gallery_container .gallery_item{
+		display:inline;
+		padding-right:4px;
+	}
+	
+	.gallery_container .command .bullet{		
+		display:inline;
+		margin:0 2px;
+	}
+</style>
+<?}?>
