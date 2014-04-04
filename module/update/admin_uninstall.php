@@ -1,9 +1,7 @@
 <link rel="stylesheet" href="<?=module("$module.css")?>">
 <?include 'menu.php'?>
 <?php
-	$a = explode('/', $source_link);
-	$pname = $a[ count($a) - 1 ];
-	$dir = x::dir() . "/theme/$pname";
+	$dir = x::dir() . "/theme/$name";
 	if ( etc::is_windows() ) {
 		$dir_test = x::dir() . "/theme/theme-writable-test";
 		@$re = mkdir( $dir_test );
@@ -21,12 +19,13 @@
 <table>
 	<tr valign='top'>
 		<td>
-			<?include 'admin_ftp_uninstall_form.php'?>
+			<?include 'admin_uninstall_ssh_form.php'?>
 		</td>
 		<? if ( $writable ) { ?>
 		<td>
-			<?include 'admin_direct_uninstall_form.php'?>
+			<?include 'admin_uninstall_direct_form.php'?>
 		</td>
 		<? } ?>
 	</tr>
 </table>
+

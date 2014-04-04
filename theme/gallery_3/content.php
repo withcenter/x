@@ -85,8 +85,8 @@
 					<div class='banner_holder'>
 						<img src='<?=x::url_theme()?>/img/no_image_banner1.png'/>
 						<div class='text_content'>						
-							<div class = 'banner_subject'>No Available Banners</div>
-							<div class = 'banner_content'>Please upload banner/s in config global</div>
+							<div class = 'banner_subject'>업로드한 배너 이미지가 없습니다.</div>
+							<div class = 'banner_content'><a href='<?=url_site_config()?>'>사이트 관리</a>를 클릭하여 배너를 등록해 주세요.</div>
 						</div>	
 					</div>
 				<?}?>
@@ -116,21 +116,23 @@
 		<?}?>
 		<div class='gallery-top'>
 			<div class='gallery-top-left'><div class='inner'><?=latest('x-latest-gallery3-gallery-top-left', bo_table(1), 1, 25)?></div></div>
-			<div class='gallery-top-right'><div class='inner'><?=latest('x-latest-gallery3-gallery-top-right', bo_table(1), 1, 25)?></div></div>
+			<div class='gallery-top-right'><div class='inner'><?=latest('x-latest-gallery3-gallery-top-right', bo_table(2), 1, 25)?></div></div>
 			<div style="clear: both"></div>
 		</div>
 		<div class='gallery-bottom'>
 			<?
 				$option = array(
-					"width_1"	=>	318,
-					"width_2"	=>	211,
-					"width_3"	=>	318,
-					"height_1"	=>	213,
-					"height_2"	=>	167,
-					"height_3"	=>	213
+
+					"width_1"	=>	335,
+					"width_2"	=>	281,
+					"width_3"	=>	335,
+					"height_1"	=>	225,
+					"height_2"	=>	225,
+					"height_3"	=>	225
+
 				);
 			?>
-			<?=latest('x-latest-gallery3-gallery-bottom', bo_table(2), 3, 25, $cache_time=1, $option)?></div>
+			<?=latest('x-latest-gallery3-gallery-bottom', bo_table(3), 3, 25, $cache_time=1, $option)?></div>
 		</div>
 <?if ( preg_match('/msie 7/i', $_SERVER['HTTP_USER_AGENT'] ) ) {?>
 <style>		

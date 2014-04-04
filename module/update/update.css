@@ -30,3 +30,6 @@
 
 
 
+.result.success {
+	display: none;
+}

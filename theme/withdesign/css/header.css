@@ -1,0 +1,42 @@
+/* HEADER */
+
+.header .logo {
+	width: 33%;
+	float: left;
+
+}
+
+.header .logo img {
+	width: 100%;
+}
+
+.header .menu {
+	width: 67%;
+	float: left;
+}
+
+.header .menu ul {
+	margin: 0 0 0 5%;
+	padding: 0;
+	list-style: none;
+}
+
+.header .menu ul li {
+	width: 20%;
+	float: left;
+	text-align: center;
+}
+
+.header .menu ul li a {
+	display: inline-block;
+	color: #7c7c7c;
+	font-size: 10.5pt;
+	padding: 15% 10% 15px 10%;
+	word-break: break-all;
+	height: 11pt;
+	text-decoration: none;
+}
+
+.header .menu ul li a:hover {
+	border-bottom: solid 3px #ff9900;
+}

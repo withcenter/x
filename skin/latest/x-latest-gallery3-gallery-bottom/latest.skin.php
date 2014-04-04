@@ -36,15 +36,18 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 		echo latest_bottom_gallery($gallery_info[0][$i],$img,$list,$i);
 	} 
 		echo "<div style='clear: left'></div>";
+	} else {
+		echo "
+				<div>
+					<img src='".$latest_skin_url."/img/no_image_banner.png' />
+				</div>
+			";
 	}	
 	?>
 	
 	
 <? function latest_bottom_gallery( $name, $img, $list, $i ) { ?>
 	<div class='<?=$name?>'>
-		<div class='inner'>
-			<a href="<?=$url?>" class='read_more'><img src="<?=$img?>"/></a>
-			<div class='<?=$name?>-container'>
 				<? if ( $list ) {
 						$url = $list[$i]['href'];
 						$subject = cut_str($list[$i]['wr_subject'],10);
@@ -53,13 +56,24 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 				else {
 					$url = "javascript:void(0);";
 					$subject = "회원님께서는 현재";
-					$content = "필고 갤러리 테마 No.2를 선택 하셨습니다.";
+					$content = "필고 갤러리 테마 No.3를 선택 하셨습니다.";
 				}
 				?>
-				<div class='<?=$name?>-subject'><a href="<?=$url?>" class='read_more'><?=$subject?></a></div>
-				<div class='<?=$name?>-content'><a href="<?=$url?>" class='read_more'><?=$content?></a></div>
+		<div class='inner'>
+			<a href="<?=$url?>" ><img src="<?=$img?>"/></a>
+			<div class='<?=$name?>-container'>
+				<div class='<?=$name?>-subject'><a href="<?=$url?>" ><?=$subject?></a></div>
+				<div class='<?=$name?>-content'><a href="<?=$url?>" ><?=$content?></a></div>
 			</div>
 		</div>
+		<a href='<?=$url?>' class='read_more'></a>
 	</div>
 <?}?>
 </div>
+<?if ( preg_match('/msie 7/i', $_SERVER['HTTP_USER_AGENT'] ) ) {?>
+<style>
+	.bottom-left img, .bottom-middle img, .bottom-right img {
+		width:auto;
+	}
+</style>
+<?}?>

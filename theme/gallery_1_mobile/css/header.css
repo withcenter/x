@@ -14,6 +14,7 @@
 .layout .header .inner #gallery_1_logo img{
 	float:left;
 	max-width:210px;	
+	border: 0;
 }
 
 .layout .header .top{

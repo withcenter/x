@@ -1,6 +1,6 @@
 .latest-top-right .top-right {
 	background: #343434;
-	position: relative;
+	position: relative;	
 }
 
 .latest-top-right .top-right a {
@@ -16,13 +16,14 @@
 	padding: 20px;
 	line-height: 140%;
 	word-break: break-all;
+	z-index: 100;
+	text-shadow: 1px 1px #000000;
 }
 
 
 .latest-top-right .top-right img {
 	width: 100%;
-	z-index: 1;
-	border: solid 1px #c0c0c0;
+	z-index: 1;		
 }
 
 .latest-top-right .top-right-subject {
@@ -34,4 +35,13 @@
 	font-weight: 800;
 	line-height: 140%;
 	max-width: 50%;
+}
+
+.latest-top-right .read_more {
+	z-index: 10000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }

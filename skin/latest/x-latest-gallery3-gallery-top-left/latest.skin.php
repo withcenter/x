@@ -19,13 +19,13 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 	
 	<?
 	if ( $list ) {
-		$imgsrc = get_list_thumbnail($bo_table, $list[0]['wr_id'], 537, 213);
+		$imgsrc = get_list_thumbnail($bo_table, $list[0]['wr_id'], 538, 213);
 		if ( $imgsrc['src'] ) {
 			$img = $imgsrc['src'];
-		} elseif ( $image_from_tag = g::thumbnail_from_image_tag( $list[0]['wr_content'], $bo_table, 537, 213 )) {
+		} elseif ( $image_from_tag = g::thumbnail_from_image_tag( $list[0]['wr_content'], $bo_table, 538, 213 )) {
 			$img = $image_from_tag;
 		} else {
-			$image_from_tag = g::thumbnail_from_image_tag( "<img src='$latest_skin_url/img/no_image.png'/>", $bo_table, 537, 213 );
+			$image_from_tag = g::thumbnail_from_image_tag( "<img src='$latest_skin_url/img/no_image.png'/>", $bo_table, 538, 213 );
 			$img = $image_from_tag;
 		}
 	}
@@ -33,8 +33,6 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 	?>
 	
 	<div class='top-left'>
-		<a href="<?=$url?>" class='read_more'><img src="<?=$img?>"/></a>
-		<div class='top-left-container'>
 			<? if ( $list ) {
 					$url = $list[0]['href'];
 					$subject = cut_str($list[0]['wr_subject'],10,'...');
@@ -46,8 +44,11 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 				$content = "필고 갤러리 테마 No.2를 선택 하셨습니다.";
 			}
 			?>
-			<div class='top-left-subject'><a href="<?=$url?>" class='read_more'><?=$subject?></a></div>
-			<div class='top-left-content'><a href="<?=$url?>" class='read_more'><?=$content?></a></div>
-		</div>		
+		<img src="<?=$img?>"/>
+		<div class='top-left-container'>
+			<div class='top-left-subject'><?=$subject?></div>
+			<div class='top-left-content'><?=$content?></div>
+		</div>
+		<a href="<?=$url?>" class='read_more'></a>
 	</div>
 </div>

@@ -29,12 +29,10 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 			$img = $image_from_tag;
 		}
 	}
-	else $img = $latest_skin_url."/img/default_banner.png";
+	else $img = $latest_skin_url."/img/no_image.png";
 	?>
 	
 	<div class='top-right'>
-		<a href="<?=$url?>" class='read_more'><img src="<?=$img?>"/></a>
-		<div class='top-right-container'>
 			<? if ( $list ) {
 					$url = $list[0]['href'];
 					$subject = cut_str($list[0]['wr_subject'],10);
@@ -43,11 +41,15 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 			else {
 				$url = "javascript:void(0);";
 				$subject = "회원님께서는 현재";
-				$content = "필고 갤러리 테마 No.2를 선택 하셨습니다.";
+				$content = "필고 갤러리 테마 No.3를 선택 하셨습니다.";
 			}
 			?>
-			<div class='top-right-subject'><a href="<?=$url?>" class='read_more'><?=$subject?></a></div>
-			<div class='top-right-content'><a href="<?=$url?>" class='read_more'><?=$content?></a></div>
-		</div>		
+			
+		<img src="<?=$img?>"/>
+		<div class='top-right-container'>
+			<div class='top-right-subject'><a href="<?=$url?>" ><?=$subject?></div>
+			<div class='top-right-content'><a href="<?=$url?>" ><?=$content?></div>
+		</div>	
+		<a href="<?=$url?>" class='read_more'></a>
 	</div>
 </div>

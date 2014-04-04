@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <config>
-	<type>pc,mobile</type>
+	<type>mobile</type>
 	<name>
 		<en>Gallery No. 1 Mobile</en>
 		<ko>Gallery No. 1 Mobile</ko>
