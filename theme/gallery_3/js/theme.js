@@ -179,7 +179,7 @@ $(window).resize(function(){
 	
 /***************BANNER_ROTATION******************/
 	var stopped = false;
-	console.log(banner_count);	
+	
 	var banner_interval = setInterval(function(){	
 		if( banner_count < 1 ) return;
 		do_rotate();
