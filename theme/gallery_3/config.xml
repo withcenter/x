@@ -20,7 +20,7 @@
 				<en>Menu Top</en>
 				<ko>상단 톱 메뉴</ko>
 			</name>
-			<max>4</max>
+			<max>10</max>
 		</top>
 		<left>
 			<name>
