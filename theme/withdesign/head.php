@@ -7,6 +7,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 <link rel="stylesheet" href="<?=x::theme_url()?>/css/tail.css">
 <link rel="stylesheet" href="<?=x::theme_url()?>/css/banner.css">
 <script src="<?=x::theme_url()?>/js/theme.js"></script>
+<script src="<?=x::theme_url()?>/js/template.js"></script>
 
 
 <div class='layout'>
