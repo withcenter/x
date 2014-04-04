@@ -178,7 +178,7 @@
 </div>
 
 <!--CONTACT US-->
-<div class='contact-us-wrapper'>
+<div class='contact-us-wrapper'  id='contact-us'>
 	<div class='contact-us'>
 		<span class='main-title'>Contact Us</span>
 		<span class='main-description'>Request a free quote or say hi! We will get back to you within 24 hours.</span>
@@ -186,7 +186,7 @@
 </div>
 
 <!--SUPPORT-->
-<div class='support-wrapper'>
+<div class='support-wrapper' id='support'>
 	<div class='support'>
 		<span class='title'>Support</span>
 		<div class='support-details'>
