@@ -22,11 +22,11 @@ foreach ( $dirs as $dir ) {
 		
 ?>		<div class='template'>
 			<div class='inner'>
-				<a href='<?=$theme_config['demo']?>' target='_blank'><img src='<?=$url?>' /></a>
+				<img src='<?=$url?>' />
 
-				<div class='template_name'>
+				<div class='template_name' template_name='<?=$name?>'>
 					Template Design: <?=$name?>
-					<a href='<?=$theme_config['demo']?>' target='_blank' class='template_demo'></a>
+					<a href='<?=$theme_config['demo']?>' target='_blank'></a>
 					<div class='view-details'>VIEW DETAILS</div>
 				</div>
 				
