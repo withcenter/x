@@ -15,7 +15,6 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 <div class='latest-bottom-gallery'>
 	
 	<?		
-	if ( $list ) {
 		if( $options ){
 			$gallery_info = array( 
 				array('bottom-left','bottom-middle','bottom-right'),
@@ -36,8 +35,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 		echo latest_bottom_gallery($gallery_info[0][$i],$img,$list,$i);
 	} 
 		echo "<div style='clear: left'></div>";
-	}	
-	?>
+?>
 	
 	
 <? function latest_bottom_gallery( $name, $img, $list, $i ) { ?>
@@ -50,7 +48,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 				else {
 					$url = "javascript:void(0);";
 					$subject = "회원님께서는 현재";
-					$content = "필고 갤러리 테마 No.2를 선택 하셨습니다.";
+					$content = "필고 갤러리 테마 No.3를 선택 하셨습니다.";
 				}
 				?>
 		<div class='inner'>
