@@ -40,7 +40,7 @@ foreach ( $dirs as $dir ) {
 <?}?>
 	<div class='template'>
 		<div class='inner view-all'>
-			<a href="javascript: void(0)">VIEW ALL</a>
+			<a href="<?=g::url()?>/?page=template">VIEW ALL</a>
 		</div>
 	</div>
 <div style='clear: left'></div>
