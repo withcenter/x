@@ -44,7 +44,7 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 				$content = "필고 갤러리 테마 No.2를 선택 하셨습니다.";
 			}
 			?>
-		<img style='width: 537px; height: 213px;' src="<?=$img?>"/>
+		<img src="<?=$img?>"/>
 		<div class='top-left-container'>
 			<div class='top-left-subject'><?=$subject?></div>
 			<div class='top-left-content'><?=$content?></div>
