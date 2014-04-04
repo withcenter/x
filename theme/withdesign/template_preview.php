@@ -45,3 +45,29 @@ foreach ( $dirs as $dir ) {
 	</div>
 <div style='clear: left'></div>
 
+	<div class='popup-preview'>
+		<div class='inner'>
+			<div class='popup-image-wrapper'><div class='image-wrapper'><img src='javascript:void(0)' class='popup-image'/></div></div>
+			<div class='popup-details'>
+				<div class='inner-details'>
+					<span class='popup-title'></span>
+					<span class='popup-info'>
+						Short information about the design.
+						Aliquam facilisis enim nec sem faucibus,
+						ac sodales sapien porttitor. Mauris ac orci vitae 
+						tellus rhoncus sodales a at metus. Praesent iaculis 
+						turpis non turpis tempor, vitae male suada sem tincidunt.
+						<br><br>
+						Features: blog-style, sidebar, and sign in box
+					</span>
+					<div class='popup-buttons'>
+						<div class='popup-demo'><a href='javascript:void(0)' class='popup-demo-link'>VIEW DEMO</a></div>
+						<div class='popup-close'><span>CLOSE</span></div>
+						<div style='clear: left'></div>
+					</div>
+				</div>
+			</div>
+			<div style='clear: left'></div>
+		</div>
+	</div>
+
