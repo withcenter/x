@@ -17,7 +17,7 @@ $(function(){
 		$(".popup-preview").find(".popup-title").html(template_name);
 		$(".popup-preview").find(".popup-demo-link").attr("href", demo_link);
 		$(".popup-preview").css('display','block');
-		$('html, body').animate({scrollTop:$('#portfolio').position().top}, 0);
+		$('html, body').animate({scrollTop:$('#portfolio').position().top-100}, 0);
 	});
 	
 	$(".popup-close").click(function() {
@@ -25,19 +25,19 @@ $(function(){
 	});
 	
 	$(".menu_portfolio").click(function() {
-		$('html, body').animate({scrollTop:$('#portfolio').position().top}, 'slow');
+		$('html, body').animate({scrollTop:$('#portfolio').position().top-100}, 'slow');
 	});
 	
 	$(".menu_services").click(function() {
-		$('html, body').animate({scrollTop:$('#services').position().top}, 'slow');
+		$('html, body').animate({scrollTop:$('#services').position().top-100}, 'slow');
 	});
 
 	$(".menu_contact_us").click(function() {
-		$('html, body').animate({scrollTop:$('#contact-us').position().top}, 'slow');
+		$('html, body').animate({scrollTop:$('#contact-us').position().top-100}, 'slow');
 	});
 
 	$(".menu_support").click(function() {
-		$('html, body').animate({scrollTop:$('#support').position().top}, 'slow');
+		$('html, body').animate({scrollTop:$('#support').position().top-100}, 'slow');
 	});	
 	
 });
