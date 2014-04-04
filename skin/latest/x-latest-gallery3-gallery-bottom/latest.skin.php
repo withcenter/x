@@ -36,6 +36,12 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 		echo latest_bottom_gallery($gallery_info[0][$i],$img,$list,$i);
 	} 
 		echo "<div style='clear: left'></div>";
+	} else {
+		echo "
+				<div>
+					<img src='".$latest_skin_url."/img/no_image_banner.png' />
+				</div>
+			";
 	}	
 	?>
 	
@@ -50,7 +56,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 				else {
 					$url = "javascript:void(0);";
 					$subject = "회원님께서는 현재";
-					$content = "필고 갤러리 테마 No.2를 선택 하셨습니다.";
+					$content = "필고 갤러리 테마 No.3를 선택 하셨습니다.";
 				}
 				?>
 		<div class='inner'>

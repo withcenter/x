@@ -58,7 +58,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 						<? } ?>
 
 						<li><a href='<?=url_language_setting()?>'>언어변경</a></li>
-						<li class='last_item <?=$no_background_mobile?>'><a href='<?=g::url()?>?device=mobile'>모바일</a></li>						
+						<li class='last_item <?=$no_background_mobile?>'><a href='<?=g::url()?>?device=mobile'>모바일</a></li>				
 					</ul>								
 				</div>
 				<div class='top-search'>
@@ -161,10 +161,31 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 					<?				
 					if( x::menu_links('top')[0] ){?>
 					<ul class='hidden-top-menu'>
-						<li class='first-menu'><?=implode( "<img src='".x::url_theme()."/img/blue_arrow.gif'></li><li>", 
-						x::menu_links('top') )?>
-						<img src='<?=x::url_theme()?>/img/blue_arrow.gif'>
-						</li>
+						<? 
+						$first_menu = "class='no-bg'";
+						if ( login() ) { 
+							$site_admin = "class='no-bg'";							
+							if ( super_admin() ) {  
+								$no_background_mobile = 'no-bg';
+								$site_admin	= null;
+								$first_menu = null;
+						?>
+								<li class='no-bg'><a href="<?=x::url_admin()?>">X ADMIN</a><img src='<?=x::url_theme()?>/img/blue_arrow.gif'></li>
+								<li><a href="<?php echo G5_ADMIN_URL ?>">ADMIN</a><img src='<?=x::url_theme()?>/img/blue_arrow.gif'></li>
+							<?}
+							if ( admin() ) {
+								$first_menu = null;
+							?>
+								<li <?=$site_admin?>><a href='<?=url_site_config()?>'>사이트 관리</a><img src='<?=x::url_theme()?>/img/blue_arrow.gif'></li>
+							<?}?>
+							<li <?=$first_menu?>><a href='<?=G5_BBS_URL?>/logout.php'>로그아웃</a><img src='<?=x::url_theme()?>/img/blue_arrow.gif'></li>
+							<li><a href='<?=G5_BBS_URL?>/member_confirm.php?url=register_form.php'>회원정보수정</a><img src='<?=x::url_theme()?>/img/blue_arrow.gif'></li>
+						<? } else { ?>
+							<li <?=$first_menu?>><a href='<?=G5_BBS_URL?>/login.php'>로그인</a><img src='<?=x::url_theme()?>/img/blue_arrow.gif'></li>
+							<li><a href='<?=G5_BBS_URL?>/register.php'>회원가입</a><img src='<?=x::url_theme()?>/img/blue_arrow.gif'></li>
+						<? } ?>
+						<li><a href='<?=url_language_setting()?>'>언어변경</a><img src='<?=x::url_theme()?>/img/blue_arrow.gif'></li>
+						<li class='last_item <?=$no_background_mobile?>'><a href='<?=g::url()?>?device=mobile'>모바일</a><img src='<?=x::url_theme()?>/img/blue_arrow.gif'></li>							
 					</ul>		
 					<?}?>
 			</div>
