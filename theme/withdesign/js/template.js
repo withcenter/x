@@ -22,4 +22,21 @@ $(function(){
 	$(".popup-close").click(function() {
 		$(".popup-preview").css('display','none');
 	});
+	
+	$(".menu_portfolio").click(function() {
+		$('html, body').animate({scrollTop:$('#portfolio').position().top}, 'slow');
+	});
+	
+	$(".menu_services").click(function() {
+		$('html, body').animate({scrollTop:$('#services').position().top}, 'slow');
+	});
+
+	$(".menu_contact_us").click(function() {
+		$('html, body').animate({scrollTop:$('#contact-us').position().top}, 'slow');
+	});
+
+	$(".menu_support").click(function() {
+		$('html, body').animate({scrollTop:$('#support').position().top}, 'slow');
+	});	
+	
 });

@@ -442,8 +442,29 @@
 }
 
 /* CONTACT US */
+.contact-us-wrapper {
+	background: #f5f5f5;
+}
 
+.contact-us-wrapper .contact-us {
+	max-width: 970px;
+	margin: 0 auto;
+	padding: 19px 0;
+}
 
+.contact-us .main-title {
+	display: block;
+	font-size: 27px;
+	color: #159c81;
+	margin-bottom: 40px;
+}
+
+.contact-us .main-description {
+	display: block;
+	font-size: 20px;
+	color: #626262;
+	margin-bottom: 45px;
+}
 
 
 
