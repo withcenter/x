@@ -75,7 +75,7 @@ include_once G5_LIB_PATH.'/thumbnail.lib.php';
 				}
 				$star .= "<b>1</b>점";
 			}
-			else if ( $li['wr_good'] > 3 && $li['wr_good'] < 6 ) {
+			else if ( $li['wr_good'] >= 3 && $li['wr_good'] < 6 ) {
 				for( $i=0; $i < 2; $i++ ) {
 					$star .= $star_gold;
 				}
@@ -85,7 +85,7 @@ include_once G5_LIB_PATH.'/thumbnail.lib.php';
 				$star .= "<b>2</b>점";
 			}
 			
-			else if ( $li['wr_good'] > 6 && $li['wr_good'] < 9 ) {
+			else if ( $li['wr_good'] >= 6 && $li['wr_good'] < 9 ) {
 				for( $i=0; $i < 3; $i++ ) {
 					$star .= $star_gold;
 				}
@@ -94,7 +94,7 @@ include_once G5_LIB_PATH.'/thumbnail.lib.php';
 				}
 				$star .= "<b>3</b>점";
 			}
-			else if ( $li['wr_good'] > 9 && $li['wr_good'] < 12 ) {
+			else if ( $li['wr_good'] >= 9 && $li['wr_good'] < 12 ) {
 				for( $i=0; $i < 4; $i++ ) {
 					$star .= $star_gold;
 				}
@@ -103,7 +103,7 @@ include_once G5_LIB_PATH.'/thumbnail.lib.php';
 				}
 				$star .= "<b>4</b>점";
 			}
-			else if ( $li['wr_good'] > 12 ) {
+			else if ( $li['wr_good'] >= 12 ) {
 				for( $i=0; $i < 5; $i++ ) {
 					$star .= $star_gold; 
 				}

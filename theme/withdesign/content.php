@@ -1,4 +1,5 @@
 <!--BANNERS-->
+<?/*?>
 <div class='services-banner'>
 	<div class='banner-container'>
 		<div class='banner'>
@@ -14,7 +15,10 @@
 			</div>
 	</div>
 </div>
-
+<?*/?>
+<?
+include 'gallery_banner.php';
+?>
 <!--INFORMATION-->
 <div class='information-wrapper'>
 	<div class='information'>
