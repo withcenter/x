@@ -354,8 +354,8 @@ html.no-overflowscrolling #autosave_pop {height:auto;max-height:10000px !importa
 
 #bo_v_con {
 	border: 1px solid #d5d5d5;
-	/*padding: 10px;*/
-	max-width: 740px;
+	padding: 10px;
+	max-width: 720px;
 	border-radius: 3px;
 	color: #555555;
 }
