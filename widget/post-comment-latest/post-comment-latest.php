@@ -14,7 +14,7 @@
 	);
 	
 ?>
-<div class="post-latest">
+<div class="post-comment-latest">
 	<div class='title'><?=$wc['title']?></div>
 	<? foreach ( $posts as $post ) { ?>
 		<div class='post'><a href='<?=$post['url']?>'><?=$post['content']?></a></div>

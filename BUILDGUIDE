@@ -22,7 +22,7 @@ else {
 
 사용하기 쉽게 미리 만들어진 HTML FORM 코드가 있다.
 
-	include widget_config_form('subject')				// 제목이 필요한 경우,
+	include widget_config_form('title')				// 제목이 필요한 경우,
 	include widget_config_form('css')			
 	// CSS 가 필요한 경우,
 	include widget_config_form('text', 'form_name', 'display_text', 'placeholder') // TEXT 값 입력이 필요한 경우. 예를 들면 글 갯수나, 문장을 입력 받을 때.
@@ -37,7 +37,7 @@ else {
 
 ----------------------------------------------------------------------------
 <?php
-	include widget_config_form('subject');
+	include widget_config_form('title');
 	include widget_config_form('text', 'no', ln('No.', '글 갯수'), ln("Insert No of Posts", "출력할 글 개 수를 입력하세요."));
 	widget_config_extra_begin();
 	echo "<div><span class='caption'>My Name</span> : <input type='text' name='my_name' value='$widget_config[my_name]'></div>";
