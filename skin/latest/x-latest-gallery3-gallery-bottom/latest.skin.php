@@ -15,6 +15,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 <div class='latest-bottom-gallery'>
 	
 	<?		
+	if ( $list ) {
 		if( $options ){
 			$gallery_info = array( 
 				array('bottom-left','bottom-middle','bottom-right'),
@@ -35,7 +36,14 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 		echo latest_bottom_gallery($gallery_info[0][$i],$img,$list,$i);
 	} 
 		echo "<div style='clear: left'></div>";
-?>
+	} else {
+		echo "
+				<div>
+					<img src='".$latest_skin_url."/img/no_image_banner.png' />
+				</div>
+			";
+	}	
+	?>
 	
 	
 <? function latest_bottom_gallery( $name, $img, $list, $i ) { ?>
