@@ -1,0 +1,15 @@
+/* LAYOUT */
+
+.layout {
+	font-family: Dotum;
+}
+
+.layout .header-wrapper {
+	background: #ffffff;
+}
+
+.layout .header-wrapper .header {
+	max-width: 970px;
+	margin: 0 auto;
+	padding: 19px 0;
+}
