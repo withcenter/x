@@ -29,7 +29,7 @@ isset($options['radius'])	? $radius = $options['radius'] : $radius = 2;
 			$img = $image_from_tag;
 		}
 	}
-	else $img = $latest_skin_url."/img/default_banner.png";
+	else $img = $latest_skin_url."/img/no_image.png";
 	?>
 	
 	<div class='top-left'>
