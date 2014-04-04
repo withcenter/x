@@ -180,14 +180,15 @@
 <!--CONTACT US-->
 <div class='contact-us-wrapper'>
 	<div class='contact-us'>
-	
+		<span class='main-title'>Contact Us</span>
+		<span class='main-description'>Request a free quote or say hi! We will get back to you within 24 hours.</span>
 	</div>
 </div>
 
 <!--SUPPORT-->
 <div class='support-wrapper'>
 	<div class='support'>
-		<span class='title'>Support</title>
+		<span class='title'>Support</span>
 		<div class='support-details'>
 			<div class='support-category'>
 			
