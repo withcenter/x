@@ -1,3 +1,18 @@
+todo
+----
+스킨변경					=> OK
+팝업 크기 자동 조절	=> OK
+게시판 설정				=> OK
+CSS 지정				
+첨부 파일 등록
+banner widget
+text widget
+
+최근글 위젯			=> OK
+최근 코멘트 위젯	=> OK
+
+
+
 To Doc
 -------
 
@@ -23,15 +38,28 @@ else {
 사용하기 쉽게 미리 만들어진 HTML FORM 코드가 있다.
 
 	include widget_config_form('title')				// 제목이 필요한 경우,
-	include widget_config_form('css')			
-	// CSS 가 필요한 경우,
-	include widget_config_form('text', 'form_name', 'display_text', 'placeholder') // TEXT 값 입력이 필요한 경우. 예를 들면 글 갯수나, 문장을 입력 받을 때.
+	include widget_config_form('css')				// CSS 가 필요한 경우,
+	
+	
+	// TEST 입력이 필요한 경우,
+	include widget_config_form('text', array(
+			'name'				=> 'no',
+			'caption'			=> ln('No.', '글 갯수'),
+			'placeholder'	=> ln("Insert No of Posts", "출력할 글 개 수를 입력하세요.")
+		)
+	);
 
+	// 게시판 아이디 입력이 필요한 경우,
+		
+		include widget_config_form('forum');			// 1개 게시판 입력. 게시판 아이디는 $widget_config['forum1'] 키 값에 저장됨.
+		
+		include widget_config_form('forum', array('no'=>'3')); // 3개 게시판 입력. 게시판 아이디는 $widget_config['form1'], 'forum2', 'forum3' 에 각각 저장됨.
 
-@text 의 사용 예
+		include widget_config_form('forum', array( 'from' => 2, 'to'=>5) );		// 게시판 아이디 'forum2' 부터 'forum5' 까지 입력을 받는다.
+		
 
-	include widget_config_form('text', 'no', ln('No.', '글 갯수'), ln("Insert No of Posts", "출력할 글 개 수를 입력하세요."));
-
+	
+		
 	
 @예제
 
@@ -82,4 +110,84 @@ else {
 config.php 또는 해당 위젯 스크립트에서 하면 됩니다.
 
 
+-------------------------------------------------------------------------------------------
 
+
+to doc
+------
+default.js 에서 윈도우 크기가 조정이 되면 0.5 초 후에 콜백을 호출 한다.
+아래의 코드에서 보듯이 0.5 초 단위로 끊어서 이벤트를 발생시킨다.
+
+
+	var timer_resize = 0;
+	$(window).resize( function() {
+		if ( timer_resize ) clearTimeout( timer_resize );
+		if ( typeof callback_window_resize == 'function' ) timer_resize = setTimeout( callback_window_resize, 500 );
+	} );
+
+아래와 같이 콜백 함수를 작성하면 된다.
+<script>
+function callback_window_resize()
+{
+	alert('resized ...');
+}
+</script>
+
+
+-----------------------
+
+실전 예:
+
+popup_layer() 함수에서 팝업 내의 iframe 의 높이에 따라서 팝업 레이어 크기가 같이 변경이 되게 하는 방법
+
+우선 윈도우즈(팝업 내의 iframe)의 크기가 변경이 되면, 상위 부모(레이어 팝업)으로 message 를 보낸다.
+이 때, 메세지 내용은 'code': popup_layer_resize, 'height': 실제 iframe 높이 이다.
+iframe 의 높이는 적절하게 변경이 되어야 하므로 아래와 같이 시간차를 두고 호출한다.
++40 은 기타 공간을 약간 포함한 것이다.
+
+예를 들면 widget 관리자 페이지를 예로 들면,
+
+
+1) module/widget/update.js 에 아래와 같이 기록되어져 있다.
+---------------------------------------------------
+
+	$('.widget-extra-button').click(function(){
+		// ...
+		resize_popup_layer();
+	}
+	window.onload = resize_popup_layer;
+	function resize_popup_layer()
+	{
+		setTimeout( post_message_height, 300 );
+		setTimeout( post_message_height, 1500 );
+		setTimeout( post_message_height, 3500 );
+	}
+	function post_message_height()
+	{
+		var height = $('body').height() + 40 ;
+		var data = { 'code' : 'popup_layer_resize', 'height' : height };
+		parent.postMessage( data, '*' );
+	}
+--------------------------------------------------------
+
+이것은 맨 처음 팝업 화면이 떴을 때와 추가 설정 버튼을 클릭할 때마다 새로운 iframe 의 크기를 부모 창으로 메세지를 보내는 것이다.
+
+
+2) popup_layer() 함수로 팝업을 띄운 윈도우(부모)에서 받아서 처리를 하는 부분은 default.js 에 들어 있다.
+
+window.addEventListener('message', message_receiver, false);
+function message_receiver( e )
+{
+	if ( e.data.code == 'popup_layer_resize' ) {
+		$('.layer_popup').css('height', e.data.height + 'px' );
+		trace("popup_layer_resize: " + e.data.height + 'px');
+	}
+}
+
+
+
+
+
+
+
+	

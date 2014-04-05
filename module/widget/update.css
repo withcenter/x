@@ -72,7 +72,7 @@ select[name='select_bo_table'] {
 	padding: 0.4em;
 	background-color: grey;
 }
-.widget-list > .widget {
+.widget-list > .a-widget {
 	float: left;
 	margin: 1em;
 	padding: 1em;
@@ -83,18 +83,18 @@ select[name='select_bo_table'] {
 	cursor:pointer;
 	text-align:center;
 }
-.widget-list > .widget > .preview {
+.widget-list > .a-widget > .preview {
 	margin-bottom: 0.4em;
 	font-size: 1.6em;
 	font-weight: bold;
 	color: grey;
 }
-.widget-list > .widget > .folder {
+.widget-list > .a-widget > .folder {
 	font-size: 1.2em;
 	font-weight: bold;
 	color: #0b1f76;
 }
-.widget-list > .widget > .preview > img {
+.widget-list > .a-widget > .preview > img {
 	width: 100%;
 }
 
@@ -114,3 +114,11 @@ select[name='select_bo_table'] {
 	padding: 1em 0;
 	border-bottom: 1px solid grey;
 }
+
+
+.widget-help {
+	font-weight: bold;
+	color: blue;
+	cursor: pointer;
+}
+

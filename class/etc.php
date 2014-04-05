@@ -5,7 +5,7 @@ define('DS', DIRECTORY_SEPARATOR, true);
 
 
 
-$in = array_merge( $_GET, $_POST );
+
 
 
 

@@ -1,5 +1,8 @@
 <?php
 	if ( $submit ) {
+	
+	
+	
 		meta_set( "widget_config.$code", string::scalar( $in ) );
 		if ( $submit_value == 'Submit & Close' ) {
 			echo "<script>parent.location.reload();</script>";
@@ -24,7 +27,7 @@ var x_url       = "<?=x::url()?>";
 </script>
 <?=javascript_jquery()?>
 <script src="<?=module('update.js')?>"></script>
-
+<script src="js/default.js"></script>
 </head>
 <body>
 
@@ -54,7 +57,7 @@ var x_url       = "<?=x::url()?>";
 <?php
 	unset($submit);
 	include module('config.widget');
-	include x::dir() . "/widget/$widget_config[name]/config.php";
+	include widget_config();
 ?>
 
 

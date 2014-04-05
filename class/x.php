@@ -517,6 +517,8 @@ class x extends gnuboard
 	 *
 	 * @param $domain if omitted, then it uses current accessed domain.
 	 * @return array all the board table record of the domain.
+	 *
+	 * @note to get forum ids only, then use forum_ids()
 	 */
 	static function forums($domain=null)
 	{

@@ -46,9 +46,10 @@
 			if ( $i % 2 ) $background="background";
 			else $background = null;
 			$i++;
+			$url = url_forum_list( $row['bo_table'] );
 			echo "
 				<tr  class='row $background' >
-					<td width=3%>$row[bo_table]</td>
+					<td width=3%><a href='$url'>$row[bo_table]</a></td>
 					<td width=30%>$row[bo_subject]</td>
 					<td width=25% >".number_format($row['bo_count_write'])."</td>
 					<td width=15% class='padding-extra2'>

@@ -3,10 +3,18 @@
 	// widget_javascript();
 	
 	
-	
-	
+	$ids = array();
+	for ( $i=1; $i<=5; $i++ ) {
+		if ( empty($widget_config["forum$i"]) ) continue;
+		$ids[] = "bo_table='".$widget_config["forum$i"]."'";
+	}
+	if ( $ids ) {
+		$extra = "(" . implode( " OR ", $ids ) . ")";
+	}
 	$posts = x::posts(
 		array(
+			'extra'			=> $extra,
+			'limit'			=> $widget_config['no'],
 		)
 	);
 ?>

@@ -3,7 +3,10 @@
 	padding: 1em;
 	border: 1px solid #dfdfdf;
 }
-
+.post-comment-latest > .title {
+	background-color: blue;
+	color: white;
+}
 .post-comment-latest .post a {
 	display:inline-block;
 	padding: 0.2em;

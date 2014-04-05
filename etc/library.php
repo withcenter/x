@@ -7,6 +7,16 @@ function widget( $option )
 }
 
 
+
+function widget_config()
+{
+	global $widget_config;
+	$path = x::dir() . "/widget/$widget_config[name]/config.php";
+	if ( ! file_exists( $path ) ) $path = x::dir() . '/etc/null.php';
+	return $path;
+}
+
+
 $widget_css = array();
 function widget_css( $name=null )
 {
@@ -19,6 +29,7 @@ function widget_css( $name=null )
 		echo "<link rel='stylesheet' type='text/css' href='$href' />";
 	}
 }
+
 
 
 $widget_javascript = array();
@@ -64,16 +75,15 @@ function load_widget_config($code, $name=null)
 	$widget_config['xml'] = load_xml( x::dir() . "/widget/$widget_config[name]/config.xml" );
 }
 
-$widget_config_form_name =  null;
-$widget_config_form_display_text = null;
-$widget_config_form_place_holder = null;
-function widget_config_form( $file, $form_name="form_name", $display_text="Display Text", $place_holder="Place Holder" )
+$widget_config_form = array();
+function widget_config_form( $file, $wcf  = array())
 {
-	global $widget_config_form_name, $widget_config_form_display_text, $widget_config_form_place_holder;
-
-	$widget_config_form_name =  $form_name;
-	$widget_config_form_display_text = $display_text;
-	$widget_config_form_place_holder = $place_holder;
+	global $widget_config_form;
+	$widget_config_form = $wcf;
+	if ( empty( $widget_config_form['name'] ) ) $widget_config_form['name'] = "__NAME__";
+	if ( empty( $widget_config_form['caption'] ) ) $widget_config_form['caption'] = "__CAPTION__";
+	if ( empty( $widget_config_form['placeholder'] ) ) $widget_config_form['placeholder'] = "__PLACEHOLDER__";
+	
 	return "module/widget/config.$file.php";
 }
 

@@ -1000,7 +1000,11 @@ class gnuboard {
 	 * @param $option['select'] holds fields to extract.
 			The default is all the fields except 'wr_content']
 		
+	 * @param $option['extra'] will be added in the SQL condition.
+		'extra' can be any of the SQL condition form.
+		ex) 'bo_table'='abc' OR ( 'bo_table'='def' AND 'bo_subject'='opq' )
 		
+			
 		
 	 *
 	 * @code normal usage
@@ -1039,7 +1043,27 @@ class gnuboard {
 	 *  
 	 *  @code how to use LIKE
 	 *  		'wr_option'			=> array( "LIKE '%secret%'" ),
+	 *			or
+	 *			'extra'					=> "'wr_option' LIKE '%secret%'",
 	 *  @endcode
+	 *
+	 * @code How to get posts from multiple forums.
+					$ids = array();
+					for ( $i=1; $i<=5; $i++ ) {
+						if ( empty($widget_config["forum$i"]) ) continue;
+						$ids[] = "bo_table='".$widget_config["forum$i"]."'";
+					}
+					if ( $ids ) {
+						$extra = "(" . implode( " OR ", $ids ) . ")";
+					}
+					$posts = x::posts(
+						array(
+							'extra'			=> $extra
+						)
+					);
+	 * @endcode
+	 * 
+	 *
 	 *  @note see sql::cond to know how to use Expression
 	 *  @return array. the return value is the same as that of latest.lib.php
 	 */
@@ -1066,6 +1090,8 @@ class gnuboard {
 		
 		if ( $o['wr_link1'] ) $cond[] = db::cond('wr_link1');
 		if ( $o['wr_link2'] ) $cond[] = db::cond('wr_link2');
+		
+		if ( $o['extra'] ) $cond[] = $o['extra'];
 		
 		if ( $cond ) $where = "WHERE " . implode( ' AND ', $cond );
 		else $where = null;
