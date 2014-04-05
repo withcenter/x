@@ -7,7 +7,8 @@
 	$src = '$config = array();';
 	$dst = "$src
 " . '$in = array_merge( $_GET, $_POST ); /* x patch */';
-
+	$data = patch_string( $data, $src, $dst );
+	
 	
 	
 	
