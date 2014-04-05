@@ -11,7 +11,6 @@
 	
 	
 	
-	
 	$src = '$html_process = new html_process();';
 	$dst = '/* $html_process moved before loading extend sripts */';
 	$data = patch_string( $data, $src, $dst );
