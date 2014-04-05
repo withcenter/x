@@ -3,12 +3,16 @@ todo
 스킨변경					=> OK
 팝업 크기 자동 조절	=> OK
 게시판 설정				=> OK
-CSS 지정				
+CSS 지정					=> OK
 첨부 파일 등록
 banner widget
 text widget
 
-최근글 위젯			=> OK
+최근글 위젯
+	게시판이 한개 인 경우, 제목 클릭시 URL
+	게시판이 여러개 인경우, 제목 클릭시 URL
+	
+	
 최근 코멘트 위젯	=> OK
 
 

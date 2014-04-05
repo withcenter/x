@@ -24,3 +24,9 @@
 		<div class='post'><a href='<?=$post['url']?>'><?=$post['subject']?></a></div>
 	<? } ?>
 </div>
+
+<? if ( ! empty($widget_config['css']) ) { ?>
+<style>
+<?=$widget_config['css']?>
+</style>
+<? } ?>
