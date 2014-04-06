@@ -20,7 +20,10 @@
 	
 	
 	
-	include widget_config_form('css');
+	include widget_config_form('textarea', array(
+		'name'				=> 'css',
+		'caption'			=> ln('STYLE', '스타일') . " ( CSS )",
+	));
 	widget_config_extra_end();
 ?>
 <style>

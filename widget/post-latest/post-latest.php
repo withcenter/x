@@ -3,7 +3,7 @@
 	// widget_javascript();
 	
 	
-	
+	$extra = null;
 	$ids = array();
 	$url = null;
 	for ( $i=1; $i<=5; $i++ ) {

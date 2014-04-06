@@ -73,6 +73,10 @@ function load_widget_config($code, $name=null)
 	if ( empty( $widget_config['name'] ) && $name ) $widget_config['name'] = $name;
 	
 	$widget_config['xml'] = load_xml( x::dir() . "/widget/$widget_config[name]/config.xml" );
+	
+	
+	if ( ! empty($widget_config['html']) ) $widget_config['html'] = str_replace(".this", "[code='$code']", $widget_config['html']);
+	if ( ! empty($widget_config['css']) ) $widget_config['css'] = str_replace(".this", "[code='$code']", $widget_config['css']);	
 }
 
 $widget_config_form = array();

@@ -6,7 +6,7 @@
 ?>
 <? if ( file_exists( $path ) ) { ?>
 <div class='item'>
-	<span class='caption'><?=ln("Uploaded File", "업로드된 파일")?></span> :
+	<span class='caption'><?=ln("Uploaded ", "업로드된 ")?> <?=$o['caption']?></span> :
 	<img src="<?=$url?>" style="width: 24px; height: 24px;">
 	<input type='checkbox' name="<?=$o['name']?>_remove" value='y'><?=ln("Delete Uploaded File", "업로드된 파일 삭제하기")?>
 </div>

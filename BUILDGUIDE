@@ -4,9 +4,9 @@ todo
 팝업 크기 자동 조절	=> OK
 게시판 설정				=> OK
 CSS 지정					=> OK
-첨부 파일 등록
-banner widget
-text widget
+첨부 파일 등록			=> OK
+text + css + banner  widget		=> OK
+
 
 최근글 위젯				=> OK
 
@@ -40,10 +40,10 @@ else {
 사용하기 쉽게 미리 만들어진 HTML FORM 코드가 있다.
 
 	include widget_config_form('title')				// 제목이 필요한 경우,
-	include widget_config_form('css')				// CSS 가 필요한 경우,
 	
 	
-	// TEST 입력이 필요한 경우,
+	
+	// TEXT 입력이 필요한 경우,
 	include widget_config_form('text', array(
 			'name'				=> 'no',
 			'caption'			=> ln('No.', '글 갯수'),
@@ -51,6 +51,24 @@ else {
 		)
 	);
 
+	
+	// TEXTAREA 항목이 필요한 경우,... 아래는  CSS 입력.
+	include widget_config_form('textarea', array(
+		'name'				=> 'css',
+		'caption'			=> ln('STYLE', '스타일') . " ( CSS )",
+	));
+	
+	
+	
+	// CheckBox 입력이 필요한 경우,
+	include widget_config_form('checkbox', array(
+			'name'				=> 'target',
+			'caption'			=> ln('New Window', '새 창'),
+			'comment'		=> ln('Open in New Tab', '새 창으로 열기'),
+		)
+	);
+	
+	
 	// 게시판 아이디 입력이 필요한 경우,
 		
 		include widget_config_form('forum');			// 1개 게시판 입력. 게시판 아이디는 $widget_config['forum1'] 키 값에 저장됨.
@@ -60,7 +78,20 @@ else {
 		include widget_config_form('forum', array( 'from' => 2, 'to'=>5) );		// 게시판 아이디 'forum2' 부터 'forum5' 까지 입력을 받는다.
 		
 
+@팁 : 추가적인 설명이 필요한 경우,
+----------------------------------------------------------------------------
+
+아래와 같이 부가 설명을 출력해 주면 된다.
+
+<?php
+
+	include widget_config_form('textarea', array(
+		'name'				=> 'html',
+		'caption'			=> 'HTML',
+	));
+	echo ln("Use &lt;style&gt; tag to input style (css)", "&lt;style&gt; 태그를 사용해서 CSS 를 입력 할 수 있습니다.") . '<br>';
 	
+?>
 		
 	
 @예제
@@ -208,4 +239,51 @@ to doc
 	) );
 	
 	
-	
+@doc 가상 선택자.
+-------------------------------------------------------------
+
+현재 위젯의 고유 ID 나 CLASS 명을 몰라서 코딩이 어려울 때가 있다.
+
+이럴 때, ".this" 를 사용해서 현재 위젯을 선택(지정 또는 표현) 할 수 있다.
+
+이것은 HTML 이나 CSS 등에서 사용가능한 것으로 .this 를 통해서 보다 쉽게 스타일링을 할 수 있다.
+
+주의 할 것은 설정 FORM 의 변수명이 css 와 html 만 된다.
+
+
+
+예제) CSS 입력에서
+---------------------------------------------------------------
+[code='side-post-latest'] a { color: red !important }
+
+예제) HTML 에서 <style> 태그를 같이 사용하는 경우,
+---------------------------------------------------------------
+<style>
+.this {
+margin-bottom:1em;
+}
+.this img {
+width:100%;
+}
+</style>
+
+
+결과) 위와 같이 하면 실제로는 아래와 같이 웹 브라우저에 출력된다.
+---------------------------------------------------------------
+
+<style>
+[code='side-post-latest'] a { color: red !important }</style>
+
+또는
+<style>
+[code='side-sample-4'] {
+margin-bottom:1em;
+}
+[code='side-sample-4'] img {
+width:100%;
+}
+</style>
+
+
+
+

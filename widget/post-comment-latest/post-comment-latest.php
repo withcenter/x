@@ -3,6 +3,7 @@
 	widget_css();
 	// widget_javascript();
 	
+	$extra = null;
 	$ids = array();
 	for ( $i=1; $i<=5; $i++ ) {
 		if ( empty($widget_config["forum$i"]) ) continue;
