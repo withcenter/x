@@ -10,7 +10,8 @@
 	widget_config_extra_begin();
 	
 	include widget_config_form('forum', array( 'from' => 2, 'to'=>5) );
-	echo "<div><span class='caption'>My Name</span> : <input type='text' name='my_name' value='$widget_config[my_name]'></div>";
+	$text = ln("URL on click", "클릭 URL");
+	echo "<div><span class='caption'>$text</span> : <input type='text' name='url' value='$widget_config[url]'></div>";
 	include widget_config_form('css');
 	widget_config_extra_end();
 ?>

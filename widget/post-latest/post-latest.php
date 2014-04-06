@@ -17,9 +17,16 @@
 			'limit'			=> $widget_config['no'],
 		)
 	);
+	
+	if ( $widget_config['url'] ) $url = $widget_config['url'];
+	else $url = "javascript:void(0);"
 ?>
 <div class="post-latest">
-	<div class='title'><?=$widget_config['title']?></div>
+	<div class='title'>
+		<a href="<?=$url?>">
+			<?=$widget_config['title']?>
+		</a>
+	</div>
 	<? foreach ( $posts as $post ) { ?>
 		<div class='post'><a href='<?=$post['url']?>'><?=$post['subject']?></a></div>
 	<? } ?>

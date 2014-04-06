@@ -22,11 +22,13 @@ $(function(){
 	
 	
 	/// widget help button
+	/*
 	$(".widget-help").click(function(){
 		var name = $(this).parent().find("[name='name']").val();
 		var url = "?module=widget&action=ajax_get_detail_submit&name="+name;
 		ajax_load( url, callback_widget_help );
 	});
+	*/
 	
 	
 	/// widget selection
@@ -50,7 +52,10 @@ $(function(){
 	$('.a-widget').click(function(){
 		var text = $(this).find('.folder').text();
 		$("input[name='name']").val( text );
-		$(".widget-close").click();
+		// $(".widget-close").click();
+		
+		// $('.config > form').submit();
+		$('#submit-only').click();
 	});
 	
 	
@@ -59,7 +64,7 @@ $(function(){
 	{
 		setTimeout( post_message_height, 300 );
 		setTimeout( post_message_height, 1500 );
-		setTimeout( post_message_height, 3500 );
+		setTimeout( post_message_height, 5000 );
 	}
 	function post_message_height()
 	{
@@ -68,11 +73,19 @@ $(function(){
 		parent.postMessage( data, '*' );
 	}
 	
+	$(".page-title .help").click(function(){
+		$(".widget-help-box").toggle("fast");
+		resize_popup_layer();
+	});
+	
+	
+	
 });
-
+/*
 function callback_widget_help( data )
 {
 	alert( data );
 }
+*/
 
 	

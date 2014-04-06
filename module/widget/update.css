@@ -6,13 +6,33 @@ body {
 	margin: 1em;
 }
 .page-title {
+	margin: 0 0 1em 0;
 	font-size: 1.6em;
 	font-weight: bold;
 	color: darkblue;
 }
 
+.widget-help-box {
+	display:none;
+	margin: 0 0 1em 0;
+	padding: 1em;
+	border: 1px solid grey;
+	line-height: 1.4em;
+}
+.widget-help-box .caption {
+	margin: 0;
+	padding: 0;
+	width: 70px;
+	font-weight: normal;
+	color: #292929;
+}
+
+.widget-help-box .sep {
+	padding: 0 8px;
+}
+
 .content {
-	margin: 1em 0;
+	margin: 0 0 1em 0;
 	padding: 1em;
 	border-radius: 4px;
 	background-color: white;
@@ -116,9 +136,18 @@ select[name='select_bo_table'] {
 }
 
 
-.widget-help {
+.page-title > .name {
+	font-size: 0.85em !important;
+	font-weight: bold;
+	color: #FF3000;
+}
+
+
+.page-title > .help {
+	font-size: 0.85em !important;
 	font-weight: bold;
 	color: blue;
 	cursor: pointer;
+	float:right;
 }
 

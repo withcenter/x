@@ -3,8 +3,6 @@
 	<span class='caption'><?=ln("Widget", "위젯")?></span> :
 	<input type='text' name='name' value="<?=$widget_config['name']?>" placeholder=" <?=ln('Select Widget', '위젯을 선택하십시오.')?>">
 
-	<span class='widget-help'>( ? )</span>
-	
 	<span class='widget-open'><?=ln("Open Widget List", "위젯 목록 열기")?></span>
 	<span class='widget-close'><?=ln("Close Widget List", "위젯 목록 닫기")?></span>
 

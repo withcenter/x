@@ -1103,7 +1103,7 @@ class gnuboard {
 		if ( isset( $o['order by'] ) ) $order_by = $o['order by'];
 		else $order_by = "wr_datetime DESC";
 		
-		if ( isset( $o['limit'] ) ) $limit = "$o[limit]";
+		if ( ! empty( $o['limit'] ) ) $limit = "$o[limit]";
 		else $limit = "0,10";
 		
 		

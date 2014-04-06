@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config>
+	<category>
+		<main>forum</main>
+		<sub>latest</sub>
+	</category>
+	<name>
+		<en>Latest Comment</en>
+		<ko>최근 코멘트</ko>
+	</name>
+	<version>0.2</version>
+	<author>JaeHo Song</author>
+	<email>thruthesky@gmail.com</email>
+	<homepage>http://jaehosong.com</homepage>
+	<demo>http://philgo.net</demo>
+	<short>
+		<en>Displays latest comment.</en>
+		<ko>최근 코멘트를 표시합니다.</ko>
+	</short>
+	<detail>
+		<en>With options, it displays in many different ways.</en>
+		<ko>옵션 설정에 따라서 여러가지 형태로 최근 코멘트를 표시합니다. 여러개의 게시판을 선택 하여 그 게시판의 글들만 나오게 할 수 있습니다.</ko>
+	</detail>
+</config>
