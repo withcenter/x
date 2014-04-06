@@ -3,10 +3,13 @@
 	// widget_javascript();
 	
 	
+	
 	$ids = array();
+	$url = null;
 	for ( $i=1; $i<=5; $i++ ) {
 		if ( empty($widget_config["forum$i"]) ) continue;
 		$ids[] = "bo_table='".$widget_config["forum$i"]."'";
+		if ( $url == null ) $url = url_forum_list( $widget_config["forum$i"] );
 	}
 	if ( $ids ) {
 		$extra = "(" . implode( " OR ", $ids ) . ")";
@@ -19,10 +22,14 @@
 	);
 	
 	if ( $widget_config['url'] ) $url = $widget_config['url'];
-	else $url = "javascript:void(0);"
+	
+	$path = widget_data_path( $widget_config['code'], 'icon' );
+	$url_icon = widget_data_url( $widget_config['code'], 'icon' );
+
 ?>
 <div class="post-latest">
 	<div class='title'>
+		<? if ( file_exists( $path ) ) { ?><img src="<?=$url_icon?>" style="width:24px; height:24px;"><? } ?>
 		<a href="<?=$url?>">
 			<?=$widget_config['title']?>
 		</a>

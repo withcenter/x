@@ -10,7 +10,7 @@ $(function(){
 		$(".config form [name='widget-extra-display']").val( text );
 		
 		$('.widget-extra-button span').text( text );
-		$('.widget-extra').toggle('fast');
+		$('.widget-extra').slideToggle('fast');
 		resize_popup_layer();
 	});
 	
@@ -74,7 +74,7 @@ $(function(){
 	}
 	
 	$(".page-title .help").click(function(){
-		$(".widget-help-box").toggle("fast");
+		$(".widget-help-box").slideToggle("fast");
 		resize_popup_layer();
 	});
 	

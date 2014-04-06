@@ -87,6 +87,19 @@ function widget_config_form( $file, $wcf  = array())
 	return "module/widget/config.$file.php";
 }
 
+function widget_data_path( $code, $name )
+{
+	$dir_widget_data = g::dir() . '/data/widget';
+	$domain = etc::domain();
+	return $dir_widget_data . "/$domain-$code-$name";
+}
+function widget_data_url( $code, $name )
+{
+	$url_widget_data = g::url() . '/data/widget';
+	$domain = etc::domain();
+	return $url_widget_data . "/$domain-$code-$name";
+}
+
 
 
 function widget_config_extra_begin()

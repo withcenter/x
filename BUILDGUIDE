@@ -8,10 +8,8 @@ CSS 지정					=> OK
 banner widget
 text widget
 
-최근글 위젯
-	게시판이 한개 인 경우, 제목 클릭시 URL
-	게시판이 여러개 인경우, 제목 클릭시 URL
-	
+최근글 위젯				=> OK
+
 	
 최근 코멘트 위젯	=> OK
 
@@ -194,4 +192,20 @@ function message_receiver( e )
 
 
 
+to doc
+---------------------
+파일 업로드. 아래와 같이 하면 된다.
+
+
+	include widget_config_form( 'file', array(
+		'name'				=> 'icon',
+		'caption'			=> ln('Icon', '아이콘'),
+	) );
+	
+	include widget_config_form( 'file', array(
+		'name'				=> 'icon2',
+		'caption'			=> ln('Second Icon', '두번째 아이콘'),
+	) );
+	
+	
 	

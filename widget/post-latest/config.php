@@ -12,6 +12,14 @@
 	include widget_config_form('forum', array( 'from' => 2, 'to'=>5) );
 	$text = ln("URL on click", "클릭 URL");
 	echo "<div><span class='caption'>$text</span> : <input type='text' name='url' value='$widget_config[url]'></div>";
+	
+	include widget_config_form( 'file', array(
+		'name'				=> 'icon',
+		'caption'			=> ln('Icon', '아이콘'),
+	) );
+	
+	
+	
 	include widget_config_form('css');
 	widget_config_extra_end();
 ?>
