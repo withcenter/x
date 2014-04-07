@@ -6,11 +6,12 @@
 
 
 <?php
+$type = "widget";
 $dirs = file::getDirs(X_DIR_WIDGET);
 foreach ( $dirs as $dir ){
 	$path = X_DIR_WIDGET . "/$dir/config.xml";
 	if ( ! file_exists($path) ) continue;
-	$theme_config = load_config( $path );
+	$config = load_config( $path );
 	include "admin_display_installed_item.php";
 }
 ?>

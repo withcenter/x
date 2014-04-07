@@ -3,11 +3,12 @@
 <div class='installed'>
 	<div class='title'><?=ln("Widget Module List", "설치된 모듈 목록")?></div>
 <?php
-$dirs = file::getDirs(X_DIR_THEME);
+$type = "module";
+$dirs = file::getDirs(X_DIR_MODULE);
 foreach ( $dirs as $dir ){
-	$path = X_DIR_THEME . "/$dir/config.xml";
+	$path = X_DIR_MODULE . "/$dir/config.xml";
 	if ( ! file_exists($path) ) continue;
-	$theme_config = load_config( $path );
+	$config = load_config( $path );
 	include "admin_display_installed_item.php";
 }
 ?>

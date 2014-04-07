@@ -1,19 +1,12 @@
 <?php
 
 
-				
-	$name = $theme_config['name'][L];
+
+	$name = $config['name'][L];
+	
 	if ( empty($name) ) return;
 	
-	if ( empty($theme_config['type']) || $theme_config['type'] == 'none' ) return;
-	
-	$type = explode(',', $theme_config['type']);
-	
-	
-
-
-
-	$url = x::url().'/theme/'.$dir.'/preview.jpg';
+	$url = x::url()."/$type/".$dir.'/preview.jpg';
 ?>
 	
 	<div class='theme'>
