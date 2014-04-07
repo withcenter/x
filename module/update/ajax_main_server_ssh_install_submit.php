@@ -43,7 +43,7 @@
 	$re = ssh::copy( $host, $id, $password, "$path_tmp_project/$name-master", $path_target );
 	switch ( $re ) {
 		case ssh::SUCCESS		: $message="sucess"; break;
-		case ssh::CONNECTION_FAILED	: $message="Connection failed. Please check the host (or IP)"; break;
+		case ssh::CONNECTION_FAILED	: $message="Connection failed. Please check if the host (or IP) correct and if it can be connected. Be sure the host is not under firewall."; break;
 		case ssh::LOGIN_FAILED		: $message="Login failed. Please check the ID and Password"; break;
 		case ssh::SEND_FAILED		: $message="send_failed"; break;
 		case ssh::SOURCE_NOT_FOUND	: $message="source file or directory not found"; break;
