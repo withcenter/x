@@ -1,21 +1,4 @@
 <!--BANNERS-->
-<?/*?>
-<div class='services-banner'>
-	<div class='banner-container'>
-		<div class='banner'>
-			<div class='banner-title'>
-				서비스 패키지 1
-			</div>
-			<div class='banner-image' style='color: #ffffff; font-size: 17px'>
-				CONTAINER
-			</div>
-		</div>
-			<div class='view-banner' style='color: #ffffff; font-size: 17px'>
-				view banner 
-			</div>
-	</div>
-</div>
-<?*/?>
 <?
 include 'gallery_banner.php';
 ?>
@@ -69,6 +52,6 @@ include 'gallery_banner.php';
 
 <style>
 	.services-banner {
-		background: url("<?=x::theme_url('img/banner_background.png')?>") 100% 100%;
+		background: url("<?=x::theme_url('img/bg_service.png')?>") 100% 100%;
 	}
 </style>
