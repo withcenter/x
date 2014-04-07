@@ -1,5 +1,5 @@
 .gallery_container{			
-	width:100%;				
+	width:100%;					
 	font-family:dotum;
 	font-size:9pt;	
 	position:relative;
@@ -52,7 +52,7 @@
 .gallery_container  .gallery_item{			
 	overflow:hidden;
 	display:inline-block;
-	margin-right:-4px;
+	margin:0 -4px -4px 0;
 	width:100%;	
 }
 
@@ -64,7 +64,7 @@
 
 .gallery_container .gallery_item .inner{
 	max-width:970px;	
-	margin:auto;	
+	margin:auto;		
 }
 
 .gallery_container .gallery_item .inner img{			
