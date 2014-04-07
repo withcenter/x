@@ -150,7 +150,7 @@
 	 opacity:0;
 	 z-index:-1;
 	 /* IE 5-7 */
-	 filter: alpha(opacity=0);	 
+	filter: alpha(opacity=0);	 
 }
 
 .gallery_container .gallery_item .inner .item_info{			

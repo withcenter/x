@@ -71,8 +71,8 @@
 	if ( ! file_exists($path) ) continue;	
 				
 	$theme_config = load_config ( $path );
-	$name = $theme_config['name'][L];
-	if ( empty($name) ) continue;
+	$theme_name = $theme_config['name'][L];
+	if ( empty($theme_name) ) continue;
 
 	$type = explode(',', $theme_config['type']);
 				
@@ -86,7 +86,7 @@
 					<div class='content'>						
 						<img class = 'gallery_image' banner_num = '<?=$i?>' src='<?=$url?>'/>
 						<div class='info' banner_num='<?=$i?>'>
-							<div class='title'><?=$name?></div>
+							<div class='title'><?=$theme_name?></div>
 							<div class='description'>
 								This is Description This is Description This is Description This is Description This is Description.
 							</div>
@@ -110,8 +110,8 @@
 	if ( ! file_exists($path) ) continue;
 	
 	$theme_config = load_config ( $path );
-	$name = $theme_config['name'][L];
-	if ( empty($name) ) continue;		
+	$theme_name = $theme_config['name'][L];
+	if ( empty($theme_name) ) continue;		
 	$type = explode(',', $theme_config['type']);
 	
 	if ( in_array( 'pc', $type ) ) {
