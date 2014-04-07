@@ -3,6 +3,7 @@
 	<span class='main-description'>Request a free quote or say hi! We will get back to you within 24 hours.</span>
 
 <? 
+
 	$action_url = g::url().'/bbs/write_update.php';
 	$application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하였습니다.";
 	$bo_table = bo_table(1);
