@@ -101,14 +101,14 @@
 		</table>
 		
 		<div class='select_themes'>
-			<input type='hidden' name='wr_7' value='<?=$wr_7?>' />
+			<input type='hidden' name='wr_7' value='<?=$wr_7?>'  class='template_name_field'/>
 			<? include x::theme('template_contactus') ?>
 		</div>
 		
 		<table cellpadding=0 cellspacing=0 width='100%' class='application-table'> 	
 		<tr>
 			<td><span class='item-title'>예상 제작 기간</span></td>
-			<td><input type='text' name='wr_8' value='<?=$wr_8?>' class='template_name_field'/></td>
+			<td><input type='text' name='wr_8' value='<?=$wr_8?>'/></td>
 		</tr>
 		<tr>
 			<td><span class='item-title'>신청 도메인</span></td>
@@ -151,6 +151,23 @@
 		<div style="clear: both"></div>
 	</div>
     </form>
+
+	<style>
+
+		#captcha #captcha_mp3 span {
+			background: url("<?=x::theme_url('img/sound_icon.png')?>") !important;
+			width: 106px !important;
+			height: 38px !important;
+			display: block !important;
+		}
+		
+		#captcha_reload span {
+			background: url("<?=x::theme_url('img/reload_icon.png')?>") !important;
+			width: 106px !important;
+			height: 38px !important;
+			display: block !important;
+		}
+	</style> 
 	
 	<script>
 		function check_submit() {
