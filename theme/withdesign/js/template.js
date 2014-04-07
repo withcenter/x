@@ -7,7 +7,7 @@ $(function(){
 		$(this).find('.template_name').hide();
 	});
 	
-	var template_name, imgsrc, demo_link;
+	var template_name, imgsrc, demo_link, top;
 	
 	$(".template_name").click(function() {
 		template_name = $(this).attr('template_name');
