@@ -896,6 +896,35 @@
 	.support-category.category3 .inner {
 		margin: 1% 0.75% 0 0.75%;
 	}
+	
+	.template_contactus {
+		width: 49% !important;
+	}
+	
+	.template-preview .template {
+		width: 50%;
+	}
+	
+	.popup-preview .popup-image-wrapper {
+		margin-bottom: 10px;
+	}
+	
+	.popup-preview .popup-image-wrapper, .popup-demo, .popup-preview .popup-details, .popup-close {
+		width: 100% !important;
+		clear: left;
+	}
+	
+	.popup-preview .popup-info {
+		display: none !important;
+	}
+	
+	.popup-preview .inner .image-wrapper {
+		margin: 1%;
+	}
+	
+	.popup-demo a, .popup-close span {
+		margin: 1%;
+	}
 }
 
 @media (max-width: 400px) {
