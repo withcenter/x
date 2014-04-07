@@ -8,7 +8,7 @@ foreach ( $dirs as $dir ){
 	$path = X_DIR_THEME . "/$dir/config.xml";
 	if ( ! file_exists($path) ) continue;
 	$theme_config = load_config( $path );
-	include "admin_theme_list_installed_display.php";
+	include "admin_display_installed_item.php";
 }
 ?>
 </div>
