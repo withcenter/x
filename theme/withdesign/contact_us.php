@@ -175,7 +175,9 @@
 			var write_subject = $(iframe_element).find("span").text();
 			if ( write_subject != '' ) { 
 				alert('Thank you for contacting us. Please expect a response from us within 24-48 hours.');
-				$("#fwrite")[0].reset()
+				$("#fwrite")[0].reset();
+				$('html, body').animate({scrollTop:$('#contact-us').position().top-98}, 'slow');
+				$(".contact-us").slideToggle('slow');
 			}
 		};
 	</script>

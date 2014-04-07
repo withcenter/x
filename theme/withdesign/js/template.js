@@ -17,7 +17,7 @@ $(function(){
 		$(".popup-preview").find(".popup-title").html(template_name);
 		$(".popup-preview").find(".popup-demo-link").attr("href", demo_link);
 		$(".popup-preview").css('display','block');
-		$('html, body').animate({scrollTop:$('#portfolio').position().top-98}, 0);
+		$('html, body').animate({scrollTop:$('#portfolio').position().top}, 0);
 	});
 	
 	$(".popup-close").click(function() {
