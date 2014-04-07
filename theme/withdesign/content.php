@@ -1,21 +1,4 @@
 <!--BANNERS-->
-<?/*?>
-<div class='services-banner'>
-	<div class='banner-container'>
-		<div class='banner'>
-			<div class='banner-title'>
-				서비스 패키지 1
-			</div>
-			<div class='banner-image' style='color: #ffffff; font-size: 17px'>
-				CONTAINER
-			</div>
-		</div>
-			<div class='view-banner' style='color: #ffffff; font-size: 17px'>
-				view banner 
-			</div>
-	</div>
-</div>
-<?*/?>
 <?
 include 'gallery_banner.php';
 ?>
@@ -59,10 +42,7 @@ include 'gallery_banner.php';
 
 <!--CONTACT US-->
 <div class='contact-us-wrapper'  id='contact-us'>
-	<div class='contact-us'>
-		<span class='main-title'>Contact Us</span>
-		<span class='main-description'>Request a free quote or say hi! We will get back to you within 24 hours.</span>
-	</div>
+	<? include x::theme('contact_us') ?>
 </div>
 
 <!--SUPPORT-->
@@ -72,6 +52,6 @@ include 'gallery_banner.php';
 
 <style>
 	.services-banner {
-		background: url("<?=x::theme_url('img/banner_background.png')?>") 100% 100%;
+		background: url("<?=x::theme_url('img/bg_service.png')?>") 100% 100%;
 	}
 </style>

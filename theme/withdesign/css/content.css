@@ -530,3 +530,340 @@
 	overflow: hidden;
 	line-height: 140%;
 }
+
+
+.support .inner ul{
+	margin: 0;
+	padding: 0;
+	background: #ecf0f1;
+	list-style: none;
+}
+
+.support .inner ul .list-style {
+	float: left;
+	margin-right: 1%;
+	width: 12%;
+}
+
+.support .inner ul .list-data {
+	float: left;
+	width: 87%;
+	height: 30px;
+	overflow: hidden;
+	line-height: 15px;
+	font-size: 15px;
+}
+
+.support .inner ul li {
+	padding: 15px 20px;
+}
+
+.support .inner ul .odd {
+	background: #e3e7e8;
+}
+
+
+/* CONTACT US */
+.contact-us {
+	position: relative;
+	color: #555555;
+}
+
+.contact-us .application-title {
+	font-family: '맑은 고딕', AppleGothic;
+	margin-bottom: 10px;
+	font-size: 20px;
+	color: #24a1b3;
+	border-bottom: solid 1px #696969;
+	width: 200px;
+}
+
+.contact-us .application-title .inner {
+	border-bottom: solid 2px #696969;
+	width: 180px;
+	padding-bottom: 7px;
+}
+
+.contact-us  .application-table tr td  {
+	padding: 9px 10px;
+}	
+.contact-us  .application-table tr td input[type='text'] {
+	padding: 1% 2%;
+	border: solid 1px #696969;
+	width: 96%;
+}
+
+.contact-us  .application-table tr td input[name='wr_4'],.contact-us  .application-table tr td input[name='wr_5'] {
+	width: 45.2%;
+}
+
+.contact-us  .application-table tr td select {
+	padding: 1% 1%;
+	width: 100%;
+	border: solid 1px #696969;
+}
+
+.contact-us  .item-title {
+	font-family: '맑은 고딕', AppleGothic;
+	font-size: 11pt;
+	color: #60583c;
+}
+.contact-us  .item-extra {
+	width: 160px;
+	display: inline-block;
+}
+.contact-us .captcha-title {
+	position: relative;
+	top: -30px;
+}
+.contact-us  .margin{
+	margin: 20px 0 10px 0;
+}
+
+.contact-us  .margin-bottom {
+	margin-bottom: 30px;
+}
+.contact-us  .application-table tr .item-underline {
+	padding-top: 30px;
+}
+
+.contact-us  .application-table tr td textarea[name='wr_content'] {
+	width: 94%;
+	height: 150px;
+	resize: none;
+	padding: 3%;
+	border: solid 1px #696969;
+}
+
+.contact-us  .application-table tr td  .item-message {
+	margin-top: 10px;
+	color: #cb4154;
+	font-size: 10pt;
+}
+.show-template-frame {
+	width: 100%;
+
+}
+
+.contact-us .popup{
+	/*position: absolute;
+	left: 0;
+	width: 100%;*/		
+	width:100%;
+}
+.contact-us .popup-preview {
+	border: 1px solid #727272;	
+	border-radius: 3px;	
+}
+
+.contact-us .popup-preview .inner {
+	padding: 20px;
+	border: 1px solid #ffffff;	
+	background-color: #e7e7e7;
+	border-radius: 3px;
+	margin: 0 auto;
+	max-width:642px;	
+}
+
+.contact-us .popup-preview img {
+	width: 600px;
+	max-height: 700px;
+	vertical-align: 
+	
+}
+.contact-us .popup-preview .inner .select-theme, .contact-us .popup-preview .inner .close-select-theme {
+	display: inline-block;
+	background-color: #517995;
+	padding: 7px 10px;
+	width: 70px;
+	border-radius: 4px;
+	color: #ffffff;
+	margin: 20px 0 0 10px;
+	cursor: pointer;
+}
+
+.contact-us .popup-preview .inner .select-theme:hover, .contact-us .popup-preview .inner .close-select-theme:hover {
+	background-color: #37566c;
+}
+
+.contact-us .input_wrapper {
+	float: left;
+	width: 63%;
+	background: #fafafa;
+}
+
+.contact-us .input_wrapper .inner_wrapper {
+	padding: 19px;
+	border: solid 1px #d9d9d9;
+}
+
+.contact-us .btn_confirm {
+	float: left;
+	width: 37%;
+}
+
+#captcha #captcha_key {
+	margin-left: 120px;
+	float: right;
+	width: 230px;
+	height: 43px;
+	background: #ffffff !important;
+	border: solid 1px #696969;
+}
+
+#captcha #captcha_img {
+	padding: 18px 30px;
+	background: #ffffff;
+	float: left;
+}
+
+#captcha #captcha_mp3 {
+	width: 106px;
+	height: 38px;
+	left: 170px;
+	float: left;
+}
+
+#captcha #captcha_reload {
+	width: 106px;
+	height: 38px;
+	left: 170px;
+	top: 40px;
+	float: left;
+}
+		
+#captcha #captcha_info {
+	float: right;
+	margin-right: 25px;
+}
+
+/* 계약 확인 */
+.contact-us .terms-conditions {
+	background-color: #00748e;
+	padding: 20px;
+	border: solid 1px #d9d9d9;
+	margin-bottom: 20px;
+}
+.contact-us .terms-conditions  .title {
+	color: #ffffff;
+	font-family: '맑은 고딕', AppleGothic;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+	font-size: 16px;
+}
+.contact-us .terms-conditions  ul {
+	padding-left: 20px;
+	margin: 0;
+}
+.contact-us .terms-conditions  ul  li {
+	line-height: 180%;
+	color: #ffffff;
+	font-size: 14px;
+}
+.contact-us .terms-conditions .terms-agree {
+	margin-top: 30px;
+	color: #ffffff;
+	font-size: 14px;
+}
+
+
+/* TEMPLATE CONTACT US */
+.contact-us .template_contactus {
+	width: 32%;
+	float: left;
+	overflow: hidden;
+	height: 200px;
+	margin: 0.5%;
+	position: relative;
+}
+
+.contact-us .template_contactus .inner {
+	overflow: hidden;
+}
+
+.contact-us .template_contactus .inner .template_name {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	color: #ffffff;
+	background: rgba(0,0,0,0.8);
+	padding: 10px;
+	overflow: hidden;
+}
+
+.contact-us .template_contactus .inner img {
+	width: 100%;
+}
+
+.contact-us .template_contactus .view-template {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	padding-top: 25%;
+	background-color: rgba(230,126,34,0.9);
+	display: none;
+}
+
+.contact-us .template_contactus .selected-template {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	padding-top: 25%;
+	background-color: rgba(26,188,156,0.9);
+	display: none;
+}
+
+.contact-us .template_contactus .selected-template.selected {
+	display: block;
+}
+
+.contact-us .template_contactus .view-template img {
+	max-width: 56px;
+	max-height: 56px;
+}
+
+
+
+.contact-us .template_contactus .selected-template img {
+	max-width: 56px;
+	max-height: 56px;
+}
+
+
+@media (max-width: 811px) {
+	.contact-us .application-table tr td input[name='wr_4'], 	.contact-us .application-table tr td input[name='wr_5'] {
+		width: 96%;
+	}
+	
+	.contact-us  .application-table tr td input[name='wr_4'] {
+		margin-bottom: 5px;
+	}
+}
+
+@media (max-width: 910px ) {
+	#captcha #captcha_key {
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 836px ) {
+	input#btn_submit {
+		margin-bottom: 10px;
+	}
+}
+
+@media (max-width: 730px ) {
+	#captcha #captcha_key {
+		margin: 10px 10px 0 0;
+	}
+	#captcha #captcha_info {
+		margin-right: 40px;
+	}
+}

@@ -462,7 +462,7 @@ class gnuboard {
 		db::query($sql);
 		$wr_id = db::insert_id();
 		
-		if ( empty($o['domain']) ) $o['domain'] = etc::domain;
+		if ( empty($o['domain']) ) $o['domain'] = etc::domain();
 		$p = array(
 			'domain'					=> $o['domain'],
 			'bo_table'					=> $o['bo_table'],
