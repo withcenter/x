@@ -119,7 +119,7 @@
 		<tr>
 			<td class='item-underline' valign='top'><span class='item-title'>기타 요청사항</span></td>
 			<td>
-				<textarea name='wr_content' style='width: 99%; height: 250px;'><?=$wr_10?></textarea>
+				<textarea name='wr_content' style='width: 94%; height: 150px;'><?=$wr_10?></textarea>
 			</td>
 		</tr>
 	</table>
