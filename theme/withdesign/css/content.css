@@ -570,6 +570,13 @@
 	color: #555555;
 }
 
+.contact-us iframe[name='submit_contact_form'] {
+	width: 100%;
+	border: 0;
+	visibility: hidden;
+	height: 0;
+}
+
 .contact-us .application-title {
 	font-family: '맑은 고딕', AppleGothic;
 	margin-bottom: 10px;

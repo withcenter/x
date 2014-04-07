@@ -2,14 +2,16 @@
 	<span class='main-title'>Contact Us</span>
 	<span class='main-description'>Request a free quote or say hi! We will get back to you within 24 hours.</span>
 
-<? include_once(G5_CAPTCHA_PATH.'/captcha.lib.php');
+<? 
 	$action_url = g::url().'/bbs/write_update.php';
 	$application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하였습니다.";
+	$bo_table = bo_table(1);
+	
 ?>
-    <form name="fwrite" id="fwrite" action="<?php echo $action_url ?>"  method="post" enctype="multipart/form-data" autocomplete="off" target='contact_us_submit'>
+    <form name="fwrite" id="fwrite" action="<?php echo $action_url ?>"  method="post" enctype="multipart/form-data" autocomplete="off" target='submit_contact_form'>
     <input type="hidden" name="uid" value="<?php echo get_uniqid(); ?>">
     <input type="hidden" name="w" value="<?php echo $w ?>">
-    <input type="hidden" name="bo_table" value="<?php echo bo_table(1) ?>">
+    <input type="hidden" name="bo_table" value="<?php echo $bo_table ?>">
     <input type="hidden" name="wr_id" value="<?php echo $wr_id ?>">
     <input type="hidden" name="sca" value="<?php echo $sca ?>">
     <input type="hidden" name="sfl" value="<?php echo $sfl ?>">
@@ -48,7 +50,6 @@
 	
     ?>	
 	<script>
-	
 		var application_status = "<?=$application_status?>";
 	</script>
 		<table cellpadding=0 cellspacing=0 width='100%' class='application-table'>
@@ -150,5 +151,17 @@
 	</div>
     </form>
 	
-	<iframe name='contact_us_submit' style='width: 100%; border: 0; visibility: hidden; height: 0;'></iframe>
+	<script>
+		function check_submit() {
+			var iframe_element = $("#submit_contact_form").contents().find("div.title");
+			var write_subject = $(iframe_element).find("span").text();
+			if ( write_subject != '' ) { 
+				alert('Thank you for contacting us. Please expect a response from us within 24-48 hours.');
+				$("#fwrite")[0].reset()
+			}
+		};
+	</script>
+
+	<iframe name='submit_contact_form' onload="check_submit()" id="submit_contact_form"></iframe>
+
 </div>
