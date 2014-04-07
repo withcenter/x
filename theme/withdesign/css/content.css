@@ -486,6 +486,7 @@
 	max-width: 970px;
 	margin: 0 auto;
 	padding: 28px 0;
+	word-break: break-all;
 }
 
 .support .main-title {
@@ -528,7 +529,7 @@
 	color: #eceae2;
 	height: 24px;
 	overflow: hidden;
-	line-height: 140%;
+	line-height: 130%;
 }
 
 
@@ -548,9 +549,9 @@
 .support .inner ul .list-data {
 	float: left;
 	width: 87%;
-	height: 30px;
+	height: 33px;
 	overflow: hidden;
-	line-height: 15px;
+	line-height: 115%;
 	font-size: 15px;
 }
 

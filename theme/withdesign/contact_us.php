@@ -6,7 +6,7 @@
 	$action_url = g::url().'/bbs/write_update.php';
 	$application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하였습니다.";
 ?>
-    <form name="fwrite" id="fwrite" action="<?php echo $action_url ?>" onsubmit="return fwrite_submit(this);" method="post" enctype="multipart/form-data" autocomplete="off" target='contact_us_submit'>
+    <form name="fwrite" id="fwrite" action="<?php echo $action_url ?>"  method="post" enctype="multipart/form-data" autocomplete="off" target='contact_us_submit'>
     <input type="hidden" name="uid" value="<?php echo get_uniqid(); ?>">
     <input type="hidden" name="w" value="<?php echo $w ?>">
     <input type="hidden" name="bo_table" value="<?php echo bo_table(1) ?>">
@@ -149,23 +149,6 @@
 		<div style="clear: both"></div>
 	</div>
     </form>
-	<style>
-
-		#captcha #captcha_mp3 span {
-			background: url("<?=$board_skin_url?>/img/sound_icon.png");
-			width: 106px;
-			height: 38px;
-		}
-		
-		#captcha #captcha_reload span {
-			background: url("<?=$board_skin_url?>/img/reload_icon.png");
-			width: 106px;
-			height: 38px;
-		}
-	</style> 
-
-	</form>
 	
 	<iframe name='contact_us_submit' style='width: 100%; border: 0; visibility: hidden; height: 0;'></iframe>
-	
 </div>
