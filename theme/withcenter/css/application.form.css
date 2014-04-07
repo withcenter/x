@@ -75,7 +75,6 @@
 }
 
 .application-form  .reset-icon {
-	margin-right: 1px;
 	cursor: pointer;
 }
 .application-form  .reset2-icon {
@@ -101,7 +100,7 @@
 
 .application-form  .extra-form  .captcha {
 	position: absolute;
-	right: 98px;
+	right: 112px;
 	bottom: -3px;
 }
 
@@ -130,4 +129,15 @@
 	background-color: #d7e7e8;
 	color: #666666;
 	border-right: 1px solid #e5e5e5;
+}
+
+.application-form .pannel-bottom .application-write-button {
+	border: 0;
+	background-color: #78bb9f;
+	color: #ffffff;
+	display: inline-block;
+	width: 34px;
+	height: 20px;
+	line-height: 20px;
+	cursor: pointer;
 }
