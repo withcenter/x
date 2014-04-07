@@ -298,5 +298,25 @@ width:100%;
 </style>
 
 
+@예제 위젯
+----------------------------------------------------------------
+
+none
+post-lastest
+post-comment-latest
+html_banner
 
 
+@기타 사용하기 쉽도록 캡슐화 해 놓은 것.
+-----------------------------------------------------------------
+	include widget_config_form('banner');
+	include widget_config_form('url');
+	include widget_config_form('target');
+	include widget_config_form('html');
+	
+	include widget_config_form('css');
+
+
+	
+	
+	

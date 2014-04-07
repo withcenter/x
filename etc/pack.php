@@ -45,11 +45,24 @@ copy_source( 'x/class' );
 copy_source( 'x/css' );
 copy_source( 'x/etc' );
 copy_source( 'x/js' );
-copy_source( 'x/module' );
 copy_source( 'x/begin.php' );
 copy_source( 'x/end.php' );
 copy_source( 'x/index.php' );
 copy_source( 'x/README.md' );
+
+
+// 모듈 선택:
+
+copy_source( 'x/module/admin' );
+copy_source( 'x/module/etc' );
+copy_source( 'x/module/member' );
+copy_source( 'x/module/post' );
+copy_source( 'x/module/site' );
+copy_source( 'x/module/skin' );
+copy_source( 'x/module/statics' );
+copy_source( 'x/module/update' );
+copy_source( 'x/module/widget' );
+
 
 
 // 테마 선택: 필요한 테마를 여기에 추가하면 된다.

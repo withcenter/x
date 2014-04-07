@@ -250,6 +250,11 @@ function url_language_setting()
 	return x::url() . '/?module=member&action=setting';
 }
 
+function url_login()
+{
+	return g::url() . '/bbs/bbs/login.php';
+}
+
 
 function login_page() {
 	return strpos($_SERVER['PHP_SELF'], 'login.php') !== false;
