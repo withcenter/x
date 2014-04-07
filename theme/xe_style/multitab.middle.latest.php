@@ -1,4 +1,6 @@
 <?php
+add_stylesheet("<link rel='stylesheet' type='text/css' href='".x::url_theme()."/css/multitab.middle.latest.css' />", 0);
+
 include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 $mmposts = array();
 for ( $i=6; $i < 9; $i++ ) {
@@ -10,9 +12,10 @@ for ( $i=6; $i < 9; $i++ ) {
 	);
 	$mmposts[] = g::posts($option);
 }
+echo "<div class='multitab-middle-latest'>";
 for ( $l=0; $l< 3; $l++ ) {
 echo "<table class='tab-bottom' cellpsdding=0 cellspacing=0 width='100%' border=1>
-		<tr>";
+		<tr class='row'>";
 	$m = 0;
 	foreach ( $mmposts[$l] as $p ) {
 		$imgsrc = get_list_thumbnail($p['bo_table'], $p['wr_id'], 105, 69);
@@ -28,9 +31,10 @@ echo "<table class='tab-bottom' cellpsdding=0 cellspacing=0 width='100%' border=
 		$m++;
 	}
 		for ( $i=0; $i < (5 - $m ); $i++ ) {
-			echo "<td width='20%'></td>";
+			echo "<td width='20%'><img src='".x::url_theme()."/img/no_image.png' /></td>";
 		}
 	echo "</tr>
 		</table>
 	";
 }
+echo "</div>";

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <config>
-	<type>none</type>
+	<type>pc</type>
 	<name>
 		<en>Withcenter</en>
 		<ko>Withcenter</ko>

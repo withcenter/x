@@ -14,6 +14,9 @@
 </head>
 <body>
 <?php
+$in = array();
+$in = $_POST;
+
 	if ( md5( $in['captcha'] ) != $_COOKIE['captcha'] ) {
 		jsAlert("보안문자를 정확하게 입력해 주세요");
 		exit;

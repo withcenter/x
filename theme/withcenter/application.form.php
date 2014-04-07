@@ -37,5 +37,5 @@
 		</div>
 	</form>
 	
-	<iframe src='javascript:void(0);' name='hidden-frame-application' style='display: none; width:500px; height:300px;'></iframe>
+	<iframe src='javascript:void(0);' name='hidden-frame-application' style='display: block; width:500px; height:300px;'></iframe>
 </div>
