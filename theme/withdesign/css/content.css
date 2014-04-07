@@ -532,8 +532,35 @@
 }
 
 
+.support .inner ul{
+	margin: 0;
+	padding: 0;
+	background: #ecf0f1;
+	list-style: none;
+}
 
+.support .inner ul .list-style {
+	float: left;
+	margin-right: 1%;
+	width: 12%;
+}
 
+.support .inner ul .list-data {
+	float: left;
+	width: 87%;
+	height: 30px;
+	overflow: hidden;
+	line-height: 15px;
+	font-size: 15px;
+}
+
+.support .inner ul li {
+	padding: 15px 20px;
+}
+
+.support .inner ul .odd {
+	background: #e3e7e8;
+}
 
 
 /* CONTACT US */

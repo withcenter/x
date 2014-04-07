@@ -16,4 +16,8 @@ $(function(){
 		$(this).find('.selected-template').addClass('selected');
 		$('.view-template').hide();
 	});
+	
+	$(".cancel_template").click(function(){
+		$("form#fwrite").trigger('reset');
+	});
 });

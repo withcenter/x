@@ -144,7 +144,7 @@
 		</div>
 		<div class="btn_confirm">
 			<input type="image" value="신청하기" id="btn_submit" accesskey="s" src="<?=x::theme_url('img/submit_template.png')?>">
-			<a href="javascript: void(0)"></a>
+			<a href="javascript: void(0)" class='cancel_template'><img src="<?=x::theme_url('img/cancel_template.png')?>"/></a>
 		</div>
 		<div style="clear: both"></div>
 	</div>
