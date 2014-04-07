@@ -94,8 +94,8 @@
 			<? } ?>
 		</ul>
 		<?php
-			include widget( array( 'code' => 'side-post-latest', 'name' => 'post-latest' ) );
-			include widget( array( 'code' => 'side-post-comment-latest', 'name' => 'post-comment-latest' ) );
+			include widget( array( 'code' => 'side-post-latest-3', 'name' => 'post-latest' ) );
+			include widget( array( 'code' => 'side-post-comment-latest-3', 'name' => 'post-comment-latest' ) );
 			for( $_count_widget = 1; $_count_widget <= 5; $_count_widget ++ ) {
 				include widget( array( 'code' => "side-sample-$_count_widget", 'name' => 'none' ) );
 			}

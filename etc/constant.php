@@ -1,6 +1,7 @@
 <?php
 define('X_DIR_ETC', G5_PATH . '/x/etc');
 define('X_DIR_THEME', G5_PATH . '/x/theme');
+define('X_DIR_WIDGET', G5_PATH . '/x/widget');
 define('MAX_BLOG_WRITER', 3);
 define( 'FORUM_NOT_EXIST', -40010 );
 define('MS_EXIST', -9200);

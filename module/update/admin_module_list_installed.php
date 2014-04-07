@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="<?=module("$module.css")?>">
 <?include 'menu.php'?>
 <div class='installed'>
-	<div class='title'><?=ln("Widget Theme List", "설치된 테마 목록")?></div>
+	<div class='title'><?=ln("Widget Module List", "설치된 모듈 목록")?></div>
 <?php
 $dirs = file::getDirs(X_DIR_THEME);
 foreach ( $dirs as $dir ){
