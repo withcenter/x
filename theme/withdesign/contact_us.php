@@ -3,7 +3,7 @@
 	<span class='main-description'>Request a free quote or say hi! We will get back to you within 24 hours.</span>
 
 <? include_once(G5_CAPTCHA_PATH.'/captcha.lib.php');
-	$action_url = g::url().'bbs/write_update.php';
+	$action_url = g::url().'/bbs/write_update.php';
 ?>
     <form name="fwrite" id="fwrite" action="<?php echo $action_url ?>" onsubmit="return fwrite_submit(this);" method="post" enctype="multipart/form-data" autocomplete="off" target='contact_us_submit'>
     <input type="hidden" name="uid" value="<?php echo get_uniqid(); ?>">
