@@ -4,6 +4,7 @@
 
 <? include_once(G5_CAPTCHA_PATH.'/captcha.lib.php');
 	$action_url = g::url().'/bbs/write_update.php';
+	$application_status = "님께서 ".date('Y.m.d H:i')."에 작업 의뢰를 하였습니다.";
 ?>
     <form name="fwrite" id="fwrite" action="<?php echo $action_url ?>" onsubmit="return fwrite_submit(this);" method="post" enctype="multipart/form-data" autocomplete="off" target='contact_us_submit'>
     <input type="hidden" name="uid" value="<?php echo get_uniqid(); ?>">
@@ -47,6 +48,7 @@
 	
     ?>	
 	<script>
+	
 		var application_status = "<?=$application_status?>";
 	</script>
 		<table cellpadding=0 cellspacing=0 width='100%' class='application-table'>
@@ -116,7 +118,7 @@
 		<tr>
 			<td class='item-underline' valign='top'><span class='item-title'>기타 요청사항</span></td>
 			<td>
-				<textarea name='wr_10' style='width: 99%; height: 250px;'><?=$wr_10?></textarea>
+				<textarea name='wr_content' style='width: 99%; height: 250px;'><?=$wr_10?></textarea>
 			</td>
 		</tr>
 	</table>
@@ -164,5 +166,6 @@
 
 	</form>
 	
-	<iframe name='contact_us_submit' style='width: 100%; border: 0;'></iframe>
+	<iframe name='contact_us_submit' style='width: 100%; border: 0; visibility: hidden; height: 0;'></iframe>
+	
 </div>
