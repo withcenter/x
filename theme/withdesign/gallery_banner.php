@@ -84,15 +84,15 @@
 			<div class='gallery_item' banner_num = '<?=$i?>'>
 				<div class='inner banner_<?=$i?>'>
 					<div class='content'>						
-						<img src='<?=$url?>'/>
-						<div class='info'>
+						<img class = 'gallery_image' banner_num = '<?=$i?>' src='<?=$url?>'/>
+						<div class='info' banner_num='<?=$i?>'>
 							<div class='title'><?=$name?></div>
 							<div class='description'>
 								This is Description This is Description This is Description This is Description This is Description.
 							</div>
 						</div>
-						<div class='button button1'>Visit</div>
-						<div class='button button2'>View Detail</div>
+						<div class='button button1' banner_num = '<?=$i?>'>Visit</div>
+						<div class='button button2' banner_num = '<?=$i?>'>View Detail</div>
 					</div>
 				</div>
 			</div>

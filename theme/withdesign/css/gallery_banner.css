@@ -23,13 +23,13 @@
 }				
 
 .gallery_container .inner_wrapper{			
-	position:relative;		
+	position:relative;
 	white-space:nowrap;		
 }
 
 .gallery_container .info{
 	position:absolute;
-	right:0;
+	right:-100%;
 	top:12%;
 	width:46.4%;
 	color:white;			
@@ -72,6 +72,11 @@
 	z-index:1;
 	max-height:300px;
 	max-width:400px;
+	position:relative;	
+}
+
+.gallery_container .gallery_item .inner .gallery_image{			
+	left:-100%;
 }
 
 .gallery_container .gallery_item .inner.service{
@@ -155,12 +160,13 @@
 
 .gallery_container .gallery_item .inner .button1{			
 	position:absolute;					
-	right:26.1%;								
+	right:26.1%;
+	bottom:-20%;
 }
 
 .gallery_container .gallery_item .inner .button2{			
 	position:absolute;				
-	right:3.5%;						
+	left:-76%;					
 }
 
 .gallery_container .command{
