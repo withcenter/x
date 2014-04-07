@@ -114,7 +114,7 @@ function widget_config_extra_begin()
 {
 	global $widget_config;
 	
-	if ( $widget_config['widget-extra-display'] == 'OPEN' ) {
+	if ( empty($widget_config['widget-extra-display']) || $widget_config['widget-extra-display'] == 'OPEN' ) {
 		$display = 'none';
 		$text = "OPEN";
 	}

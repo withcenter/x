@@ -71,6 +71,18 @@ copy_source( 'x/theme/blog' );
 copy_source( 'x/theme/community_3' );
 copy_source( 'x/theme/mobile-community-1' );
 
+
+
+// 위젯 선택: 필요한 위젯을 여기에 추가하면 된다.
+copy_source( 'x/widget/html_banner' );
+copy_source( 'x/widget/none' );
+copy_source( 'x/widget/post-comment-latest' );
+copy_source( 'x/widget/post-latest' );
+
+
+
+
+
 // 스킨 선택: 필요한 스킨을 여기에 추가하면 된다.
 copy_source( 'x/skin/board/multi' );
 copy_source( 'x/skin/latest/basic' );

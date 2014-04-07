@@ -1,4 +1,5 @@
 <?php
+	$in  = array_merge ( $_GET, $_POST );
 	if ( $in['page'] ) include x::theme( $in['page'] );
 	else {?>
 	
