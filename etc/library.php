@@ -60,7 +60,7 @@ function widget_javascript( $name=null )
  */
 function load_widget_config($code, $name=null)
 {
-	global $widget_config;
+	global $widget_config, $in;
 	$cfg = string::unscalar(meta_get("widget_config.$code"));
 	if ( ! empty($cfg) ) {
 		foreach ( $cfg as $k => $v ) {
@@ -75,8 +75,12 @@ function load_widget_config($code, $name=null)
 	$widget_config['xml'] = load_xml( x::dir() . "/widget/$widget_config[name]/config.xml" );
 	
 	
-	if ( ! empty($widget_config['html']) ) $widget_config['html'] = str_replace(".this", "[code='$code']", $widget_config['html']);
-	if ( ! empty($widget_config['css']) ) $widget_config['css'] = str_replace(".this", "[code='$code']", $widget_config['css']);	
+	if ( $in['module'] == 'widget' && $in['action'] == 'update' ) {
+	}
+	else {
+		if ( ! empty($widget_config['html']) ) $widget_config['html'] = str_replace(".this", "[code='$code']", $widget_config['html']);
+		if ( ! empty($widget_config['css']) ) $widget_config['css'] = str_replace(".this", "[code='$code']", $widget_config['css']);
+	}
 }
 
 $widget_config_form = array();
