@@ -1,10 +1,13 @@
-.post-latest {
+.post-comment-latest {
 	margin-bottom: 1em;
 	padding: 1em;
 	border: 1px solid #dfdfdf;
 }
-
-.post-latest .post a {
+.post-comment-latest > .title {
+	background-color: blue;
+	color: white;
+}
+.post-comment-latest .post a {
 	display:inline-block;
 	padding: 0.2em;
 }

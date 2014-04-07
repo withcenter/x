@@ -71,11 +71,11 @@
 
 
 /** widget update */
-.widget {
+.widget-admin {
 	position: relative;
 }
 
-.widget > .admin {
+.widget-admin > .button {
 	position:absolute;
 	right: 0px;
 	padding: 0.4em 0.8em;

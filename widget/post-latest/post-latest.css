@@ -1,7 +1,15 @@
 .post-latest {
 	margin-bottom: 1em;
-	padding: 1em;
 	border: 1px solid #dfdfdf;
+}
+
+.post-latest > .title {
+	padding: 1em;
+	background-color: #dfdfdf;
+}
+
+.post-latest .post {
+	padding: 1em;
 }
 
 .post-latest .post a {

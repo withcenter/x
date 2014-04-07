@@ -1,4 +1,6 @@
 <?php
+add_stylesheet("<link rel='stylesheet' type='text/css' href='".x::url_theme()."/css/multitab.middle.latest.css' />", 0);
+
 include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 $mmposts = array();
 for ( $i=6; $i < 9; $i++ ) {
@@ -10,8 +12,11 @@ for ( $i=6; $i < 9; $i++ ) {
 	);
 	$mmposts[] = g::posts($option);
 }
+echo "<div class='multitab-middle-latest'>";
 for ( $l=0; $l< 3; $l++ ) {
-echo "<div class='tab-bottom'>";
+echo "<table class='tab-bottom' cellpsdding=0 cellspacing=0 width='100%' border=1>
+		<tr class='row'>";
+	$m = 0;
 	foreach ( $mmposts[$l] as $p ) {
 		$imgsrc = get_list_thumbnail($p['bo_table'], $p['wr_id'], 105, 69);
 		if ( $imgsrc['src'] ) {
@@ -20,12 +25,16 @@ echo "<div class='tab-bottom'>";
 		$img = "<img class='img_left' src='$image_from_tag'/>";
 		} else $img = "<img src='".x::url_theme()."/img/no_image.png'";
 		
-		echo "1
-				<div class='photo'>
-					$img
-				</div>
-		";
+		$url = G5_BBS_URL . '/board.php?bo_table='.$p['bo_table'].'&wr_id='.$p['wr_id'];
+		
+		echo "<td width='20%'><div class='photo'><a href='$url'>$img</a></div></td>";
+		$m++;
 	}
-	echo "<div style='clear:left;'></div>";
-	echo "</div>";
+		for ( $i=0; $i < (5 - $m ); $i++ ) {
+			echo "<td width='20%'><img src='".x::url_theme()."/img/no_image.png' /></td>";
+		}
+	echo "</tr>
+		</table>
+	";
 }
+echo "</div>";

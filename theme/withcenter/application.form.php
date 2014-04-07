@@ -31,7 +31,8 @@
 		
 		<div class='pannel-bottom'>	
 			<img class='reset-icon' src='<?=x::url_theme()?>/img/reset.gif' title='보안문자 새로고침'/>
-			<input type='image' src='<?=x::url_theme()?>/img/submit.gif' title='글쓰기'/>
+			<?/*<input type='image' src='<?=x::url_theme()?>/img/submit.gif' title='글쓰기'/> */?>
+			<input type='submit' class='application-write-button' value='제출' />
 			<img class='reset2-icon' src='<?=x::url_theme()?>/img/reset2.gif' title='취소'/>
 			<img class='dropdown-icon' src='<?=x::url_theme()?>/img/dropdown.gif' title='더보기'/>
 		</div>

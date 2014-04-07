@@ -23,12 +23,43 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 						foreach( $menu_list as $menu){?>
 							<li><a class='<?=$menu['url']?>' href='<?=G5_BBS_URL."/board.php?bo_table=".$menu['url']?>'><?=$menu['name']?></a></li>
 						<?}?>
-					</ul>
+					</ul>				
+				<div class='triangle-border'></div><div class='triangle'></div>
+				<div class='top-menu'>				
+				<?
+				if( super_admin() ){
+					$admin_margin = 'super_admin_margin';
+				}
+				?>
+					<ul class='top-menu-ul <?=$admin_margin?>'>
 					
-				<div class='top-menu'>
-					<ul class='top-menu-ul'>
-						<?="<li class='first-menu'>" . implode( "</li><li>", x::menu_links('top') ) . "</li>"?>
-					</ul>
+						<? 
+						$first_menu = "class='no-bg'";
+						if ( login() ) { 
+							$site_admin = "class='no-bg'";							
+							if ( super_admin() ) {  
+								$no_background_mobile = 'no-bg';
+								$site_admin	= null;
+								$first_menu = null;
+						?>
+								<li class='no-bg'><a href="<?=x::url_admin()?>">X ADMIN</a></li>
+								<li><a href="<?php echo G5_ADMIN_URL ?>">ADMIN</a></li>
+							<?}
+							if ( admin() ) {
+								$first_menu = null;
+							?>
+								<li <?=$site_admin?>><a href='<?=url_site_config()?>'>사이트 관리</a></li>
+							<?}?>
+							<li <?=$first_menu?>><a href='<?=G5_BBS_URL?>/logout.php'>로그아웃</a></li>
+							<li><a href='<?=G5_BBS_URL?>/member_confirm.php?url=register_form.php'>회원정보수정</a></li>
+						<? } else { ?>
+							<li <?=$first_menu?>><a href='<?=G5_BBS_URL?>/login.php'>로그인</a></li>
+							<li><a href='<?=G5_BBS_URL?>/register.php'>회원가입</a></li>
+						<? } ?>
+
+						<li><a href='<?=url_language_setting()?>'>언어변경</a></li>
+						<li class='last_item <?=$no_background_mobile?>'><a href='<?=g::url()?>?device=mobile'>모바일</a></li>				
+					</ul>								
 				</div>
 				<div class='top-search'>
 					<a href="javascript: void(0)" class='menu-dropdown-button'></a>
@@ -84,7 +115,16 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			}
 		?>
 		<div class='bottom_item'>
-			<div class='text'>I don't know what to put here...</div>
+			<div class='text'>
+				<?
+				$menu_top_list = x::menu_links('top');
+				$count = 0;
+				foreach($menu_top_list as $menu_item){				
+				$count++;
+				?>
+				<?=$menu_item?><?if( $count < count($menu_top_list) ){?><span class='separator'>•</span><?}?>
+				<?}?>
+			</div>
 		</div>
 	</div><!--categ_outer-->
 	<div class='search-container'>
@@ -95,7 +135,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 					<input type='hidden' name='action' value='search' />
 					<input type='hidden' name='search_subject' value=1 />
 					<input type='hidden' name='search_content' value=1 />
-					<span><input class='key' type='text' name='key' placeholder='input search'><input type="image" src='<?=x::url_theme()?>/img/search_icon.gif' class='submit'/></span>
+					<span><input class='key' type='text' name='key' placeholder='검색어를 입력하세요...'><input type="image" src='<?=x::url_theme()?>/img/search_icon.gif' class='submit'/></span>
 				</div>
 			</form>
 			<img src="<?=x::theme_url('img/close_search.gif')?>" class='close-search'/>
@@ -113,7 +153,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			<div class='hidden-menu'>
 				<ul class='hidden-mobile-menu'>
 						<?foreach( $menu_list as $menu){?>
-							<li><a page = '<?=$menu['url']?>' href='javascript:void(0)'><?=$menu['name']?></a></li>
+							<li><a page = '<?=$menu['url']?>' href='<?=G5_BBS_URL."/board.php?bo_table=".$menu['url']?>'><?=$menu['name']?></a></li>
 						<?}?>
 				</ul>
 			</div>
@@ -121,10 +161,31 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 					<?				
 					if( x::menu_links('top')[0] ){?>
 					<ul class='hidden-top-menu'>
-						<li class='first-menu'><?=implode( "</li><img src='".x::url_theme()."/img/blue_arrow.gif'><li>", 
-						x::menu_links('top') )?>
-						<img src='<?=x::url_theme()?>/img/blue_arrow.gif'>
-						</li>
+						<? 
+						$first_menu = "class='no-bg'";
+						if ( login() ) { 
+							$site_admin = "class='no-bg'";							
+							if ( super_admin() ) {  
+								$no_background_mobile = 'no-bg';
+								$site_admin	= null;
+								$first_menu = null;
+						?>
+								<li class='no-bg'><a href="<?=x::url_admin()?>">X ADMIN</a><img src='<?=x::url_theme()?>/img/blue_arrow.gif'></li>
+								<li><a href="<?php echo G5_ADMIN_URL ?>">ADMIN</a><img src='<?=x::url_theme()?>/img/blue_arrow.gif'></li>
+							<?}
+							if ( admin() ) {
+								$first_menu = null;
+							?>
+								<li <?=$site_admin?>><a href='<?=url_site_config()?>'>사이트 관리</a><img src='<?=x::url_theme()?>/img/blue_arrow.gif'></li>
+							<?}?>
+							<li <?=$first_menu?>><a href='<?=G5_BBS_URL?>/logout.php'>로그아웃</a><img src='<?=x::url_theme()?>/img/blue_arrow.gif'></li>
+							<li><a href='<?=G5_BBS_URL?>/member_confirm.php?url=register_form.php'>회원정보수정</a><img src='<?=x::url_theme()?>/img/blue_arrow.gif'></li>
+						<? } else { ?>
+							<li <?=$first_menu?>><a href='<?=G5_BBS_URL?>/login.php'>로그인</a><img src='<?=x::url_theme()?>/img/blue_arrow.gif'></li>
+							<li><a href='<?=G5_BBS_URL?>/register.php'>회원가입</a><img src='<?=x::url_theme()?>/img/blue_arrow.gif'></li>
+						<? } ?>
+						<li><a href='<?=url_language_setting()?>'>언어변경</a><img src='<?=x::url_theme()?>/img/blue_arrow.gif'></li>
+						<li class='last_item <?=$no_background_mobile?>'><a href='<?=g::url()?>?device=mobile'>모바일</a><img src='<?=x::url_theme()?>/img/blue_arrow.gif'></li>							
 					</ul>		
 					<?}?>
 			</div>
@@ -177,13 +238,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		background: url('<?=x::theme_url('img/main_menu_hover.png')?>') 100% no-repeat;
 	}
 	.top-menu-ul li, .footer-menu-ul li {
-		background: url('<?=x::theme_url('img/menu-divider.gif')?>') no-repeat 0 3px;
+		background: url('<?=x::theme_url('img/menu-divider.gif')?>') no-repeat 0 6px;
 	}
-	@media only screen and (max-width: 1024px) and (min-width: 768px) {
-		.header .top-menu {
-			background: url('<?=x::theme_url('img/menu_dropdown.png')?>') no-repeat right 0;
-		}
-	}
+	
 	@media only screen and (max-width: 767px) {
 		.header .top-search-button {
 			background: url('<?=x::theme_url('img/mobile_search.gif')?>');
@@ -194,19 +251,20 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	else if ( $bo_table && empty($wr_id) ) $selected_menu = "bo_table=".$bo_table;
 	else $selected_menu = null;
 	?>
-	.hidden-mobile-menu a[href*="<?=$selected_menu?>"] {
-		color: #293848;
-		font-size: 16px;
-		border-bottom: 4px solid #0091dc;
-		font-weight: 800;
-	}
-
 </style>
 
 <?if ( preg_match('/msie 7/i', $_SERVER['HTTP_USER_AGENT'] ) ) {?>
 <style>		
 	.categ_wrapper .categ_list{	
 		padding-bottom:15px;
+	}
+	
+	.categ_outer .bottom_item .text .separator{
+		margin-bottom:5px;		
+	}
+	
+	.header .top-menu-ul li {
+		display:inline;
 	}
 </style>
 <?}?>

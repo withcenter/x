@@ -250,6 +250,11 @@ function url_language_setting()
 	return x::url() . '/?module=member&action=setting';
 }
 
+function url_login()
+{
+	return g::url() . '/bbs/bbs/login.php';
+}
+
 
 function login_page() {
 	return strpos($_SERVER['PHP_SELF'], 'login.php') !== false;
@@ -323,17 +328,6 @@ function page( $page )
 	return x::url() . "?page=$page";
 }
 
-
-function load_config( $path )
-{
-	return etc::load_and_parse_xml_into_assoc( $path );
-}
-
-
-function load_xml( $path )
-{
-	return etc::load_and_parse_xml_into_assoc( $path );
-}
 
 
 function config( $code, $value=null )

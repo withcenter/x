@@ -29,17 +29,19 @@ $(function(){
 	});
 	
 	
-	$('.widget').mouseenter(function(){
-		$(this).prepend("<div class='admin'>Admin</div>");
+	$('.widget-admin').mouseenter(function(){
+		$(this).prepend("<div class='button'>Admin</div>");
 	});
-	$('.widget').mouseleave(function(){
-		$(this).children(".admin").remove();
+	$('.widget-admin').mouseleave(function(){
+		$(this).children(".button").remove();
 	});
-	$('body').on('click', '.widget > .admin',function() {
+	$('body').on('click', '.widget-admin > .button',function() {
 		var code = $(this).parent().attr('code');
-		var url = x_url + '?module=widget&action=update&theme=n&code=' + code;
-		layer_popup( url, 1, '680', '520');
+		var name = $(this).parent().attr('name');
+		var url = x_url + '?module=widget&action=update&theme=n&code=' + code +"&name=" + name;
+		layer_popup( url, 1, '680', '300');
 	});
+	
 	
 });
 /* EO skin update */
@@ -49,14 +51,17 @@ $(function(){
 	*/
 function ajax_load(href, callback)
 {
+	//trace("ajax_load: begin");
 	$.ajax({
 			url: href,
 			success: function(re) {
+				//trace("ajax_load: success");
 				if (callback && typeof(callback) === "function") {
 					callback(re);
 				}
 			},
 			error: function(xhr) {
+				//trace("ajax_load: error");
 				////alert('Error! Status = ' + xhr.status + "\r\n\r\nPlease notify this to your manager immediately.");
 			}
 		});
@@ -120,6 +125,14 @@ function ajax_cross_domain_call( option )
 	$.ajax( option );
 }
 
+window.addEventListener('message', message_receiver, false);
+function message_receiver( e )
+{
+	if ( e.data.code == 'popup_layer_resize' ) {
+		$('.layer_popup').css('height', e.data.height + 'px' );
+		trace("popup_layer_resize: " + e.data.height + 'px');
+	}
+}
 
 
 

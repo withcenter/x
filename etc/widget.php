@@ -1,17 +1,13 @@
 <?php
 /**
  *
- *  @note $wc is available in all the widget.
- *		It has code, name and configuration.
- *
  */
-	$wc = &$widget_config;
-	x::hook("widget_begin: code=$wc[code], name=$wc[name]");
+	load_widget_config( $widget_config['code'] );
+	x::hook("widget_begin: code=$widget_config[code], name=$widget_config[name]");
 ?>
-<div class="widget" code="<?=$wc['code']?>">
+<div class="widget-admin" code="<?=$widget_config['code']?>" name="<?=$widget_config['name']?>">
 	<?php
-		include x::dir() . "/widget/$wc[name]/config.php";
-		include x::dir() . "/widget/$wc[name]/$wc[name].php";
+		include x::dir() . "/widget/$widget_config[name]/$widget_config[name].php";
 	?>
 </div>
 <?php x::hook("widget_end"); ?>

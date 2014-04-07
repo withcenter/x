@@ -1,9 +1,26 @@
 var banner_count = 0;
 var curr_banner = 1;
 $(function(){
-
-	$(".header .top-search .menu-dropdown-button").click(function(){
+	$(window).resize(function(){		
+		if( $(window).width() > 1007 ){
+			if( !$(".header .top-menu").hasClass('has_1007_width') ){
+				$(".header .top-menu").show();
+			}
+			$(".header .top-menu").addClass('has_1007_width');
+		}else{
+			if( $(".header .top-menu").hasClass('has_1007_width') ){
+				$(".header .triangle-border").hide();
+				$(".header .triangle").hide();
+				$(".header .top-menu").hide();
+				$(".header .top-menu").removeClass('has_1007_width');
+			}
+		}
+	});
+	
+	$(".header .top-search .menu-dropdown-button").click(function(){	
 		$(".header .top-menu").toggle();
+		$(".header .triangle-border").toggle();
+		$(".header .triangle").toggle();
 	});
 
 	$(".top-search-button").click(function(){
@@ -67,13 +84,17 @@ if( $(".hidden_categ_wrapper").length ){
 	$(".hidden-mobile-menu li a[page='" + curr_page + "']").addClass('selected');
 	$(".hidden-mobile-navigation .right .hidden_categ_wrapper[page='" + curr_page + "']").show();
 	
-	$(".hidden-mobile-menu li a").click(function(){		
-		var curr_page = $(this).attr("page");
-		if( !$(".hidden-mobile-navigation .right .hidden_categ_wrapper[page='" + curr_page + "']").length ) return;
+	$(".hidden-mobile-menu li a").click(function(e){		
+		if( $(this).hasClass('selected') ) {
+			console.log('a');
+		}else {
+			e.preventDefault();
+		}
+		var curr_page = $(this).attr("page");		
 		$(".hidden-mobile-navigation .right .hidden_categ_wrapper").hide();				
 		$(".hidden-mobile-menu li a").removeClass('selected');
 		$(".hidden-mobile-menu li a[page='" + curr_page + "']").addClass('selected');
-		$(".hidden-mobile-navigation .right .hidden_categ_wrapper[page='" + curr_page + "']").show();
+		$(".hidden-mobile-navigation .right .hidden_categ_wrapper[page='" + curr_page + "']").show();		
 	});
 }
 /**HIDDEN MENU CATEGORY WHEN WIDTH IS 750px and HIDDEN MENU IS OPEN**/
@@ -162,16 +183,17 @@ $(window).resize(function(){
 /***************BANNER_ROTATION******************/
 	var stopped = false;
 	
-	var banner_interval = setInterval(function(){
-	if( banner_count < 1 ) return;
+	var banner_interval = setInterval(function(){	
+		if( banner_count < 1 ) return;
 		do_rotate();
 	},4000);
 	
-	$('.banner-container').mouseenter(function(){		
+	$('.banner-container').mouseenter(function(){	
 		clearInterval(banner_interval);
 	});
 	
 	$('.banner-container').mouseleave(function(){
+		if( banner_count < 1 ) return;
 		clearInterval(banner_interval);
 		if( !stopped ){
 			 banner_interval = setInterval(function(){
