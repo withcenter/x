@@ -1,0 +1,23 @@
+.gallery4-with-image {
+	width: 25%;
+	float: left;
+}
+
+.gallery4-with-image .inner {
+	margin: 2%;
+	background: #ffffff;
+}
+
+.gallery4-with-image .inner img {
+	width: 100%;
+}
+
+.gallery4-with-image .inner .subject {
+	padding: 10px 20px;
+	font-weight: bold;
+	text-align: left;
+}
+
+.gallery4-with-image .inner .content {
+	padding: 10px 20px;
+}
