@@ -10,10 +10,11 @@
 	$var = implode('&', $qs);
 	
 	$cwd = getcwd();
-        $host = $_SERVER['HTTP_HOST'];
-        $dir = "$cwd";
+    $host = $_SERVER['HTTP_HOST'];
+	$dir = "$cwd";
 
-        $var = $var . "&dir=".urlencode($dir)."&host=".urlencode($host);
+	$var = "type=$type&dir=".urlencode($dir)."&host=".urlencode($host) . "&" . $var;
+		
 ?>
 <script>
 
@@ -28,6 +29,11 @@ ajax_cross_domain_call( {
 //trace( url );
 function callback_ajax_load( data )
 {
+
+	if ( typeof data.code != 'undefined' && data.code != 0 ) {
+		alert( data.message );
+		return;
+	}
 
 	$('.loader').slideUp('fast');
 	
