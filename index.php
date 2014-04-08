@@ -6,15 +6,19 @@
 	define('_INDEX_', true);
 	include_once('../common.php');			/// @important : x/begin.php will be loaded by this script.
 												/// 
-	include_once(G5_PATH.'/head.php');
-	
-	
 	/// https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.bqguddm7sk01
 	if ( $in['theme'] == 'n' || preg_match("/_submit$/", $action) ) {
 		include x::dir() . '/etc/load_module.php';
 		include 'end.php';
 		exit;
 	}
+
+
+
+
+	include_once(G5_PATH.'/head.php');
+	
+	
 	
 	
 	/** @short Display menu on admin page */
