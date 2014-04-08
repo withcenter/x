@@ -46,11 +46,7 @@ function callback_ajax_call( re )
 			"테마를 삭제 중입니다. 기다려 주십시오.")?>
 	</div>
 	<div class='result success'>
-		<?=ln("Finished. The theme was un-installed succfully.",
-			"완료. 테마가 성공적으로 삭제되었습니다.")?>
-	</div>
-	<div class='result success'>
-		<?=ln("Finished. The theme was un-installed succfully.",
+		<?=ln("Finished. The theme was un-installed successfully.",
 			"완료. 테마가 성공적으로 삭제되었습니다.")?>
 	</div>
 </div>
