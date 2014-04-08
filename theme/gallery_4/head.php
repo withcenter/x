@@ -51,14 +51,15 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			<div class='main-menu'>
 				<div class='inner'>
 					<? 
-						$main_menu = x::menu_links();
+						$main_menu = x::menus();
 						$i = 1;
+		
 					?>
 					<ul>
 						<? foreach ( $main_menu as $menu ) { ?>
 							<li>
-								<img src="<?=x::theme_url('img/menu_'.$i++.'.png')?>"/>
-								<?=$menu?>
+								<a href="/bbs/board.php?bo_table=<?=$menu['url']?>"><img src="<?=x::theme_url('img/menu_'.$i++.'.png')?>"/></a>
+								<a href="/bbs/board.php?bo_table=<?=$menu['url']?>"><?=$menu['name']?></a>
 							</li>
 						<? } ?>
 					</ul>
