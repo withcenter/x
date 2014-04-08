@@ -1,7 +1,7 @@
 <?php
 include 'etc/library.php';
 include_once 'etc/class.php';
-if ( 1 || etc::test_server() ) debug::mode(1);											$dt = date("H:i:s"); dlog("x begins at $dt\t[module=$module][action=$action]\t : $_SERVER[PHP_SELF]?$_SERVER[QUERY_STRING]\t{{");
+if ( 0 || etc::test_server() ) debug::mode(1);											$dt = date("H:i:s"); dlog("x begins at $dt\t[module=$module][action=$action]\t : $_SERVER[PHP_SELF]?$_SERVER[QUERY_STRING]\t{{");
 
 
 include_once 'etc/firewall.php';
@@ -30,15 +30,6 @@ if ( etc::web() ) x::hook('begin');
 x::hook('before_theme_init');
 if ( file_exists(x::theme('init')) ) include_once x::theme('init');	
 x::hook('after_theme_init');
-
-/// https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.bqguddm7sk01
-if ( $in['theme'] == 'y' ) {
-}
-else if ( $in['theme'] == 'n' || preg_match("/_submit$/", $action) ) {
-	include "module/$module/$action.php";
-	include 'end.php';
-	exit;
-}
 
 
 

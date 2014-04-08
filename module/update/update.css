@@ -33,3 +33,15 @@
 .result.success {
 	display: none;
 }
+
+.list .item {
+	float: left;
+	width: 33%;
+}
+.list .item .inner {
+	padding: 1em;
+}
+.list .item img {
+	width: 100%;
+}
+
