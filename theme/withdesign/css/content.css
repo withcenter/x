@@ -877,6 +877,10 @@
 }
 
 @media (max-width: 640px) {
+	.contact-us .template_contactus {
+		height: 175px !important;
+	}
+	
 	.workflow-container {
 		padding: 40px 1% !important;
 	}
