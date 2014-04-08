@@ -25,19 +25,19 @@ $(function(){
 	});
 	
 	$(".menu_portfolio").click(function() {
-		$('html, body').animate({scrollTop:$('#portfolio').position().top-98}, 'slow');
+		$('html, body').animate({scrollTop:$('#portfolio').position().top-87}, 'slow');
 	});
 	
 	$(".menu_services").click(function() {
-		$('html, body').animate({scrollTop:$('#services').position().top-98}, 'slow');
+		$('html, body').animate({scrollTop:$('#services').position().top-87}, 'slow');
 	});
 
 	$(".menu_contact_us").click(function() {
-		$('html, body').animate({scrollTop:$('#contact-us').position().top-98}, 'slow');
+		$('html, body').animate({scrollTop:$('#contact-us').position().top-87}, 'slow');
 	});
 
 	$(".menu_support").click(function() {
-		$('html, body').animate({scrollTop:$('#support').position().top-98}, 'slow');
+		$('html, body').animate({scrollTop:$('#support').position().top-87}, 'slow');
 	});	
 	
 });
