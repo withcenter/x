@@ -1,0 +1,89 @@
+/* HEAD */
+
+
+/* TOP */
+.layout .top-wrapper {
+	background-color: #fd7f45;
+	border-top: solid 1px #aaaaab;
+}
+
+.layout .top {
+	max-width: 1120px;
+}
+
+.layout .top, .layout .top a {
+	color: #ffffff;
+}
+
+.layout .top ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: right;
+}
+
+.layout .top ul li {
+	float: left;
+}
+
+.layout .top ul li a {
+	display: inline-block;
+	padding: 8px 20px;
+	color: #fffbfb;
+	text-decoration: none;
+	font-size: 11px;
+}
+
+.layout .top ul li.last_item a {
+	padding-right: 0;
+}
+
+/* Header */
+.layout .header-wrapper {
+	padding: 20px 0;
+	-moz-box-shadow: 0 1px 10px -2px #cecece;
+    -webkit-box-shadow: 0 1px 10px -2px #cecece;
+    box-shadow: 0 1px 10px -2px #cecece;
+	border-bottom: solid 1px #cecece;
+	margin-bottom: 10px;
+}
+
+.layout .header-wrapper .header {
+	max-width: 970px;
+	margin: 0 auto;
+}
+
+/* Header - Logo */
+.header .logo {
+	width: 20%;
+	float: left;
+}
+
+.header .logo img {
+	width: 75%;
+}
+
+
+/* Header - Main Menu */
+.header .main-menu {
+	float: left;
+	width: 60%;
+}
+
+.header .main-menu ul {
+	list-style-type: none;
+}
+
+.header .main-menu ul li {
+	float: left;
+	width: 12.5%;
+	text-align: center;
+}
+
+.header .main-menu ul li img {
+	margin-bottom: 10px;
+}
+
+.main-menu a {
+	display: block;
+}
