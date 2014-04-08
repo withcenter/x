@@ -486,6 +486,7 @@
 	max-width: 970px;
 	margin: 0 auto;
 	padding: 28px 0;
+	word-break: break-all;
 }
 
 .support .main-title {
@@ -528,7 +529,7 @@
 	color: #eceae2;
 	height: 24px;
 	overflow: hidden;
-	line-height: 140%;
+	line-height: 130%;
 }
 
 
@@ -548,9 +549,9 @@
 .support .inner ul .list-data {
 	float: left;
 	width: 87%;
-	height: 30px;
+	height: 33px;
 	overflow: hidden;
-	line-height: 15px;
+	line-height: 115%;
 	font-size: 15px;
 }
 
@@ -567,6 +568,13 @@
 .contact-us {
 	position: relative;
 	color: #555555;
+}
+
+.contact-us iframe[name='submit_contact_form'] {
+	width: 100%;
+	border: 0;
+	visibility: hidden;
+	height: 0;
 }
 
 .contact-us .application-title {
@@ -865,5 +873,184 @@
 	}
 	#captcha #captcha_info {
 		margin-right: 40px;
+	}
+}
+
+@media (max-width: 640px) {
+	.workflow-container {
+		padding: 40px 1% !important;
+	}
+	
+	.support-category.category1, .support-category.category2 {
+		width: 50%;
+	}
+	.support-category.category1 .inner {
+		margin-left: 1.5%;
+		margin-right: 0.75%;
+	}
+	.support-category.category2 .inner {
+		margin-left: 0.75%;
+	}
+	
+	.support-category.category3 {
+		clear: left;
+		width: 100%;
+	}
+	
+	.support-category.category3 .inner {
+		margin: 1% 0.75% 0 0.75%;
+	}
+	
+	.template_contactus {
+		width: 49% !important;
+	}
+	
+	.template-preview .template {
+		width: 50%;
+	}
+	
+	.popup-preview .popup-image-wrapper {
+		margin-bottom: 10px;
+	}
+	
+	
+	.information-wrapper .information-image, .information-wrapper .information-details {
+		clear: left;
+		width: 100%;
+	}
+	
+	.information-wrapper .information-image .inner , .information-wrapper .information-details .inner {
+		margin: 0 1%;
+	}
+	
+	.service-packages {
+		padding: 36px 1% 13px 1%;
+	}
+	
+	.popup-preview .inner .inner-details .popup-info {
+		font-size: 15px !important;
+	}
+	
+	.popup-demo, .popup-close {
+		width: 100% !important;
+		clear: left;
+	}
+	
+	.popup-preview .inner .inner-details .popup-title {
+		margin-bottom: 25px;
+	}
+
+	.popup-preview .inner .image-wrapper {
+		margin: 1%;
+	}
+	
+	.popup-demo a, .popup-close span {
+		margin: 1%;
+	}
+	
+	.popup-buttons {
+		margin-top: 25px;
+	}
+	
+}
+
+@media (max-width: 400px) {
+
+	.popup-buttons {
+		margin-top: 10px;
+	}
+
+	.popup-preview .inner .inner-details .popup-title {
+		margin-bottom: 10px;
+	}
+
+	.popup-preview .popup-image-wrapper, .popup-preview .popup-details {
+		width: 100% !important;
+		clear: left;
+	}
+	
+	.popup-preview .popup-info {
+		display: none !important;
+	}
+	
+	.package-details .details {
+		font-size: 15px;
+	}
+	
+	.information-wrapper .information-details .inner {
+		font-size: 15px;
+	}
+	
+	.information-wrapper .information-details .details {
+		margin-bottom: 25px;
+		height: 100%;
+	}
+	
+	
+	.workflow-container .main-description {
+		font-size: 16px !important;
+	}
+
+	.workflow {
+		margin-bottom: 25px;
+	}
+	
+	.workflow .workflow-image, .workflow .workflow-details {
+		width: 100%;
+		clear: left;
+	}
+	
+	.workflow .workflow-content {
+		font-size: 15px;
+	}
+	
+	.workflow .workflow-image .inner , .workflow .workflow-details .inner {
+		margin: 0 1.5%;
+	}
+
+	.workflow .workflow-image, .workflow .workflow-subject {
+		text-align: center;
+	}
+
+	.workflow .workflow-image img {
+		width: 50%;
+	}
+	
+	.support-category {
+		clear: left;
+		width: 100% !important;
+	}
+	
+	.support-category .inner {
+		margin: 1% 0.75% 0 0.75% !important;
+	}
+	
+	.footer-top > div {
+		width: 100% !important;
+		clear: left !important;
+		margin: 1% !important; 
+	}
+	
+	.footer-logo-text .footer-logo {
+		margin-bottom: 1% !important;
+	}
+	
+	.footer-logo-text > div {
+		width: 100% !important;
+		clear: left;
+	}
+	
+	.footer-bottom > div {
+		width: 100% !important;
+		clear: left;
+	}
+	
+	.footer-bottom .footer-policy {
+		margin-top: 10px;
+		clear: left;
+	}
+	
+	.footer-wrapper .footer {
+		padding: 20px 0 !important;
 	}
 }

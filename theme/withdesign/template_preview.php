@@ -9,8 +9,8 @@ foreach ( $dirs as $dir ) {
 	if ( ! file_exists($path) ) continue;
 				
 	$theme_config = load_config ( $path );
-	$name = $theme_config['name'][L];
-	if ( empty($name) ) continue;
+	$theme_name = $theme_config['name'][L];
+	if ( empty($theme_name) ) continue;
 
 	$type = explode(',', $theme_config['type']);
 				
@@ -24,8 +24,8 @@ foreach ( $dirs as $dir ) {
 			<div class='inner'>
 				<img src='<?=$url?>' />
 
-				<div class='template_name' template_name='<?=$name?>'>
-					Template Design: <?=$name?>
+				<div class='template_name' template_name='<?=$theme_name?>'>
+					Template Design: <?=$theme_name?>
 					<a href='<?=$theme_config['demo']?>' target='_blank'></a>
 					<div class='view-details'>VIEW DETAILS</div>
 				</div>
@@ -61,7 +61,7 @@ foreach ( $dirs as $dir ) {
 						Features: blog-style, sidebar, and sign in box
 					</span>
 					<div class='popup-buttons'>
-						<div class='popup-demo'><a href='javascript:void(0)' class='popup-demo-link'>VIEW DEMO</a></div>
+						<div class='popup-demo'><a href='javascript:void(0)' class='popup-demo-link' target='_blank'>VIEW DEMO</a></div>
 						<div class='popup-close'><span>CLOSE</span></div>
 						<div style='clear: left'></div>
 					</div>

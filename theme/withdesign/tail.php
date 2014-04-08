@@ -61,3 +61,16 @@
 			</div>
 		</div><!--footer-->
 	</div><!--footer-wrapper-->
+	
+	
+	
+<?	
+if ( $_SERVER['SCRIPT_NAME'] != '/index.php' ) { ?>
+	<style>
+		.layout .content-wrapper .content {
+			max-width: 970px;
+			margin: 0 auto;
+			padding: 20px 0;
+		}
+	</style>
+<?}?>

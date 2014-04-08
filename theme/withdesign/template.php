@@ -54,7 +54,7 @@
 						Features: blog-style, sidebar, and sign in box
 					</span>
 					<div class='popup-buttons'>
-						<div class='popup-demo'><a href='javascript:void(0)' class='popup-demo-link'>VIEW DEMO</a></div>
+						<div class='popup-demo'><a href='javascript:void(0)' class='popup-demo-link' target="_blank">VIEW DEMO</a></div>
 						<div class='popup-close'><span>CLOSE</span></div>
 						<div style='clear: left'></div>
 					</div>
