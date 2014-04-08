@@ -877,6 +877,10 @@
 }
 
 @media (max-width: 640px) {
+	.workflow-container {
+		padding: 40px 1% !important;
+	}
+	
 	.support-category.category1, .support-category.category2 {
 		width: 50%;
 	}
@@ -925,10 +929,65 @@
 	.popup-demo a, .popup-close span {
 		margin: 1%;
 	}
+	
+	.information-wrapper .information-image, .information-wrapper .information-details {
+		clear: left;
+		width: 100%;
+	}
+	
+	.information-wrapper .information-image .inner , .information-wrapper .information-details .inner {
+		margin: 0 1%;
+	}
+	
+	.service-packages {
+		padding: 36px 1% 13px 1%;
+	}
 }
 
 @media (max-width: 400px) {
+	.package-details .details {
+		font-size: 15px;
+	}
+	
+	.information-wrapper .information-details .inner {
+		font-size: 15px;
+	}
+	
+	.information-wrapper .information-details .details {
+		margin-bottom: 25px;
+		height: 100%;
+	}
+	
+	
+	.workflow-container .main-description {
+		font-size: 16px !important;
+	}
 
+	.workflow {
+		margin-bottom: 25px;
+	}
+	
+	.workflow .workflow-image, .workflow .workflow-details {
+		width: 100%;
+		clear: left;
+	}
+	
+	.workflow .workflow-content {
+		font-size: 15px;
+	}
+	
+	.workflow .workflow-image .inner , .workflow .workflow-details .inner {
+		margin: 0 1.5%;
+	}
+
+	.workflow .workflow-image, .workflow .workflow-subject {
+		text-align: center;
+	}
+
+	.workflow .workflow-image img {
+		width: 50%;
+	}
+	
 	.support-category {
 		clear: left;
 		width: 100% !important;
@@ -936,5 +995,34 @@
 	
 	.support-category .inner {
 		margin: 1% 0.75% 0 0.75% !important;
+	}
+	
+	.footer-top > div {
+		width: 100% !important;
+		clear: left !important;
+		margin: 1% !important; 
+	}
+	
+	.footer-logo-text .footer-logo {
+		margin-bottom: 1% !important;
+	}
+	
+	.footer-logo-text > div {
+		width: 100% !important;
+		clear: left;
+	}
+	
+	.footer-bottom > div {
+		width: 100% !important;
+		clear: left;
+	}
+	
+	.footer-bottom .footer-policy {
+		margin-top: 10px;
+		clear: left;
+	}
+	
+	.footer-wrapper .footer {
+		padding: 20px 0 !important;
 	}
 }
