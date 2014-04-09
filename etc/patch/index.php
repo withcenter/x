@@ -2,17 +2,7 @@
 	$path = $dir_root . '/index.php';
 	$data = file::read($path);
 	
-	$src = "define('_INDEX_', true);";
-	$dst = "
-/* x patch */
-if ( !empty($_GET) || !empty($_POST) ) {
-	$dir_root = '.';
-	include 'x/index.php';
-	exit;
-}
-$src;
-";
-
+	
 	$src = "if (G5_IS_MOBILE) {";
 	$dst = "
 	/** x patch */
