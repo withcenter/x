@@ -3,8 +3,10 @@
  * @file index.php
  * @desc X start script.
  */
+	if ( ! isset($dir_root) ) $dir_root = '..';
+	
 	define('_INDEX_', true);
-	include_once('../common.php');			/// @important : x/begin.php will be loaded by this script.
+	include_once("$dir_root/common.php");			/// @important : x/begin.php will be loaded by this script.
 												/// 
 	/// https://docs.google.com/a/withcenter.com/document/d/1hLnjVW9iXdVtZLZUm3RIWFUim9DFX8XhV5STo6wPkBs/edit#heading=h.bqguddm7sk01
 	if ( $in['theme'] == 'y' ) {
