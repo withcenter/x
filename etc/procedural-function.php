@@ -259,6 +259,15 @@ function url_login()
 function index_page() {
 	return strpos($_SERVER['PHP_SELF'], '/index.php') !== false;
 }
+function g_index_page() {
+	if ( strpos($_SERVER['PHP_SELF'], '/x/index.php') !== false ) return false;
+	return strpos($_SERVER['PHP_SELF'], '/index.php') !== false;
+}
+function x_index_page() {
+	return strpos($_SERVER['PHP_SELF'], '/x/index.php') !== false;
+}
+
+
 function login_page() {
 	return strpos($_SERVER['PHP_SELF'], 'login.php') !== false;
 }
