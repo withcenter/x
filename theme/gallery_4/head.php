@@ -9,6 +9,12 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 <script src="<?=x::theme_url()?>/js/tail.js"></script>
 
 <div class='layout'>
+	<div class='mobile-menu-wrapper' style='z-index:-1'>
+		<div class='mobile-menu'>
+		
+		</div>
+	</div><!--mobile-menu-wrapper-->
+	<div class = 'inner'>
 	<div class='top-wrapper'>
 		<div class='top'>
 			<ul>
@@ -37,7 +43,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	
 	<div class='header-wrapper'>
 		<div class='header'>
-			<div class='mobile-menu'>
+			<div class='mobile-menu-button'>
 				<div class='inner'><img src="<?=x::theme_url('img/mobile_menu.png')?>"/></div>
 			</div>
 			<div class='logo'>

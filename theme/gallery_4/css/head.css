@@ -45,6 +45,7 @@
     -webkit-box-shadow: 0 1px 10px -2px #cecece;
     box-shadow: 0 1px 10px -2px #cecece;
 	border-bottom: solid 1px #cecece;
+	background: #ffffff;
 }
 
 .layout .header-wrapper .header {
@@ -88,18 +89,18 @@
 }
 
 /* Header - Mobile Menu */
-.header .mobile-menu {
+.header .mobile-menu-button {
 	float: left;
 	width: 20%;
 	cursor: pointer;
 	display: none;
 }
 
-.header .mobile-menu .inner {
+.header .mobile-menu-button .inner {
 	padding: 9px 0 0 15px ;
 }
 
-.header .mobile-menu img {
+.header .mobile-menu-button img {
 	width: 34px;
 	height: 35px;
 }
