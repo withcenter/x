@@ -86,3 +86,20 @@
 .main-menu a {
 	display: block;
 }
+
+/* Header - Mobile Menu */
+.header .mobile-menu {
+	float: left;
+	width: 20%;
+	cursor: pointer;
+	display: none;
+}
+
+.header .mobile-menu .inner {
+	padding: 9px 0 0 15px ;
+}
+
+.header .mobile-menu img {
+	width: 34px;
+	height: 35px;
+}

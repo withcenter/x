@@ -37,6 +37,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	
 	<div class='header-wrapper'>
 		<div class='header'>
+			<div class='mobile-menu'>
+				<div class='inner'><img src="<?=x::theme_url('img/mobile_menu.png')?>"/></div>
+			</div>
 			<div class='logo'>
 				<div class='inner'>
 					<a href="<?=g::url()?>"/>

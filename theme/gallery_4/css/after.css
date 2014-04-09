@@ -15,7 +15,34 @@
 	.gallery4-full-image {
 		width: 33%;
 	}
-
+	
+	.top-wrapper .top ul {
+		display: none;
+	}
+	
+	.top-wrapper {
+		height: 7px;
+	}
+	
+	.header .main-menu {
+		display: none;
+	}
+	
+	.header .logo {
+		width: 60%;
+		text-align: center;
+	}
+	.layout .header-wrapper {
+		padding: 10px 0;
+	}
+	.header .logo img {
+		height: 50px;
+		width: 140px;
+	}
+	
+	.header .mobile-menu {
+		display: block;
+	}
 }
 
 @media (max-width: 686px) {
