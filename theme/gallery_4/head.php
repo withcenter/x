@@ -8,13 +8,13 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 <script src="<?=x::theme_url()?>/js/theme.js"></script>
 <script src="<?=x::theme_url()?>/js/tail.js"></script>
 
-<div class='mobile-menu-wrapper'>
-	<div class='mobile-menu'>
-	
-	</div>
-</div><!--mobile-menu-wrapper-->
-
 <div class='layout'>
+	<div class='mobile-menu-wrapper' style='z-index:-1'>
+		<div class='mobile-menu'>
+		
+		</div>
+	</div><!--mobile-menu-wrapper-->
+	<div class = 'inner'>
 	<div class='top-wrapper'>
 		<div class='top'>
 			<ul>
