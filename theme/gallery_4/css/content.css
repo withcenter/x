@@ -6,13 +6,46 @@
 .layout .content-wrapper .content {
 	max-width: 1120px;
 	margin: 0 auto;
-	
 }
 
-.content .post-full-image {
-	padding: 10px 0;
+.post-full-image {
+	display: none;
+}
+
+.post-full-image.selected {
+	display: block;
 }
 
 .content .post-with-image {
 	padding-bottom: 10px;
+	
+}
+.image-menu-wrapper {
+	background: #48474b;
+}
+
+.content .post-full-image-wrapper {
+	
+}
+.content .post-full-image-wrapper ul {
+	list-style-type: none;
+}
+
+.content .post-full-image-wrapper span.image-menu-name {
+	display: inline-block;
+	float: left;
+	width: 14.2857142857%;
+	text-align: center;
+}
+
+.content .post-full-image-wrapper span.image-menu-name .inner {
+	display: block;
+	padding: 10px 0;
+	cursor: pointer;
+	color: #bbbbbb;
+}
+
+.content .post-full-image-wrapper span.image-menu-name .inner.selected {
+	font-weight: bolder;
+	color: #ffffff;
 }

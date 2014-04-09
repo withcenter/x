@@ -5,4 +5,12 @@ $(function(){
 		
 		console.log('clicked');
 	});
+	
+	var image_menu_name;
+	$(".image-menu-name").click(function(){
+		image_menu_name = $(this).attr('menu_name');
+		$(".image-menu-name .inner").removeClass('selected');
+		$(this).find('.inner').addClass('selected');
+		$(".post-full-image."+image_menu_name).addClass('selected').siblings('.post-full-image').removeClass('selected');
+	});
 });
