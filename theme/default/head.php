@@ -103,8 +103,3 @@
     </div>
     <div id="container" class='data'>
 		<?php if ((!$bo_table || $w == 's' ) && !defined("_INDEX_")) { ?><div id="container_title"><?php echo $g5['title'] ?></div><?php } ?>
-
-		
-		
-		
-		
