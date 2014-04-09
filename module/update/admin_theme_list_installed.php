@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="<?=module("$module.css")?>">
 <?include 'menu.php'?>
 <div class='installed'>
 	<div class='title'><?=ln("Widget Theme List", "설치된 테마 목록")?></div>

@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" href="<?=module("$module.css")?>">
 
 <?=ln('Theme', '테마')?> :
 <a href='?module=update&action=admin_list&type=theme'><?=lang("SEARCH", "찾아보기")?></a>
