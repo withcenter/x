@@ -4,14 +4,14 @@
 	width: 100%;
 	position: relative;
 	z-index: 100;
-	-moz-box-shadow: 0 1px 2px 2px #000000;
-    -webkit-box-shadow: 0 1px 2px 2px #000000;
-    box-shadow: 0 1px 2px 2px #000000;
 	overflow:hidden;
 }
 
 .layout > .inner{
 	position:relative;
+	-moz-box-shadow: 0 1px 2px 2px #000000;
+    -webkit-box-shadow: 0 1px 2px 2px #000000;
+    box-shadow: 0 1px 2px 2px #000000;
 }
 
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, time, mark, audio, video {
