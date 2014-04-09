@@ -25,10 +25,10 @@
 		</top>
 		<left>
 			<name>
-				<en>Menu Left</en>
+				<en>Gallery Posts</en>
 				<ko>왼쪽 메뉴</ko>
 			</name>
-			<max>0</max>
+			<max>10</max>
 		</left>
 		<right>
 			<name>

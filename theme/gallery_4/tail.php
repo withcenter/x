@@ -30,3 +30,6 @@
 	</div>
 	
 </div><!--layout-->
+
+
+<link rel="stylesheet" href="<?=x::theme_url('css/after.css')?>">

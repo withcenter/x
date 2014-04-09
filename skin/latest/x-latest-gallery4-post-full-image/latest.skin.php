@@ -7,16 +7,31 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 <? if ( ! $GLOBALS[$latest_skin_url] ++ ) { ?><link rel="stylesheet" href="<?php echo $latest_skin_url ?>/style.css"><?}?>
 
 <style>
-			.latest-posts-container .latest-posts img {
-				border-radius: <?=$radius?>px;
-			}
+	.gallery4-full-image .shadow { background: url("<?=$latest_skin_url?>/img/shadow.png") 0 bottom repeat-x }
+	.gallery4-full-image.post_info { background-color: <?=$options['background-color']?> !important }
 </style>
 
-<div class='gallery_with_image'>
+<div class='gallery_full_image'>
 	
 	<?
 	if ( $list ) {
 	$post_number = 1;
+	?>
+	
+	<div class='gallery4-full-image post_info'>
+		<?
+			$img = "<img src='$latest_skin_url/img/transparent.png'/>";
+			$transparent_background = g::thumbnail_from_image_tag( $img, $bo_table, $options['width'], $options['height'] );
+		?>
+		<img src="<?=$transparent_background?>"/>
+		<div class='inner'>
+			<div class='post_subject'>
+				<?=$bo_subject?>
+			</div>
+		</div>
+	</div>
+	
+	<?
 	foreach ( $list as $post ) {
 		$imgsrc = get_list_thumbnail($bo_table, $post['wr_id'], $options['width'], $options['height']);
 		if ( $imgsrc['src'] ) {
@@ -24,7 +39,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 		} elseif ( $image_from_tag = g::thumbnail_from_image_tag( $post['wr_content'], $bo_table, $options['width'], $options['height'] )) {
 			$img = $image_from_tag;
 		} else $img = g::thumbnail_from_image_tag("<img src='".$latest_skin_url."/img/no-image.png'/>", $bo_table, $options['width'], $options['height']);
-		echo gallery_with_image($img,$post, $bo_subject, $post_number++);
+		echo gallery_full_image($img,$post, $bo_subject, $post_number++);
 	} 
 		echo "<div style='clear: left'></div>";
 	} else {
@@ -35,14 +50,13 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 			";
 	}	
 	?>
-	
-	
-<? function gallery_with_image( $img, $post, $bo_subject, $post_number) { ?>
-	<div class='gallery4-with-image post_<?=$post_number?>'>
+
+<? function gallery_full_image( $img, $post, $bo_subject, $post_number) { ?>
+	<div class='gallery4-full-image post_<?=$post_number?>'>
 				<? if ( $post ) {
 						$url = $post['href'];
 						$subject = cut_str($post['wr_subject'],15,'');
-						$content = cut_str(strip_tags($post['wr_content']), 60,'');
+						$content = cut_str(strip_tags($post['wr_content']), 10,'...');
 				}
 				else {
 					$url = "javascript:void(0);";
@@ -51,13 +65,14 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 				}
 				?>
 		<div class='inner'>
-			<div class='forum-name-wrapper'><div class='forum-name'><?=$bo_subject?></div></div>
 			<div class='post-image'><a href="<?=$url?>" ><img src="<?=$img?>"/></a></div>
 			<div class='subject-wrapper'><div class='subject'><a href="<?=$url?>" ><?=$subject?></a></div></div>
 			<div class='content-wrapper'><div class='content'><a href="<?=$url?>" ><?=$content?></a></div></div>
+			<span class='shadow'></span>
 		</div>
 		<a href='<?=$url?>' class='read_more'></a>
 	</div>
+
 <?}?>
 </div>
 <?if ( preg_match('/msie 7/i', $_SERVER['HTTP_USER_AGENT'] ) ) {?>
@@ -67,3 +82,4 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 	}
 </style>
 <?}?>
+

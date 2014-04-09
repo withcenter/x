@@ -1,10 +1,10 @@
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 ?>
-<link rel="stylesheet" href="<?=x::theme_url()?>/css/head.css">
-<link rel="stylesheet" href="<?=x::theme_url()?>/css/theme.css">
-<link rel="stylesheet" href="<?=x::theme_url()?>/css/content.css">
-<link rel="stylesheet" href="<?=x::theme_url()?>/css/tail.css">
+<link rel="stylesheet" href="<?=x::theme_url('css/head.css')?>">
+<link rel="stylesheet" href="<?=x::theme_url('css/theme.css')?>">
+<link rel="stylesheet" href="<?=x::theme_url('css/content.css')?>">
+<link rel="stylesheet" href="<?=x::theme_url('css/tail.css')?>">
 <script src="<?=x::theme_url()?>/js/theme.js"></script>
 <script src="<?=x::theme_url()?>/js/tail.js"></script>
 
@@ -37,6 +37,9 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	
 	<div class='header-wrapper'>
 		<div class='header'>
+			<div class='mobile-menu'>
+				<div class='inner'><img src="<?=x::theme_url('img/mobile_menu.png')?>"/></div>
+			</div>
 			<div class='logo'>
 				<div class='inner'>
 					<a href="<?=g::url()?>"/>
