@@ -4,7 +4,8 @@
 }
 
 .gallery4-with-image .inner {
-	margin: 2%;
+	margin: 1%;
+	padding-bottom: 20px;
 	background: #ffffff;
 }
 
@@ -12,12 +13,46 @@
 	width: 100%;
 }
 
-.gallery4-with-image .inner .subject {
-	padding: 10px 20px;
-	font-weight: bold;
-	text-align: left;
+.gallery4-with-image .inner .subject-wrapper {
+	padding: 15px 15px 0 15px;
 }
 
-.gallery4-with-image .inner .content {
+.gallery4-with-image .inner .subject {
+	font-weight: bold;
+	text-align: left;
+	height: 15px;
+	line-height: 140%;
+	overflow: hidden;
+}
+
+.gallery4-with-image .subject a {
+	color: #444444;
+}
+
+.gallery4-with-image .inner .forum-name-wrapper {
 	padding: 10px 20px;
+}
+
+.gallery4-with-image .inner .forum-name {
+	font-weight: bold;
+	text-align: left;
+	height: 20px;
+	line-height: 140%;
+	overflow: hidden;
+	font-size: 15px;
+}
+
+.gallery4-with-image .inner .content-wrapper {
+	padding: 15px 15px 0 15px;
+	background: #ffffff;	
+}
+
+.gallery4-with-image .inner .content-wrapper .content {
+	height: 30px;
+	line-height: 140%;
+	overflow: hidden; 	
+}
+
+.gallery4-with-image .content a {
+	color: #444444;
 }

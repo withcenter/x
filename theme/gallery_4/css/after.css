@@ -1,0 +1,37 @@
+/* x-latest-gallery4-post-with-image */
+@media (max-width: 1023px) {
+	.gallery4-with-image.post_4 {
+		display: none;
+	}
+
+	.gallery4-with-image {
+		width: 33%;
+	}
+
+	.gallery4-full-image.post_info {
+		display: none;
+	}
+	
+	.gallery4-full-image {
+		width: 33%;
+	}
+
+}
+
+@media (max-width: 686px) {
+	.gallery4-with-image {
+		width: 50%;
+	}
+
+	.gallery4-with-image.post_4 {
+		display: block;
+	}
+	
+	.gallery4-full-image {
+		width: 50%;
+	}	
+
+	.gallery4-full-image.post_info {
+		display: block;
+	}
+}

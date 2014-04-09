@@ -9,6 +9,10 @@
 	
 }
 
-.content .post-with-image {
+.content .post-full-image {
 	padding: 10px 0;
+}
+
+.content .post-with-image {
+	padding-bottom: 10px;
 }
