@@ -2,6 +2,11 @@
 
 .layout {
 	width: 100%;
+	position: relative;
+	z-index: 100;
+	-moz-box-shadow: 0 1px 10px -2px #d3d3d3;
+    -webkit-box-shadow: 0 1px 10px -2px #d3d3d3;
+    box-shadow: 0 1px 10px -2px #d3d3d3; 
 }
 
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, time, mark, audio, video {
@@ -11,4 +16,14 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 	outline: 0;
 	background: transparent;
 	font-family: Dotum;
+}
+
+.mobile-menu-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #45454a;
+	z-index: 5;
+	height: 100%;
+	width: 100%;
 }
