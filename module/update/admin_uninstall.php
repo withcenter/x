@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="<?=module("$module.css")?>">
 <?include 'menu.php'?>
 <?php
 	$dir = x::dir() . "/theme/$name";

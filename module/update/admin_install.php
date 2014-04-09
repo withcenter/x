@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="<?=module("$module.css")?>">
 <?include 'menu.php'?>
 <?php
 	$a = explode('/', $source_link);

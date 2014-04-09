@@ -8,9 +8,8 @@
 	}
 	
 
-	if ( $type == 'theme' ) {
-		$folder	= x::dir() . '/theme/'. $name;
-	}
+	
+	$folder	= x::dir() . "/$type/$name";
 	
 	
 	file::delete_folder ( $folder );
