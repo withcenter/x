@@ -1,0 +1,32 @@
+.latest_banner{
+	width:100%;	
+}
+
+.latest_banner .image_group{
+	width:25%;
+	float:left;
+}
+
+.latest_banner .image_wrapper{
+	position:relative;
+}
+
+.latest_banner .image_wrapper .caption{
+	position:absolute;
+	left:0;
+	top:0;
+	background-color:black;
+	opacity:.7;
+	height:90%;
+	width:90%;
+	padding:5%;	
+}
+
+.latest_banner .image_wrapper img{	
+	width:100%;
+}
+
+.latest_banner .image_wrapper .caption a{
+	color:white;
+	
+}
