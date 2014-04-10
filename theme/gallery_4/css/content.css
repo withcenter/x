@@ -4,15 +4,116 @@
 }
 
 .layout .content-wrapper .content {
-	max-width: 1120px;
+	max-width: 970px;
 	margin: 0 auto;
-	
 }
 
-.content .post-full-image {
-	padding: 10px 0;
+.post-full-image {
+	display: none;
+}
+
+.post-full-image.selected {
+	display: block;
 }
 
 .content .post-with-image {
 	padding-bottom: 10px;
+	
+}
+.image-menu-wrapper {
+	background: #48474b;
+}
+
+.content .post-full-image-wrapper {
+	padding: 10px 0;
+}
+.content .post-full-image-wrapper ul {
+	list-style-type: none;
+}
+
+.content .post-full-image-wrapper span.image-menu-name {
+	display: inline-block;
+	float: left;
+	width: 14.2857142857%;
+	text-align: center;
+}
+
+.content .post-full-image-wrapper span.image-menu-name .inner {
+	display: block;
+	padding: 10px 0;
+	cursor: pointer;
+	color: #bbbbbb;
+}
+
+.content .post-full-image-wrapper span.image-menu-name .inner.selected {
+	font-weight: bolder;
+	color: #ffffff;
+}
+
+.content .post-with-image-2-wrapper{
+	background: #eaeaea;
+}
+
+.content .post-with-image-2 {
+	display: none;
+}
+
+.content .post-with-image-2.selected {
+	display: block;
+}
+
+.content .post-with-image-more {
+	margin-top: 7px;
+}
+
+.content .post-with-image-2-wrapper .post_6, .content .post-with-image-2-wrapper .post_7, .content .post-with-image-2-wrapper .post_8, .content .post-with-image-2-wrapper .post_9, .content .post-with-image-2-wrapper .post_10 {
+	display: none;
+}
+
+.content .post-with-image-2-wrapper .post_6.selected, .content .post-with-image-2-wrapper .post_7.selected, .content .post-with-image-2-wrapper .post_8.selected, .content .post-with-image-2-wrapper .post_10.selected  {
+	display: block;
+}
+
+.post-with-image-more {
+	text-align: center;
+	background: #d9d9d9;
+	padding: 10px;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.post-with-image-2-wrapper .image2-menu-name {
+	float: left;
+	width: 11.11%;
+	position: relative;
+}
+
+.post-with-image-2-wrapper .image2-menu-name .menu2_name {
+	position: absolute;
+	bottom: 5px;
+	left: 0;
+	text-align: center;
+	width: 100%;
+	color: #ffffff;
+}
+
+.post-with-image-2-wrapper .image2-menu-name .inner.selected {
+	font-weight: bold;
+}
+
+.post-with-image-2-wrapper .image2-menu-name .inner {
+	cursor: pointer;
+}
+
+.post-with-image-2-wrapper .image2-menu-name img {
+	width: 100%;
+}
+
+.post-with-image-2-wrapper .image2-menu-name img.active-background {
+	display: none;
+}
+
+.image2-menu-wrapper {
+	margin-bottom: 7px;
 }

@@ -236,23 +236,35 @@ function url_forum_read( $bo_id, $wr_id )
 
 function url_x_admin()
 {
-	return x::url() . "/?module=admin&action=index";
+	return g::url() . "/?module=admin&action=index";
 }
 function url_site_admin($domain=null, $module='site', $action='config_first_page')
 {
-	if ( empty($domain) ) return x::url() . "/?module=$module&action=$action";
+	if ( empty($domain) ) return g::url() . "/?module=$module&action=$action";
 	else return site_url( $domain ) . "/x/?module=$module&action=$action";
 }
 
 
 function url_language_setting()
 {
-	return x::url() . '/?module=member&action=setting';
+	return g::url() . '/?module=member&action=setting';
 }
 
 function url_login()
 {
 	return g::url() . '/bbs/bbs/login.php';
+}
+
+
+function index_page() {
+	return strpos($_SERVER['PHP_SELF'], '/index.php') !== false;
+}
+function g_index_page() {
+	if ( strpos($_SERVER['PHP_SELF'], '/x/index.php') !== false ) return false;
+	return strpos($_SERVER['PHP_SELF'], '/index.php') !== false;
+}
+function x_index_page() {
+	return strpos($_SERVER['PHP_SELF'], '/x/index.php') !== false;
 }
 
 
@@ -325,7 +337,7 @@ function share( $script )
 
 function page( $page )
 {
-	return x::url() . "?page=$page";
+	return g::url() . "?page=$page";
 }
 
 

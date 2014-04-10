@@ -32,4 +32,16 @@ if ( file_exists(x::theme('init')) ) include_once x::theme('init');
 x::hook('after_theme_init');
 
 
+/**
+ *  https://docs.google.com/a/withcenter.com/document/d/1cqG9sghuNGyrSKsZBaV4dmretcA6tb_WfOD1jlyldLk/edit#heading=h.5aax96akdcoi
+ */
+if ( g_index_page() ) {
+	if ( $in['module'] || $in['action'] || $in['page'] ) {
+		$dir_root = '.';
+		include x::dir() . '/index.php';
+		exit;
+	}
+}
+
+
 

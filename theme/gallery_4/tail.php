@@ -28,7 +28,7 @@
 			<div style='clear: left'></div>
 		</div>
 	</div>
-	
+	</div><!--inner_layout-->
 </div><!--layout-->
 
 

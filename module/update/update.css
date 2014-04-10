@@ -45,3 +45,12 @@
 	width: 100%;
 }
 
+
+
+/* message */
+.message {
+	margin: 1em 0;
+	padding: 1em;
+	background-color: #efefef;
+}
+

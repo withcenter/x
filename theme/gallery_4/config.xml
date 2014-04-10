@@ -32,10 +32,10 @@
 		</left>
 		<right>
 			<name>
-				<en>Menu Right</en>
+				<en>Category Posts</en>
 				<ko>오른쪽 메뉴</ko>
 			</name>
-			<max>0</max>
+			<max>9</max>
 		</right>
 		<bottom>
 			<name>

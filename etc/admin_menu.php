@@ -5,8 +5,8 @@ if ( ! admin() ) {
 	exit;
 }
 ?>
-<link rel="stylesheet" href="module/admin/menu.css">
-<script src="module/admin/menu.js"></script>
+<link rel="stylesheet" href="<?=x::url()?>/module/admin/menu.css">
+<script src="<?=x::url()?>/module/admin/menu.js"></script>
 <div class='admin-menu'>
 <?
 $files = file::getFiles( x::dir() . '/module', true, "/admin_menu\.php/");
