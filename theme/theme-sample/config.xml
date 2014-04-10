@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<config>
+	<type>pc</type>
+	<name>
+		<en>Sample Theme</en>
+		<ko>샘플 테마</ko>
+	</name>
+	<version>0.1</version>
+	<demo></demo>
+	<short>
+		<en>This is a sample theme. Copy this theme to make another.</en>
+		<ko>샘플 테마입니다. 본 테마를 복사해서 새로운 테마를 만드세요.</ko>
+	</short>
+	<detail>
+		<en></en>
+		<ko></ko>
+	</detail>
+	<menu>
+		<top>
+			<name>
+				<en>Menu Top</en>
+				<ko>상단 톱 메뉴</ko>
+			</name>
+			<max>0</max>
+		</top>
+		<left>
+			<name>
+				<en>Menu Left</en>
+				<ko>왼쪽 메뉴</ko>
+			</name>
+			<max>0</max>
+		</left>
+		<right>
+			<name>
+				<en>Menu Right</en>
+				<ko>오른쪽 메뉴</ko>
+			</name>
+			<max>0</max>
+		</right>
+		<bottom>
+			<name>
+				<en>Menu Bottom</en>
+				<ko>하단 메뉴</ko>
+			</name>
+			<max>0</max>
+		</bottom>
+	</menu>
+</config>

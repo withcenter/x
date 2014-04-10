@@ -8,6 +8,11 @@
 	margin: 0 auto;
 }
 
+.layout .content-wrapper .content.banner {
+	width:100%!important;
+	max-width:inherit;
+}
+
 .post-full-image {
 	display: none;
 }

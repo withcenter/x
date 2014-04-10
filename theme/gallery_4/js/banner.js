@@ -19,6 +19,7 @@ $(function(){
 	});
 	
 	$(".banner_arrow").click(function(){
+	if( $(".banner_container .inner2").is(":animated") ) return;
 		if( $(this).hasClass("right") ){
 			if( curr_banner == total_banner ){
 				animation_move = "+=" + ( ( total_banner - 1 ) * 100 ) + "%";

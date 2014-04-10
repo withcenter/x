@@ -11,6 +11,5 @@
 	md::config_update();
 	
  */
-
 x::meta('theme', $theme);
 jsGo('?module='.$module.'&action=config_theme');

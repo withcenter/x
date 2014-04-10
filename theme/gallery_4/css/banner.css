@@ -7,6 +7,7 @@
 .banner_container .banner_arrow{
 	position:absolute;
 	top:40%;
+	cursor:pointer;
 	z-index:2000;
 }
 
@@ -44,8 +45,7 @@
 	width:100%
 }
 	
-.banner_container img.white_bg.enabled{
-	/*opacity:0;*/
+.banner_container img.white_bg.enabled{	
 	display:none;
 }
 

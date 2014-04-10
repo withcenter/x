@@ -82,5 +82,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	</div><!--header-wrapper-->
 
 <div class='content-wrapper'>
+<div class='content banner'>
 <?include 'gallery4_banner.php'?>
+</div>
 	<div class='content'>
