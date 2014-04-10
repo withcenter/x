@@ -88,10 +88,15 @@
 
 .post-with-image-2-wrapper .image2-menu-name .menu2_name {
 	position: absolute;
-	bottom: 10px;
+	bottom: 5px;
 	left: 0;
 	text-align: center;
 	width: 100%;
+	color: #ffffff;
+}
+
+.post-with-image-2-wrapper .image2-menu-name .inner.selected {
+	font-weight: bold;
 }
 
 .post-with-image-2-wrapper .image2-menu-name .inner {
@@ -100,4 +105,8 @@
 
 .post-with-image-2-wrapper .image2-menu-name img {
 	width: 100%;
+}
+
+.post-with-image-2-wrapper .image2-menu-name img.active-background {
+	display: none;
 }
