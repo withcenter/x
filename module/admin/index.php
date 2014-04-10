@@ -2,7 +2,7 @@
 <?php
 	include x::admin_menu();
 ?>
-
+<div class='page'>
 <div class='page-header'>사이트 관리자 페이지입니다.</div>
 
 
@@ -15,4 +15,5 @@
 	<li><a href='https://github.com/withcenter/x' target=_blank>소스 저장소</a></li>
 </ul>
 
-<iframe src="<?=X_URL?>/x/?module=etc&page=">
+<iframe id='x-news' src="<?=X_URL?>/x/?module=etc&action=x_news_submit">
+</div>
