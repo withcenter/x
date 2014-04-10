@@ -21,7 +21,23 @@
 	
 }
 .image-menu-wrapper {
-	background: #48474b;
+	/*background: #4e4d52;*/
+	text-align: center;
+	padding: 20px 10px;
+	height: 205px;
+}
+
+
+.image-menu-wrapper .left_arrow, .image-menu-wrapper .right_arrow {
+	width: 5%;
+	float: left;
+	cursor: pointer;
+	display: block;
+}
+
+.image-menu-wrapper .image-menu {
+	width: 90%;
+	float: left;
 }
 
 .content .post-full-image-wrapper {
@@ -52,7 +68,6 @@
 
 .content .post-with-image-2-wrapper{
 	background: #eaeaea;
-	padding-bottom: 5px;
 }
 
 .content .post-with-image-2 {
@@ -61,6 +76,10 @@
 
 .content .post-with-image-2.selected {
 	display: block;
+}
+
+.content .post-with-image-more {
+	margin-top: 7px;
 }
 
 .content .post-with-image-2-wrapper .post_6, .content .post-with-image-2-wrapper .post_7, .content .post-with-image-2-wrapper .post_8, .content .post-with-image-2-wrapper .post_9, .content .post-with-image-2-wrapper .post_10 {
@@ -88,16 +107,39 @@
 
 .post-with-image-2-wrapper .image2-menu-name .menu2_name {
 	position: absolute;
-	bottom: 10px;
+	bottom: 5px;
 	left: 0;
 	text-align: center;
 	width: 100%;
+	color: #ffffff;
+}
+
+.post-with-image-2-wrapper .image2-menu-name .inner.selected {
+	font-weight: bold;
 }
 
 .post-with-image-2-wrapper .image2-menu-name .inner {
 	cursor: pointer;
 }
 
+
 .post-with-image-2-wrapper .image2-menu-name img {
+	width: 100%;
+	border-left: solid 1px #eda22e;
+}
+
+.post-with-image-2-wrapper .image2-menu-name .inner.first-menu img {
+	border: 0;
+}
+
+.post-with-image-2-wrapper .image2-menu-name img.active-background {
+	display: none;
+}
+
+.image2-menu-wrapper {
+	margin-bottom: 7px;
+}
+
+.content .middle-banner-wrapper img {
 	width: 100%;
 }

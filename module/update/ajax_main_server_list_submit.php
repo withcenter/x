@@ -1,4 +1,8 @@
 <?php
+	if ( empty($in['type']) ) {
+		echo "$in[callback](" . json_encode( array('code'=>'-2', 'message'=>"No type?") ) . ")";
+		exit;
+	}
 	$posts = x::posts(
 		array(
 			'bo_table'			=> $in['type'],

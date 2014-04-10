@@ -36,8 +36,9 @@
 		padding: 10px 0;
 	}
 	.header .logo img {
-		height: 50px;
+		height: 40px;
 		width: 140px;
+		padding: 5px 0;
 	}
 	
 	.header .mobile-menu-button {
