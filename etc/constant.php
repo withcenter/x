@@ -34,7 +34,7 @@ if ( X_DEBUG ) {
 else {
 	define( 'URL_EXTENDED', 'http://www.extended.kr' );
 }
-
+define('X_URL', URL_EXTENDED);
 define('URL_HOME',		G5_URL);
 define('PATH_HOME',		G5_PATH);
 
