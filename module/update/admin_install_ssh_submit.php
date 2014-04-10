@@ -44,14 +44,14 @@ function callback_ajax_call( re )
 
 	<div class='loader'>
 		<img src="<?=x::url()?>/img/loader12.gif">
-		<?=ln("Please, wait while theme is being installed.",
-			"테마를 설치 중입니다. 기다려 주십시오.")?>
+		<?=ln("Please, wait while $type is being installed.",
+			"$type 을(를) 설치 중입니다. 기다려 주십시오.")?>
 	</div>
 	
 	
 	<div class='result success'>
-		<?=ln("Finished. The theme was installed succfully.",
-			"완료. 테마가 성공적으로 설치되었습니다.")?>
+		<?=ln("Finished. The $type was installed succfully.",
+			"완료. $type 이(가) 성공적으로 설치되었습니다.")?>
 	</div>
 	
 	
