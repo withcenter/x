@@ -64,7 +64,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 		echo "<div style='clear: left'></div>";
 	} else {
 		echo "
-				<div>
+				<div class='no_post'>
 					<img src='".$latest_skin_url."/img/no_image_banner.png' />
 				</div>
 			";
