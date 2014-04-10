@@ -104,3 +104,37 @@
 	width: 34px;
 	height: 35px;
 }
+
+.mobile-menu ul {
+	list-style: none;
+	background: #57575c;
+}
+
+.mobile-menu ul li {
+	padding: 15px 25px;
+	background: #68686d;
+	border-bottom: solid 1px #45454a;
+}
+
+.mobile-menu ul li img {
+	margin-right: 10px;
+}
+
+.mobile-menu ul li.selected {
+	background: #fd7f45;
+	margin-bottom: 15px;
+}
+
+.mobile-menu ul li a {
+	color: #fefaf8;
+	font-size: 15px;
+}
+
+.mobile-menu ul li.home-button {
+	padding: 30px;
+	background: #45444a;
+}
+
+.mobile-menu ul li.selected a, .mobile-menu ul li.home-button a {
+	font-weight: bold;
+}

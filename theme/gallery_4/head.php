@@ -13,8 +13,31 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 <div class='layout'>
 	<div class='mobile-menu-wrapper' style='z-index:-1'>
 		<div class='mobile-menu'>
-		
+			<? 
+				$main_menu = x::menus();
+				$i = 0;
+			?>
+			<ul>
+				<? foreach ( $main_menu as $menu ) { 
+					$url = g::url().'/bbs/board.php?bo_table='.$menu['url'];
+					if ( $i++ == 0 ) {
+					?>
+						<li class='home-button'>
+							<a href="<?=$url?>"><img src="<?=x::theme_url('img/mobile_menu_home.png')?>"/></a>
+							<a href="<?=g::url()?>">HOME</a>
+						</li>
+					<?
+					}
+				?>
+					<li class="<?=$menu['url']?>">
+						<a href="<?=$url?>"><img src="<?=x::theme_url('img/mobile_menu_'.$i.'.png')?>"/></a>
+						<a href="<?=$url?>"><?=$menu['name']?></a>
+					</li>
+				<? } ?>
+			</ul>
+			<div style='clear: left'></div>			
 		</div>
+
 	</div><!--mobile-menu-wrapper-->
 	<div class = 'inner'>
 	<div class='top-wrapper'>
@@ -61,16 +84,14 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			</div>
 			<div class='main-menu'>
 				<div class='inner'>
-					<? 
-						$main_menu = x::menus();
-						$i = 1;
-		
-					?>
+					<? $i = 1; ?>
 					<ul>
-						<? foreach ( $main_menu as $menu ) { ?>
+						<? foreach ( $main_menu as $menu ) { 
+							$url = g::url().'/bbs/board.php?bo_table='.$menu['url'];
+						?>
 							<li>
-								<a href="/bbs/board.php?bo_table=<?=$menu['url']?>"><img src="<?=x::theme_url('img/menu_'.$i++.'.png')?>"/></a>
-								<a href="/bbs/board.php?bo_table=<?=$menu['url']?>"><?=$menu['name']?></a>
+								<a href="<?=$url?>"><img src="<?=x::theme_url('img/menu_'.$i++.'.png')?>"/></a>
+								<a href="<?=$url?>"><?=$menu['name']?></a>
 							</li>
 						<? } ?>
 					</ul>
