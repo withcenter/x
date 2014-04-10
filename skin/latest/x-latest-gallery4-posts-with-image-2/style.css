@@ -20,9 +20,10 @@
 .gallery4-with-image-2 .inner .subject {
 	font-weight: bold;
 	text-align: left;
-	height: 15px;
+	height: 20px;
 	line-height: 140%;
 	overflow: hidden;
+	font-size: 17px;
 }
 
 .gallery4-with-image-2 .subject a {
@@ -35,7 +36,7 @@
 }
 
 .gallery4-with-image-2 .inner .content-wrapper .content {
-	height: 30px;
+	height: 95px;
 	line-height: 140%;
 	overflow: hidden; 	
 }

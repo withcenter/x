@@ -29,7 +29,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 			<? if ( $post ) {
 					$url = $post['href'];
 					$subject = cut_str($post['wr_subject'],15,'');
-					$content = cut_str(strip_tags($post['wr_content']), 60,'');
+					$content = cut_str(strip_tags($post['wr_content']), 100,'');
 			}
 			else {
 				$url = "javascript:void(0);";
@@ -50,6 +50,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 		echo "<div style='clear: left'></div>";
 		if ( count ( $list ) > 5 )	echo "<div class='post-with-image-more' post_category='$bo_table'>MORE v</div>";
 		else echo "<div class='post-with-image-more'><a href='bbs/board.php?bo_table=$bo_table'>view more</a></div>";
+		
 	} else {
 		echo "
 				<div>
