@@ -1,4 +1,8 @@
 <?php
+	echo "DEPRECATED";
+	exit;
+?>
+<?php
 $pu = parse_url( $source_link );
 $git_zip_host_url = "https://codeload.github.com";
 $url = "$git_zip_host_url$pu[path]/zip/master";

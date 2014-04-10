@@ -27,6 +27,8 @@ TODO LiST
 	
 	- 위젯에서 HTML 입력시 Javascript 입력 못하게 할 것.
 	
+	- 배포 파일에 포함되지 않는 모든 THEME / WIDGET / MODULE 을 submodule 로 작업한다.
+	
 	
 	
 

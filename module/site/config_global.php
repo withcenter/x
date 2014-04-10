@@ -11,7 +11,7 @@
 	<div class='config-main-title'>
 		<div class='inner'>
 			<img src='<?=module('img/direction.png')?>'> 통합 사이트 정보
-		</div>				
+		</div>
 	</div>
 	
 	<div class='config-main-container'>

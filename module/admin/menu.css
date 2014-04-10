@@ -1,16 +1,18 @@
-.main-menu {
-	position:relative;
+.admin-menu > .main-menu {
 	margin:0 0 4em 0;
 	padding:0;
 	list-style:none;
+	width: 100% !important;
+	min-width: 50%;
 	background-color: black;
+	font-size: 10pt;
 }
-.main-menu a {
+.admin-menu > .main-menu a {
 	display:inline-block;
 	color:white;
 	padding: 1em;
 }
-.main-menu > li {
+.admin-menu > .main-menu > li {
 	display:inline-block;
 }
 .sub-menu {

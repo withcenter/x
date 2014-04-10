@@ -1,4 +1,7 @@
-<link rel="stylesheet" href="<?=module("$module.css")?>">
+<?php
+	echo "DEPRECATED";
+	exit;
+?><link rel="stylesheet" href="<?=module("$module.css")?>">
 <script src="<?=x::url()?>/js/jquery-1.11.0.min.js"/></script>
 <script src="<?=x::url()?>/module/update/js/update.js" /></script>
 <?php

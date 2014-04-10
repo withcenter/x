@@ -1,4 +1,8 @@
 <?php
+	echo "DEPRECATED";
+	exit;
+?>
+<?php
 //FTP file/directory upload/transfer
 include_once('phpseclib/Net/SFTP.php');
 

@@ -1,5 +1,8 @@
 <?php
-
+	echo "DEPRECATED";
+	exit;
+?>
+<?
 //	$cwd = getcwd();
 //	$host = $_SERVER['HTTP_HOST'];
 //	$dir = "$cwd/$dir";
