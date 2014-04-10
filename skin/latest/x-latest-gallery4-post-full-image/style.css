@@ -3,6 +3,10 @@
 	float: left;
 }
 
+.gallery_full_image .no_post img {
+	width: 100%;
+}
+
 .gallery4-full-image .inner {
 	position: relative;
 }

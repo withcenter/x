@@ -49,3 +49,7 @@
 .gallery4-with-image-2 .inner .post-image {
 	padding: 10px 10px 0 10px;
 }
+
+.gallery_with_image_2 .no_post img {
+	width: 100%;
+}
