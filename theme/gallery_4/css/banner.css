@@ -1,0 +1,51 @@
+.banner_container{
+	overflow:hidden;
+	width:100%;
+	position:relative;
+}
+
+.banner_container .banner_arrow{
+	position:absolute;
+	top:40%;
+	z-index:2000;
+}
+
+.banner_container .banner_arrow.left{
+	left:10px;
+}
+
+.banner_container .banner_arrow.right{
+	right:10px;
+}
+
+.banner_container .inner{	
+	white-space:nowrap;		
+	max-width:970px;
+	margin:auto;
+}
+
+.banner_container .inner2{	
+	width:100%;
+	position:relative;	
+	left:-100%;
+}
+
+.banner_container .inner .banner{
+	display:inline-block;
+	width:100%;
+	margin:0 -4px -5px 0;	
+}
+
+.banner_container img.white_bg{
+	position:absolute;		
+	top:0;
+	opacity:.5;
+	z-index:999;
+	width:100%
+}
+	
+.banner_container img.white_bg.enabled{
+	/*opacity:0;*/
+	display:none;
+}
+

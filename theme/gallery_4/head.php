@@ -2,10 +2,12 @@
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 ?>
 <link rel="stylesheet" href="<?=x::theme_url('css/head.css')?>">
+<link rel="stylesheet" href="<?=x::theme_url('css/banner.css')?>">
 <link rel="stylesheet" href="<?=x::theme_url('css/theme.css')?>">
 <link rel="stylesheet" href="<?=x::theme_url('css/content.css')?>">
 <link rel="stylesheet" href="<?=x::theme_url('css/tail.css')?>">
 <script src="<?=x::theme_url()?>/js/theme.js"></script>
+<script src="<?=x::theme_url()?>/js/banner.js"></script>
 <script src="<?=x::theme_url()?>/js/tail.js"></script>
 
 <div class='layout'>
@@ -80,4 +82,5 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	</div><!--header-wrapper-->
 
 <div class='content-wrapper'>
+<?include 'gallery4_banner.php'?>
 	<div class='content'>

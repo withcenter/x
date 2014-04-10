@@ -1,0 +1,76 @@
+.latest_banner{
+	width:100%;	
+}
+
+.latest_banner .image_group{
+	width:25%;
+	float:left;
+}
+
+.latest_banner .image_wrapper{
+	position:relative;
+}
+
+
+.latest_banner .image_wrapper img{	
+	width:100%;
+}
+
+.latest_banner .image_wrapper .caption{
+	position:absolute;
+	left:0;
+	bottom:0;
+	background-color:black;
+	opacity:.7;
+	height:100%;
+	width:100%;	
+	display:none;
+}
+
+.latest_banner .image_wrapper:hover .caption{	
+	display:block;
+}
+
+.latest_banner .image_wrapper .caption a{
+	color:white;
+	display:block;
+	white-space:normal;
+	word-break:break-all;
+	text-decoration:none;	
+}
+	
+.latest_banner .image_wrapper .caption .inner{
+	position:absolute;
+	bottom:20px;
+	left:0;
+	padding:10px;	
+}
+
+.latest_banner .image_wrapper .caption a.subject{
+	font-size:1.5em;	
+	font-weight:bold;	
+}
+
+.latest_banner .image_wrapper .caption a.content{
+	font-size:1.2em;	
+	height:51px;
+	line-height:17px;
+	overflow:hidden;
+}
+
+/**no image**/
+.latest_banner .image_wrapper .caption.no_image{	
+	display:block;
+	background-color:transparent;
+}
+
+.latest_banner .image_wrapper .caption.no_image .inner{	
+	top:20px;
+}
+
+.latest_banner .image_wrapper .caption.no_image a.content{
+	font-size:1.2em;	
+	height:85px;
+	line-height:17px;
+	overflow:hidden;
+}
