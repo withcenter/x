@@ -11,7 +11,7 @@
 			This banner should always have FAKE LAST BANNER as the first banner and FAKE FIRST BANNER as the last banner
 			You can set the number of tables and what tables you want to use using $banner_table array.
 			*/
-			$banner_table = array( 1 , 2 , 3 );			
+			$banner_table = array( 1 , 2 , 3 , 4);			
 			?>			
 			
 			<div class='banner' banner_num = 'fake'>
@@ -34,7 +34,7 @@
 		<img class='stop' src='<?=x::theme_url('img/stop_button.png')?>'/>
 		<img class='play' src='<?=x::theme_url('img/play_button.png')?>'/>
 	</div>
-	<?for($z = 1; $z <= 3; $z++ ){?>
+	<?for($z = 1; $z <= count( $banner_table ); $z++ ){?>
 		<div class='bullet' banner_num ='<?=$z?>'>
 			<div class='time_limit'>
 			</div>
