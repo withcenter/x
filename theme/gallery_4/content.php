@@ -1,4 +1,3 @@
-<?include 'gallery4_banner.php'?>
 <div class='post-full-image-wrapper'>
 	<?
 		$posts_full_image = x::menus('left'); 
