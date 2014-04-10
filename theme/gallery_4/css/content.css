@@ -23,7 +23,7 @@
 .image-menu-wrapper {
 	/*background: #4e4d52;*/
 	text-align: center;
-	padding: 20px 10px;
+	padding: 10px;
 	height: 205px;
 }
 
@@ -142,4 +142,41 @@
 
 .content .middle-banner-wrapper img {
 	width: 100%;
+}
+
+
+.content .latest-comments-wrapper {
+
+}
+
+.latest-comments-wrapper .latest-comments {
+	width: 25%;
+	float: left;
+}
+
+.latest-comments-wrapper .latest-comments .inner {
+	background: #4c8ce0;
+	margin: 1%;
+	color: #ffffff;
+	padding: 15px;
+}
+
+.latest-comments-wrapper .latest-comments .inner a {
+	color: #ffffff;
+}
+
+.latest-comments-wrapper .latest-comments .inner span {
+	display: block;
+}
+
+.latest-comments-wrapper .latest-comments .inner .post-comment {
+	height: 100px;
+	margin-bottom: 10px;
+	line-height: 130%;
+	overflow: hidden;
+	font-size: 16px;
+}
+
+.latest-comments-wrapper .latest-comments .inner .comment-author {
+	text-align: center;
 }
