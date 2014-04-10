@@ -13,4 +13,10 @@ $(function(){
 		$(this).find('.inner').addClass('selected');
 		$(".post-full-image."+image_menu_name).addClass('selected').siblings('.post-full-image').removeClass('selected');
 	});
+	
+	var category_name;
+	$(".post-with-image-more").click(function() {
+		category_name = $(this).html('view more').attr('post_category');
+		$("."+category_name+" .gallery4-with-image-2").addClass('selected');
+	});
 });

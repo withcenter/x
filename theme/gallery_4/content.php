@@ -33,3 +33,28 @@
 ?>
 	<?=latest('x-latest-gallery4-post-with-image', bo_table(2), 4, 25, $cache_time=1, $option)?>
 </div>
+
+
+<div class='post-with-image-2-wrapper'>
+	<?	
+		$i = 0;
+		$posts_image_2 = x::menus('right'); 
+		echo "<div class='image2-menu-wrapper'>";
+		foreach ( $posts_image_2 as $menu ) { ?> <span class='image2-menu-name' menu2_name="<?=$menu['url']?>"><span class='inner <? if ( $i++ == 0 ) echo "selected"?>'><img src="<?=x::theme_url('img/category_'.$i.'.png')?>"/><div class='menu2_name'><?=$menu['name']?></div></span></span> <? } ?>
+		<div style='clear: left'></div>
+		</div><?
+		$i = 0;
+		foreach ( $posts_image_2 as $post ) {
+			$option = array(
+
+				"width" => 170,
+				"height" => 360,
+
+			);
+	?>
+	<div class='post-with-image-2 <?=$post['url']?> <? if ( $i++ == 0 ) echo "selected"?>'>
+		<?=latest('x-latest-gallery4-posts-with-image-2', $post['url'], 10, 25, $cache_time=1, $option)?>
+		<div class='post-with-image-more' post_category="<?=$post['url']?>">MORE v</div>
+	</div>	
+	<? } ?>
+</div>
