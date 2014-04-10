@@ -52,7 +52,6 @@
 
 .content .post-with-image-2-wrapper{
 	background: #eaeaea;
-	padding-bottom: 5px;
 }
 
 .content .post-with-image-2 {
@@ -61,6 +60,10 @@
 
 .content .post-with-image-2.selected {
 	display: block;
+}
+
+.content .post-with-image-more {
+	margin-top: 7px;
 }
 
 .content .post-with-image-2-wrapper .post_6, .content .post-with-image-2-wrapper .post_7, .content .post-with-image-2-wrapper .post_8, .content .post-with-image-2-wrapper .post_9, .content .post-with-image-2-wrapper .post_10 {
@@ -109,4 +112,8 @@
 
 .post-with-image-2-wrapper .image2-menu-name img.active-background {
 	display: none;
+}
+
+.image2-menu-wrapper {
+	margin-bottom: 7px;
 }
