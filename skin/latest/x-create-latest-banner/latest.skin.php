@@ -32,54 +32,58 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 			}
 			
 		?>
-		<div class = 'image_group'>
+		<div class = 'image_group group_<?=$count?>'>
 			<div class='image_wrapper'>
-				<a href=<?=$list[$i]['href']?>><img src='<?=$imgsrc_upper['src']?>'/></a>
+				<?
+					if( $list[$i]['subject'] ) {
+						$subject = $list[$i]['subject'];
+						$url = $list[$i]['href'];
+					}
+					else {
+						$subject = 'This page is empty.';
+						$url = "javascript:void(0)";
+					}
+					
+					if( $list[$i]['wr_content'] ) $content = cut_str( strip_tags( $list[$i]['wr_content'] ),$upper_content_length,"..." );
+					else $content = 'No Content.';
+				?>
+				<a class = 'hidden_anchor' href = '<?=$url?>'></a>
+				
+				<img src='<?=$imgsrc_upper['src']?>'/>
 				<div class='caption <?=$no_image_upper?>'>
-					<div class='inner'>
-						<?
-							if( $list[$i]['subject'] ) {
-								$subject = $list[$i]['subject'];
-								$url = $list[$i]['href'];
-							}
-							else {
-								$subject = 'This page is empty.';
-								$url = "javascript:void(0)";
-							}
-							
-							if( $list[$i]['wr_content'] ) $content = cut_str( strip_tags( $list[$i]['wr_content'] ),$upper_content_length,"..." );
-							else $content = 'No Content.';
-						?>
-						<a class='subject' href='<?=$url?>'><?=$subject?></a>
-						<a class='content' href='<?=$url?>'><?=$content?></a>
+					<div class='inner'>						
+						<div class='subject'><?=$subject?></div>
+						<div class='content'><?=$content?></div>
 					</div>
 				</div>
 			</div>
 			
-			<div class='image_wrapper'>
-				<a href=<?=$list[$i+1]['href']?>><img src='<?=$imgsrc_lower['src']?>'/></a>
-				<div class='caption <?=$no_image_lower?> last'>
+			<div class='image_wrapper'>			
+				<?
+					if( $list[$i+1]['subject'] ) {
+						$subject = $list[$i+1]['subject'];
+						$url = $list[$i+1]['href'];
+					}
+					else {
+						$subject = 'This page is empty.';
+						$url = "javascript:void(0)";
+					}
+					
+					if( $list[$i+1]['wr_content'] ) $content = cut_str( strip_tags( $list[$i]['wr_content'] ),$upper_content_length,"..." );
+					else $content = 'No Content.';
+				?>
+				<a class = 'hidden_anchor' href = '<?=$url?>'></a>
+				<img src='<?=$imgsrc_lower['src']?>'/>
+				<div class='caption <?=$no_image_lower?>'>
 					<div class='inner'>
-						<?
-							if( $list[$i+1]['subject'] ) {
-								$subject = $list[$i+1]['subject'];
-								$url = $list[$i+1]['href'];
-							}
-							else {
-								$subject = 'This page is empty.';
-								$url = "javascript:void(0)";
-							}
-							
-							if( $list[$i+1]['wr_content'] ) $content = cut_str( strip_tags( $list[$i]['wr_content'] ),$upper_content_length,"..." );
-							else $content = 'No Content.';
-						?>
-						<a class='subject' href='<?=$url?>'><?=$subject?></a>
-						<a class='content' href='<?=$url?>'><?=$content?></a>
+						<div class='subject'><?=$subject?></div>
+						<div class='content'><?=$content?></div>
 					</div>
 				</div>
 			</div>
 		</div>
-	<?		
+	<?	
+		$count++;
 		}
 		$imgsrc_last = get_list_thumbnail($bo_table, $list[$total_list_items]['wr_id'], 242.5, 460);
 		if ( empty($imgsrc_last['src']) ){
@@ -91,26 +95,27 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 			$last_content_length = 80;
 		}
 	?>
-		<div class = 'image_group'>
+		<div class = 'image_group group_last'>
 			<div class='image_wrapper'>
-				<a href=<?=$list[$total_list_items]['href']?>><img src='<?=$imgsrc_last['src']?>'/></a>
+				<?
+					if( $list[$total_list_items]['subject'] ) {
+						$subject = $list[$total_list_items]['subject'];
+						$url = $list[$total_list_items]['href'];
+					}
+					else {
+						$subject = 'This page is empty.';
+						$url = "javascript:void(0)";
+					}
+					
+					if( $list[$total_list_items]['wr_content'] ) $content = cut_str( strip_tags( $list[$total_list_items]['wr_content'] ),$upper_content_length,"..." );
+					else $content = 'No Content.';
+				?>
+				<a class = 'hidden_anchor' href = '<?=$url?>'></a>
+				<img src='<?=$imgsrc_last['src']?>'/>
 				<div class='caption <?=$no_image_last?>'>
 					<div class='inner'>
-						<?
-							if( $list[$total_list_items]['subject'] ) {
-								$subject = $list[$total_list_items]['subject'];
-								$url = $list[$total_list_items]['href'];
-							}
-							else {
-								$subject = 'This page is empty.';
-								$url = "javascript:void(0)";
-							}
-							
-							if( $list[$total_list_items]['wr_content'] ) $content = cut_str( strip_tags( $list[$total_list_items]['wr_content'] ),$upper_content_length,"..." );
-							else $content = 'No Content.';
-						?>
-						<a class='subject' href='<?=$url?>'><?=$subject?></a>
-						<a class='content' href='<?=$url?>'><?=$content?></a>
+						<div class='subject'><?=$subject?></div>
+						<div class='content'><?=$content?></div>
 					</div>
 				</div>
 			</div>
