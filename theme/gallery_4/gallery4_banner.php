@@ -30,7 +30,33 @@
 	</div>
 </div>
 <div class='tablet_control'>
-	<?/*for($z = 1; $z <= 2; $z++ ){?>
-		<span class='bullet' banner_num ='<?=$z?>'>O</span>
-	<?}*/?>
+	<div class='control_button'>
+		<img class='stop' src='<?=x::theme_url('img/stop_button.png')?>'/>
+		<img class='play' src='<?=x::theme_url('img/play_button.png')?>'/>
+	</div>
+	<?for($z = 1; $z <= 3; $z++ ){?>
+		<div class='bullet' banner_num ='<?=$z?>'>
+			<div class='time_limit'>
+			</div>
+		</div>
+	<?}?>
+	<div style='clear:both'></div>
 </div>
+
+<?if ( preg_match('/msie 7/i', $_SERVER['HTTP_USER_AGENT'] ) ) {?>
+<style>		
+	.banner_container .inner .banner{
+		display:inline;
+		padding-right:4px;
+	}	
+	
+	.latest_banner  .image_group.left{
+		width:74.99%;
+	}
+	
+	.latest_banner  .image_group.right{
+		width:24.9%;
+	}
+	
+</style>
+<?}?>
