@@ -2,13 +2,26 @@
 	width:100%;	
 }
 
-.latest_banner .image_group{
+.latest_banner .image_group.left{
+	width:75%;
+	float:left;
+}
+
+.latest_banner .image_group.right{
 	width:25%;
 	float:left;
 }
 
-.latest_banner .image_wrapper{
+.latest_banner  .image_group.left .image_wrapper{
 	position:relative;
+	width:33.33333333%;
+	float:left;
+}
+
+.latest_banner  .image_group.right .image_wrapper{
+	position:relative;
+	width:100%;
+	float:left;
 }
 
 .latest_banner .image_wrapper .hidden_anchor{
@@ -29,8 +42,7 @@
 	position:absolute;
 	left:0;
 	bottom:0;
-	background-color:black;
-	opacity:.7;
+	background-color:rgba(0,0,0,0.7);
 	height:100%;
 	width:100%;	
 	display:none;
