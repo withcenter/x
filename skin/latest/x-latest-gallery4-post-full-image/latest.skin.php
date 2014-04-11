@@ -43,7 +43,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 					<? if ( $post ) {
 							$url = $post['href'];
 							$subject = cut_str($post['wr_subject'],15,'');
-							$content = cut_str(strip_tags($post['wr_content']), 10,'...');
+							$content = cut_str(strip_tags($post['wr_content']), 30,'...');
 					}
 					else {
 						$url = "javascript:void(0);";
