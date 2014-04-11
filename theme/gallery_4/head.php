@@ -25,6 +25,20 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 						<li class='home-button'>
 							<a href="<?=$url?>"><img src="<?=x::theme_url('img/mobile_menu_home.png')?>"/></a>
 							<a href="<?=g::url()?>">HOME</a>
+							
+							<div class='search-mobile'>
+								<fieldset>
+								<legend>사이트 내 전체검색</legend>
+									<form name="gallery_4_search_forum" method="get" action="<?=x::url()?>" onsubmit="return fsearchbox_submit(this);">
+										<input type="hidden" name="module" value="post">
+										<input type="hidden" name="action" value="search">
+										<input type='hidden' name='search_subject' value=1 />
+										<input type='hidden' name='search_content' value=1 />
+										<input type="text" name="key" id="gallery_4_search_forum_text" maxlength="20" placeholder='' autocomplete='off'>
+										<input type="image" src="<?=x::theme_url('img/search_iconb.png')?>" class='search_icon'/>
+									</form>
+								</fieldset>
+							</div>
 						</li>
 					<?
 					}
@@ -107,6 +121,21 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 						<? } ?>
 					</ul>
 					<div style='clear: left'></div>
+				</div>
+			</div>
+			<div class='search-container'>
+				<div class='search'>
+					<fieldset>
+					<legend>사이트 내 전체검색</legend>
+						<form name="gallery_4_search_forum" method="get" action="<?=x::url()?>" onsubmit="return fsearchbox_submit(this);">
+							<input type="hidden" name="module" value="post">
+							<input type="hidden" name="action" value="search">
+							<input type='hidden' name='search_subject' value=1 />
+							<input type='hidden' name='search_content' value=1 />
+							<input type="text" name="key" id="gallery_4_search_forum_text" maxlength="20" placeholder='' autocomplete='off'>
+							<input type="image" src="<?=x::theme_url('img/search_icon.png')?>"/>
+						</form>
+					</fieldset>
 				</div>
 			</div>
 			<div style='clear: left'></div>

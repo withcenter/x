@@ -31,5 +31,6 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 	z-index: 5;
 	height: 100%;
 	width: 100%;
-	display: none;
+	display: none; 
+	width: 220px;
 }
