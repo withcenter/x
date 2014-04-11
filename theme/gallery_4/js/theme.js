@@ -10,6 +10,7 @@ $(function(){
 	$(".image-menu-wrapper .left_arrow").click(function(){
 		if ( current_row1 != 1 ) { 
 			if ( $(window).width() < 625 ) $('.content .post-full-image-wrapper .image-menu').animate({top: "+=50px"}, 0);
+			else $('.content .post-full-image-wrapper .image-menu').animate({top: "+=220px"}, 0);
 			current_row1--;
 		}
 	});
@@ -18,6 +19,7 @@ $(function(){
 
 		if ( current_row1 != max_rows1 ) {
 			if ( $(window).width() < 625 ) $('	.content .post-full-image-wrapper .image-menu').animate({top: "-=50px"}, 0);
+			else $('.content .post-full-image-wrapper .image-menu').animate({top: "-=220px"}, 0);
 			current_row1++;
 		}
 	});

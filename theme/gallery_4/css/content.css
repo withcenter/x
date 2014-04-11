@@ -50,18 +50,22 @@
 	width: 90%;
 	float: left;
 	position: relative;
+	height: 200px;
+}
+
+.image-menu-wrapper .inner {
+	height: 200px;
+	overflow: hidden;
 }
 
 .image-menu .menu-photo {
 	position: relative;
 	overflow: hidden;
-	margin-bottom: 20px;
+	margin: 10px 0 15px 0;
+	width: 105px;
+	height: 153px;
 }
 
-.image-menu .menu-photo img {
-	width: 100%;
-
-}
 
 .image-menu .menu-overlay {
 	position: absolute;
@@ -86,6 +90,7 @@
 .content .post-full-image-wrapper .inner {
 	max-width: 970px;
 	margin: 0 auto;
+	t
 }
 
 .content .post-full-image-wrapper ul {
@@ -104,7 +109,7 @@
 	padding: 10px 0;
 	cursor: pointer;
 	color: #bbbbbb;
-	margin: 0 5%;
+	margin: 0 5px;
 }
 
 .content .post-full-image-wrapper span.image-menu-name .inner.selected {
