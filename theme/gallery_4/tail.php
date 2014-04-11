@@ -33,3 +33,13 @@
 
 
 <link rel="stylesheet" href="<?=x::theme_url('css/after.css')?>">
+
+<? if ( $_SERVER['SCRIPT_NAME'] != '/index.php' ) { ?>
+	<style>
+		.layout .content {
+			max-width: 970px;
+			margin: 0 auto;
+			padding: 1%;
+		}
+	</style>
+<? } ?>

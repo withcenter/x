@@ -28,14 +28,25 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 						</li>
 					<?
 					}
+					if ( $menu['url'] != $bo_table ) {
+						$img_src = "<img src='".x::theme_url('img/mobile_menu_'.$i.'.png')."'/>";
+						$menu_class = "";
+					} else {
+						$img_src = "<img src='".x::theme_url('img/mobile_menu_'.$i.'b.png')."'/>";
+						$menu_class = "selected";
+					}
 				?>
-					<li class="<?=$menu['url']?>">
-						<a href="<?=$url?>"><img src="<?=x::theme_url('img/mobile_menu_'.$i.'.png')?>"/></a>
+					<li class="<?=$menu['url'].' '.$menu_class?>">
+						<a href="<?=$url?>"><?=$img_src?></a>
 						<a href="<?=$url?>"><?=$menu['name']?></a>
 					</li>
 				<? } ?>
 			</ul>
-			<div style='clear: left'></div>			
+			<? if ( login() ) { ?>
+				<div class='login-logout'>
+				
+				</div>
+			<? } ?> 		
 		</div>
 
 	</div><!--mobile-menu-wrapper-->
@@ -103,7 +114,4 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	</div><!--header-wrapper-->
 
 <div class='content-wrapper'>
-<div class='content banner'>
-<?include 'gallery4_banner.php'?>
-</div>
 	<div class='content'>
