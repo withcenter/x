@@ -72,6 +72,7 @@
 	background: rgba(187,141,244,0.7);
 	z-index: 100000;
 	display: none;
+	padding-top: 75px;
 }
 
 .image-menu-name .inner.selected .menu-overlay{

@@ -23,7 +23,7 @@
 										<span class='inner <? if ( $i++ == 0 ) echo "selected"?>'>
 											<div class='menu-photo'>
 												<img src="<?=x::theme_url('img/menu1_noimage.png')?>"/>
-												<div class='menu-overlay'></div>
+												<div class='menu-overlay'><?=$menu['name']?></div>
 											</div>
 											<?=$menu['name']?>
 										</span>
