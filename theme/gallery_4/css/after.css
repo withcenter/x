@@ -153,6 +153,10 @@
 		line-height: 140%;
 	}
 	
+	.content .post-full-image-wrapper .image-menu .menu-photo {
+		display: none;
+	}
+	
 	.image-menu-wrapper .inner {
 		height: 30px;
 		overflow: hidden;

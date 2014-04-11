@@ -9,7 +9,7 @@ $(function(){
 
 	$(".image-menu-wrapper .left_arrow").click(function(){
 		if ( current_row1 != 1 ) { 
-			$('.content .post-full-image-wrapper .image-menu').animate({top: "+=50px"}, 0);
+			if ( $(window).width() < 625 ) $('.content .post-full-image-wrapper .image-menu').animate({top: "+=50px"}, 0);
 			current_row1--;
 		}
 	});
@@ -17,7 +17,7 @@ $(function(){
 	$(".image-menu-wrapper .right_arrow").click(function(){
 
 		if ( current_row1 != max_rows1 ) {
-			$('	.content .post-full-image-wrapper .image-menu').animate({top: "-=50px"}, 0);
+			if ( $(window).width() < 625 ) $('	.content .post-full-image-wrapper .image-menu').animate({top: "-=50px"}, 0);
 			current_row1++;
 		}
 	});

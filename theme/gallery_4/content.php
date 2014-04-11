@@ -18,7 +18,16 @@
 					<div class='inner'>
 						<div class='left_arrow'><img src='".x::theme_url('img/left_arrow.png')."'/></div>
 							<div class='image-menu'>";
-								foreach ( $posts_full_image as $menu ) { ?> <span class='image-menu-name' menu_name="<?=$menu['url']?>"><span class='inner <? if ( $i++ == 0 ) echo "selected"?>'><?=$menu['name']?></span></span> <? } ?>
+								foreach ( $posts_full_image as $menu ) { ?>
+									<span class='image-menu-name' menu_name="<?=$menu['url']?>">
+										<span class='inner <? if ( $i++ == 0 ) echo "selected"?>'>
+											<div class='menu-photo'>
+												<img src="<?=x::theme_url('img/menu1_noimage.png')?>"/>
+												<div class='menu-overlay'></div>
+											</div>
+											<?=$menu['name']?>
+										</span>
+									</span> <? } ?>
 								<div style='clear: left'></div>
 							</div>
 						<div class='right_arrow'><img src='<?=x::theme_url('img/right_arrow.png')?>'/></div>
