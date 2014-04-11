@@ -79,6 +79,8 @@
 }
 
 @media (max-width: 640px) {
+
+
 	.image2-menu-name img {
 		display: none;
 	}
@@ -105,7 +107,7 @@
 		width: 25%;
 	}
 	
-	.image-2-menu-left-arrow, .image-2-menu-right-arrow {
+	.image-2-previous, .image-2-next {
 		display: block;
 	}	
 	
@@ -146,13 +148,22 @@
 	}
 	
 	.content .post-full-image-wrapper .image-menu {
-		height: 25px;
+		position: relative;
+		top: -2px;
 		line-height: 140%;
+	}
+	
+	.image-menu-wrapper .inner {
+		height: 30px;
 		overflow: hidden;
 	}
 
 	.content .post-full-image-wrapper span.image-menu-name {
 		width: 33%;
+	}
+	
+	.image-menu-wrapper .left_arrow, .image-menu-wrapper .right_arrow {
+		padding: 0;
 	}
 
 }

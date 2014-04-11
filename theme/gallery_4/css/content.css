@@ -43,11 +43,13 @@
 	float: left;
 	cursor: pointer;
 	display: block;
+	padding-top: 85px;
 }
 
 .image-menu-wrapper .image-menu {
 	width: 90%;
 	float: left;
+	position: relative;
 }
 
 .content .post-full-image-wrapper {
@@ -107,10 +109,10 @@
 }
 
 
-.image-2-menu-left-arrow, .image-2-menu-right-arrow {
+.image-2-previous, .image-2-next {
 	width: 5%;
 	float: left;
-	padding-top: 1.25%;
+	padding-top: 1.5%;
 	text-align: center;
 	cursor: pointer;
 	display: none;
@@ -172,6 +174,10 @@
 	max-width: 970px;
 	margin: 0 auto;
 	background: #eaeaea;
+}
+
+.image-2-menu {
+	position: relative;
 }
 
 .image2-menu-wrapper {
