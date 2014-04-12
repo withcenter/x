@@ -799,6 +799,8 @@ class gnuboard {
 	
 	/** @short return the bo_table of n'th menu
 	 *
+	 * @warning Must use this function to get board_table name.
+	 *
 	 * @note bo_table() returns fourm id, while table_name() returns write_table name.
 	 * @param [in] $n nth menu
 		@note if $n is 0, then it only returns the bo_table itself.
@@ -813,7 +815,7 @@ class gnuboard {
 	 * @return string bo_table
 	 *
 	 * @code
-		bo_table(1); // is same as meta('menu_1', ms::board_id(etc::domain()).'_1')
+			bo_table(1);
 	 * @endcode
 	 *
 	 * @warning if 'basedomain' is accessed, then it assumes that the site is accessed with "www."
@@ -825,6 +827,7 @@ class gnuboard {
 		}
 		
 		$bo_table = "ms_" . etc::last_domain( $domain );
+		$bo_table = str_replace('-', '_', $bo_table);					/// @bufix : table name cannot have '-'
 		if ( $n ) $bo_table .= '_'.$n;
 		return $bo_table;
 	}

@@ -1,3 +1,6 @@
+DPRECATED.
+DELETE WHENEVER NEEDE<?php
+return;
 <?php
 define('MD_CONFIG', "x_multidomain_config");
 class md extends multidomain {}
