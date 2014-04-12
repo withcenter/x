@@ -4,3 +4,6 @@
 [submodule "theme/slide"]
 	path = theme/slide
 	url = https://github.com/thruthesky/slide
+[submodule "widget/sample-widget"]
+	path = widget/sample-widget
+	url = https://github.com/thruthesky/sample-widget

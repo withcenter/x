@@ -20,9 +20,10 @@
 .gallery4-with-image-2 .inner .subject {
 	font-weight: bold;
 	text-align: left;
-	height: 15px;
+	height: 20px;
 	line-height: 140%;
 	overflow: hidden;
+	font-size: 17px;
 }
 
 .gallery4-with-image-2 .subject a {
@@ -30,12 +31,12 @@
 }
 
 .gallery4-with-image-2 .inner .content-wrapper {
-	padding: 15px 15px 0 15px;
+	padding: 5px 15px 0 15px;
 	background: #ffffff;	
 }
 
 .gallery4-with-image-2 .inner .content-wrapper .content {
-	height: 30px;
+	height: 95px;
 	line-height: 140%;
 	overflow: hidden; 	
 }
@@ -47,4 +48,8 @@
 
 .gallery4-with-image-2 .inner .post-image {
 	padding: 10px 10px 0 10px;
+}
+
+.gallery_with_image_2 .no_post img {
+	width: 100%;
 }

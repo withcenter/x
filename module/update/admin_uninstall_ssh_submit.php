@@ -42,12 +42,12 @@ function callback_ajax_call( re )
 <div class='ssh-install-submit'>
 	<div class='loader'>
 		<img src="<?=x::url()?>/img/loader12.gif">
-		<?=ln("Please, wait while theme is being un-installed.",
-			"테마를 삭제 중입니다. 기다려 주십시오.")?>
+		<?=ln("Please, wait while $type is being un-installed.",
+			"$type 을(를) 삭제 중입니다. 기다려 주십시오.")?>
 	</div>
 	<div class='result success'>
 		<?=ln("Finished. The theme was un-installed successfully.",
-			"완료. 테마가 성공적으로 삭제되었습니다.")?>
+			"완료. $type 이(가) 성공적으로 삭제되었습니다.")?>
 	</div>
 </div>
 

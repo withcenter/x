@@ -203,6 +203,7 @@ function hook_body_begin()
 x::hook_register( 'module_begin' , 'hook_module_begin');
 function hook_module_begin() {
 	global $module, $action;
+	if ( preg_match('/_submit$/', $action) ) return;
 	if ( preg_match('/^config/', $action) ) include x::dir() . "/module/$module/config_header.php";
 }
 
