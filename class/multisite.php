@@ -1,4 +1,6 @@
-<?php
+DPRECATED.
+DELETE WHENEVER NEEDE<?php
+return;
 class ms extends multisite { }
 class multisite {
 

@@ -255,6 +255,12 @@ function url_login()
 	return g::url() . '/bbs/bbs/login.php';
 }
 
+function url_site($domain)
+{
+	return x::url_site($domain);
+}
+
+
 
 function index_page() {
 	return strpos($_SERVER['PHP_SELF'], '/index.php') !== false;

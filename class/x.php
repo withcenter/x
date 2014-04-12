@@ -1084,4 +1084,28 @@ class x extends gnuboard
 	
 	
 	
+	/**
+	 *  @brief returns the url of a site. 사이트 URL 주소를 리턴한다.
+	 *  
+	 *  @param [in] $domain domain of the site. 도메인
+	 *  @return string URL
+	 *  
+	 *  @details
+	 *  returns the url of sub-site. It supports sub-folder installation.
+	 *  
+	 *  도메인을 입력받아서 멀티 사이트의 주소를 리턴한다.
+	 *  그누보드가 도메인 최상위 폴더가 아니라 서브 폴더에 설치된 경우를 지원한다.
+	 *  
+	 *  Example) http://work.org/g5-5.0b17-2/
+	 */
+	static function url_site($domain)
+	{
+		$pi = pathinfo($_SERVER['PHP_SELF']);
+		$path = $pi['dirname'];
+		$path = str_replace('/bbs', '', $path);
+		$path = preg_replace('/\/x?$/', '', $path);
+		$url_site = 'http://' . $domain . $path;
+		//dlog("url_site() : $url_site");
+		return $url_site;
+	}
 }

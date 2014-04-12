@@ -31,7 +31,11 @@
 		<td>Domain</td>
 		<td>
 			<input type='text' name='domain' value="<?=$site['domain']?>">
+			<?=ln("Example: abc.domain.com", "예제: abc.domain.com")?>
+			
 		</td>
+		
+		
 	</tr>
 	
 	<tr>

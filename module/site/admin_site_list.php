@@ -28,7 +28,7 @@
 				$i++;
 			?>
 		<tr valign='top' class='row <?=$background?>'>
-			<td><a href='http://<?=$site['domain']?>' target='_blank'><?=$site['domain']?></a></td>
+			<td><a href='<?=url_site($site['domain'])?>' target='_blank'><?=$site['domain']?></a></td>
 			<td><?=$site['mb_id']?></td>
 			<td><?=x::meta_get($site['domain'], 'title')?></td>
 			<td><?=x::meta_get($site['domain'], 'theme')?></td>
