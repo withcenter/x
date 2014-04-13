@@ -10,3 +10,6 @@
 [submodule "mall"]
 	path = mall
 	url = https://github.com/withcenter/mall
+[submodule "module/mall"]
+	path = module/mall
+	url = https://github.com/withcenter/mall
