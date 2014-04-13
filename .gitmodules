@@ -7,3 +7,6 @@
 [submodule "widget/sample-widget"]
 	path = widget/sample-widget
 	url = https://github.com/thruthesky/sample-widget
+[submodule "mall"]
+	path = mall
+	url = https://github.com/withcenter/mall
