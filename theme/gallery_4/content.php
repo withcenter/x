@@ -129,3 +129,24 @@
 		<div style='clear: left'></div>
 	</div>
 </div>
+
+<div class='bottom-latest-posts'>
+	<div class='inner'>
+		<div class='title'>
+			<div class='top_title panel-titles'>TITLE HERE</div>
+			<div class='top_title icon_titles'>Android<img src = "<?=x::theme_url('img/android.png')?>" /></div>
+			<div class='top_title icon_titles'>IOS<img src = "<?=x::theme_url('img/ios.png')?>" /></div>
+			<div class='top_title icon_titles'>Tablet<img src = "<?=x::theme_url('img/tablet.png')?>" /></div>
+			<div class='top_title icon_titles'>Mobile<img src = "<?=x::theme_url('img/mobile.png')?>" /></div>
+		</div>
+		<div class='post_wrapper'>
+			<div class='left'>
+				<?=latest("x-gallery-4-lower-posts",bo_table(1),5,10)?>
+			</div>
+			<div class='right'>
+				<?=latest("x-gallery-4-lower-posts",bo_table(2),5,10)?>
+			</div>
+			<div style='clear:both'></div>			
+		</div>		
+	</div>
+</div>

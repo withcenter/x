@@ -274,3 +274,25 @@
 	padding: 15px 10px;
 	font-weight: bold;
 }
+
+/**bottom posts**/
+.bottom-latest-posts .inner .title .top_title{
+	display:inline-block;	
+	margin-right:30px;
+}
+
+.bottom-latest-posts .inner .title .top_title.icon_titles{
+	color:#888888;
+	font-size:1.3em;
+}
+
+.bottom-latest-posts .inner .title .top_title.icon_titles img{
+	margin-left:5px;
+	position:relative;
+	top:-2px;
+}
+
+.bottom-latest-posts .inner .post_wrapper .left, .bottom-latest-posts .inner .post_wrapper .right{
+	width:50%;
+	float:left;
+}
