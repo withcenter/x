@@ -1,3 +1,12 @@
+
+
+[*] GIT INFORMATION
+-------------------
+	theme repository : https://github.com/x-theme/
+	
+
+
+
 TODO LiST
 -----------
 
@@ -6,9 +15,12 @@ TODO LiST
 	
 		국내 및 국제 쇼핑몰. 해외 판매. 페이팔 결재 필수.
 		
-		x_data
+	- x_data 테이블 : 다목적 정보 저장 테이블. 빠른 인덱싱 및 검색이 필요하다.
 		
-		code, key, value
+		idx,					-> primary key. index 용.
+		first					-> first category.
+		second			-> second category.
+		third					-> third category
 		
 		int_1 ~ int_10
 		chat_1 ~ chat_10
@@ -16,16 +28,13 @@ TODO LiST
 		text_1 ~ text_10
 		
 		
-		x_mall_item
-		x_mall_comment
 		
-		x_payment			-> 결재 모듈. 모듈에 독립적. 즉, 쇼핑몰, 수업료 뿐만아니라 여러가지 상황에서 결재를 할 수 있도록
-		x_config				-> 도메인 별 결재 모듈 정보 저장.
-		x_bookmark			-> 독립적 북마크 정보 저장. 게시글, 쇼핑몰 아이템, 각종 페이지 등 독립형 북마크이다.
-		
-		
-		
-		
+		x_mall_item, x_data			-> 상품 정보. 상품에 대한 기본 정보(또는 검색되어야 할 정보)는 x_mall_item 에 저장. 기타 내용이나, 상세 정보는 x_data 에 저장.
+		x_data							-> 상품 코멘트.
+		x_payment					-> 결재 모듈. 모듈에 독립적. 즉, 쇼핑몰, 강의수업료 뿐만아니라 여러가지 상황에서 결재를 할 수 있도록
+			결재 신청, 장바구니, 취소, 환불 등의 정보가 기록되어져야 한다.
+		x_config						-> 도메인 별 결재 모듈 정보 저장.
+		x_bookmark					-> 독립적 북마크 정보 저장. 게시글, 쇼핑몰 아이템, 각종 페이지 등 독립형 북마크이다.
 		
 		
 		
@@ -40,7 +49,10 @@ TODO LiST
 		상품정보 | 사용후기 | 배송정보 | 환불 및 교환정보 | 
 		
 		
+		목록: 판매순, 가격순(높은 순, 낮은순), 평점순, 후기많은 순서, 최근등록순
 		
+		
+		unit test 작업을 거칠 것. 기본 데이터(상품,코멘트 등) 입력, 데이터 무작위 입력, 무작위 결재 등.
 		
 
 	- simple update		=> 테스트를 더 하고 작업 종료한다.
