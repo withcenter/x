@@ -267,3 +267,10 @@
 .latest-comments-wrapper .latest-comments .inner .comment-author {
 	text-align: center;
 }
+
+
+.content .panel-titles {
+	font-size: 20px;
+	padding: 15px 10px;
+	font-weight: bold;
+}

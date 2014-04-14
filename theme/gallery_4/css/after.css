@@ -64,6 +64,19 @@
 	.latest-comments-wrapper .latest-comments.comment_4 {
 		display: none;
 	}
+
+	#gallery_4_search_forum_text {
+		background: #323637;
+		width: 75%;
+		padding: 2px;
+		color: #ffffff;
+	}
+	
+	.search_icon {
+		max-width: 25%;
+		text-align: right;
+	}	
+	
 }
 
 @media ( max-width: 845px) {
@@ -170,17 +183,14 @@
 		padding: 0;
 	}
 	
-	#gallery_4_search_forum_text {
-		background: #323637;
-		width: 75%;
-		padding: 2px;
-		color: #ffffff;
+	.footer .footer-logo, .footer .footer-menu {
+		display: none;
 	}
 	
-	.search_icon {
-		max-width: 25%;
-		text-align: right;
+	.footer .footer-right {
+		clear: left;
+		width: 100%;
+		text-align: center;
 	}
-
-
+	
 }

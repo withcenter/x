@@ -17,7 +17,8 @@
 						<div style='clear: left'></div>
 					</div>
 					<div class='footer-text'>
-						<?if ( x::meta('footer_text')) echo nl2br(x::meta('footer_text'));
+						<? if( $gallery4_contact_number = x::meta('gallery4_contact_number') ) echo "<div>$gallery4_contact_number</div>" ?>
+						<?if ( x::meta('footer_text')) echo "<div>".nl2br(x::meta('footer_text'))."</div>";
 						else {?>
 							<div>회원님께서는 현재 필고 <b style='color:#506ab6;'>갤러리 테마 No.3</b>을 선택 하셨습니다.</div>
 							<div>하단 문구는 사이트 설정에서 수정하실 수 있습니다.</div>

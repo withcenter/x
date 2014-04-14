@@ -10,6 +10,7 @@
 
 <div class='post-full-image-wrapper'>
 	<div class='inner'>
+		<div class='panel-titles'>Panel Title</div>
 		<?
 			$posts_full_image = x::menus('left'); 
 			$title_colors = array( '#ff9b38', '#ffaf30', '#ec5c60', '#bb8df4', '#ff7271', '#ffaf30', '#ff7271', '#b1c516', '#70bcd2', '#8ba6ff' );
@@ -51,6 +52,7 @@
 
 <div class='post-with-image-wrapper'>
 	<div class='post-with-image'>	
+		<div class='panel-titles'>Panel Title</div>
 	<?
 		$option = array(
 
@@ -65,6 +67,7 @@
 
 
 <div class='post-with-image-2-wrapper'>
+		<div class='panel-titles'>Panel Title</div>
 	<div class='inner'>
 		<?	
 			$i = 0;
@@ -108,6 +111,7 @@
 
 <div class='latest-comments-wrapper'>
 	<div class='inner'>
+		<div class='panel-titles'>Panel Title</div>
 	<?
 		$latest_comments = g::posts(array( 'wr_is_comment' => '1', 'limit' => '4' ));
 			foreach ( $latest_comments as $comments ) {
