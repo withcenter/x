@@ -45,6 +45,7 @@ copy_source( 'x/class' );
 copy_source( 'x/css' );
 copy_source( 'x/etc' );
 copy_source( 'x/js' );
+copy_source( 'x/img' );
 copy_source( 'x/begin.php' );
 copy_source( 'x/end.php' );
 copy_source( 'x/index.php' );
@@ -134,7 +135,7 @@ function check_tmp_folder()
 	global $dir_x;
 	
 	if ( is_dir( $dir_x ) ) {
-		message("Removing temporiry files");
+		message("Removing '$dir_x' temporiry files");
 		file::delete_folder($dir_x);
 	}
 	

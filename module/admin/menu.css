@@ -36,5 +36,8 @@
 	background-color: #dfdfdf;
 }
 .select-sub-menu a {
+	color: black !important;
+}
+.select-sub-menu a {
 	color: black;
 }
