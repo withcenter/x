@@ -9,13 +9,62 @@
 
 
 
-TODO LiST
------------
-
-
-	- 쇼핑몰.
+ORDER of TODO LiST
+--------------------
+	- 간단 설치를 캐시 하는 작업을 x_data 테이블로 하면서 x_data 정보를 관리하는 함수들을 먼저 캡슐화한다. 그리고 나서 쇼핑몰 작업을 해야 한다.
 	
-		국내 및 국제 쇼핑몰. 해외 판매. 페이팔 결재 필수.
+		즉, 설치할 테마/위젯/모듈의 정보를 github.com 에 바로 읽어 오면 시간이 걸리므로,
+		
+		http://extended.kr 에 등록을 할 때, github.com 에 있는 config.xml 을 파싱해서 x_data 에 저장을 해 놓는다.
+		
+		x_data 의 정보를 보여저도, config.xml 만 보여줄 뿐, 실제 preview.jpg 사진은 github.com 의 것을 보여준다.
+		
+		설치를 할 때에는 실제 github.com 의 config.xml 을 보여준다.
+		
+		http://extended.kr 의 config.xml 을 업데이트라면 수정 또는 재 등록을 해 주면 된다.
+		f
+		
+	
+	- 간단 설치에서 github.com 의 config.xml 을 읽어서 화면에 정보를 표시해 주기.
+	
+	- 모듈별, 테마별 언어 폴더 language/ 을 만들고, 그 안에서 설정된 언어 파일을  $language_code 에서 추가 적용하여 사용 할 수 있도록 한다.
+		각 module init, theme init 에서 처리를 하도록 한다.
+	
+	- 쇼핑몰:
+		-- 관리자 페이지에서 상품 등록 부터.
+			x_data 의 필드를 mall 클래스에서 클래스 상수가 아닌, 실 상수로 등록해수 사용한다.
+				예) MALL_ITEM_SUBJECT, MALL_ITEM_CONTENT,
+			그리고 모두 캡슐화한다.
+				예) 상품 정보 액세스
+					mall_item( '상품번호 또는 상품 레코드' );
+					mall_item_subject();
+					mall_item_content();
+					mall_item_date_registered( "date-format" );
+					mall_item_date_updated( "date-format" );
+					
+					
+					// 이미지 관련 함수는 x_data 테이블의 data_file_xxxx() 관련 함수로 사용되어진다.
+					mall_item_image_reset();
+					while ( mall_item_image_next() ) {
+						mall_item_image_src();
+						mall_item_image_path();
+						mall_item_image_name();
+						mall_item_image_type();
+						mall_item_image_id(); //saved file name
+					}
+					
+					
+					
+					mall_list( array('page'=>2) );
+					while ( mall_item_next() ) {
+						mall_subject();
+						mall_content();
+					}
+					
+					
+				
+			
+		-- 국내 및 국제 쇼핑몰. 해외 판매. 페이팔 결재 필수.
 		
 	- x_data 테이블 : 다목적 정보 저장 테이블. 빠른 인덱싱 및 검색이 필요하다.
 		
@@ -111,7 +160,7 @@ TODO LiST
 		그래서 파일을 저장할 때, 고유한 값을 만들어 낼 수 있도록 한다.
 	file_count_image 는 총 업로드된 이미지 파일의 갯 수.
 	file_info 는 text 형 필드로서 업로드된 파일의 정보를 보관하고 있다.
-		파일의 타입, 이름, 저장된 파일 이름, 크기 등의 정보를 scalar 형식으로 보관한다.
+		파일의 타입, 이름, 저장된 파일 이름(이 값은 ID 로 사용된다.), 크기 등의 정보를 scalar 형식으로 보관한다.
 	
 	실제 파일은 HDD 에 저장이되며, 파일 경로는 X_DATA_FOLDER 에 기록되며,
 	
@@ -119,6 +168,36 @@ TODO LiST
 	
 	
 	
+	-----------------------------------
+	
+	data_xxxx() 관련 함수
+	
+					x::data( '번호 또는 레코드 또는 first, second, third 의 조합' );
+					x::data_field();
+					x::data_ip();
+					x::data_stamp('create', 'data-form');
+					x::data_stamp('update', 'data-form');
+					
+					....
+					
+					x::data_list( array('page'=>3) );			/// 3 페이지의 정보
+					
+					x::data_list_reset();
+					while ( x::data_list_next() ) {
+					}
+					
+					x::image_reset();
+					while ( x::image_next() ) {
+						x::image_src();
+						x::image_path();
+						x::image_name();
+						x::image_type();
+						x::image_id(); //saved file name
+					}
+					
+					
+					
+					
 		
 	
 	
