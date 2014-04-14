@@ -1,0 +1,16 @@
+.gallery_4_bottom_post .title{
+	font-size:1.3em;
+	font-weight:bold;
+	background-color:#eaeaea;
+	width:95%;
+	padding:2.5%;	
+}
+
+.gallery_4_bottom_post .item_wrapper{
+	background-color:#ffffff;
+}
+
+
+.gallery_4_bottom_post .item_wrapper .subject{	
+	padding:5px 10px;
+}

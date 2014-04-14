@@ -275,6 +275,7 @@
 	font-weight: bold;
 }
 
+<<<<<<< HEAD
 .content .panel-titles.outer {
 	max-width: 970px;
 	margin: 0 auto;
@@ -284,4 +285,26 @@
 	font-weight: bold;
 	font-size: 15px;
 	padding: 10px;
+=======
+/**bottom posts**/
+.bottom-latest-posts .inner .title .top_title{
+	display:inline-block;	
+	margin-right:30px;
+}
+
+.bottom-latest-posts .inner .title .top_title.icon_titles{
+	color:#888888;
+	font-size:1.3em;
+}
+
+.bottom-latest-posts .inner .title .top_title.icon_titles img{
+	margin-left:5px;
+	position:relative;
+	top:-2px;
+}
+
+.bottom-latest-posts .inner .post_wrapper .left, .bottom-latest-posts .inner .post_wrapper .right{
+	width:50%;
+	float:left;
+>>>>>>> 2b04b844cf3733d9d6d9226d27523946b697a951
 }
