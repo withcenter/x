@@ -19,3 +19,9 @@
 [submodule "widget/comment-line"]
 	path = widget/comment-line
 	url = https://github.com/x-widget/comment-line
+[submodule "widget\\latest-post-with-image"]
+	path = widget\\latest-post-with-image
+	url = https://github.com/x-widget/latest-post-with-image
+[submodule "widget\\post-with-image"]
+	path = widget\\post-with-image
+	url = https://github.com/x-widget/post-with-image
