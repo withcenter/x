@@ -89,6 +89,7 @@ $(function(){
 		$(".tablet_control .control_button .stop").addClass("enabled");
 		banner_interval = setInterval(function(){rotate_banner( total_banner )},1000);
 	});
+
 });
 
 function rotate_banner( total_banner ){

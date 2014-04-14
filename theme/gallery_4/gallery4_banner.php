@@ -3,16 +3,17 @@
 		<img class = 'banner_arrow left' src='<?=x::theme_url('img/banner_left_arrow.png')?>'/>
 		<img class = 'banner_arrow right' src='<?=x::theme_url('img/banner_right_arrow.png')?>'/>
 		<div class='inner2'>
-			<?for($i = 0; $i < 5; $i++ ){?>
-				<img class='white_bg' banner_num ='<?=$i?>' style='left:<?=$i*100?>%' src='<?=x::theme_url('img/white_bg.png')?>'/>
-			<?}
+			<?
 			/*
 			THIS LATEST BANNER MUST ALWAYS HAVE 7 POSTS
 			This banner should always have FAKE LAST BANNER as the first banner and FAKE FIRST BANNER as the last banner
-			You can set the number of tables and what tables you want to use using $banner_table array.
+			You can set the number of tables and what write tables you want to use using $banner_table array.
 			*/
-			$banner_table = array( 1 , 2 , 3 , 4);			
-			?>			
+			$banner_table = array( 1 , 2 , 3 , 4);
+			
+			for($i = 0; $i < count($banner_table)+2; $i++ ){?>
+				<img class='white_bg' banner_num ='<?=$i?>' style='left:<?=$i*100?>%' src='<?=x::theme_url('img/white_bg.png')?>'/>
+			<?}?>			
 			
 			<div class='banner' banner_num = 'fake'>
 				<?=latest('x-create-latest-banner', bo_table($banner_table[count($banner_table)-1]), 7, 10)?>
@@ -30,17 +31,19 @@
 	</div>
 </div>
 <div class='tablet_control'>
-	<div class='control_button'>
-		<img class='stop' src='<?=x::theme_url('img/stop_button.png')?>'/>
-		<img class='play' src='<?=x::theme_url('img/play_button.png')?>'/>
-	</div>
-	<?for($z = 1; $z <= count( $banner_table ); $z++ ){?>
-		<div class='bullet' banner_num ='<?=$z?>'>
-			<div class='time_limit'>
-			</div>
+	<div class='inner'>
+		<div class='control_button'>
+			<img class='stop' src='<?=x::theme_url('img/stop_button.png')?>'/>
+			<img class='play' src='<?=x::theme_url('img/play_button.png')?>'/>
 		</div>
-	<?}?>
-	<div style='clear:both'></div>
+		<?for($z = 1; $z <= count( $banner_table ); $z++ ){?>
+			<div class='bullet' banner_num ='<?=$z?>'>
+				<div class='time_limit'>
+				</div>
+			</div>
+		<?}?>
+		<div style='clear:both'></div>
+	</div>
 </div>
 
 <?if ( preg_match('/msie 7/i', $_SERVER['HTTP_USER_AGENT'] ) ) {?>
