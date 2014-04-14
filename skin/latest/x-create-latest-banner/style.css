@@ -68,6 +68,9 @@
 	font-weight:bold;	
 	white-space:normal;
 	word-break:break-all;
+	height:20px;
+	line-height:20px;
+	overflow:hidden;
 }
 
 .latest_banner .image_wrapper .caption .content{
