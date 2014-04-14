@@ -279,3 +279,9 @@
 	max-width: 970px;
 	margin: 0 auto;
 }
+
+.table-header td {
+	font-weight: bold;
+	font-size: 15px;
+	padding: 10px;
+}
