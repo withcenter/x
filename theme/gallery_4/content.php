@@ -67,7 +67,7 @@
 
 
 <div class='post-with-image-2-wrapper'>
-		<div class='panel-titles'>Panel Title</div>
+		<div class='panel-titles outer'>Panel Title</div>
 	<div class='inner'>
 		<?	
 			$i = 0;

@@ -13,6 +13,21 @@
 		<tr>
 			<td colspan='2'><span class='title-small'>Contact Number</span><input type='text' name='gallery4_contact_number' value='<?=x::meta('gallery4_contact_number')?>' /></td>
 		<tr>
+		<tr>
+			<td>
+				<div class='image-title'><img src='<?=x::url()?>/module/<?=$module?>/img/img-icon.png'>Footer Logo</div>
+				<div class='image-upload'>
+				<?
+					if( file_exists( x::path_file( "gallery4_footer_logo" ) ) ) echo "<img src='".x::url_file( "gallery4_footer_logo" )."'>";
+					else {
+				?>
+						<div class='setting-no-image'><img class='no-image' src='<?=x::url()?>/module/<?=$module?>/img/no-image.png'><br>[가로 968px X 세로 318px]</div>
+					<?}?>
+					<input type='file' name='gallery4_footer_logo'>
+						<input type='checkbox' name='gallery4_footer_logo_remove' value='y'><span class='title-small'>이미지 제거</span>
+				</div>
+			</td>
+		</tr>
 	</table>
 </div>
 	<input type='submit' value='업데이트'>

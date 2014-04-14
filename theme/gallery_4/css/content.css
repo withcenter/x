@@ -274,3 +274,8 @@
 	padding: 15px 10px;
 	font-weight: bold;
 }
+
+.content .panel-titles.outer {
+	max-width: 970px;
+	margin: 0 auto;
+}
