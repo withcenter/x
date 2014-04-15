@@ -628,6 +628,14 @@ EOH;
 	 *
 	 * @warning Do not parse RSS data with this function.
 	 * it will create error if there is only 1 item exists and description with CDATA may not be parsed.
+	 * @code
+			try {
+				@$xml = load_xml( $file['tmp_name'] );
+			}
+			catch ( Exception $e ) {
+				di( $e );
+			}
+	 * @endcode
 	 */
 	static function load_and_parse_xml_into_assoc( $path )
 	{

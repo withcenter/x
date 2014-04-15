@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <config>
-	<type>pc,mobile</type>
+	<view>pc,mobile</view>
 	<name>
 		<en>Extended.kr Theme</en>
 		<ko>Extended.kr Theme</ko>

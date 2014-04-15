@@ -20,7 +20,7 @@ admin_menu_display();
 function admin_menu_display()
 {
 	global $admin_menu, $in;
-	echo "<ul class='main-menu'>\n";
+	echo "<ul>\n";
 	foreach( $admin_menu as $menu ) {
 		$name = $menu['name'];
 		$name = preg_replace("/^[0-9] /", '', $name);

@@ -25,3 +25,6 @@
 [submodule "widget/post-with-image"]
 	path = widget/post-with-image
 	url = https://github.com/x-widget/post-with-image
+[submodule "theme/community-3"]
+	path = theme/community-3
+	url = https://github.com/x-theme/community-3

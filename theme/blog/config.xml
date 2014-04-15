@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <config>
-	<type>pc</type>
+	<view>pc</view>
 	<name>
 		<en>Blog</en>
 		<ko>블로그</ko>

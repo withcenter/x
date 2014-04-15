@@ -51,11 +51,11 @@
 				$name = $theme_config['name'][L];
 				if ( empty($name) ) continue;
 				
-				$type = explode(',', $theme_config['type']);
+				$view = explode(',', $theme_config['view']);
 				
 				
 				
-				if ( ! in_array( 'pc', $type ) ) continue;
+				if ( ! in_array( 'pc', $view ) ) continue;
 				
 				
 				
