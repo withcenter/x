@@ -13,3 +13,11 @@
 		'gallery',
 	);
 	
+
+	$xml_theme_category = array(
+		'blog',
+		'portal',
+		'community',
+		'mall',
+		'etc',
+	);

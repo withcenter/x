@@ -1,18 +1,18 @@
 $(function(){
 	var timer_menu_out = 0;
-	$(".main-menu > li > a").mouseenter(function(){
+	$(".admin-menu > ul > li > a").mouseenter(function(){
 		if ( timer_menu_out ) clearTimeout( timer_menu_out );
 		$('.select-sub-menu').removeClass('select-sub-menu');
-		$('.main-menu > li > .selected + .sub-menu').hide();
+		$('.admin-menu > ul > li > .selected + .sub-menu').hide();
 		
 		if ( $(this).hasClass('selected') ) $(this).next().show();
 		$(this).next().addClass('select-sub-menu');
 	});
-	$(".main-menu > li > a").mouseleave(function(){
+	$(".admin-menu > ul > li > a").mouseleave(function(){
 		$this = $(this);
 		timer_menu_out = setTimeout(function(){
 			$this.next().removeClass('select-sub-menu');
-			$('.main-menu > li > .selected + .sub-menu').show();
+			$('.admin-menu > ul > li > .selected + .sub-menu').show();
 			},
 			500);
 	});
@@ -24,7 +24,7 @@ $(function(){
 		$this = $(this);
 		timer_menu_out = setTimeout(function(){
 			$this.removeClass('select-sub-menu');
-			$('.main-menu > li > .selected + .sub-menu').show();
+			$('.admin-menu > ul > li > .selected + .sub-menu').show();
 			},
 			500);
 	});

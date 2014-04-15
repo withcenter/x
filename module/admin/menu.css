@@ -26,7 +26,7 @@
 .sub-menu > li {
 	display:inline-block;
 }
-.main-menu > li > .selected + .sub-menu {
+.admin-menu > ul > li > .selected + .sub-menu {
 	display:block;
 }
 .select-sub-menu {
