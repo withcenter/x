@@ -61,3 +61,6 @@
 [submodule "theme/gallery-2"]
 	path = theme/gallery-2
 	url = https://github.com/x-theme/gallery-2
+[submodule "theme/gallery-3"]
+	path = theme/gallery-3
+	url = https://github.com/x-theme/gallery-3
