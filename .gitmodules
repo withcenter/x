@@ -49,3 +49,6 @@
 [submodule "theme/extended-theme"]
 	path = theme/extended-theme
 	url = https://github.com/x-theme/extended-theme
+[submodule "theme/extended-2-theme"]
+	path = theme/extended-2-theme
+	url = https://github.com/x-theme/extended-2-theme
