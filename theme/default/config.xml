@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <config>
-	<type>pc</type>
+	<type>theme</type>
+	<view>pc</view>
 	<name>
 		<en>Default</en>
 		<ko>기본 디자인</ko>
