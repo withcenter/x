@@ -55,3 +55,6 @@
 [submodule "theme/gallery-1"]
 	path = theme/gallery-1
 	url = https://github.com/x-theme/gallery-1
+[submodule "theme/gallery-1-mobile"]
+	path = theme/gallery-1-mobile
+	url = https://github.com/x-theme/gallery-1-mobile
