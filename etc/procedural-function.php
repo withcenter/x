@@ -272,6 +272,16 @@ function g_index_page() {
 function x_index_page() {
 	return strpos($_SERVER['PHP_SELF'], '/x/index.php') !== false;
 }
+/**
+ * @code
+	if ( admin() && config_page() ) include 'menu.php';
+ * @endcode
+ */
+function config_page()
+{
+	global $action;
+	if ( preg_match('/^config/', $action) ) return true;
+}
 
 
 function login_page() {

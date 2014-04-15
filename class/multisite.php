@@ -385,9 +385,11 @@ class multisite {
 	
 	/** @deprecated
 	 */
+	/** @note commenting out 'deprecated' functioin
 	static function site_menu() {
 		return x::dir() .'/module/multisite/config_header.php';
 	}
+	*/
 
 
 

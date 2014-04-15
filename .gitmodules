@@ -19,3 +19,6 @@
 [submodule "widget/comment-line"]
 	path = widget/comment-line
 	url = https://github.com/x-widget/comment-line
+[submodule "theme/mall"]
+	path = theme/mall
+	url = https://github.com/x-theme/mall
