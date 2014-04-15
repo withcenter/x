@@ -67,3 +67,6 @@
 [submodule "theme/mobile-community-1-theme"]
 	path = theme/mobile-community-1-theme
 	url = https://github.com/x-theme/mobile-community-1-theme
+[submodule "theme/subsite-main"]
+	path = theme/subsite-main
+	url = https://github.com/x-theme/subsite-main
