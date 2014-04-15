@@ -82,3 +82,6 @@
 [submodule "theme/withdesign-theme"]
 	path = theme/withdesign-theme
 	url = https://github.com/x-theme/withdesign-theme
+[submodule "theme/xe-style"]
+	path = theme/xe-style
+	url = https://github.com/x-theme/xe-style
