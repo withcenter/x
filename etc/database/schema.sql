@@ -77,7 +77,6 @@ CREATE TABLE IF NOT EXISTS `x_site_config` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8  ;
 
 
-
 CREATE TABLE IF NOT EXISTS `x_data` (
   `idx` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `first` varchar(64) NOT NULL DEFAULT '',
@@ -122,6 +121,16 @@ CREATE TABLE IF NOT EXISTS `x_data` (
   `varchar_8` varchar(255) NOT NULL DEFAULT '',
   `varchar_9` varchar(255) NOT NULL DEFAULT '',
   `varchar_10` varchar(255) NOT NULL DEFAULT '',
+  `varchar_11` varchar(255) NOT NULL DEFAULT '',
+  `varchar_12` varchar(255) NOT NULL DEFAULT '',
+  `varchar_13` varchar(255) NOT NULL DEFAULT '',
+  `varchar_14` varchar(255) NOT NULL DEFAULT '',
+  `varchar_15` varchar(255) NOT NULL DEFAULT '',
+  `varchar_16` varchar(255) NOT NULL DEFAULT '',
+  `varchar_17` varchar(255) NOT NULL DEFAULT '',
+  `varchar_18` varchar(255) NOT NULL DEFAULT '',
+  `varchar_19` varchar(255) NOT NULL DEFAULT '',
+  `varchar_20` varchar(255) NOT NULL DEFAULT '',
   `text_1` longtext NOT NULL,
   `text_2` longtext NOT NULL,
   `text_3` longtext NOT NULL,

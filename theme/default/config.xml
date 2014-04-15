@@ -1,15 +1,19 @@
 <?xml version="1.0"?>
 <config>
 	<type>theme</type>
+	<id>default-theme</id>
 	<view>pc</view>
+	<category>etc</category>
 	<name>
 		<en>Default</en>
 		<ko>기본 디자인</ko>
 	</name>
 	<version>0.1</version>
+	<author>JaeHo Song</author>
+	<email>thruthesky</email>
 	<short>
-		<en></en>
-		<ko></ko>
+		<en>This is default theme</en>
+		<ko>기본 테마입니다.</ko>
 	</short>
 	<detail>
 		<en></en>

@@ -1,5 +1,5 @@
 <?php
-
+	include 'class.update.php';
 	include 'dist-menu.php';
 	include module('config.source.php');
 	
@@ -35,11 +35,67 @@
 		if ( ! in_array($xml['category'], $xml_theme_category ) ) return _error("Wrong category. Allowed categoryies are : " . _print( $xml_theme_category ) );
 	}
 	
+	if ( empty( $xml['id'] ) ) return _error("No ID ?");
+	
 	if ( empty( $xml['name'] ) ) return _error("No name ?");
 	if ( empty( $xml['version'] ) ) return _error("No version ?");
 	if ( empty( $xml['author'] ) ) return _error("No author ?");
 	if ( empty( $xml['email'] ) ) return _error("No email ?");
-	if ( empty( $xml['short'] ) ) return _error("No short ?");
+	
+	// short check
+	$has_short = 0;
+	if ( $xml['short'] ) {
+		foreach ( $xml['short'] as $lang => $short ) {
+			if ( ! empty($short) ) {
+				$has_short = 1;
+				break;
+			}
+		}
+	}
+	if ( $has_short == 0 ) return _error("No short ?");
+	
+	
+	$data = x::data( 'source', $xml['type'], $xml['id'] );
+	
+	if ( $data && ( $data['id'] != my('id') ) ) return _error("source ID exists. but it is not your source. Change the ID or log into the user.");
+	
+	
+	
+	$re = x::data_update(
+		array(
+			'first'				=> 'source',
+			'second'			=> $xml['type'],
+			'third'				=> $xml['id'],
+			'id'				=> my('id'),
+			up::name			=> string::scalar($xml['name']),
+			up::category		=> $xml['category'],
+			up::sub_category	=> $xml['sub_category'],
+			up::author			=> $xml['author'],
+			up::email			=> $xml['email'],
+			up::version			=> $xml['version'],
+			up::homepage		=> $xml['homepage'],
+			up::demo			=> $xml['demo'],
+			up::short			=> string::scalar( $xml['short'] ),
+			up::detail			=> string::scalar( $xml['detail'] ),
+		)
+	);
+	
+	if ( $re == 1 ) echo "UPDATED";
+	else if ( $re == 2 ) echo "INSERTED";
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 function _error( $msg )

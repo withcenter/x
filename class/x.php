@@ -1108,4 +1108,60 @@ class x extends gnuboard
 		//dlog("url_site() : $url_site");
 		return $url_site;
 	}
+	
+	
+	/**
+	 *  @brief returns a record of x_data.
+	 *  
+	 *  @param [in] $first first category
+	 *  @param [in] $second second category
+	 *  @param [in] $third third category
+	 *  @return array of a record
+	 *  
+	 *  @details use this function to get a record of x_post
+	 */
+	static function data( $first, $second, $third )
+	{
+		return db::row("SELECT * FROM x_data WHERE `first`='$first' AND `second`='$second' AND `third`='$third'");
+	}
+	
+	/**
+	 *  @brief returns 'idx' of a record.
+	 *  
+	 *  @param [in] $first first
+	 *  @param [in] $second second
+	 *  @param [in] $third third
+	 *  @return int 'idx'
+	 *  
+	 *  @details use this function to get an idx of a record.
+	 */
+	static function data_idx( $first, $second, $third )
+	{
+		return db::result("SELECT idx FROM x_data WHERE `first`='$first' AND `second`='$second' AND `third`='$third'");
+	}
+	/**
+	 *  @brief inserts/updates a record of x_data
+	 *  
+	 *  @param [in] $o option
+	 *  @return empty
+	 *  
+	 *  @details insert or updates a record.
+	 */
+	static function data_update( $o )
+	{
+		$idx = self::data_idx( $o['first'], $o['second'], $o['third'] );
+		if ( $idx ) {
+			$cond = array( 'first'=>$o['first'], 'second'=>$o['second'], 'third'=>$o['third'] );
+			unset( $o['first'], $o['second'], $o['third'] );
+			db::update( 'x_data', $o, $cond );
+			return 1;
+		}
+		else {
+			if ( empty($o['stamp_create']) ) $o['stamp_create'] = time();
+			if ( empty($o['stamp_update']) ) $o['stamp_update'] = time();
+			if ( empty($o['ip']) ) $o['ip'] = etc::client_ip();
+			db::insert( 'x_data', $o );
+			return 2;
+		}
+	}
 }

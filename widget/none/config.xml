@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <config>
 	<type>widget</type>
+	<id>none</id>
 	<category>
 		<main>etc</main>
 	</category>
