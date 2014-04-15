@@ -85,3 +85,6 @@
 [submodule "theme/xe-style"]
 	path = theme/xe-style
 	url = https://github.com/x-theme/xe-style
+[submodule "widget/community-3-images-with-caption"]
+	path = widget/community-3-images-with-caption
+	url = https://github.com/x-widget/community-3-images-with-caption

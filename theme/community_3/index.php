@@ -40,9 +40,13 @@
 
 <div class='images_with_caption_wrapper'>
 <?
-$latest_bo_table = bo_table(1);
-$latest_1_output = latest("x-community_3_images_with_caption", $latest_bo_table, 4, 20);
-echo $latest_1_output;
+	include widget(
+		array(
+			'code'		=> 'community-3-images-with-caption',
+			'name'		=> 'community-3-images-with-caption',
+			'git'		=> 'https://github.com/x-widget/community-3-images-with-caption',
+		)
+	);
 ?>
 </div>
 
