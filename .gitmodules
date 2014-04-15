@@ -46,3 +46,6 @@
 [submodule "theme/community-2"]
 	path = theme/community-2
 	url = https://github.com/x-theme/community-2
+[submodule "theme/extended-theme"]
+	path = theme/extended-theme
+	url = https://github.com/x-theme/extended-theme
