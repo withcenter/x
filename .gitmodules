@@ -37,3 +37,9 @@
 [submodule "widget/post-full-image"]
 	path = widget/post-full-image
 	url = https://github.com/x-widget/post-full-image
+[submodule "blog-theme"]
+	path = blog-theme
+	url = https://github.com/x-theme/blog-theme
+[submodule "theme/blog-theme"]
+	path = theme/blog-theme
+	url = https://github.com/x-theme/blog-theme
