@@ -79,3 +79,6 @@
 [submodule "theme/withcenter-theme"]
 	path = theme/withcenter-theme
 	url = https://github.com/x-theme/withcenter-theme
+[submodule "theme/withdesign-theme"]
+	path = theme/withdesign-theme
+	url = https://github.com/x-theme/withdesign-theme
