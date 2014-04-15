@@ -1164,4 +1164,54 @@ class x extends gnuboard
 			return 2;
 		}
 	}
+	
+	
+	/**
+	 *  @brief returns only 'WHERE' part of SQL query.
+	 *  @details use this function to get only where clause including 'WHERE' instruction.
+	 *
+	 */
+	static function data_where( $o )
+	{
+		return sql::where( $o );
+	}
+	
+	
+	/**
+	@code
+		$re = x::data_gets(
+			array(
+				'first'		=> 'source',
+				'second'	=> 'theme'
+			)
+		);
+		di( $re );
+	@endcode
+	*/
+	static function data_gets( $o )
+	{
+		$o['table'] = 'x_data';
+		return db::rows( sql::query( $o ) );	
+	}
+	
+	/**
+	@code
+		$re = x::data_count(
+		array(
+			'first'		=> 'source',
+			'second'	=> 'theme'
+		)
+	);
+	di( $re );
+	@endcode
+	*/
+	static function data_count( $o )
+	{
+		$o['table'] = 'x_data';
+		return db::result( sql::query_count( $o ) );
+	}
+	
+	
+	
+	
 }

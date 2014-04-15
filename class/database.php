@@ -81,6 +81,67 @@ class sql {
 		}
 		return $str;
 	}
+	
+	
+	static function where( $o )
+	{
+		unset( $o['extra'], $o['select'], $o['limit'], $o['order by'], $o['table'] );
+		
+		db::option( $o );
+		foreach ( $o as $k => $v ) {
+			$cond[] = db::cond($k);
+		}
+		
+		if ( $cond ) $where = "WHERE " . implode( ' AND ', $cond );
+		else $where = null;
+		
+		return $where;
+	}
+	
+	/**
+		@code
+			return db::rows( sql::query( $o ) );	
+		@endcode
+	 */
+	static function query( $o )
+	{
+		$cond = array();
+		if ( ! empty( $o['extra'] ) ) {
+			$cond[] = $o['extra'];
+		}
+		if ( empty( $o['select'] ) ) $select = '*';
+		else $select = $o['select'];
+		
+		if ( ! empty( $o['order by'] ) ) {
+			$order_by = "ORDER BY {$o['order by']}";;
+		}
+		if ( empty( $o['limit'] ) ) $limit = "0,10";
+		else $limit = $o['limit'];
+		
+		$table = $o['table'];
+		
+		$where = self::where( $o );		
+		
+		$q = "
+			SELECT $select
+			FROM $table
+			$where
+			$order_by
+			LIMIT $limit
+		";
+		return $q;
+	}
+	
+	static function query_count( $o )
+	{
+		$where = self::where ( $o );
+		$q = "
+			SELECT COUNT(*)
+			FROM $o[table]
+			$where
+		";
+		return $q;
+	}
 }
 class database extends sql{
 
