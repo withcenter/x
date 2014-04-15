@@ -61,3 +61,27 @@
 [submodule "theme/gallery-2"]
 	path = theme/gallery-2
 	url = https://github.com/x-theme/gallery-2
+[submodule "theme/gallery-3"]
+	path = theme/gallery-3
+	url = https://github.com/x-theme/gallery-3
+[submodule "theme/mobile-community-1-theme"]
+	path = theme/mobile-community-1-theme
+	url = https://github.com/x-theme/mobile-community-1-theme
+[submodule "theme/subsite-main"]
+	path = theme/subsite-main
+	url = https://github.com/x-theme/subsite-main
+[submodule "theme/travel-theme-1"]
+	path = theme/travel-theme-1
+	url = https://github.com/x-theme/travel-theme-1
+[submodule "theme/travel-theme-2"]
+	path = theme/travel-theme-2
+	url = https://github.com/x-theme/travel-theme-2
+[submodule "theme/withcenter-theme"]
+	path = theme/withcenter-theme
+	url = https://github.com/x-theme/withcenter-theme
+[submodule "theme/withdesign-theme"]
+	path = theme/withdesign-theme
+	url = https://github.com/x-theme/withdesign-theme
+[submodule "theme/xe-style"]
+	path = theme/xe-style
+	url = https://github.com/x-theme/xe-style
