@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <config>
-	<type>none</type>
+	<view>none</view>
 	<name>
 		<en>Withcenter</en>
 		<ko>Withcenter</ko>

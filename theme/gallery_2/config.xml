@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <config>
-	<type>pc</type>
+	<view>pc</view>
 	<name>
 		<en>Gallery No. 2</en>
 		<ko>갤러리 2 번 테마</ko>

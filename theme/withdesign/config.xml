@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <config>
-	<type>pc,mobile</type>
+	<view>pc,mobile</view>
 	<name>
 		<en>WithDesign 2 Theme</en>
 		<ko>WithDesign 2 Theme</ko>

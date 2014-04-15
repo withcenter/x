@@ -28,3 +28,12 @@
 [submodule "widget/x-gallery-4-lower-posts"]
 	path = widget/x-gallery-4-lower-posts
 	url = https://github.com/x-widget/x-gallery-4-lower-posts
+[submodule "widget/post-with-image"]
+	path = widget/post-with-image
+	url = https://github.com/x-widget/post-with-image
+[submodule "theme/community-3"]
+	path = theme/community-3
+	url = https://github.com/x-theme/community-3
+[submodule "widget/post-full-image"]
+	path = widget/post-full-image
+	url = https://github.com/x-widget/post-full-image

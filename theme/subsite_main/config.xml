@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <config>
-	<type>none</type>
+	<view>none</view>
 	<name>
 		<en>Sub Site Main Theme</en>
 		<ko>서브 사이트 메인 테마</ko>

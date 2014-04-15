@@ -23,13 +23,10 @@ define("ONEDAY", 86400);
  *
  *
  */
-define( 'X_DEBUG', true );
+if ( etc::localhost() ) define( 'X_DEBUG', true );
 
 if ( X_DEBUG ) {
-	if ( etc::domain() == 'www.work.org' ) {
-		define( 'URL_EXTENDED', 'http://www.work.org/g5-5.0b29' );
-	}
-	else define( 'URL_EXTENDED', 'http://workserver.org/~benj' );
+	define( 'URL_EXTENDED', g::url() );
 }
 else {
 	define( 'URL_EXTENDED', 'http://www.extended.kr' );

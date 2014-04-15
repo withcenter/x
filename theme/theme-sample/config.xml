@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <config>
-	<type>pc</type>
+	<view>pc</view>
 	<name>
 		<en>Sample Theme</en>
 		<ko>샘플 테마</ko>

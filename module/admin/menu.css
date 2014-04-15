@@ -1,4 +1,4 @@
-.admin-menu > .main-menu {
+.admin-menu > ul {
 	margin:0 0 4em 0;
 	padding:0;
 	list-style:none;
@@ -7,12 +7,12 @@
 	background-color: black;
 	font-size: 10pt;
 }
-.admin-menu > .main-menu a {
+.admin-menu > ul a {
 	display:inline-block;
 	color:white;
 	padding: 1em;
 }
-.admin-menu > .main-menu > li {
+.admin-menu > ul > li {
 	display:inline-block;
 }
 .sub-menu {

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <config>
-	<type>mobile</type>
+	<view>mobile</view>
 	<name>
 		<en>Gallery No. 1 Mobile</en>
 		<ko>Gallery No. 1 Mobile</ko>

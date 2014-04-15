@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <config>
-	<type>pc,mobile</type>
+	<view>pc,mobile</view>
 	<name>
 		<en>Gallery Theme No. 3</en>
 		<ko>Gallery Theme No. 3</ko>

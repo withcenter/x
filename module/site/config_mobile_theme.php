@@ -21,7 +21,7 @@
 			if ( meta('mobile_theme') ) { 
 			?>	
 					<div class='theme-thumb'>
-						<img src='theme/<?=meta('mobile_theme')?>/preview.jpg'/>						
+						<img src='<?=x::url()?>/theme/<?=meta('mobile_theme')?>/preview.jpg'/>						
 						<div class='theme-name active-theme'><?=meta('mobile_theme')?><span class='active-note'>선택 되었습니다</span></div>						
 					</div>
 			<?
@@ -36,8 +36,8 @@
 				
 				$name = $theme_config['name'][L];
 				if ( empty($name) ) continue;
-				$type = explode(',', $theme_config['type']);
-				if ( ! in_array( 'mobile', $type ) ) continue;
+				$view = explode(',', $theme_config['view']);
+				if ( ! in_array( 'mobile', $view ) ) continue;
 				
 				$url = x::url().'/theme/'.$dir.'/preview.jpg';
 				if( preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower(meta('mobile_theme'))) != preg_replace('/[^a-zA-Z0-9]/s', '', mb_strtolower($dir)) ) { ?>					

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <config>
-	<type>mobile</type>
+	<view>mobile</view>
 	<name>
 		<en>Mobile Design No. 1</en>
 		<ko>모바일 디자인 1번</ko>

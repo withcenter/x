@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <config>
-	<type>pc</type>
+	<view>pc</view>
 	<name>
 		<en>Travel Design No. 2</en>
 		<ko>여행사 디자인 2번</ko>
