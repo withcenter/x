@@ -22,3 +22,9 @@
 [submodule "theme/mall"]
 	path = theme/mall
 	url = https://github.com/x-theme/mall
+[submodule "x-gallery-4-lower-posts"]
+	path = x-gallery-4-lower-posts
+	url = https://github.com/x-widget/x-gallery-4-lower-posts
+[submodule "widget/x-gallery-4-lower-posts"]
+	path = widget/x-gallery-4-lower-posts
+	url = https://github.com/x-widget/x-gallery-4-lower-posts
