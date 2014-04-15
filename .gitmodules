@@ -43,3 +43,6 @@
 [submodule "theme/blog-theme"]
 	path = theme/blog-theme
 	url = https://github.com/x-theme/blog-theme
+[submodule "theme/community-2"]
+	path = theme/community-2
+	url = https://github.com/x-theme/community-2
