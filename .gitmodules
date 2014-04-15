@@ -25,3 +25,6 @@
 [submodule "widget\\post-with-image"]
 	path = widget\\post-with-image
 	url = https://github.com/x-widget/post-with-image
+[submodule "widget/post-full-image"]
+	path = widget/post-full-image
+	url = https://github.com/x-widget/post-full-image
