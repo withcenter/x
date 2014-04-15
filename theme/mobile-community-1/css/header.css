@@ -1,0 +1,159 @@
+
+/* menu */
+#header .menu {
+	background-color:#345184;
+}
+#header .menu .inner {
+	margin:0 auto;
+	max-width: 970px;
+}
+#header .menu ul {
+	list-style:none;
+	margin:0 auto;
+	padding:0;	
+	height:80px;	
+}
+
+#header .menu ul li.menu_item {
+	display:inline-block;
+	float:left;
+	width:14.28%;
+	text-align:center;
+}
+/*log in menu*/
+#header .menu ul li.menu_item.log-in-button {
+	position:relative;	
+}
+
+#header .menu ul li.menu_item.log-in-button .pop-up-login{
+	z-index:999;
+	position:absolute;
+	right:0;
+	top:80px;
+	display:none;
+	width:300px;
+	text-align:left;
+}
+
+#header .menu ul li.menu_item  a > img{
+	display:block;
+	margin:0 auto 4px auto;
+}
+
+#header .menu ul li.menu_item .label{
+	text-align:center;
+	font-size:1.3em;	
+}
+
+#header .menu ul li.menu_item > a{	
+	display:block;
+	height:50px;
+	line-height:24px;
+	padding: 6px 0 24px 0;	
+	overflow:hidden;
+	word-break:break-all;
+	text-decoration:none;	
+}
+
+#header .menu ul li.menu_item > a.selected{	
+	background-color:#2a426b;
+}
+
+#header .menu ul li.menu_item a:hover{
+	background-color:#2a426b;
+}
+
+#header .menu ul li.menu_item .all-menu {
+	display:none;
+}
+
+
+/* mobile-menu */
+
+
+
+/* #header .top */
+
+#header .top {
+	padding: 10px;	
+}
+
+#header .top .contact_and_search{
+	float:right;	
+}
+
+#header .top .contact_and_search .contact{
+	text-align:right;
+	color:#e64343;
+	font-weight:bold;
+	font-size:.9em;
+	margin-bottom:3px;
+}
+
+#header .top .logo {
+	float: left;
+}
+
+#header .top .logo img {
+	max-height: 59px;
+}
+
+#header .top-below-640-px  {
+	display:none;
+}
+
+#header .top-below-640-px  img {
+	/*width: 100%;
+	height: auto;*/
+}
+
+/* search */
+#header .top .search form{
+	border:1px solid #345184;	
+}
+
+#header .top .search .key,  #header .top .search .submit {
+	font-family: Gulim,GulimChe,Dotum;
+	font-size: 1em;
+	padding: 1em;
+	border:0;
+	box-shadow:0 3px 0 0 #e8e8e8 inset;
+}
+#header .top .search .key {
+	width:27em;	
+	padding:1.1em 1em 1.05em 1em;
+}
+#header .top .search .submit {
+	background-color: white;	
+}
+
+button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="reset"]::-moz-focus-inner {
+	padding: 0 !important;
+	border: 0 none !important;
+}
+
+/* #header .submenu */
+#header .submenu {
+	background-color:#fafafa;
+}
+
+#header .submenu ul {
+	list-style:none;
+	margin: 0;
+	padding: 0;
+	background-color: #e9e9e9;
+	border:1px solid #e9e9e9;
+	text-align:center;
+	margin: 0 auto;
+	max-width: 970px;
+}
+#header .submenu li {
+	display: inline;
+	margin: 0 10px;
+}
+#header .submenu li a {
+	display: inline-block;
+	color: #292929;
+	padding: 0.75em 0.5em;
+	text-decoration:none;
+}

@@ -1,0 +1,545 @@
+body {
+	margin:0 auto;
+	padding:0;
+	font-size: 9pt;
+	font-family: Malgun Gothic,맑은고딕,Gulim,GulimChe,Dotum;
+	background-color: #fafafa;
+}
+a {
+	font-family: Malgun Gothic,맑은고딕,Gulim,GulimChe,Dotum;
+}
+img {
+	border: 0;
+}
+a {
+	text-decoration:none;
+}
+#header{
+	background-color:white;
+}
+#header a{
+	color:white;
+}
+
+#header .top {
+	max-width: 970px;
+	margin: 0 auto;	
+}
+
+#header .bottom {
+	padding: 10px;
+	background-color: #909090;
+}
+
+#footer {	
+	background-color:#e9e9e9;
+	max-width:970px;
+	margin:auto;	
+	margin-top:5em;
+}
+
+#footer .td-logo{	
+	 width:26.3%;
+}
+
+#footer .logo{
+	display:inline-block;
+	width:189px;	
+	padding-left:19px;
+	margin-top:15px;	
+	height:75px;
+}
+
+#footer .logo-640px{
+	display:inline-block;
+	width:160px;
+	display:none;
+	padding-left:23px;
+	margin-top:15px;	
+}
+
+#footer .logo-500px{
+	display:inline-block;
+	width:61px;	
+	display:none;
+	padding-left:30px;
+	margin-top:15px;	
+}
+
+#footer .logo img{	
+	width:189px;	
+}
+
+#footer .text-info{
+	word-break:break-all;	
+	color:#8f8f8f;		
+	margin:20px 10px 0 10px;
+	padding-bottom:10px;
+}
+
+#footer .text-info a{
+	text-decoration:none;
+	color:#8f8f8f;		
+}
+
+#footer .text-info .footer-text{
+	margin-bottom:10px;
+}
+
+#login-box {
+	display:none;
+	border: 1px solid grey;
+	margin: 0.5em 0.8em;
+	padding: 1.75em 1.75em 1em 1.75em;
+	background-color: #efefef;
+	border-radius: 2px;
+}
+
+#login-box .ol {
+	margin: 0!important;
+}
+
+/* #content */
+
+#content {
+	margin: 1em 0;
+}
+
+#content > .inner {
+	max-width: 970px;
+	margin: 0 auto;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+#content .gallery {
+	margin-bottom: 0.625em;
+}
+
+#content .gallery .post {
+	margin: 0 1.33%;
+}
+
+
+/** POPULAR POSTS */
+.popular-posts-container {
+	border: solid 1px #bbbbbb;
+	position: relative;
+	background: #ffffff;
+	margin: -1.5em 0 0.625em 0.625em;
+	padding: 1.50em 0 1em 0;
+	word-break: break-all;
+}
+
+.posts-title {
+	padding: 0.625em;
+	width: 15.6em;
+	background: #e47e27;
+	color: #ffffff;
+	position: relative;
+
+	font-weight: bold;
+	z-index: 100;
+}
+
+.posts-title img {
+	margin-right: 0.625em;
+	position: relative;
+	top: -1px;
+}
+
+.popular-posts-container .popular-posts {
+	border-bottom: solid 1px #eaeaea;
+	padding: 0.625em 1.250em;
+}
+
+.popular-posts-container .popular-posts.last-popular-post {
+	border: 0;
+}
+
+.popular-posts-container .popular-posts img {
+	margin-right: 1.875em;
+}
+
+.popular-posts-container .popular-posts a {
+	text-decoration: none;
+}
+
+.popular-posts-container .popular-subject {
+	font-weight: bold;
+	margin-bottom: 0.5em;
+	height: 1em;
+	line-height: 1em;
+	overflow: hidden;
+}
+
+
+
+
+.popular-posts-container .popular-meta, .popular-posts-container .popular-meta a {
+	color: #999999;
+	margin-bottom: 0.5em;
+	height: 1em;
+	line-height: 1em;
+	overflow: hidden;
+}
+
+.popular-posts-container .popular-content {
+	overflow: hidden;
+	height: 2.5em;
+	line-height: 1.3em;
+}
+
+.popular-posts-container .post-divider {
+	margin: 0 0.5em;
+}
+
+.popular-posts-container .popular-posts .popular-image {
+	width: 240px;
+}
+
+.popular-posts-container .popular-posts .popular-info {
+	
+	height: 6.5em;
+	overflow: hidden;
+	max-width: 660px;
+}
+
+/* latest */
+.latest-thumbnail{
+	margin-bottom: 0.625em;
+}
+
+.latest-thumbnail > .left, .latest-thumbnail > .right {
+	width: 50%;
+	float:left;
+}
+
+.latest-thumbnail .inner {
+	margin: 0 0.655%;
+}
+
+
+.mobile-title-bar {
+	background: #2a426b;
+	max-width: 100%;
+	padding: 0.625em;
+	margin-bottom: 0.625em;
+	color: #ffffff;
+}
+
+.mobile-title-bar img {
+	margin-right: 0.625em;
+}
+
+/**pc version icon**/
+
+#footer .pc_version{
+	background-color:#8f8f8f;	
+	padding:10px 10px 9px 10px;
+	width:70px;
+	text-align:center;	
+}
+
+#footer .pc_version img{
+	margin-bottom:10px;
+}
+
+#footer .pc_version a{
+	text-decoration:none;
+}
+
+#footer .pc_version .label{
+	color:#e9e9e9;	
+}
+
+/* sidebar */
+#sidebar {
+	margin-right: 10px;
+	width: 210px;
+	min-height: 500px;
+	background-color: grey;
+}
+
+
+/* #data */
+#data {
+	width: 100%;
+}
+
+/* image caption (4 images) */
+.image-with-caption{
+	margin-bottom:10px;
+}
+
+/* below 960 px */
+@media all and ( max-width: 60em ) {
+	#content {
+		padding: 0.4em;
+	}
+	.submenu {
+		margin-right: 1em !important;
+		margin-left: 1em !important;
+	}
+}
+
+@media all and ( max-width: 735px ) {
+	#header .top .search .key {
+		width:22em;		
+	}
+}
+
+@media all and ( max-width: 680px ) {
+	#header .top .search .key {
+		width:18em;		
+	}
+}
+
+@media all and ( max-width: 640px ) {
+	#header .top .search .key{ width: 16em; }
+	#sidebar {
+		display:none;
+	}
+	#data {
+		margin-left: 0;
+	}
+	
+	#header .menu {
+		display:none;
+		padding: 0.8em 0;
+	}
+	#header .menu ul li {
+		display:block;
+		margin: 0.4em;
+		border: 1px solid white;
+		border-radius: 4px;
+		background-color: #385c9c;
+	}
+	#header .mobile-menu {
+		display:block;
+	}
+	
+	#header .top {
+		display:none;
+	}
+	#header .top-below-640-px  { display:block; }
+	
+	.lt_more {
+		display:none;
+	}
+	
+	#footer .logo{
+		display:none;
+	}
+	
+	#footer .logo-640px{
+		display:block;
+	}
+	
+	#footer .text-info{
+		margin-left:37px;
+	}	
+	
+	#header .submenu .menu-group{
+		display:none;
+	}
+}
+@media all and ( min-width: 641px ) {
+	#header .menu {
+		display: block !important;
+	}
+	#header .menu ul li.all-menu {
+		display:none !important;
+	}		
+}
+/* below 600 px */
+@media all and ( max-width: 600px ) {
+	#header .top {
+		height: 60px;
+		padding: 0;
+		overflow:hidden;
+	}
+	.top-below-640-px .contact_and_search { width: 19.3em; }
+	#header .top-below-640-px .search .key { width: 14em; }
+	#footer { margin-top: 3em; }
+}
+
+@media all and ( max-width: 560px ) {
+	.top-below-640-px .contact_and_search { width: 14.3em; }
+	#header .top-below-640-px .search .key { width: 9em; }
+}
+
+/* below 500 px */
+@media all and ( max-width: 500px ) {
+	#footer .logo-640px{
+		display:none
+	}
+
+	#footer .logo-500px{
+		display:block;
+	}
+	
+	#footer .text-info{
+		margin-left:21px;
+	}
+	
+	.top-below-640-px{
+		display:none!important;
+	}
+	
+	.top-below-500-px{
+		display:block!important;
+	}
+	
+	.top-below-500-px .logo img {
+	}
+	
+	.mobile-menu .inner .menu_item[page='popular_posts'], .mobile-menu .inner .menu_item[page='gallery'], .mobile-menu .inner .menu_item.mobile_message_icon{
+		display:none!important;
+	}
+	
+	
+	#header .mobile-menu ul li.menu_item {		
+		width:25%;		
+	}
+
+	#header .mobile-menu .inner ul{
+		width:100%;
+	}
+	
+	
+	#header .mobile-menu .drop-down{
+		width:100%;
+	}
+
+	#header .mobile-menu .pop-up-login{
+		width:100%;
+	}
+	
+	#header .submenu{
+		margin:0 0.4em!important;
+	}
+	
+	
+	#footer .td-logo{	
+		 width:15%;
+	}
+	
+	#footer { margin-top: 2em; }
+	
+}
+/* below 480 px */
+@media all and ( max-width: 480px ) {
+	.submenu .visitor , .submenu .new{
+		display: none !important;
+	}
+	/* latest */
+	.latest-thumbnail > .left {
+		width: 100%;
+		float:none;
+		margin-bottom: 1em;
+	}
+	.latest-thumbnail > .left > .inner {
+		margin-right: 0;
+	}
+	.latest-thumbnail > .right {
+		display:none;
+	}
+	
+	.forum-tab .a .forum-tab-inner{
+		margin: 0;
+	}
+
+	
+	.latest-thumbnail .inner {
+		margin: 0;
+	}
+}
+
+@media all and ( max-width: 400px ) {
+	
+	#content .gallery .post {
+		margin:0;
+	}
+	
+	
+
+}
+
+@media all and ( max-width: 25em ) {
+	.popular-posts-container {
+		margin-left: 0;
+		border-top: 0;
+		margin-top: 0;
+		padding-top: 0.625em;
+		padding-bottom: 0;
+	}
+	.posts-title {
+		width: auto;
+		position: static;
+		border-left: solid 1px #e47e27;
+	}
+
+	.popular-posts-container .popular-posts {
+		padding: 0;
+		border: 0;
+	}
+	
+	.popular-posts td {
+		display: block;
+	}
+	
+	.popular-posts-container .popular-posts .popular-image {
+		width: 100%;
+	}
+	
+	.popular-posts-container .popular-posts .popular-info {
+		padding: 0.625em;
+	}
+	
+	.popular-posts-container .popular-posts img {
+		margin: 0;
+		width: 100%;
+	}
+	
+	.popular-posts-container .post-divider {
+		margin: 0;
+	}
+
+}
+
+/**Theme specific META CONFIG CSS*/
+
+.mobile-meta-table td {
+	border-bottom: solid 1px #e6e6e6 !important;
+	padding-top: 0.625em;
+}
+
+.mobile-meta-table input {
+	padding: 0.3em !important;
+	width: 10em !important;
+}
+
+.mobile-meta-table select {
+	height: 2.7em !important;
+	vertical-align: top;
+	border: solid 1px #c3c3c3;
+	width: 10em;
+}
+
+.mobile-meta-table td.no_of_posts input {
+	width: 3em !important;
+}
+
+.mobile-table-header td {
+	padding: 1em !important;
+	font-weight: bold;
+}
+
+/* submenu.php */
+
+@media all and ( min-width: 640px ) {
+	.menu-group {
+		display: inline;
+	}
+}
