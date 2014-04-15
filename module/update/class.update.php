@@ -8,6 +8,7 @@ class up {
 	const email		= 'varchar_7';
 	const homepage		= 'varchar_8';
 	const demo			= 'varchar_9';
+	const project_url	= 'varchar_10';
 	const name			= 'text_1';
 	const short		= 'text_2';
 	const detail		= 'text_3';

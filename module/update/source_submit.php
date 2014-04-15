@@ -3,11 +3,16 @@
 	include 'dist-menu.php';
 	include module('config.source.php');
 	
-
-	$file = $_FILES['config'];
+	$u = parse_url($project_url);
+	$git_raw_host = "raw.githubusercontent.com";
+	$url_config = "https://$git_raw_host$u[path]/master/config.xml";
 	
+
+	echo "Reading $url_config ...<br>";
+	
+
 	try {
-		@$xml = load_xml( $file['tmp_name'] );
+		@$xml = load_xml( $url_config );
 	}
 	catch ( Exception $e ) {
 		echo "Eorror : " . $e->getMessage();
@@ -67,6 +72,7 @@
 			'second'			=> $xml['type'],
 			'third'				=> $xml['id'],
 			'id'				=> my('id'),
+			up::project_url			=> $project_url,
 			up::name			=> string::scalar($xml['name']),
 			up::category		=> $xml['category'],
 			up::sub_category	=> $xml['sub_category'],
