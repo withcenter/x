@@ -73,3 +73,6 @@
 [submodule "theme/travel-theme-1"]
 	path = theme/travel-theme-1
 	url = https://github.com/x-theme/travel-theme-1
+[submodule "theme/travel-theme-2"]
+	path = theme/travel-theme-2
+	url = https://github.com/x-theme/travel-theme-2
