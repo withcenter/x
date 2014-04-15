@@ -76,3 +76,6 @@
 [submodule "theme/travel-theme-2"]
 	path = theme/travel-theme-2
 	url = https://github.com/x-theme/travel-theme-2
+[submodule "theme/withcenter-theme"]
+	path = theme/withcenter-theme
+	url = https://github.com/x-theme/withcenter-theme
