@@ -4,12 +4,9 @@
  */
 	load_widget_config( $widget_config['code'] );
 ?>
-<div class="widget-admin" code="<?=$widget_config['code']?>" name="<?=$widget_config['name']?>">
-<?	
-	
+	<? if ( admin() ) { ?><div class="widget-admin" code="<?=$widget_config['code']?>" name="<?=$widget_config['name']?>"><? } ?>
+<?php
 
-	
-	
 	$widget_script = x::dir() . "/widget/$widget_config[name]/$widget_config[name].php";
 	
 	if ( ! file_exists( $widget_script ) ) {
@@ -20,18 +17,15 @@
 		if ( $widget_config['git'] ) {
 			$url = "?module=update&action=admin_install&type=widget&source_link=" . urlencode( $widget_config['git'] );
 			echo "
-					<br>
-					<a href='$url'>INSTALL : $widget_config[git]</a>
+				<br>
+				<a href='$url'>INSTALL : $widget_config[git]</a>
 			";
 		}
 		echo "</div>";
-		
 	}
 	else {
-	
-	x::hook("widget_begin: code=$widget_config[code], name=$widget_config[name]");
+		x::hook("widget_begin: code=$widget_config[code], name=$widget_config[name]");
 ?>
-
 	<?php
 		include $widget_script;
 	?>
@@ -40,5 +34,5 @@
 	}
 ?>
 
-</div>
-	
+	<? if ( admin() ) { ?></div><? } ?>
+
