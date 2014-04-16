@@ -97,3 +97,6 @@
 [submodule "widget/community-3-timed-list-with-images"]
 	path = widget/community-3-timed-list-with-images
 	url = https://github.com/x-widget/community-3-timed-list-with-images
+[submodule "widget/latest-community3-posts"]
+	path = widget/latest-community3-posts
+	url = https://github.com/x-widget/latest-community3-posts
