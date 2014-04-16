@@ -57,7 +57,7 @@
 					array(
 						'code'		=> 'community-3-timed-list-left',
 						'name'		=> 'community-3-timed-list',
-						'git'		=> 'https://github.com/x-widget/community-3-images-with-caption',
+						'git'		=> 'https://github.com/x-widget/community-3-timed-list',
 					)
 				);			
 			?>
@@ -68,7 +68,7 @@
 					array(
 						'code'		=> 'community-3-timed-list-right',
 						'name'		=> 'community-3-timed-list',
-						'git'		=> 'https://github.com/x-widget/community-3-images-with-caption',
+						'git'		=> 'https://github.com/x-widget/community-3-timed-list',
 					)
 				);
 			?>
@@ -83,7 +83,7 @@
 				array(
 					'code'		=> 'community-3-timed-list-with-images-left',
 					'name'		=> 'community-3-timed-list-with-images',
-					'git'		=> 'https://github.com/x-widget/community-3-images-with-caption',
+					'git'		=> 'https://github.com/x-widget/community-3-timed-list-with-images',
 				)
 			);
 		?>
@@ -94,7 +94,7 @@
 				array(
 					'code'		=> 'community-3-timed-list-with-images-right',
 					'name'		=> 'community-3-timed-list-with-images',
-					'git'		=> 'https://github.com/x-widget/community-3-images-with-caption',
+					'git'		=> 'https://github.com/x-widget/community-3-timed-list-with-images',
 				)
 			);
 		?>
