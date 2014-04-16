@@ -100,3 +100,6 @@
 [submodule "theme/gallery_4"]
 	path = theme/gallery_4
 	url = https://github.com/x-theme/gallery_4
+[submodule "gallery_1"]
+	path = gallery_1
+	url = https://github.com/x-theme/gallery_1
