@@ -103,3 +103,6 @@
 [submodule "widget/community-3-popular-posts"]
 	path = widget/community-3-popular-posts
 	url = https://github.com/x-widget/community-3-popular-posts
+[submodule "widget/community-3-latest-posts-all"]
+	path = widget/community-3-latest-posts-all
+	url = https://github.com/x-widget/community-3-latest-posts-all

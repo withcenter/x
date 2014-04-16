@@ -31,4 +31,14 @@
 	);
 ?>
 
-<? include( x::theme('latest_posts') ) ?>
+<? //include( x::theme('latest_posts') ) ?>
+
+<?
+	include widget(
+		array(
+			'code'		=> 'community-3-latest-posts-all',
+			'name'		=> 'community-3-latest-posts-all',
+			'git'		=> 'https://github.com/x-widget/community-3-latest-posts-all',
+		)
+	);
+?>
