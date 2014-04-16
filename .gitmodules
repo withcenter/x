@@ -13,9 +13,6 @@
 [submodule "module/mall"]
 	path = module/mall
 	url = https://github.com/withcenter/mall
-[submodule "theme/gallery_4_git"]
-	path = theme/gallery_4_git
-	url = https://github.com/x-theme/gallery_4_git
 [submodule "widget/comment-line"]
 	path = widget/comment-line
 	url = https://github.com/x-widget/comment-line
