@@ -14,7 +14,7 @@
 			array(
 				'code'		=> 'latest-community3-posts',
 				'name'		=> 'latest-community3-posts',
-				'git'		=> 'https://github.com/x-widget/community-3-timed-list-with-images',
+				'git'		=> 'https://github.com/x-widget/latest-community3-posts',
 			)
 		);
 	?>
