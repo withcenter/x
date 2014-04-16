@@ -100,3 +100,9 @@
 [submodule "theme/xe_style"]
 	path = theme/xe_style
 	url = https://github.com/x-theme/xe_style
+[submodule "widget/community-3-popular-posts"]
+	path = widget/community-3-popular-posts
+	url = https://github.com/x-widget/community-3-popular-posts
+[submodule "widget/community-3-latest-posts-all"]
+	path = widget/community-3-latest-posts-all
+	url = https://github.com/x-widget/community-3-latest-posts-all

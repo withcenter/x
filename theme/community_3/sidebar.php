@@ -14,12 +14,31 @@
 			array(
 				'code'		=> 'latest-community3-posts',
 				'name'		=> 'latest-community3-posts',
-				'git'		=> 'https://github.com/x-widget/community-3-timed-list-with-images',
+				'git'		=> 'https://github.com/x-widget/latest-community3-posts',
 			)
 		);
 	?>
 </div>
 
-<? include x::theme('popular_posts') ?>
+<? //include x::theme('popular_posts') ?>
+<?
+	include widget(
+		array(
+			'code'		=> 'community-3-popular-posts',
+			'name'		=> 'community-3-popular-posts',
+			'git'		=> 'https://github.com/x-widget/community-3-popular-posts',
+		)
+	);
+?>
 
-<? include( x::theme('latest_posts') ) ?>
+<? //include( x::theme('latest_posts') ) ?>
+
+<?
+	include widget(
+		array(
+			'code'		=> 'community-3-latest-posts-all',
+			'name'		=> 'community-3-latest-posts-all',
+			'git'		=> 'https://github.com/x-widget/community-3-latest-posts-all',
+		)
+	);
+?>

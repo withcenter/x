@@ -28,12 +28,11 @@
 	
 ?>
 <br>
-
+<link rel="stylesheet" href="<?=module("$action.css")?>">
 
 <a href='?module=update&action=list&type=theme'>THEME(<?=$count_theme?>)</a>,
 <a href='?module=update&action=list&type=widget'>WIDGET(<?=$count_widget?>)</a>,
 <a href='?module=update&action=list&type=module'>MODULE(<?=$count_module?>)</a>
-
 
 <br>
 <?
@@ -70,11 +69,19 @@
 		$item['short']				= $short[L];
 		$item['project_url']		= urlencode( $project_url );
 		$item['folder']				= $folder;
+		$item['version']			= $row[ up::version ];
 		$items[] = $item;
 	}
-
-	foreach ( $items as $item ) {
-		echo "<img src='$item[url_preview]'><br>";
+	if ( $items ) {
+		foreach ( $items as $item ) {
+			echo "
+				<div class='item'>
+					<div><img src='$item[url_preview]'></div>
+					<div>$item[name]  $item[version]</div>
+					<div>$item[short]</div>
+				</div>
+			";
+		}
 	}
 	
 	

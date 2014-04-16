@@ -1,5 +1,9 @@
 <?php
-
+	if ( ! admin() ) {
+		jsAlert("You are not admin");
+		echo "<script>parent.close_layer_popup();</script>";
+		exit;
+	}
 	load_widget_config($code, $in['name']);
 	$xml = &$widget_config['xml'];
 
