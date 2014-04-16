@@ -8,7 +8,16 @@
 </div>
 
 <div class='comm3-posts-wrapper'>
-<?=latest('x-latest-community3-posts',  bo_table(1) , 4 , 20)?>
+<?//=latest('x-latest-community3-posts',  bo_table(1) , 4 , 20)?>
+	<?
+		include widget(
+			array(
+				'code'		=> 'latest-community3-posts',
+				'name'		=> 'latest-community3-posts',
+				'git'		=> 'https://github.com/x-widget/community-3-timed-list-with-images',
+			)
+		);
+	?>
 </div>
 
 <? include x::theme('popular_posts') ?>
