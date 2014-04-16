@@ -49,9 +49,6 @@
 [submodule "theme/extended-2-theme"]
 	path = theme/extended-2-theme
 	url = https://github.com/x-theme/extended-2-theme
-[submodule "theme/gallery-1"]
-	path = theme/gallery-1
-	url = https://github.com/x-theme/gallery-1
 [submodule "theme/gallery-1-mobile"]
 	path = theme/gallery-1-mobile
 	url = https://github.com/x-theme/gallery-1-mobile
@@ -100,6 +97,6 @@
 [submodule "theme/gallery_4"]
 	path = theme/gallery_4
 	url = https://github.com/x-theme/gallery_4
-[submodule "gallery_1"]
-	path = gallery_1
+[submodule "theme/gallery_1"]
+	path = theme/gallery_1
 	url = https://github.com/x-theme/gallery_1
