@@ -79,15 +79,24 @@
 <div class='timed_list_with_images'>
 	<div class='left'>
 		<?
-			$option = array(
-				'no' => 4,
-				'icon' => x::url_theme()."/img/newspaper2.png"
+			include widget(
+				array(
+					'code'		=> 'community-3-timed-list-with-images-left',
+					'name'		=> 'community-3-timed-list-with-images',
+					'git'		=> 'https://github.com/x-widget/community-3-images-with-caption',
+				)
 			);
-			echo latest("x-community-3-timed-list-with-images", bo_table(4), 4, 50, $cache_time=1, $option);
-			
 		?>
 	</div>
 	<div class='right'>
-		<?=latest("x-community-3-timed-list-with-images", bo_table(5), 4, 50, $cache_time=1, $option);?>
+		<?
+			include widget(
+				array(
+					'code'		=> 'community-3-timed-list-with-images-right',
+					'name'		=> 'community-3-timed-list-with-images',
+					'git'		=> 'https://github.com/x-widget/community-3-images-with-caption',
+				)
+			);
+		?>
 	</div>
 </div>

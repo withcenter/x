@@ -63,8 +63,7 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 
 .layout .body-wrapper .main-content .timed_list_with_images .left, .layout .body-wrapper .main-content .timed_list_with_images .right{
 	float:left;
-	width:370px;	
-	height: 210px;
+	width:370px;		
 }
 
 .layout .body-wrapper .main-content .images_with_caption_2{	
