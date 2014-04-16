@@ -20,6 +20,15 @@
 	?>
 </div>
 
-<? include x::theme('popular_posts') ?>
+<? //include x::theme('popular_posts') ?>
+<?
+	include widget(
+		array(
+			'code'		=> 'community-3-popular-posts',
+			'name'		=> 'community-3-popular-posts',
+			'git'		=> 'https://github.com/x-widget/community-3-popular-posts',
+		)
+	);
+?>
 
 <? include( x::theme('latest_posts') ) ?>
