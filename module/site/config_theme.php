@@ -31,7 +31,7 @@
 				?>
 			<?if ( $active_theme ) { ?>
 				<div class='theme-thumb'>
-					<img src='theme/<?=meta('theme')?>/preview.jpg' >					
+					<img src='<?=x::url()?>/theme/<?=meta('theme')?>/preview.jpg' >					
 					<div class='theme-name active-theme'><?=$active_theme?><span class='active-note'>선택 되었습니다</span></div>
 				</div>
 			<?}?>
@@ -45,9 +45,7 @@
 				
 				$theme_config = load_config( $path );
 				
-				
-				
-				
+				if ( $theme_config ) {
 				$name = $theme_config['name'][L];
 				if ( empty($name) ) continue;
 				
@@ -66,9 +64,14 @@
 					<img src='<?=$url?>' >
 					<span class='theme-name'><?=$name?></span>
 					</div>
-				<?}
-				
-				}?>
+				<?
+						}
+					} // if theme config exists
+					else {
+						echo "<div class='theme-thumb inactive' theme_value='<?=$dir?>'>error on config.xml : $dir</div>";
+					}
+				}
+				?>
 				<div style='clear:both'></div>
 			</div>			
 </div> <!--config--theme-->
