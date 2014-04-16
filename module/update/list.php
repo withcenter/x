@@ -30,11 +30,9 @@
 <br>
 <link rel="stylesheet" href="<?=module("$action.css")?>">
 
-
 <a href='?module=update&action=list&type=theme'>THEME(<?=$count_theme?>)</a>,
 <a href='?module=update&action=list&type=widget'>WIDGET(<?=$count_widget?>)</a>,
 <a href='?module=update&action=list&type=module'>MODULE(<?=$count_module?>)</a>
-
 
 <br>
 <?
