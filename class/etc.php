@@ -640,9 +640,9 @@ EOH;
 	static function load_and_parse_xml_into_assoc( $path )
 	{
 		@$lines = file( $path );
+		
 		if ( $lines ) {
 			$lines = implode('', $lines);
-			
 			$xml = new SimpleXMLElement($lines);
 			$json = self::xml2json($lines);
 			$ret = json_decode($json,true) ;

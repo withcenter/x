@@ -19,10 +19,11 @@
 		return;
 	}
 	
+	if ( empty($xml) ) return _error("Failed on reading config.xml");
 	
 	
 	if ( empty( $xml['type'] ) ) {
-		return _error( "No type ?" );
+		return _error( "No type?" );
 	}
 	else if ( ! in_array($xml['type'], array('theme', 'widget', 'module') ) ) {
 		return _error( "type must be one of theme, widget or module" );
@@ -38,9 +39,10 @@
 	if ( $xml['type'] == 'theme' ) {
 		if ( empty($xml['category']) ) return _error("No category ?");
 		if ( ! in_array($xml['category'], $xml_theme_category ) ) return _error("Wrong category. Allowed categoryies are : " . _print( $xml_theme_category ) );
+		if ( empty($xml['view']) ) return _error("No view? 'View' must be either pc or mobile.");
 	}
 	
-	if ( empty( $xml['id'] ) ) return _error("No ID ?");
+	if ( empty( $xml['id'] ) ) return _error("No ID?");
 	
 	if ( empty( $xml['name'] ) ) return _error("No name ?");
 	if ( empty( $xml['version'] ) ) return _error("No version ?");
