@@ -281,7 +281,7 @@ class x extends gnuboard
 
 		
 		/// https://docs.google.com/a/withcenter.com/document/d/1cqG9sghuNGyrSKsZBaV4dmretcA6tb_WfOD1jlyldLk/edit#heading=h.guap7pu1ye1s
-		if ( ! is_dir( x::dir() . '/theme/' . $theme ) ) $theme = 'default';
+		if ( ! is_file( x::dir() . '/theme/' . $theme . '/config.xml' ) ) $theme = 'default';
 		
 		
 		self::$config['site']['theme'] = $theme;
