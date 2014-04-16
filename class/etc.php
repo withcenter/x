@@ -619,8 +619,8 @@ EOH;
 	
 	static function xml2json($xml) {
 
-         normalizeSimpleXML(simplexml_load_string($xml), $result);
-         return json_encode($result);
+         @normalizeSimpleXML(simplexml_load_string($xml), $result);
+		 if ( $result ) return json_encode($result);
      }
 	
 
@@ -640,15 +640,16 @@ EOH;
 	static function load_and_parse_xml_into_assoc( $path )
 	{
 		@$lines = file( $path );
+		
 		if ( $lines ) {
 			$lines = implode('', $lines);
-			
-			$xml = new SimpleXMLElement($lines);
 			$json = self::xml2json($lines);
-			$ret = json_decode($json,true) ;
-			return $ret;
+			if ( $json ) {
+				$ret = json_decode($json,true) ;
+				return $ret;
+			}
 		}
-		else return array();
+		return array();
 	}
 	
 	

@@ -14,8 +14,7 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 	font-family: Dotum,'맑은 고딕', AppleGothic;
 }
 .layout .body-wrapper {
-	width: 100%;
-	margin: 20px 0 0 0;
+	width: 100%;	
 	padding: 0;
 }
 
@@ -36,8 +35,7 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 /***index***/
 
 .layout .body-wrapper .main-content .images_with_caption_wrapper{	
-	margin-bottom:12px;
-	height:158px;
+	margin-bottom:10px;	
 }
 
 .layout .body-wrapper .main-content .bulleted_list{
@@ -47,8 +45,7 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 }
 
 .layout .body-wrapper .main-content .timed_list{
-	margin-bottom:10px;
-	height:142px;
+	margin-bottom:10px;	
 }
 
 .layout .body-wrapper .main-content .timed_list .right{	
@@ -57,8 +54,7 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 
 .layout .body-wrapper .main-content .timed_list .right, .layout .body-wrapper .main-content .timed_list .left{	
 	float:left;
-	width:370px;		
-	height:130px;
+	width:370px;			
 }
 
 .layout .body-wrapper .main-content .timed_list_with_images .right{
@@ -67,8 +63,7 @@ button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="su
 
 .layout .body-wrapper .main-content .timed_list_with_images .left, .layout .body-wrapper .main-content .timed_list_with_images .right{
 	float:left;
-	width:370px;	
-	height: 210px;
+	width:370px;		
 }
 
 .layout .body-wrapper .main-content .images_with_caption_2{	

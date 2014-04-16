@@ -13,9 +13,6 @@
 [submodule "module/mall"]
 	path = module/mall
 	url = https://github.com/withcenter/mall
-[submodule "theme/gallery_4_git"]
-	path = theme/gallery_4_git
-	url = https://github.com/x-theme/gallery_4_git
 [submodule "widget/comment-line"]
 	path = widget/comment-line
 	url = https://github.com/x-widget/comment-line
@@ -31,9 +28,6 @@
 [submodule "widget/post-with-image"]
 	path = widget/post-with-image
 	url = https://github.com/x-widget/post-with-image
-[submodule "theme/community-3"]
-	path = theme/community-3
-	url = https://github.com/x-theme/community-3
 [submodule "widget/post-full-image"]
 	path = widget/post-full-image
 	url = https://github.com/x-widget/post-full-image
@@ -43,48 +37,9 @@
 [submodule "theme/blog-theme"]
 	path = theme/blog-theme
 	url = https://github.com/x-theme/blog-theme
-[submodule "theme/community-2"]
-	path = theme/community-2
-	url = https://github.com/x-theme/community-2
-[submodule "theme/extended-theme"]
-	path = theme/extended-theme
-	url = https://github.com/x-theme/extended-theme
-[submodule "theme/extended-2-theme"]
-	path = theme/extended-2-theme
-	url = https://github.com/x-theme/extended-2-theme
-[submodule "theme/gallery-1"]
-	path = theme/gallery-1
-	url = https://github.com/x-theme/gallery-1
-[submodule "theme/gallery-1-mobile"]
-	path = theme/gallery-1-mobile
-	url = https://github.com/x-theme/gallery-1-mobile
-[submodule "theme/gallery-2"]
-	path = theme/gallery-2
-	url = https://github.com/x-theme/gallery-2
-[submodule "theme/gallery-3"]
-	path = theme/gallery-3
-	url = https://github.com/x-theme/gallery-3
 [submodule "theme/mobile-community-1-theme"]
 	path = theme/mobile-community-1-theme
 	url = https://github.com/x-theme/mobile-community-1-theme
-[submodule "theme/subsite-main"]
-	path = theme/subsite-main
-	url = https://github.com/x-theme/subsite-main
-[submodule "theme/travel-theme-1"]
-	path = theme/travel-theme-1
-	url = https://github.com/x-theme/travel-theme-1
-[submodule "theme/travel-theme-2"]
-	path = theme/travel-theme-2
-	url = https://github.com/x-theme/travel-theme-2
-[submodule "theme/withcenter-theme"]
-	path = theme/withcenter-theme
-	url = https://github.com/x-theme/withcenter-theme
-[submodule "theme/withdesign-theme"]
-	path = theme/withdesign-theme
-	url = https://github.com/x-theme/withdesign-theme
-[submodule "theme/xe-style"]
-	path = theme/xe-style
-	url = https://github.com/x-theme/xe-style
 [submodule "widget/community-3-images-with-caption"]
 	path = widget/community-3-images-with-caption
 	url = https://github.com/x-widget/community-3-images-with-caption
@@ -94,3 +49,54 @@
 [submodule "widget/community-3-timed-list"]
 	path = widget/community-3-timed-list
 	url = https://github.com/x-widget/community-3-timed-list
+[submodule "widget/post-with-image-2"]
+	path = widget/post-with-image-2
+	url = https://github.com/x-widget/post-with-image-2
+[submodule "widget/community-3-timed-list-with-images"]
+	path = widget/community-3-timed-list-with-images
+	url = https://github.com/x-widget/community-3-timed-list-with-images
+[submodule "widget/latest-community3-posts"]
+	path = widget/latest-community3-posts
+	url = https://github.com/x-widget/latest-community3-posts
+[submodule "theme/gallery_4"]
+	path = theme/gallery_4
+	url = https://github.com/x-theme/gallery_4
+[submodule "theme/gallery_1"]
+	path = theme/gallery_1
+	url = https://github.com/x-theme/gallery_1
+[submodule "theme/gallery_2"]
+	path = theme/gallery_2
+	url = https://github.com/x-theme/gallery_2
+[submodule "theme/gallery_3"]
+	path = theme/gallery_3
+	url = https://github.com/x-theme/gallery_3
+[submodule "theme/community_2"]
+	path = theme/community_2
+	url = https://github.com/x-theme/community_2
+[submodule "theme/extended_2"]
+	path = theme/extended_2
+	url = https://github.com/x-theme/extended_2
+[submodule "theme/extended"]
+	path = theme/extended
+	url = https://github.com/x-theme/extended
+[submodule "theme/gallery_1_mobile"]
+	path = theme/gallery_1_mobile
+	url = https://github.com/x-theme/gallery_1_mobile
+[submodule "theme/subsite_main"]
+	path = theme/subsite_main
+	url = https://github.com/x-theme/subsite_main
+[submodule "theme/travel_theme_1"]
+	path = theme/travel_theme_1
+	url = https://github.com/x-theme/travel_theme_1
+[submodule "theme/travel_theme_2"]
+	path = theme/travel_theme_2
+	url = https://github.com/x-theme/travel_theme_2
+[submodule "theme/withcenter"]
+	path = theme/withcenter
+	url = https://github.com/x-theme/withcenter
+[submodule "theme/withdesign"]
+	path = theme/withdesign
+	url = https://github.com/x-theme/withdesign
+[submodule "theme/xe_style"]
+	path = theme/xe_style
+	url = https://github.com/x-theme/xe_style

@@ -19,5 +19,6 @@
 		'portal',
 		'community',
 		'mall',
+		'gallery',
 		'etc',
 	);
