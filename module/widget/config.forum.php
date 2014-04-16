@@ -11,7 +11,8 @@
 ?>
 
 <div class='item forum'>
-	<span class='caption'><?=ln('Forum', '게시판')?> ID</span> : 
+	<!--temporarily added $i on the caption to have a forum number count-->
+	<span class='caption'><?=ln('Forum', '게시판')?> <?=$i?> ID</span> : 
 	<input type='text' name='forum<?=$i?>' value="<?=htmlspecialchars_decode ( $widget_config["forum$i"] )?>" placeholder="<?=ln("Input a forum ID", "게시판 ID 를 입력하십시오.")?>">
 	<select>
 		<option value=''><?=ln("Select a Forum", "게시판 선택")?></option>
