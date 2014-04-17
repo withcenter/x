@@ -1,41 +1,43 @@
 <?php
-	include 'class.update.php';
+/**
+ *  @file list.php
+ *  @see 
+ */
+?>
+<script>
+var url = "<?=X_URL?>/x/index.php";
+var data = "module=update&action=ajax_main_server_list_info_submit";
+ajax_cross_domain_call( {
+	type: 'POST',
+	url: url,
+	data: data,
+	callback: 'callback_ajax_load'
+} );
+function callback_ajax_load( data )
+{
+	setTimeout( function() {
+	$('.count_theme').text( data.count_theme );
+		$('.count_widget').text( data.count_widget );
+		$('.count_module').text( data.count_module );
+	},
+	1000);
+}
+</script>
+
+<?
 	include 'dist-menu.php';
-	
-	
-	
-	
-	$count_theme = x::data_count(
-		array(
-			'first'		=> 'source',
-			'second'	=> 'theme'
-		)
-	);
-	
-	$count_widget = x::data_count(
-		array(
-			'first'		=> 'source',
-			'second'	=> 'widget'
-		)
-	);
-	
-	$count_module = x::data_count(
-		array(
-			'first'		=> 'source',
-			'second'	=> 'module'
-		)
-	);
-	
 ?>
 <br>
 <link rel="stylesheet" href="<?=module("$action.css")?>">
 
-<a href='?module=update&action=list&type=theme'>THEME(<?=$count_theme?>)</a>,
-<a href='?module=update&action=list&type=widget'>WIDGET(<?=$count_widget?>)</a>,
-<a href='?module=update&action=list&type=module'>MODULE(<?=$count_module?>)</a>
+<a href='?module=update&action=list&type=theme'>THEME(<span class='count_theme'><img src='<?=x::url()?>/img/loader3.gif'></span>)</a>,
+<a href='?module=update&action=list&type=widget'>WIDGET(<span class='count_widget'><img src='<?=x::url()?>/img/loader3.gif'></span>)</a>,
+<a href='?module=update&action=list&type=module'>MODULE(<span class='count_module'><img src='<?=x::url()?>/img/loader3.gif'></span>)</a>
 
 <br>
 <?
+	return;
+	
 	if ( empty($type) ) return;
 	
 	$rows = x::data_gets(
