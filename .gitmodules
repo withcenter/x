@@ -112,3 +112,6 @@
 [submodule "widget/x-latest-rwd-community-1"]
 	path = widget/x-latest-rwd-community-1
 	url = https://github.com/x-widget/x-latest-rwd-community-1
+[submodule "widget/x-rwd-text-with-thumbnail"]
+	path = widget/x-rwd-text-with-thumbnail
+	url = https://github.com/x-widget/x-rwd-text-with-thumbnail
