@@ -121,3 +121,6 @@
 [submodule "widget/x-community-2-bottom-latest"]
 	path = widget/x-community-2-bottom-latest
 	url = https://github.com/x-widget/x-community-2-bottom-latest
+[submodule "widget/x-community-2-popular-posts"]
+	path = widget/x-community-2-popular-posts
+	url = https://github.com/x-widget/x-community-2-popular-posts
