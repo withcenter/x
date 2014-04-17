@@ -1,7 +1,12 @@
 .item {
+	margin: 0.4em;
+	float: left;
 	width: 30%;
+	background-color: #efefef;
 }
-
+.item > .inner {
+	padding: 1em;
+}
 .item img {
 	width: 100%;
 }

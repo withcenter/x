@@ -13,21 +13,10 @@
 [*] ORDER of TODO LIST
 ----------------------
 
+	- 간단 설치에서 자신이 등록한 소스를 목록하고 삭제하는 기능을 추가한다.
+	
+	- 관리자가 목록하고 삭제하는 기능을 추가한다.
 
-	- 간단 설치를 캐시 하는 작업을 x_data 테이블로 하면서 x_data 정보를 관리하는 함수들을 먼저 캡슐화한다. 그리고 나서 쇼핑몰 작업을 해야 한다.
-	
-		즉, 설치할 테마/위젯/모듈의 정보를 github.com 에 바로 읽어 오면 시간이 걸리므로,
-		
-		http://extended.kr 에 등록을 할 때, github.com 에 있는 config.xml 을 파싱해서 x_data 에 저장을 해 놓는다.
-		
-		x_data 의 정보를 보여저도, config.xml 만 보여줄 뿐, 실제 preview.jpg 사진은 github.com 의 것을 보여준다.
-		
-		설치를 할 때에는 실제 github.com 의 config.xml 을 보여준다.
-		
-		http://extended.kr 의 config.xml 을 업데이트라면 수정 또는 재 등록을 해 주면 된다.
-		f
-		
-	
 	- 간단 설치에서 github.com 의 config.xml 을 읽어서 화면에 정보를 표시해 주기.
 
 	

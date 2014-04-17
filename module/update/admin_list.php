@@ -1,3 +1,7 @@
+<?php
+	include 'list.php';
+	return;
+?>
 <?include 'menu.php'?>
 <?php
 	

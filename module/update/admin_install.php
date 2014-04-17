@@ -1,4 +1,4 @@
-<?include 'menu.php'?>
+<?include 'dist-menu.php'?>
 <?php
 	$a = explode('/', $source_link);
 	$pname = $a[ count($a) - 1 ];

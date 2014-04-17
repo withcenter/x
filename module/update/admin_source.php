@@ -1,6 +1,5 @@
 <?php
 	include 'dist-menu.php';
-	
 ?>
 <form action='?' method='POST'>
 	<input type='hidden' name='module' value='<?=$module?>'>

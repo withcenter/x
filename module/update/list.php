@@ -3,10 +3,17 @@
  *  @file list.php
  *  @see 
  */
+	$var = null;
+	$dirs = file::getDirs( x::dir() . "/$type");
+	$qs = array();
+	foreach ( $dirs as $dir ) {
+		$qs[] = "dirs[]=$dir";
+	}
+	$var = implode('&', $qs);
 ?>
 <script>
 var url = "<?=X_URL_REAL?>/x/index.php";
-var data = "module=update&action=ajax_main_server_list_info_submit&type=<?=$in['type']?>";
+var data = "module=update&action=ajax_main_server_list_info_submit&type=<?=$in['type']?>&<?=$var?>";
 ajax_cross_domain_call( {
 	type: 'POST',
 	url: url,
@@ -28,13 +35,15 @@ function callback_ajax_load( data )
 
 <?
 	include 'dist-menu.php';
+	if ( admin() ) $pre = 'admin_';
 ?>
-<br>
-<link rel="stylesheet" href="<?=module("$action.css")?>">
 
-<a href='?module=update&action=list&type=theme'>THEME(<span class='count_theme'><img src='<?=x::url()?>/img/loader3.gif'></span>)</a>,
-<a href='?module=update&action=list&type=widget'>WIDGET(<span class='count_widget'><img src='<?=x::url()?>/img/loader3.gif'></span>)</a>,
-<a href='?module=update&action=list&type=module'>MODULE(<span class='count_module'><img src='<?=x::url()?>/img/loader3.gif'></span>)</a>
+<br>
+<link rel="stylesheet" href="<?=module("list.css")?>">
+
+<a href='?module=update&action=<?=$pre?>list&type=theme'>THEME(<span class='count_theme'><img src='<?=x::url()?>/img/loader3.gif'></span>)</a>,
+<a href='?module=update&action=<?=$pre?>list&type=widget'>WIDGET(<span class='count_widget'><img src='<?=x::url()?>/img/loader3.gif'></span>)</a>,
+<a href='?module=update&action=<?=$pre?>list&type=module'>MODULE(<span class='count_module'><img src='<?=x::url()?>/img/loader3.gif'></span>)</a>
 
 <br>
 
