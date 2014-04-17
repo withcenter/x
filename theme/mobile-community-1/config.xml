@@ -1,15 +1,19 @@
 <?xml version="1.0"?>
 <config>
+	<id>mobile community 1</id>
 	<type>theme</type>
 	<view>mobile</view>
+	<category>community</category>
 	<name>
 		<en>Mobile Design No. 1</en>
 		<ko>모바일 디자인 1번</ko>
 	</name>
 	<version>0.1</version>
+	<author>JaeHo Song</author>
+	<email>thruthesky@gmail.com</email>
 	<short>
-		<en></en>
-		<ko></ko>
+		<en>Mobile Community No. 1</en>
+		<ko>Mobile Community No. 1</ko>
 	</short>
 	<detail>
 		<en></en>
