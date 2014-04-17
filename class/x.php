@@ -1208,9 +1208,10 @@ class x extends gnuboard
 	di( $re );
 	@endcode
 	*/
-	static function data_count( $o )
+	static function data_count( $o, $ret=false )
 	{
 		$o['table'] = 'x_data';
+		if ( $ret ) return sql::query_count( $o );
 		return db::result( sql::query_count( $o ) );
 	}
 	

@@ -32,7 +32,11 @@ function callback_ajax_load( data )
 	$('.list').html( data.html );
 }
 </script>
-
+<? if ( ! admin() ) { ?>
+<style>
+.install { display: none; }
+</style>
+<? } ?>
 <?
 	include 'dist-menu.php';
 	if ( admin() ) $pre = 'admin_';
