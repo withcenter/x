@@ -1103,6 +1103,8 @@ class x extends gnuboard
 	 */
 	static function url_site($domain)
 	{
+		return g::url();
+		/*
 		$pi = pathinfo($_SERVER['PHP_SELF']);
 		$path = $pi['dirname'];
 		$path = str_replace('/bbs', '', $path);
@@ -1110,6 +1112,7 @@ class x extends gnuboard
 		$url_site = 'http://' . $domain . $path;
 		//dlog("url_site() : $url_site");
 		return $url_site;
+		*/
 	}
 	
 	
