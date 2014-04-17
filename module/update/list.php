@@ -57,6 +57,7 @@ function callback_ajax_load( data )
 			"githubm.com 으로 부터 $type 정보를 다운로드 중입니다.")?>
 	</div>
 </div>
+<div style='clear:left;'></div>
 
 
 <?
