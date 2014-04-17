@@ -32,6 +32,8 @@ class gnuboard {
 	
 	/**
 	 *  @warning must use g::url() instead of G5_URL
+	 *  @note G5_URL has a bug. it does not get proper domain based on the web browser's URL addresss.
+	 *  @see https://docs.google.com/a/withcenter.com/document/d/1cqG9sghuNGyrSKsZBaV4dmretcA6tb_WfOD1jlyldLk/edit#heading=h.xe27kp8u6rdk
 	 */
 	static function url()
 	{
