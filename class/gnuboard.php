@@ -30,9 +30,18 @@ class gnuboard {
 		else return G5_PATH;
 	}
 	
+	/**
+	 *  @warning must use g::url() instead of G5_URL
+	 */
 	static function url()
 	{
-		return G5_URL;
+		$url = G5_URL;
+		$pu = parse_url( $url);
+		if ( $pu['host'] != etc::domain() ) {
+				$url = str_replace( $pu['host'], etc::domain(), $url );
+		}
+		if ( $url[ count( $url ) -1 ] != '/' ) $url .= '/';
+		return $url;
 	}
 
 	/** @short returns url of base domain
