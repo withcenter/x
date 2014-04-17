@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <config>
+	<type>theme</type>
 	<view>mobile</view>
 	<name>
 		<en>Mobile Design No. 1</en>

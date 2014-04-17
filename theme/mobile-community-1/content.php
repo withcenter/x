@@ -1,13 +1,11 @@
 
 <div class='gallery'>
-<?php
-	$gallery_forum = x::meta('top_forum_with_images');
-	if ( empty($gallery_forum) ) $gallery_forum = bo_table(1);
-	echo latest( 'x-rwd-gallery', $gallery_forum , 40, 40, 1,
+<?php		
+	include widget(
 		array(
-			'width'		=> 240,
-			'height'	=> 180,
-			'radius'	=> 0,
+			'code'		=> 'x-rwd-gallery',
+			'name'		=> 'x-rwd-gallery',
+			'git'		=> 'https://github.com/x-widget/x-rwd-gallery',
 		)
 	);
 ?>

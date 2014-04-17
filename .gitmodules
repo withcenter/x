@@ -106,3 +106,9 @@
 [submodule "widget/community-3-latest-posts-all"]
 	path = widget/community-3-latest-posts-all
 	url = https://github.com/x-widget/community-3-latest-posts-all
+[submodule "widget/x-rwd-gallery"]
+	path = widget/x-rwd-gallery
+	url = https://github.com/x-widget/x-rwd-gallery
+[submodule "widget/x-latest-rwd-community-1"]
+	path = widget/x-latest-rwd-community-1
+	url = https://github.com/x-widget/x-latest-rwd-community-1
