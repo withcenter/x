@@ -36,7 +36,7 @@
 
 .list .item {
 	float: left;
-	width: 33%;
+	width: 32%;
 }
 .list .item .inner {
 	padding: 1em;
@@ -54,3 +54,12 @@
 	background-color: #efefef;
 }
 
+
+
+.page-title {
+	margin: 1em 0;
+	padding: 1em;
+	border: 1px solid grey;
+	font-size: 1.4em;
+	background-color: #efefef;
+}

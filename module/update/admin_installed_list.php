@@ -11,9 +11,14 @@
 		|
 		<a href='?module=update&action=admin_installed_list&type=module'><?=lang("MODULE", "모듈")?></a>
 	</div>
-	
-	<div class='title'><?=ln("Installed $type List", "설치된 $type 목록")?></div>
-	
+
+	<div class='page-title'>
+		<? if ( $type ) { ?>
+			<?=ln("Installed <b>$type</b> List", "설치된 <b>$type</b> 목록")?>
+		<? } else { ?>
+			<?=ln("Select Menu Above", "위 메뉴를 선택하세요.")?>
+		<? } ?>
+	</div>
 	
 <?php
 $dirs = file::getDirs( x::dir() . "/$type" );

@@ -43,11 +43,21 @@ function callback_ajax_load( data )
 ?>
 
 <br>
+<link rel="stylesheet" href="<?=module("$module.css")?>">
 <link rel="stylesheet" href="<?=module("list.css")?>">
 
 <a href='?module=update&action=<?=$pre?>list&type=theme'>THEME(<span class='count_theme'><img src='<?=x::url()?>/img/loader3.gif'></span>)</a>,
 <a href='?module=update&action=<?=$pre?>list&type=widget'>WIDGET(<span class='count_widget'><img src='<?=x::url()?>/img/loader3.gif'></span>)</a>,
 <a href='?module=update&action=<?=$pre?>list&type=module'>MODULE(<span class='count_module'><img src='<?=x::url()?>/img/loader3.gif'></span>)</a>
+
+
+<div class='page-title'>
+	<? if ( $type ) { ?>
+		<?=ln("List of available <b>$type</b>", "설치 가능한 <b>$type</b> 목록")?>
+	<? } else { ?>
+		<?=ln("Select Menu Above", "위 메뉴를 선택하세요.")?>
+	<? } ?>
+</div>
 
 <br>
 
