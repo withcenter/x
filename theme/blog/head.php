@@ -3,7 +3,7 @@
 <div id="hd">
     <div id="hd_wrapper">
         <div id="logo">
-			<a href="<?php echo G5_URL ?>">
+			<a href="<?=g::url()?>">
 				<?=x::meta('title')?x::meta('title') : '제목을 입력하세요';?>
 			</a>
         </div>

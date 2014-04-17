@@ -11,7 +11,7 @@
 <ul id="gnb_1dul">
 	
 	<li class="gnb_1dli">
-		<a href="<?php echo G5_URL ?>" class="gnb_2da">홈</a>
+		<a href="<?=g::url()?>" class="gnb_2da">홈</a>
 	</li>
 	
 	<li class="gnb_1dli">

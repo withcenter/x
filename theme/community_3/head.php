@@ -31,7 +31,7 @@
 	<table cellpadding=0 cellspacing=0><tr valign='top'>
 		<td width=400>
 			<div id="comm3_logo">
-				<a href="<?php echo G5_URL ?>">
+				<a href="<?=g::url();?>">
 				<?if( file_exists( path_logo() ) ) { ?>
 					<img src="<?=url_logo()?>">
 				<?} else {?>

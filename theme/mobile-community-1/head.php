@@ -12,7 +12,7 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
 <div id='header'>
 	<div class='top'>
 		<div class='logo'>
-			<a href="<?php echo G5_URL ?>">
+			<a href="<?=g::url()?>">
 				<?if( file_exists( path_logo() ) ) { ?>
 					<img src="<?=url_logo()?>">
 				<?} else {?>
@@ -36,7 +36,7 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
 	</div>
 	<div class='top-below-640-px'>
 		<div class='logo'>
-			<a href="<?php echo G5_URL ?>">
+			<a href="<?=g::url()?>">
 				<?if( file_exists( path_logo() ) ) { ?>
 					<img src="<?=url_logo()?>">
 				<?} else {?>
@@ -52,7 +52,7 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
 	</div>
 	<div class='top-below-500-px'>
 		<div class='logo'>
-			<a href="<?php echo G5_URL ?>">
+			<a href="<?=g::url()?>">
 				<?if( file_exists( path_logo() ) ) { ?>
 					<img src="<?=url_logo()?>">
 				<?} else {?>

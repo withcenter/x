@@ -90,7 +90,7 @@
 			<? if ( admin() ) { ?>
 				<li><a href='<?=url_x_admin()?>'><?=ln('X Admin Page', 'X 관리자 페이지');?></a></li>
 				<li><a href='<?=url_site_admin()?>'><?=ln('Site Admin Page', '사이트 관리자 페이지');?></a></li>
-				<li><a href='<?=G5_URL?>/adm'><?=ln('G5 Admin Page', 'G5 관리자 페이지');?></a></li>
+				<li><a href='<?=g::url()?>/adm'><?=ln('G5 Admin Page', 'G5 관리자 페이지');?></a></li>
 			<? } ?>
 		</ul>
 		<?php
