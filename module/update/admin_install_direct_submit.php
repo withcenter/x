@@ -6,7 +6,7 @@
 	}
 	
 
-	include "menu.php";
+	include "dist-menu.php";
 	
 	$a = explode('/', $source_link);
 	$name = $a[ count($a) - 1 ];

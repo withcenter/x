@@ -1,3 +1,7 @@
+<?php
+	include 'dist-menu.php';
+	return;
+?>
 <link rel="stylesheet" href="<?=module("$module.css")?>">
 
 <?=ln('Theme', '테마')?> :
