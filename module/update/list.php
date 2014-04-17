@@ -5,7 +5,7 @@
  */
 ?>
 <script>
-var url = "<?=X_URL?>/x/index.php";
+var url = "<?=X_URL_REAL?>/x/index.php";
 var data = "module=update&action=ajax_main_server_list_info_submit&type=<?=$in['type']?>";
 ajax_cross_domain_call( {
 	type: 'POST',
