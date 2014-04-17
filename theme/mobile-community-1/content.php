@@ -11,9 +11,25 @@
 ?>
 </div>
 
-<?
-	include 'forum_tab.php';
-?>
+<div class='forum_tab_wrapper'> 
+	<?for( $forum_count = 0; $forum_count < 4; $forum_count++ ){?>
+	<div class='forum-tab-posts item_<?=$forum_count?>'>
+		<div class='forum-tab-inner'>
+			<?php		
+				include widget(
+					array(
+						'code'		=> 'x-latest-rwd-community-1-item-'.$forum_count,
+						'name'		=> 'x-latest-rwd-community-1',
+						'git'		=> 'https://github.com/x-widget/x-latest-rwd-community-1',
+					)
+				);
+			?>
+		</div>
+	</div>
+<?}?>
+<div style='clear:both'></div>
+</div>
+
 <div class='latest-thumbnail'>
 	<div class='left'>
 		<div class='inner'>

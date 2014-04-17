@@ -32,7 +32,11 @@ function callback_ajax_load( data )
 	$('.list').html( data.html );
 }
 </script>
-
+<? if ( ! admin() ) { ?>
+<style>
+.install { display: none; }
+</style>
+<? } ?>
 <?
 	include 'dist-menu.php';
 	if ( admin() ) $pre = 'admin_';
@@ -57,6 +61,7 @@ function callback_ajax_load( data )
 			"githubm.com 으로 부터 $type 정보를 다운로드 중입니다.")?>
 	</div>
 </div>
+<div style='clear:left;'></div>
 
 
 <?

@@ -67,9 +67,7 @@
 	if ( $data && ( $data['id'] != my('id') ) ) return _error("source ID exists. but it is not your source. Change the ID or log into the user.");
 	
 	
-	
-	$re = x::data_update(
-		array(
+	$o =	array(
 			'first'				=> 'source',
 			'second'			=> $xml['type'],
 			'third'				=> $xml['id'],
@@ -77,7 +75,6 @@
 			up::project_url			=> $project_url,
 			up::name			=> string::scalar($xml['name']),
 			up::category		=> $xml['category'],
-			up::sub_category	=> $xml['sub_category'],
 			up::author			=> $xml['author'],
 			up::email			=> $xml['email'],
 			up::version			=> $xml['version'],
@@ -85,8 +82,13 @@
 			up::demo			=> $xml['demo'],
 			up::short			=> string::scalar( $xml['short'] ),
 			up::detail			=> string::scalar( $xml['detail'] ),
-		)
-	);
+		);
+	if ( is_array($xml['category']) ) {
+		$o[ up::category ] = $xml['category']['main'];
+		$o[ up::sub_category ] = $xml['category']['sub'];
+	}
+	
+	$re = x::data_update( $o );
 	
 	if ( $re == 1 ) echo "UPDATED";
 	else if ( $re == 2 ) echo "INSERTED";
