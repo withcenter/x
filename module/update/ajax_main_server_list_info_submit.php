@@ -4,21 +4,24 @@
 	$data['count_theme'] = x::data_count(
 		array(
 			'first'		=> 'source',
-			'second'	=> 'theme'
+			'second'	=> 'theme',
+			up::project_url	=> array("<> ''"),
 		)
 	);
 	
 	$data['count_widget'] = x::data_count(
 		array(
 			'first'		=> 'source',
-			'second'	=> 'widget'
+			'second'	=> 'widget',
+			up::project_url	=> array("<> ''"),
 		)
 	);
 	
 	$data['count_module'] = x::data_count(
 		array(
 			'first'		=> 'source',
-			'second'	=> 'module'
+			'second'	=> 'module',
+			up::project_url	=> array("<> ''"),
 		)
 	);
 	
@@ -75,7 +78,7 @@
 					$ins = ln("INSTALL", "설치하기");
 					$url = "?module=update&action=admin_install&type=$in[type]&source_link=$item[project_url]";
 				}
-				$install = "<div class='install'><a href='$url'><b>$ins</b></a></div>";
+				$install = "<a href='$url'><b>$ins</b></a>";
 				$html .= "
 					<div class='item'><div class='inner'>
 						<div class='preview'><img src='$item[url_preview]'></div>
