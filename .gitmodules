@@ -115,3 +115,6 @@
 [submodule "widget/x-rwd-text-with-thumbnail"]
 	path = widget/x-rwd-text-with-thumbnail
 	url = https://github.com/x-widget/x-rwd-text-with-thumbnail
+[submodule "widget/x-latest-community-2"]
+	path = widget/x-latest-community-2
+	url = https://github.com/x-widget/x-latest-community-2
