@@ -20,5 +20,6 @@
 		'community',
 		'mall',
 		'gallery',
+		'company',
 		'etc',
 	);

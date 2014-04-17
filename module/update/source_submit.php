@@ -19,7 +19,7 @@
 		return;
 	}
 	
-	if ( empty($xml) ) return _error("Failed on reading config.xml");
+	if ( empty($xml) ) return _error("Failed on reading config.xml. Please check if the XML is malformed or wellformed.");
 	
 	
 	if ( empty( $xml['type'] ) ) {
