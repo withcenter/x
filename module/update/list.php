@@ -6,7 +6,7 @@
 ?>
 <script>
 var url = "<?=X_URL?>/x/index.php";
-var data = "module=update&action=ajax_main_server_list_info_submit";
+var data = "module=update&action=ajax_main_server_list_info_submit&type=<?=$in['type']?>";
 ajax_cross_domain_call( {
 	type: 'POST',
 	url: url,
@@ -21,6 +21,8 @@ function callback_ajax_load( data )
 		$('.count_module').text( data.count_module );
 	},
 	1000);
+	$('.loader').slideUp('fast');
+	$('.list').html( data.html );
 }
 </script>
 
@@ -35,10 +37,21 @@ function callback_ajax_load( data )
 <a href='?module=update&action=list&type=module'>MODULE(<span class='count_module'><img src='<?=x::url()?>/img/loader3.gif'></span>)</a>
 
 <br>
+
+<?
+	if ( empty($type) ) return;
+?>
+<div class='list'>
+	<div class='loader'>
+		<img src="<?=x::url()?>/img/loader12.gif">
+		<?=ln("Please, wait while $type information is downloaded from github.com",
+			"githubm.com 으로 부터 $type 정보를 다운로드 중입니다.")?>
+	</div>
+</div>
+
+
 <?
 	return;
-	
-	if ( empty($type) ) return;
 	
 	$rows = x::data_gets(
 		array(
