@@ -17,7 +17,23 @@ class sql {
 		"<value"
 		"<=value"
 		"<>value"
-		
+	 *  @warning DO NOT USE like below
+	 *  
+	 *  	`field_name`=>"<>''"
+	 *  
+	 *  				will interpret like below
+	 *  
+	 * 			 		`field_name`<> '''
+	 *  
+	 *  				===> sing quote cause error.
+	 *  
+	 *  	`field`=>'<>NULL'
+	 *  				
+	 *  				result => `field`<>'NULL'
+	 *  
+	 *  	so, if you need to compare with NULL or empty, use ANY expression.
+	 *  	
+	 *  
 	 *  @note How to use (ANY) expression :
 	 *  
 		if it is array, then the first element will be used as the express and value.

@@ -1,3 +1,6 @@
+DEPRECATED; exit;
+<?exit;?>
+
 <?include 'menu.php'?>
 <div class='installed'>
 	<div class='title'><?=ln("Installed $type List", "설치된 $type 목록")?></div>
