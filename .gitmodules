@@ -118,3 +118,6 @@
 [submodule "widget/x-latest-community-2"]
 	path = widget/x-latest-community-2
 	url = https://github.com/x-widget/x-latest-community-2
+[submodule "widget/x-community-2-bottom-latest"]
+	path = widget/x-community-2-bottom-latest
+	url = https://github.com/x-widget/x-community-2-bottom-latest
