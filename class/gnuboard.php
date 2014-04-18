@@ -1211,5 +1211,16 @@ class gnuboard {
 	
 	
 	
+	static function post_thumbnail($bo_table, $wr_id, $thumb_width, $thumb_height, $is_create=false, $is_crop=true, $crop_mode='center', $is_sharpen=true, $um_value='80/0.5/3')
+	{
+		if ( db::table_exist( self::table_name( $bo_table ) ) ) 
+			return get_list_thumbnail($bo_table, $wr_id, $thumb_width, $thumb_height, $is_creat, $is_crop, $crop_mode, $is_sharpen, $um_value);
+		else
+			return array();
+	}
+	
+	
+	
+	
 } // eo class
 

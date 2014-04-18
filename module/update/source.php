@@ -11,3 +11,6 @@
 	<input type="submit">
 </form>
 
+<br>
+
+@warning: you have to wait for 10 minutes or more for your config.xml to be applied into raw git server.

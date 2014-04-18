@@ -361,6 +361,9 @@ class database extends sql{
 	
 	/** @short returns true if the table is exists.
 	  *
+	  * @code
+	  *	return db::table_exist( self::table_name($bo_table) );
+	  * @endcode
 	  */
 	static function table_exist($table)
 	{
