@@ -11,6 +11,18 @@
 	
 	
 	
+	/** @short 이 부분은 G5 가 패치되기를 기다렸다가 패치되면 제거를 한다. */
+	
+	$src = "SERVER_NAME";
+	$dst = "HTTP_HOST";
+	$data = patch_string( $data, $src, $dst );
+	
+	$src = '$'."_SERVER['SCRIPT_NAME']";
+	$dst = "preg_replace('#/+#', '/', ".'$'."_SERVER['SCRIPT_NAME'])";
+	$data = patch_string( $data, $src, $dst );
+	
+	
+	
 	$src = '$html_process = new html_process();';
 	$dst = '/* $html_process moved before loading extend sripts */';
 	$data = patch_string( $data, $src, $dst );
