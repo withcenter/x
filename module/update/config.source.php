@@ -6,11 +6,13 @@
 		'html',
 		'css',
 		'login',
-		'menu'
+		'menu',
+		'statistics',
 	);
 	$xml_widget_sub_category = array(
 		'latest',
 		'gallery',
+		'none',
 	);
 	
 

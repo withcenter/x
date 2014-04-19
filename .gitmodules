@@ -124,3 +124,6 @@
 [submodule "widget/x-community-2-popular-posts"]
 	path = widget/x-community-2-popular-posts
 	url = https://github.com/x-widget/x-community-2-popular-posts
+[submodule "widget/stat-visit"]
+	path = widget/stat-visit
+	url = http://github.com/x-widget/stat-visit

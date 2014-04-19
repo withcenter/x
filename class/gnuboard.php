@@ -1219,7 +1219,12 @@ class gnuboard {
 			return array();
 	}
 	
-	
+	static function visit()
+	{
+		global $config;
+		preg_match("/오늘:(.*),어제:(.*),최대:(.*),전체:(.*)/", $config['cf_visit'], $visit);
+		return $visit;
+	}
 	
 	
 } // eo class

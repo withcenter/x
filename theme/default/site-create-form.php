@@ -21,6 +21,30 @@
 							<td><input type='text' name='title'></td>
 						</tr>
 						<tr>
+							<td><span class='item'>테마 선택</span></td>
+							<td></td>
+							<td>
+								<select name='theme'>
+								<?php
+									foreach ( file::getDirs( X_DIR_THEME ) as $dir ) {
+										$path = X_DIR_THEME . "/$dir/config.xml";
+										if ( ! file_exists( $path ) ) continue;
+										$theme_config = load_config( $path );
+										if ( ! $theme_config ) continue;
+										
+										$name = $theme_config['name'][L];
+										if ( empty($name) ) continue;
+										
+										$view = explode(',', $theme_config['view']);
+										if ( ! in_array( 'pc', $view ) ) continue;
+										
+										echo "<option value='$dir'>$name</option>";
+									}
+								?>
+								</select>
+							</td>
+						</tr>
+						<tr>
 							<td></td>
 							<td></td>
 							<td><input class='site-create-submit' type='submit' value='생성'></td>

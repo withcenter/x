@@ -14,7 +14,15 @@
 						?>
 					</div>
 					<div class='visit_stats'>
-						<?=visit('community-3')?>
+						<?
+							include widget(
+								array(
+									'code'		=> 'stat-visit',
+									'name'		=> 'stat-visit',
+									'git'		=> 'https://github.com/x-widget/stat-visit',
+								)
+							);
+						?>
 					</div>
 				</div>				
 			</div>				

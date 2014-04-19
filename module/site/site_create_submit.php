@@ -9,7 +9,7 @@
 	$domain = strtolower( $domain );
 	if ( $error_code = x::site_create( array('domain'=>$domain, 'title'=>addslashes($in['title'])) ) ) return jsBack("해당 사이트가 이미 존재합니다. 다른 도메인을 입력하십시오.");
 	
-	meta_set( $domain, 'theme', 'community_3');
+	meta_set( $domain, 'theme', $theme);
 	meta_set( $domain, 'mobile_theme', 'mobile-community-1');
 	
 	$o = array(	
