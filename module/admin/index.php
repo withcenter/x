@@ -21,5 +21,5 @@
 	</li>
 </ul>
 
-<iframe id='x-news' src="<?=X_URL?>/x/?module=etc&action=x_news_submit">
+<iframe id='x-news' src="<?=X_URL_REAL?>/x/?module=etc&action=x_news_submit">
 </div>
