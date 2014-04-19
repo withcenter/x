@@ -17,6 +17,11 @@
 		'name'				=> 'icon',
 		'caption'			=> ln('Icon', '아이콘'),
 	) );
+
+
+
+	include widget_config_form('target');
+	echo "<div>클릭시 새창으로 해당 게시글을 엽니다.</div>";
 	
 	
 	
