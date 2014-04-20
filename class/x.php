@@ -1195,6 +1195,12 @@ class x extends gnuboard
 		return db::result( sql::query_count( $o ) );
 	}
 	
+	static function data_delete( $idx )
+	{
+		db::query("DELETE FROM x_data WHERE idx=$idx");
+	}
+	
+	
 	
 	
 	
