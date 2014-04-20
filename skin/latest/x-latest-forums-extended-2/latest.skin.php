@@ -10,9 +10,14 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		<span class='more-button'><a href="?page=template_main">자세히 <img src="<?=$latest_skin_url?>/img/more-button.png" /></a></span>
 	</div>
     <ul>
-    <?php for ($i=0; $i<count($list); $i++) {?>
+		<?php
+			for ($i=0; $i<count($list); $i++) {
+				$count_comment = $list[$i]['wr_comment'];
+				if ( $count_comment ) $count_comment = " ($count_comment)";
+				else $count_comment = '';
+		?>
         <li>
-			<span class='content'><img src='<?=$latest_skin_url?>/img/bullet.png'/>	<a href='<?=$list[$i]['href']?>'><?=cut_str(get_text(strip_tags($list[$i]['wr_subject'])),"50","...")?></a></span>            
+			<span class='content'><img src='<?=$latest_skin_url?>/img/bullet.png'/>	<a href='<?=$list[$i]['href']?>'><?=cut_str(get_text(strip_tags($list[$i]['wr_subject'])),"50","...")?><?=$count_comment?></a></span>            
         </li>
     <?php }  ?>
     <?php if (count($list) == 0) { //게시물이 없을 때  ?>
