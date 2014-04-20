@@ -143,13 +143,19 @@ function hook_css_js_version()
 }
 
 
+/** *********************************************************************************
+ *
+ *
+ * PATCH CODE
+ * ------------
+ *
+ */
 
 
 
 
 
-
-/** @short reset forum skin select in admin page to support the skin path of x
+/** @short reset forum skin select in gnuboard super admin page to support the skin path of x
  *  
  */
 if ( board_form_page() ) {
@@ -162,6 +168,9 @@ if ( board_form_page() ) {
 			$(function(){
 				$("#bo_skin").append("$opts");
 				$("#bo_skin").val('$board[bo_skin]');
+				$("#bo_mobile_skin").append("$opts");
+				$("#bo_mobile_skin").val('$board[bo_mobile_skin]');
+				
 			});
 		</script>
 EOH;
