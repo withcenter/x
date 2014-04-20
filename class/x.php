@@ -949,7 +949,7 @@ class x extends gnuboard
 	
 	static function url_config_forum( $id=null ) {
 		if ( empty($id) ) $id = $GLOBALS['bo_table'];
-		return x::url() . "?module=multi&action=config_forum&mode=forum_setting&bo_table=$id";
+		return x::url() . "?module=site&action=config_forum&mode=forum_setting&bo_table=$id";
 	}
 	
 	
