@@ -12,7 +12,7 @@
 
 <? if ( login() ) { ?>
 |
-<a href='?module=update&action=<?=$pre?>manage_source'>MANAGE Source</a>
+<a href='<?=X_URL_REAL?>?module=update&action=<?=$pre?>manage_source'>MANAGE Source</a>
 <? } ?>
 </div>
 <style>
