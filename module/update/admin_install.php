@@ -39,4 +39,11 @@
 		</td>
 		<? } ?>
 	</tr>
+	<tr height='20'><td>&nbsp;</td></tr>
+	<tr valign='top'>
+		<td></td>
+		<td>
+			<?include 'admin_install_manual.php'?>
+		</td>
+	</tr>
 </table>

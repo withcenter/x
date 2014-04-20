@@ -15,8 +15,8 @@
 	$cwd = getcwd();
     $host = $_SERVER['HTTP_HOST'];
 	$dir = "$cwd";
-
-	$var = "type=$type&dir=".urlencode($dir)."&host=".urlencode($host) . "&" . $var;
+	$dummy = time();
+	$var = "dummy=$dummy&type=$type&dir=".urlencode($dir)."&host=".urlencode($host) . "&" . $var;
 		
 ?>
 <script>

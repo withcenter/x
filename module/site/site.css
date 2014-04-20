@@ -1641,7 +1641,11 @@ form.config_menu select, form.config_menu input {
 	border-radius: 3px;
 }
 
-.admin-site-config .sub-title {
+.admin-site-config > form > div {
+	margin: 1em 0;
+}
+
+.admin-site-config .caption {
 	display: inline-block;
 	background-color: #666666;
 	color: #ffffff;

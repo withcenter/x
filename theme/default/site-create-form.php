@@ -20,6 +20,13 @@
 							<td></td>
 							<td><input type='text' name='title'></td>
 						</tr>
+						<? if ( config('site_create_form_theme') == 'hide' ) { ?>
+							<?
+								$default_theme = config('site_create_theme_default');
+								if ( empty($default_theme) ) jsAlert("Error: No default theme is selected when it is set to use default theme.");
+							?>
+							<input type="hidden" name="theme" value="<?=$default_theme?>">
+						<? } else { ?>
 						<tr>
 							<td><span class='item'>테마 선택</span></td>
 							<td></td>
@@ -44,6 +51,7 @@
 								</select>
 							</td>
 						</tr>
+						<? } ?>
 						<tr>
 							<td></td>
 							<td></td>
