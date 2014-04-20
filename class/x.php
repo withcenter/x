@@ -1177,6 +1177,14 @@ class x extends gnuboard
 		return db::rows( sql::query( $o ) );	
 	}
 	
+	static function data_get( $o )
+	{
+		$o['limit'] = '1';
+		$rows = self::data_gets( $o );
+		return $rows[0];
+	}
+	
+	
 	/**
 	@code
 		$re = x::data_count(
