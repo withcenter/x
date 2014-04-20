@@ -9,6 +9,11 @@
 |
 <? } ?>
 <a href='<?=X_URL_REAL?>?module=update&action=source' target='_blank'>UPLOAD Source</a>
+
+<? if ( login() ) { ?>
+|
+<a href='?module=update&action=<?=$pre?>manage_source'>MANAGE Source</a>
+<? } ?>
 </div>
 <style>
 .dist-menu [href*='<?=$action?>'] {
