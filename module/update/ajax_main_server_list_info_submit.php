@@ -32,6 +32,7 @@
 			array(
 				'first'			=> 'source',
 				'second'		=> $in['type'],
+				'limit'			=> '1000',
 			)
 		);
 		
