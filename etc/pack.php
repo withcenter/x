@@ -80,6 +80,19 @@ copy_source( 'x/widget/none' );
 copy_source( 'x/widget/post-comment-latest' );
 copy_source( 'x/widget/post-latest' );
 
+copy_source( 'x/widget/community-3-timed-list' );
+copy_source( 'x/widget/community-3-images-with-caption' );
+copy_source( 'x/widget/community-3-timed-list-with-images' );
+copy_source( 'x/widget/latest-community3-posts' );
+copy_source( 'x/widget/community-3-popular-posts' );
+copy_source( 'x/widget/community-3-latest-posts-all' );
+copy_source( 'x/widget/x-rwd-gallery' );
+copy_source( 'x/widget/x-latest-rwd-community-1' );
+copy_source( 'x/widget/x-rwd-text-with-thumbnail' );
+copy_source( 'x/widget/stat-visit' );
+
+
+
 
 
 
@@ -91,16 +104,14 @@ copy_source( 'x/skin/outlogin/basic' );
 copy_source( 'x/skin/visit/basic' );
 
 copy_source( 'x/skin/outlogin/x-outlogin-travel_3');
-copy_source( 'x/skin/latest/x-latest-community3-posts');
-copy_source( 'x/skin/latest/x-community_3_images_with_caption');
-copy_source( 'x/skin/latest/x-community-3-timed-list');
 copy_source( 'x/skin/outlogin/x-outlogin-blog');
 copy_source( 'x/skin/latest/x-latest-blog');
-copy_source( 'x/skin/latest/x-rwd-gallery');
-copy_source( 'x/skin/latest/x-latest-rwd-community-1');
-copy_source( 'x/skin/latest/x-rwd-text-with-thumbnail');
-copy_source( 'x/skin/outlogin/x-outlogin-mobile-1');
-copy_source( 'x/skin/latest/x-community-3-timed-list-with-images');
+copy_source( 'x/skin/outlogin/x-outlogin-mobile-1' );
+copy_source( 'x/skin/outlogin/x-outlogin-mobile-1-640px' );
+copy_source( 'x/skin/visit/x-visit-blog');
+copy_source( 'x/skin/latest/x-rwd-gallery-2-mobile-latest-posts' );
+
+
 
 
 copy_source( 'x/skin/member/basic');
@@ -141,7 +152,7 @@ function check_tmp_folder()
 	
 	$re = @mkdir( $dir_x, 0777, true );
 	if ( $re ) message("'$dir_x' created.");
-	else error("Temporiry folder '$dir_x' does not exist and cannot be created.");
+	else error("Temporiry folder '$dir_x' does not exist and cannot be created. Check if the permission is granted and try again.");
 	
 }
 
