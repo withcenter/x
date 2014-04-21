@@ -1,3 +1,6 @@
+<?php
+include x::dir().'/etc/share/head.php';
+?>
 
 	<table cellpadding=0 cellspacing=0 width='100%' class='admin-list-table'>
 		<tr valign='top' class='header'>
