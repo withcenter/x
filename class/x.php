@@ -797,13 +797,13 @@ class x extends gnuboard
 			site_set( $in['idx'], $domain, $mb_id );
 		@endcod
 	 */
-	static function site_set( $idx, $domain, $mb_id=null ) {
+	static function site_set( $idx, $domain, $mb_id=null, $good=0 ) {
 		if ( x::site( $idx ) ) {
-			db::update( 'x_site_config', array( 'domain'=>$domain, 'mb_id'=>$mb_id ), array('idx'=>$idx) );
+			db::update( 'x_site_config', array( 'domain'=>$domain, 'mb_id'=>$mb_id, 'good'=>$good ), array('idx'=>$idx) );
 			return $idx;
 		}
 		else {
-			db::insert( 'x_site_config', array( 'domain'=>$domain, 'mb_id'=>$mb_id, 'stamp_created'=>time() ) );
+			db::insert( 'x_site_config', array( 'domain'=>$domain, 'mb_id'=>$mb_id, 'stamp_created'=>time(), 'good'=>$good ) );
 			return db::insert_id();
 		}
 	}

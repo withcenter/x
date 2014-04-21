@@ -127,3 +127,15 @@
 [submodule "widget/stat-visit"]
 	path = widget/stat-visit
 	url = http://github.com/x-widget/stat-visit
+[submodule "widget/x-community-2-new-posts"]
+	path = widget/x-community-2-new-posts
+	url = https://github.com/x-widget/x-community-2-new-posts
+[submodule "widget/x-community-2-visits"]
+	path = widget/x-community-2-visits
+	url = https://github.com/x-widget/x-community-2-visits
+[submodule "widget/x-latest-gallery-1-posts-with-image"]
+	path = widget/x-latest-gallery-1-posts-with-image
+	url = https://github.com/x-widget/x-latest-gallery-1-posts-with-image
+[submodule "widget/x-latest-gallery-1-lower-posts"]
+	path = widget/x-latest-gallery-1-lower-posts
+	url = https://github.com/x-widget/x-latest-gallery-1-lower-posts

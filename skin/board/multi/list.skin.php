@@ -1,4 +1,6 @@
-<? if ( etc::old_ie() ) { ?>
+<?
+	if ( etc::old_ie() ) {
+?>
 <style>
 .list-type table {
 	width:240px !important;

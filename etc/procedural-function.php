@@ -131,9 +131,9 @@ function site_delete( $mixed )
 }
 
 
-function site_set( $idx, $domain, $mb_id=null )
+function site_set( $idx, $domain, $mb_id=null, $good=0 )
 {
-	return x::site_set( $idx, $domain, $mb_id );
+	return x::site_set( $idx, $domain, $mb_id, $good );
 }
 
 /** @see x::meta_set() */

@@ -80,6 +80,17 @@
 		</td>
 	</tr>
 	
+	<tr>
+		<td>Recommand</td>
+		<td>
+			<select name='good'>
+				<? for ( $i=0; $i < 10; $i ++ ) { ?>
+					<option value="<?=$i?>" <? if ( $i == $site['good'] ) echo "selected=1"; ?>><?=$i?></option>
+				<? } ?>
+			</select>
+		</td>
+	</tr>
+	
 	
 	
 	<tr>
