@@ -127,3 +127,9 @@
 [submodule "widget/stat-visit"]
 	path = widget/stat-visit
 	url = http://github.com/x-widget/stat-visit
+[submodule "widget/x-community-2-new-posts"]
+	path = widget/x-community-2-new-posts
+	url = https://github.com/x-widget/x-community-2-new-posts
+[submodule "widget/x-community-2-visits"]
+	path = widget/x-community-2-visits
+	url = https://github.com/x-widget/x-community-2-visits
