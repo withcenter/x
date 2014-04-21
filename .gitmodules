@@ -133,3 +133,9 @@
 [submodule "widget/x-community-2-visits"]
 	path = widget/x-community-2-visits
 	url = https://github.com/x-widget/x-community-2-visits
+[submodule "widget/x-latest-gallery-1-posts-with-image"]
+	path = widget/x-latest-gallery-1-posts-with-image
+	url = https://github.com/x-widget/x-latest-gallery-1-posts-with-image
+[submodule "widget/x-latest-gallery-1-lower-posts"]
+	path = widget/x-latest-gallery-1-lower-posts
+	url = https://github.com/x-widget/x-latest-gallery-1-lower-posts
