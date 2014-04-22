@@ -196,3 +196,6 @@
 [submodule "widget/login-gallery-2"]
 	path = widget/login-gallery-2
 	url = https://github.com/x-widget/login-gallery-2
+[submodule "widget/login-gallery-mobile"]
+	path = widget/login-gallery-mobile
+	url = https://github.com/x-widget/login-gallery-mobile
