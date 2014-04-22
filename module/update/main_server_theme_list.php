@@ -3,12 +3,7 @@
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" href="<?=module("$module.css")?>">
-	<!--[if lt IE 9]>
-		<script type='text/javascript' src='<?php echo G5_URL ?>/x/js/jquery-1.11.0.min.js'></script>
-	<![endif]-->
-	<!--[if gte IE 9]><!-->
-		<script type='text/javascript' src='<?php echo G5_URL ?>/x/js/jquery-2.1.0.min.js'></script>
-	<!--<![endif]-->
+<?=javascript_jquery()?>
 </head>
 <body>
 <div class='theme-list'>

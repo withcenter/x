@@ -23,12 +23,7 @@
 <script>
 var g5_url       = "<?php echo G5_URL ?>";
 </script>
-	<!--[if lt IE 9]>
-		<script type='text/javascript' src='<?=x::url()?>/js/jquery-1.11.0.min.js'></script>
-	<![endif]-->
-	<!--[if gte IE 9]><!-->
-		<script type='text/javascript' src='<?=x::url()?>/js/jquery-2.1.0.min.js'></script>
-	<!--<![endif]-->
+<?=javascript_jquery()?>
 </head>
 <body>
 

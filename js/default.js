@@ -11,6 +11,44 @@ function trace( msg )
 }
 
 
+/** @short returns the version of Internet Explorer
+ * @return if -1 is return then the browser is not IE.
+ * @code
+	var $v = ie_version();
+	if ( $v > 0 &&  $v <= 8 ) {
+		/// IE 6,7,8 버젼을 사용하고 있음.
+	}
+ * @endcode
+*/
+function ie_version()
+// Returns the version of Internet Explorer or a -1
+// (indicating the use of another browser).
+{
+  var rv = -1; // Return value assumes failure.
+  if (navigator.appName == 'Microsoft Internet Explorer')
+  {
+    var ua = navigator.userAgent;
+    var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+    if (re.exec(ua) != null)
+      rv = parseFloat( RegExp.$1 );
+  }
+  return rv;
+}
+
+/** 브라우저가 IE 가 아니면 참을 리턴한다. */
+function is_ie()
+{
+	return ie_version() != -1;
+}
+/** returns true if the browser is IE 6,7,8 */
+function is_old_ie()
+{
+	var $v = ie_version();
+	if ( $v > 0 &&  $v <= 8 ) return true;
+	else return false;
+}
+
+
 
 /** @short skin update
  *
@@ -125,6 +163,10 @@ function ajax_cross_domain_call( option )
 	$.ajax( option );
 }
 
+
+if ( is_old_ie() ) {
+}
+else {
 window.addEventListener('message', message_receiver, false);
 function message_receiver( e )
 {
@@ -133,6 +175,8 @@ function message_receiver( e )
 		trace("popup_layer_resize: " + e.data.height + 'px');
 	}
 }
+}
+
 
 
 

@@ -138,15 +138,22 @@ function widget_config_extra_end()
 
 function javascript_jquery()
 {
-	$x_url=x::url();
-	return <<<EOH
-	<!--[if lt IE 9]>
-		<script type='text/javascript' src='$x_url/js/jquery-1.11.0.min.js?version=1110'></script>
-	<![endif]-->
-	<!--[if gte IE 9]><!-->
-		<script type='text/javascript' src='$x_url/js/jquery-2.1.0.min.js?version=2010'></script>
-	<!--<![endif]-->
-EOH;
+	$x_url = x::url();
+	
+	$browser = etc::browser();
+	$name = $browser['name'];
+	
+	if ( $name == 'chrome' || $name == 'firefox' ) {
+		return "<script type='text/javascript' src='$x_url/js/jquery-2.1.0.min.js?version=140422'></script>";
+	}
+	else if ( etc::new_ie() ) {
+		return "<script type='text/javascript' src='$x_url/js/jquery-2.1.0.min.js?version=140422'></script>";
+	}
+	else {
+		return "<script type='text/javascript' src='$x_url/js/jquery-1.11.0.min.js?version=140422'></script>";
+	}
+	
+	
 }
 
 
