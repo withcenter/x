@@ -154,3 +154,13 @@
 [submodule "widget/x-latest-travel-2-posts"]
 	path = widget/x-latest-travel-2-posts
 	url = https://github.com/x-widget/x-latest-travel-2-posts
+[submodule "widget/x-latest-left-gallery"]
+	path = widget/x-latest-left-gallery
+	url = https://github.com/x-widget/x-latest-left-gallery
+[submodule "widget/x-latest-right-gallery"]
+	path = widget/x-latest-right-gallery
+	url = https://github.com/x-widget/x-latest-right-gallery
+[submodule "widget/x-latest-gallery-posts"]
+	path = widget/x-latest-gallery-posts
+	url = https://github.com/x-widget/x-latest-gallery-posts
+
