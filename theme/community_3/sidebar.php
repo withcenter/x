@@ -1,6 +1,16 @@
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/sidebar.css' />
 <div class='login'>
-<?=outlogin('x-outlogin-travel_3') ?>
+
+<?php
+	include widget(
+		array(
+			'code'		=> 'login-community-3',
+			'name'		=> 'login-community-3',
+			'git'		=> 'https://github.com/x-widget/login-community-3',
+		)
+	);
+?>
+
 </div>
 
 <div class='company-banner'>

@@ -1,0 +1,15 @@
+.site-list-table  tr td {
+	border-top: 1px solid #d5d5d5;
+	height: 30px;
+	line-height: 30px;
+}
+.site-list-table .header td {
+	font-family: '맑은 고딕', AppleGothic;
+	font-size: 10pt;
+	color: #737373;
+	border-top: 0;
+}
+
+.site-list-table  .last-row td {
+	border-bottom: 1px solid #d5d5d5;
+}
