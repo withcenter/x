@@ -5,7 +5,10 @@
 		return;
 	}
 	
-	$idx = site_set( $in['idx'], $domain, $mb_id );
+	
+	$idx = site_set( $in['idx'], $domain, $mb_id, $good );
+	
+	
 	meta_set( $domain, 'title', $title );
 	meta_set( $domain, 'theme', $theme );
 	meta_set( $domain, 'status', $status );

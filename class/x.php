@@ -45,6 +45,8 @@ class x extends gnuboard
 	 *  @return string URL
 	 *  
 	 *  @details 웹 브라우저로 접속해야 할 때 이용한다.
+	 *  
+	 *  @warning the URL ends without slash(/).
 	 */
 	static function url()
 	{
@@ -113,7 +115,7 @@ class x extends gnuboard
 	 */
 	static function url_admin()
 	{
-		return self::url() . "/?module=admin&action=index";
+		return self::url() . "?module=admin&action=index";
 	}
 	
 	static function admin_menu()
@@ -123,7 +125,7 @@ class x extends gnuboard
 	
 	static function url_setting()
 	{
-		return self::url() . "/?module=member&action=setting";
+		return self::url() . "?module=member&action=setting";
 	}
 	
 	
@@ -797,13 +799,13 @@ class x extends gnuboard
 			site_set( $in['idx'], $domain, $mb_id );
 		@endcod
 	 */
-	static function site_set( $idx, $domain, $mb_id=null ) {
+	static function site_set( $idx, $domain, $mb_id=null, $good=0 ) {
 		if ( x::site( $idx ) ) {
-			db::update( 'x_site_config', array( 'domain'=>$domain, 'mb_id'=>$mb_id ), array('idx'=>$idx) );
+			db::update( 'x_site_config', array( 'domain'=>$domain, 'mb_id'=>$mb_id, 'good'=>$good ), array('idx'=>$idx) );
 			return $idx;
 		}
 		else {
-			db::insert( 'x_site_config', array( 'domain'=>$domain, 'mb_id'=>$mb_id, 'stamp_created'=>time() ) );
+			db::insert( 'x_site_config', array( 'domain'=>$domain, 'mb_id'=>$mb_id, 'stamp_created'=>time(), 'good'=>$good ) );
 			return db::insert_id();
 		}
 	}

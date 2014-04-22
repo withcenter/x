@@ -19,7 +19,6 @@ if ( x::installed() && etc::web() ) {
 }
 
 
-
 include 'etc/begin.php';
 
 
