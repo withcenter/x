@@ -164,3 +164,12 @@
 	path = widget/x-latest-gallery-posts
 	url = https://github.com/x-widget/x-latest-gallery-posts
 
+[submodule "widget/x-latest-gallery3-gallery-top-left"]
+	path = widget/x-latest-gallery3-gallery-top-left
+	url = https://github.com/x-widget/x-latest-gallery3-gallery-top-left
+[submodule "widget/x-latest-gallery3-gallery-top-right"]
+	path = widget/x-latest-gallery3-gallery-top-right
+	url = https://github.com/x-widget/x-latest-gallery3-gallery-top-right
+[submodule "widget/x-latest-gallery3-gallery-bottom"]
+	path = widget/x-latest-gallery3-gallery-bottom
+	url = https://github.com/x-widget/x-latest-gallery3-gallery-bottom
