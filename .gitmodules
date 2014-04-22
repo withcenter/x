@@ -163,7 +163,6 @@
 [submodule "widget/x-latest-gallery-posts"]
 	path = widget/x-latest-gallery-posts
 	url = https://github.com/x-widget/x-latest-gallery-posts
-
 [submodule "widget/x-gallery-mobile-text-with-image"]
 	path = widget/x-gallery-mobile-text-with-image
 	url = https://github.com/x-widget/x-gallery-mobile-text-with-image
@@ -176,3 +175,12 @@
 [submodule "widget/x-gallery-mobile-image-with-caption-bottom"]
 	path = widget/x-gallery-mobile-image-with-caption-bottom
 	url = https://github.com/x-widget/x-gallery-mobile-image-with-caption-bottom
+[submodule "widget/x-latest-gallery3-gallery-top-left"]
+	path = widget/x-latest-gallery3-gallery-top-left
+	url = https://github.com/x-widget/x-latest-gallery3-gallery-top-left
+[submodule "widget/x-latest-gallery3-gallery-top-right"]
+	path = widget/x-latest-gallery3-gallery-top-right
+	url = https://github.com/x-widget/x-latest-gallery3-gallery-top-right
+[submodule "widget/x-latest-gallery3-gallery-bottom"]
+	path = widget/x-latest-gallery3-gallery-bottom
+	url = https://github.com/x-widget/x-latest-gallery3-gallery-bottom
