@@ -187,3 +187,12 @@
 [submodule "widget/x-latest-gallery3-gallery-bottom"]
 	path = widget/x-latest-gallery3-gallery-bottom
 	url = https://github.com/x-widget/x-latest-gallery3-gallery-bottom
+[submodule "widget/login-blog"]
+	path = widget/login-blog
+	url = https://github.com/x-widget/login-blog
+[submodule "widget/login-community-3"]
+	path = widget/login-community-3
+	url = https://github.com/x-widget/login-community-3
+[submodule "widget/login-gallery-2"]
+	path = widget/login-gallery-2
+	url = https://github.com/x-widget/login-gallery-2
