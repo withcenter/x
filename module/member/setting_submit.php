@@ -1,4 +1,4 @@
 <?php
-	set_session('user_language', $user_language);
+	set_session('user_language', $in['user_language']);
 	jsGo("?module=$module&action=setting");
 	

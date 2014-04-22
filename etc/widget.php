@@ -3,6 +3,7 @@
  *
  */
 	load_widget_config( $widget_config['code'] );
+	$widget_config['url'] = x::url() . "/widget/$widget_config[name]";
 ?>
 	<? if ( admin() ) { ?><div class="widget-admin" code="<?=$widget_config['code']?>" name="<?=$widget_config['name']?>"><? } ?>
 <?php
