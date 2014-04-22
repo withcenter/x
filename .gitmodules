@@ -164,3 +164,15 @@
 	path = widget/x-latest-gallery-posts
 	url = https://github.com/x-widget/x-latest-gallery-posts
 
+[submodule "widget/x-gallery-mobile-text-with-image"]
+	path = widget/x-gallery-mobile-text-with-image
+	url = https://github.com/x-widget/x-gallery-mobile-text-with-image
+[submodule "widget/x-gallery-mobile-bulleted-list"]
+	path = widget/x-gallery-mobile-bulleted-list
+	url = https://github.com/x-widget/x-gallery-mobile-bulleted-list
+[submodule "widget/x-gallery-mobile-image-with-caption"]
+	path = widget/x-gallery-mobile-image-with-caption
+	url = https://github.com/x-widget/x-gallery-mobile-image-with-caption
+[submodule "widget/x-gallery-mobile-image-with-caption-bottom"]
+	path = widget/x-gallery-mobile-image-with-caption-bottom
+	url = https://github.com/x-widget/x-gallery-mobile-image-with-caption-bottom
