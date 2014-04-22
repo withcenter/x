@@ -7,15 +7,22 @@
 	margin-top: 20px;
 	width:100%;	
 	background-color:#e6e6e6;
-	min-height: 110px;
 }
 
 .footer .copyright .inner{
 	max-width:970px;
 	margin:auto;	
-	position:relative;
+	min-height: 110px;
+	position: relative;
 }
-
+.footer .copyright .inner .visit_stats {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+}
 .footer .copyright .inner .foot-logo{
 	position:absolute;
 	left:20px;

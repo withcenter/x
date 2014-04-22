@@ -133,3 +133,34 @@
 [submodule "widget/x-community-2-visits"]
 	path = widget/x-community-2-visits
 	url = https://github.com/x-widget/x-community-2-visits
+[submodule "widget/x-latest-gallery-1-posts-with-image"]
+	path = widget/x-latest-gallery-1-posts-with-image
+	url = https://github.com/x-widget/x-latest-gallery-1-posts-with-image
+[submodule "widget/x-latest-gallery-1-lower-posts"]
+	path = widget/x-latest-gallery-1-lower-posts
+	url = https://github.com/x-widget/x-latest-gallery-1-lower-posts
+[submodule "widget/x-travel_2_images_with_caption"]
+	path = widget/x-travel_2_images_with_caption
+	url = https://github.com/x-widget/x-travel_2_images_with_caption
+[submodule "widget/x-travel_2_posts_with_image_right"]
+	path = widget/x-travel_2_posts_with_image_right
+	url = https://github.com/x-widget/x-travel_2_posts_with_image_right
+[submodule "widget/x-latest-travel-lower-posts"]
+	path = widget/x-latest-travel-lower-posts
+	url = https://github.com/x-widget/x-latest-travel-lower-posts
+[submodule "widget/x-visit-travel"]
+	path = widget/x-visit-travel
+	url = https://github.com/x-widget/x-visit-travel
+[submodule "widget/x-latest-travel-2-posts"]
+	path = widget/x-latest-travel-2-posts
+	url = https://github.com/x-widget/x-latest-travel-2-posts
+[submodule "widget/x-latest-left-gallery"]
+	path = widget/x-latest-left-gallery
+	url = https://github.com/x-widget/x-latest-left-gallery
+[submodule "widget/x-latest-right-gallery"]
+	path = widget/x-latest-right-gallery
+	url = https://github.com/x-widget/x-latest-right-gallery
+[submodule "widget/x-latest-gallery-posts"]
+	path = widget/x-latest-gallery-posts
+	url = https://github.com/x-widget/x-latest-gallery-posts
+
