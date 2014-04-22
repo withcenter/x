@@ -140,12 +140,9 @@ function javascript_jquery()
 {
 	$x_url=x::url();
 	return <<<EOH
-	<!--[if lt IE 9]>
+	
 		<script type='text/javascript' src='$x_url/js/jquery-1.11.0.min.js?version=1110'></script>
-	<![endif]-->
-	<!--[if gte IE 9]><!-->
-		<script type='text/javascript' src='$x_url/js/jquery-2.1.0.min.js?version=2010'></script>
-	<!--<![endif]-->
+	
 EOH;
 }
 

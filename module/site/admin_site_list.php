@@ -19,14 +19,13 @@
 		</tr>
 		<?php
 			$sites = db::rows("SELECT * FROM x_site_config ORDER BY good DESC, domain ASC");
-			
 			$hosts = array();
-			foreach ( $sites as $site ) { 
+			foreach ( $sites as $site ) {
 				$hosts[] = $site['domain'];
 				if ( $i % 2 == 1 ) $background='background';
 				else $background = null;
 				$i++;
-			?>
+		?>
 		<tr valign='top' class='row <?=$background?>'>
 			<td><a href='<?=url_site($site['domain'])?>' target='_blank'><?=$site['domain']?></a></td>
 			<td><?=$site['mb_id']?></td>
