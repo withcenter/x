@@ -164,3 +164,6 @@
 	path = widget/x-latest-gallery-posts
 	url = https://github.com/x-widget/x-latest-gallery-posts
 
+[submodule "widget/login-community-2"]
+	path = widget/login-community-2
+	url = https://github.com/x-widget/login-community-2
