@@ -90,6 +90,7 @@ copy_source( 'x/widget/x-rwd-gallery' );
 copy_source( 'x/widget/x-latest-rwd-community-1' );
 copy_source( 'x/widget/x-rwd-text-with-thumbnail' );
 copy_source( 'x/widget/stat-visit' );
+copy_source( 'x/widget/login-default' );
 
 
 

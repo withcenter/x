@@ -202,7 +202,8 @@ function my( $field = 'id' ) {
 	global $member;
 	switch ( $field ) {
 		case 'id'				: $field = 'mb_id';			break;
-		case 'name'				: $field = 'mb_nick';		break;
+		case 'name'				: $field = 'mb_name';		break;
+		case 'nick'				: $field = 'mb_nick';		break;
 		default				:							break;
 	}
 	return $member[ $field ];
@@ -252,13 +253,32 @@ function url_language_setting()
 
 function url_login()
 {
-	return g::url() . '/bbs/bbs/login.php';
+	return url_bbs() . '/login.php';
 }
 
 function url_site($domain)
 {
 	return x::url_site($domain);
 }
+
+
+function url_login_check()
+{
+	return url_bbs() . '/login_check.php';
+}
+
+function url_bbs()
+{
+	return g::url() . 'bbs';
+}
+
+
+function url_register()
+{
+	return url_bbs() . '/register.php';
+}
+
+
 
 
 

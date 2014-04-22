@@ -82,7 +82,11 @@
 <!-- 콘텐츠 시작 { -->
 <div id="wrapper">
     <div id="aside">
-		<?php echo outlogin('basic'); // 외부 로그인  ?>
+		
+		
+		<?php
+			include widget( array( 'code' => 'login-default', 'name' => 'login-default' ) );
+		?>
 
 		<ul class='left-menu'>
 			<li><a href="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub" target="_blank"><?=ln('X User Guide', 'X 이용 안내');?></a></li>

@@ -34,6 +34,8 @@ class gnuboard {
 	 *  @warning must use g::url() instead of G5_URL
 	 *  @note G5_URL has a bug. it does not get proper domain based on the web browser's URL addresss.
 	 *  @see https://docs.google.com/a/withcenter.com/document/d/1cqG9sghuNGyrSKsZBaV4dmretcA6tb_WfOD1jlyldLk/edit#heading=h.xe27kp8u6rdk
+	 *  
+	 *  @warning the return URL ends with slash(/).
 	 */
 	static function url()
 	{
@@ -1225,6 +1227,31 @@ class gnuboard {
 		preg_match("/오늘:(.*),어제:(.*),최대:(.*),전체:(.*)/", $config['cf_visit'], $visit);
 		return $visit;
 	}
+
+
+	/**
+	 *  /**
+	  *  @brief returns the number of memo.
+	  *  
+	  *  @return int number of unread memo.
+	  *  
+	  *  @details use this function to get the number of new memo.
+	  */
+	static function memo_new()
+	{
+		global $g5;
+		if ( ! login() ) return 0;
+		$id = my('id');
+		$sql = " select count(*) from {$g5['memo_table']} where me_recv_mb_id = '$id' and me_read_datetime = '0000-00-00 00:00:00' ";
+		return db::result($sql);
+	}
+	
+	static function member_point()
+	{
+		$point = my('mb_point');
+		if ( $point ) return number_format( $point );
+	}
+	
 	
 	
 } // eo class

@@ -45,6 +45,8 @@ class x extends gnuboard
 	 *  @return string URL
 	 *  
 	 *  @details 웹 브라우저로 접속해야 할 때 이용한다.
+	 *  
+	 *  @warning the URL ends without slash(/).
 	 */
 	static function url()
 	{
@@ -113,7 +115,7 @@ class x extends gnuboard
 	 */
 	static function url_admin()
 	{
-		return self::url() . "/?module=admin&action=index";
+		return self::url() . "?module=admin&action=index";
 	}
 	
 	static function admin_menu()
@@ -123,7 +125,7 @@ class x extends gnuboard
 	
 	static function url_setting()
 	{
-		return self::url() . "/?module=member&action=setting";
+		return self::url() . "?module=member&action=setting";
 	}
 	
 	
