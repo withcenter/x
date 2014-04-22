@@ -18,7 +18,7 @@
 			<td align='center'>Delete</td>
 		</tr>
 		<?php
-			$sites = db::rows("SELECT * FROM x_site_config ORDER BY domain");
+			$sites = db::rows("SELECT * FROM x_site_config ORDER BY good DESC, domain ASC");
 			
 			$hosts = array();
 			foreach ( $sites as $site ) { 

@@ -70,10 +70,12 @@ CREATE TABLE IF NOT EXISTS `x_site_config` (
   `domain` varchar(64) NOT NULL,
   `mb_id` varchar(32) NOT NULL DEFAULT '',
   `stamp_created` int(10) unsigned NOT NULL,
+  `good` tinyint(3) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`idx`),
   UNIQUE KEY `domain` (`domain`),
   KEY `mb_id` (`mb_id`),
-  KEY `stamp_created` (`stamp_created`)
+  KEY `stamp_created` (`stamp_created`),
+  KEY `good` (`good`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8  ;
 
 
@@ -163,4 +165,20 @@ CREATE TABLE IF NOT EXISTS `x_data` (
   KEY `varchar_4` (`varchar_4`),
   KEY `varchar_5` (`varchar_5`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ;
+
+
+
+
+
+CREATE TABLE IF NOT EXISTS `x_notice` (
+  `idx` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id_to` varchar(32) NOT NULL DEFAULT '',
+  `stamp_create` int(10) unsigned NOT NULL DEFAULT '0',
+  `stamp_confirm` int(10) unsigned NOT NULL DEFAULT '0',
+  `type` smallint(5) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`idx`),
+  KEY `id_to` (`id_to`),
+  KEY `stamp_confirm` (`stamp_confirm`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8  ;
+
 

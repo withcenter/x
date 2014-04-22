@@ -131,9 +131,9 @@ function site_delete( $mixed )
 }
 
 
-function site_set( $idx, $domain, $mb_id=null )
+function site_set( $idx, $domain, $mb_id=null, $good=0 )
 {
-	return x::site_set( $idx, $domain, $mb_id );
+	return x::site_set( $idx, $domain, $mb_id, $good );
 }
 
 /** @see x::meta_set() */
@@ -202,7 +202,8 @@ function my( $field = 'id' ) {
 	global $member;
 	switch ( $field ) {
 		case 'id'				: $field = 'mb_id';			break;
-		case 'name'				: $field = 'mb_nick';		break;
+		case 'name'				: $field = 'mb_name';		break;
+		case 'nick'				: $field = 'mb_nick';		break;
 		default				:							break;
 	}
 	return $member[ $field ];
@@ -258,6 +259,12 @@ function url_login()
 function url_site($domain)
 {
 	return x::url_site($domain);
+}
+
+
+function url_login_check()
+{
+	return g::url() . "/bbs/login_check.php";
 }
 
 
