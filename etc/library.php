@@ -138,12 +138,22 @@ function widget_config_extra_end()
 
 function javascript_jquery()
 {
-	$x_url=x::url();
-	return <<<EOH
+	$x_url = x::url();
 	
-		<script type='text/javascript' src='$x_url/js/jquery-1.11.0.min.js?version=1110'></script>
+	$browser = etc::browser();
+	$name = $browser['name'];
 	
-EOH;
+	if ( $name == 'chrome' || $name == 'firefox' ) {
+		return "<script type='text/javascript' src='$x_url/js/jquery-2.1.0.min.js?version=140422'></script>";
+	}
+	else if ( etc::new_ie() ) {
+		return "<script type='text/javascript' src='$x_url/js/jquery-2.1.0.min.js?version=140422'></script>";
+	}
+	else {
+		return "<script type='text/javascript' src='$x_url/js/jquery-1.11.0.min.js?version=140422'></script>";
+	}
+	
+	
 }
 
 
