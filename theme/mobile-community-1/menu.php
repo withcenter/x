@@ -70,7 +70,15 @@
 		//no need to show log in box when logged in
 		?>
 			<div class='pop-up pop-up-login'>
-				<?=outlogin('x-outlogin-mobile-1');?>
+			<?php
+				include widget(
+					array(
+						'code'		=> 'login-mobile-1',
+						'name'		=> 'login-mobile-1',
+						'git'		=> 'https://github.com/x-widget/login-mobile-1',
+					)
+				);
+			?>	
 			</div>
 		<?}?>
 

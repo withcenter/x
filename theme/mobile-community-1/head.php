@@ -86,7 +86,15 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
 		//no need to show log in box when logged in
 		?>
 			<div class='pop-up pop-up-login'>
-				<?=outlogin('x-outlogin-mobile-1-640px');?>
+			<?php
+				include widget(
+					array(
+						'code'		=> 'login-mobile-1-640px',
+						'name'		=> 'login-mobile-1-640px',
+						'git'		=> 'https://github.com/x-widget/login-mobile-1-640px',
+					)
+				);
+			?>	
 			</div>	
 		<?}?>
 	</div>
