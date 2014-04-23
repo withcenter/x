@@ -50,16 +50,16 @@
 		$count_image = 0;
 	$i=0;
 	foreach ( $lists as $list ) {
-		$thumb = get_list_thumbnail($list['bo_table'], $list['wr_id'], $width, $height);    					            
+		$thumb = x::post_thumbnail($list['bo_table'], $list['wr_id'], $width, $height);    					            
 		if($thumb['src']) {
 			$img  = '<img class="img_left" src="'.$thumb['src'].'">';
 			$count_image ++;
-		} elseif ( $image_from_tag = g::thumbnail_from_image_tag( $list['wr_content'], $bo_table, $width-2, $height-2 )) {
+		} elseif ( $image_from_tag = g::thumbnail_from_image_tag( $list['wr_content'], $list['bo_table'], $width-2, $height-2 )) {
 			$img = "<img class='img_left' src='$image_from_tag'/>";
 			$count_image ++;
 		} else {
 			$img = '<img class="img_left" src="'.x::url_theme().'/img/no-image.png"/>';
-			$no_image = g::thumbnail_from_image_tag( $img, $bo_table, $width, $height);
+			$no_image = g::thumbnail_from_image_tag( $img, $list['bo_table'], $width, $height);
 			$img = "<img class='img_left no-image' src='$no_image'/>";
 			$count_image ++;
 		}

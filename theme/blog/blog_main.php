@@ -14,7 +14,7 @@
 	
 	$row = db::row("SELECT wr_id, wr_subject, wr_content, wr_datetime FROM $forum_id WHERE wr_id = wr_parent ORDER BY wr_num LIMIT $start, $no_of_post");
 
-	$thumb = get_list_thumbnail($forum, $row['wr_id'], 450, 350);
+	$thumb = x::post_thumbnail($forum, $row['wr_id'], 450, 350);
 	
 	if ( empty($thumb['src']) )  $thumb['src'] = g::thumbnail_from_image_tag( $row['wr_content'], $forum, 450, 350 );
 	$content = cut_str(strip_tags($row['wr_content']), 280, '...');
@@ -24,7 +24,7 @@
 	unset($subject_array[0]);
 	$subject = $subject_first.implode(' ', $subject_array );
 	
-	$url = G5_BBS_URL.'/board.php?bo_table='.$forum.'&wr_id='.$row['wr_id'];
+	$url = url_bbs().'/board.php?bo_table='.$forum.'&wr_id='.$row['wr_id'];
 	
 	$image = "<img src='".$thumb['src']."' />";
 	

@@ -6,7 +6,6 @@
 	<?}?>
 	<div class='profile-message'><?=x::meta('profile_message')?></div>
 </div>
-<div class='profile-photo-bottom'></div>
 
 <div class='post-forum'>
 	<?php
@@ -17,7 +16,7 @@
 		<div class='small-title' style='float: left; margin-bottom: 0; margin-right: 10px;'><a href='<?=g::url_write( $ids[0] )?>'>글쓰기</a></div>
 		<div class='small-title' style='float: left; margin-bottom: 0; margin-right: 10px;'><a href='<?=url_site_config()?>'>관리</a></div>
 	<?}?>
-	<div class='small-title' style='float: left; margin-bottom: 0;'><a href='<?=g::url()?>?device=mobile'>모바일</a></div>
+	<div class='small-title <? if ( !admin() ) echo "mobile_view"?>' style='float: left; margin-bottom: 0;'><a href='<?=g::url()?>?device=mobile'>모바일</a></div>
 	<div style='clear:left;'></div>
 </div>
 
@@ -36,7 +35,7 @@
 	<a href='http://www.philgo.com' target='_blank'><img src='<?=x::url_theme()?>/img/company_banner.png' /></a>
 </div>
 <div class='categories'>
-	<div class='small-title'>메뉴</div>
+	<div class='small-title mobile_view'>메뉴</div>
 	<ul>
 	<? 
 		$sidemenus = x::menu_links();

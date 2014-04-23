@@ -16,7 +16,7 @@ if ( $list ) {
 	$h = 100;
 
 	foreach ( $list as $li ) {
-		$thumb = get_list_thumbnail($li['bo_table'], $li['wr_id'], $w, $h);
+		$thumb = x::post_thumbnail($li['bo_table'], $li['wr_id'], $w, $h);
 		if ( empty($thumb['src']) ) {  // 만약 로컬 데이터 저장소에 이미지가 없다면 본문의 img 태그에서 이미지를 가져온다.
 
 			$thumb['src'] = g::thumbnail_from_image_tag( $li['wr_content'], $li['bo_table'], $w, $h );
@@ -36,10 +36,10 @@ if ( $list ) {
 			<td class='right' <?=$colspan?>>
 				<div class='date'><b>작성일</b><?=$newDate = date("Y-m-d", strtotime($li['wr_datetime']))?></div>
 				<div class='subject'>
-					<a href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$li['bo_table']?>&wr_id=<?=$li['wr_id']?>'><?=cut_str(get_text($li['wr_subject']), 25, "...");?></a>
+					<a href='<?=url_bbs()?>/board.php?bo_table=<?=$li['bo_table']?>&wr_id=<?=$li['wr_id']?>'><?=cut_str(get_text($li['wr_subject']), 25, "...");?></a>
 				</div>
 				<div class='content'>
-					<a href='<?=G5_BBS_URL?>/board.php?bo_table=<?=$li['bo_table']?>&wr_id=<?=$li['wr_id']?>'><?=cut_str(strip_tags($li['wr_content']), 200,'...')?></a>
+					<a href='<?=url_bbs()?>/board.php?bo_table=<?=$li['bo_table']?>&wr_id=<?=$li['wr_id']?>'><?=cut_str(strip_tags($li['wr_content']), 200,'...')?></a>
 				</div>
 			</td>
 		</tr>	
@@ -48,7 +48,7 @@ if ( $list ) {
 }
 else {?>
 		<tr class='blog-post-container' valign='top'>
-			<td class='photo' width=150><img src='http://philgo.com/theme/philgo/img/logo.png' /></td><td width=10></td>
+			<td class='photo no_image' width=150><img src='http://philgo.com/theme/philgo/img/logo.png' /></td><td width=10></td>
 			<td class='right' <?=$colspan?>>
 				<div class='date'><b>작성일</b><?=$newDate = date("Y-m-d", time())?></div>
 				<div class='subject'>

@@ -51,9 +51,9 @@ function mobile_popular_posts($options, $meta) {
 	<?
 	$no_of_posts = count($popular_posts)-1;
 	if ( $no_of_posts >= $meta['no_of_posts'] ) $no_of_posts = $meta['no_of_posts']-1;
-	for ( $i = 0; $i <= $no_of_posts; $i++ ) {
+	for ( $i = 0; $i <= $no_of_posts; $i++ ) {z
 			?><div class='popular-posts <?if ( $i==$no_of_posts ) echo "last-popular-post";?>'> <?
-			$imgsrc = get_list_thumbnail($popular_posts[$i]['bo_table'], $popular_posts[$i]['wr_id'], 210, 80); 
+			$imgsrc = x::post_thumbnail($popular_posts[$i]['bo_table'], $popular_posts[$i]['wr_id'], 210, 80); 
 			if ( $imgsrc['src'] ) {
 				$img = "<img src='$imgsrc[src]'/>";
 			} elseif ( $image_from_tag = g::thumbnail_from_image_tag( $popular_posts[$i]['wr_content'],  $popular_posts[$i]['bo_table'], 210, 80 )) {
