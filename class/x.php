@@ -1179,8 +1179,10 @@ class x extends gnuboard
 		return db::rows( sql::query( $o ) );	
 	}
 	
-	static function data_get( $o )
+	static function data_get( $idx )
 	{
+		$o = array();
+		$o['idx'] = $idx;
 		$o['limit'] = '1';
 		$rows = self::data_gets( $o );
 		return $rows[0];

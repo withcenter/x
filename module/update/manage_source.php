@@ -20,7 +20,7 @@
 		return;
 	}
 	
-	$o = array( 'first' => 'source' );
+	$o = array( 'first' => 'source', 'limit'=>'1000' );
 	if ( super_admin() ) {
 	}
 	else {
@@ -34,7 +34,7 @@
 	$ln_delete = lang("DELETE");
 	
 	echo "<table width='100%'>";
-	echo "<tr><td>Widget Name</td><td>ID</td><td>$ln_delete</td></tr>";
+	echo "<tr><td>Widget Name</td><td>Widget ID</td><td>User ID</td><td>Git Project URL</td><td>$ln_delete</td></tr>";
 	foreach( $rows as $row ) {
 		$name = string::unscalar( $row[ up::name ] );
 		$url_delete = "?module=$module&action=$action&mode=delete&idx=$row[idx]";
@@ -42,6 +42,8 @@
 			<tr>
 				<td>{$name[L]}</td>
 				<td>$row[third]</td>
+				<td>$row[id]</td>
+				<td>{$row[up::project_url]}</td>
 				<td><a href='$url_delete'>$ln_delete</a></td>
 			</tr>
 		";
