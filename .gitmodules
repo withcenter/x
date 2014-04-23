@@ -205,3 +205,6 @@
 [submodule "widget/login-mobile-1-640px"]
 	path = widget/login-mobile-1-640px
 	url = https://github.com/x-widget/login-mobile-1-640px
+[submodule "widget/blog-visits"]
+	path = widget/blog-visits
+	url = https://github.com/x-widget/blog-visits

@@ -68,7 +68,15 @@ if( empty( $menu_1 ) ) $menu_1 = bo_table(1);
 <? }?>
 
 <div class='stats'>
-	<?=visit('x-visit-blog')?>
+	<?
+		include widget(
+			array(
+				'code'		=> 'blog-visits',
+				'name'		=> 'blog-visits',
+				'git'		=> 'https://github.com/x-widget/blog-visits',
+			)
+		);
+	?>
 </div>
 
 
