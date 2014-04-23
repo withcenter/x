@@ -3,6 +3,8 @@ x::hook_register('head_begin', 'hook_head_begin' );
 function hook_head_begin()
 {
 
+	return;
+	/*
 	$d = etc::domain();
 	$base = etc::base_domain();
 	if ( $d == $base ) {
@@ -15,4 +17,5 @@ function hook_head_begin()
 		";
 		exit;
 	}
+	*/
 }

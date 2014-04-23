@@ -59,8 +59,7 @@ class x extends gnuboard
 	 *  @return string domain
 	 *  
 	 *  @details Use this function to get the accessed domain.
-	 *  @waring If the domain is BASE-DOMAIN, it returns the domain adding 'www.' on the begining.
-	 *  ex) "abc.com" will be return "www.abc.com"
+	 *  @waring #basedomain
 	 
 	 
 	 */
@@ -69,10 +68,13 @@ class x extends gnuboard
 		$host = $_SERVER['HTTP_HOST'];
 		$host = strtolower($host);
 		
+		
+		return $host;
+		
 	
 		/// @warning if it's base-domain, it adds 'www.' on the begining.
-		if ( $host == etc::base_domain($host) ) return "www.$host";
-		else return $host;
+		///if ( $host == etc::base_domain($host) ) return "www.$host";
+		///else return $host;
 	}
 	
 	
