@@ -19,6 +19,8 @@
 */
 
 	$site = site_get( $in['idx'] );
+	
+	
 ?>
 
 
@@ -31,13 +33,21 @@
 		<td>Domain</td>
 		<td>
 			<input type='text' name='domain' value="<?=$site['domain']?>">
-			<?=ln("Example: abc.domain.com", "예제: abc.domain.com")?>
-			
+			<?=ln("Example", "예제")?> : domain.com, abc.domain.com
 		</td>
-		
-		
 	</tr>
 	
+	<tr>
+		<td>Forward</td>
+		<td>
+			<input type='text' name='forward' value="<?=meta_get( $site['domain'], 'forward' )?>">
+			
+			접속시 이동 할 다른 도메인 입력.
+			
+			<?=ln("See Document", "설명서 참고")?> : Domain Forward
+			
+		</td>
+	</tr>
 	<tr>
 		<td>Member (Owner) ID</td>
 		<td>

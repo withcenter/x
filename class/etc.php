@@ -515,8 +515,14 @@ class etc {
 	
 	static function browser_url()
 	{
-		return "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+		return "//".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 	}
+	
+	static function browser_url_replace_host($host)
+	{
+		return "//$host$_SERVER[REQUEST_URI]";
+	}
+	
 	
 	
 	

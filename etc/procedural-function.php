@@ -272,6 +272,10 @@ function url_bbs()
 	return g::url() . 'bbs';
 }
 
+function url_memo()
+{
+	return url_bbs() . '/memo.php';
+}
 
 function url_register()
 {
