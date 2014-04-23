@@ -28,7 +28,7 @@
 }
 
 .blog_main .main-content .title  .first-word {
-	color: #6c99be;
+	color: #000000;
 }
 .blog_main .main-content .content {
 	line-height: 18px;
@@ -41,7 +41,7 @@
 }
 
 .blog_main .main-content .more-button {
-	border: 1px solid #98cbe7;
+	border: 1px solid #bfb654;
 	width: 121px;
 	
 	margin: 5px 0 0 5px;
@@ -51,8 +51,8 @@
 	height: 21px;
 	line-height: 21px;
 	width: 119px;
-	border: 1px solid #3290cd;
-	background-color: #3197d5;
+	border: 1px solid #bfb840;
+	background-color: #bfb840;
 	color: #ffffff;
 	text-align: center;
 }
@@ -63,7 +63,7 @@
 	color: #929293;
 }
 .blog_main .date  b {
-	color: #3290cd;
+	color: #000000;
 }
 .blog_main .pagination {
 	position: absolute;
@@ -72,15 +72,15 @@
 }
 
 .blog_main .pagination  .page_no {
-	border: 1px solid #6c99be;
+	border: 1px solid #bfb840;
 	padding: 4px 7px;
 	display: inline-block;
 	margin: 0 2px;
 	border-radius: 4px;
-	color: #6c99be;
+	color: #bfb840;
 }
 .blog_main .pagination  .page_no:hover,.blog_main .pagination .selected  {
-	background-color: #6c99be;
+	background-color: #bfb840;
 	color: #ffffff;
 }
 

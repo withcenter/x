@@ -79,22 +79,13 @@
 	background: #d1b882;
 	padding: 0.75em;
 	line-height: 1.25em;
+	margin-bottom: 20px;
 }
 
 #aside .profile-photo, #aside .profile-photo-bottom {
 	font-family: Helvetica;
 	color: #ffffff;
 	font-size: 11pt;
-}
-
-#aside .profile-photo-bottom {
-	position: relative;
-	width: 0; 
-	height: 0; 
-	border-left: 105px solid transparent;
-	border-right: 105px solid transparent;
-	border-top: 25px solid #d1b882;
-	margin-bottom: 20px;
 }
 
 #aside .profile-photo-bottom p {
@@ -143,13 +134,17 @@ font-size: 9pt;
 	font-size: 10pt;
 	font-weight: bold;
 	font-family: '맑은 고딕', AppleGothic;
-	background-color: #555555;
+	background-color: #db5e31;
 	color: #ffffff;
 	width: 63px;
 	text-align: center;
 	height: 25px;
 	line-height: 23px;
 	margin-bottom: 10px;
+}
+
+#aside  .small-title.mobile_view {
+	width: 210px;
 }
 
 #aside .small-title3 {
@@ -175,7 +170,7 @@ font-size: 9pt;
 }
 
 #aside .profile-photo img {
-	margin: 2em 0 0.75em 0;
+	margin: 1em 0 0.75em 0;
 	width: 100%;
 	border: solid 1px #979693; 
 }
@@ -260,6 +255,7 @@ font-size: 9pt;
 	border-top: solid 1px #bababa;
 	border-bottom: solid 1px #bababa;
 	padding: 0.75em 0.25em 0.75em 0.25em;
+	margin-bottom: 20px;
 }
 
 #aside .search input {
@@ -318,7 +314,7 @@ body {
 	clear:both;
 	border-top: 1px solid #d5d5d5;
 	padding: 20px 0 30px 0;
-	color: #666666;
+	color: #949494;
 }
 
 .back-to-top img {
