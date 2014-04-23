@@ -28,6 +28,8 @@ if ( etc::web() ) x::set_title();
 if ( etc::web() ) x::hook('begin');
 
 
+
+
 x::hook('before_theme_init');
 if ( file_exists(x::theme('init')) ) include_once x::theme('init');	
 x::hook('after_theme_init');
@@ -44,6 +46,5 @@ if ( g_index_page() ) {
 		exit;
 	}
 }
-
 
 

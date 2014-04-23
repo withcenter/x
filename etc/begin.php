@@ -15,9 +15,6 @@
 	
 	
 	
-	
-	
-	
 /**     REWRITE
  *  ------------------------------------------------------------------
  *
@@ -84,8 +81,6 @@ $member_skin_path = substr_replace( $member_skin_path, "/member/$member_skin", s
 $member_skin_url = substr_replace( $member_skin_url, "/member/$member_skin", strpos($member_skin_url, '/member/') );
 
 	
-
-
 
 
 
@@ -235,9 +230,6 @@ if ( login_page() || member_confirm_page() || password_page() ) {
 			include_once G5_PATH . '/_tail.php';
 		}
 }
-
-
-
 
 
 
