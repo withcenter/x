@@ -12,10 +12,17 @@
 .blog-latest .blog-post-container .photo {
 	padding: 15px 0;
 }
+
 .blog-latest .blog-post-container .photo img {
 	width: 150px;
 	height: 100px;
 }
+
+.blog-latest .blog-post-container .photo.no_image img {
+	height: auto;
+	padding-top: 18%;
+}
+
 .blog-latest .blog-post-container .right {
 	padding: 15px 0;
 }
@@ -24,7 +31,7 @@
 	color: #929293;
 }
 .blog-latest .blog-post-container .right .date b {
-	color: #3290cd;
+	color: #000000;
 	margin-right: 5px;
 }
 .blog-latest .blog-post-container .right .subject  {
