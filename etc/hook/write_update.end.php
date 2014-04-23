@@ -37,10 +37,9 @@
                     ' wr_10' =>$wr_10,
 			
 			'wr_file'					=> $row['cnt'],
-		
-					
 		);
 		x::post_data_insert($o);
+		
 	}
 	else if ( $w = 'u' ) {
 		$o = array(
@@ -73,8 +72,11 @@
 			'wr_file'					=> $row['cnt'],
 					
 		);
-		
-		
 		x::post_data_update( $o );
+		
 	}
+	
+	include x::dir() . '/etc/share/memo_for_new_post.php';
+	
+	
 	

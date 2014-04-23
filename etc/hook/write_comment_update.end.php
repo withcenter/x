@@ -58,6 +58,7 @@
 		
 		// db::query(" update x_post_data set wr_comment = wr_comment + 1 where bo_table='$bo_table' AND wr_id = '$wr_id' ");
 
+		
 	}
 	else if ( $w == 'cu' ) {
 		$o = array(
@@ -69,3 +70,7 @@
 		);
 		x::post_data_update( $o );
 	}
+
+	include x::dir() . '/etc/share/memo_for_new_post.php';
+	
+	

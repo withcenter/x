@@ -896,14 +896,15 @@ class gnuboard {
 	 *  
 	 *  @param [in] $bo_table table name
 	 *  @param [in] $wr_id post no
+	 * @param  [in] $field is the field list.
 	 *  @return an assoc row of the field.
 	 *  
 	 *  @details use this function to get the fields of a post.
 	 */
-	static function post( $bo_table, $wr_id )
+	static function post( $bo_table, $wr_id, $field='*' )
 	{
 		$bo_table = self::table_name( $bo_table );
-		return db::row("SELECT * FROM $bo_table WHERE wr_id=$wr_id");
+		return db::row("SELECT $field FROM $bo_table WHERE wr_id=$wr_id");
 	}
 	static function get( $bo_table, $wr_id )
 	{
@@ -1252,6 +1253,51 @@ class gnuboard {
 		if ( $point ) return number_format( $point );
 	}
 	
+	/** @short sends a memo to a member.
+	 *
+	 * @param
+			$o['from']		sender's id
+			$o['to']			receiver's id
+			$o['content']	cotnent
+	 */
+	static function memo_send( $o )
+	{
+		global $g5;
+		$me_id = db::result(" select max(me_id) as max_me_id from {$g5['memo_table']} ");
+		$me_id ++;
+
+		$recv_mb_id		= $o['to'];
+		$send_mb_id		= $o['from'];
+		$o['content']		= addslashes( $o['content'] );
+		$sql = " insert into {$g5['memo_table']} ( me_id, me_recv_mb_id, me_send_mb_id, me_send_datetime, me_memo ) values ( '$me_id', '$recv_mb_id', '$send_mb_id', '".G5_TIME_YMDHIS."', '$o[content]' ) ";
+		db::query($sql);
+		
+		$sql = " update {$g5['member_table']} set mb_memo_call = '$send_mb_id' where mb_id = '$recv_mb_id' ";
+		db::query($sql);
+	}
+
+
+	/** @short returns the list of parents of a comemnt
+	 *
+	 * @param $wr_id - is the comment wr_id
+	 *
+	 * @return array the first element is the $wr_comemnt_id itself. the last element is the wr_id of start(root) post
+	 *
+	 * @code
+		di ( g::post_parents( 'ms_www_2', 40, 'wr_id,mb_id,wr_content' ) );
+	 * @endcode
+	 */
+	static function post_parents( $bo_table, $wr_id, $field='*' )
+	{
+		$tbl = self::table_name( $bo_table );
+		$row = self::post( $bo_table, $wr_id, 'wr_parent,wr_comment, wr_comment_reply' );
+		
+		$q = "SELECT $field FROM $tbl WHERE wr_parent='$row[wr_parent]' AND wr_comment='$row[wr_comment]' AND wr_comment_reply <= '$row[wr_comment_reply]' ORDER BY wr_comment_reply DESC";
+		$rows = db::rows( $q );
+		
+		$rows[] = db::row( "SELECT $field FROM $tbl WHERE wr_id='$row[wr_parent]'");
+		return $rows;
+	}
 	
 	
 } // eo class
