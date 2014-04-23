@@ -22,8 +22,15 @@
 </div>
 
 <div class='login-form'>
-<?php 
-	echo outlogin('x-outlogin-blog');?>
+<?php
+	include widget(
+		array(
+			'code'		=> 'login-blog',
+			'name'		=> 'login-blog',
+			'git'		=> 'https://github.com/x-widget/login-blog',
+		)
+	);
+?>
 </div>
 <div class='left-company-banner'>
 	<a href='http://www.philgo.com' target='_blank'><img src='<?=x::url_theme()?>/img/company_banner.png' /></a>
