@@ -2,7 +2,6 @@
 include x::dir().'/etc/share/head.php';
 //add_stylesheet( "<link rel='stylesheet' type='text/css' href='".x::url()."/module/".$module."/site_list_for_philgo.css' />" , 0);
 ?>
-
 	<table cellpadding=0 cellspacing=0 width='100%' class='site-list-table'>
 		<tr valign='top' class='header'>
 			<td>홈페이지 주소</td>

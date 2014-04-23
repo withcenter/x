@@ -5,6 +5,7 @@
 		array(
 			'code'		=> 'x-rwd-gallery',
 			'name'		=> 'x-rwd-gallery',
+			'default_forum_id' => bo_table(1),
 			'git'		=> 'https://github.com/x-widget/x-rwd-gallery',
 		)
 	);
@@ -20,6 +21,7 @@
 					array(
 						'code'		=> 'x-latest-rwd-community-1-item-'.$forum_count,
 						'name'		=> 'x-latest-rwd-community-1',
+						'default_forum_id' => bo_table($forum_count+2),
 						'git'		=> 'https://github.com/x-widget/x-latest-rwd-community-1',
 					)
 				);
@@ -38,6 +40,7 @@
 				array(
 					'code'		=> 'x-rwd-text-with-thumbnail-left',
 					'name'		=> 'x-rwd-text-with-thumbnail',
+					'default_forum_id' => bo_table(6),
 					'git'		=> 'https://github.com/x-widget/x-rwd-text-with-thumbnail',
 				)
 			);
@@ -51,6 +54,7 @@
 				array(
 					'code'		=> 'x-rwd-text-with-thumbnail-right',
 					'name'		=> 'x-rwd-text-with-thumbnail',
+					'default_forum_id' => bo_table(7),
 					'git'		=> 'https://github.com/x-widget/x-rwd-text-with-thumbnail',
 				)
 			);
