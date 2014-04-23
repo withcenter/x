@@ -230,10 +230,25 @@ function url_forum_list( $id )
 {
 	return g::url_forum_list($id);
 }
-function url_forum_read( $bo_id, $wr_id )
+
+/**
+ * 
+ * @code
+	$url = url_forum_view( $bo_table, $wr_id, $comment_id );
+ * @endcode
+ */
+function url_forum_read( $bo_id, $wr_id, $comment_id=null )
 {
-	return g::url()."/bbs/board.php?bo_table=$bo_id&wr_id=$wr_id";
+	$url = g::url()."/bbs/board.php?bo_table=$bo_id&wr_id=$wr_id";
+	if ( $comment_id ) $url .= "#c_$comment_id";
+	return $url;
 }
+
+function url_forum_view( $bo_id, $wr_id, $comment_id=null )
+{
+	return url_forum_read( $bo_id, $wr_id, $comment_id );
+}
+
 
 function url_x_admin()
 {
