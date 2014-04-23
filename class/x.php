@@ -68,13 +68,11 @@ class x extends gnuboard
 		$host = $_SERVER['HTTP_HOST'];
 		$host = strtolower($host);
 		
-		
 		return $host;
-		
-	
-		/// @warning if it's base-domain, it adds 'www.' on the begining.
-		///if ( $host == etc::base_domain($host) ) return "www.$host";
-		///else return $host;
+
+		/// @warning #basedomain
+		//if ( $host == etc::base_domain($host) ) return "www.$host";
+		//else return $host;
 	}
 	
 	
