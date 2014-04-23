@@ -1,4 +1,18 @@
 <?php
+/** @file x/etc/begin.php
+ *
+ *
+ */
+
+/** @short FORWRD : https://docs.google.com/document/d/1cqG9sghuNGyrSKsZBaV4dmretcA6tb_WfOD1jlyldLk/edit#heading=h.gcmziyb7qssm
+ */
+if ( $forward = meta_get( 'forward' ) ) {
+	jsGo( etc::browser_url_replace_host($forward) );
+	exit;
+}
+
+
+
 /** @short variables to replace those in skin files. ( like outlogin.lib.php )
  * https://docs.google.com/a/withcenter.com/document/d/1Q3cunvTGTmGTathp_Jx4LTVn8tdsNzqsZmmpE8kLsvg/edit#heading=h.1zkefc3j0po6
  */
