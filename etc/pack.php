@@ -91,6 +91,9 @@ copy_source( 'x/widget/x-latest-rwd-community-1' );
 copy_source( 'x/widget/x-rwd-text-with-thumbnail' );
 copy_source( 'x/widget/stat-visit' );
 copy_source( 'x/widget/login-default' );
+copy_source( 'x/widget/login-blog' );
+copy_source( 'x/widget/blog-visits' );
+copy_source( 'x/widget/login-community-3' );
 
 
 
