@@ -1,10 +1,7 @@
+<? include 'quest.php' ?>
 <link rel='stylesheet' type='text/css' href='<?=x::url_theme()?>/css/banner.css' />
 <script src='<?=x::url_theme()?>/js/banner.js' /></script>
-
-	<?
-	
-	
-	
+<?
 		$banners = array();
 		for ( $i = 1; $i <= 5 ; $i++) { 
 			if ( file_exists( x::path_file( "banner$i" ) ) ) {
@@ -16,7 +13,7 @@
 			}
 		}
 		
-	?>
+?>
 		<div class='banner'>
 			<?
 				if ( $banners ) {

@@ -52,6 +52,7 @@ function setTopMenu( $name ) {
 		<div style='clear:right;'></div>
 </div>
 
+<a name="logo_banner"></a>
  <div class='config-wrapper'>
 
 	<div class='config-title'>
