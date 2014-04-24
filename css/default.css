@@ -82,6 +82,7 @@
 
 .widget-admin > .button {
 	position:absolute;
+	z-index: 999;
 	right: 0px;
 	padding: 0.4em 0.8em;
 	background-color: black;
