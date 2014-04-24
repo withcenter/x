@@ -1,3 +1,4 @@
+<? include 'quest.php' ?>
 <?php
 	
 	/** display 3 posts from each forum that is selected by the user on Config_Global */
