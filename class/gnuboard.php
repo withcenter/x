@@ -774,14 +774,15 @@ class gnuboard {
 	 *  @brief Brief
 	 *  
 	 *  @param [in] $id Parameter_Description
+	 *  @param [in] $field is the field list.
 	 *  @return 
 	 *  
 	 *  @details 
 	 */
-	static function config($id)
+	static function config($id, $field='*')
 	{
 		global $g5;
-		return db::row("SELECT * FROM $g5[board_table] WHERE bo_table = '$id'");
+		return db::row("SELECT $field FROM $g5[board_table] WHERE bo_table = '$id'");
 	}
 	
 

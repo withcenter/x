@@ -1,6 +1,17 @@
 <?php
 	if ( ! admin() ) return;
 	
+	
+	
+	if ( ! $title = x::meta('title') ) {
+		$url = url_site_config( null, 'site', 'config_global' );
+		echo quest("
+			<a href='$url'>잠깐! 블로그 제목을 입력하지 않으셨네요. 관리자 페이지에서 블로그 제목을 입력하십시오.</a>
+		");
+	}
+	
+	
+	
 	for ( $i = 1; $i <= 4 ; $i++) { 
 		if ( file_exists( x::path_file( "banner_$i" ) ) ) break;
 	}
