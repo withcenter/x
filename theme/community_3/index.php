@@ -22,7 +22,7 @@
 						if ( ! $selected ++ ) $first_image = 'selected';
 						else $first_image = '';
 						
-						if ( !$url = $banner['href'] ) $url = "javascript:void(0)";
+						if ( !$url = $banner['href'] ) $url = "javascript:void(0);";
 						
 						echo "<div class='banner-image image_num_$selected $first_image'>";
 						echo "<a href='$url' target='_blank'><img src='$banner[src]'></a>";
