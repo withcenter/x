@@ -752,7 +752,8 @@ class gnuboard {
 	
 	/**@short updates x_post_data table
 	 *
-	 */
+	 * @deprecated. Use x::post_data_update()
+	 *
 	static function post_data_update($bo_table, $wr_id, $field, $value, $raw=false)
 	{
 		if ( $raw == false ) $value = "'$value'";
@@ -766,6 +767,7 @@ class gnuboard {
 				wr_id='$wr_id'
 		");
 	}
+	*/
 	
 	
 	/**

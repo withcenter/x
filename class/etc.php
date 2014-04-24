@@ -138,14 +138,30 @@ class etc {
 	// usage : etc::base_domain("asdfasdfa.asdfasdf.asdfasdf.asdfasd.31413241234.123.4123.4.1234.1324.abc.com"); => abc.com
 	// @return
 	//						www.abc.com				=>		abc.com
+	//						www.work.go.kr			=>		work.go.kr
 	//
 	/*____________________________________________________________________________*/
-	static function base_domain($full_domain=null)
+	static function base_domain( $domain = null )
 	{
-		if ( $full_domain === null ) {
-			$full_domain = $_SERVER['HTTP_HOST'];
-		}
 	  
+		if ( $domain === null ) {
+			$domain = $_SERVER['HTTP_HOST'];
+		}
+		
+		$parts = array_reverse(explode('.', $domain));
+		
+		if ( in_array( $parts[0], $GLOBALS['_TLD_1'] ) ) {
+			if ( in_array( $parts[1], $GLOBALS['_TLD_2'] ) ) {
+				return $parts[2] . '.' . $parts[1] . '.' . $parts[0];
+			}
+			else return $parts[1] . '.' . $parts[0];
+		}
+		
+		return self::__base_domain( $domain );
+	}
+	static function __base_domain( $full_domain )
+	{
+
 	  // generic tlds (source: http://en.wikipedia.org/wiki/Generic_top-level_domain)
 	  $G_TLD = array(
 		'biz','com','edu','gov','info','int','mil','name','net','org',

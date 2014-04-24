@@ -1,6 +1,9 @@
 <?php
 	if ( ! admin() ) {
-		echo "You are not admin";
+		echo ln(
+			"You are not admin. Please sign in.",
+			"관리자가 아닙니다. 로그인을 하십시오."
+		);
 		exit;
 	}
 	global $action;
