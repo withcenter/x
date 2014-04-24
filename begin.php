@@ -8,7 +8,6 @@ if ( 0 || etc::test_server() ) debug::mode(1);											$dt = date("H:i:s"); dl
 
 include_once 'etc/firewall.php';
 include_once 'etc/service.php';
-include_once 'etc/language/default.php';
 
 
 if ( etc::web() ) x::load_global_config();

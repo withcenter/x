@@ -11,6 +11,8 @@ if ( $forward = meta_get( 'forward' ) ) {
 	exit;
 }
 
+/// language
+include 'language/load.php';
 
 
 /** @short variables to replace those in skin files. ( like outlogin.lib.php )
