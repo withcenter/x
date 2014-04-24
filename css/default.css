@@ -64,10 +64,15 @@
 
 /* Style for deocation */
 .notice {
-	margin: 1em 0;
+	margin: 0 0 1em 0;
 	padding: 1em;
+	border: 1px solid grey;
 	background-color: #efefef;
 }
+.notice a {
+	text-decoration: none;
+}
+
 
 
 /** widget update */

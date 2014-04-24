@@ -218,13 +218,6 @@ function bo_table($n, $domain=null)
 
 
 
-/**
- *
- */
-function url_site_config($domain=null)
-{
-	return url_site_admin($domain);
-}
 
 function url_forum_list( $id )
 {
@@ -254,10 +247,18 @@ function url_x_admin()
 {
 	return g::url() . "/?module=admin&action=index";
 }
+
+/**
+ *
+ */
+function url_site_config($domain=null, $module='site', $action='config_first_page')
+{
+	return url_site_admin($domain, $module, $action);
+}
 function url_site_admin($domain=null, $module='site', $action='config_first_page')
 {
-	if ( empty($domain) ) return g::url() . "/?module=$module&action=$action";
-	else return site_url( $domain ) . "/x/?module=$module&action=$action";
+	if ( empty($domain) ) return g::url() . "?module=$module&action=$action";
+	else return site_url( $domain ) . "?module=$module&action=$action";
 }
 
 
@@ -414,3 +415,13 @@ function module($file,$url=false)
 	return etc::module($file,$url);
 }
 
+function quest( $msg )
+{
+	echo "
+		<div class='quest notice'>
+			<div class='inner'>
+				$msg
+			</div>
+		</div>
+	";
+}

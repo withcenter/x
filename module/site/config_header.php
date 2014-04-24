@@ -17,7 +17,7 @@
 <li><a href="?module=site&action=config_global"><?=lang('General')?></a></li>
 <li><a href="?module=site&action=config_member"><?=lang('Member')?></a></li>
 <li><a href="?module=site&action=config_menu"><?=lang('Menu')?></a></li>
-<li><a href="?module=site&action=config_forum"><?=lang('Forum')?></a></li>
+<li><a href="?module=site&action=config_forum"><?=ln('Forum', '게시판')?></a></li>
 <li><a href="?module=site&action=config_write"><?=lang('Writing')?></a></li>
 <li><a href="?module=site&action=config_theme"><?=lang('Theme')?></a></li>
 <li><a href="?module=site&action=config_mobile_theme"><?=lang('Mobile Theme')?></a></li>
