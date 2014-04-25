@@ -14,11 +14,14 @@
 					
 				if  ( file_exists( x::path_file('banner_'.$i) ) ) {
 					$filename = x::url_file( "banner_{$i}" );
-					if ( !$url = x::meta('banner_'.$i.'_url') ) $url = "javascript:void(0)";
+					if ( !$url = x::meta('banner_'.$i.'_url') ) {
+						$url = "javascript:void(0)";
+						$target = "";
+					} else $target = "target='_blank'";
 					
 				?>
 				<div class='company-banner <?=$add_class?>'>
-					<a href='<?=$url?>' target='_blank'><img src='<?=$filename?>' /></a>
+					<a href='<?=$url?>' <?=$target?>><img src='<?=$filename?>' /></a>
 				</div>
 				<? }
 					else {
