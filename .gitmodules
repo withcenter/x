@@ -208,3 +208,9 @@
 [submodule "widget/blog-visits"]
 	path = widget/blog-visits
 	url = https://github.com/x-widget/blog-visits
+[submodule "module/video-chat-server"]
+	path = module/video-chat-server
+	url = https://github.com/withcenter/video-chat-server
+[submodule "theme/video-chat"]
+	path = theme/video-chat
+	url = https://github.com/x-theme/video-chat
