@@ -58,7 +58,7 @@ function setTopMenu( $name ) {
 	</div>
 		<table cellpadding='10' cellspacing='0' class='image-config'>
 		<tr>
-			<td valign='top'>
+			<td valign='top' width='50%'>
 				<div class='image-title'>프로필 사진등록</div>
 
 				<div class='image-upload'>
@@ -70,10 +70,11 @@ function setTopMenu( $name ) {
 				
 				</div>
 			</td>
-			<td  valign='top'>
+			<td  valign='top' width='50%'>
 				<div class='image-title'>프로필 하단 문구</div>
-			
-				<textarea name='profile_message' style='border-top: 0; padding: 10px;'><?=stripslashes(x::meta('profile_message'))?></textarea>
+				<div class='image-upload'>
+					<textarea name='profile_message' style='border: 0; width: 95%;'><?=stripslashes(x::meta('profile_message'))?></textarea>
+				</div>
 			</td>
 		</tr>
 	</table>
