@@ -19,7 +19,10 @@
 	
 	- 화상 회의 시스템.
 	
-		room.php 에서 자바스크립트로 서버 및 각종 설정을 한 다음 video-chat-server.js 를 로드하도록 한다.
+		옵션 : 전자칠판 사용할지. 이 옵션은 HTML FORM 에도 둔다.
+		
+		config.js 에서 자바스크립트로 서버 및 각종 설정을 한 다음 
+		video-chat-server.js 를 로드하기 전에 먼저 로드하도록 한다.
 		
 		https 에서 테스트를 한다.
 		
