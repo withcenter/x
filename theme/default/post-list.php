@@ -39,7 +39,7 @@ $total_posts = count($posts);
 	<div class='listed_posts right'>
 		<div class='inner'>
 			<?		
-			for( $i = ceil($total_posts/2)+1; $i <= $total_posts; $i++ ) {			
+			for( $i = ceil($total_posts/2); $i <= $total_posts-1; $i++ ) {			
 				$subject = conv_subject($posts[$i]['wr_subject'], 15, "...");	
 				$wr_url =site_url($posts[$i]['domain']) . "/bbs/board.php?bo_table=" . $posts[$i]['bo_table'] . "&wr_id=".$posts[$i]['wr_id'];
 				if( ($i+1) == $total_posts ) $last_post = 'last_post';				
