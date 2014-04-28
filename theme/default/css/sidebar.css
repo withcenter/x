@@ -72,6 +72,16 @@
 	display: none;
 }
 
+.post-latest .posts-arrow-up {
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #aab2bd;
+	display: none;
+	position: relative;
+	left: 50px;
+}
 
 @media (max-width: 400px) {
 	.wrapper .aside, .wrapper  .container{
@@ -131,5 +141,9 @@
 	
 	.mobile_login .login > .inner {
 		padding: 15px;
+	}
+	
+	.post-latest .posts-arrow-up {
+		display: block;
 	}
 }

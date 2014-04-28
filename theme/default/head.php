@@ -90,6 +90,7 @@
 			<? }
 			}?>
 		</div>
+
 		<?php
 			include widget( array( 'code' => 'side-post-latest-3', 'name' => 'post-latest' ) );
 			include widget( array( 'code' => 'side-post-comment-latest-3', 'name' => 'post-comment-latest' ) );
