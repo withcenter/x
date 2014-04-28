@@ -6,6 +6,7 @@
 <div class='content'>
 <?
 	$rows = db::rows("SELECT * FROM x_site_config ORDER BY `domain`");	
+	if( !$rows ) {echo "empty"; return;}
 	?>
 	<div class='listed_posts left'>
 		<div class='inner'>

@@ -14,6 +14,9 @@ $posts = g::posts(
 		
 	)
 );
+
+if( !$posts ) {echo "empty"; return;}
+
 $total_posts = count($posts);
 ?>
 	<div class='listed_posts left'>
