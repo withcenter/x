@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="<?=x::url_theme()?>/css/theme.css">
 <link rel="stylesheet" href="<?=x::url_theme('css/sidebar.css')?>">
 <link rel="stylesheet" href="<?=x::url_theme('css/tail.css')?>">
+<script src="<?=x::url_theme('js/theme.js')?>" /></script>
 <!-- 상단 시작 { -->
 
 <div id="header">
@@ -54,6 +55,19 @@
 <table cellpadding=0 cellspacing=0 width='100%'><tr valign='top'>
 	<td class = 'aside_td'>
     <div class = "aside">
+		<div class='mobile_menu_wrapper'>
+			<div class='mobile_menu menu-sign-in'><div class='inner'>Sign In</div></div>
+			<div class='mobile_menu menu-user-panel'><div class='inner'>User Panel</div></div>
+			<div style='clear: left'></div>
+			<div class='mobile_login'>
+			<?php
+				include widget( array( 'code' => 'login-default', 'name' => 'login-default' ) );
+			?>
+			</div>		
+			<div class='mobile_menu menu-latest-posts'><div class='inner'>Latest Posts</div></div>
+			<div class='mobile_menu menu-latest-comments'><div class='inner'>Latest Comments</div></div>
+			<div style='clear: left'></div>
+		</div>
 		<div class='sidebar_login'>
 		<?php
 			include widget( array( 'code' => 'login-default', 'name' => 'login-default' ) );
@@ -76,6 +90,7 @@
 			<? }
 			}?>
 		</div>
+
 		<?php
 			include widget( array( 'code' => 'side-post-latest-3', 'name' => 'post-latest' ) );
 			include widget( array( 'code' => 'side-post-comment-latest-3', 'name' => 'post-comment-latest' ) );

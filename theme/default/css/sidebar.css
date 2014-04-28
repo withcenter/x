@@ -45,3 +45,105 @@
 	width: 100%;
 	padding: 2px 0;
 }
+
+.mobile_menu_wrapper {
+	padding: 0 5px;
+	display: none;
+}
+
+.mobile_menu_wrapper .mobile_menu {
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+
+.mobile_menu_wrapper .mobile_menu .inner {
+	padding: 20px 0;
+	margin: 0 5px 10px 5px;
+	background: #656d78;
+	border-radius: 2px;
+	color: #ffffff;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.mobile_login {
+	margin-bottom: 10px;
+	display: none;
+}
+
+.post-latest .posts-arrow-up {
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #aab2bd;
+	display: none;
+	position: relative;
+	left: 50px;
+}
+
+@media (max-width: 400px) {
+	.wrapper .aside, .wrapper  .container{
+		clear: left;
+		width: 100%;
+	}
+	
+	#header > .inner .logo_and_top_menu ul, #header > .inner .logo_and_top_menu .logo {
+		clear: left;
+		width: 100%;
+		text-align: center;
+	}
+	
+	#header > .inner .logo_and_top_menu .logo {
+		margin-bottom: 25px;
+	}
+
+	#header > .inner .logo_and_top_menu ul li {
+		width: 33.33%;
+		padding: 0;
+		float: left;
+		line-height: 140%;
+	}
+	
+	#header > .inner .logo_and_top_menu {
+		padding: 25px 0;
+	}
+	
+	.sidebar_menu .user_guide, .sidebar_login, .post-comment-latest, .post-latest {
+		display: none;
+	}
+	
+	.mobile_menu_wrapper {
+		display: block;
+	}
+	
+	.remember-register {
+		position: relative;
+		height: 20px;
+	}
+	
+	.remember-register .login-divider {
+		display: none;
+	}
+	
+	.remember-register .login-remember {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	
+	.remember-register .register-lost-password {
+		position: absolute;
+		top: -13px;
+		left: 0;
+	}
+	
+	.mobile_login .login > .inner {
+		padding: 15px;
+	}
+	
+	.post-latest .posts-arrow-up {
+		display: block;
+	}
+}

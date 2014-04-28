@@ -31,6 +31,7 @@
 	
 ?>
 <div class="post-latest">
+	<div class="posts-arrow-up"></div>
 	<div class='title'>
 		<? if ( file_exists( $path ) ) { ?><img src="<?=$url_icon?>" style="width:24px; height:24px;"><? } ?>
 		<?=$post_latest_title?>
