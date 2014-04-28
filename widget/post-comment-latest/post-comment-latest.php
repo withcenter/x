@@ -34,6 +34,7 @@
 	
 ?>
 <div class="post-comment-latest">
+	<div class="posts-arrow-up"></div>
 	<div class='title'><?=$latest_comment_title?></div>
 	<div class='comments-list'>
 		<? 	$i = 1;
