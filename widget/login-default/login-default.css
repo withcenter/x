@@ -1,75 +1,110 @@
 .login {
-	background-color: #efefef;
+	background-color: #e6e9ed;
+	border: solid 1px #aab2bd;
+	font-family: dotum;
+	border-radius: 2px;
 }
 
-.login .inner {
-	padding: 1em;
+.login > .inner {
+	padding: 9px;
 }
 
-
-.login-form input[type='text'] {
-	margin-bottom: 0.2em;
+.login .login-username, .login .login-password {
+	margin-bottom: 10px;
+	border: solid 1px #aab2bd;
+	border-radius: 2px;
+	background: #ffffff;
 }
 
-.login-form input[type='text'], .login-form input[type='password'] {
-	padding: 5px;
-	width: 100px;
-	border: 1px solid grey;
-}
-.login-form input[type='submit'] {
-	padding: 1.6em 1.4em;
-	border: 1em;
-	background-color: #494949;
-	color: white;
+.login .login-username .inner, .login .login-password .inner {
+	padding: 10px 10px 9px 10px;
 }
 
-.login-form .bottom {
-	margin: 0.6em 0;
+.login .login-username input, .login .login-password input {
+	width: 100%;
+	border: 0;
 }
 
+.login .login-username input:focus, .login .login-password input:focus, .login .login-submit input:focus {
+	outline: 0;
+}
 
+.login .login-submit {
+	border: solid 1px #aab2bd;
+	background: #aab2bd;
+	border-radius: 2px;
+	margin-bottom: 12px;
+}
+
+.login .login-submit input {
+	border: 0;
+	border-top: solid 1px #ccd1d7;
+	background: #aab2bd;
+	width: 100%;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	padding: 9px 1px;
+	color: #ffffff;
+}
+
+.login .login-remember {
+	margin-bottom: 10px;
+}
+
+.login .login-remember .inner {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.login-remember .remember-checkbox, .login-remember .remember-text {
+	display: inline-block;
+}
+
+.login .login-divider {
+	border-top: solid 1px #aab2bd;
+}
+
+.login .register-lost-password {
+	padding: 13px 0 4px 0;
+	text-align: center;
+}
+
+.login .login-info {
+	text-align: center;
+}
 
 .login-info .nickname {
-	margin-bottom: 0.2em;
-	padding: 0.8em;
-	background-color: #dfdfdf;
-	font-weight: bold;
+	margin-bottom: 8px;
 }
 
-
-.login-info .private {
-	margin-bottom: 0.1em;
+.login .top_info {
+	margin: 10px 0;
 }
 
-
-.login-info .private td {
-	padding: 1em;
-	width: 33.333%;
-	background-color: #e3e3e3;
-	text-align:center;
+.login .login-menus {
+	padding: 15px 0;
 }
 
-
-
-.login-info .bottom td {
+.login .login-menus .menu {
 	width: 50%;
-	background-color: #e3e3e3;
-	text-align:center;
+	float: left;
+	padding: 5px 0;
 }
 
-.login-info .bottom div {
-	margin-top: 0.2em;
-	padding: 0.4em;
-	background-color: black;
+.login .logout {
+	padding: 1px;
+	background: #aab2bd;
+	border-radius: 2px;
 }
 
-.login-info .bottom div a {
-	color: white;
+.login .logout .inner {
+	border-top: solid 1px #ccd1d7;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
 }
 
-.login-info .bottom .info {
-	margin-right: 0.1em;
-}
-.login-info .bottom .logout {
-	margin-left: 0.1em;
+.login .logout .inner a {
+	color: #ffffff;
+	padding: 10px;
+	display: block;
 }

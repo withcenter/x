@@ -1,0 +1,36 @@
+.sidebar_login {
+	margin-bottom: 10px;
+}
+
+.sidebar_menu {
+	margin-bottom: 10px;
+}
+
+.sidebar_menu .user_guide {
+	text-align: center;
+	background: #656d78;
+	border-radius: 2px;
+}
+
+.sidebar_menu .user_guide a {
+	display: block;
+	color: #ffffff;
+	text-decoration: none;
+	padding: 21px 20px;
+	font-size: 15px;
+}
+
+.sidebar_menu .admin_panel {
+	background: #656d78;
+	padding: 14px 4px;
+	border-radius: 2px;
+}
+
+.sidebar_menu .admin_panel a {
+	width: 50%;
+	display: block;
+	float: left;
+	color: #ffffff;
+	text-align: center;
+	line-height: 140%;
+}
