@@ -83,6 +83,17 @@
 	left: 50px;
 }
 
+.post-comment-latest .posts-arrow-up {
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #aab2bd;
+	display: none;
+	position: relative;
+	right: -220px;
+}
+
 @media (max-width: 400px) {
 	.wrapper .aside, .wrapper  .container{
 		clear: left;
@@ -143,7 +154,7 @@
 		padding: 15px;
 	}
 	
-	.post-latest .posts-arrow-up {
+	.post-latest .posts-arrow-up, .post-comment-latest .posts-arrow-up  {
 		display: block;
 	}
 }
