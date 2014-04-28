@@ -249,10 +249,6 @@
 	background:url('../img/drop_down_arrow.png')  no-repeat right 18.5% top 14px #ffffff;		
 }
 
-.site_create .content .select_theme select[name='theme'] option{
-	width:100px!important;
-}
-
 .site_create .content .submit_create_button{
 	text-align:right;
 }
