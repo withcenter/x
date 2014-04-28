@@ -158,6 +158,9 @@
 #index_page > .content .item .note{	
 	font-size:1.5em;	
 	margin:20px 0;
+	height:40px;
+	overflow:hidden;
+	line-height:20px;
 }
 
 #index_page > .content .item ul{	
@@ -166,10 +169,11 @@
 	margin:0;
 	width:70%;	
 	margin:auto;
+	list-style:none;
 }
 
 #index_page > .content .item ul li{
-	list-style:none;		
+	
 }
 
 #index_page > .content .item ul li a{
@@ -181,6 +185,8 @@
 	margin-bottom:10px;
 	color:#ffffff;
 	border-radius:3px;
+	height:16px;
+	overflow:hidden;
 }
 
 #index_page > .content .item ul li.first a{
