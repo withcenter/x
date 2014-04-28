@@ -17,7 +17,7 @@
 <div class='footer-wrapper'>
     <div class='footer'>
         <p>
-            Copyright &copy; <b><?=etc::domain()?></b> All rights reserved.<br>
+            Copyright &copy; <?=etc::domain()?> All rights reserved.
         </p>
     </div>
 </div>
