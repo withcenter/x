@@ -333,4 +333,16 @@
 	#header .main_menu .inner ul li{		
 		margin-left:15px;
 	}
+	
+	.site_and_post_list .content .listed_posts.left{
+		margin-bottom:0;
+	}	
+	
+	.site_and_post_list .content .listed_posts.right{
+		margin-top:0;
+	}	
+	
+	.site_and_post_list .content .list_item.last_post.left{		
+		border-bottom:1px solid #ccd1d9;
+	}
 }
