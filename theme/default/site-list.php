@@ -28,7 +28,7 @@
 				if($user_domains[$i]['mb_id']) $site_owner = $user_domains[$i]['mb_id'];
 				else $site_owner = "none";
 				
-				if( ($i + 1) >= $total_domains/2 ) $last_post = 'last_post';								
+				if( ($i + 1) >= $total_domains/2 ) $last_post = 'last_post left';								
 				?>
 			<div class = 'list_item <?=$last_post?>'>
 				<a href='<?=$url?>' target='_blank'><?=$user_domains[$i]['domain']?> - <?=$site_owner?> : <?=$title?> , <?=$theme?></a>
