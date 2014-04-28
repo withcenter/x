@@ -75,6 +75,8 @@
 
 .login-info .nickname {
 	margin-bottom: 8px;
+	font-size: 14px;
+	padding-top: 10px;
 }
 
 .login .top_info {
