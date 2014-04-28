@@ -6,6 +6,7 @@
 ?>
 <link rel="stylesheet" href="<?=x::url_theme()?>/css/theme.css">
 <link rel="stylesheet" href="<?=x::url_theme('css/sidebar.css')?>">
+<link rel="stylesheet" href="<?=x::url_theme('css/tail.css')?>">
 <!-- 상단 시작 { -->
 
 <div id="header">
