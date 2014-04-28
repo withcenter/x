@@ -52,7 +52,7 @@
 <!-- 콘텐츠 시작 { -->
 <div class = "wrapper">
 <table cellpadding=0 cellspacing=0 width='100%'><tr valign='top'>
-	<td width='220'>
+	<td class = 'aside_td'>
     <div class = "aside">
 		<div class='sidebar_login'>
 		<?php
@@ -85,6 +85,6 @@
 		?>
     </div>
 	</td>
-	<td>
+	<td class = 'container_td'>
     <div class = "container" class='data'>
 		<?php if ((!$bo_table || $w == 's' ) && !defined("_INDEX_")) { ?><div id="container_title"><?php echo $g5['title'] ?></div><?php } ?>

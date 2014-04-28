@@ -92,6 +92,10 @@
 }
 
 /*aside*/
+.wrapper .aside_td{
+	width:220px;
+}
+
 .wrapper .aside{
 	width:100%;	
 }
@@ -344,5 +348,15 @@
 	
 	.site_and_post_list .content .list_item.last_post.left{		
 		border-bottom:1px solid #ccd1d9;
+	}
+}
+
+@media all and ( max-width:400px ){
+	.wrapper .aside_td{
+		width:100%;
+	}
+	
+	.wrapper .container_td{
+		display:none;
 	}
 }
