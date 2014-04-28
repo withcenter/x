@@ -1,8 +1,4 @@
-<?php
-
-?>
 <div id='index_page'>
-
 	<div class='top-header'>
 		<div class = 'inner'>
 			익스텐디드에 오신 것을 환영합니다.

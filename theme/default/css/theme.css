@@ -105,6 +105,14 @@
 	width:100%;		
 }
 
+.wrapper  .container.mobile_layout{
+	display:none;
+}
+
+.wrapper  .container.mobile_layout #index_page{
+	margin:0;
+}
+
 /*index*/
 #index_page{
 	margin-left:10px;
@@ -358,5 +366,9 @@
 	
 	.wrapper .container_td{
 		display:none;
+	}
+	
+	.wrapper  .container.mobile_layout{
+		display:block;
 	}
 }
