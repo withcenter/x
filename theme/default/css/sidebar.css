@@ -26,6 +26,10 @@
 	border-radius: 2px;
 }
 
+.admin_panel.site_admin {
+	padding: 10px 4px;
+}
+
 .sidebar_menu .admin_panel a {
 	width: 50%;
 	display: block;
@@ -33,4 +37,11 @@
 	color: #ffffff;
 	text-align: center;
 	line-height: 140%;
+}
+
+.sidebar_menu .admin_panel.site_admin a {
+	clear: left;
+	margin: 0 auto;
+	width: 100%;
+	padding: 2px 0;
 }

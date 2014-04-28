@@ -56,11 +56,11 @@
 				</div>
 			<? } else { ?>
 			<? if ( admin() ) { ?>
-				<div class='admin_panel'>
+				<div class='admin_panel <? if ( !super_admin() ) echo "site_admin" ?>'>
 					<a href="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub" target="_blank"><?=ln('X User Guide', 'X 이용 안내');?></a>
-					<a href='<?=url_x_admin()?>'><?=ln('X Admin Page', 'X 관리자 페이지');?></a>
+					<? if ( super_admin() ) { ?><a href='<?=url_x_admin()?>'><?=ln('X Admin Page', 'X 관리자 페이지');?></a><? } ?>
 					<a href='<?=url_site_admin()?>'><?=ln('Site Admin Page', '사이트 관리자 페이지');?></a>
-					<a href='<?=g::url()?>/adm'><?=ln('G5 Admin Page', 'G5 관리자 페이지');?></a>
+					<? if ( super_admin() ) { ?><a href='<?=g::url()?>/adm'><?=ln('G5 Admin Page', 'G5 관리자 페이지');?></a><? } ?>
 					<div style='clear: left'></div>
 				</div>
 			<? }
