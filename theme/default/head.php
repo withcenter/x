@@ -39,10 +39,20 @@
 </div>
 <!-- } 상단 끝 -->
 
+<?if ( preg_match('/msie 7/i', $_SERVER['HTTP_USER_AGENT'] ) ) {?>
+<style>
+	#header > .inner .logo_and_top_menu ul li{
+		display:inline;
+	}
+</style>
+<?}?>
+
 <hr>
 
 <!-- 콘텐츠 시작 { -->
 <div class = "wrapper">
+<table cellpadding=0 cellspacing=0 width='100%'><tr valign='top'>
+	<td width='220'>
     <div class = "aside">
 		<div class='mobile_menu_wrapper'>
 			<div class='mobile_menu'><div class='inner'>Sign In</div></div>
@@ -55,7 +65,7 @@
 		<?php
 			include widget( array( 'code' => 'login-default', 'name' => 'login-default' ) );
 		?>
-		</div>
+		</div>		
 		<div class='sidebar_menu'>
 			<? if ( !login() ) { ?>
 				<div class='user_guide'>
@@ -81,5 +91,7 @@
 			}
 		?>
     </div>
+	</td>
+	<td>
     <div class = "container" class='data'>
 		<?php if ((!$bo_table || $w == 's' ) && !defined("_INDEX_")) { ?><div id="container_title"><?php echo $g5['title'] ?></div><?php } ?>

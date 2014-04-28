@@ -5,8 +5,8 @@
 		return;
 	}
 ?>
-    </div><!--/container-->
-	<div style='clear:both'></div>
+    </div><!--/container-->	
+	</td></tr></table>
 </div><!--/wrapper-->
 
 <!-- } 콘텐츠 끝 -->
