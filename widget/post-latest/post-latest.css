@@ -1,18 +1,37 @@
 .post-latest {
-	margin-bottom: 1em;
-	border: 1px solid #dfdfdf;
+	margin-bottom: 10px;
 }
 
 .post-latest > .title {
-	padding: 1em;
-	background-color: #dfdfdf;
+	padding: 12px 9px;
+	background-color: #aab2bd;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	font-size: 16px;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.post-latest .posts-list {
+	padding: 0 10px;
+	background: #f2f6f7;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
 }
 
 .post-latest .post {
-	padding: 1em;
+	padding: 14px 0 14px 0;
+	border-top: solid 1px #ccd1d9;
+}
+
+.post-latest .post.first_post {
+	border: 0;
 }
 
 .post-latest .post a {
-	display:inline-block;
-	padding: 0.2em;
+	display: inline-block;
+	font-size: 13px;
+	overflow: hidden;
+	height: 15px;
+	overflow: hidden;
 }
