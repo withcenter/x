@@ -44,6 +44,13 @@
 <!-- 콘텐츠 시작 { -->
 <div class = "wrapper">
     <div class = "aside">
+		<div class='mobile_menu_wrapper'>
+			<div class='mobile_menu'><div class='inner'>Sign In</div></div>
+			<div class='mobile_menu'><div class='inner'>User Panel</div></div>
+			<div class='mobile_menu'><div class='inner'>Latest Posts</div></div>
+			<div class='mobile_menu'><div class='inner'>Latest Comments</div></div>
+			<div style='clear: left'></div>
+		</div>
 		<div class='sidebar_login'>
 		<?php
 			include widget( array( 'code' => 'login-default', 'name' => 'login-default' ) );
