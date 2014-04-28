@@ -68,7 +68,7 @@
 	color:#ffffff;
 	display:inline-block;
 	padding:20px 10px;	
-	text-decoration:none;
+	text-decoration:none;	
 }
 
 #header .main_menu .inner ul li .underbar{	
@@ -93,14 +93,12 @@
 
 /*aside*/
 .wrapper .aside{
-	width:20%;
-	float:left;
+	width:100%;	
 }
 
 /*content*/
 .wrapper  .container{
-	width:80%;	
-	float:left;
+	width:100%;		
 }
 
 /*index*/
@@ -256,6 +254,7 @@
 .site_and_post_list .post_list, .site_and_post_list .site_list {
 	background-color:#f2f6f7;
 	margin-bottom:10px;
+	word-break:break-all;
 }
 
 .site_and_post_list .content .list_item{	
@@ -286,4 +285,52 @@
 
 .site_and_post_list .content .listed_posts .inner{	
 	padding:0 10px;	
+}
+
+@media all and ( max-width:640px ){
+	.site_and_post_list .content .listed_posts{
+		width:100%
+	}
+	
+	.site_and_post_list .content .listed_posts.left{
+		border-right:none;	
+	}
+	
+	.site_create .content .submit_create_button{
+		text-align:center;
+	}	
+	
+	.site_create .content .submit_create_button input{
+		width:95%;
+		padding:8px 2.5%;
+		margin:0 0 10px 0;		
+	}
+	
+	#header > .inner .logo_and_top_menu{
+		padding: 30px 0 20px 0;
+	}
+	
+	#header > .inner .logo_and_top_menu .logo{
+		width:220px;
+		float:none;
+		margin:0 auto 20px auto;
+	}
+	
+	#header > .inner .logo_and_top_menu .logo img{
+		width:100%
+	}
+
+	#header > .inner .logo_and_top_menu  ul{
+		width:100%;
+		float:none;		
+		text-align:center;
+	}	
+	
+	#header .main_menu .inner ul{
+		text-align:center;
+	}
+
+	#header .main_menu .inner ul li{		
+		margin-left:15px;
+	}
 }
