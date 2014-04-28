@@ -10,27 +10,32 @@
 	</div>
 	
 	<div class='content'>
-			홈페이지 관리자 이십니까? 그렇다면,
-			
+		<div class='item left'>
+			<div class='note'>
+				홈페이지 관리자 이십니까?</br>그렇다면,
+			</div>
 			<ul>
-				<li> <a href="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub" target="_blank">사용 설명서를 먼저 읽어 보세요.</a></li>
+				<li class='first'> <a href="https://docs.google.com/document/d/1hiM2OIFlCkASMOgnyBsrTVcvICZz26oIze9Cz7p9BI8/pub" target="_blank">사용 설명서를 먼저 읽어 보세요.</a></li>
 				<li> <a href='<?=url_site_admin('', 'multi', 'config_theme')?>'>테마를 변경해 보세요.</a></li>
 			</ul>
-			
-			개발자 이십니까? 그렇다면,
-			
+		</div>
+		<div class='item right'>
+			<div class='note'>
+				개발자 이십니까?<br>그렇다면,
+			</div>
 			<ul>
-				<li> <a href='https://docs.google.com/document/d/1cqG9sghuNGyrSKsZBaV4dmretcA6tb_WfOD1jlyldLk/pub' target='_blank'>개발자 문서를 읽어 보세요.</a></li>
+				<li class='first'> <a href='https://docs.google.com/document/d/1cqG9sghuNGyrSKsZBaV4dmretcA6tb_WfOD1jlyldLk/pub' target='_blank'>개발자 문서를 읽어 보세요.</a></li>
 				<li> <a href='http://extended.kr' target='_blank'>X 홈페이지에서 정보를 얻으세요.</a></li>
 			</ul>
+		</div>
+		<div style='clear:both'></div>
 	</div>				
 	
-	<?include 'site-create-form.php';?>	
-	
-	<table width='100%'>
-		<tr valign=top>
-			<td width='50%'><?include 'site-list.php';?></td>
-			<td width='50%'><?include 'post-list.php';?></td>
-		</tr>
-	</table>
+	<div class = 'site_create'>
+		<?include 'site-create-form.php';?>	
+	</div>	
+	<div class = 'site_and_post_list'>
+		<div class ='post_list'><?include 'post-list.php';?></div>
+		<div class ='site_list'><?include 'site-list.php';?></div>		
+	</div>
 </div>
