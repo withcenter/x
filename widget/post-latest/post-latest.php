@@ -44,7 +44,7 @@
 		?>
 		<div class='post <? if ( $i++ == 1 ) echo "first_post" ?>'>
 			<a href='<?=$post['url']?>' <?=$target?>>
-				<?=$post['subject']?>
+				<?=string::cutstr($post['subject'],20,'')?>
 				<?=$count_comment?>
 			</a>
 		</div>
