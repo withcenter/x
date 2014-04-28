@@ -6,15 +6,17 @@
 	<div class='login-username'><div class='inner'><input type="text" name="mb_id" class="id" maxlength="20" placeholder="<?=ln("User ID", "아이디")?>"></div></div>
 	<div class='login-password'><div class='inner'><input type="password" name="mb_password" class="password" maxlength="20" placeholder="<?=ln("Password", "비밀번호")?>"></div></div>
 	<div class='login-submit'><div class='inner'><input type="submit" value="로그인"></div></div>
-	<div class='login-remember'>
-		<div class='inner'>
-			<img class='remember-me-check' src='<?=$widget_config['url']?>/unchecked.png' />
-			<input type="checkbox" style='display: none;' name="auto_login" value="1" id="auto_login">자동 로그인
+	<div class='remember-register'>
+		<div class='login-remember'>
+			<div class='inner'>
+				<img class='remember-me-check' src='<?=$widget_config['url']?>/unchecked.png' />
+				<input type="checkbox" style='display: none;' name="auto_login" value="1" id="auto_login">자동 로그인
+			</div>
 		</div>
-	</div>
-	<div class='login-divider'></div>
-	<div class='register-lost-password'>
-		<a href="<?=url_bbs()?>/register.php">회원가입</a> ~ 	<a href="<?=url_bbs()?>/password_lost.php">정보찾기</a>
+		<div class='login-divider'></div>
+		<div class='register-lost-password'>
+			<a href="<?=url_bbs()?>/register.php">회원가입</a> ~ 	<a href="<?=url_bbs()?>/password_lost.php">정보찾기</a>
+		</div>
 	</div>
 	<!--<table cellpadding='0' cellspacing='0' width='100%'>
 		<tr>
