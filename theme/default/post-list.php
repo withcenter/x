@@ -9,7 +9,7 @@
 <?
 $posts = g::posts(
 	array (
-		'limit'					=> 29,
+		'limit'					=> 30,
 		'order by' 				=> 'wr_datetime DESC'
 		
 	)
