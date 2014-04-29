@@ -93,11 +93,11 @@
 
 /*aside*/
 .wrapper .aside_td{
-	width:220px;
+	width:230px;
 }
 
 .wrapper .aside{
-	width:100%;	
+	width:220px;	
 }
 
 /*content*/
@@ -114,10 +114,6 @@
 }
 
 /*index*/
-#index_page{
-	margin-left:10px;
-}
-
 #index_page .top-header{
 	background-color:#434a54;	
 	border-radius:3px;
@@ -172,16 +168,13 @@
 	list-style:none;
 }
 
-#index_page > .content .item ul li{
-	
-}
-
 #index_page > .content .item ul li a{
 	font-size:1.2em;
 	text-decoration:none;
 	display:block;
 	background-color:#aab2bd;	
-	padding:10px 0;
+	padding:0 0 20px 0;
+	line-height:38px;
 	margin-bottom:10px;
 	color:#ffffff;
 	border-radius:3px;
@@ -301,6 +294,16 @@
 	padding:0 10px;	
 }
 
+@media all and ( max-width:750px ){
+	#header .main_menu .inner ul{
+		text-align:center;
+	}
+	
+	#header .main_menu .inner ul li{		
+		margin-left:20px;
+	}
+}
+
 @media all and ( max-width:640px ){
 	.site_and_post_list .content .listed_posts{
 		width:100%
@@ -338,11 +341,7 @@
 		width:100%;
 		float:none;		
 		text-align:center;
-	}	
-	
-	#header .main_menu .inner ul{
-		text-align:center;
-	}
+	}		
 
 	#header .main_menu .inner ul li{		
 		margin-left:15px;
@@ -361,7 +360,7 @@
 	}
 }
 
-@media all and ( max-width:400px ){
+@media all and ( max-width:600px ){
 	.wrapper .aside_td{
 		width:100%;
 	}
