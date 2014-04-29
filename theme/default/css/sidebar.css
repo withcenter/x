@@ -109,11 +109,8 @@
 		margin-bottom: 25px;
 	}
 
-	#header > .inner .logo_and_top_menu ul li {
-		width: 33.33%;
-		padding: 0;
-		float: left;
-		line-height: 140%;
+	#header > .inner .logo_and_top_menu ul li {		
+		margin-left:20px;		
 	}
 	
 	#header > .inner .logo_and_top_menu {

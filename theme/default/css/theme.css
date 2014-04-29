@@ -341,6 +341,10 @@
 		width:100%;
 		float:none;		
 		text-align:center;
+	}	
+	
+	#header > .inner .logo_and_top_menu  ul li{
+		margin-left:10px;
 	}		
 
 	#header .main_menu .inner ul li{		
