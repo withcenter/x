@@ -80,7 +80,7 @@
 	border-bottom: 10px solid #aab2bd;
 	display: none;
 	position: relative;
-	left: 50px;
+	left: 23%;
 }
 
 .post-comment-latest .posts-arrow-up {
@@ -91,10 +91,10 @@
 	border-bottom: 10px solid #aab2bd;
 	display: none;
 	position: relative;
-	right: -220px;
+	right: -70%;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
 	.wrapper .aside, .wrapper  .container{
 		clear: left;
 		width: 100%;
