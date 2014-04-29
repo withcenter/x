@@ -104,15 +104,16 @@
 .wrapper  .container{
 	width:100%;		
 }
-
+/*
 .wrapper  .container.mobile_layout{
 	display:none;
 }
-
+*/
+/*
 .wrapper  .container.mobile_layout #index_page{
 	margin:0;
 }
-
+*/
 /*index*/
 #index_page .top-header{
 	background-color:#434a54;	
@@ -367,10 +368,12 @@
 @media all and ( max-width:600px ){
 	.wrapper .aside_td{
 		width:100%;
+		display:block
 	}
 	
 	.wrapper .container_td{
-		display:none;
+		width:100%;
+		display:block;
 	}
 	
 	.wrapper  .container.mobile_layout{
