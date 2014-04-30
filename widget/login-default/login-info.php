@@ -1,5 +1,4 @@
 <div class='login-info'>
-
 	<div class='nickname'><span class='nick'><b><?=my('nick')?></span> is logged in</b></div>
 	<div class='login-divider'></div>
 		<div class='top_info'> 최고관리자님 </div>
