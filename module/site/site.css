@@ -1038,6 +1038,7 @@ a.user-google-guide-button{
 	border: solid 1px #e6e6e6;
 	padding: 9px 9px 22px 9px;
 	margin-top: 10px;
+	position:relative;
 }
 .config .config-main-container {
 	padding-top: 20px;
@@ -1597,7 +1598,7 @@ span.config-name {
 
 .config-member .x-admin-button {
 	position: absolute;
-	bottom: 10px;
+	bottom: 5px;
 	right: 10px;
 	background-color: #666666;
 	color: #ffffff;

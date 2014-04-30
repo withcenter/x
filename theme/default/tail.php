@@ -5,18 +5,19 @@
 		return;
 	}
 ?>
-    </div>
-</div>
+    </div><!--/container-->	
+	</td></tr></table>
+</div><!--/wrapper-->
 
 <!-- } 콘텐츠 끝 -->
 
 <hr>
 
 <!-- 하단 시작 { -->
-<div id="ft">
-    <div id="ft_copy">
+<div class='footer-wrapper'>
+    <div class='footer'>
         <p>
-            Copyright &copy; <b><?=etc::domain()?></b> All rights reserved.<br>
+            Copyright &copy; <?=etc::domain()?> All rights reserved.
         </p>
     </div>
 </div>

@@ -214,3 +214,6 @@
 [submodule "theme/video-chat"]
 	path = theme/video-chat
 	url = https://github.com/x-theme/video-chat
+[submodule "widget/login-video-chat"]
+	path = widget/login-video-chat
+	url = https://github.com/x-widget/login-video-chat

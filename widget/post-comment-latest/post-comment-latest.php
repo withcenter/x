@@ -29,10 +29,17 @@
 		)
 	);
 	
+	$latest_comment_title = $widget_config['title'];
+	if ( !$latest_comment_title ) $latest_comment_title = "Latest Comments";
+	
 ?>
 <div class="post-comment-latest">
-	<div class='title'><?=$widget_config['title']?></div>
-	<? foreach ( $posts as $post ) { ?>
-		<div class='post'><a href='<?=$post['url']?>'><?=$post['content']?></a></div>
-	<? } ?>
+	<div class="posts-arrow-up"></div>
+	<div class='title'><?=$latest_comment_title?></div>
+	<div class='comments-list'>
+		<? 	$i = 1;
+			foreach ( $posts as $post ) { ?>
+				<div class='post <? if ( $i++ == 1 ) echo "first_post" ?>'><a href='<?=$post['url']?>'><?=$post['content']?></a></div>
+		<? } ?>
+	</div>
 </div>
