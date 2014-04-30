@@ -60,6 +60,10 @@
 	display: inline-block;
 }
 
+.login .login-remember, .login .login-submit, .login .login-submit input {
+	cursor: pointer;
+}
+
 .login .login-divider {
 	border-top: solid 1px #aab2bd;
 }
