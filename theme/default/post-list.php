@@ -1,6 +1,9 @@
 <div class='page-header'>
-	최근 등록된 글
+	<div>
+		최근 등록된 글
+	</div>
 </div>
+
 <div class='content'>
 
 <?
@@ -11,22 +14,44 @@ $posts = g::posts(
 		
 	)
 );
-	
-foreach ( $posts as $p ) {
 
-	$subject = conv_subject($p['wr_subject'], 15, "...");
-	
-		
-		$wr_url =site_url($p['domain']) . "/bbs/board.php?bo_table=" . $p['bo_table'] . "&wr_id=".$p['wr_id'];
-		echo "
-			<div class='row'>
-				<a href='$wr_url' target='_blank'>$subject</a>
-			</div>
-		";
-	}
+if( !$posts ) {echo "empty"; return;}
 
-echo "</div>";
-
-
+$total_posts = count($posts);
 ?>
+	<div class='listed_posts left'>
+		<div class='inner'>
+			<?
+			for( $i = 0; $i < ceil($total_posts/2); $i++ ) {
+				$subject = conv_subject($posts[$i]['wr_subject'], 15, "...");	
+				$wr_url =site_url($posts[$i]['domain']) . "/bbs/board.php?bo_table=" . $posts[$i]['bo_table'] . "&wr_id=".$posts[$i]['wr_id'];
+				if( ($i + 1) >= $total_posts/2 ) $last_post = 'last_post left';	
+			?>	
+						<div class='list_item <?=$last_post?>'>
+							<a href='<?=$wr_url?>' target='_blank'><?=$subject?></a>
+						</div>
+			<?			
+				}
+				$last_post = null;
+			?>
+		</div>
+	</div>	
+	<div class='listed_posts right'>
+		<div class='inner'>
+			<?		
+			for( $i = ceil($total_posts/2); $i <= $total_posts-1; $i++ ) {			
+				$subject = conv_subject($posts[$i]['wr_subject'], 15, "...");	
+				$wr_url =site_url($posts[$i]['domain']) . "/bbs/board.php?bo_table=" . $posts[$i]['bo_table'] . "&wr_id=".$posts[$i]['wr_id'];
+				if( ($i+1) == $total_posts ) $last_post = 'last_post';				
+			?>	
+						<div class='list_item <?=$last_post?>'>
+							<a href='<?=$wr_url?>' target='_blank'><?=$subject?></a>
+						</div>
+			<?			
+				}
+				$last_post = null;
+			?>
+		</div>
+	</div>
+	<div style='clear:both'></div>
 </div>
