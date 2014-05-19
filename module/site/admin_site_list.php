@@ -1,5 +1,11 @@
 <link rel='stylesheet' type='text/css' href='<?=module("$module.css")?>' />
-
+<script>
+$(function(){
+	$("select[name='status']").change(function(){
+		$(this).parent().submit();
+	});
+});
+</script>
 <div class='admin-list'>
 	<div class='title'>Site List</div>
 	<a class='add-new-site' href='?module=<?=$module?>&action=admin_site_add_update'>Add New Site</a>
@@ -27,11 +33,23 @@
 				$i++;
 		?>
 		<tr valign='top' class='row <?=$background?>'>
-			<td><a href='<?=url_site($site['domain'])?>' target='_blank'><?=$site['domain']?></a></td>
+			<td><a name="<?=$site['domain']?>"></name><a href='<?=url_site($site['domain'])?>' target='_blank'><?=$site['domain']?></a></td>
 			<td><?=$site['mb_id']?></td>
 			<td><?=x::meta_get($site['domain'], 'title')?></td>
 			<td><?=x::meta_get($site['domain'], 'theme')?></td>
-			<td><?=x::meta_get($site['domain'], 'status')?></td>
+			<td>
+				<form action='?'>
+					<input type='hidden' name='module' value="<?=$module?>">
+					<input type='hidden' name='action' value="admin_status_update_submit">
+					<input type='hidden' name='domain' value="<?=$site['domain']?>">
+					<select name='status'>
+						<option value='<?=x::meta_get($site['domain'], 'status')?>'><?=x::meta_get($site['domain'], 'status')?></option>
+						<option value='open'>open</option>
+						<option value='close'>close</option>
+					</select>
+				</form>
+				
+			</td>
 			<td align='center'><?=x::forum_count( $site['domain'] )?></td>
 			<td align='center'><?=x::count_post(x::forum_ids( $site['domain'] ) )?></td>
 			<td align='center'>

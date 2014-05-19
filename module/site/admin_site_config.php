@@ -48,6 +48,12 @@
 </div>
 
 
+<div>
+	<span class='caption'>상태가 open 인 사이트만 나타내기</span>
+	<input type='checkbox' name='site_show_open_only' value='Y' <? if ( config('site_show_open_only') == 'Y' ) echo "checked=1"; ?>> 예
+</div>
+
+
 <input type='submit'>
 <div style='clear:right;'></div>
 
