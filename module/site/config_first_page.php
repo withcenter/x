@@ -12,6 +12,11 @@
 	</a>
 	
 	<br />
+	<a class='first-page-button' style='color: #ffffff;' href="<?=g::url()?>">
+		메인 페이지
+	</a>
+	
+	<br />
 	<? if ( admin() ) { ?>
 		<a class='first-page-button' style='color: #ffffff;' href="?module=admin&action=index">
 			<?=ln("X ADMIN PAGE", "X 관자 페이지")?>
