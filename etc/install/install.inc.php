@@ -6,6 +6,7 @@ if (!$title) $title = G5_VERSION." 설치";
 ?>
 <?
 	include 'lib.php';
+	
 ?>
 <!doctype html>
 <html lang="ko">
